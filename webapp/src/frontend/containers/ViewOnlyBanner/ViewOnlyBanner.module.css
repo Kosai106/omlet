@@ -1,0 +1,23 @@
+.viewOnlyBanner {
+    position: absolute;
+    bottom: var(--spacing-l);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 960px;
+    height: 64px;
+    padding: var(--spacing-s);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-s);
+    background-color: var(--background-inverse-color);
+    border-radius: 6px;;
+    z-index: 50;
+}
+
+.viewOnlyBanner .content {
+    flex: 1;
+    font-size: 13px;
+    line-height: 15px;
+    font-family: var(--font-family-secondary);
+    color: var(--label-inverse-color);
+}

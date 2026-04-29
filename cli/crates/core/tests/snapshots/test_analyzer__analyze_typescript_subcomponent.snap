@@ -1,0 +1,384 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&component_results"
+---
+num_of_components: 12
+components:
+  - definition_id: "typescript-examples:29c139d83979f9d7406774f0914d281a97baaa97a0b893149e856880316705b3:default"
+    name: TTable
+    export_ids:
+      - "typescript-examples:src/subcomponent/table/default:default"
+    package_name: typescript-examples
+    source_path: src/subcomponent/table/default.tsx
+    dependencies: []
+    props:
+      - name: children
+        default_value: NONE
+    html_elements:
+      - table
+  - definition_id: "typescript-examples:29c139d83979f9d7406774f0914d281a97baaa97a0b893149e856880316705b3:THeader"
+    name: THeader
+    export_ids:
+      - "typescript-examples:src/subcomponent/table/default:default.Header"
+    package_name: typescript-examples
+    source_path: src/subcomponent/table/default.tsx
+    dependencies: []
+    props:
+      - name: children
+        default_value: NONE
+    html_elements:
+      - thead
+  - definition_id: "typescript-examples:1ff278b5f25a43cd52121c4649989e1a47f3a990c00936a32824056e2171ab34:TTable"
+    name: TTable
+    export_ids:
+      - "typescript-examples:src/subcomponent/table/named:TTable"
+    package_name: typescript-examples
+    source_path: src/subcomponent/table/named.tsx
+    dependencies: []
+    props:
+      - name: children
+        default_value: NONE
+    html_elements:
+      - table
+  - definition_id: "typescript-examples:1ff278b5f25a43cd52121c4649989e1a47f3a990c00936a32824056e2171ab34:TTable.Header"
+    name: TTable.Header
+    export_ids:
+      - "typescript-examples:src/subcomponent/table/named:TTable.Header"
+    package_name: typescript-examples
+    source_path: src/subcomponent/table/named.tsx
+    dependencies: []
+    props:
+      - name: children
+        default_value: NONE
+    html_elements:
+      - thead
+  - definition_id: "typescript-examples:dac4d870fb704ccce541b65856869f656c1c84d793823bb641338c4412dc45cd:default"
+    name: TTableObject
+    export_ids:
+      - "typescript-examples:src/subcomponent/table/object-assign:default"
+    package_name: typescript-examples
+    source_path: src/subcomponent/table/object-assign.tsx
+    dependencies: []
+    props:
+      - name: children
+        default_value: NONE
+    html_elements:
+      - table
+  - definition_id: "typescript-examples:dac4d870fb704ccce541b65856869f656c1c84d793823bb641338c4412dc45cd:THeader"
+    name: THeader
+    export_ids:
+      - "typescript-examples:src/subcomponent/table/object-assign:default.THeader"
+    package_name: typescript-examples
+    source_path: src/subcomponent/table/object-assign.tsx
+    dependencies: []
+    props:
+      - name: children
+        default_value: NONE
+    html_elements:
+      - thead
+  - definition_id: "typescript-examples:1c59d241cf0b23b8efe9d74232266742e7fea6c843212b7362eb08e13c6e21be:default"
+    name: TCell
+    export_ids:
+      - "typescript-examples:src/subcomponent/table/default:default.Cell"
+      - "typescript-examples:src/subcomponent/table/named:TTable.Cell"
+      - "typescript-examples:src/subcomponent/table/object-assign:default.Cell"
+      - "typescript-examples:src/subcomponent/table/subcomponents/TCell:default"
+    package_name: typescript-examples
+    source_path: src/subcomponent/table/subcomponents/TCell.tsx
+    dependencies: []
+    props:
+      - name: children
+        default_value: NONE
+    html_elements:
+      - td
+  - definition_id: "typescript-examples:2e199d92290034bd35ea81584872817a274d9bf089005f537d56b6b48d323de2:default"
+    name: THeadCell
+    export_ids:
+      - "typescript-examples:src/subcomponent/table/default:default.Header.Cell"
+      - "typescript-examples:src/subcomponent/table/named:TTable.Header.Cell"
+      - "typescript-examples:src/subcomponent/table/object-assign:default.Header.Cell"
+      - "typescript-examples:src/subcomponent/table/subcomponents/THeadCell:default"
+    package_name: typescript-examples
+    source_path: src/subcomponent/table/subcomponents/THeadCell.tsx
+    dependencies: []
+    props:
+      - name: children
+        default_value: NONE
+      - name: className
+        default_value: NONE
+    html_elements:
+      - th
+  - definition_id: "typescript-examples:c29eec744e5034bddddf42307a8e0f6dc9101c8ee19829e504d3acce99808557:default"
+    name: TableUser
+    export_ids:
+      - "typescript-examples:src/subcomponent/table/usage:default"
+    package_name: typescript-examples
+    source_path: src/subcomponent/table/usage.tsx
+    dependencies:
+      - from: "typescript-examples:c29eec744e5034bddddf42307a8e0f6dc9101c8ee19829e504d3acce99808557:default"
+        to: "typescript-examples:1c59d241cf0b23b8efe9d74232266742e7fea6c843212b7362eb08e13c6e21be:default"
+        references:
+          - trace:
+              - "typescript-examples:29c139d83979f9d7406774f0914d281a97baaa97a0b893149e856880316705b3:default"
+              - "typescript-examples:1c59d241cf0b23b8efe9d74232266742e7fea6c843212b7362eb08e13c6e21be:default"
+            usages:
+              - start:
+                  line: 11
+                  column: 13
+                end:
+                  line: 13
+                  column: 27
+                props:
+                  - name: children
+                    value: JSXElement
+      - from: "typescript-examples:c29eec744e5034bddddf42307a8e0f6dc9101c8ee19829e504d3acce99808557:default"
+        to: "typescript-examples:29c139d83979f9d7406774f0914d281a97baaa97a0b893149e856880316705b3:default"
+        references:
+          - trace:
+              - "typescript-examples:29c139d83979f9d7406774f0914d281a97baaa97a0b893149e856880316705b3:default"
+            usages:
+              - start:
+                  line: 5
+                  column: 9
+                end:
+                  line: 14
+                  column: 18
+                props:
+                  - name: children
+                    value: JSXElement
+      - from: "typescript-examples:c29eec744e5034bddddf42307a8e0f6dc9101c8ee19829e504d3acce99808557:default"
+        to: "typescript-examples:29c139d83979f9d7406774f0914d281a97baaa97a0b893149e856880316705b3:default.Header"
+        references:
+          - trace:
+              - "typescript-examples:29c139d83979f9d7406774f0914d281a97baaa97a0b893149e856880316705b3:default"
+            usages:
+              - start:
+                  line: 6
+                  column: 13
+                end:
+                  line: 10
+                  column: 29
+                props:
+                  - name: children
+                    value: JSXElement
+      - from: "typescript-examples:c29eec744e5034bddddf42307a8e0f6dc9101c8ee19829e504d3acce99808557:default"
+        to: "typescript-examples:2e199d92290034bd35ea81584872817a274d9bf089005f537d56b6b48d323de2:default"
+        references:
+          - trace:
+              - "typescript-examples:29c139d83979f9d7406774f0914d281a97baaa97a0b893149e856880316705b3:default"
+              - "typescript-examples:2e199d92290034bd35ea81584872817a274d9bf089005f537d56b6b48d323de2:default"
+            usages:
+              - start:
+                  line: 7
+                  column: 17
+                end:
+                  line: 9
+                  column: 38
+                props:
+                  - name: children
+                    value: JSXElement
+                  - name: className
+                    value: "String { value: \"asd\" }"
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:679612ddabe638df6094ff1e6a3d18886ad11ef7c842cf41b3e255c797019a5f:default"
+    name: TableUser2
+    export_ids:
+      - "typescript-examples:src/subcomponent/table/usage2:default"
+    package_name: typescript-examples
+    source_path: src/subcomponent/table/usage2.tsx
+    dependencies:
+      - from: "typescript-examples:679612ddabe638df6094ff1e6a3d18886ad11ef7c842cf41b3e255c797019a5f:default"
+        to: "typescript-examples:1c59d241cf0b23b8efe9d74232266742e7fea6c843212b7362eb08e13c6e21be:default"
+        references:
+          - trace:
+              - "typescript-examples:f8d1776c51b6ce89e17e882d108a7308ecdf509be5f8a20fef13b6f65428b197:WTable"
+              - "typescript-examples:1ff278b5f25a43cd52121c4649989e1a47f3a990c00936a32824056e2171ab34:TTable"
+              - "typescript-examples:1c59d241cf0b23b8efe9d74232266742e7fea6c843212b7362eb08e13c6e21be:default"
+            usages:
+              - start:
+                  line: 11
+                  column: 13
+                end:
+                  line: 13
+                  column: 34
+                props:
+                  - name: children
+                    value: JSXElement
+      - from: "typescript-examples:679612ddabe638df6094ff1e6a3d18886ad11ef7c842cf41b3e255c797019a5f:default"
+        to: "typescript-examples:1ff278b5f25a43cd52121c4649989e1a47f3a990c00936a32824056e2171ab34:TTable"
+        references:
+          - trace:
+              - "typescript-examples:f8d1776c51b6ce89e17e882d108a7308ecdf509be5f8a20fef13b6f65428b197:WTable"
+              - "typescript-examples:1ff278b5f25a43cd52121c4649989e1a47f3a990c00936a32824056e2171ab34:TTable"
+            usages:
+              - start:
+                  line: 5
+                  column: 9
+                end:
+                  line: 14
+                  column: 25
+                props:
+                  - name: children
+                    value: JSXElement
+      - from: "typescript-examples:679612ddabe638df6094ff1e6a3d18886ad11ef7c842cf41b3e255c797019a5f:default"
+        to: "typescript-examples:1ff278b5f25a43cd52121c4649989e1a47f3a990c00936a32824056e2171ab34:TTable.Header"
+        references:
+          - trace:
+              - "typescript-examples:f8d1776c51b6ce89e17e882d108a7308ecdf509be5f8a20fef13b6f65428b197:WTable"
+              - "typescript-examples:1ff278b5f25a43cd52121c4649989e1a47f3a990c00936a32824056e2171ab34:TTable"
+            usages:
+              - start:
+                  line: 6
+                  column: 13
+                end:
+                  line: 10
+                  column: 36
+                props:
+                  - name: children
+                    value: JSXElement
+      - from: "typescript-examples:679612ddabe638df6094ff1e6a3d18886ad11ef7c842cf41b3e255c797019a5f:default"
+        to: "typescript-examples:2e199d92290034bd35ea81584872817a274d9bf089005f537d56b6b48d323de2:default"
+        references:
+          - trace:
+              - "typescript-examples:f8d1776c51b6ce89e17e882d108a7308ecdf509be5f8a20fef13b6f65428b197:WTable"
+              - "typescript-examples:1ff278b5f25a43cd52121c4649989e1a47f3a990c00936a32824056e2171ab34:TTable"
+              - "typescript-examples:2e199d92290034bd35ea81584872817a274d9bf089005f537d56b6b48d323de2:default"
+            usages:
+              - start:
+                  line: 7
+                  column: 17
+                end:
+                  line: 9
+                  column: 45
+                props:
+                  - name: children
+                    value: JSXElement
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:91a3446af7697b6c06328595b653e47ce31c02bc16c821551662a54b38c06d5b:default"
+    name: TableUser3
+    export_ids:
+      - "typescript-examples:src/subcomponent/table/usage3:default"
+    package_name: typescript-examples
+    source_path: src/subcomponent/table/usage3.tsx
+    dependencies:
+      - from: "typescript-examples:91a3446af7697b6c06328595b653e47ce31c02bc16c821551662a54b38c06d5b:default"
+        to: "typescript-examples:1c59d241cf0b23b8efe9d74232266742e7fea6c843212b7362eb08e13c6e21be:default"
+        references:
+          - trace:
+              - "typescript-examples:1ff278b5f25a43cd52121c4649989e1a47f3a990c00936a32824056e2171ab34:TTable"
+              - "typescript-examples:1c59d241cf0b23b8efe9d74232266742e7fea6c843212b7362eb08e13c6e21be:default"
+            usages:
+              - start:
+                  line: 11
+                  column: 13
+                end:
+                  line: 13
+                  column: 27
+                props:
+                  - name: children
+                    value: JSXElement
+      - from: "typescript-examples:91a3446af7697b6c06328595b653e47ce31c02bc16c821551662a54b38c06d5b:default"
+        to: "typescript-examples:1ff278b5f25a43cd52121c4649989e1a47f3a990c00936a32824056e2171ab34:TTable"
+        references:
+          - trace:
+              - "typescript-examples:1ff278b5f25a43cd52121c4649989e1a47f3a990c00936a32824056e2171ab34:TTable"
+            usages:
+              - start:
+                  line: 5
+                  column: 9
+                end:
+                  line: 14
+                  column: 18
+                props:
+                  - name: children
+                    value: JSXElement
+      - from: "typescript-examples:91a3446af7697b6c06328595b653e47ce31c02bc16c821551662a54b38c06d5b:default"
+        to: "typescript-examples:1ff278b5f25a43cd52121c4649989e1a47f3a990c00936a32824056e2171ab34:TTable.Header"
+        references:
+          - trace:
+              - "typescript-examples:1ff278b5f25a43cd52121c4649989e1a47f3a990c00936a32824056e2171ab34:TTable"
+            usages:
+              - start:
+                  line: 6
+                  column: 13
+                end:
+                  line: 10
+                  column: 29
+                props:
+                  - name: children
+                    value: JSXElement
+      - from: "typescript-examples:91a3446af7697b6c06328595b653e47ce31c02bc16c821551662a54b38c06d5b:default"
+        to: "typescript-examples:2e199d92290034bd35ea81584872817a274d9bf089005f537d56b6b48d323de2:default"
+        references:
+          - trace:
+              - "typescript-examples:1ff278b5f25a43cd52121c4649989e1a47f3a990c00936a32824056e2171ab34:TTable"
+              - "typescript-examples:2e199d92290034bd35ea81584872817a274d9bf089005f537d56b6b48d323de2:default"
+            usages:
+              - start:
+                  line: 7
+                  column: 17
+                end:
+                  line: 9
+                  column: 38
+                props:
+                  - name: children
+                    value: JSXElement
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:18d068c66d0699c385f02820b9c855ce556ba0047138af3a87873effa06c32ad:default"
+    name: TableUser4
+    export_ids:
+      - "typescript-examples:src/subcomponent/table/usage4:default"
+    package_name: typescript-examples
+    source_path: src/subcomponent/table/usage4.tsx
+    dependencies:
+      - from: "typescript-examples:18d068c66d0699c385f02820b9c855ce556ba0047138af3a87873effa06c32ad:default"
+        to: "typescript-examples:1c59d241cf0b23b8efe9d74232266742e7fea6c843212b7362eb08e13c6e21be:default"
+        references:
+          - trace:
+              - "typescript-examples:dac4d870fb704ccce541b65856869f656c1c84d793823bb641338c4412dc45cd:default"
+              - "typescript-examples:1c59d241cf0b23b8efe9d74232266742e7fea6c843212b7362eb08e13c6e21be:default"
+            usages:
+              - start:
+                  line: 9
+                  column: 13
+                end:
+                  line: 11
+                  column: 31
+                props:
+                  - name: children
+                    value: JSXElement
+      - from: "typescript-examples:18d068c66d0699c385f02820b9c855ce556ba0047138af3a87873effa06c32ad:default"
+        to: "typescript-examples:dac4d870fb704ccce541b65856869f656c1c84d793823bb641338c4412dc45cd:default"
+        references:
+          - trace:
+              - "typescript-examples:dac4d870fb704ccce541b65856869f656c1c84d793823bb641338c4412dc45cd:default"
+            usages:
+              - start:
+                  line: 5
+                  column: 9
+                end:
+                  line: 12
+                  column: 22
+                props:
+                  - name: children
+                    value: JSXElement
+      - from: "typescript-examples:18d068c66d0699c385f02820b9c855ce556ba0047138af3a87873effa06c32ad:default"
+        to: "typescript-examples:dac4d870fb704ccce541b65856869f656c1c84d793823bb641338c4412dc45cd:default.THeader"
+        references:
+          - trace:
+              - "typescript-examples:dac4d870fb704ccce541b65856869f656c1c84d793823bb641338c4412dc45cd:default"
+            usages:
+              - start:
+                  line: 6
+                  column: 13
+                end:
+                  line: 8
+                  column: 34
+                props:
+                  - name: children
+                    value: JSXElement
+    props: []
+    html_elements: []

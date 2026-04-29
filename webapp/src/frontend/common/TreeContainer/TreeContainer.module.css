@@ -1,0 +1,34 @@
+.treeContainer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-s);
+    height: 100%;
+    overflow: hidden;
+}
+
+.treeContainer .viewContainer {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
+}
+
+.treeContainer.withBackground .viewContainer {
+    padding: var(--spacing-m) var(--spacing-s) var(--spacing-m) var(--spacing-m);
+    background-color: var(--background-tertiary-color);
+    border-radius: 4px;
+}
+
+.treeContainer .viewContainer .scrollArea {
+    height: 100%;
+    overflow: auto;
+    scrollbar-width: thin;
+}
+
+.treeContainer .viewContainer .scrollArea.topShadow {
+    border-top: solid 2px var(--background-secondary-color);
+}
+
+.treeContainer .viewContainer .scrollArea.bottomShadow {
+    border-bottom: solid 2px var(--background-secondary-color);
+}

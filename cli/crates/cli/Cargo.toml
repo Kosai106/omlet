@@ -1,0 +1,25 @@
+[package]
+name = "cli"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "omlet-cli"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "3.0.12", features = ["derive"] }
+dhat = "0.3.0"
+serde_yaml = "0.8"
+
+git_utils = { path = "../git_utils" }
+logger = { path = "../logger" }
+omlet = { path = "../core" }
+utils = { path = "../utils" }
+serde_json = "1.0.81"
+relative-path = "1.7.2"
+serde = { version = "1.0.177", features = ["serde_derive"] }
+chrono = { version = "0.4.26", features = ["serde", "std"], default-features = false }
+
+[features]
+dhat-heap = []

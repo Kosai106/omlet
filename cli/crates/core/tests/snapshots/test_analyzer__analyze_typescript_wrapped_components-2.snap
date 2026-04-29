@@ -1,0 +1,287 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&export_results"
+---
+num_of_exports: 40
+exports:
+  - name: AnonymousWrappedComponent
+    source_path: src/wrapped-components/wrapped-components.tsx
+    is_component: true
+    inferred_type: "ReturnTypeOf<TypeOf<typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:withClassWrapperNoJsx>>"
+    resolved_type: ReturnTypeOf<(Function -> Class<extends Unknown>)>
+    trace_to_declaration:
+      - "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:AnonymousWrappedComponent"
+  - name: Button
+    source_path: src/wrapped-components/sample-issues.tsx
+    is_component: true
+    inferred_type: "ReturnTypeOf<TypeOf<typescript-examples:eb4db0f8d55b445b4e092e919cbe2696218184a09739885388ec8760d37d4a8d:withRef>>"
+    resolved_type: ReturnTypeOf<(Function -> ReturnTypeOf<(Function -> (Function -> JSX))>)>
+    trace_to_declaration:
+      - "typescript-examples:eb4db0f8d55b445b4e092e919cbe2696218184a09739885388ec8760d37d4a8d:Button"
+  - name: ComponentWithClassWrapperJsx
+    source_path: src/wrapped-components/wrapped-components.tsx
+    is_component: true
+    inferred_type: "ReturnTypeOf<TypeOf<typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:withClassWrapperJsx>>"
+    resolved_type: ReturnTypeOf<(Function -> Class<extends Unknown>)>
+    trace_to_declaration:
+      - "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:ComponentWithClassWrapperJsx"
+  - name: ComponentWithClassWrapperNoJsx
+    source_path: src/wrapped-components/wrapped-components.tsx
+    is_component: true
+    inferred_type: "ReturnTypeOf<TypeOf<typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:withClassWrapperNoJsx>>"
+    resolved_type: ReturnTypeOf<(Function -> Class<extends Unknown>)>
+    trace_to_declaration:
+      - "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:ComponentWithClassWrapperNoJsx"
+  - name: ComponentWithExternalWrapper
+    source_path: src/wrapped-components/wrapped-components.tsx
+    is_component: true
+    inferred_type: "ReturnTypeOf<TypeOf<typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:injectIntl>>"
+    resolved_type: ReturnTypeOf<Unknown>
+    trace_to_declaration:
+      - "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:ComponentWithExternalWrapper"
+  - name: ComponentWithIntl
+    source_path: src/wrapped-components/wrapped-components.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:ComponentWithIntl"
+  - name: ComponentWithWrapperJsx
+    source_path: src/wrapped-components/wrapped-components.tsx
+    is_component: true
+    inferred_type: "ReturnTypeOf<TypeOf<typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:withWrapperJsx>>"
+    resolved_type: ReturnTypeOf<(Function -> (Function -> JSX))>
+    trace_to_declaration:
+      - "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:ComponentWithWrapperJsx"
+  - name: ComponentWithWrapperNoJsx
+    source_path: src/wrapped-components/wrapped-components.tsx
+    is_component: true
+    inferred_type: "ReturnTypeOf<TypeOf<typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:withWrapperNoJsx>>"
+    resolved_type: ReturnTypeOf<(Function -> (Function -> Unknown))>
+    trace_to_declaration:
+      - "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:ComponentWithWrapperNoJsx"
+  - name: ComponentWrappedByObjectAssign
+    source_path: src/wrapped-components/sample-issues.tsx
+    is_component: true
+    inferred_type: "ReturnTypeOf<TypeOf<typescript-examples:eb4db0f8d55b445b4e092e919cbe2696218184a09739885388ec8760d37d4a8d:Object>[assign]>"
+    resolved_type: "ReturnTypeOf<Unknown[assign]>"
+    trace_to_declaration:
+      - "typescript-examples:eb4db0f8d55b445b4e092e919cbe2696218184a09739885388ec8760d37d4a8d:ComponentWrappedByObjectAssign"
+  - name: CopperSimpleComponent
+    source_path: src/wrapped-components/sample-issues.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:eb4db0f8d55b445b4e092e919cbe2696218184a09739885388ec8760d37d4a8d:CopperSimpleComponent"
+  - name: DoubleWrapper
+    source_path: src/wrapped-components/double-wrapper.tsx
+    is_component: false
+    inferred_type: (Function -> (Function -> (Function -> JSX)))
+    resolved_type: (Function -> (Function -> (Function -> JSX)))
+    trace_to_declaration:
+      - "typescript-examples:fd775f3e8cc1846eec57ce3c17a0cfd9e91132918e2616cbe37f5c154188c157:DoubleWrapper"
+  - name: ExternalComponentWithExternalWrapper
+    source_path: src/wrapped-components/wrapped-components.tsx
+    is_component: false
+    inferred_type: "ReturnTypeOf<TypeOf<typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:injectIntl>>"
+    resolved_type: ReturnTypeOf<Unknown>
+    trace_to_declaration:
+      - "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:ExternalComponentWithExternalWrapper"
+  - name: ExternalComponentWithWrapperJsx
+    source_path: src/wrapped-components/wrapped-components.tsx
+    is_component: true
+    inferred_type: "ReturnTypeOf<TypeOf<typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:withWrapperJsx>>"
+    resolved_type: ReturnTypeOf<(Function -> (Function -> JSX))>
+    trace_to_declaration:
+      - "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:ExternalComponentWithWrapperJsx"
+  - name: ExternalComponentWithWrapperNoJsx
+    source_path: src/wrapped-components/wrapped-components.tsx
+    is_component: false
+    inferred_type: "ReturnTypeOf<TypeOf<typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:withWrapperNoJsx>>"
+    resolved_type: ReturnTypeOf<(Function -> (Function -> Unknown))>
+    trace_to_declaration:
+      - "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:ExternalComponentWithWrapperNoJsx"
+  - name: HoveringComponent
+    source_path: src/wrapped-components/sample-issues.tsx
+    is_component: true
+    inferred_type: "ReturnTypeOf<TypeOf<typescript-examples:eb4db0f8d55b445b4e092e919cbe2696218184a09739885388ec8760d37d4a8d:withHoverRegion>>"
+    resolved_type: ReturnTypeOf<(Function -> Class<extends Unknown>)>
+    trace_to_declaration:
+      - "typescript-examples:eb4db0f8d55b445b4e092e919cbe2696218184a09739885388ec8760d37d4a8d:HoveringComponent"
+  - name: IntlComponent
+    source_path: src/wrapped-components/sample-issues.tsx
+    is_component: true
+    inferred_type: "ReturnTypeOf<TypeOf<typescript-examples:eb4db0f8d55b445b4e092e919cbe2696218184a09739885388ec8760d37d4a8d:injectIntl>>"
+    resolved_type: ReturnTypeOf<Unknown>
+    trace_to_declaration:
+      - "typescript-examples:eb4db0f8d55b445b4e092e919cbe2696218184a09739885388ec8760d37d4a8d:IntlComponent"
+  - name: LocalComponentWithClassWrapperJsx
+    source_path: src/wrapped-components/wrapped-components.tsx
+    is_component: true
+    inferred_type: "ReturnTypeOf<TypeOf<typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:withClassWrapperJsx>>"
+    resolved_type: ReturnTypeOf<(Function -> Class<extends Unknown>)>
+    trace_to_declaration:
+      - "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:LocalComponentWithClassWrapperJsx"
+  - name: LocalComponentWithClassWrapperNoJsx
+    source_path: src/wrapped-components/wrapped-components.tsx
+    is_component: true
+    inferred_type: "ReturnTypeOf<TypeOf<typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:withClassWrapperNoJsx>>"
+    resolved_type: ReturnTypeOf<(Function -> Class<extends Unknown>)>
+    trace_to_declaration:
+      - "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:LocalComponentWithClassWrapperNoJsx"
+  - name: LocalComponentWithExternalWrapper
+    source_path: src/wrapped-components/wrapped-components.tsx
+    is_component: true
+    inferred_type: "ReturnTypeOf<TypeOf<typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:injectIntl>>"
+    resolved_type: ReturnTypeOf<Unknown>
+    trace_to_declaration:
+      - "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:LocalComponentWithExternalWrapper"
+  - name: LocalComponentWithWrapperJsx
+    source_path: src/wrapped-components/wrapped-components.tsx
+    is_component: true
+    inferred_type: "ReturnTypeOf<TypeOf<typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:withWrapperJsx>>"
+    resolved_type: ReturnTypeOf<(Function -> (Function -> JSX))>
+    trace_to_declaration:
+      - "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:LocalComponentWithWrapperJsx"
+  - name: LocalComponentWithWrapperNoJsx
+    source_path: src/wrapped-components/wrapped-components.tsx
+    is_component: true
+    inferred_type: "ReturnTypeOf<TypeOf<typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:withWrapperNoJsx>>"
+    resolved_type: ReturnTypeOf<(Function -> (Function -> Unknown))>
+    trace_to_declaration:
+      - "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:LocalComponentWithWrapperNoJsx"
+  - name: PlainComponent
+    source_path: src/wrapped-components/components.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:baa31a9b47e720c8fd4c2c02751ba309ee07334eacc3e0e0fb899f0d28c3b2e3:PlainComponent"
+  - name: SampleComponent
+    source_path: src/wrapped-components/sample-issues.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:eb4db0f8d55b445b4e092e919cbe2696218184a09739885388ec8760d37d4a8d:SampleComponent"
+  - name: StyledWrappedComponent
+    source_path: src/wrapped-components/sample-issues.tsx
+    is_component: true
+    inferred_type: "ReturnTypeOf<ReturnTypeOf<TypeOf<typescript-examples:eb4db0f8d55b445b4e092e919cbe2696218184a09739885388ec8760d37d4a8d:Styled>>>"
+    resolved_type: ReturnTypeOf<ReturnTypeOf<Unknown>>
+    trace_to_declaration:
+      - "typescript-examples:eb4db0f8d55b445b4e092e919cbe2696218184a09739885388ec8760d37d4a8d:StyledWrappedComponent"
+  - name: StyledWrappedComponent.CopperButton
+    source_path: src/wrapped-components/sample-issues.tsx
+    is_component: true
+    inferred_type: Unknown
+    resolved_type: Unknown
+    trace_to_declaration:
+      - "typescript-examples:eb4db0f8d55b445b4e092e919cbe2696218184a09739885388ec8760d37d4a8d:StyledWrappedComponent.CopperButton"
+      - "@acme/copper:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:CopperButton"
+  - name: StyledWrappedComponent.SampleComponent
+    source_path: src/wrapped-components/sample-issues.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:eb4db0f8d55b445b4e092e919cbe2696218184a09739885388ec8760d37d4a8d:StyledWrappedComponent.SampleComponent"
+  - name: StyledWrappedComponent.WrappedCopperComponent
+    source_path: src/wrapped-components/sample-issues.tsx
+    is_component: true
+    inferred_type: "ReturnTypeOf<TypeOf<typescript-examples:eb4db0f8d55b445b4e092e919cbe2696218184a09739885388ec8760d37d4a8d:forwardRef>>"
+    resolved_type: ReturnTypeOf<(Function -> (Function -> JSX))>
+    trace_to_declaration:
+      - "typescript-examples:eb4db0f8d55b445b4e092e919cbe2696218184a09739885388ec8760d37d4a8d:StyledWrappedComponent.WrappedCopperComponent"
+  - name: Wrapped
+    source_path: src/wrapped-components/double-wrapper.tsx
+    is_component: true
+    inferred_type: "ReturnTypeOf<TypeOf<typescript-examples:fd775f3e8cc1846eec57ce3c17a0cfd9e91132918e2616cbe37f5c154188c157:Wrapper>>"
+    resolved_type: ReturnTypeOf<ReturnTypeOf<(Function -> (Function -> (Function -> JSX)))>>
+    trace_to_declaration:
+      - "typescript-examples:fd775f3e8cc1846eec57ce3c17a0cfd9e91132918e2616cbe37f5c154188c157:Wrapped"
+  - name: WrappedComponent
+    source_path: src/wrapped-components/components.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:baa31a9b47e720c8fd4c2c02751ba309ee07334eacc3e0e0fb899f0d28c3b2e3:WrappedComponent"
+  - name: WrappedCopperClassComponent
+    source_path: src/wrapped-components/sample-issues.tsx
+    is_component: true
+    inferred_type: "ReturnTypeOf<TypeOf<typescript-examples:eb4db0f8d55b445b4e092e919cbe2696218184a09739885388ec8760d37d4a8d:forwardRef>>"
+    resolved_type: ReturnTypeOf<(Function -> (Function -> JSX))>
+    trace_to_declaration:
+      - "typescript-examples:eb4db0f8d55b445b4e092e919cbe2696218184a09739885388ec8760d37d4a8d:WrappedCopperClassComponent"
+  - name: WrappedCopperComponent
+    source_path: src/wrapped-components/sample-issues.tsx
+    is_component: true
+    inferred_type: "ReturnTypeOf<TypeOf<typescript-examples:eb4db0f8d55b445b4e092e919cbe2696218184a09739885388ec8760d37d4a8d:forwardRef>>"
+    resolved_type: ReturnTypeOf<(Function -> (Function -> JSX))>
+    trace_to_declaration:
+      - "typescript-examples:eb4db0f8d55b445b4e092e919cbe2696218184a09739885388ec8760d37d4a8d:WrappedCopperComponent"
+  - name: WrappedFromWrapperWithComponentArg
+    source_path: src/wrapped-components/double-wrapper.tsx
+    is_component: true
+    inferred_type: "ReturnTypeOf<TypeOf<typescript-examples:fd775f3e8cc1846eec57ce3c17a0cfd9e91132918e2616cbe37f5c154188c157:WrapperWithComponentArg>>"
+    resolved_type: ReturnTypeOf<ReturnTypeOf<(Function -> (Function -> (Function -> JSX)))>>
+    trace_to_declaration:
+      - "typescript-examples:fd775f3e8cc1846eec57ce3c17a0cfd9e91132918e2616cbe37f5c154188c157:WrappedFromWrapperWithComponentArg"
+  - name: WrappedWithComponentArg
+    source_path: src/wrapped-components/double-wrapper.tsx
+    is_component: true
+    inferred_type: "ReturnTypeOf<TypeOf<typescript-examples:fd775f3e8cc1846eec57ce3c17a0cfd9e91132918e2616cbe37f5c154188c157:Wrapper>>"
+    resolved_type: ReturnTypeOf<ReturnTypeOf<(Function -> (Function -> (Function -> JSX)))>>
+    trace_to_declaration:
+      - "typescript-examples:fd775f3e8cc1846eec57ce3c17a0cfd9e91132918e2616cbe37f5c154188c157:WrappedWithComponentArg"
+  - name: WrappedWithComponentArgFromWrapperWithComponentArg
+    source_path: src/wrapped-components/double-wrapper.tsx
+    is_component: true
+    inferred_type: "ReturnTypeOf<TypeOf<typescript-examples:fd775f3e8cc1846eec57ce3c17a0cfd9e91132918e2616cbe37f5c154188c157:WrapperWithComponentArg>>"
+    resolved_type: ReturnTypeOf<ReturnTypeOf<(Function -> (Function -> (Function -> JSX)))>>
+    trace_to_declaration:
+      - "typescript-examples:fd775f3e8cc1846eec57ce3c17a0cfd9e91132918e2616cbe37f5c154188c157:WrappedWithComponentArgFromWrapperWithComponentArg"
+  - name: Wrapper
+    source_path: src/wrapped-components/double-wrapper.tsx
+    is_component: false
+    inferred_type: "ReturnTypeOf<TypeOf<typescript-examples:fd775f3e8cc1846eec57ce3c17a0cfd9e91132918e2616cbe37f5c154188c157:DoubleWrapper>>"
+    resolved_type: ReturnTypeOf<(Function -> (Function -> (Function -> JSX)))>
+    trace_to_declaration:
+      - "typescript-examples:fd775f3e8cc1846eec57ce3c17a0cfd9e91132918e2616cbe37f5c154188c157:Wrapper"
+  - name: WrapperWithComponentArg
+    source_path: src/wrapped-components/double-wrapper.tsx
+    is_component: false
+    inferred_type: "ReturnTypeOf<TypeOf<typescript-examples:fd775f3e8cc1846eec57ce3c17a0cfd9e91132918e2616cbe37f5c154188c157:DoubleWrapper>>"
+    resolved_type: ReturnTypeOf<(Function -> (Function -> (Function -> JSX)))>
+    trace_to_declaration:
+      - "typescript-examples:fd775f3e8cc1846eec57ce3c17a0cfd9e91132918e2616cbe37f5c154188c157:WrapperWithComponentArg"
+  - name: withClassWrapperJsx
+    source_path: src/wrapped-components/wrappers.tsx
+    is_component: false
+    inferred_type: "(Function -> Class<extends TypeOf<typescript-examples:5bc4f3ddf65b7c77fd01c590fd99dc7d9d88e18068de955fb26fcfb03ee61e77:WrappedComponent>>)"
+    resolved_type: (Function -> Class<extends Unknown>)
+    trace_to_declaration:
+      - "typescript-examples:5bc4f3ddf65b7c77fd01c590fd99dc7d9d88e18068de955fb26fcfb03ee61e77:withClassWrapperJsx"
+  - name: withClassWrapperNoJsx
+    source_path: src/wrapped-components/wrappers.tsx
+    is_component: false
+    inferred_type: "(Function -> Class<extends TypeOf<typescript-examples:5bc4f3ddf65b7c77fd01c590fd99dc7d9d88e18068de955fb26fcfb03ee61e77:WrappedComponent>>)"
+    resolved_type: (Function -> Class<extends Unknown>)
+    trace_to_declaration:
+      - "typescript-examples:5bc4f3ddf65b7c77fd01c590fd99dc7d9d88e18068de955fb26fcfb03ee61e77:withClassWrapperNoJsx"
+  - name: withWrapperJsx
+    source_path: src/wrapped-components/wrappers.tsx
+    is_component: false
+    inferred_type: (Function -> (Function -> JSX))
+    resolved_type: (Function -> (Function -> JSX))
+    trace_to_declaration:
+      - "typescript-examples:5bc4f3ddf65b7c77fd01c590fd99dc7d9d88e18068de955fb26fcfb03ee61e77:withWrapperJsx"
+  - name: withWrapperNoJsx
+    source_path: src/wrapped-components/wrappers.tsx
+    is_component: false
+    inferred_type: "(Function -> (Function -> TypeOf<typescript-examples:5bc4f3ddf65b7c77fd01c590fd99dc7d9d88e18068de955fb26fcfb03ee61e77:Component>))"
+    resolved_type: (Function -> (Function -> Unknown))
+    trace_to_declaration:
+      - "typescript-examples:5bc4f3ddf65b7c77fd01c590fd99dc7d9d88e18068de955fb26fcfb03ee61e77:withWrapperNoJsx"

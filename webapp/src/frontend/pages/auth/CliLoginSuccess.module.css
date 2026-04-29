@@ -1,0 +1,9 @@
+.content {
+    white-space: normal;
+    width: 240px;
+}
+
+.token {
+    width: 600px;
+    margin-top: var(--spacing-xxl);
+}

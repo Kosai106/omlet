@@ -1,0 +1,130 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&component_results"
+---
+num_of_components: 8
+components:
+  - definition_id: "typescript-examples:1281790c5857aac7f058321f4806efc5f7ad28d10c7d773fb72a8d4b1c0bd11b:CountdownTimer"
+    name: CountdownTimer
+    export_ids:
+      - "typescript-examples:src/component-generators:CountdownTimer"
+    package_name: typescript-examples
+    source_path: src/component-generators.tsx
+    dependencies:
+      - from: "typescript-examples:1281790c5857aac7f058321f4806efc5f7ad28d10c7d773fb72a8d4b1c0bd11b:CountdownTimer"
+        to: "typescript-examples:1281790c5857aac7f058321f4806efc5f7ad28d10c7d773fb72a8d4b1c0bd11b:MahmutCan"
+        references:
+          - trace: []
+            usages:
+              - start:
+                  line: 13
+                  column: 39
+                end:
+                  line: 13
+                  column: 51
+                props: []
+    props:
+      - name: initialValue
+        default_value: NONE
+    html_elements: []
+  - definition_id: "typescript-examples:1281790c5857aac7f058321f4806efc5f7ad28d10c7d773fb72a8d4b1c0bd11b:LapTimer"
+    name: LapTimer
+    export_ids:
+      - "typescript-examples:src/component-generators:LapTimer"
+    package_name: typescript-examples
+    source_path: src/component-generators.tsx
+    dependencies:
+      - from: "typescript-examples:1281790c5857aac7f058321f4806efc5f7ad28d10c7d773fb72a8d4b1c0bd11b:LapTimer"
+        to: "typescript-examples:1281790c5857aac7f058321f4806efc5f7ad28d10c7d773fb72a8d4b1c0bd11b:MahmutCan"
+        references:
+          - trace: []
+            usages:
+              - start:
+                  line: 13
+                  column: 39
+                end:
+                  line: 13
+                  column: 51
+                props: []
+    props:
+      - name: initialValue
+        default_value: NONE
+    html_elements: []
+  - definition_id: "typescript-examples:1281790c5857aac7f058321f4806efc5f7ad28d10c7d773fb72a8d4b1c0bd11b:MahmutCan"
+    name: MahmutCan
+    export_ids:
+      - "typescript-examples:src/component-generators:MahmutCan"
+    package_name: typescript-examples
+    source_path: src/component-generators.tsx
+    dependencies: []
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:a61f7961b3f552c622675bbc828aa191517a345365478f3a1bdcc093ab77adbd:Button"
+    name: Button
+    export_ids:
+      - "typescript-examples:src/dynamic-html-element:Button"
+    package_name: typescript-examples
+    source_path: src/dynamic-html-element.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - button
+  - definition_id: "typescript-examples:a61f7961b3f552c622675bbc828aa191517a345365478f3a1bdcc093ab77adbd:Card"
+    name: Card
+    export_ids:
+      - "typescript-examples:src/dynamic-html-element:Card"
+    package_name: typescript-examples
+    source_path: src/dynamic-html-element.tsx
+    dependencies: []
+    props:
+      - name: as
+        default_value: NONE
+      - name: background
+        default_value: "Bool { value: true }"
+      - name: bordered
+        default_value: "Bool { value: true }"
+      - name: className
+        default_value: NONE
+      - name: elementType
+        default_value: NONE
+      - name: padded
+        default_value: "Bool { value: true }"
+      - name: rounded
+        default_value: "Bool { value: false }"
+    html_elements:
+      - div
+      - img
+  - definition_id: "typescript-examples:039457fd1a392cc7194f548746284c915a5d897f5ecd0cbb8bc9b8d8734066f4:ExpandableFlyoutProvider"
+    name: ExpandableFlyoutProvider
+    export_ids:
+      - "typescript-examples:src/html-elements-in-recursive-ast:ExpandableFlyoutProvider"
+    package_name: typescript-examples
+    source_path: src/html-elements-in-recursive-ast.tsx
+    dependencies: []
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:054af81d29a6e68e7a9b2b083192b21b30f5dc7595d8e3098a3e964276213ef1:default"
+    name: Sample
+    export_ids:
+      - "typescript-examples:src/static-prop-access:default"
+    package_name: typescript-examples
+    source_path: src/static-prop-access.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - div
+  - definition_id: "typescript-examples:35fde9f96980d94b848b51c803fa533b80f3b2dacff94ff418bbfec25cb749f7:Student"
+    name: Student
+    export_ids:
+      - "typescript-examples:src/student:Student"
+    package_name: typescript-examples
+    source_path: src/student.tsx
+    dependencies: []
+    props:
+      - name: age
+        default_value: NONE
+      - name: name
+        default_value: NONE
+    html_elements:
+      - div
+

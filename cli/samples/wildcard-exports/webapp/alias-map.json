@@ -1,0 +1,24 @@
+{
+  "root": {
+    "name": "@wildcard-exports/webapp",
+    "path": "",
+    "version": "1.0.0",
+    "aliases": {},
+    "importMap": {
+      "@wildcard-exports/webapp/*": [
+        "*"
+      ],
+      "@wildcard-exports/webapp": [
+        "src/app.tsx"
+      ]
+    },
+    "exportMap": {
+      ".": [
+        "src/app.tsx"
+      ]
+    },
+    "main": "src/app.tsx"
+  },
+  "packages": {},
+  "absolutePath": "/package"
+}

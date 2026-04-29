@@ -1,0 +1,185 @@
+---
+source: crates/core/tests/test_parser.rs
+expression: "&parser::Module::new(&RelativePathBuf::from_path(path.strip_prefix(&project_root).unwrap()).unwrap(),\n&project_root, &module_resolver,).unwrap()"
+input_file: samples/typescript/src/hess/component/index.tsx
+---
+source_path: src/hess/component/index.tsx
+id:
+  hash: "6482229448276103877"
+  path: src/hess/component/index.tsx
+  package_name: UNKNOWN
+  mtype: local
+created_at: ~
+updated_at: ~
+exports:
+  - source:
+      External:
+        symbol: "default#0"
+        source:
+          hash: "10335023068409944853"
+          path: src/hess/component/componentBody
+          package_name: UNKNOWN
+          mtype: local
+    exported_name: default
+  - source:
+      Internal: "NamedComponent#1"
+    exported_name: NamedComponent
+declarations:
+  - symbol: "NamedComponent#1"
+    source:
+      hash: "6482229448276103877"
+      path: src/hess/component/index.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<declaration>"
+    inferred_type:
+      Function:
+        - JSX
+    start:
+      line: 3
+      column: 8
+    end:
+      line: 3
+      column: 63
+scopes:
+  - owner: "__global#0"
+    parent: ~
+    children:
+      - "NamedComponent#1"
+      - "NamedComponent#1"
+    references:
+      - "NamedComponent#1"
+      - "default#0"
+      - "span#2"
+    jsx_references:
+      - "span#2"
+  - owner: "NamedComponent#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "span#2"
+    jsx_references:
+      - "span#2"
+  - owner: "NamedComponent#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "span#2"
+    jsx_references:
+      - "span#2"
+body:
+  - type: ExportNamedDeclaration
+    span:
+      start: 1
+      end: 43
+      ctxt: 0
+    specifiers:
+      - type: ExportSpecifier
+        span:
+          start: 10
+          end: 17
+          ctxt: 0
+        orig:
+          type: Identifier
+          span:
+            start: 10
+            end: 17
+            ctxt: 0
+          value: default
+          optional: false
+        exported: ~
+        isTypeOnly: false
+    source:
+      type: StringLiteral
+      span:
+        start: 25
+        end: 42
+        ctxt: 0
+      value: "./componentBody"
+      raw: "\"./componentBody\""
+    typeOnly: false
+    asserts: ~
+  - type: ExportDeclaration
+    span:
+      start: 45
+      end: 107
+      ctxt: 0
+    declaration:
+      async: false
+      body:
+        type: BlockStatement
+        span:
+          start: 78
+          end: 107
+          ctxt: 0
+        stmts:
+          - type: ReturnStatement
+            span:
+              start: 80
+              end: 106
+              ctxt: 0
+            argument:
+              type: JSXElement
+              span:
+                start: 87
+                end: 105
+                ctxt: 0
+              opening:
+                type: JSXOpeningElement
+                name:
+                  type: Identifier
+                  span:
+                    start: 88
+                    end: 92
+                    ctxt: 2
+                  value: span
+                  optional: false
+                span:
+                  start: 87
+                  end: 93
+                  ctxt: 0
+                attributes: []
+                selfClosing: false
+                typeArguments: ~
+              children:
+                - type: JSXText
+                  span:
+                    start: 93
+                    end: 98
+                    ctxt: 0
+                  value: named
+                  raw: named
+              closing:
+                type: JSXClosingElement
+                span:
+                  start: 98
+                  end: 105
+                  ctxt: 0
+                name:
+                  type: Identifier
+                  span:
+                    start: 100
+                    end: 104
+                    ctxt: 2
+                  value: span
+                  optional: false
+      declare: false
+      decorators: []
+      generator: false
+      identifier:
+        type: Identifier
+        span:
+          start: 61
+          end: 75
+          ctxt: 1
+        value: NamedComponent
+        optional: false
+      params: []
+      returnType: ~
+      span:
+        start: 52
+        end: 107
+        ctxt: 0
+      type: FunctionDeclaration
+      typeParameters: ~
+

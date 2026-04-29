@@ -1,0 +1,135 @@
+---
+source: crates/core/tests/test_parser.rs
+expression: "&parser::Module::new(&RelativePathBuf::from_path(path.strip_prefix(&project_root).unwrap()).unwrap(),\n&project_root, &module_resolver,).unwrap()"
+input_file: samples/typescript/src/module-decls/default-export/default-export-named-func-index/index.tsx
+---
+source_path: src/module-decls/default-export/default-export-named-func-index/index.tsx
+id:
+  hash: "5862911469966729913"
+  path: src/module-decls/default-export/default-export-named-func-index/index.tsx
+  package_name: UNKNOWN
+  mtype: local
+created_at: ~
+updated_at: ~
+exports:
+  - source:
+      Internal: "NamedComponentIndex#1"
+    exported_name: default
+declarations:
+  - symbol: "NamedComponentIndex#1"
+    source:
+      hash: "5862911469966729913"
+      path: src/module-decls/default-export/default-export-named-func-index/index.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      Function:
+        - JSX
+    start:
+      line: 1
+      column: 16
+    end:
+      line: 3
+      column: 2
+scopes:
+  - owner: "__global#0"
+    parent: ~
+    children:
+      - "NamedComponentIndex#1"
+      - "NamedComponentIndex#1"
+    references:
+      - "NamedComponentIndex#1"
+      - "div#2"
+    jsx_references:
+      - "div#2"
+  - owner: "NamedComponentIndex#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "div#2"
+    jsx_references:
+      - "div#2"
+  - owner: "NamedComponentIndex#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "div#2"
+    jsx_references:
+      - "div#2"
+body:
+  - type: ExportDefaultDeclaration
+    span:
+      start: 1
+      end: 74
+      ctxt: 0
+    decl:
+      async: false
+      body:
+        type: BlockStatement
+        span:
+          start: 47
+          end: 74
+          ctxt: 0
+        stmts:
+          - type: ReturnStatement
+            span:
+              start: 53
+              end: 72
+              ctxt: 0
+            argument:
+              type: JSXElement
+              span:
+                start: 60
+                end: 71
+                ctxt: 0
+              opening:
+                type: JSXOpeningElement
+                name:
+                  type: Identifier
+                  span:
+                    start: 61
+                    end: 64
+                    ctxt: 2
+                  value: div
+                  optional: false
+                span:
+                  start: 60
+                  end: 65
+                  ctxt: 0
+                attributes: []
+                selfClosing: false
+                typeArguments: ~
+              children: []
+              closing:
+                type: JSXClosingElement
+                span:
+                  start: 65
+                  end: 71
+                  ctxt: 0
+                name:
+                  type: Identifier
+                  span:
+                    start: 67
+                    end: 70
+                    ctxt: 2
+                  value: div
+                  optional: false
+      decorators: []
+      generator: false
+      identifier:
+        type: Identifier
+        span:
+          start: 25
+          end: 44
+          ctxt: 1
+        value: NamedComponentIndex
+        optional: false
+      params: []
+      returnType: ~
+      span:
+        start: 16
+        end: 74
+        ctxt: 0
+      type: FunctionExpression
+      typeParameters: ~

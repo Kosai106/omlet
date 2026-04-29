@@ -1,0 +1,7 @@
+{
+  "workspaces": {
+    "ds": {
+      "exports": "./src/index.ts"
+    }
+  }
+}

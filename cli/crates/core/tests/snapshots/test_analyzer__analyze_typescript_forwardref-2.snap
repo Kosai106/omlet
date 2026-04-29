@@ -1,0 +1,21 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&export_results"
+---
+num_of_exports: 2
+exports:
+  - name: default
+    source_path: src/forwardRef/preact-forwardRef.tsx
+    is_component: true
+    inferred_type: "ReturnTypeOf<TypeOf<typescript-examples:a41d3102fa069f49d308640125cb15503f892aef4da63cce2330db85aa2379e5:forwardRef>>"
+    resolved_type: ReturnTypeOf<(Function -> (Function -> JSX))>
+    trace_to_declaration:
+      - "typescript-examples:a41d3102fa069f49d308640125cb15503f892aef4da63cce2330db85aa2379e5:default"
+  - name: default
+    source_path: src/forwardRef/react-forwardRef.tsx
+    is_component: true
+    inferred_type: "ReturnTypeOf<TypeOf<typescript-examples:cc86ec4e7471605f124bee66deda8a0b16cff8f022b4267199aeba1275069bee:React>[forwardRef]>"
+    resolved_type: "ReturnTypeOf<{ Component: (Function -> JSX), PureComponent: (Function -> JSX), forwardRef: (Function -> (Function -> JSX)), lazy: (Function -> ReturnTypeOf<Unknown>[default]), memo: (Function -> (Function -> JSX)) }[forwardRef]>"
+    trace_to_declaration:
+      - "typescript-examples:cc86ec4e7471605f124bee66deda8a0b16cff8f022b4267199aeba1275069bee:default"
+

@@ -1,0 +1,276 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&component_results"
+---
+num_of_components: 11
+components:
+  - definition_id: "@mui/material:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Box"
+    name: Box
+    export_ids: []
+    package_name: "@mui/material"
+    source_path: ""
+    dependencies: []
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:e079716b7af750c973bcbbfadca5896421e397f514a0704c0798673916b43538:default"
+    name: ArrayValues
+    export_ids:
+      - "typescript-examples:src/object-properties/array-values:default"
+    package_name: typescript-examples
+    source_path: src/object-properties/array-values.tsx
+    dependencies:
+      - from: "typescript-examples:e079716b7af750c973bcbbfadca5896421e397f514a0704c0798673916b43538:default"
+        to: "@mui/material:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Box"
+        references:
+          - trace:
+              - "@mui/material:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Box"
+            usages:
+              - start:
+                  line: 6
+                  column: 9
+                end:
+                  line: 13
+                  column: 15
+                props:
+                  - name: children
+                    value: JSXElement
+                  - name: sx
+                    value: "Object { props: [KeyValue { key: \"margin\", value: Array { values: [Number { value: 0.0 }, Number { value: 10.0 }, Number { value: 20.0 }, Number { value: 30.0 }] } }, KeyValue { key: \"gridTemplateColumns\", value: Array { values: [String { value: \"1fr\" }, String { value: \"2fr\" }] } }] }"
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:be93c07e80956fb944fbe0e27ff883d53006333acef479b8da12c851f2da8151:default"
+    name: Getter
+    export_ids:
+      - "typescript-examples:src/object-properties/getter:default"
+    package_name: typescript-examples
+    source_path: src/object-properties/getter.tsx
+    dependencies:
+      - from: "typescript-examples:be93c07e80956fb944fbe0e27ff883d53006333acef479b8da12c851f2da8151:default"
+        to: "@mui/material:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Box"
+        references:
+          - trace:
+              - "@mui/material:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Box"
+            usages:
+              - start:
+                  line: 6
+                  column: 9
+                end:
+                  line: 15
+                  column: 15
+                props:
+                  - name: children
+                    value: JSXElement
+                  - name: sx
+                    value: "Object { props: [KeyValue { key: \"width\", value: Number { value: 100.0 } }, KeyValue { key: \"dynamicWidth\", value: Getter }] }"
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:175761a531f081381fafc6c2c63520dec778d995c3e5338c2b194b3eab3f7933:default"
+    name: KeyPair
+    export_ids:
+      - "typescript-examples:src/object-properties/key-pair:default"
+    package_name: typescript-examples
+    source_path: src/object-properties/key-pair.tsx
+    dependencies:
+      - from: "typescript-examples:175761a531f081381fafc6c2c63520dec778d995c3e5338c2b194b3eab3f7933:default"
+        to: "@mui/material:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Box"
+        references:
+          - trace:
+              - "@mui/material:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Box"
+            usages:
+              - start:
+                  line: 6
+                  column: 9
+                end:
+                  line: 13
+                  column: 15
+                props:
+                  - name: children
+                    value: JSXElement
+                  - name: sx
+                    value: "Object { props: [KeyValue { key: \"backgroundColor\", value: String { value: \"primary.main\" } }, KeyValue { key: \"padding\", value: Number { value: 2.0 } }] }"
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:24cfb9a0b1722b88061bf4cba309e47682ee93913bb8d549b8fc9899f13b204d:default"
+    name: Method
+    export_ids:
+      - "typescript-examples:src/object-properties/method:default"
+    package_name: typescript-examples
+    source_path: src/object-properties/method.tsx
+    dependencies:
+      - from: "typescript-examples:24cfb9a0b1722b88061bf4cba309e47682ee93913bb8d549b8fc9899f13b204d:default"
+        to: "@mui/material:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Box"
+        references:
+          - trace:
+              - "@mui/material:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Box"
+            usages:
+              - start:
+                  line: 6
+                  column: 9
+                end:
+                  line: 15
+                  column: 15
+                props:
+                  - name: children
+                    value: JSXElement
+                  - name: sx
+                    value: "Object { props: [KeyValue { key: \"width\", value: Number { value: 100.0 } }, KeyValue { key: \"calculateSize\", value: Function }] }"
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:481842edee96e22214e034549fbb4ee5336d8383f2f89eeec1e5061f08947361:default"
+    name: NestedKeyPair
+    export_ids:
+      - "typescript-examples:src/object-properties/nested-key-pair:default"
+    package_name: typescript-examples
+    source_path: src/object-properties/nested-key-pair.tsx
+    dependencies:
+      - from: "typescript-examples:481842edee96e22214e034549fbb4ee5336d8383f2f89eeec1e5061f08947361:default"
+        to: "@mui/material:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Box"
+        references:
+          - trace:
+              - "@mui/material:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Box"
+            usages:
+              - start:
+                  line: 6
+                  column: 9
+                end:
+                  line: 14
+                  column: 15
+                props:
+                  - name: children
+                    value: JSXElement
+                  - name: sx
+                    value: "Object { props: [KeyValue { key: \"&:hover\", value: Object { props: [KeyValue { key: \"backgroundColor\", value: String { value: \"secondary.main\" } }] } }] }"
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:9b5ce038b836e7e840c26e121521133f17d44a4631f1a3c3ceab83ccd9aa1cf1:default"
+    name: NestedObject
+    export_ids:
+      - "typescript-examples:src/object-properties/nested-object:default"
+    package_name: typescript-examples
+    source_path: src/object-properties/nested-object.tsx
+    dependencies:
+      - from: "typescript-examples:9b5ce038b836e7e840c26e121521133f17d44a4631f1a3c3ceab83ccd9aa1cf1:default"
+        to: "@mui/material:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Box"
+        references:
+          - trace:
+              - "@mui/material:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Box"
+            usages:
+              - start:
+                  line: 6
+                  column: 9
+                end:
+                  line: 18
+                  column: 15
+                props:
+                  - name: children
+                    value: JSXElement
+                  - name: sx
+                    value: "Object { props: [KeyValue { key: \"customStyles\", value: Object { props: [KeyValue { key: \"color\", value: String { value: \"red\" } }, KeyValue { key: \"border\", value: Object { props: [KeyValue { key: \"style\", value: String { value: \"solid\" } }, KeyValue { key: \"width\", value: String { value: \"2px\" } }] } }] } }] }"
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:5fa07ef0114566b41b7da7f4995132546f0052a2f1de4786951f08182e909548:default"
+    name: PropertyAccess
+    export_ids:
+      - "typescript-examples:src/object-properties/property-access:default"
+    package_name: typescript-examples
+    source_path: src/object-properties/property-access.tsx
+    dependencies:
+      - from: "typescript-examples:5fa07ef0114566b41b7da7f4995132546f0052a2f1de4786951f08182e909548:default"
+        to: "@mui/material:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Box"
+        references:
+          - trace:
+              - "@mui/material:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Box"
+            usages:
+              - start:
+                  line: 6
+                  column: 9
+                end:
+                  line: 13
+                  column: 15
+                props:
+                  - name: children
+                    value: JSXElement
+                  - name: sx
+                    value: "Object { props: [KeyValue { key: \"dynamicPadding\", value: Member { value: Identifier { value: \"key1\" }, property: String { value: \"padding\" } } }, KeyValue { key: \"dynamicMargin\", value: Member { value: Member { value: Identifier { value: \"key2\" }, property: String { value: \"margin\" } }, property: Number { value: 0.0 } } }] }"
+    props:
+      - name: padding
+        default_value: NONE
+    html_elements: []
+  - definition_id: "typescript-examples:0b89b8cdef99330a22e83b362a68c0f3bd885663c5a2a96d18e39c2300ba1854:default"
+    name: Setter
+    export_ids:
+      - "typescript-examples:src/object-properties/setter:default"
+    package_name: typescript-examples
+    source_path: src/object-properties/setter.tsx
+    dependencies:
+      - from: "typescript-examples:0b89b8cdef99330a22e83b362a68c0f3bd885663c5a2a96d18e39c2300ba1854:default"
+        to: "@mui/material:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Box"
+        references:
+          - trace:
+              - "@mui/material:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Box"
+            usages:
+              - start:
+                  line: 6
+                  column: 9
+                end:
+                  line: 15
+                  column: 15
+                props:
+                  - name: children
+                    value: JSXElement
+                  - name: sx
+                    value: "Object { props: [KeyValue { key: \"width\", value: Number { value: 100.0 } }, KeyValue { key: \"dynamicWidth\", value: Setter }] }"
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:9d7be4c3e50411502ac3949e59fa6eabe9124be412ffe3398ae05ddbc539b50b:default"
+    name: Shorthand
+    export_ids:
+      - "typescript-examples:src/object-properties/shorthand:default"
+    package_name: typescript-examples
+    source_path: src/object-properties/shorthand.tsx
+    dependencies:
+      - from: "typescript-examples:9d7be4c3e50411502ac3949e59fa6eabe9124be412ffe3398ae05ddbc539b50b:default"
+        to: "@mui/material:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Box"
+        references:
+          - trace:
+              - "@mui/material:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Box"
+            usages:
+              - start:
+                  line: 6
+                  column: 9
+                end:
+                  line: 12
+                  column: 15
+                props:
+                  - name: children
+                    value: JSXElement
+                  - name: sx
+                    value: "Object { props: [Shorthand { key: \"key\" }] }"
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:47fe9ed286a01c5bb66162d5da6b3afbce794ce8bc239691b0b06fb8c008f0bc:default"
+    name: Spread
+    export_ids:
+      - "typescript-examples:src/object-properties/spread:default"
+    package_name: typescript-examples
+    source_path: src/object-properties/spread.tsx
+    dependencies:
+      - from: "typescript-examples:47fe9ed286a01c5bb66162d5da6b3afbce794ce8bc239691b0b06fb8c008f0bc:default"
+        to: "@mui/material:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Box"
+        references:
+          - trace:
+              - "@mui/material:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Box"
+            usages:
+              - start:
+                  line: 6
+                  column: 9
+                end:
+                  line: 12
+                  column: 15
+                props:
+                  - name: children
+                    value: JSXElement
+                  - name: sx
+                    value: "Object { props: [Spread { value: Identifier { value: \"key\" } }] }"
+    props: []
+    html_elements: []

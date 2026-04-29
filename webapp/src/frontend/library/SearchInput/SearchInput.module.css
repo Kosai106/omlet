@@ -1,0 +1,72 @@
+.searchInput {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xxs);
+    height: var(--spacing-m);
+    padding: 0 var(--spacing-xs);
+    background-color: var(--background-secondary-color);
+    border-radius: 4px;
+    color: var(--label-secondary-color);
+}
+
+.searchInput.disabled {
+    color: var(--label-secondary-disabled-color);
+    cursor: not-allowed;
+}
+
+.searchInput:focus-within {
+    border: solid var(--border-width) var(--border-accent-color);
+    padding-inline: calc(var(--spacing-xs) - var(--border-width));
+}
+
+.searchInput.error:focus-within {
+    border-color: var(--border-critical-color);
+}
+
+.searchInput .input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--label-primary-color);
+    caret-color: var(--accent-green);
+    -webkit-appearance: textfield;
+    appearance: textfield;
+}
+
+.searchInput .input:disabled {
+    color: var(--label-secondary-disabled-color);
+    cursor: not-allowed;
+}
+
+.searchInput .input::selection {
+    background: rgba(var(--accent-green-rgb), 0.3);
+}
+
+.searchInput .input::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+.searchInput .input::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 0;
+    margin-left: var(--spacing-xxs);
+    background-image: url(/src/frontend/assets/img/icSearchCancel.svg);
+    background-repeat: no-repeat;
+    background-size: 8px 8px;
+    background-position: center;
+}
+
+.searchInput .input::placeholder {
+    color: var(--label-secondary-color);
+}
+
+.searchInput .input:disabled::placeholder {
+    color: var(--label-secondary-disabled-color);
+}

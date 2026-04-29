@@ -1,0 +1,13 @@
+.verticalLine {
+    position: absolute;
+    top: 26px;
+    left: 32px;
+    width: 1px;
+    border-radius: 1px;
+    background-color: var(--border-secondary-color);
+}
+
+.verticalLine.selected {
+    background-color: var(--accent-green);
+    z-index: 1;
+}

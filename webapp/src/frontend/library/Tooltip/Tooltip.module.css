@@ -1,0 +1,88 @@
+.tooltipContainer {
+    position: relative;
+    display: contents;
+}
+
+.tooltip {
+    position: fixed;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    width: max-content;
+    width: fit-content;
+    min-width: 48px;
+    max-width: 320px;
+    padding: var(--spacing-xxs) var(--spacing-xs);
+    border-radius: 4px;
+    background-color: var(--label-secondary-color);
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--label-selected-color);
+    user-select: none;
+    pointer-events: none;
+    z-index: 1000;
+    animation: 0s linear 0s delayedDisplay;
+}
+
+.tooltip.followCursor {
+    transform: translateY(-100%) translateX(-50%);
+}
+
+.tooltip:not(.followCursor).topLeft {
+    transform: translateY(-100%);
+}
+
+.tooltip:not(.followCursor).top {
+    transform: translateY(-100%) translateX(-50%);
+}
+
+.tooltip:not(.followCursor).topRight {
+    transform: translateY(-100%) translateX(-100%);
+}
+
+.tooltip:not(.followCursor).rightTop {}
+
+.tooltip:not(.followCursor).right {
+    transform: translateY(-50%);
+}
+
+.tooltip:not(.followCursor).rightBottom {
+    transform: translateY(-100%);
+}
+
+.tooltip:not(.followCursor).bottomLeft {}
+
+.tooltip:not(.followCursor).bottom {
+    transform: translateX(-50%);
+}
+
+.tooltip:not(.followCursor).bottomRight {
+    transform: translateX(-100%);
+}
+
+.tooltip:not(.followCursor).leftTop {
+    transform: translateX(-100%);
+}
+
+.tooltip:not(.followCursor).left {
+    transform: translateX(-100%) translateY(-50%);
+}
+
+.tooltip:not(.followCursor).leftBottom {
+    transform: translateX(-100%) translateY(-100%);
+}
+
+.pathPart {
+    white-space: nowrap;
+}
+
+@keyframes delayedDisplay {
+    0% {
+        opacity: 0;
+    }
+    99% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

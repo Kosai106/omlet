@@ -1,0 +1,44 @@
+.treeView {
+    display: flex;
+    align-items: stretch;
+    flex: 1;
+    position: relative;
+}
+
+.treeView .content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    min-height: 600px;
+    border-radius: 6px;
+    background-color: var(--background-tertiary-color);
+    border: 2px solid var(--background-secondary-color);
+    position: relative;
+}
+
+.treeView .title {
+    z-index: 50;
+    position: absolute;
+    top: var(--spacing-s);
+    left: var(--spacing-s);
+    padding: var(--spacing-xxs) 6px;
+    background-color: var(--background-primary-color);
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.08);
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--label-primary-color);
+}
+
+.treeView .loading :global(.react-flow__renderer) {
+    opacity: 0;
+}
+
+.treeView .edge path {
+    stroke: var(--border-secondary-color);
+    stroke-width: 1px;
+}
+.treeView .edge.highlighted path {
+    stroke: var(--accent-purple);
+    stroke-width: 2px;
+}

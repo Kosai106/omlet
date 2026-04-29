@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  omlet_mongodb:
+    image: mongo:6.0.1
+    container_name: omlet_mongodb
+    restart: always
+    volumes:
+      - mongodb:/data/db
+    ports:
+      - "27017:27017"
+    networks:
+      - omlet_webapp
+  omlet_redis:
+    image: redis:7.0
+    container_name: omlet_redis
+    restart: always
+    volumes:
+      - redis:/data
+    ports:
+      - "6379:6379"
+    networks:
+      - omlet_webapp
+  omlet:
+    build:
+      context: .
+      dockerfile: local.Dockerfile
+    image: omlet
+    container_name: omlet
+    env_file: .env.docker
+    ports:
+      - "3000:3000"
+      - "3001:3001"
+      - "24678:24678"
+    networks:
+      - omlet_webapp
+    depends_on:
+      - omlet_mongodb
+      - omlet_redis
+networks:
+  omlet_webapp:
+
+volumes:
+  mongodb:
+  redis:

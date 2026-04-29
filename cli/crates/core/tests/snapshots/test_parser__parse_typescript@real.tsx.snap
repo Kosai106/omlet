@@ -1,0 +1,142 @@
+---
+source: crates/core/tests/test_parser.rs
+expression: "&parser::Module::new(&RelativePathBuf::from_path(path.strip_prefix(&project_root).unwrap()).unwrap(),\n&project_root, &module_resolver,).unwrap()"
+input_file: samples/typescript/src/hess/component/real.tsx
+---
+source_path: src/hess/component/real.tsx
+id:
+  hash: "4391586875326609996"
+  path: src/hess/component/real.tsx
+  package_name: UNKNOWN
+  mtype: local
+created_at: ~
+updated_at: ~
+exports:
+  - source:
+      Internal: "ComponentBody#1"
+    exported_name: default
+declarations:
+  - symbol: "ComponentBody#1"
+    source:
+      hash: "4391586875326609996"
+      path: src/hess/component/real.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      Function:
+        - JSX
+    start:
+      line: 1
+      column: 16
+    end:
+      line: 3
+      column: 2
+scopes:
+  - owner: "__global#0"
+    parent: ~
+    children:
+      - "ComponentBody#1"
+      - "ComponentBody#1"
+    references:
+      - "ComponentBody#1"
+      - "div#2"
+    jsx_references:
+      - "div#2"
+  - owner: "ComponentBody#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "div#2"
+    jsx_references:
+      - "div#2"
+  - owner: "ComponentBody#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "div#2"
+    jsx_references:
+      - "div#2"
+body:
+  - type: ExportDefaultDeclaration
+    span:
+      start: 1
+      end: 72
+      ctxt: 0
+    decl:
+      async: false
+      body:
+        type: BlockStatement
+        span:
+          start: 41
+          end: 72
+          ctxt: 0
+        stmts:
+          - type: ReturnStatement
+            span:
+              start: 47
+              end: 70
+              ctxt: 0
+            argument:
+              type: JSXElement
+              span:
+                start: 54
+                end: 69
+                ctxt: 0
+              opening:
+                type: JSXOpeningElement
+                name:
+                  type: Identifier
+                  span:
+                    start: 55
+                    end: 58
+                    ctxt: 2
+                  value: div
+                  optional: false
+                span:
+                  start: 54
+                  end: 59
+                  ctxt: 0
+                attributes: []
+                selfClosing: false
+                typeArguments: ~
+              children:
+                - type: JSXText
+                  span:
+                    start: 59
+                    end: 63
+                    ctxt: 0
+                  value: badi
+                  raw: badi
+              closing:
+                type: JSXClosingElement
+                span:
+                  start: 63
+                  end: 69
+                  ctxt: 0
+                name:
+                  type: Identifier
+                  span:
+                    start: 65
+                    end: 68
+                    ctxt: 2
+                  value: div
+                  optional: false
+      decorators: []
+      generator: false
+      identifier:
+        type: Identifier
+        span:
+          start: 25
+          end: 38
+          ctxt: 1
+        value: ComponentBody
+        optional: false
+      params: []
+      returnType: ~
+      span:
+        start: 16
+        end: 72
+        ctxt: 0
+      type: FunctionExpression
+      typeParameters: ~

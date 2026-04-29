@@ -1,0 +1,64 @@
+---
+source: crates/core/tests/test_parser.rs
+expression: "&parser::Module::new(&RelativePathBuf::from_path(path.strip_prefix(&project_root).unwrap()).unwrap(),\n            &project_root, &module_resolver).unwrap()"
+input_file: samples/typescript/src/wildcard-re-export/components/Accordion/index.ts
+---
+source_path: src/wildcard-re-export/components/Accordion/index.ts
+id:
+  hash: "10457983299105045357"
+  path: src/wildcard-re-export/components/Accordion/index.ts
+  package_name: UNKNOWN
+  mtype: local
+created_at: ~
+updated_at: ~
+exports:
+  - source:
+      External:
+        symbol: "Accordion#0"
+        source:
+          hash: "4572580924016863595"
+          path: src/wildcard-re-export/components/Accordion/Accordion
+          package_name: UNKNOWN
+          mtype: local
+    exported_name: Accordion
+declarations: []
+scopes:
+  - owner: "__global#0"
+    parent: ~
+    children: []
+    references:
+      - "Accordion#0"
+    jsx_references: []
+body:
+  - type: ExportNamedDeclaration
+    span:
+      start: 1
+      end: 41
+      ctxt: 0
+    specifiers:
+      - type: ExportSpecifier
+        span:
+          start: 10
+          end: 19
+          ctxt: 0
+        orig:
+          type: Identifier
+          span:
+            start: 10
+            end: 19
+            ctxt: 0
+          value: Accordion
+          optional: false
+        exported: ~
+        isTypeOnly: false
+    source:
+      type: StringLiteral
+      span:
+        start: 27
+        end: 40
+        ctxt: 0
+      value: "./Accordion"
+      raw: "\"./Accordion\""
+    typeOnly: false
+    asserts: ~
+

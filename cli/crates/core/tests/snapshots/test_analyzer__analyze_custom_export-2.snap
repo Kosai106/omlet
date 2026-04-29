@@ -1,0 +1,31 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&export_results"
+---
+num_of_exports: 3
+exports:
+  - name: TextInput
+    source_path: src/data-entry/TextInput/TextInput.tsx
+    is_component: true
+    inferred_type: "ReturnTypeOf<TypeOf<custom-export:72722dae4e5ba86e2a2045c6fe0d356698ccbbefc1b9e4073e9a4bd517729df8:forwardRef>>"
+    resolved_type: ReturnTypeOf<(Function -> (Function -> JSX))>
+    trace_to_declaration:
+      - "custom-export:72722dae4e5ba86e2a2045c6fe0d356698ccbbefc1b9e4073e9a4bd517729df8:TextInput"
+  - name: TextInput
+    source_path: src/index.ts
+    is_component: true
+    inferred_type: "ReturnTypeOf<TypeOf<custom-export:72722dae4e5ba86e2a2045c6fe0d356698ccbbefc1b9e4073e9a4bd517729df8:forwardRef>>"
+    resolved_type: ReturnTypeOf<(Function -> (Function -> JSX))>
+    trace_to_declaration:
+      - "custom-export:25a6634263c1b1f6fc4697a04e2b9904ea4b042a89af59dc93ec1f5d44848a26:TextInput"
+      - "custom-export:de391b9717e19e349e02cf7e81f23d506f4f41c067d3174990e9103fc3970e22:default"
+      - "custom-export:72722dae4e5ba86e2a2045c6fe0d356698ccbbefc1b9e4073e9a4bd517729df8:TextInput"
+  - name: default
+    source_path: src/data-entry/TextInput/index.ts
+    is_component: true
+    inferred_type: "ReturnTypeOf<TypeOf<custom-export:72722dae4e5ba86e2a2045c6fe0d356698ccbbefc1b9e4073e9a4bd517729df8:forwardRef>>"
+    resolved_type: ReturnTypeOf<(Function -> (Function -> JSX))>
+    trace_to_declaration:
+      - "custom-export:de391b9717e19e349e02cf7e81f23d506f4f41c067d3174990e9103fc3970e22:default"
+      - "custom-export:72722dae4e5ba86e2a2045c6fe0d356698ccbbefc1b9e4073e9a4bd517729df8:TextInput"
+

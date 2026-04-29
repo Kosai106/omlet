@@ -1,0 +1,21 @@
+{
+  "extends": "./tsconfig.build.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@nighttrax/components/*": [
+        "packages/components/src/*"
+      ],
+      "@nighttrax/components": [
+        "packages/components/src/index.ts"
+      ],
+      "@nighttrax/styled-components": [
+        "packages/components/src/styled/index.ts"
+      ],
+      "@nighttrax/*": [
+        "packages/*/src/index.ts"
+      ]
+    },
+    "noEmit": true
+  }
+}

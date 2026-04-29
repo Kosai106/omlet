@@ -1,0 +1,28 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&export_results_webapp"
+---
+num_of_exports: 3
+exports:
+  - name: App
+    source_path: src/app.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@acme/webapp:f2cd6bd7313b24013cd04d20b4dadb413f898c07f7c1a46ecc971d28d719accd:App"
+  - name: RightPanel
+    source_path: src/components.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@acme/webapp:44145b4646ba00cf3afdd124b880a23f47279f07dad0d139a7b26cd531123cf3:RightPanel"
+  - name: SearchBar
+    source_path: src/components.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@acme/webapp:44145b4646ba00cf3afdd124b880a23f47279f07dad0d139a7b26cd531123cf3:SearchBar"
+

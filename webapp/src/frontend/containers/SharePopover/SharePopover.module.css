@@ -1,0 +1,75 @@
+.sharePopover {
+    width: 328px;
+    padding-top: var(--spacing-xs);
+}
+
+.sharePopover .shareHeader {
+    margin-bottom: var(--spacing-xxs);
+}
+
+.sharePopover .p {
+    font-size: 11px;
+    line-height: 15px;
+    color: var(--label-secondary-color);
+}
+
+.sharePopover .section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-s);
+    padding: var(--spacing-xs) var(--spacing-s);
+}
+
+.sharePopover .separator {
+    flex: 0 0 1px;
+    height: 1px;
+    margin: 8px 0;
+    border: none;
+    background-color: var(--background-secondary-color);
+}
+
+.sharePopover .shareLink {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    color: var(--label-accent-color);
+}
+
+.sharePopover .shareLink .shareLinkURL {
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 600;
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.sharePopover .shareLink .copyLinkButton {
+    width: 92px;
+}
+
+.sharePopover .viewOptions {
+    display: flex;
+    flex-direction: column;
+}
+
+.sharePopover .viewOption {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-xs) 0;
+    color: var(--label-primary-color);
+    font-size: 13px;
+    line-height: 18px;
+    cursor: pointer;
+}
+
+.sharePopover .viewOption .p {
+    margin-top: 2px;
+}
+
+.sharePopover .viewOption .viewOptionRadio {
+    position: relative;
+    top: 3px;
+}

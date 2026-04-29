@@ -1,0 +1,168 @@
+.analyses {
+    flex: 1;
+    width: 1060px;
+    margin-bottom: 34px;
+}
+
+.analyses .month {
+    margin-bottom: 24px;
+}
+
+.analyses .monthTitle {
+    position: sticky;
+    top: calc(130px + var(--header-height));
+    display: flex;
+    height: 42px;
+    padding: 8px 50px 0;
+    background-color: var(--background-primary-color);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--label-secondary-color);
+    z-index: 10;
+}
+
+.analyses .monthTitle .skeleton {
+    width: 120px;
+}
+
+.analyses .dayTitle {
+    position: sticky;
+    top: calc(172px + var(--header-height));
+    display: flex;
+    align-items: center;
+    height: 34px;
+    padding: 0 50px;
+    background-color: var(--background-primary-color);
+    font-size: 13px;
+    font-weight: normal;
+    color: var(--label-primary-color);
+    z-index: 1;
+}
+
+.analyses .dayTitle .skeleton {
+    width: 72px;
+}
+
+.analyses .separator {
+    border: none;
+    margin: 8px 34px;
+    border-bottom: 1px solid var(--background-secondary-color);
+}
+
+.analyses .analysisItem {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    height: 34px;
+    margin: 0 34px 0 8px;
+    font-size: 13px;
+    color: var(--label-secondary-color);
+}
+
+.analyses .analysisItem.readOnly {
+    margin-left: 50px;
+    padding-left: 24px;
+}
+
+.analyses .analysisItem:not(.readOnly):hover {
+    background-color: var(--background-tertiary-color);
+}
+
+.analyses .analysisItem .deleteButtonWrapper {
+    background-color: var(--background-primary-color);
+    padding-right: 8px;
+}
+
+.analyses .analysisItem .deleteButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    opacity: 0;
+}
+
+.analyses .analysisItem:hover .deleteButton {
+    opacity: 1;
+}
+
+.analyses .analysisItem:hover .deleteButton:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.analyses .analysisItem .deleteButton .iconWrapper {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    background-color: var(--background-secondary-color);
+}
+
+.analyses .analysisItem .deleteButton:hover .iconWrapper {
+    background-color: var(--button-background-hover-color);
+}
+
+.analyses .analysisItem .deleteButton:active .iconWrapper {
+    background-color: var(--button-background-active-color);
+}
+
+.analyses .analysisItem .analysisDate {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 84px;
+}
+
+.analyses .analysisItem .analysisDate .skeleton {
+    width: 40px;
+}
+
+.analyses .analysisItem .projects {
+    width: 272px;
+}
+
+.analyses .analysisItem .diff {
+    width: 272px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.analyses .analysisItem .projects .skeleton,
+.analyses .analysisItem .diff .skeleton {
+    width: 120px;
+}
+
+.analyses .analysisItem .scanner {
+    width: 128px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.analyses .analysisItem .scanner .skeleton {
+    width: 72px;
+}
+
+.analyses .analysisItem .cliVersion {
+    width: 72px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.analyses .analysisItem .cliVersion .skeleton {
+    width: 48px;
+}
+
+.analyses .dataRetentionCallout {
+    margin: 24px 34px 0;
+}
+
+.analyses .skeleton {
+    height: 18px;
+}

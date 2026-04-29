@@ -1,0 +1,37 @@
+{
+  "root": {
+    "name": "typescript-paths",
+    "path": "",
+    "version": "1.0.0",
+    "aliases": {
+      "local-pack-b": [
+        "pack-b/index.tsx"
+      ],
+      "local-pack-b/*": [
+        "pack-b/*"
+      ],
+      "alias-comps/*": [
+        "src/alias-comps/*"
+      ],
+      "index.tsx": [
+        "src/index.tsx"
+      ]
+    },
+    "importMap": {
+      "typescript-paths/*": [
+        "*"
+      ],
+      "typescript-paths": [
+        "src/index.tsx"
+      ]
+    },
+    "exportMap": {
+      ".": [
+        "src/index.tsx"
+      ]
+    },
+    "main": "src/index.tsx"
+  },
+  "packages": {},
+  "absolutePath": "/package"
+}

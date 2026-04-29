@@ -1,0 +1,27 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&component_results"
+---
+num_of_components: 2
+components:
+  - definition_id: "typescript-examples:d745a901effb5f0490a53fce4c928ae43da38882a27365b2726f6f7ed8213ac1:default"
+    name: preact-memo
+    export_ids:
+      - "typescript-examples:src/memo/preact-memo:default"
+    package_name: typescript-examples
+    source_path: src/memo/preact-memo.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - div
+  - definition_id: "typescript-examples:7ad34a0ab7af219a1ab4fceb3b3942cd96c6f50f1fdf701506b855bc8072f384:default"
+    name: react-memo
+    export_ids:
+      - "typescript-examples:src/memo/react-memo:default"
+    package_name: typescript-examples
+    source_path: src/memo/react-memo.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - div
+

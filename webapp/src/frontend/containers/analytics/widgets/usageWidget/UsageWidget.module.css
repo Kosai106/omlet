@@ -1,0 +1,11 @@
+.usageWidget {
+    margin-bottom: 16px;
+    padding: 16px;
+    border-radius: 4px;
+    line-height: 1.35;
+    border: solid 1px var(--background-secondary-color);
+}
+
+.usageWidget .title {
+    margin-bottom: 16px;
+}

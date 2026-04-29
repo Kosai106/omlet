@@ -1,0 +1,17 @@
+{
+  "workspaces": [
+    "packages/main",
+    "packages/single-part",
+    "packages/multi-part",
+    "packages/comps",
+    "packages/ignored-package"
+  ],
+  "devDependencies": {
+    "@types/react": "^18.0.8",
+    "typescript": "^4.6.4"
+  },
+  "dependencies": {
+    "react": "^18.1.0"
+  },
+  "packageManager": "yarn@3.4.1"
+}

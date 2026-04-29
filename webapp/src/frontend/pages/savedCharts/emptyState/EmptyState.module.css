@@ -1,0 +1,34 @@
+.emptyState {
+    grid-column: 1 / -1;
+    padding: calc(var(--spacing-xs) * 7) var(--spacing-xxl-2) var(--spacing-xxl-2);
+    background-color: var(--background-tertiary-color);
+    color: var(--label-primary-color);
+}
+
+.emptyState .content {
+    max-width: 708px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-l);
+}
+
+.emptyState p {
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.emptyState p a {
+    font-weight: 600;
+    color: var(--accent-green);
+}
+
+.emptyState .header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-s);
+}
+
+.emptyState .header .h2 {
+    margin: 0;
+}

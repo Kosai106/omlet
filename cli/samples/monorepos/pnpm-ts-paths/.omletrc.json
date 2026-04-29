@@ -1,0 +1,13 @@
+{
+  "workspaces": {
+    "@nighttrax/bar": {
+      "exports": "./src/index.tsx"
+    },
+    "@nighttrax/foo": {
+      "exports": "./src/index.tsx"
+    },
+    "@nighttrax/rollup-example": {
+      "exports": "./src/index.tsx"
+    }
+  }
+}

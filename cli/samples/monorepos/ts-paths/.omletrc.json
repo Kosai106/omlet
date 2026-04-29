@@ -1,0 +1,8 @@
+{
+  "exports": "./src/index.tsx",
+  "workspaces": {
+    "typescript-paths": {
+      "exports": "./src/index.tsx"
+    }
+  }
+}

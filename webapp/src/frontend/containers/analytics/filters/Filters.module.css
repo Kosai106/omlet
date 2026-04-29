@@ -1,0 +1,21 @@
+.filters {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 333px;
+    overflow: auto;
+    border-right: 1px solid var(--background-secondary-color);
+}
+
+.filters nav {
+    padding: 32px 24px;
+    position: sticky;
+    top: 0;
+    background-color: var(--background-primary-color);
+}
+
+.filters .widgets {
+    flex: 1;
+    padding: 0 24px 24px;
+}

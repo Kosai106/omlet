@@ -1,0 +1,16 @@
+{
+  "root": {
+    "name": "omlet-test-repo",
+    "path": "",
+    "version": "1.0.0",
+    "aliases": {},
+    "importMap": {
+      "omlet-test-repo/*": [
+        "*"
+      ]
+    },
+    "exportMap": {}
+  },
+  "packages": {},
+  "absolutePath": "/package"
+}

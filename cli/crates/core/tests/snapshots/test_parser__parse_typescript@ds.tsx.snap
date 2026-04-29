@@ -1,0 +1,264 @@
+---
+source: crates/core/tests/test_parser.rs
+expression: "&parser::Module::new(&RelativePathBuf::from_path(path.strip_prefix(&project_root).unwrap()).unwrap(),\n&project_root, &module_resolver,).unwrap()"
+input_file: samples/typescript/src/wildcard-import/ds.tsx
+---
+source_path: src/wildcard-import/ds.tsx
+id:
+  hash: "14625591195093695410"
+  path: src/wildcard-import/ds.tsx
+  package_name: UNKNOWN
+  mtype: local
+created_at: ~
+updated_at: ~
+exports:
+  - source:
+      Internal: "Button#1"
+    exported_name: Button
+  - source:
+      Internal: "Link#1"
+    exported_name: Link
+declarations:
+  - symbol: "Button#1"
+    source:
+      hash: "14625591195093695410"
+      path: src/wildcard-import/ds.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<declaration>"
+    inferred_type:
+      Function:
+        - JSX
+    start:
+      line: 1
+      column: 8
+    end:
+      line: 3
+      column: 2
+  - symbol: "Link#1"
+    source:
+      hash: "14625591195093695410"
+      path: src/wildcard-import/ds.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<declaration>"
+    inferred_type:
+      Function:
+        - JSX
+    start:
+      line: 5
+      column: 8
+    end:
+      line: 7
+      column: 2
+scopes:
+  - owner: "__global#0"
+    parent: ~
+    children:
+      - "Button#1"
+      - "Button#1"
+      - "Link#1"
+      - "Link#1"
+    references:
+      - "Button#1"
+      - "Link#1"
+      - "a#2"
+      - "button#2"
+    jsx_references:
+      - "a#2"
+      - "button#2"
+  - owner: "Button#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "button#2"
+    jsx_references:
+      - "button#2"
+  - owner: "Button#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "button#2"
+    jsx_references:
+      - "button#2"
+  - owner: "Link#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "a#2"
+    jsx_references:
+      - "a#2"
+  - owner: "Link#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "a#2"
+    jsx_references:
+      - "a#2"
+body:
+  - type: ExportDeclaration
+    span:
+      start: 1
+      end: 65
+      ctxt: 0
+    declaration:
+      async: false
+      body:
+        type: BlockStatement
+        span:
+          start: 26
+          end: 65
+          ctxt: 0
+        stmts:
+          - type: ReturnStatement
+            span:
+              start: 32
+              end: 63
+              ctxt: 0
+            argument:
+              type: JSXElement
+              span:
+                start: 39
+                end: 62
+                ctxt: 0
+              opening:
+                type: JSXOpeningElement
+                name:
+                  type: Identifier
+                  span:
+                    start: 40
+                    end: 46
+                    ctxt: 2
+                  value: button
+                  optional: false
+                span:
+                  start: 39
+                  end: 47
+                  ctxt: 0
+                attributes: []
+                selfClosing: false
+                typeArguments: ~
+              children:
+                - type: JSXText
+                  span:
+                    start: 47
+                    end: 53
+                    ctxt: 0
+                  value: button
+                  raw: button
+              closing:
+                type: JSXClosingElement
+                span:
+                  start: 53
+                  end: 62
+                  ctxt: 0
+                name:
+                  type: Identifier
+                  span:
+                    start: 55
+                    end: 61
+                    ctxt: 2
+                  value: button
+                  optional: false
+      declare: false
+      decorators: []
+      generator: false
+      identifier:
+        type: Identifier
+        span:
+          start: 17
+          end: 23
+          ctxt: 1
+        value: Button
+        optional: false
+      params: []
+      returnType: ~
+      span:
+        start: 8
+        end: 65
+        ctxt: 0
+      type: FunctionDeclaration
+      typeParameters: ~
+  - type: ExportDeclaration
+    span:
+      start: 67
+      end: 117
+      ctxt: 0
+    declaration:
+      async: false
+      body:
+        type: BlockStatement
+        span:
+          start: 90
+          end: 117
+          ctxt: 0
+        stmts:
+          - type: ReturnStatement
+            span:
+              start: 96
+              end: 115
+              ctxt: 0
+            argument:
+              type: JSXElement
+              span:
+                start: 103
+                end: 114
+                ctxt: 0
+              opening:
+                type: JSXOpeningElement
+                name:
+                  type: Identifier
+                  span:
+                    start: 104
+                    end: 105
+                    ctxt: 2
+                  value: a
+                  optional: false
+                span:
+                  start: 103
+                  end: 106
+                  ctxt: 0
+                attributes: []
+                selfClosing: false
+                typeArguments: ~
+              children:
+                - type: JSXText
+                  span:
+                    start: 106
+                    end: 110
+                    ctxt: 0
+                  value: Link
+                  raw: Link
+              closing:
+                type: JSXClosingElement
+                span:
+                  start: 110
+                  end: 114
+                  ctxt: 0
+                name:
+                  type: Identifier
+                  span:
+                    start: 112
+                    end: 113
+                    ctxt: 2
+                  value: a
+                  optional: false
+      declare: false
+      decorators: []
+      generator: false
+      identifier:
+        type: Identifier
+        span:
+          start: 83
+          end: 87
+          ctxt: 1
+        value: Link
+        optional: false
+      params: []
+      returnType: ~
+      span:
+        start: 74
+        end: 117
+        ctxt: 0
+      type: FunctionDeclaration
+      typeParameters: ~

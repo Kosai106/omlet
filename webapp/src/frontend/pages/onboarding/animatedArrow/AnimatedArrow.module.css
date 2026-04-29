@@ -1,0 +1,17 @@
+.animatedArrow .body {
+    stroke-dasharray: 61;
+    stroke-dashoffset: 61;
+    animation: draw 500ms ease-in-out forwards;
+}
+
+.animatedArrow .head {
+    stroke-dasharray: 51;
+    stroke-dashoffset: 51;
+    animation: draw 600ms ease-in-out 600ms forwards;
+}
+
+@keyframes draw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}

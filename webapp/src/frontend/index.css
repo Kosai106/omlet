@@ -1,0 +1,189 @@
+:root {
+    /* Brand colors */
+    --brand-color-green: #2cc653;
+    --brand-color-green-rgb: 44, 198, 83;
+    --brand-color-orange: #f69833;
+    --brand-color-yellow: #fdbd39;
+    --brand-color-yellow-rgb: 253, 189, 57;
+    --brand-color-pinkish: #ee6363;
+    --brand-color-pinkish-rgb: 238, 99, 99;
+    --brand-color-purple: #8574ed;
+    --brand-color-purple-rgb: 133, 116, 237;
+    --brand-color-white: #fff;
+    --brand-color-white-rgb: 255, 255, 255;
+    --brand-color-whipped-cream: #f7f9fa;
+    --brand-color-whipped-cream-rgb: 247, 249, 250;
+    --brand-color-sting: #eff3f5;
+    --brand-color-sting-rgb: 239, 243, 245;
+    --brand-color-gandalfs-beard: #bec5c9;
+    --brand-color-gandalfs-beard-rgb: 190, 197, 201;
+    --brand-color-moon: #6b7276;
+    --brand-color-moon-rgb: 107, 114, 118;
+    --brand-color-dark-knight: #262b2e;
+    --brand-color-dark-knight-rgb: 38, 43, 46;
+
+    --accent-green: var(--brand-color-green);
+    --accent-green-rgb: var(--brand-color-green-rgb);
+    --accent-yellow: var(--brand-color-yellow);
+    --accent-yellow-rgb: var(--brand-color-yellow-rgb);
+    --accent-purple: var(--brand-color-purple);
+    --accent-purple-rgb: var(--brand-color-purple-rgb);
+    --accent-warning-color: #ee6723;
+    --accent-critical-color: var(--brand-color-pinkish);
+    --accent-critical-color-rgb: var(--brand-color-pinkish-rgb);
+
+    --label-primary-color: var(--brand-color-dark-knight);
+    --label-primary-color-rgb: var(--brand-color-dark-knight-rgb);
+    --label-secondary-color: var(--brand-color-moon);
+    --label-secondary-color-rgb: var(--brand-color-moon-rgb);
+    --label-secondary-disabled-color: rgba(var(--label-secondary-color-rgb), 0.4);
+    --label-selected-color: var(--brand-color-white);
+    --label-selected-color-rgb: var(--brand-color-white-rgb);
+    --label-inverse-color: var(--brand-color-white);
+    --label-inverse-color-rgb: var(--brand-color-white-rgb);
+    --label-critical-color: var(--accent-critical-color);
+    --label-accent-color: var(--brand-color-green);
+
+    --background-primary-color: var(--brand-color-white);
+    --background-primary-color-rgb: var(--brand-color-white-rgb);
+    --background-secondary-color: var(--brand-color-sting);
+    --background-secondary-color-rgb: var(--brand-color-sting-rgb);
+    --background-tertiary-color: var(--brand-color-whipped-cream);
+    --background-tertiary-color-rgb: var(--brand-color-whipped-cream-rgb);
+    --background-accent-light-color: color-mix(in srgb, var(--accent-green) 10%, var(--background-primary-color));
+    --background-inverse-color: var(--brand-color-dark-knight);
+    --background-inverse-color-rgb: var(--brand-color-dark-knight-rgb);
+    --background-critical-color: var(--accent-critical-color);
+    --background-critical-color-rgb: var(--accent-critical-color-rgb);
+
+    --border-width: 1px;
+    --border-primary-color: var(--brand-color-sting);
+    --border-secondary-color: var(--brand-color-gandalfs-beard);
+    --border-secondary-color-rgb: var(--brand-color-gandalfs-beard-rgb);
+    --border-tertiary-color: var(--brand-color-moon);
+    --border-accent-color: var(--brand-color-green);
+    --border-accent-light-color: rgba(var(--brand-color-green-rgb), 0.1);
+    --border-accent-secondary-color: var(--brand-color-purple);
+    --border-accent-secondary-light-color: rgba(var(--brand-color-purple-rgb), 0.2);
+    --border-accent-tertiary-color: var(--brand-color-yellow);
+    --border-accent-tertiary-light-color: rgba(var(--brand-color-yellow-rgb), 0.2);
+    --border-critical-color: var(--accent-critical-color);
+    --border-critical-light-color: rgba(var(--accent-critical-color-rgb), 0.2);
+
+    --control-background-default-color: var(--background-secondary-color);
+    --control-background-hover-color: #e4e8eb;
+    /* ??? --control-background-hover-color: color-mix(in srgb, var(--label-secondary-color) 10%, var(--background-secondary-color)); */
+    --control-background-active-color: #d9dee0;
+    /* ??? --control-background-active-color: color-mix(in srgb, var(--label-secondary-color) 20%, var(--background-secondary-color)); */
+    --control-background-primary-color: color-mix(in srgb, var(--accent-green) 10%, var(--background-primary-color));
+    --control-background-accent-primary-color: var(--brand-color-green);
+    --control-border-hover-color: rgba(var(--border-secondary-color-rgb), 0.15);
+    --control-border-active-color: rgba(var(--border-secondary-color-rgb), 0.3);
+
+    --button-background-disabled-color: var(--brand-color-gandalfs-beard);
+    --button-background-disabled-color-rgb: var(--brand-color-gandalfs-beard-rgb);
+    --button-background-hover-color: color-mix(in srgb, var(--label-secondary-color) 10%, var(--background-secondary-color));
+    --button-background-active-color: color-mix(in srgb, var(--label-secondary-color) 20%, var(--background-secondary-color));
+
+    --button-inverse-background-color: rgba(var(--background-secondary-color-rgb), 0.2);
+    --button-inverse-hover-border-color: rgba(var(--brand-color-white-rgb), 0.15);
+    --button-inverse-hover-active-color: rgba(var(--brand-color-white-rgb), 0.3);
+    --button-inverse-disabled-label-color: rgba(var(--label-inverse-color-rgb), 0.4);
+
+    --shadow-default: 0 0 4px 0 rgba(var(--brand-color-dark-knight-rgb), 0.25);
+    /* --shadow-default: 0 0 4px 0 rgb(from var(--brand-color-dark-knight) r g b / 0.25); */
+
+    --chart-color-1: #4ccf6d;
+    --chart-color-2: var(--accent-yellow);
+    --chart-color-3: #ff7f7f;
+    --chart-color-4: var(--accent-purple);
+    --chart-color-5: var(--brand-color-orange);
+    --chart-color-6: #27beb6;
+    --chart-color-7: #9f765e;
+    --chart-color-8: var(--brand-color-pinkish);
+    --chart-color-9: #9cd86e;
+    --chart-color-10: #357abf;
+    --chart-color-11: #db7cee;
+    --chart-color-12: #87ccfc;
+    --chart-color-13: var(--brand-color-gandalfs-beard);
+
+    --tag-color-core: var(--accent-green);
+    --tag-color-external: var(--accent-purple);
+    --tag-color-non-core: var(--accent-yellow);
+    --tag-color-untagged: var(--brand-color-gandalfs-beard);
+    --tag-color-1: #ff7f7f;
+    --tag-color-2: var(--brand-color-orange);
+    --tag-color-3: #27beb6;
+    --tag-color-4: #9f765e;
+    --tag-color-5: var(--brand-color-pinkish);
+    --tag-color-6: #9cd86e;
+    --tag-color-7: #357abf;
+    --tag-color-8: #db7cee;
+    --tag-color-9: #87ccfc;
+
+    --spacing-xxs: 4px;
+    --spacing-xs: 8px;
+    --spacing-s: 16px;
+    --spacing-m: 24px;
+    --spacing-l: 32px;
+    --spacing-xl: 40px;
+    --spacing-xxl: 48px;
+    --spacing-xxl-2: 72px;
+    --spacing-xxl-3: 80px;
+
+    --header-height: 48px;
+    --tall-header-height: 128px;
+
+    --font-family-primary: Inter, system-ui, Roboto, sans-serif;
+    --font-family-secondary: SpaceMono, source-code-pro, Menlo, Monaco, Consolas, Roboto Mono, monospace;
+}
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 0.01em;
+}
+
+body {
+    font-family: var(--font-family-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, Roboto Mono, monospace;
+}
+
+a {
+    text-decoration: none;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    border: none;
+    background: transparent none;
+    outline: none;
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+strong {
+    font-weight: 600;
+}
+
+.noScroll {
+    overflow: hidden;
+}

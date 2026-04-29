@@ -1,0 +1,41 @@
+.designSystemUsageExample {
+    width: 520px;
+    margin-top: 94px;
+    padding: var(--spacing-m);
+    background-color: var(--background-tertiary-color);
+    border-radius: 4px;
+}
+
+.designSystemUsageExample p {
+    margin-bottom: var(--spacing-m);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 18px;
+    color: var(--label-secondary-color);
+}
+
+.designSystemUsageExample .example {
+    display: flex;
+    gap: var(--spacing-s);
+    padding: var(--spacing-s);
+    background-color: var(--background-primary-color);
+    border-radius: 4px;
+}
+
+.designSystemUsageExample .example .separator {
+    flex: 0 0 4px;
+    background-color: rgba(var(--accent-green-rgb), 0.2);
+    border-radius: 2px;
+}
+
+.designSystemUsageExample .example .chart {
+    padding: 3px 0 10px;
+}
+
+.designSystemUsageExample .example .h3 {
+    margin-bottom: var(--spacing-xs);
+}
+
+.designSystemUsageExample .example p {
+    margin-bottom: 14px;
+}

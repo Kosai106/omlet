@@ -1,0 +1,27 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&component_results"
+---
+num_of_components: 2
+components:
+  - definition_id: "typescript-examples:a41d3102fa069f49d308640125cb15503f892aef4da63cce2330db85aa2379e5:default"
+    name: preact-forwardRef
+    export_ids:
+      - "typescript-examples:src/forwardRef/preact-forwardRef:default"
+    package_name: typescript-examples
+    source_path: src/forwardRef/preact-forwardRef.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - div
+  - definition_id: "typescript-examples:cc86ec4e7471605f124bee66deda8a0b16cff8f022b4267199aeba1275069bee:default"
+    name: react-forwardRef
+    export_ids:
+      - "typescript-examples:src/forwardRef/react-forwardRef:default"
+    package_name: typescript-examples
+    source_path: src/forwardRef/react-forwardRef.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - div
+

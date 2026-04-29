@@ -1,0 +1,736 @@
+{
+    "components": [
+        {
+            "id": "@acme/design-system:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Button",
+            "name": "Button",
+            "export_ids": [],
+            "source": {
+                "symbol": "Button#1",
+                "source": {
+                    "hash": "16407433795890619683",
+                    "path": "",
+                    "package_name": "@acme/design-system",
+                    "mtype": "package"
+                }
+            },
+            "dependencies": [],
+            "props": [],
+            "html_elements": [],
+            "package_name": "@acme/design-system",
+            "span": {
+                "start": {
+                    "line": 1,
+                    "column": 1
+                },
+                "end": {
+                    "line": 1,
+                    "column": 1
+                }
+            }
+        },
+        {
+            "id": "@acme/design-system:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:DatePicker",
+            "name": "DatePicker",
+            "export_ids": [],
+            "source": {
+                "symbol": "DatePicker#1",
+                "source": {
+                    "hash": "16407433795890619683",
+                    "path": "",
+                    "package_name": "@acme/design-system",
+                    "mtype": "package"
+                }
+            },
+            "dependencies": [],
+            "props": [],
+            "html_elements": [],
+            "package_name": "@acme/design-system",
+            "span": {
+                "start": {
+                    "line": 1,
+                    "column": 1
+                },
+                "end": {
+                    "line": 1,
+                    "column": 1
+                }
+            }
+        },
+        {
+            "id": "@acme/design-system:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Input",
+            "name": "Input",
+            "export_ids": [],
+            "source": {
+                "symbol": "Input#1",
+                "source": {
+                    "hash": "16407433795890619683",
+                    "path": "",
+                    "package_name": "@acme/design-system",
+                    "mtype": "package"
+                }
+            },
+            "dependencies": [],
+            "props": [],
+            "html_elements": [],
+            "package_name": "@acme/design-system",
+            "span": {
+                "start": {
+                    "line": 1,
+                    "column": 1
+                },
+                "end": {
+                    "line": 1,
+                    "column": 1
+                }
+            }
+        },
+        {
+            "id": "@acme/webapp:f2cd6bd7313b24013cd04d20b4dadb413f898c07f7c1a46ecc971d28d719accd:App",
+            "name": "App",
+            "export_ids": [
+                "@acme/webapp:a172cedcae47474b615c54d510a5d84a8dea3032e958587430b413538be3f333:App",
+                "@acme/webapp:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:App",
+                "@acme/webapp:f2cd6bd7313b24013cd04d20b4dadb413f898c07f7c1a46ecc971d28d719accd:App"
+            ],
+            "source": {
+                "symbol": "App#0",
+                "source": {
+                    "hash": "14240620700214121314",
+                    "path": "src/app.tsx",
+                    "package_name": "@acme/webapp",
+                    "mtype": "local"
+                }
+            },
+            "dependencies": [
+                {
+                    "from": {
+                        "symbol": "App#0",
+                        "source": {
+                            "hash": "14240620700214121314",
+                            "path": "src/app.tsx",
+                            "package_name": "@acme/webapp",
+                            "mtype": "local"
+                        },
+                        "name": "App",
+                        "id": "@acme/webapp:f2cd6bd7313b24013cd04d20b4dadb413f898c07f7c1a46ecc971d28d719accd:App"
+                    },
+                    "to": {
+                        "symbol": "Input#1",
+                        "source": {
+                            "hash": "16407433795890619683",
+                            "path": "",
+                            "package_name": "@acme/design-system",
+                            "mtype": "package"
+                        },
+                        "name": "Input",
+                        "id": "@acme/design-system:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Input"
+                    },
+                    "references": [
+                        {
+                            "usages": [
+                                {
+                                    "props": [],
+                                    "start": {
+                                        "line": 6,
+                                        "column": 54
+                                    },
+                                    "end": {
+                                        "line": 6,
+                                        "column": 62
+                                    }
+                                }
+                            ],
+                            "trace": [
+                                {
+                                    "symbol": "Input#1",
+                                    "source": {
+                                        "hash": "16407433795890619683",
+                                        "path": "",
+                                        "package_name": "@acme/design-system",
+                                        "mtype": "package"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "symbol": "App#0",
+                        "source": {
+                            "hash": "14240620700214121314",
+                            "path": "src/app.tsx",
+                            "package_name": "@acme/webapp",
+                            "mtype": "local"
+                        },
+                        "name": "App",
+                        "id": "@acme/webapp:f2cd6bd7313b24013cd04d20b4dadb413f898c07f7c1a46ecc971d28d719accd:App"
+                    },
+                    "to": {
+                        "symbol": "RightPanel#0",
+                        "source": {
+                            "hash": "14192188905795769673",
+                            "path": "src/components.tsx",
+                            "package_name": "@acme/webapp",
+                            "mtype": "local"
+                        },
+                        "name": "RightPanel",
+                        "id": "@acme/webapp:44145b4646ba00cf3afdd124b880a23f47279f07dad0d139a7b26cd531123cf3:RightPanel"
+                    },
+                    "references": [
+                        {
+                            "usages": [
+                                {
+                                    "props": [],
+                                    "start": {
+                                        "line": 6,
+                                        "column": 29
+                                    },
+                                    "end": {
+                                        "line": 6,
+                                        "column": 42
+                                    }
+                                }
+                            ],
+                            "trace": [
+                                {
+                                    "symbol": "RightPanel#1",
+                                    "source": {
+                                        "hash": "14192188905795769673",
+                                        "path": "src/components",
+                                        "package_name": "@acme/webapp",
+                                        "mtype": "local"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "symbol": "App#0",
+                        "source": {
+                            "hash": "14240620700214121314",
+                            "path": "src/app.tsx",
+                            "package_name": "@acme/webapp",
+                            "mtype": "local"
+                        },
+                        "name": "App",
+                        "id": "@acme/webapp:f2cd6bd7313b24013cd04d20b4dadb413f898c07f7c1a46ecc971d28d719accd:App"
+                    },
+                    "to": {
+                        "symbol": "SearchBar#0",
+                        "source": {
+                            "hash": "14192188905795769673",
+                            "path": "src/components.tsx",
+                            "package_name": "@acme/webapp",
+                            "mtype": "local"
+                        },
+                        "name": "SearchBar",
+                        "id": "@acme/webapp:44145b4646ba00cf3afdd124b880a23f47279f07dad0d139a7b26cd531123cf3:SearchBar"
+                    },
+                    "references": [
+                        {
+                            "usages": [
+                                {
+                                    "props": [],
+                                    "start": {
+                                        "line": 6,
+                                        "column": 42
+                                    },
+                                    "end": {
+                                        "line": 6,
+                                        "column": 54
+                                    }
+                                }
+                            ],
+                            "trace": [
+                                {
+                                    "symbol": "SearchBar#1",
+                                    "source": {
+                                        "hash": "14192188905795769673",
+                                        "path": "src/components",
+                                        "package_name": "@acme/webapp",
+                                        "mtype": "local"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "props": [],
+            "html_elements": [
+                "div",
+                "h1"
+            ],
+            "package_name": "@acme/webapp",
+            "span": {
+                "start": {
+                    "line": 1,
+                    "column": 1
+                },
+                "end": {
+                    "line": 1,
+                    "column": 1
+                }
+            }
+        },
+        {
+            "id": "@acme/webapp:44145b4646ba00cf3afdd124b880a23f47279f07dad0d139a7b26cd531123cf3:RightPanel",
+            "name": "RightPanel",
+            "export_ids": [
+                "@acme/webapp:44145b4646ba00cf3afdd124b880a23f47279f07dad0d139a7b26cd531123cf3:RightPanel",
+                "@acme/webapp:7b12be43febc6e18259dd77c004315b4143d570234e0f15acf5f9d7b79c371b5:RightPanel"
+            ],
+            "source": {
+                "symbol": "RightPanel#0",
+                "source": {
+                    "hash": "14192188905795769673",
+                    "path": "src/components.tsx",
+                    "package_name": "@acme/webapp",
+                    "mtype": "local"
+                }
+            },
+            "dependencies": [
+                {
+                    "from": {
+                        "symbol": "RightPanel#0",
+                        "source": {
+                            "hash": "14192188905795769673",
+                            "path": "src/components.tsx",
+                            "package_name": "@acme/webapp",
+                            "mtype": "local"
+                        },
+                        "name": "RightPanel",
+                        "id": "@acme/webapp:44145b4646ba00cf3afdd124b880a23f47279f07dad0d139a7b26cd531123cf3:RightPanel"
+                    },
+                    "to": {
+                        "symbol": "DatePicker#1",
+                        "source": {
+                            "hash": "16407433795890619683",
+                            "path": "",
+                            "package_name": "@acme/design-system",
+                            "mtype": "package"
+                        },
+                        "name": "DatePicker",
+                        "id": "@acme/design-system:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:DatePicker"
+                    },
+                    "references": [
+                        {
+                            "usages": [
+                                {
+                                    "props": [],
+                                    "start": {
+                                        "line": 7,
+                                        "column": 37
+                                    },
+                                    "end": {
+                                        "line": 7,
+                                        "column": 50
+                                    }
+                                }
+                            ],
+                            "trace": [
+                                {
+                                    "symbol": "DatePicker#1",
+                                    "source": {
+                                        "hash": "16407433795890619683",
+                                        "path": "",
+                                        "package_name": "@acme/design-system",
+                                        "mtype": "package"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "symbol": "RightPanel#0",
+                        "source": {
+                            "hash": "14192188905795769673",
+                            "path": "src/components.tsx",
+                            "package_name": "@acme/webapp",
+                            "mtype": "local"
+                        },
+                        "name": "RightPanel",
+                        "id": "@acme/webapp:44145b4646ba00cf3afdd124b880a23f47279f07dad0d139a7b26cd531123cf3:RightPanel"
+                    },
+                    "to": {
+                        "symbol": "Input#1",
+                        "source": {
+                            "hash": "16407433795890619683",
+                            "path": "",
+                            "package_name": "@acme/design-system",
+                            "mtype": "package"
+                        },
+                        "name": "Input",
+                        "id": "@acme/design-system:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Input"
+                    },
+                    "references": [
+                        {
+                            "usages": [
+                                {
+                                    "props": [],
+                                    "start": {
+                                        "line": 7,
+                                        "column": 50
+                                    },
+                                    "end": {
+                                        "line": 7,
+                                        "column": 58
+                                    }
+                                }
+                            ],
+                            "trace": [
+                                {
+                                    "symbol": "Input#1",
+                                    "source": {
+                                        "hash": "16407433795890619683",
+                                        "path": "",
+                                        "package_name": "@acme/design-system",
+                                        "mtype": "package"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "props": [
+                {
+                    "name": "link",
+                    "span": {
+                        "start": {
+                            "line": 10,
+                            "column": 16
+                        },
+                        "end": {
+                            "line": 10,
+                            "column": 20
+                        }
+                    }
+                },
+                {
+                    "name": "isEnabled",
+                    "default_value": {
+                        "type": "Bool",
+                        "value": true
+                    },
+                    "span": {
+                        "start": {
+                            "line": 10,
+                            "column": 16
+                        },
+                        "end": {
+                            "line": 10,
+                            "column": 20
+                        }
+                    }
+                }
+            ],
+            "html_elements": [
+                "h1",
+                "div"
+            ],
+            "package_name": "@acme/webapp",
+            "span": {
+                "start": {
+                    "line": 1,
+                    "column": 1
+                },
+                "end": {
+                    "line": 1,
+                    "column": 1
+                }
+            }
+        },
+        {
+            "id": "@acme/webapp:44145b4646ba00cf3afdd124b880a23f47279f07dad0d139a7b26cd531123cf3:SearchBar",
+            "name": "SearchBar",
+            "export_ids": [
+                "@acme/webapp:44145b4646ba00cf3afdd124b880a23f47279f07dad0d139a7b26cd531123cf3:SearchBar",
+                "@acme/webapp:7b12be43febc6e18259dd77c004315b4143d570234e0f15acf5f9d7b79c371b5:SearchBar"
+            ],
+            "source": {
+                "symbol": "SearchBar#0",
+                "source": {
+                    "hash": "14192188905795769673",
+                    "path": "src/components.tsx",
+                    "package_name": "@acme/webapp",
+                    "mtype": "local"
+                }
+            },
+            "dependencies": [
+                {
+                    "from": {
+                        "symbol": "SearchBar#0",
+                        "source": {
+                            "hash": "14192188905795769673",
+                            "path": "src/components.tsx",
+                            "package_name": "@acme/webapp",
+                            "mtype": "local"
+                        },
+                        "name": "SearchBar",
+                        "id": "@acme/webapp:44145b4646ba00cf3afdd124b880a23f47279f07dad0d139a7b26cd531123cf3:SearchBar"
+                    },
+                    "to": {
+                        "symbol": "Button#1",
+                        "source": {
+                            "hash": "16407433795890619683",
+                            "path": "",
+                            "package_name": "@acme/design-system",
+                            "mtype": "package"
+                        },
+                        "name": "Button",
+                        "id": "@acme/design-system:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Button"
+                    },
+                    "references": [
+                        {
+                            "usages": [
+                                {
+                                    "props": [],
+                                    "start": {
+                                        "line": 11,
+                                        "column": 44
+                                    },
+                                    "end": {
+                                        "line": 11,
+                                        "column": 53
+                                    }
+                                }
+                            ],
+                            "trace": [
+                                {
+                                    "symbol": "Button#1",
+                                    "source": {
+                                        "hash": "16407433795890619683",
+                                        "path": "",
+                                        "package_name": "@acme/design-system",
+                                        "mtype": "package"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "symbol": "SearchBar#0",
+                        "source": {
+                            "hash": "14192188905795769673",
+                            "path": "src/components.tsx",
+                            "package_name": "@acme/webapp",
+                            "mtype": "local"
+                        },
+                        "name": "SearchBar",
+                        "id": "@acme/webapp:44145b4646ba00cf3afdd124b880a23f47279f07dad0d139a7b26cd531123cf3:SearchBar"
+                    },
+                    "to": {
+                        "symbol": "Input#1",
+                        "source": {
+                            "hash": "16407433795890619683",
+                            "path": "",
+                            "package_name": "@acme/design-system",
+                            "mtype": "package"
+                        },
+                        "name": "Input",
+                        "id": "@acme/design-system:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Input"
+                    },
+                    "references": [
+                        {
+                            "usages": [
+                                {
+                                    "props": [],
+                                    "start": {
+                                        "line": 11,
+                                        "column": 36
+                                    },
+                                    "end": {
+                                        "line": 11,
+                                        "column": 44
+                                    }
+                                }
+                            ],
+                            "trace": [
+                                {
+                                    "symbol": "Input#1",
+                                    "source": {
+                                        "hash": "16407433795890619683",
+                                        "path": "",
+                                        "package_name": "@acme/design-system",
+                                        "mtype": "package"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "props": [],
+            "html_elements": [
+                "div",
+                "h1"
+            ],
+            "package_name": "@acme/webapp",
+            "span": {
+                "start": {
+                    "line": 1,
+                    "column": 1
+                },
+                "end": {
+                    "line": 1,
+                    "column": 1
+                }
+            }
+        }
+    ],
+    "exports": [
+        {
+            "name": "App",
+            "module_id": {
+                "hash": "14240620700214121314",
+                "path": "src/app.tsx",
+                "package_name": "@acme/webapp",
+                "mtype": "local"
+            },
+            "resolvedType": false,
+            "inferredType": false,
+            "is_component": true,
+            "trace_to_declaration": [
+                {
+                    "reference": "App#0",
+                    "source": {
+                        "hash": "14240620700214121314",
+                        "path": "src/app.tsx",
+                        "package_name": "@acme/webapp",
+                        "mtype": "local"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "RightPanel",
+            "module_id": {
+                "hash": "14192188905795769673",
+                "path": "src/components.tsx",
+                "package_name": "@acme/webapp",
+                "mtype": "local"
+            },
+            "resolvedType": false,
+            "inferredType": false,
+            "is_component": true,
+            "trace_to_declaration": [
+                {
+                    "reference": "RightPanel#0",
+                    "source": {
+                        "hash": "14192188905795769673",
+                        "path": "src/components.tsx",
+                        "package_name": "@acme/webapp",
+                        "mtype": "local"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "SearchBar",
+            "module_id": {
+                "hash": "14192188905795769673",
+                "path": "src/components.tsx",
+                "package_name": "@acme/webapp",
+                "mtype": "local"
+            },
+            "resolvedType": false,
+            "inferredType": false,
+            "is_component": true,
+            "trace_to_declaration": [
+                {
+                    "reference": "SearchBar#0",
+                    "source": {
+                        "hash": "14192188905795769673",
+                        "path": "src/components.tsx",
+                        "package_name": "@acme/webapp",
+                        "mtype": "local"
+                    }
+                }
+            ]
+        }
+    ],
+    "alias_map": {
+        "root": {
+            "name": "@acme/webapp",
+            "path": "",
+            "version": "1.0.0",
+            "aliases": {},
+            "importMap": {
+                "@acme/webapp/*": [
+                    "*"
+                ],
+                "@acme/webapp": [
+                    "src/app.tsx"
+                ]
+            },
+            "exportMap": {
+                ".": [
+                    "src/app.tsx"
+                ]
+            },
+            "main": "src/app.tsx"
+        },
+        "packages": {}
+    },
+    "meta": {
+        "analyze_duration_msec": 19,
+        "date_extraction_msec": 529,
+        "num_of_commits": 181,
+        "num_of_components": 6,
+        "num_of_deltas": 2504,
+        "num_of_dependencies": 7,
+        "num_of_exports": 3,
+        "num_of_modules": 2,
+        "parse_duration_msec": 2,
+        "duration_msec": 552,
+        "argv": "omlet analyze",
+        "cli_version": "1.4.2",
+        "node_version": "v18.17.0",
+        "device_info": {
+            "os": "Darwin",
+            "arch": "arm64",
+            "version": "23.2.0"
+        },
+        "cli_params": {},
+        "cli_config": {
+            "include": [
+                "**/*.{js,jsx,ts,tsx}"
+            ],
+            "ignore": [
+                "**/node_modules/**",
+                "**/*.d.ts",
+                "**/stories/**/*",
+                "**/.storybook/**/*",
+                "**/*.stories.{jsx,tsx,js,ts}",
+                "**/*.{spec,test}.{jsx,tsx,js,ts}",
+                "**/{__test__,tests}/**/*.{jsx,tsx,js,ts}"
+            ],
+            "workspaces": {}
+        },
+        "mem_usages": {
+            "before_scan_rss": 1234,
+            "after_file_dates_rss": 1234,
+            "after_project_setup_rss": 1234,
+            "after_parse_rss": 1234,
+            "after_analyze_rss": 1234
+        }
+    },
+    "setup_issues": [],
+    "parser_errors": [],
+    "invalid_dependencies": [],
+    "repository": {
+        "scope": "zeplin",
+        "name": "omlet",
+        "url": "https://github.com/zeplin/omlet.git",
+        "branch": "component-metadata",
+        "initialCommitHash": "58eb388747e0ded52e17c272de5ff310f71c133b"
+    }
+}

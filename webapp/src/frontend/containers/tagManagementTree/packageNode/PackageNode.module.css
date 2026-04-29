@@ -1,0 +1,99 @@
+.packageNode {
+    position: relative;
+}
+
+.packageNode .packageLine {
+    position: absolute;
+    top: 30px;
+    left: 26px;
+    width: 1px;
+    height: calc(100% - 22px);
+    border-radius: 1px;
+    background-color: var(--border-secondary-color);
+}
+
+.packageNode:last-child .packageLine::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--border-secondary-color);
+    transform: translateX(-50%);
+}
+
+.packageNode .packageInfo {
+    margin: 12px 0 4px;
+    display: flex;
+}
+
+.packageNode:first-child .packageInfo {
+    margin-top: 0;
+}
+
+.packageNode .packageInfo .row {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    height: 26px;
+    padding-right: var(--spacing-xs);
+    font-size: 13px;
+    line-height: 18px;
+    border-radius: 2px;
+}
+
+.packageNode .packageInfo .row .icons {
+    display: flex;
+    align-items: center;
+}
+
+.packageNode:not(.readOnly) .packageInfo .row:hover {
+    background-color: var(--background-secondary-color);
+}
+
+.packageNode .packageInfo .row .packageName {
+    color: var(--label-primary-color);
+    white-space: nowrap;
+}
+
+.packageNode .packageInfo .row .separatorDot {
+    display: inline-block;
+    width: 2px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: var(--label-secondary-color);
+}
+
+.packageNode .packageInfo .row .componentCount {
+    white-space: nowrap;
+    color: var(--label-secondary-color);
+}
+
+.packageNode .packageInfo .row .tags {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.packageNode .packageInfo .row:not(.dropdownOpen, :hover) .addTag {
+    visibility: hidden;
+}
+
+.packageNode .collapseButton {
+    padding: 4px;
+    line-height: 0;
+    transform-origin: center;
+    transition-property: transform;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+}
+
+.packageNode .collapseButton.collapsed {
+    transform: rotate(-90deg);
+}
+
+.packageNode .folders {
+    padding-left: 10px;
+}

@@ -1,0 +1,61 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&component_results"
+---
+num_of_components: 3
+components:
+  - definition_id: "typescript-examples:10a79ac7f9ba8a938acc612c8fe97dfb1652c573d2943fc64d7c34f2a7897cc3:ComponentWithoutJSX"
+    name: ComponentWithoutJSX
+    export_ids:
+      - "typescript-examples:src/jsx-refs/components-no-jsx:ComponentWithoutJSX"
+    package_name: typescript-examples
+    source_path: src/jsx-refs/components-no-jsx.tsx
+    dependencies: []
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:10a79ac7f9ba8a938acc612c8fe97dfb1652c573d2943fc64d7c34f2a7897cc3:Tool"
+    name: Tool
+    export_ids:
+      - "typescript-examples:src/jsx-refs/components-no-jsx:Tool"
+    package_name: typescript-examples
+    source_path: src/jsx-refs/components-no-jsx.tsx
+    dependencies: []
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:9ea5ff56776ce0c987cc818b44fd575b967797a972baca15e008fcc56f11cc23:MainComponent"
+    name: MainComponent
+    export_ids:
+      - "typescript-examples:src/jsx-refs/jsx-refs:MainComponent"
+    package_name: typescript-examples
+    source_path: src/jsx-refs/jsx-refs.tsx
+    dependencies:
+      - from: "typescript-examples:9ea5ff56776ce0c987cc818b44fd575b967797a972baca15e008fcc56f11cc23:MainComponent"
+        to: "typescript-examples:10a79ac7f9ba8a938acc612c8fe97dfb1652c573d2943fc64d7c34f2a7897cc3:ComponentWithoutJSX"
+        references:
+          - trace:
+              - "typescript-examples:10a79ac7f9ba8a938acc612c8fe97dfb1652c573d2943fc64d7c34f2a7897cc3:ComponentWithoutJSX"
+            usages:
+              - start:
+                  line: 5
+                  column: 9
+                end:
+                  line: 5
+                  column: 31
+                props: []
+      - from: "typescript-examples:9ea5ff56776ce0c987cc818b44fd575b967797a972baca15e008fcc56f11cc23:MainComponent"
+        to: "typescript-examples:10a79ac7f9ba8a938acc612c8fe97dfb1652c573d2943fc64d7c34f2a7897cc3:Tool"
+        references:
+          - trace:
+              - "typescript-examples:10a79ac7f9ba8a938acc612c8fe97dfb1652c573d2943fc64d7c34f2a7897cc3:Tool"
+            usages:
+              - start:
+                  line: 6
+                  column: 9
+                end:
+                  line: 6
+                  column: 16
+                props: []
+    props: []
+    html_elements:
+      - div
+

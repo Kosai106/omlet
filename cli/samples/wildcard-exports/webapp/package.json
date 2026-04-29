@@ -1,0 +1,19 @@
+{
+  "name": "@wildcard-exports/webapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.tsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "react": "^18.2.0"
+  },
+  "dependencies": {
+    "@wildcard-exports/design-system-input": "../design-system/packages/input",
+    "@wildcard-exports/design-system-react": "../design-system/packages/react-lib"
+  }
+}

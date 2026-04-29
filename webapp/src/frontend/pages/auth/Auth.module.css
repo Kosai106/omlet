@@ -1,0 +1,66 @@
+.header {
+    position: sticky;
+    top: 0;
+    height: var(--header-height);
+    background-color: var(--background-inverse-color);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: calc(100vh - var(--header-height));
+    padding-top: 192px;
+}
+
+.main .column {
+    width: 240px;
+    display: flex;
+    gap: var(--spacing-xxl);
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.main .column .forms {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-s);
+}
+
+.main .column .forms .continueWith {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--label-primary-color);
+}
+
+.main .column .forms form {
+    display: flex;
+    flex-direction: column;
+}
+
+.main .column .error {
+    align-self: flex-start;
+    font-size: 13px;
+    color: var(--accent-warning-color);
+}
+
+.main .column .error a {
+    font-weight: 600;
+    color: var(--accent-warning-color);
+}
+
+.main .column .link {
+    display: flex;
+    gap: var(--spacing-xxs);
+    align-items: center;
+    color: var(--accent-green);
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 600;
+}
+
+@media screen and (max-height: 740px) {
+    .main .column {
+        padding-bottom: 192px;
+    }
+}

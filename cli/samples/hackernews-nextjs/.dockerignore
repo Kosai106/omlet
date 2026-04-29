@@ -1,0 +1,7 @@
+.git
+.next
+build
+dist
+docs
+node_modules
+npm-debug.log

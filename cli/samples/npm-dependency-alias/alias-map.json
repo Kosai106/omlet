@@ -1,0 +1,19 @@
+{
+  "root": {
+    "name": "test",
+    "path": "",
+    "version": "1.0.0",
+    "aliases": {},
+    "importMap": {
+      "external-datepicker": [
+        "react-datepicker"
+      ],
+      "test/*": [
+        "*"
+      ]
+    },
+    "exportMap": {}
+  },
+  "packages": {},
+  "absolutePath": "/package"
+}

@@ -1,0 +1,35 @@
+.header {
+    display: flex;
+    align-items: start;
+    gap: var(--spacing-m);
+    height: 30px;
+    margin-top: var(--spacing-s);
+    font-weight: 600;
+    background-color: var(--background-primary-color);
+}
+
+.header .mainColumn {
+    flex: 1;
+    font-size: 16px;
+    color: var(--label-primary-color);
+    margin-top: 6px;
+}
+
+.header .column {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    width: 96px;
+    padding: 0;
+    text-align: left;
+    font-size: 13px;
+    line-height: 1.35;
+    white-space: nowrap;
+    color: var(--label-secondary-color);
+}
+
+.header .column.usageCount {
+    width: 72px;
+    justify-content: flex-end;
+}

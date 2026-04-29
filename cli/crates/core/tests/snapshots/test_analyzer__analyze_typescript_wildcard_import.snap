@@ -1,0 +1,315 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&component_results"
+---
+num_of_components: 13
+components:
+  - definition_id: "ds:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Button"
+    name: Button
+    export_ids: []
+    package_name: ds
+    source_path: ""
+    dependencies: []
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:ad7915ba82a054badb6224501ba8d788fecc3f7dbec85f3a857ff68945a4a6ff:LinkOrButton"
+    name: LinkOrButton
+    export_ids:
+      - "typescript-examples:src/wildcard-import/condition-operator:LinkOrButton"
+    package_name: typescript-examples
+    source_path: src/wildcard-import/condition-operator.tsx
+    dependencies:
+      - from: "typescript-examples:ad7915ba82a054badb6224501ba8d788fecc3f7dbec85f3a857ff68945a4a6ff:LinkOrButton"
+        to: "typescript-examples:bf0d0c920397c9d1106c0d212e0e68b49b760875c939edf8086e9b6fb9c68f42:Button"
+        references:
+          - trace:
+              - "typescript-examples:bf0d0c920397c9d1106c0d212e0e68b49b760875c939edf8086e9b6fb9c68f42:Button"
+            usages: []
+      - from: "typescript-examples:ad7915ba82a054badb6224501ba8d788fecc3f7dbec85f3a857ff68945a4a6ff:LinkOrButton"
+        to: "typescript-examples:bf0d0c920397c9d1106c0d212e0e68b49b760875c939edf8086e9b6fb9c68f42:Link"
+        references:
+          - trace:
+              - "typescript-examples:bf0d0c920397c9d1106c0d212e0e68b49b760875c939edf8086e9b6fb9c68f42:Link"
+            usages: []
+    props:
+      - name: link
+        default_value: NONE
+    html_elements: []
+  - definition_id: "typescript-examples:ad7915ba82a054badb6224501ba8d788fecc3f7dbec85f3a857ff68945a4a6ff:Parent"
+    name: Parent
+    export_ids:
+      - "typescript-examples:src/wildcard-import/condition-operator:Parent"
+    package_name: typescript-examples
+    source_path: src/wildcard-import/condition-operator.tsx
+    dependencies:
+      - from: "typescript-examples:ad7915ba82a054badb6224501ba8d788fecc3f7dbec85f3a857ff68945a4a6ff:Parent"
+        to: "typescript-examples:ad7915ba82a054badb6224501ba8d788fecc3f7dbec85f3a857ff68945a4a6ff:LinkOrButton"
+        references:
+          - trace: []
+            usages:
+              - start:
+                  line: 11
+                  column: 9
+                end:
+                  line: 11
+                  column: 25
+                props: []
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:bf0d0c920397c9d1106c0d212e0e68b49b760875c939edf8086e9b6fb9c68f42:Button"
+    name: Button
+    export_ids:
+      - "typescript-examples:src/wildcard-import/ds:Button"
+    package_name: typescript-examples
+    source_path: src/wildcard-import/ds.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - button
+  - definition_id: "typescript-examples:bf0d0c920397c9d1106c0d212e0e68b49b760875c939edf8086e9b6fb9c68f42:Link"
+    name: Link
+    export_ids:
+      - "typescript-examples:src/wildcard-import/ds:Link"
+    package_name: typescript-examples
+    source_path: src/wildcard-import/ds.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - a
+  - definition_id: "typescript-examples:b526f3b6d19e2f2bc2f4e51f83aa8101933039cdf5d02a1e98b5526267863436:default"
+    name: export-default
+    export_ids:
+      - "typescript-examples:src/wildcard-import/export-default:default"
+    package_name: typescript-examples
+    source_path: src/wildcard-import/export-default.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - div
+  - definition_id: "typescript-examples:400656bf80a91afee30c6957d918fd1da1ca2b65b2cc56676f3e4e4a57011e7f:RedeclareExternalImport"
+    name: RedeclareExternalImport
+    export_ids:
+      - "typescript-examples:src/wildcard-import/redeclare-external-import:RedeclareExternalImport"
+    package_name: typescript-examples
+    source_path: src/wildcard-import/redeclare-external-import.tsx
+    dependencies:
+      - from: "typescript-examples:400656bf80a91afee30c6957d918fd1da1ca2b65b2cc56676f3e4e4a57011e7f:RedeclareExternalImport"
+        to: "ds:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Button"
+        references:
+          - trace:
+              - "ds:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Button"
+            usages:
+              - start:
+                  line: 9
+                  column: 13
+                end:
+                  line: 9
+                  column: 35
+                props: []
+              - start:
+                  line: 10
+                  column: 13
+                end:
+                  line: 10
+                  column: 46
+                props: []
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:36c63c09e1590105403d5e564633e9b2ebcb46a997f58415c63c9b8de0e8a2fe:RedeclareImport"
+    name: RedeclareImport
+    export_ids:
+      - "typescript-examples:src/wildcard-import/redeclare-import:RedeclareImport"
+    package_name: typescript-examples
+    source_path: src/wildcard-import/redeclare-import.tsx
+    dependencies:
+      - from: "typescript-examples:36c63c09e1590105403d5e564633e9b2ebcb46a997f58415c63c9b8de0e8a2fe:RedeclareImport"
+        to: "typescript-examples:bf0d0c920397c9d1106c0d212e0e68b49b760875c939edf8086e9b6fb9c68f42:Button"
+        references:
+          - trace:
+              - "typescript-examples:bf0d0c920397c9d1106c0d212e0e68b49b760875c939edf8086e9b6fb9c68f42:Button"
+            usages:
+              - start:
+                  line: 9
+                  column: 13
+                end:
+                  line: 9
+                  column: 35
+                props: []
+              - start:
+                  line: 10
+                  column: 13
+                end:
+                  line: 10
+                  column: 46
+                props: []
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:a310cdd6015b963f42b22f07f3dc64c3978e0b6efb4bd58bb97a52e7bec43eb5:NewButton"
+    name: NewButton
+    export_ids:
+      - "typescript-examples:src/wildcard-import/use-in-return:NewButton"
+    package_name: typescript-examples
+    source_path: src/wildcard-import/use-in-return.tsx
+    dependencies:
+      - from: "typescript-examples:a310cdd6015b963f42b22f07f3dc64c3978e0b6efb4bd58bb97a52e7bec43eb5:NewButton"
+        to: "ds:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Button"
+        references:
+          - trace:
+              - "ds:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Button"
+            usages: []
+      - from: "typescript-examples:a310cdd6015b963f42b22f07f3dc64c3978e0b6efb4bd58bb97a52e7bec43eb5:NewButton"
+        to: "typescript-examples:bf0d0c920397c9d1106c0d212e0e68b49b760875c939edf8086e9b6fb9c68f42:Button"
+        references:
+          - trace:
+              - "typescript-examples:bf0d0c920397c9d1106c0d212e0e68b49b760875c939edf8086e9b6fb9c68f42:Button"
+            usages: []
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:a310cdd6015b963f42b22f07f3dc64c3978e0b6efb4bd58bb97a52e7bec43eb5:NewButtonByUsingUtil"
+    name: NewButtonByUsingUtil
+    export_ids:
+      - "typescript-examples:src/wildcard-import/use-in-return:NewButtonByUsingUtil"
+    package_name: typescript-examples
+    source_path: src/wildcard-import/use-in-return.tsx
+    dependencies:
+      - from: "typescript-examples:a310cdd6015b963f42b22f07f3dc64c3978e0b6efb4bd58bb97a52e7bec43eb5:NewButtonByUsingUtil"
+        to: "ds:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Button"
+        references:
+          - trace:
+              - "ds:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Button"
+            usages: []
+      - from: "typescript-examples:a310cdd6015b963f42b22f07f3dc64c3978e0b6efb4bd58bb97a52e7bec43eb5:NewButtonByUsingUtil"
+        to: "typescript-examples:bf0d0c920397c9d1106c0d212e0e68b49b760875c939edf8086e9b6fb9c68f42:Button"
+        references:
+          - trace:
+              - "typescript-examples:bf0d0c920397c9d1106c0d212e0e68b49b760875c939edf8086e9b6fb9c68f42:Button"
+            usages: []
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:a310cdd6015b963f42b22f07f3dc64c3978e0b6efb4bd58bb97a52e7bec43eb5:OldButton"
+    name: OldButton
+    export_ids:
+      - "typescript-examples:src/wildcard-import/use-in-return:OldButton"
+    package_name: typescript-examples
+    source_path: src/wildcard-import/use-in-return.tsx
+    dependencies:
+      - from: "typescript-examples:a310cdd6015b963f42b22f07f3dc64c3978e0b6efb4bd58bb97a52e7bec43eb5:OldButton"
+        to: "ds:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Button"
+        references:
+          - trace:
+              - "ds:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Button"
+            usages: []
+      - from: "typescript-examples:a310cdd6015b963f42b22f07f3dc64c3978e0b6efb4bd58bb97a52e7bec43eb5:OldButton"
+        to: "typescript-examples:bf0d0c920397c9d1106c0d212e0e68b49b760875c939edf8086e9b6fb9c68f42:Button"
+        references:
+          - trace:
+              - "typescript-examples:bf0d0c920397c9d1106c0d212e0e68b49b760875c939edf8086e9b6fb9c68f42:Button"
+            usages: []
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:a310cdd6015b963f42b22f07f3dc64c3978e0b6efb4bd58bb97a52e7bec43eb5:Parent"
+    name: Parent
+    export_ids:
+      - "typescript-examples:src/wildcard-import/use-in-return:Parent"
+    package_name: typescript-examples
+    source_path: src/wildcard-import/use-in-return.tsx
+    dependencies:
+      - from: "typescript-examples:a310cdd6015b963f42b22f07f3dc64c3978e0b6efb4bd58bb97a52e7bec43eb5:Parent"
+        to: "typescript-examples:a310cdd6015b963f42b22f07f3dc64c3978e0b6efb4bd58bb97a52e7bec43eb5:NewButton"
+        references:
+          - trace: []
+            usages:
+              - start:
+                  line: 24
+                  column: 13
+                end:
+                  line: 24
+                  column: 26
+                props: []
+      - from: "typescript-examples:a310cdd6015b963f42b22f07f3dc64c3978e0b6efb4bd58bb97a52e7bec43eb5:Parent"
+        to: "typescript-examples:a310cdd6015b963f42b22f07f3dc64c3978e0b6efb4bd58bb97a52e7bec43eb5:NewButtonByUsingUtil"
+        references:
+          - trace: []
+            usages:
+              - start:
+                  line: 25
+                  column: 13
+                end:
+                  line: 25
+                  column: 37
+                props: []
+      - from: "typescript-examples:a310cdd6015b963f42b22f07f3dc64c3978e0b6efb4bd58bb97a52e7bec43eb5:Parent"
+        to: "typescript-examples:a310cdd6015b963f42b22f07f3dc64c3978e0b6efb4bd58bb97a52e7bec43eb5:OldButton"
+        references:
+          - trace: []
+            usages:
+              - start:
+                  line: 23
+                  column: 13
+                end:
+                  line: 23
+                  column: 26
+                props: []
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:a2211841d562f032415304efe9312a75094214b56a3053659e05b5be853607aa:WildcardImport"
+    name: WildcardImport
+    export_ids:
+      - "typescript-examples:src/wildcard-import/wildcard-import:WildcardImport"
+    package_name: typescript-examples
+    source_path: src/wildcard-import/wildcard-import.tsx
+    dependencies:
+      - from: "typescript-examples:a2211841d562f032415304efe9312a75094214b56a3053659e05b5be853607aa:WildcardImport"
+        to: "ds:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Button"
+        references:
+          - trace:
+              - "ds:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Button"
+            usages:
+              - start:
+                  line: 12
+                  column: 13
+                end:
+                  line: 12
+                  column: 25
+                props: []
+      - from: "typescript-examples:a2211841d562f032415304efe9312a75094214b56a3053659e05b5be853607aa:WildcardImport"
+        to: "typescript-examples:b526f3b6d19e2f2bc2f4e51f83aa8101933039cdf5d02a1e98b5526267863436:default"
+        references:
+          - trace:
+              - "typescript-examples:b526f3b6d19e2f2bc2f4e51f83aa8101933039cdf5d02a1e98b5526267863436:default"
+            usages:
+              - start:
+                  line: 13
+                  column: 13
+                end:
+                  line: 13
+                  column: 48
+                props: []
+      - from: "typescript-examples:a2211841d562f032415304efe9312a75094214b56a3053659e05b5be853607aa:WildcardImport"
+        to: "typescript-examples:bf0d0c920397c9d1106c0d212e0e68b49b760875c939edf8086e9b6fb9c68f42:Button"
+        references:
+          - trace:
+              - "typescript-examples:bf0d0c920397c9d1106c0d212e0e68b49b760875c939edf8086e9b6fb9c68f42:Button"
+            usages:
+              - start:
+                  line: 11
+                  column: 13
+                end:
+                  line: 11
+                  column: 31
+                props: []
+          - trace:
+              - "typescript-examples:cde99b04e196727c6d2f4b89b067db4f4ad0100a273fbb1cee5d65c28b01005e:ds"
+              - "typescript-examples:98c6ba439e2f841eedcf473e72f3e843d885ee6d79233fc4cd033ac276857ed8:ds"
+              - "typescript-examples:bf0d0c920397c9d1106c0d212e0e68b49b760875c939edf8086e9b6fb9c68f42:Button"
+            usages:
+              - start:
+                  line: 10
+                  column: 13
+                end:
+                  line: 10
+                  column: 26
+                props: []
+    props: []
+    html_elements: []
+

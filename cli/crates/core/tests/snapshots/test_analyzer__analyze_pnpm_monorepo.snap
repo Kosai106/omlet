@@ -1,0 +1,89 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&component_results"
+---
+num_of_components: 4
+components:
+  - definition_id: "pack-a:fc5c7261a4bc3416a1baf2761602cb71fb11d037ca3162c9e09a7c830899e089:App"
+    name: App
+    export_ids:
+      - "pack-a:.:App"
+      - "pack-a:src:App"
+    package_name: pack-a
+    source_path: packages/pack-a/src/index.tsx
+    dependencies:
+      - from: "pack-a:fc5c7261a4bc3416a1baf2761602cb71fb11d037ca3162c9e09a7c830899e089:App"
+        to: "pack-b:63f964235127a9bb6c2edc19a23d8c1abf91b45c3ff01000114af0a2fc5ce8a8:default"
+        references:
+          - trace:
+              - "pack-b:63f964235127a9bb6c2edc19a23d8c1abf91b45c3ff01000114af0a2fc5ce8a8:default"
+            usages:
+              - start:
+                  line: 9
+                  column: 7
+                end:
+                  line: 9
+                  column: 20
+                props: []
+      - from: "pack-a:fc5c7261a4bc3416a1baf2761602cb71fb11d037ca3162c9e09a7c830899e089:App"
+        to: "pack-b:988753235fbd69e17a15763d413258279d2b84ef0c3ca13456a788d11e6fedc9:default"
+        references:
+          - trace:
+              - "pack-b:988753235fbd69e17a15763d413258279d2b84ef0c3ca13456a788d11e6fedc9:default"
+            usages:
+              - start:
+                  line: 10
+                  column: 7
+                end:
+                  line: 10
+                  column: 19
+                props: []
+      - from: "pack-a:fc5c7261a4bc3416a1baf2761602cb71fb11d037ca3162c9e09a7c830899e089:App"
+        to: "pack-b:998aa9341240592707b4db94abd297a47b37ec5ef27163cbf5bd1201e36c8193:Button"
+        references:
+          - trace:
+              - "pack-b:5dbc91f54f2d2b4a0b840a10fdaa640c9e78e54e56d88c63c6585298e71511e1:Button"
+              - "pack-b:998aa9341240592707b4db94abd297a47b37ec5ef27163cbf5bd1201e36c8193:Button"
+            usages:
+              - start:
+                  line: 11
+                  column: 7
+                end:
+                  line: 11
+                  column: 16
+                props: []
+    props: []
+    html_elements: []
+  - definition_id: "pack-b:998aa9341240592707b4db94abd297a47b37ec5ef27163cbf5bd1201e36c8193:Button"
+    name: Button
+    export_ids:
+      - "pack-b:component/button:Button"
+      - "pack-b:component:Button"
+    package_name: pack-b
+    source_path: packages/pack-b/component/button.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - button
+  - definition_id: "pack-b:988753235fbd69e17a15763d413258279d2b84ef0c3ca13456a788d11e6fedc9:default"
+    name: PackBMain
+    export_ids:
+      - "pack-b:.:default"
+      - "pack-b:index:default"
+    package_name: pack-b
+    source_path: packages/pack-b/index.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - img
+  - definition_id: "pack-b:63f964235127a9bb6c2edc19a23d8c1abf91b45c3ff01000114af0a2fc5ce8a8:default"
+    name: PackBTitle
+    export_ids:
+      - "pack-b:title:default"
+    package_name: pack-b
+    source_path: packages/pack-b/title.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - h1
+

@@ -1,0 +1,88 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&component_results"
+---
+num_of_components: 4
+components:
+  - definition_id: "ds:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Button"
+    name: Button
+    export_ids:
+      - "typescript-examples:src/redeclare-import/redeclare-and-export:RedeclaredButton"
+    package_name: ds
+    source_path: ""
+    dependencies: []
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:6e4afad5feeb876c530f1a47031ef477b7a5508d077b99efeacb4a7bd99daf2b:MyProvider"
+    name: MyProvider
+    export_ids:
+      - "typescript-examples:src/redeclare-import/member-expression:MyProvider"
+    package_name: typescript-examples
+    source_path: src/redeclare-import/member-expression.tsx
+    dependencies: []
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:6e4afad5feeb876c530f1a47031ef477b7a5508d077b99efeacb4a7bd99daf2b:Parent"
+    name: Parent
+    export_ids:
+      - "typescript-examples:src/redeclare-import/member-expression:Parent"
+    package_name: typescript-examples
+    source_path: src/redeclare-import/member-expression.tsx
+    dependencies:
+      - from: "typescript-examples:6e4afad5feeb876c530f1a47031ef477b7a5508d077b99efeacb4a7bd99daf2b:Parent"
+        to: "typescript-examples:6e4afad5feeb876c530f1a47031ef477b7a5508d077b99efeacb4a7bd99daf2b:MyProvider"
+        references:
+          - trace: []
+            usages:
+              - start:
+                  line: 11
+                  column: 9
+                end:
+                  line: 13
+                  column: 22
+                props:
+                  - name: children
+                    value: JSXElement
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:b3791f9ff0fc82752d68a498f0f2ff264032694597ddddb78b13ed6bfab2ddb0:RedeclareImport"
+    name: RedeclareImport
+    export_ids:
+      - "typescript-examples:src/redeclare-import/redeclare-import:RedeclareImport"
+    package_name: typescript-examples
+    source_path: src/redeclare-import/redeclare-import.tsx
+    dependencies:
+      - from: "typescript-examples:b3791f9ff0fc82752d68a498f0f2ff264032694597ddddb78b13ed6bfab2ddb0:RedeclareImport"
+        to: "ds:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Button"
+        references:
+          - trace:
+              - "ds:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Button"
+            usages:
+              - start:
+                  line: 10
+                  column: 13
+                end:
+                  line: 10
+                  column: 35
+                props: []
+              - start:
+                  line: 11
+                  column: 13
+                end:
+                  line: 11
+                  column: 23
+                props: []
+          - trace:
+              - "typescript-examples:7a333b04cd1d995d1a4accdee078da85c7ea3011e17f92c9c09130e13f4e8db0:RedeclaredButton"
+              - "ds:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Button"
+            usages:
+              - start:
+                  line: 12
+                  column: 13
+                end:
+                  line: 12
+                  column: 60
+                props: []
+    props: []
+    html_elements: []
+

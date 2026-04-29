@@ -1,0 +1,28 @@
+.professionCard {
+    padding: var(--spacing-s);
+    background-color: var(--background-secondary-color);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.professionCard:hover {
+    background-color: var(--control-background-hover-color);
+}
+
+.professionCard:has(:checked) {
+    background-color: var(--background-accent-light-color);
+}
+
+.professionCard input {
+    display: none;
+}
+
+.professionCard .title {
+    margin-bottom: var(--spacing-xxs);
+}
+
+.professionCard .description {
+    font-size: 11px;
+    line-height: 15px;
+    color: var(--label-secondary-color);
+}

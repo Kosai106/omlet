@@ -1,0 +1,44 @@
+.createTagPopover {
+    display: flex;
+    flex-direction: column;
+    width: 216px;
+    border-radius: 4px;
+}
+
+.createTagForm {
+    display: contents;
+}
+
+.createTagPopover .tagNameInput {
+    padding: var(--spacing-xs);
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--label-primary-color);
+    background-color: var(--control-background-default-color);
+    border: none;
+    outline: none;
+    caret-color: var(--accent-green);
+}
+
+.createTagPopover .tagNameInput::placeholder {
+    color: var(--label-secondary-color);
+}
+
+.createTagPopover .tagNameInput:disabled {
+    color: var(--label-secondary-disabled-color);
+}
+
+.createTagPopover footer {
+    padding: var(--spacing-xs);
+}
+
+.createTagPopover .saveButton {
+    width: 120px;
+}
+
+.createTagPopover .error {
+    margin-top: var(--spacing-xs);
+    font-size: 11px;
+    line-height: 15px;
+    color: var(--label-secondary-color);
+}

@@ -1,0 +1,110 @@
+.analytics {
+    display: flex;
+    height: calc(100vh - var(--header-height));
+    overflow: hidden;
+}
+
+.analytics .result {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.analytics .analyticsLoading {
+    margin: 0 48px;
+}
+
+.analytics .analyticsLoading.lineChart {
+    margin-right: 240px;
+}
+
+.analytics .result .chart {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.analytics .result .chart .chartHeader {
+    flex-shrink: 0;
+    padding: var(--spacing-m) var(--spacing-xxl);
+    border-bottom: solid 1px var(--background-secondary-color);
+    background-color: var(--background-primary-color);
+}
+
+.analytics .result .chart .chartHeader .chartInfoAndActions {
+    display: flex;
+}
+
+.analytics .result .chart .chartHeader .chartInfo {
+    flex: 1;
+}
+
+.analytics .result .chart .chartHeader .chartTitle {
+    height: 24px;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 600;
+    color: var(--label-primary-color);
+}
+
+.analytics .result .chart .chartHeader .chartDescription {
+    height: 22px;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--label-secondary-color);
+}
+
+.analytics .result .chart .chartHeader .chartActions {
+    display: flex;
+    gap: var(--spacing-s);
+}
+
+.analytics .result .chart .chartHeader .chartAction {
+    height: 24px;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 600;
+    color: var(--label-secondary-color);
+}
+
+.analytics .result .chart .chartHeader .chartAction:disabled {
+    color: var(--label-secondary-disabled-color);
+    cursor: not-allowed;
+}
+
+.analytics .result .chart .chartHeader .chartInsight {
+    width: 100%;
+    margin-top: var(--spacing-m);
+}
+
+.analytics .result .chart .chartContent {
+    flex: 1;
+    min-height: 0;
+    height: 100%;
+    position: relative;
+}
+
+.analytics .result .chart .chartContent .timeSeriesFilter {
+    padding-right: 192px;
+}
+
+.analytics .result .chart .chartContent .timeSeriesFilter.empty:not(.loading),
+.analytics .result .chart .chartContent .timeSeriesFilter.areaChart {
+    position: absolute;
+    top: 16px;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    margin-right: 48px;
+}
+
+.analytics .result .chart .chartContent .timeSeriesFilter.empty:not(.areaChart) {
+    padding-right: 192px;
+}
+
+.analytics .result .chart .chartContent .timeSeriesFilter.loading {
+    position: initial;
+    margin: 16px 48px 8px;
+}

@@ -1,0 +1,16 @@
+{
+  "root": {
+    "name": "typescript-examples",
+    "path": "",
+    "version": "1.0.0",
+    "aliases": {},
+    "importMap": {
+      "typescript-examples/*": [
+        "*"
+      ]
+    },
+    "exportMap": {}
+  },
+  "packages": {},
+  "absolutePath": "/package"
+}

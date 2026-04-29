@@ -1,0 +1,49 @@
+.breakdownWidget {
+    margin-bottom: 16px;
+    padding-top: 16px;
+    border-radius: 4px;
+    border: solid 1px var(--background-secondary-color);
+}
+
+.breakdownWidget .title {
+    padding: 0 16px;
+    margin-bottom: 8px;
+}
+
+.breakdownWidget .breakdownDropdown {
+    width: 100%;
+}
+
+.breakdownWidget .breakdownValue {
+    position: relative;
+    padding: 8px;
+}
+
+.breakdownWidget .breakdownValue .removeButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    box-shadow: 0 0 0 4px var(--background-primary-color);
+    border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%);
+    background-color: var(--background-secondary-color);
+    color: var(--label-secondary-color);
+    opacity: 0;
+    user-select: none;
+}
+
+.breakdownWidget .breakdownValue .removeButton:hover {
+    background-color: var(--button-background-hover-color);
+}
+
+.breakdownWidget .breakdownValue .removeButton:active {
+    background-color: var(--button-background-active-color);
+}
+
+.breakdownWidget .breakdownValue:hover .removeButton {
+    opacity: 1;
+}

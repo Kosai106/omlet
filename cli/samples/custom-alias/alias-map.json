@@ -1,0 +1,23 @@
+{
+  "root": {
+    "name": "custom-alias",
+    "path": "",
+    "version": "1.0.0",
+    "aliases": {
+      "@components": [
+        "src/components/index.ts"
+      ],
+      "@ignored/*": [
+        "src/ignored-components/*"
+      ]
+    },
+    "importMap": {
+      "custom-alias/*": [
+        "*"
+      ]
+    },
+    "exportMap": {}
+  },
+  "packages": {},
+  "absolutePath": "/package"
+}

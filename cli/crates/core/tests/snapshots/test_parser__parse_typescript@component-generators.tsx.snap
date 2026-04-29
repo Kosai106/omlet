@@ -1,0 +1,1412 @@
+---
+source: crates/core/tests/test_parser.rs
+expression: "&parser::Module::new(&RelativePathBuf::from_path(path.strip_prefix(&project_root).unwrap()).unwrap(),\n&project_root, &module_resolver,).unwrap()"
+input_file: samples/typescript/src/component-generators.tsx
+---
+source_path: src/component-generators.tsx
+id:
+  hash: "1785547129105989954"
+  path: src/component-generators.tsx
+  package_name: UNKNOWN
+  mtype: local
+created_at: ~
+updated_at: ~
+exports:
+  - source:
+      Internal: "MahmutCan#1"
+    exported_name: MahmutCan
+  - source:
+      Internal: "generateTimerComponent#1"
+    exported_name: generateTimerComponent
+  - source:
+      Internal: "ComponentFactory#1"
+    exported_name: ComponentFactory
+  - source:
+      Internal: "CountdownTimer#1"
+    exported_name: CountdownTimer
+  - source:
+      Internal: "LapTimer#1"
+    exported_name: LapTimer
+declarations:
+  - symbol: "C#1"
+    source:
+      hash: "1785547129105989954"
+      path: src/component-generators.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<declaration>"
+    inferred_type:
+      Class:
+        MemberOf:
+          - TypeOf:
+              symbol:
+                symbol: "react#1"
+                source:
+                  hash: "1785547129105989954"
+                  path: src/component-generators.tsx
+                  package_name: UNKNOWN
+                  mtype: local
+              is_local: true
+          - Object: Component
+    start:
+      line: 5
+      column: 1
+    end:
+      line: 7
+      column: 2
+  - symbol: "ComponentFactory#1"
+    source:
+      hash: "1785547129105989954"
+      path: src/component-generators.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<declaration>"
+    inferred_type: Unknown
+    start:
+      line: 17
+      column: 8
+    end:
+      line: 21
+      column: 2
+  - symbol: "CountdownTimer#1"
+    source:
+      hash: "1785547129105989954"
+      path: src/component-generators.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<declaration>"
+    inferred_type:
+      Function:
+        - JSX
+    start:
+      line: 23
+      column: 8
+    end:
+      line: 27
+      column: 2
+  - symbol: "LapTimer#1"
+    source:
+      hash: "1785547129105989954"
+      path: src/component-generators.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<declaration>"
+    inferred_type:
+      Function:
+        - JSX
+    start:
+      line: 29
+      column: 8
+    end:
+      line: 34
+      column: 2
+  - symbol: "MahmutCan#1"
+    source:
+      hash: "1785547129105989954"
+      path: src/component-generators.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<declaration>"
+    inferred_type:
+      Function: []
+    start:
+      line: 9
+      column: 8
+    end:
+      line: 9
+      column: 32
+  - symbol: "Timer#1"
+    source:
+      hash: "1785547129105989954"
+      path: src/component-generators.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('Timer' type=inline), context: #1 }, source: ModuleId { hash: 8041371829929616090, path: \"src/timer-utils\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    inferred_type:
+      TypeOf:
+        symbol:
+          symbol: "Timer#1"
+          source:
+            hash: "8041371829929616090"
+            path: src/timer-utils
+            package_name: UNKNOWN
+            mtype: local
+        is_local: false
+    start:
+      line: 1
+      column: 10
+    end:
+      line: 1
+      column: 15
+  - symbol: "TimerComp#4"
+    source:
+      hash: "1785547129105989954"
+      path: src/component-generators.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      ReturnTypeOf:
+        - TypeOf:
+            symbol:
+              symbol: "generateTimerComponent#1"
+              source:
+                hash: "1785547129105989954"
+                path: src/component-generators.tsx
+                package_name: UNKNOWN
+                mtype: local
+            is_local: true
+        - - Object:
+              type:
+                Str: countdown
+    start:
+      line: 24
+      column: 11
+    end:
+      line: 24
+      column: 20
+  - symbol: "TimerComp#5"
+    source:
+      hash: "1785547129105989954"
+      path: src/component-generators.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      ReturnTypeOf:
+        - MemberOf:
+            - TypeOf:
+                symbol:
+                  symbol: "factory#5"
+                  source:
+                    hash: "1785547129105989954"
+                    path: src/component-generators.tsx
+                    package_name: UNKNOWN
+                    mtype: local
+                is_local: true
+            - Object: lapTimer
+        - []
+    start:
+      line: 31
+      column: 11
+    end:
+      line: 31
+      column: 20
+  - symbol: "factory#5"
+    source:
+      hash: "1785547129105989954"
+      path: src/component-generators.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type: Unknown
+    start:
+      line: 30
+      column: 11
+    end:
+      line: 30
+      column: 18
+  - symbol: "generateTimerComponent#1"
+    source:
+      hash: "1785547129105989954"
+      path: src/component-generators.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<declaration>"
+    inferred_type:
+      Function:
+        - Function:
+            - JSX
+    start:
+      line: 11
+      column: 8
+    end:
+      line: 15
+      column: 2
+  - symbol: "props#4"
+    source:
+      hash: "1785547129105989954"
+      path: src/component-generators.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "Parameter<Symbol { name: Atom('CountdownTimer' type=dynamic), context: #1 }>[0]"
+    inferred_type:
+      ParameterOf:
+        function:
+          symbol: "CountdownTimer#1"
+          source:
+            hash: "1785547129105989954"
+            path: src/component-generators.tsx
+            package_name: UNKNOWN
+            mtype: local
+        index: 0
+    start:
+      line: 23
+      column: 32
+    end:
+      line: 23
+      column: 37
+  - symbol: "props#5"
+    source:
+      hash: "1785547129105989954"
+      path: src/component-generators.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "Parameter<Symbol { name: Atom('LapTimer' type=dynamic), context: #1 }>[0]"
+    inferred_type:
+      ParameterOf:
+        function:
+          symbol: "LapTimer#1"
+          source:
+            hash: "1785547129105989954"
+            path: src/component-generators.tsx
+            package_name: UNKNOWN
+            mtype: local
+        index: 0
+    start:
+      line: 29
+      column: 26
+    end:
+      line: 29
+      column: 31
+  - symbol: "react#1"
+    source:
+      hash: "1785547129105989954"
+      path: src/component-generators.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('<wildcard>' type=dynamic), context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
+    inferred_type:
+      TypeOf:
+        symbol:
+          symbol: "<wildcard>#0"
+          source:
+            hash: "11002248552354871051"
+            path: ""
+            package_name: react
+            mtype: package
+        is_local: false
+    start:
+      line: 3
+      column: 8
+    end:
+      line: 3
+      column: 18
+  - symbol: "type#2"
+    source:
+      hash: "1785547129105989954"
+      path: src/component-generators.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "Parameter<Symbol { name: Atom('generateTimerComponent' type=dynamic), context: #1 }>[0][type]"
+    inferred_type:
+      MemberOf:
+        - ParameterOf:
+            function:
+              symbol: "generateTimerComponent#1"
+              source:
+                hash: "1785547129105989954"
+                path: src/component-generators.tsx
+                package_name: UNKNOWN
+                mtype: local
+            index: 0
+        - Object: type
+    start:
+      line: 11
+      column: 42
+    end:
+      line: 11
+      column: 46
+scopes:
+  - owner: "__global#0"
+    parent: ~
+    children:
+      - "C#1"
+      - "MahmutCan#1"
+      - "MahmutCan#1"
+      - "generateTimerComponent#1"
+      - "generateTimerComponent#1"
+      - "ComponentFactory#1"
+      - "ComponentFactory#1"
+      - "CountdownTimer#1"
+      - "CountdownTimer#1"
+      - "TimerComp#4"
+      - "LapTimer#1"
+      - "LapTimer#1"
+      - "factory#5"
+      - "TimerComp#5"
+    references:
+      - "C#1"
+      - "Component#0"
+      - "ComponentFactory#1"
+      - "CountdownTimer#1"
+      - "LapTimer#1"
+      - "MahmutCan#1"
+      - "Timer#1"
+      - "TimerComp#4"
+      - "TimerComp#5"
+      - "factory#5"
+      - "generateTimerComponent#1"
+      - "initialValue#0"
+      - "label#0"
+      - "lapTimer#0"
+      - "props#3"
+      - "props#4"
+      - "props#5"
+      - "react#1"
+      - "type#0"
+      - "type#2"
+    jsx_references:
+      - "MahmutCan#1"
+      - "Timer#1"
+      - "TimerComp#4"
+      - "TimerComp#5"
+  - owner: "C#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "Component#0"
+      - "react#1"
+    jsx_references: []
+  - owner: "MahmutCan#1"
+    parent: "__global#0"
+    children: []
+    references: []
+    jsx_references: []
+  - owner: "MahmutCan#1"
+    parent: "__global#0"
+    children: []
+    references: []
+    jsx_references: []
+  - owner: "generateTimerComponent#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "MahmutCan#1"
+      - "Timer#1"
+      - "props#3"
+      - "type#0"
+      - "type#2"
+    jsx_references:
+      - "MahmutCan#1"
+      - "Timer#1"
+  - owner: "generateTimerComponent#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "MahmutCan#1"
+      - "Timer#1"
+      - "props#3"
+      - "type#0"
+      - "type#2"
+    jsx_references:
+      - "MahmutCan#1"
+      - "Timer#1"
+  - owner: "ComponentFactory#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "generateTimerComponent#1"
+      - "lapTimer#0"
+      - "type#0"
+    jsx_references: []
+  - owner: "ComponentFactory#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "generateTimerComponent#1"
+      - "lapTimer#0"
+      - "type#0"
+    jsx_references: []
+  - owner: "CountdownTimer#1"
+    parent: "__global#0"
+    children:
+      - "TimerComp#4"
+    references:
+      - "TimerComp#4"
+      - "generateTimerComponent#1"
+      - "initialValue#0"
+      - "label#0"
+      - "props#4"
+      - "type#0"
+    jsx_references:
+      - "TimerComp#4"
+  - owner: "TimerComp#4"
+    parent: "CountdownTimer#1"
+    children: []
+    references:
+      - "generateTimerComponent#1"
+      - "type#0"
+    jsx_references: []
+  - owner: "CountdownTimer#1"
+    parent: "__global#0"
+    children:
+      - "TimerComp#4"
+    references:
+      - "TimerComp#4"
+      - "generateTimerComponent#1"
+      - "initialValue#0"
+      - "label#0"
+      - "props#4"
+      - "type#0"
+    jsx_references:
+      - "TimerComp#4"
+  - owner: "TimerComp#4"
+    parent: "CountdownTimer#1"
+    children: []
+    references:
+      - "generateTimerComponent#1"
+      - "type#0"
+    jsx_references: []
+  - owner: "TimerComp#4"
+    parent: "__global#0"
+    children: []
+    references:
+      - "generateTimerComponent#1"
+      - "type#0"
+    jsx_references: []
+  - owner: "LapTimer#1"
+    parent: "__global#0"
+    children:
+      - "factory#5"
+      - "TimerComp#5"
+    references:
+      - "ComponentFactory#1"
+      - "TimerComp#5"
+      - "factory#5"
+      - "initialValue#0"
+      - "label#0"
+      - "lapTimer#0"
+      - "props#5"
+    jsx_references:
+      - "TimerComp#5"
+  - owner: "factory#5"
+    parent: "LapTimer#1"
+    children: []
+    references:
+      - "ComponentFactory#1"
+    jsx_references: []
+  - owner: "TimerComp#5"
+    parent: "LapTimer#1"
+    children: []
+    references:
+      - "factory#5"
+      - "lapTimer#0"
+    jsx_references: []
+  - owner: "LapTimer#1"
+    parent: "__global#0"
+    children:
+      - "factory#5"
+      - "TimerComp#5"
+    references:
+      - "ComponentFactory#1"
+      - "TimerComp#5"
+      - "factory#5"
+      - "initialValue#0"
+      - "label#0"
+      - "lapTimer#0"
+      - "props#5"
+    jsx_references:
+      - "TimerComp#5"
+  - owner: "factory#5"
+    parent: "LapTimer#1"
+    children: []
+    references:
+      - "ComponentFactory#1"
+    jsx_references: []
+  - owner: "TimerComp#5"
+    parent: "LapTimer#1"
+    children: []
+    references:
+      - "factory#5"
+      - "lapTimer#0"
+    jsx_references: []
+  - owner: "factory#5"
+    parent: "__global#0"
+    children: []
+    references:
+      - "ComponentFactory#1"
+    jsx_references: []
+  - owner: "TimerComp#5"
+    parent: "__global#0"
+    children: []
+    references:
+      - "factory#5"
+      - "lapTimer#0"
+    jsx_references: []
+body:
+  - type: ImportDeclaration
+    span:
+      start: 1
+      end: 39
+      ctxt: 0
+    specifiers:
+      - type: ImportSpecifier
+        span:
+          start: 10
+          end: 15
+          ctxt: 0
+        local:
+          type: Identifier
+          span:
+            start: 10
+            end: 15
+            ctxt: 1
+          value: Timer
+          optional: false
+        imported: ~
+        isTypeOnly: false
+    source:
+      type: StringLiteral
+      span:
+        start: 23
+        end: 38
+        ctxt: 0
+      value: "./timer-utils"
+      raw: "\"./timer-utils\""
+    typeOnly: false
+    asserts: ~
+  - type: ImportDeclaration
+    span:
+      start: 41
+      end: 72
+      ctxt: 0
+    specifiers:
+      - type: ImportNamespaceSpecifier
+        span:
+          start: 48
+          end: 58
+          ctxt: 0
+        local:
+          type: Identifier
+          span:
+            start: 53
+            end: 58
+            ctxt: 1
+          value: react
+          optional: false
+    source:
+      type: StringLiteral
+      span:
+        start: 64
+        end: 71
+        ctxt: 0
+      value: react
+      raw: "\"react\""
+    typeOnly: false
+    asserts: ~
+  - body: []
+    declare: false
+    decorators: []
+    identifier:
+      type: Identifier
+      span:
+        start: 80
+        end: 81
+        ctxt: 1
+      value: C
+      optional: false
+    implements: []
+    isAbstract: false
+    span:
+      start: 74
+      end: 110
+      ctxt: 0
+    superClass:
+      type: MemberExpression
+      span:
+        start: 90
+        end: 105
+        ctxt: 0
+      object:
+        type: Identifier
+        span:
+          start: 90
+          end: 95
+          ctxt: 1
+        value: react
+        optional: false
+      property:
+        type: Identifier
+        span:
+          start: 96
+          end: 105
+          ctxt: 0
+        value: Component
+        optional: false
+    superTypeParams: ~
+    type: ClassDeclaration
+    typeParams: ~
+  - type: ExportDeclaration
+    span:
+      start: 112
+      end: 143
+      ctxt: 0
+    declaration:
+      async: false
+      body:
+        type: BlockStatement
+        span:
+          start: 140
+          end: 143
+          ctxt: 0
+        stmts: []
+      declare: false
+      decorators: []
+      generator: false
+      identifier:
+        type: Identifier
+        span:
+          start: 128
+          end: 137
+          ctxt: 1
+        value: MahmutCan
+        optional: false
+      params: []
+      returnType: ~
+      span:
+        start: 119
+        end: 143
+        ctxt: 0
+      type: FunctionDeclaration
+      typeParameters: ~
+  - type: ExportDeclaration
+    span:
+      start: 145
+      end: 287
+      ctxt: 0
+    declaration:
+      async: false
+      body:
+        type: BlockStatement
+        span:
+          start: 194
+          end: 287
+          ctxt: 0
+        stmts:
+          - type: ReturnStatement
+            span:
+              start: 200
+              end: 285
+              ctxt: 0
+            argument:
+              type: ArrowFunctionExpression
+              span:
+                start: 207
+                end: 284
+                ctxt: 0
+              params:
+                - optional: false
+                  span:
+                    start: 208
+                    end: 213
+                    ctxt: 3
+                  type: Identifier
+                  typeAnnotation: ~
+                  value: props
+              body:
+                type: ParenthesisExpression
+                span:
+                  start: 218
+                  end: 284
+                  ctxt: 0
+                expression:
+                  type: JSXElement
+                  span:
+                    start: 228
+                    end: 278
+                    ctxt: 0
+                  opening:
+                    type: JSXOpeningElement
+                    name:
+                      type: Identifier
+                      span:
+                        start: 229
+                        end: 234
+                        ctxt: 1
+                      value: Timer
+                      optional: false
+                    span:
+                      start: 228
+                      end: 258
+                      ctxt: 0
+                    attributes:
+                      - type: JSXAttribute
+                        span:
+                          start: 235
+                          end: 246
+                          ctxt: 0
+                        name:
+                          type: Identifier
+                          span:
+                            start: 235
+                            end: 239
+                            ctxt: 0
+                          value: type
+                          optional: false
+                        value:
+                          type: JSXExpressionContainer
+                          span:
+                            start: 240
+                            end: 246
+                            ctxt: 0
+                          expression:
+                            type: Identifier
+                            span:
+                              start: 241
+                              end: 245
+                              ctxt: 2
+                            value: type
+                            optional: false
+                      - type: SpreadElement
+                        spread:
+                          start: 248
+                          end: 251
+                          ctxt: 0
+                        arguments:
+                          type: Identifier
+                          span:
+                            start: 251
+                            end: 256
+                            ctxt: 3
+                          value: props
+                          optional: false
+                    selfClosing: false
+                    typeArguments: ~
+                  children:
+                    - type: JSXElement
+                      span:
+                        start: 258
+                        end: 270
+                        ctxt: 0
+                      opening:
+                        type: JSXOpeningElement
+                        name:
+                          type: Identifier
+                          span:
+                            start: 259
+                            end: 268
+                            ctxt: 1
+                          value: MahmutCan
+                          optional: false
+                        span:
+                          start: 258
+                          end: 270
+                          ctxt: 0
+                        attributes: []
+                        selfClosing: true
+                        typeArguments: ~
+                      children: []
+                      closing: ~
+                  closing:
+                    type: JSXClosingElement
+                    span:
+                      start: 270
+                      end: 278
+                      ctxt: 0
+                    name:
+                      type: Identifier
+                      span:
+                        start: 272
+                        end: 277
+                        ctxt: 1
+                      value: Timer
+                      optional: false
+              async: false
+              generator: false
+              typeParameters: ~
+              returnType: ~
+      declare: false
+      decorators: []
+      generator: false
+      identifier:
+        type: Identifier
+        span:
+          start: 161
+          end: 183
+          ctxt: 1
+        value: generateTimerComponent
+        optional: false
+      params:
+        - type: Parameter
+          span:
+            start: 184
+            end: 192
+            ctxt: 0
+          decorators: []
+          pat:
+            type: ObjectPattern
+            span:
+              start: 184
+              end: 192
+              ctxt: 0
+            properties:
+              - type: AssignmentPatternProperty
+                span:
+                  start: 186
+                  end: 190
+                  ctxt: 0
+                key:
+                  type: Identifier
+                  span:
+                    start: 186
+                    end: 190
+                    ctxt: 2
+                  value: type
+                  optional: false
+                value: ~
+            optional: false
+            typeAnnotation: ~
+      returnType: ~
+      span:
+        start: 152
+        end: 287
+        ctxt: 0
+      type: FunctionDeclaration
+      typeParameters: ~
+  - type: ExportDeclaration
+    span:
+      start: 289
+      end: 401
+      ctxt: 0
+    declaration:
+      body:
+        - type: ClassMethod
+          span:
+            start: 325
+            end: 399
+            ctxt: 0
+          key:
+            type: Identifier
+            span:
+              start: 325
+              end: 333
+              ctxt: 0
+            value: lapTimer
+            optional: false
+          function:
+            params: []
+            decorators: []
+            span:
+              start: 325
+              end: 399
+              ctxt: 0
+            body:
+              type: BlockStatement
+              span:
+                start: 336
+                end: 399
+                ctxt: 0
+              stmts:
+                - type: ReturnStatement
+                  span:
+                    start: 346
+                    end: 393
+                    ctxt: 0
+                  argument:
+                    type: CallExpression
+                    span:
+                      start: 353
+                      end: 392
+                      ctxt: 0
+                    callee:
+                      type: Identifier
+                      span:
+                        start: 353
+                        end: 375
+                        ctxt: 1
+                      value: generateTimerComponent
+                      optional: false
+                    arguments:
+                      - spread: ~
+                        expression:
+                          type: ObjectExpression
+                          span:
+                            start: 376
+                            end: 391
+                            ctxt: 0
+                          properties:
+                            - type: KeyValueProperty
+                              key:
+                                type: Identifier
+                                span:
+                                  start: 378
+                                  end: 382
+                                  ctxt: 0
+                                value: type
+                                optional: false
+                              value:
+                                type: StringLiteral
+                                span:
+                                  start: 384
+                                  end: 389
+                                  ctxt: 0
+                                value: lap
+                                raw: "\"lap\""
+                    typeArguments: ~
+            generator: false
+            async: false
+            typeParameters: ~
+            returnType: ~
+          kind: method
+          isStatic: false
+          accessibility: ~
+          isAbstract: false
+          isOptional: false
+          isOverride: false
+      declare: false
+      decorators: []
+      identifier:
+        type: Identifier
+        span:
+          start: 302
+          end: 318
+          ctxt: 1
+        value: ComponentFactory
+        optional: false
+      implements: []
+      isAbstract: false
+      span:
+        start: 296
+        end: 401
+        ctxt: 0
+      superClass: ~
+      superTypeParams: ~
+      type: ClassDeclaration
+      typeParams: ~
+  - type: ExportDeclaration
+    span:
+      start: 403
+      end: 598
+      ctxt: 0
+    declaration:
+      async: false
+      body:
+        type: BlockStatement
+        span:
+          start: 441
+          end: 598
+          ctxt: 0
+        stmts:
+          - type: VariableDeclaration
+            span:
+              start: 447
+              end: 511
+              ctxt: 0
+            kind: const
+            declare: false
+            declarations:
+              - type: VariableDeclarator
+                span:
+                  start: 453
+                  end: 510
+                  ctxt: 0
+                id:
+                  optional: false
+                  span:
+                    start: 453
+                    end: 462
+                    ctxt: 4
+                  type: Identifier
+                  typeAnnotation: ~
+                  value: TimerComp
+                init:
+                  type: CallExpression
+                  span:
+                    start: 465
+                    end: 510
+                    ctxt: 0
+                  callee:
+                    type: Identifier
+                    span:
+                      start: 465
+                      end: 487
+                      ctxt: 1
+                    value: generateTimerComponent
+                    optional: false
+                  arguments:
+                    - spread: ~
+                      expression:
+                        type: ObjectExpression
+                        span:
+                          start: 488
+                          end: 509
+                          ctxt: 0
+                        properties:
+                          - type: KeyValueProperty
+                            key:
+                              type: Identifier
+                              span:
+                                start: 490
+                                end: 494
+                                ctxt: 0
+                              value: type
+                              optional: false
+                            value:
+                              type: StringLiteral
+                              span:
+                                start: 496
+                                end: 507
+                                ctxt: 0
+                              value: countdown
+                              raw: "\"countdown\""
+                  typeArguments: ~
+                definite: false
+          - type: ReturnStatement
+            span:
+              start: 517
+              end: 596
+              ctxt: 0
+            argument:
+              type: JSXElement
+              span:
+                start: 524
+                end: 595
+                ctxt: 0
+              opening:
+                type: JSXOpeningElement
+                name:
+                  type: Identifier
+                  span:
+                    start: 525
+                    end: 534
+                    ctxt: 4
+                  value: TimerComp
+                  optional: false
+                span:
+                  start: 524
+                  end: 595
+                  ctxt: 0
+                attributes:
+                  - type: JSXAttribute
+                    span:
+                      start: 535
+                      end: 559
+                      ctxt: 0
+                    name:
+                      type: Identifier
+                      span:
+                        start: 535
+                        end: 540
+                        ctxt: 0
+                      value: label
+                      optional: false
+                    value:
+                      type: StringLiteral
+                      span:
+                        start: 541
+                        end: 559
+                        ctxt: 0
+                      value: Time to take off
+                      raw: "\"Time to take off\""
+                  - type: JSXAttribute
+                    span:
+                      start: 560
+                      end: 593
+                      ctxt: 0
+                    name:
+                      type: Identifier
+                      span:
+                        start: 560
+                        end: 572
+                        ctxt: 0
+                      value: initialValue
+                      optional: false
+                    value:
+                      type: JSXExpressionContainer
+                      span:
+                        start: 573
+                        end: 593
+                        ctxt: 0
+                      expression:
+                        type: MemberExpression
+                        span:
+                          start: 574
+                          end: 592
+                          ctxt: 0
+                        object:
+                          type: Identifier
+                          span:
+                            start: 574
+                            end: 579
+                            ctxt: 4
+                          value: props
+                          optional: false
+                        property:
+                          type: Identifier
+                          span:
+                            start: 580
+                            end: 592
+                            ctxt: 0
+                          value: initialValue
+                          optional: false
+                selfClosing: true
+                typeArguments: ~
+              children: []
+              closing: ~
+      declare: false
+      decorators: []
+      generator: false
+      identifier:
+        type: Identifier
+        span:
+          start: 419
+          end: 433
+          ctxt: 1
+        value: CountdownTimer
+        optional: false
+      params:
+        - type: Parameter
+          span:
+            start: 434
+            end: 439
+            ctxt: 0
+          decorators: []
+          pat:
+            optional: false
+            span:
+              start: 434
+              end: 439
+              ctxt: 4
+            type: Identifier
+            typeAnnotation: ~
+            value: props
+      returnType: ~
+      span:
+        start: 410
+        end: 598
+        ctxt: 0
+      type: FunctionDeclaration
+      typeParameters: ~
+  - type: ExportDeclaration
+    span:
+      start: 600
+      end: 806
+      ctxt: 0
+    declaration:
+      async: false
+      body:
+        type: BlockStatement
+        span:
+          start: 632
+          end: 806
+          ctxt: 0
+        stmts:
+          - type: VariableDeclaration
+            span:
+              start: 638
+              end: 677
+              ctxt: 0
+            kind: const
+            declare: false
+            declarations:
+              - type: VariableDeclarator
+                span:
+                  start: 644
+                  end: 676
+                  ctxt: 0
+                id:
+                  optional: false
+                  span:
+                    start: 644
+                    end: 651
+                    ctxt: 5
+                  type: Identifier
+                  typeAnnotation: ~
+                  value: factory
+                init:
+                  type: NewExpression
+                  span:
+                    start: 654
+                    end: 676
+                    ctxt: 0
+                  callee:
+                    type: Identifier
+                    span:
+                      start: 658
+                      end: 674
+                      ctxt: 1
+                    value: ComponentFactory
+                    optional: false
+                  arguments: []
+                  typeArguments: ~
+                definite: false
+          - type: VariableDeclaration
+            span:
+              start: 682
+              end: 719
+              ctxt: 0
+            kind: const
+            declare: false
+            declarations:
+              - type: VariableDeclarator
+                span:
+                  start: 688
+                  end: 718
+                  ctxt: 0
+                id:
+                  optional: false
+                  span:
+                    start: 688
+                    end: 697
+                    ctxt: 5
+                  type: Identifier
+                  typeAnnotation: ~
+                  value: TimerComp
+                init:
+                  type: CallExpression
+                  span:
+                    start: 700
+                    end: 718
+                    ctxt: 0
+                  callee:
+                    type: MemberExpression
+                    span:
+                      start: 700
+                      end: 716
+                      ctxt: 0
+                    object:
+                      type: Identifier
+                      span:
+                        start: 700
+                        end: 707
+                        ctxt: 5
+                      value: factory
+                      optional: false
+                    property:
+                      type: Identifier
+                      span:
+                        start: 708
+                        end: 716
+                        ctxt: 0
+                      value: lapTimer
+                      optional: false
+                  arguments: []
+                  typeArguments: ~
+                definite: false
+          - type: ReturnStatement
+            span:
+              start: 725
+              end: 804
+              ctxt: 0
+            argument:
+              type: JSXElement
+              span:
+                start: 732
+                end: 803
+                ctxt: 0
+              opening:
+                type: JSXOpeningElement
+                name:
+                  type: Identifier
+                  span:
+                    start: 733
+                    end: 742
+                    ctxt: 5
+                  value: TimerComp
+                  optional: false
+                span:
+                  start: 732
+                  end: 803
+                  ctxt: 0
+                attributes:
+                  - type: JSXAttribute
+                    span:
+                      start: 743
+                      end: 767
+                      ctxt: 0
+                    name:
+                      type: Identifier
+                      span:
+                        start: 743
+                        end: 748
+                        ctxt: 0
+                      value: label
+                      optional: false
+                    value:
+                      type: StringLiteral
+                      span:
+                        start: 749
+                        end: 767
+                        ctxt: 0
+                      value: Time to take off
+                      raw: "\"Time to take off\""
+                  - type: JSXAttribute
+                    span:
+                      start: 768
+                      end: 801
+                      ctxt: 0
+                    name:
+                      type: Identifier
+                      span:
+                        start: 768
+                        end: 780
+                        ctxt: 0
+                      value: initialValue
+                      optional: false
+                    value:
+                      type: JSXExpressionContainer
+                      span:
+                        start: 781
+                        end: 801
+                        ctxt: 0
+                      expression:
+                        type: MemberExpression
+                        span:
+                          start: 782
+                          end: 800
+                          ctxt: 0
+                        object:
+                          type: Identifier
+                          span:
+                            start: 782
+                            end: 787
+                            ctxt: 5
+                          value: props
+                          optional: false
+                        property:
+                          type: Identifier
+                          span:
+                            start: 788
+                            end: 800
+                            ctxt: 0
+                          value: initialValue
+                          optional: false
+                selfClosing: true
+                typeArguments: ~
+              children: []
+              closing: ~
+      declare: false
+      decorators: []
+      generator: false
+      identifier:
+        type: Identifier
+        span:
+          start: 616
+          end: 624
+          ctxt: 1
+        value: LapTimer
+        optional: false
+      params:
+        - type: Parameter
+          span:
+            start: 625
+            end: 630
+            ctxt: 0
+          decorators: []
+          pat:
+            optional: false
+            span:
+              start: 625
+              end: 630
+              ctxt: 5
+            type: Identifier
+            typeAnnotation: ~
+            value: props
+      returnType: ~
+      span:
+        start: 607
+        end: 806
+        ctxt: 0
+      type: FunctionDeclaration
+      typeParameters: ~

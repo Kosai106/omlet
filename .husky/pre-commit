@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+HUSKY_DIR=$(dirname -- "$0")
+REPO_ROOT=$(cd $HUSKY_DIR && cd .. && pwd)
+
+. "$HUSKY_DIR/_/husky.sh"
+
+cd $REPO_ROOT/webapp && npm run lint:staged
+cd $REPO_ROOT/cli && npm run lint:staged

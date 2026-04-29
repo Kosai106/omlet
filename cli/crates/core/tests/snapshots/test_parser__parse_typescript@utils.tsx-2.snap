@@ -1,0 +1,274 @@
+---
+source: crates/core/tests/test_parser.rs
+expression: "&parser::Module::new(&RelativePathBuf::from_path(path.strip_prefix(&project_root).unwrap()).unwrap(),\n&project_root, &module_resolver,).unwrap()"
+input_file: samples/typescript/src/functional-component/control-statements/conditional-if/return-var/imported/utils.tsx
+---
+source_path: src/functional-component/control-statements/conditional-if/return-var/imported/utils.tsx
+id:
+  hash: "8016342090393809860"
+  path: src/functional-component/control-statements/conditional-if/return-var/imported/utils.tsx
+  package_name: UNKNOWN
+  mtype: local
+created_at: ~
+updated_at: ~
+exports:
+  - source:
+      Internal: "returnFortyTwo#1"
+    exported_name: returnFortyTwo
+  - source:
+      Internal: "renderSample#1"
+    exported_name: renderSample
+declarations:
+  - symbol: "React#1"
+    source:
+      hash: "8016342090393809860"
+      path: src/functional-component/control-statements/conditional-if/return-var/imported/utils.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
+    inferred_type:
+      TypeOf:
+        symbol:
+          symbol: "default#0"
+          source:
+            hash: "11002248552354871051"
+            path: ""
+            package_name: react
+            mtype: package
+        is_local: false
+    start:
+      line: 1
+      column: 8
+    end:
+      line: 1
+      column: 13
+  - symbol: "renderSample#1"
+    source:
+      hash: "8016342090393809860"
+      path: src/functional-component/control-statements/conditional-if/return-var/imported/utils.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<declaration>"
+    inferred_type:
+      Function:
+        - JSX
+    start:
+      line: 7
+      column: 8
+    end:
+      line: 9
+      column: 2
+  - symbol: "returnFortyTwo#1"
+    source:
+      hash: "8016342090393809860"
+      path: src/functional-component/control-statements/conditional-if/return-var/imported/utils.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<declaration>"
+    inferred_type:
+      Function:
+        - Unknown
+    start:
+      line: 3
+      column: 8
+    end:
+      line: 5
+      column: 2
+scopes:
+  - owner: "__global#0"
+    parent: ~
+    children:
+      - "returnFortyTwo#1"
+      - "returnFortyTwo#1"
+      - "renderSample#1"
+      - "renderSample#1"
+    references:
+      - "React#1"
+      - "div#2"
+      - "renderSample#1"
+      - "returnFortyTwo#1"
+    jsx_references:
+      - "div#2"
+  - owner: "returnFortyTwo#1"
+    parent: "__global#0"
+    children: []
+    references: []
+    jsx_references: []
+  - owner: "returnFortyTwo#1"
+    parent: "__global#0"
+    children: []
+    references: []
+    jsx_references: []
+  - owner: "renderSample#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "div#2"
+    jsx_references:
+      - "div#2"
+  - owner: "renderSample#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "div#2"
+    jsx_references:
+      - "div#2"
+body:
+  - type: ImportDeclaration
+    span:
+      start: 1
+      end: 27
+      ctxt: 0
+    specifiers:
+      - type: ImportDefaultSpecifier
+        span:
+          start: 8
+          end: 13
+          ctxt: 0
+        local:
+          type: Identifier
+          span:
+            start: 8
+            end: 13
+            ctxt: 1
+          value: React
+          optional: false
+    source:
+      type: StringLiteral
+      span:
+        start: 19
+        end: 26
+        ctxt: 0
+      value: react
+      raw: "\"react\""
+    typeOnly: false
+    asserts: ~
+  - type: ExportDeclaration
+    span:
+      start: 29
+      end: 80
+      ctxt: 0
+    declaration:
+      async: false
+      body:
+        type: BlockStatement
+        span:
+          start: 62
+          end: 80
+          ctxt: 0
+        stmts:
+          - type: ReturnStatement
+            span:
+              start: 68
+              end: 78
+              ctxt: 0
+            argument:
+              type: NumericLiteral
+              span:
+                start: 75
+                end: 77
+                ctxt: 0
+              value: 42.0
+              raw: "42"
+      declare: false
+      decorators: []
+      generator: false
+      identifier:
+        type: Identifier
+        span:
+          start: 45
+          end: 59
+          ctxt: 1
+        value: returnFortyTwo
+        optional: false
+      params: []
+      returnType: ~
+      span:
+        start: 36
+        end: 80
+        ctxt: 0
+      type: FunctionDeclaration
+      typeParameters: ~
+  - type: ExportDeclaration
+    span:
+      start: 82
+      end: 146
+      ctxt: 0
+    declaration:
+      async: false
+      body:
+        type: BlockStatement
+        span:
+          start: 113
+          end: 146
+          ctxt: 0
+        stmts:
+          - type: ReturnStatement
+            span:
+              start: 119
+              end: 144
+              ctxt: 0
+            argument:
+              type: JSXElement
+              span:
+                start: 126
+                end: 143
+                ctxt: 0
+              opening:
+                type: JSXOpeningElement
+                name:
+                  type: Identifier
+                  span:
+                    start: 127
+                    end: 130
+                    ctxt: 2
+                  value: div
+                  optional: false
+                span:
+                  start: 126
+                  end: 131
+                  ctxt: 0
+                attributes: []
+                selfClosing: false
+                typeArguments: ~
+              children:
+                - type: JSXText
+                  span:
+                    start: 131
+                    end: 137
+                    ctxt: 0
+                  value: Sample
+                  raw: Sample
+              closing:
+                type: JSXClosingElement
+                span:
+                  start: 137
+                  end: 143
+                  ctxt: 0
+                name:
+                  type: Identifier
+                  span:
+                    start: 139
+                    end: 142
+                    ctxt: 2
+                  value: div
+                  optional: false
+      declare: false
+      decorators: []
+      generator: false
+      identifier:
+        type: Identifier
+        span:
+          start: 98
+          end: 110
+          ctxt: 1
+        value: renderSample
+        optional: false
+      params: []
+      returnType: ~
+      span:
+        start: 89
+        end: 146
+        ctxt: 0
+      type: FunctionDeclaration
+      typeParameters: ~

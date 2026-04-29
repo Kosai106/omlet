@@ -1,0 +1,103 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&export_results"
+---
+num_of_exports: 12
+exports:
+  - name: Button
+    source_path: packages/button/src/button.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@wildcard-exports/design-system-button:aa177d9a4f4bd2a0cd476ccd9b7af50ebe97191eec752a4518b83993c72b5d54:Button"
+  - name: Button
+    source_path: packages/button/src/index.ts
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@wildcard-exports/design-system-button:6c045c0462bdc8cc74251d717131bae3ea23b7584b6e1256d05b9bea74b32da3:Button"
+      - "@wildcard-exports/design-system-button:aa177d9a4f4bd2a0cd476ccd9b7af50ebe97191eec752a4518b83993c72b5d54:Button"
+  - name: Button
+    source_path: packages/react-lib/src/index.ts
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@wildcard-exports/design-system-react:b3c387e88c2833b4a50ef0b2860da45b636f7b18321e915f0940bff6729d9ac5:Button"
+      - "@wildcard-exports/design-system-button:6c045c0462bdc8cc74251d717131bae3ea23b7584b6e1256d05b9bea74b32da3:Button"
+      - "@wildcard-exports/design-system-button:aa177d9a4f4bd2a0cd476ccd9b7af50ebe97191eec752a4518b83993c72b5d54:Button"
+  - name: DatePicker
+    source_path: packages/react-lib/src/components/datepicker.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@wildcard-exports/design-system-react:903a18401259693f7318279f620498eb03ad029ca15622fdc70c5fed5473ccac:DatePicker"
+  - name: DatePicker
+    source_path: packages/react-lib/src/components/index.ts
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@wildcard-exports/design-system-react:f0058fdcdc2d15c4858dd69bb5e11cd15a6990e1904fea85ba188ee06e6b0fb6:DatePicker"
+      - "@wildcard-exports/design-system-react:903a18401259693f7318279f620498eb03ad029ca15622fdc70c5fed5473ccac:DatePicker"
+  - name: DatePicker
+    source_path: packages/react-lib/src/index.ts
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@wildcard-exports/design-system-react:b3c387e88c2833b4a50ef0b2860da45b636f7b18321e915f0940bff6729d9ac5:DatePicker"
+      - "@wildcard-exports/design-system-react:f0058fdcdc2d15c4858dd69bb5e11cd15a6990e1904fea85ba188ee06e6b0fb6:DatePicker"
+      - "@wildcard-exports/design-system-react:903a18401259693f7318279f620498eb03ad029ca15622fdc70c5fed5473ccac:DatePicker"
+  - name: Form
+    source_path: packages/form/src/form.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@wildcard-exports/design-system-form:9c7ac2aa589944ff0ccaeb43c7ee1c335b6017691fc1ad455ac7eaf81d7028bf:Form"
+  - name: Form
+    source_path: packages/form/src/index.ts
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@wildcard-exports/design-system-form:f6e0bedd6d5e037f0cd13e25c98f5687b9160fcb276c5c12bcb3e0b51c22912e:Form"
+      - "@wildcard-exports/design-system-form:9c7ac2aa589944ff0ccaeb43c7ee1c335b6017691fc1ad455ac7eaf81d7028bf:Form"
+  - name: Form
+    source_path: packages/react-lib/src/index.ts
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@wildcard-exports/design-system-react:b3c387e88c2833b4a50ef0b2860da45b636f7b18321e915f0940bff6729d9ac5:Form"
+      - "@wildcard-exports/design-system-form:f6e0bedd6d5e037f0cd13e25c98f5687b9160fcb276c5c12bcb3e0b51c22912e:Form"
+      - "@wildcard-exports/design-system-form:9c7ac2aa589944ff0ccaeb43c7ee1c335b6017691fc1ad455ac7eaf81d7028bf:Form"
+  - name: Input
+    source_path: packages/input/src/index.ts
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@wildcard-exports/design-system-input:f57b475a6214831a7c2d2cc717c5990f797410ce2a18bbdabc3f2e113714b8ef:Input"
+      - "@wildcard-exports/design-system-input:710c2b6757ff704fc251c8f96e56bd428b158b06b0a80273eb7924415dde72cf:Input"
+  - name: Input
+    source_path: packages/input/src/input.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@wildcard-exports/design-system-input:710c2b6757ff704fc251c8f96e56bd428b158b06b0a80273eb7924415dde72cf:Input"
+  - name: Input
+    source_path: packages/react-lib/src/index.ts
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@wildcard-exports/design-system-react:b3c387e88c2833b4a50ef0b2860da45b636f7b18321e915f0940bff6729d9ac5:Input"
+      - "@wildcard-exports/design-system-input:f57b475a6214831a7c2d2cc717c5990f797410ce2a18bbdabc3f2e113714b8ef:Input"
+      - "@wildcard-exports/design-system-input:710c2b6757ff704fc251c8f96e56bd428b158b06b0a80273eb7924415dde72cf:Input"
+

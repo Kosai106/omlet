@@ -1,0 +1,482 @@
+---
+source: crates/core/tests/test_parser.rs
+expression: "&parser::Module::new(&RelativePathBuf::from_path(path.strip_prefix(&project_root).unwrap()).unwrap(),\n&project_root, &module_resolver,).unwrap()"
+input_file: samples/typescript/src/object-properties/object-properties.tsx
+---
+source_path: src/object-properties/object-properties.tsx
+id:
+  hash: "16099115554604413970"
+  path: src/object-properties/object-properties.tsx
+  package_name: UNKNOWN
+  mtype: local
+created_at: ~
+updated_at: ~
+exports:
+  - source:
+      Internal: "MyComponent#1"
+    exported_name: default
+declarations:
+  - symbol: "Box#1"
+    source:
+      hash: "16099115554604413970"
+      path: src/object-properties/object-properties.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('Box' type=inline), context: #1 }, source: ModuleId { hash: 10072812099332075239, path: \"\", pkg_name: \"@mui/material\", mtype: Package } }>"
+    inferred_type:
+      TypeOf:
+        symbol:
+          symbol: "Box#1"
+          source:
+            hash: "10072812099332075239"
+            path: ""
+            package_name: "@mui/material"
+            mtype: package
+        is_local: false
+  - symbol: "MyComponent#1"
+    source:
+      hash: "16099115554604413970"
+      path: src/object-properties/object-properties.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      Function:
+        - JSX
+  - symbol: "React#1"
+    source:
+      hash: "16099115554604413970"
+      path: src/object-properties/object-properties.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
+    inferred_type:
+      TypeOf:
+        symbol:
+          symbol: "default#0"
+          source:
+            hash: "11002248552354871051"
+            path: ""
+            package_name: react
+            mtype: package
+        is_local: false
+  - symbol: "key1#2"
+    source:
+      hash: "16099115554604413970"
+      path: src/object-properties/object-properties.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "Parameter<Symbol { name: Atom('MyComponent' type=dynamic), context: #1 }>[0]"
+    inferred_type:
+      ParameterOf:
+        function:
+          symbol: "MyComponent#1"
+          source:
+            hash: "16099115554604413970"
+            path: src/object-properties/object-properties.tsx
+            package_name: UNKNOWN
+            mtype: local
+        index: 0
+  - symbol: "key2#2"
+    source:
+      hash: "16099115554604413970"
+      path: src/object-properties/object-properties.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "Parameter<Symbol { name: Atom('MyComponent' type=dynamic), context: #1 }>[1]"
+    inferred_type:
+      ParameterOf:
+        function:
+          symbol: "MyComponent#1"
+          source:
+            hash: "16099115554604413970"
+            path: src/object-properties/object-properties.tsx
+            package_name: UNKNOWN
+            mtype: local
+        index: 1
+scopes:
+  - owner: "__global#0"
+    parent: ~
+    children:
+      - "MyComponent#1"
+      - "MyComponent#1"
+    references:
+      - "Box#1"
+      - "MyComponent#1"
+      - "React#1"
+      - "backgroundColor#0"
+      - "borderRadius#0"
+      - "key1#2"
+      - "key2#2"
+      - "padding#0"
+      - "sx#0"
+    jsx_references:
+      - "Box#1"
+  - owner: "MyComponent#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "Box#1"
+      - "backgroundColor#0"
+      - "borderRadius#0"
+      - "key1#2"
+      - "key2#2"
+      - "padding#0"
+      - "sx#0"
+    jsx_references:
+      - "Box#1"
+  - owner: "MyComponent#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "Box#1"
+      - "backgroundColor#0"
+      - "borderRadius#0"
+      - "key1#2"
+      - "key2#2"
+      - "padding#0"
+      - "sx#0"
+    jsx_references:
+      - "Box#1"
+body:
+  - type: ImportDeclaration
+    span:
+      start: 1
+      end: 27
+      ctxt: 0
+    specifiers:
+      - type: ImportDefaultSpecifier
+        span:
+          start: 8
+          end: 13
+          ctxt: 0
+        local:
+          type: Identifier
+          span:
+            start: 8
+            end: 13
+            ctxt: 1
+          value: React
+          optional: false
+    source:
+      type: StringLiteral
+      span:
+        start: 19
+        end: 26
+        ctxt: 0
+      value: react
+      raw: "\"react\""
+    typeOnly: false
+    asserts: ~
+  - type: ImportDeclaration
+    span:
+      start: 28
+      end: 64
+      ctxt: 0
+    specifiers:
+      - type: ImportSpecifier
+        span:
+          start: 37
+          end: 40
+          ctxt: 0
+        local:
+          type: Identifier
+          span:
+            start: 37
+            end: 40
+            ctxt: 1
+          value: Box
+          optional: false
+        imported: ~
+        isTypeOnly: false
+    source:
+      type: StringLiteral
+      span:
+        start: 48
+        end: 63
+        ctxt: 0
+      value: "@mui/material"
+      raw: "\"@mui/material\""
+    typeOnly: false
+    asserts: ~
+  - type: ExportDefaultDeclaration
+    span:
+      start: 66
+      end: 598
+      ctxt: 0
+    decl:
+      async: false
+      body:
+        type: BlockStatement
+        span:
+          start: 114
+          end: 598
+          ctxt: 0
+        stmts:
+          - type: ReturnStatement
+            span:
+              start: 120
+              end: 596
+              ctxt: 0
+            argument:
+              type: ParenthesisExpression
+              span:
+                start: 127
+                end: 595
+                ctxt: 0
+              expression:
+                type: JSXElement
+                span:
+                  start: 137
+                  end: 589
+                  ctxt: 0
+                opening:
+                  type: JSXOpeningElement
+                  name:
+                    type: Identifier
+                    span:
+                      start: 138
+                      end: 141
+                      ctxt: 1
+                    value: Box
+                    optional: false
+                  span:
+                    start: 137
+                    end: 542
+                    ctxt: 0
+                  attributes:
+                    - type: JSXAttribute
+                      span:
+                        start: 154
+                        end: 532
+                        ctxt: 0
+                      name:
+                        type: Identifier
+                        span:
+                          start: 154
+                          end: 156
+                          ctxt: 0
+                        value: sx
+                        optional: false
+                      value:
+                        type: JSXExpressionContainer
+                        span:
+                          start: 157
+                          end: 532
+                          ctxt: 0
+                        expression:
+                          type: ObjectExpression
+                          span:
+                            start: 158
+                            end: 531
+                            ctxt: 0
+                          properties:
+                            - type: KeyValueProperty
+                              key:
+                                type: Identifier
+                                span:
+                                  start: 176
+                                  end: 191
+                                  ctxt: 0
+                                value: backgroundColor
+                                optional: false
+                              value:
+                                type: StringLiteral
+                                span:
+                                  start: 193
+                                  end: 207
+                                  ctxt: 0
+                                value: primary.main
+                                raw: "\"primary.main\""
+                            - type: KeyValueProperty
+                              key:
+                                type: Identifier
+                                span:
+                                  start: 225
+                                  end: 232
+                                  ctxt: 0
+                                value: padding
+                                optional: false
+                              value:
+                                type: NumericLiteral
+                                span:
+                                  start: 234
+                                  end: 235
+                                  ctxt: 0
+                                value: 2.0
+                                raw: "2"
+                            - type: KeyValueProperty
+                              key:
+                                type: Identifier
+                                span:
+                                  start: 253
+                                  end: 265
+                                  ctxt: 0
+                                value: borderRadius
+                                optional: false
+                              value:
+                                type: NumericLiteral
+                                span:
+                                  start: 267
+                                  end: 268
+                                  ctxt: 0
+                                value: 1.0
+                                raw: "1"
+                            - type: KeyValueProperty
+                              key:
+                                type: StringLiteral
+                                span:
+                                  start: 286
+                                  end: 295
+                                  ctxt: 0
+                                value: "&:hover"
+                                raw: "\"&:hover\""
+                              value:
+                                type: ObjectExpression
+                                span:
+                                  start: 297
+                                  end: 371
+                                  ctxt: 0
+                                properties:
+                                  - type: KeyValueProperty
+                                    key:
+                                      type: Identifier
+                                      span:
+                                        start: 319
+                                        end: 334
+                                        ctxt: 0
+                                      value: backgroundColor
+                                      optional: false
+                                    value:
+                                      type: StringLiteral
+                                      span:
+                                        start: 336
+                                        end: 352
+                                        ctxt: 0
+                                      value: secondary.main
+                                      raw: "\"secondary.main\""
+                            - type: KeyValueProperty
+                              key:
+                                type: StringLiteral
+                                span:
+                                  start: 389
+                                  end: 416
+                                  ctxt: 0
+                                value: "@media (min-width: 600px)"
+                                raw: "\"@media (min-width: 600px)\""
+                              value:
+                                type: ObjectExpression
+                                span:
+                                  start: 418
+                                  end: 469
+                                  ctxt: 0
+                                properties:
+                                  - type: KeyValueProperty
+                                    key:
+                                      type: Identifier
+                                      span:
+                                        start: 440
+                                        end: 447
+                                        ctxt: 0
+                                      value: padding
+                                      optional: false
+                                    value:
+                                      type: NumericLiteral
+                                      span:
+                                        start: 449
+                                        end: 450
+                                        ctxt: 0
+                                      value: 3.0
+                                      raw: "3"
+                            - type: Identifier
+                              span:
+                                start: 487
+                                end: 491
+                                ctxt: 2
+                              value: key1
+                              optional: false
+                            - type: SpreadElement
+                              spread:
+                                start: 509
+                                end: 512
+                                ctxt: 0
+                              arguments:
+                                type: Identifier
+                                span:
+                                  start: 512
+                                  end: 516
+                                  ctxt: 2
+                                value: key2
+                                optional: false
+                  selfClosing: false
+                  typeArguments: ~
+                children:
+                  - type: JSXText
+                    span:
+                      start: 542
+                      end: 583
+                      ctxt: 0
+                    value: "\n\n            Styled with sx prop\n\n        "
+                    raw: "\n\n            Styled with sx prop\n\n        "
+                closing:
+                  type: JSXClosingElement
+                  span:
+                    start: 583
+                    end: 589
+                    ctxt: 0
+                  name:
+                    type: Identifier
+                    span:
+                      start: 585
+                      end: 588
+                      ctxt: 1
+                    value: Box
+                    optional: false
+      decorators: []
+      generator: false
+      identifier:
+        type: Identifier
+        span:
+          start: 90
+          end: 101
+          ctxt: 1
+        value: MyComponent
+        optional: false
+      params:
+        - type: Parameter
+          span:
+            start: 102
+            end: 106
+            ctxt: 0
+          decorators: []
+          pat:
+            optional: false
+            span:
+              start: 102
+              end: 106
+              ctxt: 2
+            type: Identifier
+            typeAnnotation: ~
+            value: key1
+        - type: Parameter
+          span:
+            start: 108
+            end: 112
+            ctxt: 0
+          decorators: []
+          pat:
+            optional: false
+            span:
+              start: 108
+              end: 112
+              ctxt: 2
+            type: Identifier
+            typeAnnotation: ~
+            value: key2
+      returnType: ~
+      span:
+        start: 81
+        end: 598
+        ctxt: 0
+      type: FunctionExpression
+      typeParameters: ~

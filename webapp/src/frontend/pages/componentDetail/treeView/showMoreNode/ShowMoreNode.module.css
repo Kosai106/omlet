@@ -1,0 +1,31 @@
+.showMoreNode {
+    position: relative;
+    display: flex;
+    font-size: 12px;
+    background-color: var(--background-primary-color);
+    box-shadow: 0 0 0 var(--border-width) var(--border-color);
+    border-radius: 2px;
+    cursor: pointer;
+    padding: var(--spacing-xxs) var(--spacing-xs);
+    
+    --border-width: 1px;
+    --border-color: var(--border-secondary-color);
+}
+
+.showMoreNode:hover {
+    background-color: rgba(var(--accent-purple-rgb), 0.1);
+    --border-width: 2px;
+    --border-color: var(--accent-purple);
+}
+
+.leftHandle {
+    visibility: hidden;
+    /* react flow overrides position properties we need important keyword */
+    left: 1px !important;
+}
+
+.rightHandle {
+    visibility: hidden;
+    /* react flow overrides position properties we need important keyword */
+    right: 1px !important;
+}

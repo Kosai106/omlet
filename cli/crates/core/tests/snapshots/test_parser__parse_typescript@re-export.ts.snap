@@ -1,0 +1,64 @@
+---
+source: crates/core/tests/test_parser.rs
+expression: "&parser::Module::new(&RelativePathBuf::from_path(path.strip_prefix(&project_root).unwrap()).unwrap(),\n            &project_root, &module_resolver).unwrap()"
+input_file: samples/typescript/src/wildcard-import/re-export.ts
+---
+source_path: src/wildcard-import/re-export.ts
+id:
+  hash: "2743528805318119751"
+  path: src/wildcard-import/re-export.ts
+  package_name: UNKNOWN
+  mtype: local
+created_at: ~
+updated_at: ~
+exports:
+  - source:
+      External:
+        symbol: "ds#0"
+        source:
+          hash: "7653360934056221799"
+          path: src/wildcard-import/wildcard-export
+          package_name: UNKNOWN
+          mtype: local
+    exported_name: ds
+declarations: []
+scopes:
+  - owner: "__global#0"
+    parent: ~
+    children: []
+    references:
+      - "ds#0"
+    jsx_references: []
+body:
+  - type: ExportNamedDeclaration
+    span:
+      start: 1
+      end: 40
+      ctxt: 0
+    specifiers:
+      - type: ExportSpecifier
+        span:
+          start: 10
+          end: 12
+          ctxt: 0
+        orig:
+          type: Identifier
+          span:
+            start: 10
+            end: 12
+            ctxt: 0
+          value: ds
+          optional: false
+        exported: ~
+        isTypeOnly: false
+    source:
+      type: StringLiteral
+      span:
+        start: 20
+        end: 39
+        ctxt: 0
+      value: "./wildcard-export"
+      raw: "\"./wildcard-export\""
+    typeOnly: false
+    asserts: ~
+

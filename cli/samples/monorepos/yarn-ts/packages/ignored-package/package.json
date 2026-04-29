@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "name": "ignored-package",
+  "version": "1.0.0",
+  "exports": {
+    ".": "./src/index.ts",
+    "./package-entry/*": "./src/*/index.ts"
+  }
+}

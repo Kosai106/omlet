@@ -1,0 +1,79 @@
+{
+  "root": {
+    "name": "ds",
+    "path": "",
+    "version": "0.0.0",
+    "aliases": {
+      "@ds/button": [
+        "packages/button/src/index.ts"
+      ]
+    },
+    "importMap": {
+      "ds/*": [
+        "*"
+      ],
+      "@ds/button/*": [
+        "packages/button/*"
+      ],
+      "@ds/button": [
+        "packages/button/build/index.js"
+      ],
+      "@ds/form/*": [
+        "packages/form/*"
+      ],
+      "@ds/form": [
+        "packages/form/src/index.ts"
+      ]
+    },
+    "exportMap": {}
+  },
+  "packages": {
+    "@ds/button": {
+      "name": "@ds/button",
+      "path": "packages/button",
+      "version": "1.0.0",
+      "aliases": {},
+      "importMap": {
+        "@ds/button/*": [
+          "packages/button/*"
+        ],
+        "@ds/button": [
+          "packages/button/build/index.js"
+        ]
+      },
+      "exportMap": {
+        ".": [
+          "build/index.js"
+        ]
+      },
+      "main": "build/index.js"
+    },
+    "@ds/form": {
+      "name": "@ds/form",
+      "path": "packages/form",
+      "version": "1.0.0",
+      "aliases": {},
+      "importMap": {
+        "@ds/form/*": [
+          "packages/form/*"
+        ],
+        "@ds/form": [
+          "packages/form/src/index.ts"
+        ],
+        "@ds/button/*": [
+          "packages/button/*"
+        ],
+        "@ds/button": [
+          "packages/button/build/index.js"
+        ]
+      },
+      "exportMap": {
+        ".": [
+          "src/index.ts"
+        ]
+      },
+      "main": "src/index.ts"
+    }
+  },
+ "absolutePath": "/package"
+}

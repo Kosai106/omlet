@@ -1,0 +1,57 @@
+.mainContent {
+    max-width: 1280px;
+    min-width: 1024px;
+    margin: 0 auto 80px;
+}
+
+.mainContent .loading {
+    max-height: 410px;
+    height: 410px;
+    margin-top: 88px;
+}
+
+.mainContent .chartContent {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    height: 413px;
+    gap: 26px;
+}
+
+.mainContent .chartContent .componentAdoptionOverTimeChart {
+    flex: 1 1029px;
+    --chart-height: 413px;
+    max-height: 413px;
+    margin-top: -5px;
+    margin-left: -49px;
+    padding: 0;
+    z-index: 1;
+}
+
+.mainContent .chartContent .componentAdoptionOverTimeChart:last-child {
+    margin-right: -36px;
+}
+
+
+.strongTextWithTooltip {
+    cursor: help;
+    pointer-events: auto;
+}
+
+.mainHeader {
+    margin-bottom: var(--spacing-m);
+}
+
+.emptyState {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 413px;
+    width: 100%;
+    padding: 0 48px;
+    background-color: var(--background-tertiary-color);
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.35;
+    color: var(--label-primary-color);
+}

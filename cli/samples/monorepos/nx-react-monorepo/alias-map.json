@@ -1,0 +1,128 @@
+{
+  "root": {
+    "name": "@nx-react-monorepo/source",
+    "path": "",
+    "version": "0.0.0",
+    "aliases": {},
+    "importMap": {
+      "@nx-react-monorepo/source/*": [
+        "*",
+        "/*"
+      ],
+      "@nx-react-monorepo/ds/*": [
+        "ds/*"
+      ],
+      "@nx-react-monorepo/page-one/*": [
+        "libs/page-one/*"
+      ],
+      "@nx-react-monorepo/main-app/*": [
+        "apps/main-app/*"
+      ]
+    },
+    "exportMap": {}
+  },
+  "packages": {
+    "@nx-react-monorepo/source": {
+      "name": "@nx-react-monorepo/source",
+      "path": "",
+      "version": "0.0.0",
+      "aliases": {},
+      "importMap": {
+        "@nx-react-monorepo/source/*": [
+          "*"
+        ]
+      },
+      "exportMap": {}
+    },
+    "@nx-react-monorepo/ds": {
+      "name": "@nx-react-monorepo/ds",
+      "path": "ds",
+      "version": "0.0.1",
+      "aliases": {
+        "@nx-react-monorepo/ds": [
+          "ds/src/index.ts"
+        ],
+        "@nx-react-monorepo/page-one": [
+          "libs/page-one/src/index.ts"
+        ],
+        "apps/*": [
+          "apps/*"
+        ],
+        "ds/*": [
+          "ds/*"
+        ],
+        "libs/*": [
+          "libs/*"
+        ]
+      },
+      "importMap": {
+        "@nx-react-monorepo/ds/*": [
+          "ds/*"
+        ]
+      },
+      "exportMap": {
+        ".": [
+          "index.js"
+        ]
+      },
+      "main": "index.js"
+    },
+    "@nx-react-monorepo/page-one": {
+      "name": "@nx-react-monorepo/page-one",
+      "path": "libs/page-one",
+      "version": "0.0.0",
+      "aliases": {
+        "@nx-react-monorepo/ds": [
+          "ds/src/index.ts"
+        ],
+        "@nx-react-monorepo/page-one": [
+          "libs/page-one/src/index.ts"
+        ],
+        "apps/*": [
+          "apps/*"
+        ],
+        "ds/*": [
+          "ds/*"
+        ],
+        "libs/*": [
+          "libs/*"
+        ]
+      },
+      "importMap": {
+        "@nx-react-monorepo/page-one/*": [
+          "libs/page-one/*"
+        ]
+      },
+      "exportMap": {}
+    },
+    "@nx-react-monorepo/main-app": {
+      "name": "@nx-react-monorepo/main-app",
+      "path": "apps/main-app",
+      "version": "0.0.0",
+      "aliases": {
+        "@nx-react-monorepo/ds": [
+          "ds/src/index.ts"
+        ],
+        "@nx-react-monorepo/page-one": [
+          "libs/page-one/src/index.ts"
+        ],
+        "apps/*": [
+          "apps/*"
+        ],
+        "ds/*": [
+          "ds/*"
+        ],
+        "libs/*": [
+          "libs/*"
+        ]
+      },
+      "importMap": {
+        "@nx-react-monorepo/main-app/*": [
+          "apps/main-app/*"
+        ]
+      },
+      "exportMap": {}
+    }
+  },
+  "absolutePath": "/package"
+}

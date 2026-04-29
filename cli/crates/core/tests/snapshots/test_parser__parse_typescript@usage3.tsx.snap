@@ -1,0 +1,489 @@
+---
+source: crates/core/tests/test_parser.rs
+expression: "&parser::Module::new(&RelativePathBuf::from_path(path.strip_prefix(&project_root).unwrap()).unwrap(),\n&project_root, &module_resolver,).unwrap()"
+input_file: samples/typescript/src/subcomponent/table/usage3.tsx
+---
+source_path: src/subcomponent/table/usage3.tsx
+id:
+  hash: "16095482454047416435"
+  path: src/subcomponent/table/usage3.tsx
+  package_name: UNKNOWN
+  mtype: local
+created_at: ~
+updated_at: ~
+exports:
+  - source:
+      Internal: "default#0"
+    exported_name: default
+declarations:
+  - symbol: "TTable#1"
+    source:
+      hash: "16095482454047416435"
+      path: src/subcomponent/table/usage3.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('TTable' type=inline), context: #1 }, source: ModuleId { hash: 9741756060521682105, path: \"src/subcomponent/table/named\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    inferred_type:
+      TypeOf:
+        symbol:
+          symbol: "TTable#1"
+          source:
+            hash: "9741756060521682105"
+            path: src/subcomponent/table/named
+            package_name: UNKNOWN
+            mtype: local
+        is_local: false
+    start:
+      line: 1
+      column: 10
+    end:
+      line: 1
+      column: 16
+  - symbol: "TableUser3#1"
+    source:
+      hash: "16095482454047416435"
+      path: src/subcomponent/table/usage3.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      Function:
+        - JSX
+    start:
+      line: 3
+      column: 7
+    end:
+      line: 3
+      column: 17
+  - symbol: "default#0"
+    source:
+      hash: "16095482454047416435"
+      path: src/subcomponent/table/usage3.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      TypeOf:
+        symbol:
+          symbol: "TableUser3#1"
+          source:
+            hash: "16095482454047416435"
+            path: src/subcomponent/table/usage3.tsx
+            package_name: UNKNOWN
+            mtype: local
+        is_local: true
+    start:
+      line: 18
+      column: 1
+    end:
+      line: 18
+      column: 27
+scopes:
+  - owner: "__global#0"
+    parent: ~
+    children:
+      - "TableUser3#1"
+      - "default#0"
+    references:
+      - "Cell#2"
+      - "Header#2"
+      - "TTable#1"
+      - "TableUser3#1"
+    jsx_references:
+      - "TTable#1"
+      - "TTable#1.Cell"
+      - "TTable#1.Header"
+      - "TTable#1.Header.Cell"
+  - owner: "TableUser3#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "Cell#2"
+      - "Header#2"
+      - "TTable#1"
+    jsx_references:
+      - "TTable#1"
+      - "TTable#1.Cell"
+      - "TTable#1.Header"
+      - "TTable#1.Header.Cell"
+  - owner: "default#0"
+    parent: "__global#0"
+    children: []
+    references:
+      - "TableUser3#1"
+    jsx_references: []
+body:
+  - type: ImportDeclaration
+    span:
+      start: 1
+      end: 34
+      ctxt: 0
+    specifiers:
+      - type: ImportSpecifier
+        span:
+          start: 10
+          end: 16
+          ctxt: 0
+        local:
+          type: Identifier
+          span:
+            start: 10
+            end: 16
+            ctxt: 1
+          value: TTable
+          optional: false
+        imported: ~
+        isTypeOnly: false
+    source:
+      type: StringLiteral
+      span:
+        start: 24
+        end: 33
+        ctxt: 0
+      value: "./named"
+      raw: "\"./named\""
+    typeOnly: false
+    asserts: ~
+  - type: VariableDeclaration
+    span:
+      start: 36
+      end: 358
+      ctxt: 0
+    kind: const
+    declare: false
+    declarations:
+      - type: VariableDeclarator
+        span:
+          start: 42
+          end: 357
+          ctxt: 0
+        id:
+          optional: false
+          span:
+            start: 42
+            end: 52
+            ctxt: 1
+          type: Identifier
+          typeAnnotation: ~
+          value: TableUser3
+        init:
+          type: ArrowFunctionExpression
+          span:
+            start: 55
+            end: 357
+            ctxt: 0
+          params: []
+          body:
+            type: BlockStatement
+            span:
+              start: 61
+              end: 357
+              ctxt: 0
+            stmts:
+              - type: ReturnStatement
+                span:
+                  start: 67
+                  end: 355
+                  ctxt: 0
+                argument:
+                  type: ParenthesisExpression
+                  span:
+                    start: 74
+                    end: 354
+                    ctxt: 0
+                  expression:
+                    type: JSXElement
+                    span:
+                      start: 84
+                      end: 348
+                      ctxt: 0
+                    opening:
+                      type: JSXOpeningElement
+                      name:
+                        type: Identifier
+                        span:
+                          start: 85
+                          end: 91
+                          ctxt: 1
+                        value: TTable
+                        optional: false
+                      span:
+                        start: 84
+                        end: 92
+                        ctxt: 0
+                      attributes: []
+                      selfClosing: false
+                      typeArguments: ~
+                    children:
+                      - type: JSXText
+                        span:
+                          start: 92
+                          end: 105
+                          ctxt: 0
+                        value: "\n\n            "
+                        raw: "\n\n            "
+                      - type: JSXElement
+                        span:
+                          start: 105
+                          end: 256
+                          ctxt: 0
+                        opening:
+                          type: JSXOpeningElement
+                          name:
+                            type: JSXMemberExpression
+                            object:
+                              type: Identifier
+                              span:
+                                start: 106
+                                end: 112
+                                ctxt: 1
+                              value: TTable
+                              optional: false
+                            property:
+                              type: Identifier
+                              span:
+                                start: 113
+                                end: 119
+                                ctxt: 2
+                              value: Header
+                              optional: false
+                          span:
+                            start: 105
+                            end: 120
+                            ctxt: 0
+                          attributes: []
+                          selfClosing: false
+                          typeArguments: ~
+                        children:
+                          - type: JSXText
+                            span:
+                              start: 120
+                              end: 137
+                              ctxt: 0
+                            value: "\n\n                "
+                            raw: "\n\n                "
+                          - type: JSXElement
+                            span:
+                              start: 137
+                              end: 227
+                              ctxt: 0
+                            opening:
+                              type: JSXOpeningElement
+                              name:
+                                type: JSXMemberExpression
+                                object:
+                                  type: JSXMemberExpression
+                                  object:
+                                    type: Identifier
+                                    span:
+                                      start: 138
+                                      end: 144
+                                      ctxt: 1
+                                    value: TTable
+                                    optional: false
+                                  property:
+                                    type: Identifier
+                                    span:
+                                      start: 145
+                                      end: 151
+                                      ctxt: 2
+                                    value: Header
+                                    optional: false
+                                property:
+                                  type: Identifier
+                                  span:
+                                    start: 152
+                                    end: 156
+                                    ctxt: 2
+                                  value: Cell
+                                  optional: false
+                              span:
+                                start: 137
+                                end: 157
+                                ctxt: 0
+                              attributes: []
+                              selfClosing: false
+                              typeArguments: ~
+                            children:
+                              - type: JSXText
+                                span:
+                                  start: 157
+                                  end: 206
+                                  ctxt: 0
+                                value: "\n\n                    Header Cell\n\n                "
+                                raw: "\n\n                    Header Cell\n\n                "
+                            closing:
+                              type: JSXClosingElement
+                              span:
+                                start: 206
+                                end: 227
+                                ctxt: 0
+                              name:
+                                type: JSXMemberExpression
+                                object:
+                                  type: JSXMemberExpression
+                                  object:
+                                    type: Identifier
+                                    span:
+                                      start: 208
+                                      end: 214
+                                      ctxt: 1
+                                    value: TTable
+                                    optional: false
+                                  property:
+                                    type: Identifier
+                                    span:
+                                      start: 215
+                                      end: 221
+                                      ctxt: 2
+                                    value: Header
+                                    optional: false
+                                property:
+                                  type: Identifier
+                                  span:
+                                    start: 222
+                                    end: 226
+                                    ctxt: 2
+                                  value: Cell
+                                  optional: false
+                          - type: JSXText
+                            span:
+                              start: 227
+                              end: 240
+                              ctxt: 0
+                            value: "\n\n            "
+                            raw: "\n\n            "
+                        closing:
+                          type: JSXClosingElement
+                          span:
+                            start: 240
+                            end: 256
+                            ctxt: 0
+                          name:
+                            type: JSXMemberExpression
+                            object:
+                              type: Identifier
+                              span:
+                                start: 242
+                                end: 248
+                                ctxt: 1
+                              value: TTable
+                              optional: false
+                            property:
+                              type: Identifier
+                              span:
+                                start: 249
+                                end: 255
+                                ctxt: 2
+                              value: Header
+                              optional: false
+                      - type: JSXText
+                        span:
+                          start: 256
+                          end: 269
+                          ctxt: 0
+                        value: "\n\n            "
+                        raw: "\n\n            "
+                      - type: JSXElement
+                        span:
+                          start: 269
+                          end: 330
+                          ctxt: 0
+                        opening:
+                          type: JSXOpeningElement
+                          name:
+                            type: JSXMemberExpression
+                            object:
+                              type: Identifier
+                              span:
+                                start: 270
+                                end: 276
+                                ctxt: 1
+                              value: TTable
+                              optional: false
+                            property:
+                              type: Identifier
+                              span:
+                                start: 277
+                                end: 281
+                                ctxt: 2
+                              value: Cell
+                              optional: false
+                          span:
+                            start: 269
+                            end: 282
+                            ctxt: 0
+                          attributes: []
+                          selfClosing: false
+                          typeArguments: ~
+                        children:
+                          - type: JSXText
+                            span:
+                              start: 282
+                              end: 316
+                              ctxt: 0
+                            value: "\n\n                Cell\n\n            "
+                            raw: "\n\n                Cell\n\n            "
+                        closing:
+                          type: JSXClosingElement
+                          span:
+                            start: 316
+                            end: 330
+                            ctxt: 0
+                          name:
+                            type: JSXMemberExpression
+                            object:
+                              type: Identifier
+                              span:
+                                start: 318
+                                end: 324
+                                ctxt: 1
+                              value: TTable
+                              optional: false
+                            property:
+                              type: Identifier
+                              span:
+                                start: 325
+                                end: 329
+                                ctxt: 2
+                              value: Cell
+                              optional: false
+                      - type: JSXText
+                        span:
+                          start: 330
+                          end: 339
+                          ctxt: 0
+                        value: "\n\n        "
+                        raw: "\n\n        "
+                    closing:
+                      type: JSXClosingElement
+                      span:
+                        start: 339
+                        end: 348
+                        ctxt: 0
+                      name:
+                        type: Identifier
+                        span:
+                          start: 341
+                          end: 347
+                          ctxt: 1
+                        value: TTable
+                        optional: false
+          async: false
+          generator: false
+          typeParameters: ~
+          returnType: ~
+        definite: false
+  - type: ExportDefaultExpression
+    span:
+      start: 360
+      end: 386
+      ctxt: 0
+    expression:
+      type: Identifier
+      span:
+        start: 375
+        end: 385
+        ctxt: 1
+      value: TableUser3
+      optional: false

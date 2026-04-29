@@ -1,0 +1,30 @@
+.textInput {
+    height: 24px;
+    padding: 0 var(--spacing-xs);
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background-color: var(--background-secondary-color);
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--label-primary-color);
+    caret-color: var(--accent-green);
+}
+
+.textInput::selection {
+    color: var(--label-primary-color);
+    background-color: rgba(var(--accent-green-rgb), 0.3);
+}
+
+.textInput::placeholder {
+    color: var(--label-secondary-color);
+}
+
+.textInput:focus {
+    box-shadow: inset 0 0 0 1px var(--accent-green);
+}
+
+.textInput:disabled {
+    color: rgba(var(--label-primary-color-rgb), 0.4);
+    cursor: not-allowed;
+}

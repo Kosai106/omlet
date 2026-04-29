@@ -1,0 +1,16 @@
+{
+  "workspaces": {
+    "@wildcard-exports/design-system-button": {
+      "exports": "./src/index.ts"
+    },
+    "@wildcard-exports/design-system-form": {
+      "exports": "./src/index.ts"
+    },
+    "@wildcard-exports/design-system-input": {
+      "exports": "./src/index.ts"
+    },
+    "@wildcard-exports/design-system-react": {
+      "exports": "./src/index.ts"
+    }
+  }
+}

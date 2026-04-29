@@ -1,0 +1,17 @@
+.emptyBlock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: var(--spacing-s);
+    height: 244px;
+    background-color: var(--background-tertiary-color);
+    text-align: center;
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--label-primary-color);
+}
+
+.emptyBlock .kaomoji {
+    color: var(--label-secondary-color);
+}

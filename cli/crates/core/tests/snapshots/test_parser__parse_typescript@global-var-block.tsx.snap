@@ -1,0 +1,290 @@
+---
+source: crates/core/tests/test_parser.rs
+expression: "&parser::Module::new(&RelativePathBuf::from_path(path.strip_prefix(&project_root).unwrap()).unwrap(),\n&project_root, &module_resolver,).unwrap()"
+input_file: samples/typescript/src/functional-component/return-func/global-var-block.tsx
+---
+source_path: src/functional-component/return-func/global-var-block.tsx
+id:
+  hash: "10918103547686645100"
+  path: src/functional-component/return-func/global-var-block.tsx
+  package_name: UNKNOWN
+  mtype: local
+created_at: ~
+updated_at: ~
+exports:
+  - source:
+      Internal: "Sample#1"
+    exported_name: default
+declarations:
+  - symbol: "React#1"
+    source:
+      hash: "10918103547686645100"
+      path: src/functional-component/return-func/global-var-block.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
+    inferred_type:
+      TypeOf:
+        symbol:
+          symbol: "default#0"
+          source:
+            hash: "11002248552354871051"
+            path: ""
+            package_name: react
+            mtype: package
+        is_local: false
+    start:
+      line: 1
+      column: 8
+    end:
+      line: 1
+      column: 13
+  - symbol: "Sample#1"
+    source:
+      hash: "10918103547686645100"
+      path: src/functional-component/return-func/global-var-block.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      Function:
+        - ReturnTypeOf:
+            - TypeOf:
+                symbol:
+                  symbol: "generateComponent#1"
+                  source:
+                    hash: "10918103547686645100"
+                    path: src/functional-component/return-func/global-var-block.tsx
+                    package_name: UNKNOWN
+                    mtype: local
+                is_local: true
+            - []
+    start:
+      line: 7
+      column: 16
+    end:
+      line: 9
+      column: 2
+  - symbol: "generateComponent#1"
+    source:
+      hash: "10918103547686645100"
+      path: src/functional-component/return-func/global-var-block.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      Function:
+        - JSX
+    start:
+      line: 3
+      column: 7
+    end:
+      line: 3
+      column: 24
+scopes:
+  - owner: "__global#0"
+    parent: ~
+    children:
+      - "generateComponent#1"
+      - "Sample#1"
+      - "Sample#1"
+    references:
+      - "React#1"
+      - "Sample#1"
+      - "div#2"
+      - "generateComponent#1"
+    jsx_references:
+      - "div#2"
+  - owner: "generateComponent#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "div#2"
+    jsx_references:
+      - "div#2"
+  - owner: "Sample#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "generateComponent#1"
+    jsx_references: []
+  - owner: "Sample#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "generateComponent#1"
+    jsx_references: []
+body:
+  - type: ImportDeclaration
+    span:
+      start: 1
+      end: 27
+      ctxt: 0
+    specifiers:
+      - type: ImportDefaultSpecifier
+        span:
+          start: 8
+          end: 13
+          ctxt: 0
+        local:
+          type: Identifier
+          span:
+            start: 8
+            end: 13
+            ctxt: 1
+          value: React
+          optional: false
+    source:
+      type: StringLiteral
+      span:
+        start: 19
+        end: 26
+        ctxt: 0
+      value: react
+      raw: "\"react\""
+    typeOnly: false
+    asserts: ~
+  - type: VariableDeclaration
+    span:
+      start: 29
+      end: 95
+      ctxt: 0
+    kind: const
+    declare: false
+    declarations:
+      - type: VariableDeclarator
+        span:
+          start: 35
+          end: 94
+          ctxt: 0
+        id:
+          optional: false
+          span:
+            start: 35
+            end: 52
+            ctxt: 1
+          type: Identifier
+          typeAnnotation: ~
+          value: generateComponent
+        init:
+          type: ArrowFunctionExpression
+          span:
+            start: 55
+            end: 94
+            ctxt: 0
+          params: []
+          body:
+            type: BlockStatement
+            span:
+              start: 61
+              end: 94
+              ctxt: 0
+            stmts:
+              - type: ReturnStatement
+                span:
+                  start: 67
+                  end: 92
+                  ctxt: 0
+                argument:
+                  type: JSXElement
+                  span:
+                    start: 74
+                    end: 91
+                    ctxt: 0
+                  opening:
+                    type: JSXOpeningElement
+                    name:
+                      type: Identifier
+                      span:
+                        start: 75
+                        end: 78
+                        ctxt: 2
+                      value: div
+                      optional: false
+                    span:
+                      start: 74
+                      end: 79
+                      ctxt: 0
+                    attributes: []
+                    selfClosing: false
+                    typeArguments: ~
+                  children:
+                    - type: JSXText
+                      span:
+                        start: 79
+                        end: 85
+                        ctxt: 0
+                      value: Sample
+                      raw: Sample
+                  closing:
+                    type: JSXClosingElement
+                    span:
+                      start: 85
+                      end: 91
+                      ctxt: 0
+                    name:
+                      type: Identifier
+                      span:
+                        start: 87
+                        end: 90
+                        ctxt: 2
+                      value: div
+                      optional: false
+          async: false
+          generator: false
+          typeParameters: ~
+          returnType: ~
+        definite: false
+  - type: ExportDefaultDeclaration
+    span:
+      start: 97
+      end: 165
+      ctxt: 0
+    decl:
+      async: false
+      body:
+        type: BlockStatement
+        span:
+          start: 130
+          end: 165
+          ctxt: 0
+        stmts:
+          - type: ReturnStatement
+            span:
+              start: 136
+              end: 163
+              ctxt: 0
+            argument:
+              type: CallExpression
+              span:
+                start: 143
+                end: 162
+                ctxt: 0
+              callee:
+                type: Identifier
+                span:
+                  start: 143
+                  end: 160
+                  ctxt: 1
+                value: generateComponent
+                optional: false
+              arguments: []
+              typeArguments: ~
+      decorators: []
+      generator: false
+      identifier:
+        type: Identifier
+        span:
+          start: 121
+          end: 127
+          ctxt: 1
+        value: Sample
+        optional: false
+      params: []
+      returnType: ~
+      span:
+        start: 112
+        end: 165
+        ctxt: 0
+      type: FunctionExpression
+      typeParameters: ~

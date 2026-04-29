@@ -1,0 +1,20 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "module": "commonjs",
+    "noEmit": false,
+    "typeRoots": [
+      "./node_modules/@types/",
+      "./src/backend/typings/"
+    ]
+  },
+  "include": [
+    "create-env.ts",
+    ".eslintrc.js",
+    "src/backend"
+  ],
+  "exclude": [
+    "src/frontend"
+  ]
+}

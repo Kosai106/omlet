@@ -1,0 +1,52 @@
+.codeSnippet {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-s);
+    padding: var(--spacing-s);
+    margin-bottom: 8px;
+    border-radius: 6px;
+    background-color: var(--background-secondary-color);
+}
+
+.codeSnippet .snippet {
+    flex: 1;
+}
+
+.codeSnippet .languages {
+    margin-bottom: var(--spacing-s);
+}
+
+.codeSnippet pre {
+    font-size: 12px;
+    line-height: 14px;
+    white-space: pre-wrap;
+    word-break: break-word;
+    text-align: start;
+    color: var(--label-primary-color);
+}
+
+.codeSnippet .copyButton {
+    line-height: 0;
+}
+
+.codeSnippet .copiedTooltip {
+    position: absolute;
+    right: 0;
+    bottom: calc(100% + var(--spacing-xs));
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-xxs) var(--spacing-xs);
+    border-radius: 4px;
+    background-color: var(--label-secondary-color);
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--label-selected-color);
+    opacity: 0;
+    transition: opacity 300ms ease-out;
+}
+
+.codeSnippet .copiedTooltip.visible {
+    opacity: 1;
+    transition: none;
+}

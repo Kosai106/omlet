@@ -1,0 +1,35 @@
+.landingPageButton {
+    padding: 6px var(--spacing-s);
+    background-color: var(--background-primary-color);
+    font-size: 18px;
+    line-height: 20px;
+    font-family: var(--font-family-secondary);
+    color: var(--accent-green);
+}
+
+.landingPageButton:hover {
+    background-color: var(--background-tertiary-color);
+    border: solid 2px rgba(var(--border-secondary-color-rgb), 0.4);
+    padding: var(--spacing-xxs) calc(var(--spacing-s) - 2px);
+}
+
+.landingPageButton:active,
+.landingPageButton.active {
+    border-color: rgba(var(--border-secondary-color-rgb), 0.6);
+}
+
+.landingPageButton.secondary {
+    background: none;
+    color: var(--label-selected-color);
+}
+
+.landingPageButton.secondary:hover {
+    border-color: rgba(var(--border-secondary-color-rgb), 0.15);
+    background-color: rgba(var(--background-primary-color-rgb), 0.1);
+}
+
+.landingPageButton.secondary:active,
+.landingPageButton.secondary.active {
+    border-color: rgba(var(--border-secondary-color-rgb), 0.3);
+    background-color: rgba(var(--background-primary-color-rgb), 0.3);
+}

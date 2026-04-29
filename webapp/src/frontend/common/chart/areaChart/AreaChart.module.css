@@ -1,0 +1,24 @@
+.areaChart {
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    max-height: 375px;
+}
+
+.areaChart .areaChartLegend {
+    padding-right: 48px;
+    padding-left: 112px;
+}
+
+.areaChart svg {
+    overflow: visible;
+}
+
+.areaChart .tooltipLayer {
+    width: 100%;
+    height: 100%;
+}
+
+.areaChart .tooltipLayer .tooltipRectGroup:hover {
+    opacity: 1;
+}

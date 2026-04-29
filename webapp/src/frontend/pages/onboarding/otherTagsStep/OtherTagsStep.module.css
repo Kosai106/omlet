@@ -1,0 +1,9 @@
+.otherTagsArrow {
+    position: absolute;
+    top: 171px;
+    right: -52px;
+}
+
+.continueToDashboardButton {
+    align-self: flex-end;
+}

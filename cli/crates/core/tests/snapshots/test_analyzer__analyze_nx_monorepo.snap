@@ -1,0 +1,229 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&component_results"
+---
+num_of_components: 8
+components:
+  - definition_id: "@nx-react-monorepo/ds:351e65386137a51ed773c346cb7b8024264a766a2399ccc5f454c5b006287864:Button"
+    name: Button
+    export_ids:
+      - "@nx-react-monorepo/ds:src/lib/button/button:Button"
+      - "@nx-react-monorepo/ds:src/lib/button/button:default"
+      - "@nx-react-monorepo/ds:src:Button"
+      - "@nx-react-monorepo/ds:src:default"
+    package_name: "@nx-react-monorepo/ds"
+    source_path: ds/src/lib/button/button.tsx
+    dependencies: []
+    props:
+      - name: children
+        default_value: NONE
+    html_elements:
+      - button
+  - definition_id: "@nx-react-monorepo/ds:005cb37d61755dec5ebd7a47d51dc3bd677742130aab0feae8634c2cbfd29d75:H1"
+    name: H1
+    export_ids:
+      - "@nx-react-monorepo/ds:src/lib/h1/h1:H1"
+      - "@nx-react-monorepo/ds:src/lib/h1/h1:default"
+      - "@nx-react-monorepo/ds:src:H1"
+    package_name: "@nx-react-monorepo/ds"
+    source_path: ds/src/lib/h1/h1.tsx
+    dependencies: []
+    props:
+      - name: children
+        default_value: NONE
+    html_elements:
+      - h1
+  - definition_id: "@nx-react-monorepo/main-app:fa7a022046369b1cfaf7b88609ccfdf581473458eaabe5ad80e6cae243f41dac:App"
+    name: App
+    export_ids:
+      - "@nx-react-monorepo/main-app:src/app/app:App"
+      - "@nx-react-monorepo/main-app:src/app/app:default"
+    package_name: "@nx-react-monorepo/main-app"
+    source_path: apps/main-app/src/app/app.tsx
+    dependencies:
+      - from: "@nx-react-monorepo/main-app:fa7a022046369b1cfaf7b88609ccfdf581473458eaabe5ad80e6cae243f41dac:App"
+        to: "@nx-react-monorepo/main-app:4aa72168f874a04e00d38a21b4585a03f69c192fe1d4c80137b48cb86b560989:Home"
+        references:
+          - trace:
+              - "@nx-react-monorepo/main-app:4aa72168f874a04e00d38a21b4585a03f69c192fe1d4c80137b48cb86b560989:default"
+            usages:
+              - start:
+                  line: 9
+                  column: 32
+                end:
+                  line: 9
+                  column: 40
+                props: []
+      - from: "@nx-react-monorepo/main-app:fa7a022046369b1cfaf7b88609ccfdf581473458eaabe5ad80e6cae243f41dac:App"
+        to: "@nx-react-monorepo/page-one:9355d2cc281e42a4ee94c4bead349d588bb5edfc2a33f20a906a0185cf9f3991:PageOne"
+        references:
+          - trace:
+              - "@nx-react-monorepo/page-one:bffbedc374310ff8268637735551bb015e16221c95efe745fcc2682272c31a0e:PageOne"
+              - "@nx-react-monorepo/page-one:9355d2cc281e42a4ee94c4bead349d588bb5edfc2a33f20a906a0185cf9f3991:PageOne"
+            usages:
+              - start:
+                  line: 10
+                  column: 40
+                end:
+                  line: 10
+                  column: 51
+                props: []
+      - from: "@nx-react-monorepo/main-app:fa7a022046369b1cfaf7b88609ccfdf581473458eaabe5ad80e6cae243f41dac:App"
+        to: "react-router-dom:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Route"
+        references:
+          - trace:
+              - "react-router-dom:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Route"
+            usages:
+              - start:
+                  line: 9
+                  column: 7
+                end:
+                  line: 9
+                  column: 50
+                props:
+                  - name: element
+                    value: JSXElement
+                  - name: path
+                    value: "String { value: \"/\" }"
+              - start:
+                  line: 10
+                  column: 7
+                end:
+                  line: 10
+                  column: 61
+                props:
+                  - name: element
+                    value: JSXElement
+                  - name: path
+                    value: "String { value: \"/page-one\" }"
+      - from: "@nx-react-monorepo/main-app:fa7a022046369b1cfaf7b88609ccfdf581473458eaabe5ad80e6cae243f41dac:App"
+        to: "react-router-dom:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Routes"
+        references:
+          - trace:
+              - "react-router-dom:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Routes"
+            usages:
+              - start:
+                  line: 8
+                  column: 5
+                end:
+                  line: 11
+                  column: 14
+                props:
+                  - name: children
+                    value: JSXElement
+    props: []
+    html_elements: []
+  - definition_id: "@nx-react-monorepo/main-app:4aa72168f874a04e00d38a21b4585a03f69c192fe1d4c80137b48cb86b560989:Home"
+    name: Home
+    export_ids:
+      - "@nx-react-monorepo/main-app:src/home/home:Home"
+      - "@nx-react-monorepo/main-app:src/home/home:default"
+    package_name: "@nx-react-monorepo/main-app"
+    source_path: apps/main-app/src/home/home.tsx
+    dependencies:
+      - from: "@nx-react-monorepo/main-app:4aa72168f874a04e00d38a21b4585a03f69c192fe1d4c80137b48cb86b560989:Home"
+        to: "@nx-react-monorepo/ds:005cb37d61755dec5ebd7a47d51dc3bd677742130aab0feae8634c2cbfd29d75:H1"
+        references:
+          - trace:
+              - "@nx-react-monorepo/ds:fbe038a8c624e6ea029938b2e8bb7d90d3584ac9182ea1dbd791bef07c322dad:H1"
+              - "@nx-react-monorepo/ds:005cb37d61755dec5ebd7a47d51dc3bd677742130aab0feae8634c2cbfd29d75:H1"
+            usages:
+              - start:
+                  line: 12
+                  column: 7
+                end:
+                  line: 12
+                  column: 32
+                props:
+                  - name: children
+                    value: JSXElement
+      - from: "@nx-react-monorepo/main-app:4aa72168f874a04e00d38a21b4585a03f69c192fe1d4c80137b48cb86b560989:Home"
+        to: "react-router-dom:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Link"
+        references:
+          - trace:
+              - "react-router-dom:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Link"
+            usages:
+              - start:
+                  line: 13
+                  column: 7
+                end:
+                  line: 13
+                  column: 49
+                props:
+                  - name: children
+                    value: JSXElement
+                  - name: to
+                    value: "String { value: \"/page-one\" }"
+    props: []
+    html_elements:
+      - div
+  - definition_id: "@nx-react-monorepo/page-one:9355d2cc281e42a4ee94c4bead349d588bb5edfc2a33f20a906a0185cf9f3991:PageOne"
+    name: PageOne
+    export_ids:
+      - "@nx-react-monorepo/page-one:src/lib/page-one:PageOne"
+      - "@nx-react-monorepo/page-one:src/lib/page-one:default"
+      - "@nx-react-monorepo/page-one:src:PageOne"
+      - "@nx-react-monorepo/page-one:src:default"
+    package_name: "@nx-react-monorepo/page-one"
+    source_path: libs/page-one/src/lib/page-one.tsx
+    dependencies:
+      - from: "@nx-react-monorepo/page-one:9355d2cc281e42a4ee94c4bead349d588bb5edfc2a33f20a906a0185cf9f3991:PageOne"
+        to: "@nx-react-monorepo/ds:005cb37d61755dec5ebd7a47d51dc3bd677742130aab0feae8634c2cbfd29d75:H1"
+        references:
+          - trace:
+              - "@nx-react-monorepo/ds:fbe038a8c624e6ea029938b2e8bb7d90d3584ac9182ea1dbd791bef07c322dad:H1"
+              - "@nx-react-monorepo/ds:005cb37d61755dec5ebd7a47d51dc3bd677742130aab0feae8634c2cbfd29d75:H1"
+            usages:
+              - start:
+                  line: 12
+                  column: 7
+                end:
+                  line: 12
+                  column: 35
+                props:
+                  - name: children
+                    value: JSXElement
+      - from: "@nx-react-monorepo/page-one:9355d2cc281e42a4ee94c4bead349d588bb5edfc2a33f20a906a0185cf9f3991:PageOne"
+        to: "@nx-react-monorepo/ds:351e65386137a51ed773c346cb7b8024264a766a2399ccc5f454c5b006287864:Button"
+        references:
+          - trace:
+              - "@nx-react-monorepo/ds:fbe038a8c624e6ea029938b2e8bb7d90d3584ac9182ea1dbd791bef07c322dad:Button"
+              - "@nx-react-monorepo/ds:351e65386137a51ed773c346cb7b8024264a766a2399ccc5f454c5b006287864:Button"
+            usages:
+              - start:
+                  line: 13
+                  column: 7
+                end:
+                  line: 13
+                  column: 40
+                props:
+                  - name: children
+                    value: JSXElement
+    props: []
+    html_elements:
+      - div
+  - definition_id: "react-router-dom:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Link"
+    name: Link
+    export_ids: []
+    package_name: react-router-dom
+    source_path: ""
+    dependencies: []
+    props: []
+    html_elements: []
+  - definition_id: "react-router-dom:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Route"
+    name: Route
+    export_ids: []
+    package_name: react-router-dom
+    source_path: ""
+    dependencies: []
+    props: []
+    html_elements: []
+  - definition_id: "react-router-dom:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Routes"
+    name: Routes
+    export_ids: []
+    package_name: react-router-dom
+    source_path: ""
+    dependencies: []
+    props: []
+    html_elements: []
+

@@ -1,0 +1,21 @@
+.verticalSeparator {
+    flex-shrink: 0;
+    width: 4px;
+    border-radius: 2px;
+}
+
+.verticalSeparator.decorative {
+    background-color: var(--border-accent-light-color);
+}
+
+.verticalSeparator.informative {
+    background-color: var(--border-primary-color);
+}
+
+.verticalSeparator.warning {
+    background-color: var(--border-accent-tertiary-light-color);
+}
+
+.verticalSeparator.critical {
+    background-color: var(--border-critical-light-color);
+}

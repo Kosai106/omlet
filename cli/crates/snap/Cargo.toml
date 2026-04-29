@@ -1,0 +1,8 @@
+[package]
+name = "snap"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+insta = { version = "1.12.0", features = ["glob", "redactions"] }
+relative-path = "1.6.0"

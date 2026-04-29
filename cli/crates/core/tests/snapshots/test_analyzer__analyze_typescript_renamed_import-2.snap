@@ -1,0 +1,49 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&export_results"
+---
+num_of_exports: 6
+exports:
+  - name: MainWithDefaultImport
+    source_path: src/renamed-import/ordinary-default-import.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:f9f541ac25a340f5dc220ef3f85b579f7f77f9ef27919e2e842fc097b3a36370:MainWithDefaultImport"
+  - name: MainWithOrdinaryImport
+    source_path: src/renamed-import/ordinary-import.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:861a22cbf90aa859663ee38cde69c22eff925fdce6c7039687e6ab4a07906dd4:MainWithOrdinaryImport"
+  - name: MainWithRenamedDefaultImport
+    source_path: src/renamed-import/renamed-default-import.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:3c07ed243be8b1a8e315f40be982f2c997087f56edf648d845a4f405bce6546e:MainWithRenamedDefaultImport"
+  - name: MainWithRenamedImport
+    source_path: src/renamed-import/renamed-import.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:61ddec70a7e8b73c311b7aebf9bedc2ab0507ec751d8f88e191340153b931235:MainWithRenamedImport"
+  - name: MainWithRenamedStringImport
+    source_path: src/renamed-import/renamed-string-import.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:fc9321bdeffb53e2705b2a606eb22351ab1b81efeb661a6c277421958f0dfb0a:MainWithRenamedStringImport"
+  - name: default
+    source_path: src/renamed-import/renamed-string-export.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:9a6a6df6480c9dcae07cfa4bccc758809be4b45c89aa381f30c64069955b84e6:default"
+

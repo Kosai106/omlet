@@ -1,0 +1,29 @@
+{
+  "root": {
+    "name": "custom-export",
+    "path": "",
+    "version": "1.0.0",
+    "aliases": {},
+    "importMap": {
+      "custom-export/*": [
+        "*"
+      ],
+      "custom-export": [
+        "src/index.ts"
+      ]
+    },
+    "exportMap": {
+      ".": [
+        "src/index.ts"
+      ],
+      "build/*": [
+        "src/*"
+      ],
+      "TextInput": [
+        "src/data-entry/TextInput/index.ts"
+      ]
+    }
+  },
+  "packages": {},
+  "absolutePath": "/package"
+}

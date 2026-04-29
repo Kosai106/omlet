@@ -1,0 +1,49 @@
+.onboardingStepCard {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-s);
+    padding: 0 var(--spacing-m);
+    border-radius: var(--spacing-xxs);
+}
+
+.onboardingStepCard.active {
+    padding: var(--spacing-m);
+    background-color: var(--background-tertiary-color);
+}
+
+.onboardingStepCard:first-of-type {
+    counter-reset: stepNumber;
+}
+
+.onboardingStepCard .title {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    line-height: 19px;
+}
+
+.onboardingStepCard:not(.active) .title {
+    margin: 0;
+}
+
+.onboardingStepCard .title.canClick {
+    cursor: pointer;
+}
+
+.onboardingStepCard .title::before {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: var(--spacing-xs);
+    counter-increment: stepNumber;
+    content: counter(stepNumber);
+    background-color: var(--background-inverse-color);
+    border-radius: 50%;
+    text-align: center;
+    font-family: var(--font-family-secondary);
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--label-selected-color);
+}

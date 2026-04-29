@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "noEmit": true
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "node-src",
+    "tests",
+    ".eslintrc.js",
+    "jest.config.e2e.js",
+    "jest.config.node.js"
+  ]
+}

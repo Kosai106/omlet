@@ -1,0 +1,44 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&component_results"
+---
+num_of_components: 2
+components:
+  - definition_id: "@ds/button:aa177d9a4f4bd2a0cd476ccd9b7af50ebe97191eec752a4518b83993c72b5d54:Button"
+    name: Button
+    export_ids:
+      - "@ds/button:src/button:Button"
+      - "@ds/button:src:Button"
+    package_name: "@ds/button"
+    source_path: packages/button/src/button.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - button
+  - definition_id: "@ds/form:9c7ac2aa589944ff0ccaeb43c7ee1c335b6017691fc1ad455ac7eaf81d7028bf:Form"
+    name: Form
+    export_ids:
+      - "@ds/form:.:Form"
+      - "@ds/form:src/form:Form"
+      - "@ds/form:src:Form"
+    package_name: "@ds/form"
+    source_path: packages/form/src/form.tsx
+    dependencies:
+      - from: "@ds/form:9c7ac2aa589944ff0ccaeb43c7ee1c335b6017691fc1ad455ac7eaf81d7028bf:Form"
+        to: "@ds/button:aa177d9a4f4bd2a0cd476ccd9b7af50ebe97191eec752a4518b83993c72b5d54:Button"
+        references:
+          - trace:
+              - "@ds/button:6c045c0462bdc8cc74251d717131bae3ea23b7584b6e1256d05b9bea74b32da3:Button"
+              - "@ds/button:aa177d9a4f4bd2a0cd476ccd9b7af50ebe97191eec752a4518b83993c72b5d54:Button"
+            usages:
+              - start:
+                  line: 8
+                  column: 13
+                end:
+                  line: 8
+                  column: 22
+                props: []
+    props: []
+    html_elements:
+      - form
+

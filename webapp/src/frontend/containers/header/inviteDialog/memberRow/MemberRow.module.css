@@ -1,0 +1,50 @@
+.member {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 44px;
+    padding: 0 16px;
+}
+
+.member .avatar {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    border-radius: 2px;
+}
+
+.member .avatarPlaceholder {
+    width: 28px;
+    height: 28px;
+    border-radius: 2px;
+    background-color: var(--background-secondary-color);
+}
+
+.member .content {
+    flex: 1;
+}
+
+.member .content .email {
+    font-size: 13px;
+    color: var(--label-primary-color);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.member .menuButton {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    line-height: 0;
+    color: var(--label-secondary-color);
+}
+
+.member .menuButton:hover {
+    background-color: var(--control-background-hover-color);
+}
+
+.member .menuButton:active
+.member .menuButton.menuOpen {
+    background-color: var(--control-background-active-color);
+}

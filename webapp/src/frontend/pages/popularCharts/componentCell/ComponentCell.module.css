@@ -1,0 +1,25 @@
+.componentCell {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xxs);
+    width: 100%;
+    text-decoration: inherit;
+    text-decoration-color: transparent;
+}
+
+.componentCell .componentName {
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--label-primary-color);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-decoration: inherit;
+    text-decoration-color: currentColor;
+}
+
+.componentCell .packageName {
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--label-secondary-color);
+}

@@ -1,0 +1,56 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&export_results"
+---
+num_of_exports: 7
+exports:
+  - name: AwaitImportAndUseInJsx
+    source_path: src/dynamic-import/await-import-and-use-in-jsx.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:a2b8a926258aa72520ddadbafcba53852351fdfafb036cfd052400a09e35aab1:AwaitImportAndUseInJsx"
+  - name: NamedComponent
+    source_path: src/dynamic-import/named-component.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:72cad27d724ad68829730f84072df392c3deeb750b2ecaa124e25c77a69ca14a:NamedComponent"
+  - name: WithCustomWrapper
+    source_path: src/dynamic-import/with-custom-wrapper.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:113e65ae026945827e97267a4bc66ddfbb5a75bc6c0beb65c129d67aaf304cb4:WithCustomWrapper"
+  - name: WithNextDynamic
+    source_path: src/dynamic-import/with-next-dynamic.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:b7f0e36a49a17513e9591e05b371c536fca443c9fcc58bda127de7f33e6ae47e:WithNextDynamic"
+  - name: WithReactLazy
+    source_path: src/dynamic-import/with-react-lazy.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:058fa439756e3e0e8a75efa55d3b2711c696481e2a149fa158e7bd003ec5e2a0:WithReactLazy"
+  - name: default
+    source_path: src/dynamic-import/imported-component.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:24a38cbdadc4c65a4526aae58f4508424948502b887944693c27370e74c27753:default"
+  - name: default
+    source_path: src/dynamic-import/loading-component.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:5c426245c922e4508763681775c5588323591c2fcb4b0dd98615fa75ec19c815:default"
+

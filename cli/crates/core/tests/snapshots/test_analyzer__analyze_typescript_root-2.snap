@@ -1,0 +1,105 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&export_results"
+---
+num_of_exports: 14
+exports:
+  - name: Button
+    source_path: src/dynamic-html-element.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:a61f7961b3f552c622675bbc828aa191517a345365478f3a1bdcc093ab77adbd:Button"
+  - name: Card
+    source_path: src/dynamic-html-element.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:a61f7961b3f552c622675bbc828aa191517a345365478f3a1bdcc093ab77adbd:Card"
+  - name: ComponentFactory
+    source_path: src/component-generators.tsx
+    is_component: false
+    inferred_type: Unknown
+    resolved_type: Unknown
+    trace_to_declaration:
+      - "typescript-examples:1281790c5857aac7f058321f4806efc5f7ad28d10c7d773fb72a8d4b1c0bd11b:ComponentFactory"
+  - name: CountdownTimer
+    source_path: src/component-generators.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:1281790c5857aac7f058321f4806efc5f7ad28d10c7d773fb72a8d4b1c0bd11b:CountdownTimer"
+  - name: ExpandableFlyoutContext
+    source_path: src/html-elements-in-recursive-ast.tsx
+    is_component: false
+    inferred_type: "ReturnTypeOf<TypeOf<typescript-examples:039457fd1a392cc7194f548746284c915a5d897f5ecd0cbb8bc9b8d8734066f4:createContext>>"
+    resolved_type: ReturnTypeOf<Unknown>
+    trace_to_declaration:
+      - "typescript-examples:039457fd1a392cc7194f548746284c915a5d897f5ecd0cbb8bc9b8d8734066f4:ExpandableFlyoutContext"
+  - name: ExpandableFlyoutProvider
+    source_path: src/html-elements-in-recursive-ast.tsx
+    is_component: true
+    inferred_type: "ReturnTypeOf<TypeOf<typescript-examples:039457fd1a392cc7194f548746284c915a5d897f5ecd0cbb8bc9b8d8734066f4:React>[forwardRef]>"
+    resolved_type: "ReturnTypeOf<{ Component: (Function -> JSX), PureComponent: (Function -> JSX), forwardRef: (Function -> (Function -> JSX)), lazy: (Function -> ReturnTypeOf<Unknown>[default]), memo: (Function -> (Function -> JSX)) }[forwardRef]>"
+    trace_to_declaration:
+      - "typescript-examples:039457fd1a392cc7194f548746284c915a5d897f5ecd0cbb8bc9b8d8734066f4:ExpandableFlyoutProvider"
+  - name: LapTimer
+    source_path: src/component-generators.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:1281790c5857aac7f058321f4806efc5f7ad28d10c7d773fb72a8d4b1c0bd11b:LapTimer"
+  - name: MahmutCan
+    source_path: src/component-generators.tsx
+    is_component: true
+    inferred_type: (Function -> )
+    resolved_type: (Function -> )
+    trace_to_declaration:
+      - "typescript-examples:1281790c5857aac7f058321f4806efc5f7ad28d10c7d773fb72a8d4b1c0bd11b:MahmutCan"
+  - name: Student
+    source_path: src/student.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:35fde9f96980d94b848b51c803fa533b80f3b2dacff94ff418bbfec25cb749f7:Student"
+  - name: ax
+    source_path: src/scope-shadow.ts
+    is_component: false
+    inferred_type: Unknown
+    resolved_type: Unknown
+    trace_to_declaration:
+      - "typescript-examples:1cc2abdef183de8a5e38d483dd0f62548a057217ee5899e438110bd03b0dfeba:ax"
+  - name: default
+    source_path: src/static-prop-access.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:054af81d29a6e68e7a9b2b083192b21b30f5dc7595d8e3098a3e964276213ef1:default"
+  - name: generateTimerComponent
+    source_path: src/component-generators.tsx
+    is_component: false
+    inferred_type: (Function -> (Function -> JSX))
+    resolved_type: (Function -> (Function -> JSX))
+    trace_to_declaration:
+      - "typescript-examples:1281790c5857aac7f058321f4806efc5f7ad28d10c7d773fb72a8d4b1c0bd11b:generateTimerComponent"
+  - name: song
+    source_path: src/function-call.ts
+    is_component: false
+    inferred_type: "ReturnTypeOf<TypeOf<typescript-examples:b3f087e793e0dc2fa0ac8dcf106721361194045f04be52211107080e981dbad2:sing>>"
+    resolved_type: "ReturnTypeOf<(Function -> Union<String<yekte yavrum, yekte> | String<\n>> | ReturnTypeOf<(Function -> String<pastirmalar tekte>)>)>"
+    trace_to_declaration:
+      - "typescript-examples:b3f087e793e0dc2fa0ac8dcf106721361194045f04be52211107080e981dbad2:song"
+  - name: useExpandableFlyoutContext
+    source_path: src/html-elements-in-recursive-ast.tsx
+    is_component: false
+    inferred_type: "(Function -> TypeOf<typescript-examples:039457fd1a392cc7194f548746284c915a5d897f5ecd0cbb8bc9b8d8734066f4:contextValue>)"
+    resolved_type: (Function -> ReturnTypeOf<Unknown>)
+    trace_to_declaration:
+      - "typescript-examples:039457fd1a392cc7194f548746284c915a5d897f5ecd0cbb8bc9b8d8734066f4:useExpandableFlyoutContext"
+

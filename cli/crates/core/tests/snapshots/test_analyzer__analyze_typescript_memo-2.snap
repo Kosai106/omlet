@@ -1,0 +1,21 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&export_results"
+---
+num_of_exports: 2
+exports:
+  - name: default
+    source_path: src/memo/preact-memo.tsx
+    is_component: true
+    inferred_type: "ReturnTypeOf<TypeOf<typescript-examples:d745a901effb5f0490a53fce4c928ae43da38882a27365b2726f6f7ed8213ac1:memo>>"
+    resolved_type: ReturnTypeOf<(Function -> (Function -> JSX))>
+    trace_to_declaration:
+      - "typescript-examples:d745a901effb5f0490a53fce4c928ae43da38882a27365b2726f6f7ed8213ac1:default"
+  - name: default
+    source_path: src/memo/react-memo.tsx
+    is_component: true
+    inferred_type: "ReturnTypeOf<TypeOf<typescript-examples:7ad34a0ab7af219a1ab4fceb3b3942cd96c6f50f1fdf701506b855bc8072f384:React>[memo]>"
+    resolved_type: "ReturnTypeOf<{ Component: (Function -> JSX), PureComponent: (Function -> JSX), forwardRef: (Function -> (Function -> JSX)), lazy: (Function -> ReturnTypeOf<Unknown>[default]), memo: (Function -> (Function -> JSX)) }[memo]>"
+    trace_to_declaration:
+      - "typescript-examples:7ad34a0ab7af219a1ab4fceb3b3942cd96c6f50f1fdf701506b855bc8072f384:default"
+

@@ -1,0 +1,134 @@
+---
+source: crates/core/tests/test_parser.rs
+expression: "&parser::Module::new(&RelativePathBuf::from_path(path.strip_prefix(&project_root).unwrap()).unwrap(),\n&project_root, &module_resolver,).unwrap()"
+input_file: samples/typescript/src/dynamic-import/loading-component.tsx
+---
+source_path: src/dynamic-import/loading-component.tsx
+id:
+  hash: "14994511909098089042"
+  path: src/dynamic-import/loading-component.tsx
+  package_name: UNKNOWN
+  mtype: local
+created_at: ~
+updated_at: ~
+exports:
+  - source:
+      Internal: "<anonymous-1>#0"
+    exported_name: default
+declarations:
+  - symbol: "<anonymous-1>#0"
+    source:
+      hash: "14994511909098089042"
+      path: src/dynamic-import/loading-component.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      Function:
+        - JSX
+    start:
+      line: 2
+      column: 16
+    end:
+      line: 4
+      column: 2
+scopes:
+  - owner: "__global#0"
+    parent: ~
+    children:
+      - "<anonymous-1>#0"
+      - "<anonymous-2>#0"
+    references:
+      - "div#1"
+    jsx_references:
+      - "div#1"
+  - owner: "<anonymous-1>#0"
+    parent: "__global#0"
+    children: []
+    references:
+      - "div#1"
+    jsx_references:
+      - "div#1"
+  - owner: "<anonymous-2>#0"
+    parent: "__global#0"
+    children: []
+    references:
+      - "div#1"
+    jsx_references:
+      - "div#1"
+body:
+  - type: ExportDefaultDeclaration
+    span:
+      start: 2
+      end: 66
+      ctxt: 0
+    decl:
+      async: false
+      body:
+        type: BlockStatement
+        span:
+          start: 29
+          end: 66
+          ctxt: 0
+        stmts:
+          - type: ReturnStatement
+            span:
+              start: 35
+              end: 64
+              ctxt: 0
+            argument:
+              type: JSXElement
+              span:
+                start: 42
+                end: 63
+                ctxt: 0
+              opening:
+                type: JSXOpeningElement
+                name:
+                  type: Identifier
+                  span:
+                    start: 43
+                    end: 46
+                    ctxt: 1
+                  value: div
+                  optional: false
+                span:
+                  start: 42
+                  end: 47
+                  ctxt: 0
+                attributes: []
+                selfClosing: false
+                typeArguments: ~
+              children:
+                - type: JSXText
+                  span:
+                    start: 47
+                    end: 57
+                    ctxt: 0
+                  value: loading...
+                  raw: loading...
+              closing:
+                type: JSXClosingElement
+                span:
+                  start: 57
+                  end: 63
+                  ctxt: 0
+                name:
+                  type: Identifier
+                  span:
+                    start: 59
+                    end: 62
+                    ctxt: 1
+                  value: div
+                  optional: false
+      decorators: []
+      generator: false
+      identifier: ~
+      params: []
+      returnType: ~
+      span:
+        start: 17
+        end: 66
+        ctxt: 0
+      type: FunctionExpression
+      typeParameters: ~

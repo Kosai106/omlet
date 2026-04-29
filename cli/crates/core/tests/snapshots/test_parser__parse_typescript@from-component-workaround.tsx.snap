@@ -1,0 +1,576 @@
+---
+source: crates/core/tests/test_parser.rs
+expression: "&parser::Module::new(&RelativePathBuf::from_path(path.strip_prefix(&project_root).unwrap()).unwrap(),\n&project_root, &module_resolver,).unwrap()"
+input_file: samples/typescript/src/styled-component-workaround/from-component-workaround.tsx
+---
+source_path: src/styled-component-workaround/from-component-workaround.tsx
+id:
+  hash: "635212125955545628"
+  path: src/styled-component-workaround/from-component-workaround.tsx
+  package_name: UNKNOWN
+  mtype: local
+created_at: ~
+updated_at: ~
+exports:
+  - source:
+      Internal: "Sample#1"
+    exported_name: Sample
+  - source:
+      Internal: "StyledSample#1"
+    exported_name: StyledSample
+  - source:
+      Internal: "Unknown#1"
+    exported_name: Unknown
+  - source:
+      Internal: "StyledUnknownComponent#1"
+    exported_name: StyledUnknownComponent
+  - source:
+      Internal: "default#0"
+    exported_name: default
+declarations:
+  - symbol: "Sample#1"
+    source:
+      hash: "635212125955545628"
+      path: src/styled-component-workaround/from-component-workaround.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<declaration>"
+    inferred_type:
+      Function:
+        - JSX
+    start:
+      line: 3
+      column: 8
+    end:
+      line: 5
+      column: 2
+  - symbol: "StyledSample#1"
+    source:
+      hash: "635212125955545628"
+      path: src/styled-component-workaround/from-component-workaround.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      ReturnTypeOf:
+        - ReturnTypeOf:
+            - TypeOf:
+                symbol:
+                  symbol: "styled#1"
+                  source:
+                    hash: "635212125955545628"
+                    path: src/styled-component-workaround/from-component-workaround.tsx
+                    package_name: UNKNOWN
+                    mtype: local
+                is_local: true
+            - - TypeOf:
+                  symbol:
+                    symbol: "Sample#1"
+                    source:
+                      hash: "635212125955545628"
+                      path: src/styled-component-workaround/from-component-workaround.tsx
+                      package_name: UNKNOWN
+                      mtype: local
+                  is_local: true
+        - []
+    start:
+      line: 7
+      column: 14
+    end:
+      line: 7
+      column: 26
+  - symbol: "StyledUnknownComponent#1"
+    source:
+      hash: "635212125955545628"
+      path: src/styled-component-workaround/from-component-workaround.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      ReturnTypeOf:
+        - ReturnTypeOf:
+            - TypeOf:
+                symbol:
+                  symbol: "styled#1"
+                  source:
+                    hash: "635212125955545628"
+                    path: src/styled-component-workaround/from-component-workaround.tsx
+                    package_name: UNKNOWN
+                    mtype: local
+                is_local: true
+            - - TypeOf:
+                  symbol:
+                    symbol: "Unknown#1"
+                    source:
+                      hash: "635212125955545628"
+                      path: src/styled-component-workaround/from-component-workaround.tsx
+                      package_name: UNKNOWN
+                      mtype: local
+                  is_local: true
+        - []
+    start:
+      line: 15
+      column: 14
+    end:
+      line: 15
+      column: 36
+  - symbol: "Unknown#1"
+    source:
+      hash: "635212125955545628"
+      path: src/styled-component-workaround/from-component-workaround.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<declaration>"
+    inferred_type:
+      Function: []
+    start:
+      line: 11
+      column: 8
+    end:
+      line: 13
+      column: 2
+  - symbol: "default#0"
+    source:
+      hash: "635212125955545628"
+      path: src/styled-component-workaround/from-component-workaround.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      TypeOf:
+        symbol:
+          symbol: "StyledSample#1"
+          source:
+            hash: "635212125955545628"
+            path: src/styled-component-workaround/from-component-workaround.tsx
+            package_name: UNKNOWN
+            mtype: local
+        is_local: true
+    start:
+      line: 19
+      column: 1
+    end:
+      line: 19
+      column: 29
+  - symbol: "styled#1"
+    source:
+      hash: "635212125955545628"
+      path: src/styled-component-workaround/from-component-workaround.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 17217891852522968423, path: \"src/styled-component-workaround/my-styled-components\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    inferred_type:
+      TypeOf:
+        symbol:
+          symbol: "default#0"
+          source:
+            hash: "17217891852522968423"
+            path: src/styled-component-workaround/my-styled-components
+            package_name: UNKNOWN
+            mtype: local
+        is_local: false
+    start:
+      line: 1
+      column: 8
+    end:
+      line: 1
+      column: 14
+scopes:
+  - owner: "__global#0"
+    parent: ~
+    children:
+      - "Sample#1"
+      - "Sample#1"
+      - "StyledSample#1"
+      - "StyledSample#1"
+      - "Unknown#1"
+      - "Unknown#1"
+      - "StyledUnknownComponent#1"
+      - "StyledUnknownComponent#1"
+      - "default#0"
+    references:
+      - "Sample#1"
+      - "StyledSample#1"
+      - "StyledUnknownComponent#1"
+      - "Unknown#1"
+      - "div#2"
+      - "styled#1"
+    jsx_references:
+      - "div#2"
+  - owner: "Sample#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "div#2"
+    jsx_references:
+      - "div#2"
+  - owner: "Sample#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "div#2"
+    jsx_references:
+      - "div#2"
+  - owner: "StyledSample#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "Sample#1"
+      - "styled#1"
+    jsx_references: []
+  - owner: "StyledSample#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "Sample#1"
+      - "styled#1"
+    jsx_references: []
+  - owner: "Unknown#1"
+    parent: "__global#0"
+    children: []
+    references: []
+    jsx_references: []
+  - owner: "Unknown#1"
+    parent: "__global#0"
+    children: []
+    references: []
+    jsx_references: []
+  - owner: "StyledUnknownComponent#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "Unknown#1"
+      - "styled#1"
+    jsx_references: []
+  - owner: "StyledUnknownComponent#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "Unknown#1"
+      - "styled#1"
+    jsx_references: []
+  - owner: "default#0"
+    parent: "__global#0"
+    children: []
+    references:
+      - "StyledSample#1"
+    jsx_references: []
+body:
+  - type: ImportDeclaration
+    span:
+      start: 1
+      end: 45
+      ctxt: 0
+    specifiers:
+      - type: ImportDefaultSpecifier
+        span:
+          start: 8
+          end: 14
+          ctxt: 0
+        local:
+          type: Identifier
+          span:
+            start: 8
+            end: 14
+            ctxt: 1
+          value: styled
+          optional: false
+    source:
+      type: StringLiteral
+      span:
+        start: 20
+        end: 44
+        ctxt: 0
+      value: "./my-styled-components"
+      raw: "\"./my-styled-components\""
+    typeOnly: false
+    asserts: ~
+  - type: ExportDeclaration
+    span:
+      start: 47
+      end: 105
+      ctxt: 0
+    declaration:
+      async: false
+      body:
+        type: BlockStatement
+        span:
+          start: 72
+          end: 105
+          ctxt: 0
+        stmts:
+          - type: ReturnStatement
+            span:
+              start: 78
+              end: 103
+              ctxt: 0
+            argument:
+              type: JSXElement
+              span:
+                start: 85
+                end: 102
+                ctxt: 0
+              opening:
+                type: JSXOpeningElement
+                name:
+                  type: Identifier
+                  span:
+                    start: 86
+                    end: 89
+                    ctxt: 2
+                  value: div
+                  optional: false
+                span:
+                  start: 85
+                  end: 90
+                  ctxt: 0
+                attributes: []
+                selfClosing: false
+                typeArguments: ~
+              children:
+                - type: JSXText
+                  span:
+                    start: 90
+                    end: 96
+                    ctxt: 0
+                  value: Sample
+                  raw: Sample
+              closing:
+                type: JSXClosingElement
+                span:
+                  start: 96
+                  end: 102
+                  ctxt: 0
+                name:
+                  type: Identifier
+                  span:
+                    start: 98
+                    end: 101
+                    ctxt: 2
+                  value: div
+                  optional: false
+      declare: false
+      decorators: []
+      generator: false
+      identifier:
+        type: Identifier
+        span:
+          start: 63
+          end: 69
+          ctxt: 1
+        value: Sample
+        optional: false
+      params: []
+      returnType: ~
+      span:
+        start: 54
+        end: 105
+        ctxt: 0
+      type: FunctionDeclaration
+      typeParameters: ~
+  - type: ExportDeclaration
+    span:
+      start: 107
+      end: 180
+      ctxt: 0
+    declaration:
+      type: VariableDeclaration
+      span:
+        start: 114
+        end: 180
+        ctxt: 0
+      kind: const
+      declare: false
+      declarations:
+        - type: VariableDeclarator
+          span:
+            start: 120
+            end: 179
+            ctxt: 0
+          id:
+            optional: false
+            span:
+              start: 120
+              end: 132
+              ctxt: 1
+            type: Identifier
+            typeAnnotation: ~
+            value: StyledSample
+          init:
+            type: TaggedTemplateExpression
+            span:
+              start: 135
+              end: 179
+              ctxt: 0
+            tag:
+              type: CallExpression
+              span:
+                start: 135
+                end: 149
+                ctxt: 0
+              callee:
+                type: Identifier
+                span:
+                  start: 135
+                  end: 141
+                  ctxt: 1
+                value: styled
+                optional: false
+              arguments:
+                - spread: ~
+                  expression:
+                    type: Identifier
+                    span:
+                      start: 142
+                      end: 148
+                      ctxt: 1
+                    value: Sample
+                    optional: false
+              typeArguments: ~
+            typeParameters: ~
+            template:
+              type: TemplateLiteral
+              span:
+                start: 149
+                end: 179
+                ctxt: 0
+              expressions: []
+              quasis:
+                - type: TemplateElement
+                  span:
+                    start: 150
+                    end: 178
+                    ctxt: 0
+                  tail: true
+                  cooked: "\n    background-color: red;\n"
+                  raw: "\n    background-color: red;\n"
+          definite: false
+  - type: ExportDeclaration
+    span:
+      start: 182
+      end: 223
+      ctxt: 0
+    declaration:
+      async: false
+      body:
+        type: BlockStatement
+        span:
+          start: 208
+          end: 223
+          ctxt: 0
+        stmts:
+          - type: ReturnStatement
+            span:
+              start: 214
+              end: 221
+              ctxt: 0
+            argument: ~
+      declare: false
+      decorators: []
+      generator: false
+      identifier:
+        type: Identifier
+        span:
+          start: 198
+          end: 205
+          ctxt: 1
+        value: Unknown
+        optional: false
+      params: []
+      returnType: ~
+      span:
+        start: 189
+        end: 223
+        ctxt: 0
+      type: FunctionDeclaration
+      typeParameters: ~
+  - type: ExportDeclaration
+    span:
+      start: 225
+      end: 309
+      ctxt: 0
+    declaration:
+      type: VariableDeclaration
+      span:
+        start: 232
+        end: 309
+        ctxt: 0
+      kind: const
+      declare: false
+      declarations:
+        - type: VariableDeclarator
+          span:
+            start: 238
+            end: 308
+            ctxt: 0
+          id:
+            optional: false
+            span:
+              start: 238
+              end: 260
+              ctxt: 1
+            type: Identifier
+            typeAnnotation: ~
+            value: StyledUnknownComponent
+          init:
+            type: TaggedTemplateExpression
+            span:
+              start: 263
+              end: 308
+              ctxt: 0
+            tag:
+              type: CallExpression
+              span:
+                start: 263
+                end: 278
+                ctxt: 0
+              callee:
+                type: Identifier
+                span:
+                  start: 263
+                  end: 269
+                  ctxt: 1
+                value: styled
+                optional: false
+              arguments:
+                - spread: ~
+                  expression:
+                    type: Identifier
+                    span:
+                      start: 270
+                      end: 277
+                      ctxt: 1
+                    value: Unknown
+                    optional: false
+              typeArguments: ~
+            typeParameters: ~
+            template:
+              type: TemplateLiteral
+              span:
+                start: 278
+                end: 308
+                ctxt: 0
+              expressions: []
+              quasis:
+                - type: TemplateElement
+                  span:
+                    start: 279
+                    end: 307
+                    ctxt: 0
+                  tail: true
+                  cooked: "\n    background-color: red;\n"
+                  raw: "\n    background-color: red;\n"
+          definite: false
+  - type: ExportDefaultExpression
+    span:
+      start: 311
+      end: 339
+      ctxt: 0
+    expression:
+      type: Identifier
+      span:
+        start: 326
+        end: 338
+        ctxt: 1
+      value: StyledSample
+      optional: false

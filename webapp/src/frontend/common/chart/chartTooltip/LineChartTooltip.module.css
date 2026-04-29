@@ -1,0 +1,98 @@
+.lineChartTooltip {
+    max-width: 320px;
+    width: max-content;
+    position: absolute;
+    padding: 16px;
+    border-radius: 2px;
+    border-left: 4px solid transparent;
+    background-color: var(--background-primary-color);
+    box-shadow: var(--shadow-default);
+    z-index: 100;
+}
+
+.lineChartTooltip.top {
+    transform: translate(-50%, calc(-100% - 8px));
+}
+
+.lineChartTooltip.bottom {
+    transform: translate(-50%, 8px);
+}
+
+.lineChartTooltipHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    margin-bottom: 16px;
+    color: var(--label-primary-color);
+}
+
+.lineChartTooltipHeader .lineChartTooltipTitle {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--label-primary-color);
+    overflow-wrap: anywhere;
+}
+
+.lineChartTooltipHeader .lineChartTooltipSubtitle {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--label-secondary-color);
+    white-space: nowrap;
+}
+
+.lineChartTooltipHeader .tags {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 6px 0;
+    gap: 4px;
+}
+
+.lineChartTooltipHeader .lineChartTooltipContent {
+    font-size: 12px;
+    color: var(--label-secondary-color);
+    white-space: nowrap;
+}
+
+.lineChartTooltipValue {
+    font-size: 12px;
+    color: var(--label-secondary-color);
+    white-space: nowrap;
+}
+
+.lineChartTooltipValue .value {
+    font-weight: 600;
+    color: var(--label-primary-color);
+}
+
+.lineChartTooltipValue .noChange {
+    font-weight: 600;
+}
+
+.lineChartTooltipValue .increase {
+    font-weight: 600;
+    color: var(--accent-green);
+}
+
+.lineChartTooltipValue .decrease {
+    font-weight: 600;
+    color: var(--accent-warning-color);
+}
+
+.lineChartTooltipValueCell .lineChartTooltipValue {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--label-primary-color);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.lineChartTooltipValueCell .lineChartTooltipTotal {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--label-secondary-color);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

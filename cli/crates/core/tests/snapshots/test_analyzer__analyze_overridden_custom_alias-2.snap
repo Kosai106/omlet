@@ -1,0 +1,44 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&export_results"
+---
+num_of_exports: 5
+exports:
+  - name: Button
+    source_path: packages/button/src/button.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@ds/button:aa177d9a4f4bd2a0cd476ccd9b7af50ebe97191eec752a4518b83993c72b5d54:Button"
+  - name: Button
+    source_path: packages/button/src/index.ts
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@ds/button:6c045c0462bdc8cc74251d717131bae3ea23b7584b6e1256d05b9bea74b32da3:Button"
+      - "@ds/button:aa177d9a4f4bd2a0cd476ccd9b7af50ebe97191eec752a4518b83993c72b5d54:Button"
+  - name: Form
+    source_path: packages/form/src/form.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@ds/form:9c7ac2aa589944ff0ccaeb43c7ee1c335b6017691fc1ad455ac7eaf81d7028bf:Form"
+  - name: Form
+    source_path: packages/form/src/index.ts
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@ds/form:f6e0bedd6d5e037f0cd13e25c98f5687b9160fcb276c5c12bcb3e0b51c22912e:Form"
+      - "@ds/form:9c7ac2aa589944ff0ccaeb43c7ee1c335b6017691fc1ad455ac7eaf81d7028bf:Form"
+  - name: unrelatedCode
+    source_path: packages/button/build/index.js
+    is_component: false
+    inferred_type: (Function -> Unknown)
+    resolved_type: (Function -> Unknown)
+    trace_to_declaration:
+      - "@ds/button:7336b2f9df436b7a6001329b0593a6ff108098bd0f3a78892fa41cd27bfb588a:unrelatedCode"
+

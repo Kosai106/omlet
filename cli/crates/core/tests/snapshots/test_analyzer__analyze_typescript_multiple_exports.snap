@@ -1,0 +1,49 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&component_results"
+---
+num_of_components: 2
+components:
+  - definition_id: "typescript-examples:ab7ecf30bf6908c21303b03455a8a8ca0636fd7e384116a2e0d24ad5747a0946:Margin"
+    name: Margin
+    export_ids:
+      - "typescript-examples:src/multiple-exports/child:Margin"
+      - "typescript-examples:src/multiple-exports/child:default"
+    package_name: typescript-examples
+    source_path: src/multiple-exports/child.tsx
+    dependencies: []
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:d49565e3f22bb41c2c03e96a149a0eca8e16e499bbe983835420b63653c0a3c7:Parent"
+    name: Parent
+    export_ids:
+      - "typescript-examples:src/multiple-exports/parent:Parent"
+    package_name: typescript-examples
+    source_path: src/multiple-exports/parent.tsx
+    dependencies:
+      - from: "typescript-examples:d49565e3f22bb41c2c03e96a149a0eca8e16e499bbe983835420b63653c0a3c7:Parent"
+        to: "typescript-examples:ab7ecf30bf6908c21303b03455a8a8ca0636fd7e384116a2e0d24ad5747a0946:Margin"
+        references:
+          - trace:
+              - "typescript-examples:ab7ecf30bf6908c21303b03455a8a8ca0636fd7e384116a2e0d24ad5747a0946:Margin"
+            usages:
+              - start:
+                  line: 7
+                  column: 13
+                end:
+                  line: 7
+                  column: 22
+                props: []
+          - trace:
+              - "typescript-examples:ab7ecf30bf6908c21303b03455a8a8ca0636fd7e384116a2e0d24ad5747a0946:default"
+            usages:
+              - start:
+                  line: 6
+                  column: 13
+                end:
+                  line: 6
+                  column: 21
+                props: []
+    props: []
+    html_elements: []
+

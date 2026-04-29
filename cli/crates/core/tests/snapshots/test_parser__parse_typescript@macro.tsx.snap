@@ -1,0 +1,328 @@
+---
+source: crates/core/tests/test_parser.rs
+expression: "&parser::Module::new(&RelativePathBuf::from_path(path.strip_prefix(&project_root).unwrap()).unwrap(),\n&project_root, &module_resolver,).unwrap()"
+input_file: samples/typescript/src/styled-component/macro.tsx
+---
+source_path: src/styled-component/macro.tsx
+id:
+  hash: "14776544188971319404"
+  path: src/styled-component/macro.tsx
+  package_name: UNKNOWN
+  mtype: local
+created_at: ~
+updated_at: ~
+exports:
+  - source:
+      Internal: "SampleMacro#1"
+    exported_name: SampleMacro
+  - source:
+      Internal: "StyledSampleMacro#1"
+    exported_name: StyledSampleMacro
+declarations:
+  - symbol: "SampleMacro#1"
+    source:
+      hash: "14776544188971319404"
+      path: src/styled-component/macro.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<declaration>"
+    inferred_type:
+      Function:
+        - JSX
+    start:
+      line: 3
+      column: 8
+    end:
+      line: 5
+      column: 2
+  - symbol: "StyledSampleMacro#1"
+    source:
+      hash: "14776544188971319404"
+      path: src/styled-component/macro.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      ReturnTypeOf:
+        - ReturnTypeOf:
+            - TypeOf:
+                symbol:
+                  symbol: "styled#1"
+                  source:
+                    hash: "14776544188971319404"
+                    path: src/styled-component/macro.tsx
+                    package_name: UNKNOWN
+                    mtype: local
+                is_local: true
+            - - TypeOf:
+                  symbol:
+                    symbol: "SampleMacro#1"
+                    source:
+                      hash: "14776544188971319404"
+                      path: src/styled-component/macro.tsx
+                      package_name: UNKNOWN
+                      mtype: local
+                  is_local: true
+        - []
+    start:
+      line: 7
+      column: 14
+    end:
+      line: 7
+      column: 31
+  - symbol: "styled#1"
+    source:
+      hash: "14776544188971319404"
+      path: src/styled-component/macro.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 15918822026408337982, path: \"macro\", pkg_name: \"styled-components\", mtype: Package } }>"
+    inferred_type:
+      TypeOf:
+        symbol:
+          symbol: "default#0"
+          source:
+            hash: "15918822026408337982"
+            path: macro
+            package_name: styled-components
+            mtype: package
+        is_local: false
+    start:
+      line: 1
+      column: 8
+    end:
+      line: 1
+      column: 14
+scopes:
+  - owner: "__global#0"
+    parent: ~
+    children:
+      - "SampleMacro#1"
+      - "SampleMacro#1"
+      - "StyledSampleMacro#1"
+      - "StyledSampleMacro#1"
+    references:
+      - "SampleMacro#1"
+      - "StyledSampleMacro#1"
+      - "div#2"
+      - "styled#1"
+    jsx_references:
+      - "div#2"
+  - owner: "SampleMacro#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "div#2"
+    jsx_references:
+      - "div#2"
+  - owner: "SampleMacro#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "div#2"
+    jsx_references:
+      - "div#2"
+  - owner: "StyledSampleMacro#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "SampleMacro#1"
+      - "styled#1"
+    jsx_references: []
+  - owner: "StyledSampleMacro#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "SampleMacro#1"
+      - "styled#1"
+    jsx_references: []
+body:
+  - type: ImportDeclaration
+    span:
+      start: 1
+      end: 46
+      ctxt: 0
+    specifiers:
+      - type: ImportDefaultSpecifier
+        span:
+          start: 8
+          end: 14
+          ctxt: 0
+        local:
+          type: Identifier
+          span:
+            start: 8
+            end: 14
+            ctxt: 1
+          value: styled
+          optional: false
+    source:
+      type: StringLiteral
+      span:
+        start: 20
+        end: 45
+        ctxt: 0
+      value: styled-components/macro
+      raw: "\"styled-components/macro\""
+    typeOnly: false
+    asserts: ~
+  - type: ExportDeclaration
+    span:
+      start: 48
+      end: 111
+      ctxt: 0
+    declaration:
+      async: false
+      body:
+        type: BlockStatement
+        span:
+          start: 78
+          end: 111
+          ctxt: 0
+        stmts:
+          - type: ReturnStatement
+            span:
+              start: 84
+              end: 109
+              ctxt: 0
+            argument:
+              type: JSXElement
+              span:
+                start: 91
+                end: 108
+                ctxt: 0
+              opening:
+                type: JSXOpeningElement
+                name:
+                  type: Identifier
+                  span:
+                    start: 92
+                    end: 95
+                    ctxt: 2
+                  value: div
+                  optional: false
+                span:
+                  start: 91
+                  end: 96
+                  ctxt: 0
+                attributes: []
+                selfClosing: false
+                typeArguments: ~
+              children:
+                - type: JSXText
+                  span:
+                    start: 96
+                    end: 102
+                    ctxt: 0
+                  value: Sample
+                  raw: Sample
+              closing:
+                type: JSXClosingElement
+                span:
+                  start: 102
+                  end: 108
+                  ctxt: 0
+                name:
+                  type: Identifier
+                  span:
+                    start: 104
+                    end: 107
+                    ctxt: 2
+                  value: div
+                  optional: false
+      declare: false
+      decorators: []
+      generator: false
+      identifier:
+        type: Identifier
+        span:
+          start: 64
+          end: 75
+          ctxt: 1
+        value: SampleMacro
+        optional: false
+      params: []
+      returnType: ~
+      span:
+        start: 55
+        end: 111
+        ctxt: 0
+      type: FunctionDeclaration
+      typeParameters: ~
+  - type: ExportDeclaration
+    span:
+      start: 113
+      end: 194
+      ctxt: 0
+    declaration:
+      type: VariableDeclaration
+      span:
+        start: 120
+        end: 194
+        ctxt: 0
+      kind: const
+      declare: false
+      declarations:
+        - type: VariableDeclarator
+          span:
+            start: 126
+            end: 193
+            ctxt: 0
+          id:
+            optional: false
+            span:
+              start: 126
+              end: 143
+              ctxt: 1
+            type: Identifier
+            typeAnnotation: ~
+            value: StyledSampleMacro
+          init:
+            type: TaggedTemplateExpression
+            span:
+              start: 146
+              end: 193
+              ctxt: 0
+            tag:
+              type: CallExpression
+              span:
+                start: 146
+                end: 165
+                ctxt: 0
+              callee:
+                type: Identifier
+                span:
+                  start: 146
+                  end: 152
+                  ctxt: 1
+                value: styled
+                optional: false
+              arguments:
+                - spread: ~
+                  expression:
+                    type: Identifier
+                    span:
+                      start: 153
+                      end: 164
+                      ctxt: 1
+                    value: SampleMacro
+                    optional: false
+              typeArguments: ~
+            typeParameters: ~
+            template:
+              type: TemplateLiteral
+              span:
+                start: 165
+                end: 193
+                ctxt: 0
+              expressions: []
+              quasis:
+                - type: TemplateElement
+                  span:
+                    start: 166
+                    end: 192
+                    ctxt: 0
+                  tail: true
+                  cooked: "\n  background-color: red;\n"
+                  raw: "\n  background-color: red;\n"
+          definite: false

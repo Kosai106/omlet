@@ -1,0 +1,169 @@
+---
+source: crates/core/tests/test_parser.rs
+expression: "&parser::Module::new(&RelativePathBuf::from_path(path.strip_prefix(&project_root).unwrap()).unwrap(),\n&project_root, &module_resolver,).unwrap()"
+input_file: samples/typescript/src/module-decls/module-import-assertions.ts
+---
+source_path: src/module-decls/module-import-assertions.ts
+id:
+  hash: "13987688687699692002"
+  path: src/module-decls/module-import-assertions.ts
+  package_name: UNKNOWN
+  mtype: local
+created_at: ~
+updated_at: ~
+exports: []
+declarations:
+  - symbol: "json#1"
+    source:
+      hash: "13987688687699692002"
+      path: src/module-decls/module-import-assertions.ts
+      package_name: UNKNOWN
+      mtype: local
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 7717424795633916708, path: \"src/module-decls/foo.json\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    inferred_type:
+      TypeOf:
+        symbol:
+          symbol: "default#0"
+          source:
+            hash: "7717424795633916708"
+            path: src/module-decls/foo.json
+            package_name: UNKNOWN
+            mtype: local
+        is_local: false
+    start:
+      line: 1
+      column: 8
+    end:
+      line: 1
+      column: 12
+scopes:
+  - owner: "__global#0"
+    parent: ~
+    children: []
+    references:
+      - "assert#0"
+      - "json#1"
+      - "type#0"
+    jsx_references: []
+body:
+  - type: ImportDeclaration
+    span:
+      start: 1
+      end: 55
+      ctxt: 0
+    specifiers:
+      - type: ImportDefaultSpecifier
+        span:
+          start: 8
+          end: 12
+          ctxt: 0
+        local:
+          type: Identifier
+          span:
+            start: 8
+            end: 12
+            ctxt: 1
+          value: json
+          optional: false
+    source:
+      type: StringLiteral
+      span:
+        start: 18
+        end: 30
+        ctxt: 0
+      value: "./foo.json"
+      raw: "\"./foo.json\""
+    typeOnly: false
+    asserts:
+      type: ObjectExpression
+      span:
+        start: 38
+        end: 54
+        ctxt: 0
+      properties:
+        - type: KeyValueProperty
+          key:
+            type: Identifier
+            span:
+              start: 40
+              end: 44
+              ctxt: 0
+            value: type
+            optional: false
+          value:
+            type: StringLiteral
+            span:
+              start: 46
+              end: 52
+              ctxt: 0
+            value: json
+            raw: "\"json\""
+  - type: ExpressionStatement
+    span:
+      start: 56
+      end: 105
+      ctxt: 0
+    expression:
+      type: CallExpression
+      span:
+        start: 56
+        end: 104
+        ctxt: 0
+      callee:
+        type: Import
+        span:
+          start: 56
+          end: 62
+          ctxt: 0
+      arguments:
+        - spread: ~
+          expression:
+            type: StringLiteral
+            span:
+              start: 63
+              end: 73
+              ctxt: 0
+            value: foo.json
+            raw: "\"foo.json\""
+        - spread: ~
+          expression:
+            type: ObjectExpression
+            span:
+              start: 75
+              end: 103
+              ctxt: 0
+            properties:
+              - type: KeyValueProperty
+                key:
+                  type: Identifier
+                  span:
+                    start: 77
+                    end: 83
+                    ctxt: 0
+                  value: assert
+                  optional: false
+                value:
+                  type: ObjectExpression
+                  span:
+                    start: 85
+                    end: 101
+                    ctxt: 0
+                  properties:
+                    - type: KeyValueProperty
+                      key:
+                        type: Identifier
+                        span:
+                          start: 87
+                          end: 91
+                          ctxt: 0
+                        value: type
+                        optional: false
+                      value:
+                        type: StringLiteral
+                        span:
+                          start: 93
+                          end: 99
+                          ctxt: 0
+                        value: json
+                        raw: "\"json\""
+      typeArguments: ~

@@ -1,0 +1,27 @@
+[package]
+name = "omlet"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "omlet"
+
+[dependencies]
+ahash = "0.7.6"
+relative-path = { version = "1.6.0", features = ["serde"] }
+serde = { version = "1.0", features = ["rc"] }
+swc = "0.185.0"
+swc_common = { version = "0.18.8", features = ["tty-emitter"]}
+swc_ecmascript= { version = "0.160.0", features = ["parser", "transforms", "visit"] }
+regex = "1.5.4"
+
+logger = { path = "../logger" }
+utils = { path = "../utils" }
+serde_json = "1.0.81"
+indexmap = "1.8.1"
+lazy_static = "1.4.0"
+derivative = "2.2.0"
+pathdiff = "0.2.1"
+
+[dev-dependencies]
+snap = { path = "../snap" }

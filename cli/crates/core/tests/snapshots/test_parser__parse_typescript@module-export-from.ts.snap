@@ -1,0 +1,345 @@
+---
+source: crates/core/tests/test_parser.rs
+expression: "&parser::Module::new(&RelativePathBuf::from_path(path.strip_prefix(&project_root).unwrap()).unwrap(),\n&project_root, &module_resolver,).unwrap()"
+input_file: samples/typescript/src/module-decls/module-export-from.ts
+---
+source_path: src/module-decls/module-export-from.ts
+id:
+  hash: "16515720058374871253"
+  path: src/module-decls/module-export-from.ts
+  package_name: UNKNOWN
+  mtype: local
+created_at: ~
+updated_at: ~
+exports:
+  - source:
+      External:
+        symbol: "<wildcard>#0"
+        source:
+          hash: "9365135129303766477"
+          path: ""
+          package_name: golly
+          mtype: package
+    exported_name: "<wildcard>"
+  - source:
+      Internal: "dolly#0"
+    exported_name: dolly
+  - source:
+      External:
+        symbol: "coronado#0"
+        source:
+          hash: "6415462426383639770"
+          path: ""
+          package_name: molly
+          mtype: package
+    exported_name: coronado
+  - source:
+      External:
+        symbol: "scrimshaw#0"
+        source:
+          hash: "6415462426383639770"
+          path: ""
+          package_name: molly
+          mtype: package
+    exported_name: scrimshaw
+  - source:
+      External:
+        symbol: "coronado#0"
+        source:
+          hash: "6415462426383639770"
+          path: ""
+          package_name: molly
+          mtype: package
+    exported_name: cPeep
+  - source:
+      External:
+        symbol: "scrimshaw#0"
+        source:
+          hash: "6415462426383639770"
+          path: ""
+          package_name: molly
+          mtype: package
+    exported_name: sPeep
+  - source:
+      External:
+        symbol: "default#0"
+        source:
+          hash: "6415462426383639770"
+          path: ""
+          package_name: molly
+          mtype: package
+    exported_name: default
+  - source:
+      External:
+        symbol: "hollyMolly#0"
+        source:
+          hash: "6415462426383639770"
+          path: ""
+          package_name: molly
+          mtype: package
+    exported_name: hollyMolly
+  - source:
+      External:
+        symbol: "scrimshaw#0"
+        source:
+          hash: "6415462426383639770"
+          path: ""
+          package_name: molly
+          mtype: package
+    exported_name: shaw
+declarations:
+  - symbol: "dolly#0"
+    source:
+      hash: "16515720058374871253"
+      path: src/module-decls/module-export-from.ts
+      package_name: UNKNOWN
+      mtype: local
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('<wildcard>' type=dynamic), context: #0 }, source: ModuleId { hash: 18187564039066053863, path: \"\", pkg_name: \"dolly\", mtype: Package } }>"
+    inferred_type:
+      TypeOf:
+        symbol:
+          symbol: "<wildcard>#0"
+          source:
+            hash: "18187564039066053863"
+            path: ""
+            package_name: dolly
+            mtype: package
+        is_local: false
+    start:
+      line: 2
+      column: 1
+    end:
+      line: 2
+      column: 32
+scopes:
+  - owner: "__global#0"
+    parent: ~
+    children: []
+    references:
+      - "cPeep#0"
+      - "coronado#0"
+      - "default#0"
+      - "dolly#0"
+      - "hollyMolly#0"
+      - "sPeep#0"
+      - "scrimshaw#0"
+      - "shaw#0"
+    jsx_references: []
+body:
+  - type: ExportAllDeclaration
+    span:
+      start: 1
+      end: 23
+      ctxt: 0
+    source:
+      type: StringLiteral
+      span:
+        start: 15
+        end: 22
+        ctxt: 0
+      value: golly
+      raw: "\"golly\""
+    asserts: ~
+  - type: ExportNamedDeclaration
+    span:
+      start: 24
+      end: 55
+      ctxt: 0
+    specifiers:
+      - type: ExportNamespaceSpecifier
+        span:
+          start: 31
+          end: 41
+          ctxt: 0
+        name:
+          type: Identifier
+          span:
+            start: 36
+            end: 41
+            ctxt: 0
+          value: dolly
+          optional: false
+    source:
+      type: StringLiteral
+      span:
+        start: 47
+        end: 54
+        ctxt: 0
+      value: dolly
+      raw: "\"dolly\""
+    typeOnly: false
+    asserts: ~
+  - type: ExportNamedDeclaration
+    span:
+      start: 56
+      end: 100
+      ctxt: 0
+    specifiers:
+      - type: ExportSpecifier
+        span:
+          start: 65
+          end: 73
+          ctxt: 0
+        orig:
+          type: Identifier
+          span:
+            start: 65
+            end: 73
+            ctxt: 0
+          value: coronado
+          optional: false
+        exported: ~
+        isTypeOnly: false
+      - type: ExportSpecifier
+        span:
+          start: 75
+          end: 84
+          ctxt: 0
+        orig:
+          type: Identifier
+          span:
+            start: 75
+            end: 84
+            ctxt: 0
+          value: scrimshaw
+          optional: false
+        exported: ~
+        isTypeOnly: false
+    source:
+      type: StringLiteral
+      span:
+        start: 92
+        end: 99
+        ctxt: 0
+      value: molly
+      raw: "\"molly\""
+    typeOnly: false
+    asserts: ~
+  - type: ExportNamedDeclaration
+    span:
+      start: 101
+      end: 163
+      ctxt: 0
+    specifiers:
+      - type: ExportSpecifier
+        span:
+          start: 110
+          end: 127
+          ctxt: 0
+        orig:
+          type: Identifier
+          span:
+            start: 110
+            end: 118
+            ctxt: 0
+          value: coronado
+          optional: false
+        exported:
+          type: Identifier
+          span:
+            start: 122
+            end: 127
+            ctxt: 0
+          value: cPeep
+          optional: false
+        isTypeOnly: false
+      - type: ExportSpecifier
+        span:
+          start: 129
+          end: 147
+          ctxt: 0
+        orig:
+          type: Identifier
+          span:
+            start: 129
+            end: 138
+            ctxt: 0
+          value: scrimshaw
+          optional: false
+        exported:
+          type: Identifier
+          span:
+            start: 142
+            end: 147
+            ctxt: 0
+          value: sPeep
+          optional: false
+        isTypeOnly: false
+    source:
+      type: StringLiteral
+      span:
+        start: 155
+        end: 162
+        ctxt: 0
+      value: molly
+      raw: "\"molly\""
+    typeOnly: false
+    asserts: ~
+  - type: ExportNamedDeclaration
+    span:
+      start: 164
+      end: 227
+      ctxt: 0
+    specifiers:
+      - type: ExportSpecifier
+        span:
+          start: 173
+          end: 180
+          ctxt: 0
+        orig:
+          type: Identifier
+          span:
+            start: 173
+            end: 180
+            ctxt: 0
+          value: default
+          optional: false
+        exported: ~
+        isTypeOnly: false
+      - type: ExportSpecifier
+        span:
+          start: 182
+          end: 192
+          ctxt: 0
+        orig:
+          type: Identifier
+          span:
+            start: 182
+            end: 192
+            ctxt: 0
+          value: hollyMolly
+          optional: false
+        exported: ~
+        isTypeOnly: false
+      - type: ExportSpecifier
+        span:
+          start: 194
+          end: 211
+          ctxt: 0
+        orig:
+          type: Identifier
+          span:
+            start: 194
+            end: 203
+            ctxt: 0
+          value: scrimshaw
+          optional: false
+        exported:
+          type: Identifier
+          span:
+            start: 207
+            end: 211
+            ctxt: 0
+          value: shaw
+          optional: false
+        isTypeOnly: false
+    source:
+      type: StringLiteral
+      span:
+        start: 219
+        end: 226
+        ctxt: 0
+      value: molly
+      raw: "\"molly\""
+    typeOnly: false
+    asserts: ~

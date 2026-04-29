@@ -1,0 +1,87 @@
+.header {
+    position: sticky;
+    top: 0;
+    background-color: var(--background-inverse-color);
+    z-index: 100;
+}
+
+.header .topContent {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--spacing-m) var(--spacing-m) calc(var(--spacing-m) - var(--border-width));
+    border-bottom: solid var(--border-width) rgba(var(--background-primary-color-rgb), 0.15);
+}
+
+.header .topContent .topContentSide {
+    display: flex;
+    gap: var(--spacing-s);
+    align-items: center;
+}
+
+.header .topContent .topContentSide .wordMark {
+    margin: 0 var(--spacing-s);
+}
+
+.header .mainContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    height: var(--header-height);
+    padding: 0 24px 0 16px;
+    overflow: hidden;
+}
+
+.header .mainContent .leftContent {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--label-selected-color);
+    gap: var(--spacing-m);
+}
+
+.header .mainContent .rightContent {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.header .mainContent .newAnalysisButton {
+    pointer-events: none;
+    transition: opacity 200ms ease-out;
+    opacity: 0;
+}
+
+.header .mainContent .newAnalysisButton.visible {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.header .mainContent .seamlessButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 26px;
+    padding: 0 12px;
+    text-align: center;
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--label-selected-color);
+    text-wrap: nowrap;
+}
+
+.form {
+    position: fixed;
+    visibility: hidden;
+}
+
+.title {
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--label-selected-color);
+    font-weight: normal;
+}

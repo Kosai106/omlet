@@ -1,0 +1,258 @@
+---
+source: crates/core/tests/test_parser.rs
+expression: "&parser::Module::new(&RelativePathBuf::from_path(path.strip_prefix(&project_root).unwrap()).unwrap(),\n&project_root, &module_resolver,).unwrap()"
+input_file: samples/typescript/src/functional-component/ts-extensions/assign-non-null.tsx
+---
+source_path: src/functional-component/ts-extensions/assign-non-null.tsx
+id:
+  hash: "13147496068781323489"
+  path: src/functional-component/ts-extensions/assign-non-null.tsx
+  package_name: UNKNOWN
+  mtype: local
+created_at: ~
+updated_at: ~
+exports:
+  - source:
+      Internal: "Sample#1"
+    exported_name: Sample
+declarations:
+  - symbol: "<anonymous-1>#0"
+    source:
+      hash: "13147496068781323489"
+      path: src/functional-component/ts-extensions/assign-non-null.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      Function:
+        - JSX
+    start:
+      line: 3
+      column: 23
+    end:
+      line: 5
+      column: 2
+  - symbol: "React#1"
+    source:
+      hash: "13147496068781323489"
+      path: src/functional-component/ts-extensions/assign-non-null.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
+    inferred_type:
+      TypeOf:
+        symbol:
+          symbol: "default#0"
+          source:
+            hash: "11002248552354871051"
+            path: ""
+            package_name: react
+            mtype: package
+        is_local: false
+    start:
+      line: 1
+      column: 8
+    end:
+      line: 1
+      column: 13
+  - symbol: "Sample#1"
+    source:
+      hash: "13147496068781323489"
+      path: src/functional-component/ts-extensions/assign-non-null.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      Function:
+        - JSX
+    start:
+      line: 3
+      column: 14
+    end:
+      line: 3
+      column: 20
+scopes:
+  - owner: "__global#0"
+    parent: ~
+    children:
+      - "Sample#1"
+      - "Sample#1"
+      - "<anonymous-3>#0"
+    references:
+      - "React#1"
+      - "Sample#1"
+      - "div#2"
+    jsx_references:
+      - "div#2"
+  - owner: "Sample#1"
+    parent: "__global#0"
+    children:
+      - "<anonymous-1>#0"
+    references:
+      - "div#2"
+    jsx_references:
+      - "div#2"
+  - owner: "<anonymous-1>#0"
+    parent: "Sample#1"
+    children: []
+    references:
+      - "div#2"
+    jsx_references:
+      - "div#2"
+  - owner: "Sample#1"
+    parent: "__global#0"
+    children:
+      - "<anonymous-2>#0"
+    references:
+      - "div#2"
+    jsx_references:
+      - "div#2"
+  - owner: "<anonymous-2>#0"
+    parent: "Sample#1"
+    children: []
+    references:
+      - "div#2"
+    jsx_references:
+      - "div#2"
+  - owner: "<anonymous-3>#0"
+    parent: "__global#0"
+    children: []
+    references:
+      - "div#2"
+    jsx_references:
+      - "div#2"
+body:
+  - type: ImportDeclaration
+    span:
+      start: 1
+      end: 27
+      ctxt: 0
+    specifiers:
+      - type: ImportDefaultSpecifier
+        span:
+          start: 8
+          end: 13
+          ctxt: 0
+        local:
+          type: Identifier
+          span:
+            start: 8
+            end: 13
+            ctxt: 1
+          value: React
+          optional: false
+    source:
+      type: StringLiteral
+      span:
+        start: 19
+        end: 26
+        ctxt: 0
+      value: react
+      raw: "\"react\""
+    typeOnly: false
+    asserts: ~
+  - type: ExportDeclaration
+    span:
+      start: 29
+      end: 98
+      ctxt: 0
+    declaration:
+      type: VariableDeclaration
+      span:
+        start: 36
+        end: 98
+        ctxt: 0
+      kind: const
+      declare: false
+      declarations:
+        - type: VariableDeclarator
+          span:
+            start: 42
+            end: 97
+            ctxt: 0
+          id:
+            optional: false
+            span:
+              start: 42
+              end: 48
+              ctxt: 1
+            type: Identifier
+            typeAnnotation: ~
+            value: Sample
+          init:
+            type: TsNonNullExpression
+            span:
+              start: 51
+              end: 97
+              ctxt: 0
+            expression:
+              async: false
+              body:
+                type: BlockStatement
+                span:
+                  start: 63
+                  end: 96
+                  ctxt: 0
+                stmts:
+                  - type: ReturnStatement
+                    span:
+                      start: 69
+                      end: 94
+                      ctxt: 0
+                    argument:
+                      type: JSXElement
+                      span:
+                        start: 76
+                        end: 93
+                        ctxt: 0
+                      opening:
+                        type: JSXOpeningElement
+                        name:
+                          type: Identifier
+                          span:
+                            start: 77
+                            end: 80
+                            ctxt: 2
+                          value: div
+                          optional: false
+                        span:
+                          start: 76
+                          end: 81
+                          ctxt: 0
+                        attributes: []
+                        selfClosing: false
+                        typeArguments: ~
+                      children:
+                        - type: JSXText
+                          span:
+                            start: 81
+                            end: 87
+                            ctxt: 0
+                          value: Sample
+                          raw: Sample
+                      closing:
+                        type: JSXClosingElement
+                        span:
+                          start: 87
+                          end: 93
+                          ctxt: 0
+                        name:
+                          type: Identifier
+                          span:
+                            start: 89
+                            end: 92
+                            ctxt: 2
+                          value: div
+                          optional: false
+              decorators: []
+              generator: false
+              identifier: ~
+              params: []
+              returnType: ~
+              span:
+                start: 51
+                end: 96
+                ctxt: 0
+              type: FunctionExpression
+              typeParameters: ~
+          definite: false

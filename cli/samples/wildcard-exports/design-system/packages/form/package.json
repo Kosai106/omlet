@@ -1,0 +1,13 @@
+{
+    "name": "@wildcard-exports/design-system-form",
+    "version": "1.0.0",
+    "main": "dist/index.js",
+    "devDependencies": {
+        "@types/react": "~18.0.0",
+        "react": "~18.2.0",
+        "react-dom": "~18.2.0"
+    },
+    "dependencies": {
+        "@wildcard-exports/design-system-button": "workspace:*"
+    }
+}

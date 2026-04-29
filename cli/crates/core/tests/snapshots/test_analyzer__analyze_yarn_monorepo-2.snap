@@ -1,0 +1,125 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&export_results"
+---
+num_of_exports: 16
+exports:
+  - name: Button
+    source_path: packages/comps/src/component/button.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "comps:1a3da3ca662917d43197ff4fcc106b1acffcefbcdef05c86c06f9aa4a2de8ff6:Button"
+  - name: Button
+    source_path: packages/comps/src/component/index.ts
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "comps:cee0f221c8852d6f81e17ddeeed8e4bfc9f925158e5c8e9935191f800d3a9aff:Button"
+      - "comps:1a3da3ca662917d43197ff4fcc106b1acffcefbcdef05c86c06f9aa4a2de8ff6:Button"
+  - name: Button
+    source_path: packages/comps/src/index.ts
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "comps:9b2e87a886ed977976f171fddd4f172938e310feb782653570bcc9db71c2a665:Button"
+      - "comps:cee0f221c8852d6f81e17ddeeed8e4bfc9f925158e5c8e9935191f800d3a9aff:Button"
+      - "comps:1a3da3ca662917d43197ff4fcc106b1acffcefbcdef05c86c06f9aa4a2de8ff6:Button"
+  - name: Component
+    source_path: packages/main/src/main.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "main:9cedb271550b9f6303840c1f9261dcf2a324f83d1b666610edcb285799e022d9:Component"
+  - name: DotGrid
+    source_path: packages/multi-part/index.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "multi-part:a42b2429a16682347b578115d3e4c2c462b95f96f44607b452f65a90659e5020:DotGrid"
+      - "multi-part:05f76ed9df109a10b5cf6e8fd796bc1c66c05d893af4ea4c3b6ea3203e9704f3:default"
+  - name: SecondTitle
+    source_path: packages/comps/src/title.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "comps:e199b37114a6a6d042f24d9992340b106f7a357d17466d127dd51ea6e78d871d:SecondTitle"
+  - name: SinglePartMain
+    source_path: packages/single-part/src/index.ts
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "single-part:e94601255d83e076ad087c18504a3eb8c9fdef790bf47ab775d537a35effc891:SinglePartMain"
+      - "single-part:68aa331cf8aa56cb7edef2623c37a76d7506b5751b3f3fcb0ccb7927d6737f27:default"
+  - name: concatStrings
+    source_path: packages/single-part/src/index.ts
+    is_component: false
+    inferred_type: "(Function -> ReturnTypeOf<Array<String<single-part:concatStrings>>[join]>)"
+    resolved_type: "(Function -> ReturnTypeOf<Array<String<single-part:concatStrings>>[join]>)"
+    trace_to_declaration:
+      - "single-part:e94601255d83e076ad087c18504a3eb8c9fdef790bf47ab775d537a35effc891:concatStrings"
+      - "single-part:329f0a68b2db6c24d03413982de099db6e8e8d3b117a1aee1e4157e035de17db:concatStrings"
+  - name: concatStrings
+    source_path: packages/single-part/src/utils/string.ts
+    is_component: false
+    inferred_type: "(Function -> ReturnTypeOf<Array<String<single-part:concatStrings>>[join]>)"
+    resolved_type: "(Function -> ReturnTypeOf<Array<String<single-part:concatStrings>>[join]>)"
+    trace_to_declaration:
+      - "single-part:329f0a68b2db6c24d03413982de099db6e8e8d3b117a1aee1e4157e035de17db:concatStrings"
+  - name: default
+    source_path: packages/comps/src/title.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "comps:e199b37114a6a6d042f24d9992340b106f7a357d17466d127dd51ea6e78d871d:default"
+  - name: default
+    source_path: packages/main/src/main.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "main:9cedb271550b9f6303840c1f9261dcf2a324f83d1b666610edcb285799e022d9:default"
+  - name: default
+    source_path: packages/multi-part/index.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "multi-part:a42b2429a16682347b578115d3e4c2c462b95f96f44607b452f65a90659e5020:default"
+  - name: default
+    source_path: packages/multi-part/rca-victor/index.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "multi-part:dbdb1a6009753471fa5d97245fff5262c7c8bdd8c66e0c0d9c7d9ec0c16131c1:default"
+  - name: default
+    source_path: packages/multi-part/rhodia/index.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "multi-part:05f76ed9df109a10b5cf6e8fd796bc1c66c05d893af4ea4c3b6ea3203e9704f3:default"
+  - name: default
+    source_path: packages/single-part/src/main.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "single-part:68aa331cf8aa56cb7edef2623c37a76d7506b5751b3f3fcb0ccb7927d6737f27:default"
+  - name: logResult
+    source_path: packages/main/src/helper.ts
+    is_component: false
+    inferred_type: (Function -> )
+    resolved_type: (Function -> )
+    trace_to_declaration:
+      - "main:c4bc09018a74ff2e7fdd4c629153b624e41199bc653ecedf87be95404b510175:logResult"
+

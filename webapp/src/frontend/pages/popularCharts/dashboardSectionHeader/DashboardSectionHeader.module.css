@@ -1,0 +1,12 @@
+.dashboardSectionHeader {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-xxl);
+}
+
+.dashboardSectionHeader .description {
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--description-color, var(--label-secondary-color));
+}

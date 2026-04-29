@@ -1,0 +1,41 @@
+.authButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    height: 40px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.authButton:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.authButton.github {
+    background-color: var(--background-inverse-color);
+    color: var(--label-selected-color);
+}
+
+.authButton.github:not(:disabled):hover {
+    box-shadow: inset 0 0 0 2px rgba(var(--background-primary-color-rgb), 0.15);
+}
+
+.authButton.github:not(:disabled)active {
+    box-shadow: inset 0 0 0 2px rgba(var(--background-primary-color-rgb), 0.3);
+}
+
+.authButton.google {
+    background-color: var(--background-secondary-color);
+    color: var(--label-primary-color);
+}
+
+.authButton.google:not(:disabled):hover {
+    box-shadow: inset 0 0 0 2px rgba(var(--label-secondary-color-rgb), 0.15);
+}
+
+.authButton.google:not(:disabled):active {
+    box-shadow: inset 0 0 0 2px rgba(var(--label-secondary-color-rgb), 0.3);
+}

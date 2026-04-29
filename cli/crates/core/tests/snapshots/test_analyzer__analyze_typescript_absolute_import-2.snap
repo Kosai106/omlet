@@ -1,0 +1,21 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&export_results"
+---
+num_of_exports: 2
+exports:
+  - name: AbsoluteImportChild
+    source_path: src/absolute-import/absolute-import-child.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:3e96e211dc52209555b6151e59800ab5a1a805f50b73d5fd79be86bf6df101c4:AbsoluteImportChild"
+  - name: AbsoluteImportParent
+    source_path: src/absolute-import/absolute-import-parent.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:b9353fd7eb110abc2a7d67da67e5e32e2fdbd6f4e391722b07e76b10f8eef506:AbsoluteImportParent"
+

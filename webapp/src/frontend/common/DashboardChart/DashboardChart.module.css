@@ -1,0 +1,122 @@
+.dashboardChart {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    min-width: 0;
+    height: fit-content;
+}
+
+.dashboardChart .header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-s);
+}
+
+.dashboardChart .header .content {
+    flex: 1;
+    position: relative;
+}
+
+.dashboardChart .header:not(.linksDisabled):hover .content::after,
+.dashboardChart .header.menuOpen .content::after {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    width: calc(100% + 12px);
+    height: calc(100% + 24px);
+    background-color: var(--background-secondary-color);
+    border-radius: 4px;
+    z-index: -1;
+}
+
+.dashboardChart .header .content .link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-xs);
+    padding-right: 12px;
+}
+
+.dashboardChart .header .content .link .info {
+    height: 40px;
+    pointer-events: none;
+}
+
+.dashboardChart .header .content .link .info .title {
+    max-width: 528px;
+    font-size: 16px;
+    line-height: 19px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.dashboardChart .header .content .link .icon {
+    visibility: hidden;
+}
+
+.dashboardChart .header:not(.linksDisabled):hover .content .link .icon,
+.dashboardChart .header.menuOpen .content .link .icon {
+    visibility: visible;
+}
+
+.dashboardChart .header .content .description {
+    max-width: 528px;
+    position: absolute;
+    top: 22px;
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--label-secondary-color);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.dashboardChart .header .menuButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 24px;
+    width: 24px;
+    height: 24px;
+    background-color: var(--control-background-default-color);
+    border-radius: 4px;
+    visibility: hidden;
+}
+
+.dashboardChart .header:hover .menuButton,
+.dashboardChart .header.menuOpen .menuButton {
+    visibility: visible;
+}
+
+.dashboardChart .header .menuButton:hover {
+    background-color: var(--control-background-hover-color);
+}
+
+.dashboardChart .header .menuButton:active,
+.dashboardChart .header .menuButton.menuOpen {
+    background-color: var(--control-background-active-color);
+}
+
+.dashboardChart .loading {
+    height: 272px;
+}
+
+.dashboardChart .chart {
+    z-index: 1;
+}
+
+.dashboardChart .chart.barChart {
+    padding: 0;
+}
+
+.dashboardChart .chart.areaChart {
+    height: 272px;
+}
+
+.dashboardChart .chart.lineChart {
+    --chart-height: 272px;
+}

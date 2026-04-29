@@ -1,0 +1,198 @@
+{
+  "root": {
+    "name": "root",
+    "path": "",
+    "version": "0.0.0",
+    "aliases": {
+      "multi-part/lib/*": [
+        "packages/multi-part/*"
+      ],
+      "packages/*": [
+        "packages/*"
+      ]
+    },
+    "importMap": {
+      "root/*": [
+        "*"
+      ],
+      "main/*": [
+        "packages/main/*"
+      ],
+      "main": [
+        "packages/main/src/index.ts"
+      ],
+      "main/dist/*": [
+        "packages/main/src/*"
+      ],
+      "single-part/*": [
+        "packages/single-part/*"
+      ],
+      "single-part/dist/*": [
+        "packages/single-part/src/*"
+      ],
+      "multi-part/*": [
+        "packages/multi-part/*"
+      ],
+      "multi-part": [
+        "packages/multi-part/index.tsx"
+      ],
+      "multi-part/dist/*": [
+        "packages/multi-part/*"
+      ],
+      "comps/*": [
+        "packages/comps/*"
+      ],
+      "comps": [
+        "packages/comps/src/index.ts"
+      ],
+      "ignored-package/*": [
+        "packages/ignored-package/*"
+      ],
+      "ignored-package": [
+        "packages/ignored-package/src/index.ts"
+      ],
+      "ignored-package/package-entry/*": [
+        "packages/ignored-package/src/*/index.ts"
+      ]
+    },
+    "exportMap": {}
+  },
+  "packages": {
+    "main": {
+      "name": "main",
+      "path": "packages/main",
+      "version": "1.0.0",
+      "aliases": {},
+      "importMap": {
+        "main/*": [
+          "packages/main/*"
+        ],
+        "main": [
+          "packages/main/src/index.ts"
+        ],
+        "comps/*": [
+          "packages/comps/*"
+        ],
+        "comps": [
+          "packages/comps/src/index.ts"
+        ],
+        "ignored-package/*": [
+          "packages/ignored-package/*"
+        ],
+        "ignored-package": [
+          "packages/ignored-package/src/index.ts"
+        ],
+        "ignored-package/package-entry/*": [
+          "packages/ignored-package/src/*/index.ts"
+        ],
+        "multi-part/*": [
+          "packages/multi-part/*"
+        ],
+        "multi-part": [
+          "packages/multi-part/index.tsx"
+        ],
+        "multi-part/dist/*": [
+          "packages/multi-part/*"
+        ],
+        "single-part/*": [
+          "packages/single-part/*"
+        ],
+        "single-part/dist/*": [
+          "packages/single-part/src/*"
+        ]
+      },
+      "exportMap": {
+        ".": [
+          "src/index.ts"
+        ],
+        "dist/*": [
+          "src/*"
+        ]
+      },
+      "main": "src/index.ts"
+    },
+    "single-part": {
+      "name": "single-part",
+      "path": "packages/single-part",
+      "version": "1.0.0",
+      "aliases": {},
+      "importMap": {
+        "single-part/*": [
+          "packages/single-part/*"
+        ]
+      },
+      "exportMap": {
+        "dist/*": [
+          "src/*"
+        ]
+      }
+    },
+    "multi-part": {
+      "name": "multi-part",
+      "path": "packages/multi-part",
+      "version": "1.0.0",
+      "aliases": {},
+      "importMap": {
+        "multi-part/*": [
+          "packages/multi-part/*"
+        ],
+        "multi-part": [
+          "packages/multi-part/index.tsx"
+        ]
+      },
+      "exportMap": {
+        ".": [
+          "index.tsx"
+        ],
+        "dist/*": [
+          "*"
+        ]
+      },
+      "main": "index.tsx"
+    },
+    "comps": {
+      "name": "comps",
+      "path": "packages/comps",
+      "version": "1.0.0",
+      "aliases": {},
+      "importMap": {
+        "comps/*": [
+          "packages/comps/*"
+        ],
+        "comps": [
+          "packages/comps/src/index.ts"
+        ]
+      },
+      "exportMap": {
+        ".": [
+          "src/index.ts"
+        ]
+      },
+      "main": "src/index.ts"
+    },
+    "ignored-package": {
+      "name": "ignored-package",
+      "path": "packages/ignored-package",
+      "version": "1.0.0",
+      "aliases": {},
+      "importMap": {
+        "ignored-package/*": [
+          "packages/ignored-package/*"
+        ],
+        "ignored-package": [
+          "packages/ignored-package/src/index.ts"
+        ]
+      },
+      "exportMap": {
+        ".": [
+          "src/index.ts"
+        ],
+        "package-entry/*": [
+          "src/*/index.ts"
+        ]
+      },
+      "main": "src/index.ts"
+    }
+  },
+  "absolutePath": "/package"
+}

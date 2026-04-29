@@ -1,0 +1,241 @@
+.propUsages {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0 var(--spacing-m) var(--spacing-m) var(--spacing-m);
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.08);
+    overflow: auto;
+    border-radius: var(--spacing-xxs);
+}
+
+.propUsages .header {
+    z-index: 1;
+    position: sticky;
+    top: 0;
+    padding: var(--spacing-m) 0;
+    background-color: var(--background-primary-color);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--label-secondary-color);
+    display: flex;
+    gap: var(--spacing-s);
+    align-items: center;
+}
+
+.propUsages .header.withBorder {
+    border-bottom: var(--border-width) solid var(--border-primary-color);
+}
+
+.propUsages .header .closeButton {
+    display: flex;
+    height: max-content;
+    padding: 2px;
+    border-radius: var(--spacing-xxs);
+    background-color: var(--button-background-active-color);
+    color: var(--label-secondary-color);
+}
+
+.propUsages .header .propName {
+    font-family: var(--font-family-secondary);
+}
+
+.propUsages .list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-m);
+}
+
+.propUsages .package {
+    display: flex;
+    flex-direction: column;
+}
+
+.propUsages .package .callout {
+    margin: var(--spacing-xxl) 0 0 var(--spacing-s);
+    align-self: start;
+}
+
+.propUsages .package .dummyData {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.propUsages .package .dummyData .blur {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(var(--background-primary-color-rgb), 0.92);
+}
+
+.propUsages .package .dummyData .callout {
+    position: absolute;
+}
+
+
+.propUsages .package .packageInfo {
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-xxs) 0;
+    gap: var(--spacing-xxs);
+}
+
+
+.propUsages .package .packageInfo .packageName {
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--label-primary-color);
+}
+
+.propUsages.loading .package .packageInfo .packageName {
+    height: 18px;
+    width: 120px;
+}
+
+.propUsages .package .packageInfo .repositoryURL {
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--label-secondary-color);
+}
+
+.propUsages.loading .package .packageInfo .repositoryURL {
+    height: 18px;
+    width: 240px;
+}
+
+.propUsages .package .packageInfo .repositoryURL:hover {
+    color: var(--label-accent-color);
+}
+
+.propUsages .package .separator {
+    height: var(--border-width);
+    background-color: var(--background-secondary-color);
+    margin: 0 var(--spacing-s);
+}
+
+.propUsages .package .usage:nth-child(2) {
+    margin-top: var(--spacing-xs);
+}
+
+.propUsages .package .usage {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    align-items: center;
+    column-gap: var(--spacing-xxs);
+    row-gap: var(--spacing-s);
+    padding: var(--spacing-s) 0;
+}
+
+.propUsages .package .usage .componentInfo {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--label-primary-color);
+    min-width: 0;
+}
+
+
+.propUsages .package .dummyData .usage .componentInfo,
+.propUsages.loading .package .usage .componentInfo {
+    gap: var(--spacing-xs);
+}
+
+.propUsages .package .dummyData .usage .componentInfo > *,
+.propUsages.loading .package .usage .componentInfo > * {
+    width: 120px;
+    height: 18px;
+}
+
+.propUsages .package .dummyData .usage .componentInfo > * {
+    background-color: var(--label-secondary-color);
+    border-radius: var(--spacing-xxs);
+}
+
+.propUsages .package .usage .componentInfo .nameAndLine {
+    flex-shrink: 0;
+}
+
+.propUsages .package .usage .componentInfo .at {
+    flex-shrink: 0;
+    white-space: pre-wrap;
+    color: var(--label-secondary-color);
+}
+
+.propUsages .package .usage .componentInfo .path {
+    font-family: var(--font-family-secondary);
+    color: var(--label-secondary-color);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.propUsages .package .usage .componentInfo .copyButton {
+    flex-shrink: 1;
+    margin-left: 5px;
+    visibility: hidden;
+    position: relative;
+    padding: 3px;
+    line-height: 0;
+    width: 18px;
+    height: 18px;
+}
+.propUsages .package .usage .componentInfo:hover .copyButton {
+    visibility: visible;
+}
+
+.propUsages .package .usage .componentInfo .copyButton .copiedTooltip {
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    bottom: calc(100% + var(--spacing-xs));
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-xxs) var(--spacing-xs);
+    border-radius: 4px;
+    background-color: var(--label-secondary-color);
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--label-selected-color);
+    opacity: 0;
+    transition: opacity 300ms ease-out;
+}
+
+.propUsages .package .usage .componentInfo .copyButton .copiedTooltip.visible {
+    opacity: 1;
+    transition: none;
+}
+
+.propUsages .package .usage .props {
+    grid-column: 2;
+    padding: var(--spacing-s);
+    width: 400px;
+    border-radius: 6px;
+    background-color: var(--background-secondary-color);
+    overflow: auto;
+}
+
+.propUsages .package .dummyData .usage .props,
+.propUsages.loading .package .usage .props {
+    height: var(--spacing-xxl);
+}
+
+
+.propUsages .package .dummyData .usage .props {
+    background-color: var(--label-secondary-color);
+    border-radius: 4px;
+}
+
+.propUsages .package .usage .props .prop {
+    font-family: var(--font-family-secondary);
+    color: var(--label-secondary-color);
+    font-size: 13px;
+}
+.propUsages .package .usage .props .prop .propValue {
+    font-family: var(--font-family-secondary);
+    color: var(--label-primary-color);
+    white-space: pre;
+}

@@ -1,0 +1,1460 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`extractProjectSetup in TypeScript projects extended configuration should extract alias config from a TypeScript config that overrides its base config 1`] = `
+{
+  "absolutePath": "/repo/project",
+  "isValidDependency": [Function],
+  "packages": {},
+  "root": {
+    "aliases": {
+      "@components/*": [
+        "src/components/*",
+      ],
+    },
+    "exportMap": {},
+    "importMap": {
+      "ts-project/*": [
+        "*",
+      ],
+    },
+    "name": "ts-project",
+    "path": "",
+    "version": "0.0.0",
+  },
+}
+`;
+
+exports[`extractProjectSetup in TypeScript projects extended configuration should extract alias config from base TypeScript config when there's no overrides 1`] = `
+{
+  "absolutePath": "/repo/project",
+  "isValidDependency": [Function],
+  "packages": {},
+  "root": {
+    "aliases": {
+      "@utils/*": [
+        "src/utils/*",
+      ],
+    },
+    "exportMap": {},
+    "importMap": {
+      "ts-project/*": [
+        "*",
+      ],
+    },
+    "name": "ts-project",
+    "path": "",
+    "version": "0.0.0",
+  },
+}
+`;
+
+exports[`extractProjectSetup in TypeScript projects extended configuration should resolve target paths correctly when base config has baseUrl 1`] = `
+{
+  "absolutePath": "/repo/project",
+  "isValidDependency": [Function],
+  "packages": {},
+  "root": {
+    "aliases": {
+      "@utils/*": [
+        "src/legacy-utils/*",
+      ],
+      "legacy-utils/*": [
+        "src/legacy-utils/*",
+      ],
+    },
+    "exportMap": {},
+    "importMap": {
+      "ts-project/*": [
+        "*",
+      ],
+    },
+    "name": "ts-project",
+    "path": "",
+    "version": "0.0.0",
+  },
+}
+`;
+
+exports[`extractProjectSetup in TypeScript projects should extract a valid project setup with correct alias config based on TypeScript config 1`] = `
+{
+  "absolutePath": "/repo/project",
+  "isValidDependency": [Function],
+  "packages": {},
+  "root": {
+    "aliases": {
+      "@utils/*": [
+        "src/utils/*",
+      ],
+    },
+    "exportMap": {},
+    "importMap": {
+      "ts-project/*": [
+        "*",
+      ],
+    },
+    "name": "ts-project",
+    "path": "",
+    "version": "0.0.0",
+  },
+}
+`;
+
+exports[`extractProjectSetup in TypeScript projects should extract alias config from TypeScript config located at a custom file path 1`] = `
+{
+  "absolutePath": "/repo/project",
+  "isValidDependency": [Function],
+  "packages": {},
+  "root": {
+    "aliases": {
+      "@utils/*": [
+        "src/utils/*",
+      ],
+    },
+    "exportMap": {},
+    "importMap": {
+      "ts-project/*": [
+        "*",
+      ],
+    },
+    "name": "ts-project",
+    "path": "",
+    "version": "0.0.0",
+  },
+}
+`;
+
+exports[`extractProjectSetup in TypeScript projects should prioritize user-defined aliases over the ones from TypeScript configuration 1`] = `
+{
+  "absolutePath": "/repo/project",
+  "isValidDependency": [Function],
+  "packages": {},
+  "root": {
+    "aliases": {
+      "@components/*": [
+        "src/components/*",
+      ],
+      "@utils/*": [
+        "src/utils/*",
+      ],
+      "components/*": [
+        "src/components/*",
+      ],
+      "utils/*": [
+        "src/utils/*",
+      ],
+    },
+    "exportMap": {},
+    "importMap": {
+      "project/*": [
+        "*",
+      ],
+    },
+    "name": "project",
+    "path": "",
+    "version": "0.0.0",
+  },
+}
+`;
+
+exports[`extractProjectSetup in TypeScript projects should resolve export paths to source file paths if rootDir and outDir params exist 1`] = `
+{
+  "absolutePath": "/repo/project",
+  "isValidDependency": [Function],
+  "packages": {},
+  "root": {
+    "aliases": {
+      "@components/*": [
+        "src/components/*",
+      ],
+      "@utils/*": [
+        "src/utils/*",
+      ],
+      "components/*": [
+        "src/components/*",
+      ],
+      "index.ts": [
+        "src/index.ts",
+      ],
+      "utils/*": [
+        "src/utils/*",
+      ],
+    },
+    "exportMap": {
+      ".": [
+        "src/index.ts",
+      ],
+      "dist/*": [
+        "src/*",
+      ],
+    },
+    "importMap": {
+      "project": [
+        "src/index.ts",
+      ],
+      "project/*": [
+        "*",
+      ],
+    },
+    "name": "project",
+    "path": "",
+    "version": "0.0.0",
+  },
+}
+`;
+
+exports[`extractProjectSetup in TypeScript projects should resolve target paths correctly with respect to baseUrl 1`] = `
+{
+  "absolutePath": "/repo/project",
+  "isValidDependency": [Function],
+  "packages": {},
+  "root": {
+    "aliases": {
+      "@utils/*": [
+        "src/legacy-utils/*",
+      ],
+      "legacy-utils/*": [
+        "src/legacy-utils/*",
+      ],
+    },
+    "exportMap": {},
+    "importMap": {
+      "ts-project/*": [
+        "*",
+      ],
+    },
+    "name": "ts-project",
+    "path": "",
+    "version": "0.0.0",
+  },
+}
+`;
+
+exports[`extractProjectSetup in monorepo projects should extract import mappings for multi-package design system with internal dependencies 1`] = `
+{
+  "absolutePath": "/repo/project",
+  "isValidDependency": [Function],
+  "packages": {
+    "ds-button": {
+      "aliases": {},
+      "exportMap": {
+        ".": [
+          "index.ts",
+        ],
+      },
+      "importMap": {
+        "ds-button": [
+          "packages/button/index.ts",
+        ],
+        "ds-button/*": [
+          "packages/button/*",
+        ],
+      },
+      "name": "ds-button",
+      "path": "packages/button",
+      "version": "0.0.0",
+    },
+    "ds-form": {
+      "aliases": {},
+      "exportMap": {
+        ".": [
+          "index.ts",
+        ],
+      },
+      "importMap": {
+        "ds-button": [
+          "packages/button/index.ts",
+        ],
+        "ds-button/*": [
+          "packages/button/*",
+        ],
+        "ds-form": [
+          "packages/form/index.ts",
+        ],
+        "ds-form/*": [
+          "packages/form/*",
+        ],
+      },
+      "name": "ds-form",
+      "path": "packages/form",
+      "version": "0.0.0",
+    },
+    "ds-react": {
+      "aliases": {},
+      "exportMap": {
+        ".": [
+          "index.ts",
+        ],
+      },
+      "importMap": {
+        "ds-button": [
+          "packages/button/index.ts",
+        ],
+        "ds-button/*": [
+          "packages/button/*",
+        ],
+        "ds-form": [
+          "packages/form/index.ts",
+        ],
+        "ds-form/*": [
+          "packages/form/*",
+        ],
+        "ds-react": [
+          "packages/react-lib/index.ts",
+        ],
+        "ds-react/*": [
+          "packages/react-lib/*",
+        ],
+      },
+      "name": "ds-react",
+      "path": "packages/react-lib",
+      "version": "0.0.0",
+    },
+  },
+  "root": {
+    "aliases": {},
+    "exportMap": {},
+    "importMap": {
+      "ds-button": [
+        "packages/button/index.ts",
+      ],
+      "ds-button/*": [
+        "packages/button/*",
+      ],
+      "ds-form": [
+        "packages/form/index.ts",
+      ],
+      "ds-form/*": [
+        "packages/form/*",
+      ],
+      "ds-monorepo/*": [
+        "*",
+      ],
+      "ds-react": [
+        "packages/react-lib/index.ts",
+      ],
+      "ds-react/*": [
+        "packages/react-lib/*",
+      ],
+    },
+    "name": "ds-monorepo",
+    "path": "",
+    "version": "0.0.0",
+  },
+}
+`;
+
+exports[`extractProjectSetup in monorepo projects should extract user-defined aliases correctly for each package 1`] = `
+{
+  "absolutePath": "/repo/project",
+  "isValidDependency": [Function],
+  "packages": {
+    "ds-button": {
+      "aliases": {
+        "@utils/*": [
+          "packages/button/src/utils/*",
+        ],
+      },
+      "exportMap": {
+        ".": [
+          "src/index.tsx",
+        ],
+      },
+      "importMap": {
+        "ds-button": [
+          "packages/button/src/index.tsx",
+        ],
+        "ds-button/*": [
+          "packages/button/*",
+        ],
+      },
+      "name": "ds-button",
+      "path": "packages/button",
+      "version": "0.0.0",
+    },
+    "ds-form": {
+      "aliases": {
+        "@components/button": [
+          "packages/button/src/index.tsx",
+        ],
+      },
+      "exportMap": {},
+      "importMap": {
+        "ds-form/*": [
+          "packages/form/*",
+        ],
+      },
+      "name": "ds-form",
+      "path": "packages/form",
+      "version": "0.0.0",
+    },
+  },
+  "root": {
+    "aliases": {},
+    "exportMap": {},
+    "importMap": {
+      "ds-button": [
+        "packages/button/src/index.tsx",
+      ],
+      "ds-button/*": [
+        "packages/button/*",
+      ],
+      "ds-form/*": [
+        "packages/form/*",
+      ],
+      "ds-monorepo/*": [
+        "*",
+      ],
+    },
+    "name": "ds-monorepo",
+    "path": "",
+    "version": "0.0.0",
+  },
+}
+`;
+
+exports[`extractProjectSetup in monorepo projects should handle workspace-specific tsconfigPath with complex TypeScript configuration 1`] = `
+{
+  "absolutePath": "/repo/project",
+  "isValidDependency": [Function],
+  "packages": {
+    "@acme/design-system": {
+      "aliases": {
+        "@components/*": [
+          "packages/design-system/src/components/*",
+        ],
+        "@types/*": [
+          "packages/design-system/src/types/*",
+        ],
+        "@utils/*": [
+          "packages/design-system/src/utils/*",
+        ],
+        "components/*": [
+          "packages/design-system/src/components/*",
+        ],
+        "index.ts": [
+          "packages/design-system/src/index.ts",
+        ],
+        "types/*": [
+          "packages/design-system/src/types/*",
+        ],
+        "utils/*": [
+          "packages/design-system/src/utils/*",
+        ],
+      },
+      "exportMap": {
+        ".": [
+          "src/index.ts",
+        ],
+        "dist/*": [
+          "src/*",
+        ],
+      },
+      "importMap": {
+        "@acme/design-system": [
+          "packages/design-system/src/index.ts",
+        ],
+        "@acme/design-system/*": [
+          "packages/design-system/*",
+        ],
+      },
+      "name": "@acme/design-system",
+      "path": "packages/design-system",
+      "version": "0.0.0",
+    },
+  },
+  "root": {
+    "aliases": {},
+    "exportMap": {},
+    "importMap": {
+      "@acme/design-system": [
+        "packages/design-system/src/index.ts",
+      ],
+      "@acme/design-system/*": [
+        "packages/design-system/*",
+      ],
+      "@acme/design-system/dist/*": [
+        "packages/design-system/src/*",
+      ],
+      "ds-monorepo/*": [
+        "*",
+      ],
+    },
+    "name": "ds-monorepo",
+    "path": "",
+    "version": "0.0.0",
+  },
+}
+`;
+
+exports[`extractProjectSetup in monorepo projects should prioritize workspace-specific tsconfigPath over default tsconfig.json 1`] = `
+{
+  "absolutePath": "/repo/project",
+  "isValidDependency": [Function],
+  "packages": {
+    "ds-button": {
+      "aliases": {
+        "@correct-alias/*": [
+          "packages/button/src/utils/*",
+        ],
+      },
+      "exportMap": {},
+      "importMap": {
+        "ds-button/*": [
+          "packages/button/*",
+        ],
+      },
+      "name": "ds-button",
+      "path": "packages/button",
+      "version": "0.0.0",
+    },
+  },
+  "root": {
+    "aliases": {},
+    "exportMap": {},
+    "importMap": {
+      "ds-button/*": [
+        "packages/button/*",
+      ],
+      "ds-monorepo/*": [
+        "*",
+      ],
+    },
+    "name": "ds-monorepo",
+    "path": "",
+    "version": "0.0.0",
+  },
+}
+`;
+
+exports[`extractProjectSetup in monorepo projects should use default tsconfig.json when no workspace-specific tsconfigPath is provided 1`] = `
+{
+  "absolutePath": "/repo/project",
+  "isValidDependency": [Function],
+  "packages": {
+    "ds-button": {
+      "aliases": {
+        "@default-alias/*": [
+          "packages/button/src/utils/*",
+        ],
+      },
+      "exportMap": {},
+      "importMap": {
+        "ds-button/*": [
+          "packages/button/*",
+        ],
+      },
+      "name": "ds-button",
+      "path": "packages/button",
+      "version": "0.0.0",
+    },
+    "ds-form": {
+      "aliases": {
+        "@form-alias/*": [
+          "packages/form/src/helpers/*",
+        ],
+      },
+      "exportMap": {},
+      "importMap": {
+        "ds-form/*": [
+          "packages/form/*",
+        ],
+      },
+      "name": "ds-form",
+      "path": "packages/form",
+      "version": "0.0.0",
+    },
+  },
+  "root": {
+    "aliases": {},
+    "exportMap": {},
+    "importMap": {
+      "ds-button/*": [
+        "packages/button/*",
+      ],
+      "ds-form/*": [
+        "packages/form/*",
+      ],
+      "ds-monorepo/*": [
+        "*",
+      ],
+    },
+    "name": "ds-monorepo",
+    "path": "",
+    "version": "0.0.0",
+  },
+}
+`;
+
+exports[`extractProjectSetup in monorepo projects should use workspace-specific tsconfigPath for TypeScript configuration 1`] = `
+{
+  "absolutePath": "/repo/project",
+  "isValidDependency": [Function],
+  "packages": {
+    "ds-button": {
+      "aliases": {
+        "@button-utils/*": [
+          "packages/button/src/utils/*",
+        ],
+      },
+      "exportMap": {
+        ".": [
+          "src/index.tsx",
+        ],
+      },
+      "importMap": {
+        "ds-button": [
+          "packages/button/src/index.tsx",
+        ],
+        "ds-button/*": [
+          "packages/button/*",
+        ],
+      },
+      "name": "ds-button",
+      "path": "packages/button",
+      "version": "0.0.0",
+    },
+    "ds-form": {
+      "aliases": {
+        "@form-utils/*": [
+          "packages/form/src/helpers/*",
+        ],
+      },
+      "exportMap": {},
+      "importMap": {
+        "ds-form/*": [
+          "packages/form/*",
+        ],
+      },
+      "name": "ds-form",
+      "path": "packages/form",
+      "version": "0.0.0",
+    },
+  },
+  "root": {
+    "aliases": {},
+    "exportMap": {},
+    "importMap": {
+      "ds-button": [
+        "packages/button/src/index.tsx",
+      ],
+      "ds-button/*": [
+        "packages/button/*",
+      ],
+      "ds-form/*": [
+        "packages/form/*",
+      ],
+      "ds-monorepo/*": [
+        "*",
+      ],
+    },
+    "name": "ds-monorepo",
+    "path": "",
+    "version": "0.0.0",
+  },
+}
+`;
+
+exports[`extractProjectSetup on invalid project setup should detect multiple alias/export mapping issues in user-defined config, package.json, and TS config 1`] = `
+{
+  "issues": [
+    {
+      "entry": {
+        "name": "user-export-not-included/*",
+        "patterns": [
+          "src/excluded-components/*/index.ts",
+        ],
+        "sourcePath": "/repo/project/.omletrc.json",
+        "type": "export",
+      },
+      "level": "WARNING",
+      "packageName": "project",
+      "type": "TARGET_NOT_INCLUDED",
+    },
+    {
+      "entry": {
+        "name": "user-export-missing/*",
+        "patterns": [
+          "src/missing-utils/*/index.ts",
+        ],
+        "sourcePath": "/repo/project/.omletrc.json",
+        "type": "export",
+      },
+      "level": "ERROR",
+      "packageName": "project",
+      "type": "TARGET_NOT_EXIST",
+    },
+    {
+      "entry": {
+        "name": "package-export-not-included/*",
+        "patterns": [
+          "src/excluded-components/*/index.ts",
+        ],
+        "sourcePath": "/repo/project/package.json",
+        "type": "export",
+      },
+      "level": "WARNING",
+      "packageName": "project",
+      "type": "TARGET_NOT_INCLUDED",
+    },
+    {
+      "entry": {
+        "name": "package-export-missing/*",
+        "patterns": [
+          "src/missing-components/*/index.ts",
+        ],
+        "sourcePath": "/repo/project/package.json",
+        "type": "export",
+      },
+      "level": "ERROR",
+      "packageName": "project",
+      "type": "TARGET_NOT_EXIST",
+    },
+    {
+      "entry": {
+        "name": "@user-alias-not-included/*",
+        "patterns": [
+          "src/excluded-utils/*",
+        ],
+        "sourcePath": "/repo/project/.omletrc.json",
+        "type": "alias",
+      },
+      "level": "WARNING",
+      "packageName": "project",
+      "type": "TARGET_NOT_INCLUDED",
+    },
+    {
+      "entry": {
+        "name": "@user-alias-missing/*",
+        "patterns": [
+          "src/missing-utils/*",
+        ],
+        "sourcePath": "/repo/project/.omletrc.json",
+        "type": "alias",
+      },
+      "level": "ERROR",
+      "packageName": "project",
+      "type": "TARGET_NOT_EXIST",
+    },
+    {
+      "entry": {
+        "name": "@ts-alias-not-included/*",
+        "patterns": [
+          "src/excluded-components/*",
+        ],
+        "sourcePath": "/repo/project/tsconfig.json",
+        "type": "alias",
+      },
+      "level": "WARNING",
+      "packageName": "project",
+      "type": "TARGET_NOT_INCLUDED",
+    },
+  ],
+  "message": "Issues found in the project setup",
+}
+`;
+
+exports[`extractProjectSetup on project setup with invalid alias config should detect issues with both user-defined and TS aliases 1`] = `
+{
+  "issues": [
+    {
+      "entry": {
+        "name": "@components/*",
+        "patterns": [
+          "src/legacy-components/*",
+        ],
+        "sourcePath": "/repo/project/.omletrc.json",
+        "type": "alias",
+      },
+      "level": "ERROR",
+      "packageName": "project",
+      "type": "TARGET_NOT_EXIST",
+    },
+    {
+      "entry": {
+        "name": "@utils/*",
+        "patterns": [
+          "src/utils/*",
+        ],
+        "sourcePath": "/repo/project/tsconfig.json",
+        "type": "alias",
+      },
+      "level": "WARNING",
+      "packageName": "project",
+      "type": "TARGET_NOT_INCLUDED",
+    },
+  ],
+  "message": "Issues found in the project setup",
+}
+`;
+
+exports[`extractProjectSetup on project setup with invalid alias config should detect user-defined aliases with no included target 1`] = `
+{
+  "absolutePath": "/repo/project",
+  "isValidDependency": [Function],
+  "issues": [
+    {
+      "entry": {
+        "name": "@utils/*",
+        "patterns": [
+          "src/utils/*",
+        ],
+        "sourcePath": "/repo/project/.omletrc.json",
+        "type": "alias",
+      },
+      "level": "WARNING",
+      "packageName": "project",
+      "type": "TARGET_NOT_INCLUDED",
+    },
+  ],
+  "packages": {},
+  "root": {
+    "aliases": {
+      "@components/*": [
+        "src/components/*",
+      ],
+      "@utils/*": [
+        "src/utils/*",
+      ],
+    },
+    "exportMap": {},
+    "importMap": {
+      "project/*": [
+        "*",
+      ],
+    },
+    "name": "project",
+    "path": "",
+    "version": "0.0.0",
+  },
+}
+`;
+
+exports[`extractProjectSetup on project setup with invalid alias config should detect user-defined aliases with no included target 2`] = `
+{
+  "absolutePath": "/repo/project",
+  "isValidDependency": [Function],
+  "issues": [
+    {
+      "entry": {
+        "name": "@utils/*",
+        "patterns": [
+          "src/utils/*",
+        ],
+        "sourcePath": "/repo/project/.omletrc.json",
+        "type": "alias",
+      },
+      "level": "WARNING",
+      "packageName": "project",
+      "type": "TARGET_NOT_INCLUDED",
+    },
+  ],
+  "packages": {},
+  "root": {
+    "aliases": {
+      "@utils/*": [
+        "src/utils/*",
+      ],
+    },
+    "exportMap": {},
+    "importMap": {
+      "project/*": [
+        "*",
+      ],
+    },
+    "name": "project",
+    "path": "",
+    "version": "0.0.0",
+  },
+}
+`;
+
+exports[`extractProjectSetup on project setup with invalid alias config should detect user-defined aliases with no matching target 1`] = `
+{
+  "issues": [
+    {
+      "entry": {
+        "name": "@utils/*",
+        "patterns": [
+          "src/utils/*",
+        ],
+        "sourcePath": "/repo/project/.omletrc.json",
+        "type": "alias",
+      },
+      "level": "ERROR",
+      "packageName": "project",
+      "type": "TARGET_NOT_EXIST",
+    },
+  ],
+  "message": "Issues found in the project setup",
+}
+`;
+
+exports[`extractProjectSetup on project setup with invalid alias config should ignore TS aliases with no matching target 1`] = `
+{
+  "absolutePath": "/repo/project",
+  "isValidDependency": [Function],
+  "packages": {},
+  "root": {
+    "aliases": {},
+    "exportMap": {},
+    "importMap": {
+      "project/*": [
+        "*",
+      ],
+    },
+    "name": "project",
+    "path": "",
+    "version": "0.0.0",
+  },
+}
+`;
+
+exports[`extractProjectSetup on project setup with invalid alias config should pass when user-defined alias fixes TS alias 1`] = `
+{
+  "absolutePath": "/repo/project",
+  "isValidDependency": [Function],
+  "packages": {},
+  "root": {
+    "aliases": {
+      "@utils/*": [
+        "src/utils/*",
+      ],
+    },
+    "exportMap": {},
+    "importMap": {
+      "project/*": [
+        "*",
+      ],
+    },
+    "name": "project",
+    "path": "",
+    "version": "0.0.0",
+  },
+}
+`;
+
+exports[`extractProjectSetup on project setup with invalid export mapping should detect export mapping from package.json with no included target 1`] = `
+{
+  "absolutePath": "/repo/project",
+  "isValidDependency": [Function],
+  "issues": [
+    {
+      "entry": {
+        "name": ".",
+        "patterns": [
+          "src/index.ts",
+        ],
+        "sourcePath": "/repo/project/package.json",
+        "type": "export",
+      },
+      "level": "WARNING",
+      "packageName": "project",
+      "type": "TARGET_NOT_INCLUDED",
+    },
+    {
+      "entry": {
+        "name": "utils/*",
+        "patterns": [
+          "src/utils/*/index.ts",
+        ],
+        "sourcePath": "/repo/project/package.json",
+        "type": "export",
+      },
+      "level": "WARNING",
+      "packageName": "project",
+      "type": "TARGET_NOT_INCLUDED",
+    },
+  ],
+  "packages": {},
+  "root": {
+    "aliases": {},
+    "exportMap": {
+      ".": [
+        "src/index.ts",
+      ],
+      "components/*": [
+        "src/components/*/index.ts",
+      ],
+      "utils/*": [
+        "src/utils/*/index.ts",
+      ],
+    },
+    "importMap": {
+      "project": [
+        "src/index.ts",
+      ],
+      "project/*": [
+        "*",
+      ],
+    },
+    "name": "project",
+    "path": "",
+    "version": "0.0.0",
+  },
+}
+`;
+
+exports[`extractProjectSetup on project setup with invalid export mapping should detect export mapping from package.json with no matching target 1`] = `
+{
+  "issues": [
+    {
+      "entry": {
+        "name": ".",
+        "patterns": [
+          "src/index.ts",
+        ],
+        "sourcePath": "/repo/project/package.json",
+        "type": "export",
+      },
+      "level": "ERROR",
+      "packageName": "project",
+      "type": "TARGET_NOT_EXIST",
+    },
+    {
+      "entry": {
+        "name": "utils/*",
+        "patterns": [
+          "src/utils/*/index.ts",
+        ],
+        "sourcePath": "/repo/project/package.json",
+        "type": "export",
+      },
+      "level": "ERROR",
+      "packageName": "project",
+      "type": "TARGET_NOT_EXIST",
+    },
+  ],
+  "message": "Issues found in the project setup",
+}
+`;
+
+exports[`extractProjectSetup on project setup with invalid export mapping should detect issues with export mappings in both user-defined and package.json 1`] = `
+{
+  "issues": [
+    {
+      "entry": {
+        "name": ".",
+        "patterns": [
+          "src/index.ts",
+        ],
+        "sourcePath": "/repo/project/package.json",
+        "type": "export",
+      },
+      "level": "ERROR",
+      "packageName": "project",
+      "type": "TARGET_NOT_EXIST",
+    },
+    {
+      "entry": {
+        "name": "utils/*",
+        "patterns": [
+          "src/utils/*/index.ts",
+        ],
+        "sourcePath": "/repo/project/.omletrc.json",
+        "type": "export",
+      },
+      "level": "WARNING",
+      "packageName": "project",
+      "type": "TARGET_NOT_INCLUDED",
+    },
+  ],
+  "message": "Issues found in the project setup",
+}
+`;
+
+exports[`extractProjectSetup on project setup with invalid export mapping should detect user-defined export mapping with no included target 1`] = `
+{
+  "absolutePath": "/repo/project",
+  "isValidDependency": [Function],
+  "issues": [
+    {
+      "entry": {
+        "name": ".",
+        "patterns": [
+          "src/index.ts",
+        ],
+        "sourcePath": "/repo/project/.omletrc.json",
+        "type": "export",
+      },
+      "level": "WARNING",
+      "packageName": "project",
+      "type": "TARGET_NOT_INCLUDED",
+    },
+    {
+      "entry": {
+        "name": "utils/*",
+        "patterns": [
+          "src/utils/*/index.ts",
+        ],
+        "sourcePath": "/repo/project/.omletrc.json",
+        "type": "export",
+      },
+      "level": "WARNING",
+      "packageName": "project",
+      "type": "TARGET_NOT_INCLUDED",
+    },
+  ],
+  "packages": {},
+  "root": {
+    "aliases": {},
+    "exportMap": {
+      ".": [
+        "src/index.ts",
+      ],
+      "components/*": [
+        "src/components/*/index.ts",
+      ],
+      "utils/*": [
+        "src/utils/*/index.ts",
+      ],
+    },
+    "importMap": {
+      "project": [
+        "src/index.ts",
+      ],
+      "project/*": [
+        "*",
+      ],
+    },
+    "name": "project",
+    "path": "",
+    "version": "0.0.0",
+  },
+}
+`;
+
+exports[`extractProjectSetup on project setup with invalid export mapping should detect user-defined export mapping with no matching target 1`] = `
+{
+  "issues": [
+    {
+      "entry": {
+        "name": ".",
+        "patterns": [
+          "src/index.ts",
+        ],
+        "sourcePath": "/repo/project/.omletrc.json",
+        "type": "export",
+      },
+      "level": "ERROR",
+      "packageName": "project",
+      "type": "TARGET_NOT_EXIST",
+    },
+    {
+      "entry": {
+        "name": "utils/*",
+        "patterns": [
+          "src/utils/*/index.ts",
+        ],
+        "sourcePath": "/repo/project/.omletrc.json",
+        "type": "export",
+      },
+      "level": "ERROR",
+      "packageName": "project",
+      "type": "TARGET_NOT_EXIST",
+    },
+  ],
+  "message": "Issues found in the project setup",
+}
+`;
+
+exports[`extractProjectSetup on project setup with invalid export mapping should pass when user-defined alias fixes TS alias 1`] = `
+{
+  "absolutePath": "/repo/project",
+  "isValidDependency": [Function],
+  "packages": {},
+  "root": {
+    "aliases": {},
+    "exportMap": {
+      ".": [
+        "src/index.ts",
+      ],
+      "components/*": [
+        "src/components/*/index.ts",
+      ],
+    },
+    "importMap": {
+      "project": [
+        "src/index.ts",
+      ],
+      "project/*": [
+        "*",
+      ],
+    },
+    "name": "project",
+    "path": "",
+    "version": "0.0.0",
+  },
+}
+`;
+
+exports[`extractProjectSetup should extract project setup for a simple project 1`] = `
+{
+  "absolutePath": "/repo/project",
+  "isValidDependency": [Function],
+  "packages": {},
+  "root": {
+    "aliases": {},
+    "exportMap": {
+      ".": [
+        "src/index.ts",
+      ],
+    },
+    "importMap": {
+      "project": [
+        "src/index.ts",
+      ],
+      "project/*": [
+        "*",
+      ],
+    },
+    "name": "project",
+    "path": "",
+    "version": "0.0.0",
+  },
+}
+`;
+
+exports[`extractProjectSetup when reading package entry points from \`exports\` field should extract the main entry point from the \`exports\` (object)(object) field 1`] = `
+{
+  "absolutePath": "/repo/project",
+  "isValidDependency": [Function],
+  "packages": {},
+  "root": {
+    "aliases": {},
+    "exportMap": {
+      ".": [
+        "src/index.ts",
+      ],
+    },
+    "importMap": {
+      "project": [
+        "src/index.ts",
+      ],
+      "project/*": [
+        "*",
+      ],
+    },
+    "name": "project",
+    "path": "",
+    "version": "0.0.0",
+  },
+}
+`;
+
+exports[`extractProjectSetup when reading package entry points from \`exports\` field should extract the main entry point from the \`exports\` (object)(object)(object) field 1`] = `
+{
+  "absolutePath": "/repo/project",
+  "isValidDependency": [Function],
+  "packages": {},
+  "root": {
+    "aliases": {},
+    "exportMap": {
+      ".": [
+        "src/index.ts",
+      ],
+    },
+    "importMap": {
+      "project": [
+        "src/index.ts",
+      ],
+      "project/*": [
+        "*",
+      ],
+    },
+    "name": "project",
+    "path": "",
+    "version": "0.0.0",
+  },
+}
+`;
+
+exports[`extractProjectSetup when reading package entry points from \`exports\` field should extract the main entry point from the \`exports\` (object)(string) field 1`] = `
+{
+  "absolutePath": "/repo/project",
+  "isValidDependency": [Function],
+  "packages": {},
+  "root": {
+    "aliases": {},
+    "exportMap": {
+      ".": [
+        "src/index.ts",
+      ],
+    },
+    "importMap": {
+      "project": [
+        "src/index.ts",
+      ],
+      "project/*": [
+        "*",
+      ],
+    },
+    "name": "project",
+    "path": "",
+    "version": "0.0.0",
+  },
+}
+`;
+
+exports[`extractProjectSetup when reading package entry points from \`exports\` field should extract the main entry point from the \`exports\` (object)(string[]) field 1`] = `
+{
+  "absolutePath": "/repo/project",
+  "isValidDependency": [Function],
+  "packages": {},
+  "root": {
+    "aliases": {},
+    "exportMap": {
+      ".": [
+        "src/index.ts",
+        "index.ts",
+      ],
+    },
+    "importMap": {
+      "project": [
+        "src/index.ts",
+      ],
+      "project/*": [
+        "*",
+      ],
+    },
+    "name": "project",
+    "path": "",
+    "version": "0.0.0",
+  },
+}
+`;
+
+exports[`extractProjectSetup when reading package entry points from \`exports\` field should extract the main entry point from the \`exports\` (string) field 1`] = `
+{
+  "absolutePath": "/repo/project",
+  "isValidDependency": [Function],
+  "packages": {},
+  "root": {
+    "aliases": {},
+    "exportMap": {
+      ".": [
+        "src/index.ts",
+      ],
+    },
+    "importMap": {
+      "project": [
+        "src/index.ts",
+      ],
+      "project/*": [
+        "*",
+      ],
+    },
+    "name": "project",
+    "path": "",
+    "version": "0.0.0",
+  },
+}
+`;
+
+exports[`extractProjectSetup when reading package entry points from \`exports\` field should extract the main entry point from the \`exports\` (string[]) field 1`] = `
+{
+  "absolutePath": "/repo/project",
+  "isValidDependency": [Function],
+  "packages": {},
+  "root": {
+    "aliases": {},
+    "exportMap": {
+      ".": [
+        "src/index.ts",
+        "index.ts",
+      ],
+    },
+    "importMap": {
+      "project": [
+        "src/index.ts",
+      ],
+      "project/*": [
+        "*",
+      ],
+    },
+    "name": "project",
+    "path": "",
+    "version": "0.0.0",
+  },
+}
+`;
+
+exports[`extractProjectSetup when reading package entry points from \`exports\` field should prioritize the \`exports\` field over the \`main\` field 1`] = `
+{
+  "absolutePath": "/repo/project",
+  "isValidDependency": [Function],
+  "packages": {},
+  "root": {
+    "aliases": {},
+    "exportMap": {
+      ".": [
+        "src/index.ts",
+      ],
+    },
+    "importMap": {
+      "project": [
+        "src/index.ts",
+      ],
+      "project/*": [
+        "*",
+      ],
+    },
+    "name": "project",
+    "path": "",
+    "version": "0.0.0",
+  },
+}
+`;
+
+exports[`extractProjectSetup when reading package entry points should extract the main entry point from the \`main\` field 1`] = `
+{
+  "absolutePath": "/repo/project",
+  "isValidDependency": [Function],
+  "packages": {},
+  "root": {
+    "aliases": {},
+    "exportMap": {
+      ".": [
+        "src/index.ts",
+      ],
+    },
+    "importMap": {
+      "project": [
+        "src/index.ts",
+      ],
+      "project/*": [
+        "*",
+      ],
+    },
+    "name": "project",
+    "path": "",
+    "version": "0.0.0",
+  },
+}
+`;
+
+exports[`extractProjectSetup with user-defined aliases should extract user-defined aliases from Omlet CLI config 1`] = `
+{
+  "absolutePath": "/repo/project",
+  "isValidDependency": [Function],
+  "packages": {},
+  "root": {
+    "aliases": {
+      "@components/*": [
+        "src/components/*",
+      ],
+      "@utils/*": [
+        "src/utils/*",
+      ],
+    },
+    "exportMap": {},
+    "importMap": {
+      "project/*": [
+        "*",
+      ],
+    },
+    "name": "project",
+    "path": "",
+    "version": "0.0.0",
+  },
+}
+`;

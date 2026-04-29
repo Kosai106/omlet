@@ -1,0 +1,1 @@
+export { IgnoredComponent } from "./ignored"

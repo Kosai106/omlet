@@ -1,0 +1,43 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&export_results"
+---
+num_of_exports: 5
+exports:
+  - name: App
+    source_path: packages/pack-a/src/index.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "pack-a:fc5c7261a4bc3416a1baf2761602cb71fb11d037ca3162c9e09a7c830899e089:App"
+  - name: Button
+    source_path: packages/pack-b/component/button.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "pack-b:998aa9341240592707b4db94abd297a47b37ec5ef27163cbf5bd1201e36c8193:Button"
+  - name: Button
+    source_path: packages/pack-b/component/index.ts
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "pack-b:5dbc91f54f2d2b4a0b840a10fdaa640c9e78e54e56d88c63c6585298e71511e1:Button"
+      - "pack-b:998aa9341240592707b4db94abd297a47b37ec5ef27163cbf5bd1201e36c8193:Button"
+  - name: default
+    source_path: packages/pack-b/index.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "pack-b:988753235fbd69e17a15763d413258279d2b84ef0c3ca13456a788d11e6fedc9:default"
+  - name: default
+    source_path: packages/pack-b/title.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "pack-b:63f964235127a9bb6c2edc19a23d8c1abf91b45c3ff01000114af0a2fc5ce8a8:default"
+

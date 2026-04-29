@@ -1,0 +1,84 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&export_results"
+---
+num_of_exports: 11
+exports:
+  - name: KlasComponent
+    source_path: src/class-component/class-component.tsx
+    is_component: true
+    inferred_type: "Class<extends TypeOf<typescript-examples:2e71e246a1813ae2ca87914c0dd6d023711565005e53e4455a54f76e9bf9c9a2:React>[Component]>"
+    resolved_type: "Class<extends { Component: (Function -> JSX), PureComponent: (Function -> JSX), forwardRef: (Function -> (Function -> JSX)), lazy: (Function -> ReturnTypeOf<Unknown>[default]), memo: (Function -> (Function -> JSX)) }[Component]>"
+    trace_to_declaration:
+      - "typescript-examples:2e71e246a1813ae2ca87914c0dd6d023711565005e53e4455a54f76e9bf9c9a2:KlasComponent"
+  - name: Sample
+    source_path: src/class-component/class-component-1.tsx
+    is_component: true
+    inferred_type: "Class<extends TypeOf<typescript-examples:b686031067c9718d96daed1d11502d278968fa561ce416aee6d6796207599c97:React>[Component]>"
+    resolved_type: "Class<extends { Component: (Function -> JSX), PureComponent: (Function -> JSX), forwardRef: (Function -> (Function -> JSX)), lazy: (Function -> ReturnTypeOf<Unknown>[default]), memo: (Function -> (Function -> JSX)) }[Component]>"
+    trace_to_declaration:
+      - "typescript-examples:b686031067c9718d96daed1d11502d278968fa561ce416aee6d6796207599c97:Sample"
+  - name: Sample
+    source_path: src/class-component/class-component-2.tsx
+    is_component: true
+    inferred_type: "Class<extends TypeOf<typescript-examples:f9dc35af4c8d0183ede6da8021b03a7b12cdc5d7aff3c43ff072009aedba22af:Component>>"
+    resolved_type: Class<extends (Function -> JSX)>
+    trace_to_declaration:
+      - "typescript-examples:f9dc35af4c8d0183ede6da8021b03a7b12cdc5d7aff3c43ff072009aedba22af:Sample"
+  - name: Sample
+    source_path: src/class-component/class-component-3.tsx
+    is_component: true
+    inferred_type: "Class<extends TypeOf<typescript-examples:088c145a9907856ec4bafc15b0e8236e25dccf644f5a8a1dce5683159abbe053:BaseComponent>>"
+    resolved_type: "Class<extends Class<extends { Component: (Function -> JSX), PureComponent: (Function -> JSX), forwardRef: (Function -> (Function -> JSX)), lazy: (Function -> ReturnTypeOf<Unknown>[default]), memo: (Function -> (Function -> JSX)) }[Component]>>"
+    trace_to_declaration:
+      - "typescript-examples:088c145a9907856ec4bafc15b0e8236e25dccf644f5a8a1dce5683159abbe053:Sample"
+  - name: Sample
+    source_path: src/class-component/class-component-4.tsx
+    is_component: true
+    inferred_type: "Class<extends TypeOf<typescript-examples:41c09a03c6b8036818c801eb15d37812dc70054298f7760c28ff3459bd384f0a:React>[Component]>"
+    resolved_type: "Class<extends TypeOf<react:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:<wildcard>>[Component]>"
+    trace_to_declaration:
+      - "typescript-examples:41c09a03c6b8036818c801eb15d37812dc70054298f7760c28ff3459bd384f0a:Sample"
+  - name: Sample
+    source_path: src/class-component/export-class-var.tsx
+    is_component: true
+    inferred_type: "Class<extends TypeOf<typescript-examples:d94286e5cc713e2530f9fa7bcc442a90071924761d3638284f996267d8c3cc3b:React>[Component]>"
+    resolved_type: "Class<extends { Component: (Function -> JSX), PureComponent: (Function -> JSX), forwardRef: (Function -> (Function -> JSX)), lazy: (Function -> ReturnTypeOf<Unknown>[default]), memo: (Function -> (Function -> JSX)) }[Component]>"
+    trace_to_declaration:
+      - "typescript-examples:d94286e5cc713e2530f9fa7bcc442a90071924761d3638284f996267d8c3cc3b:Sample"
+  - name: Sample
+    source_path: src/class-component/object-inheritance/sample-component.tsx
+    is_component: true
+    inferred_type: "Class<extends TypeOf<typescript-examples:f8ccf47f81f40a05889fa4e810e7d2815ce249bf42668da57ad76f88f4e21a17:core>[base][component]>"
+    resolved_type: "Class<extends { base: { component: Class<extends { Component: (Function -> JSX), PureComponent: (Function -> JSX), forwardRef: (Function -> (Function -> JSX)), lazy: (Function -> ReturnTypeOf<Unknown>[default]), memo: (Function -> (Function -> JSX)) }[Component]> } }[base][component]>"
+    trace_to_declaration:
+      - "typescript-examples:f8ccf47f81f40a05889fa4e810e7d2815ce249bf42668da57ad76f88f4e21a17:Sample"
+  - name: SamplePureComponent
+    source_path: src/class-component/pure-component.tsx
+    is_component: true
+    inferred_type: "Class<extends TypeOf<typescript-examples:129b365f5b88e56592ae14dec1855bb5066b3f9ef0fe56759ea69496445addfd:React>[PureComponent]>"
+    resolved_type: "Class<extends TypeOf<react:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:<wildcard>>[PureComponent]>"
+    trace_to_declaration:
+      - "typescript-examples:129b365f5b88e56592ae14dec1855bb5066b3f9ef0fe56759ea69496445addfd:SamplePureComponent"
+  - name: SamplePureactComponent
+    source_path: src/class-component/pure-component.tsx
+    is_component: true
+    inferred_type: "Class<extends TypeOf<typescript-examples:129b365f5b88e56592ae14dec1855bb5066b3f9ef0fe56759ea69496445addfd:PureComponent>>"
+    resolved_type: Class<extends (Function -> JSX)>
+    trace_to_declaration:
+      - "typescript-examples:129b365f5b88e56592ae14dec1855bb5066b3f9ef0fe56759ea69496445addfd:SamplePureactComponent"
+  - name: default
+    source_path: src/class-component/export-class-expression.tsx
+    is_component: true
+    inferred_type: "Class<extends TypeOf<typescript-examples:79ca677551ae8d89a85c6166a790fd3acacc2fe3e822a084d73cb88df25b5e8c:React>[Component]>"
+    resolved_type: "Class<extends { Component: (Function -> JSX), PureComponent: (Function -> JSX), forwardRef: (Function -> (Function -> JSX)), lazy: (Function -> ReturnTypeOf<Unknown>[default]), memo: (Function -> (Function -> JSX)) }[Component]>"
+    trace_to_declaration:
+      - "typescript-examples:79ca677551ae8d89a85c6166a790fd3acacc2fe3e822a084d73cb88df25b5e8c:default"
+  - name: default
+    source_path: src/class-component/object-inheritance/base-component.tsx
+    is_component: false
+    inferred_type: "{ base: { component: TypeOf<typescript-examples:455dbb09274e0cb3531bfa988becb019d29a5fc9d573744c2b926b5dcd680dfd:BaseComponent> } }"
+    resolved_type: "{ base: { component: Class<extends { Component: (Function -> JSX), PureComponent: (Function -> JSX), forwardRef: (Function -> (Function -> JSX)), lazy: (Function -> ReturnTypeOf<Unknown>[default]), memo: (Function -> (Function -> JSX)) }[Component]> } }"
+    trace_to_declaration:
+      - "typescript-examples:455dbb09274e0cb3531bfa988becb019d29a5fc9d573744c2b926b5dcd680dfd:default"
+

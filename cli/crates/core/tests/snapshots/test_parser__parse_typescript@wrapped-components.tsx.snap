@@ -1,0 +1,2317 @@
+---
+source: crates/core/tests/test_parser.rs
+expression: "&parser::Module::new(&RelativePathBuf::from_path(path.strip_prefix(&project_root).unwrap()).unwrap(),\n&project_root, &module_resolver,).unwrap()"
+input_file: samples/typescript/src/wrapped-components/wrapped-components.tsx
+---
+source_path: src/wrapped-components/wrapped-components.tsx
+id:
+  hash: "3026677710442868220"
+  path: src/wrapped-components/wrapped-components.tsx
+  package_name: UNKNOWN
+  mtype: local
+created_at: ~
+updated_at: ~
+exports:
+  - source:
+      Internal: "ComponentWithExternalWrapper#1"
+    exported_name: ComponentWithExternalWrapper
+  - source:
+      Internal: "ComponentWithWrapperJsx#1"
+    exported_name: ComponentWithWrapperJsx
+  - source:
+      Internal: "ComponentWithWrapperNoJsx#1"
+    exported_name: ComponentWithWrapperNoJsx
+  - source:
+      Internal: "ComponentWithClassWrapperJsx#1"
+    exported_name: ComponentWithClassWrapperJsx
+  - source:
+      Internal: "ComponentWithClassWrapperNoJsx#1"
+    exported_name: ComponentWithClassWrapperNoJsx
+  - source:
+      Internal: "LocalComponentWithExternalWrapper#1"
+    exported_name: LocalComponentWithExternalWrapper
+  - source:
+      Internal: "LocalComponentWithWrapperJsx#1"
+    exported_name: LocalComponentWithWrapperJsx
+  - source:
+      Internal: "LocalComponentWithWrapperNoJsx#1"
+    exported_name: LocalComponentWithWrapperNoJsx
+  - source:
+      Internal: "LocalComponentWithClassWrapperJsx#1"
+    exported_name: LocalComponentWithClassWrapperJsx
+  - source:
+      Internal: "LocalComponentWithClassWrapperNoJsx#1"
+    exported_name: LocalComponentWithClassWrapperNoJsx
+  - source:
+      Internal: "ExternalComponentWithExternalWrapper#1"
+    exported_name: ExternalComponentWithExternalWrapper
+  - source:
+      Internal: "ExternalComponentWithWrapperJsx#1"
+    exported_name: ExternalComponentWithWrapperJsx
+  - source:
+      Internal: "ExternalComponentWithWrapperNoJsx#1"
+    exported_name: ExternalComponentWithWrapperNoJsx
+  - source:
+      Internal: "ComponentWithIntl#1"
+    exported_name: ComponentWithIntl
+  - source:
+      Internal: "AnonymousWrappedComponent#1"
+    exported_name: AnonymousWrappedComponent
+declarations:
+  - symbol: "<anonymous-1>#0"
+    source:
+      hash: "3026677710442868220"
+      path: src/wrapped-components/wrapped-components.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      Function:
+        - JSX
+    start:
+      line: 37
+      column: 64
+    end:
+      line: 39
+      column: 2
+  - symbol: "AnonymousWrappedComponent#1"
+    source:
+      hash: "3026677710442868220"
+      path: src/wrapped-components/wrapped-components.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      ReturnTypeOf:
+        - TypeOf:
+            symbol:
+              symbol: "withClassWrapperNoJsx#1"
+              source:
+                hash: "3026677710442868220"
+                path: src/wrapped-components/wrapped-components.tsx
+                package_name: UNKNOWN
+                mtype: local
+            is_local: true
+        - - Function:
+              - JSX
+    start:
+      line: 37
+      column: 14
+    end:
+      line: 37
+      column: 39
+  - symbol: "ComponentWithClassWrapperJsx#1"
+    source:
+      hash: "3026677710442868220"
+      path: src/wrapped-components/wrapped-components.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      ReturnTypeOf:
+        - TypeOf:
+            symbol:
+              symbol: "withClassWrapperJsx#1"
+              source:
+                hash: "3026677710442868220"
+                path: src/wrapped-components/wrapped-components.tsx
+                package_name: UNKNOWN
+                mtype: local
+            is_local: true
+        - - TypeOf:
+              symbol:
+                symbol: "WrappedComponent#1"
+                source:
+                  hash: "3026677710442868220"
+                  path: src/wrapped-components/wrapped-components.tsx
+                  package_name: UNKNOWN
+                  mtype: local
+              is_local: true
+    start:
+      line: 11
+      column: 14
+    end:
+      line: 11
+      column: 42
+  - symbol: "ComponentWithClassWrapperNoJsx#1"
+    source:
+      hash: "3026677710442868220"
+      path: src/wrapped-components/wrapped-components.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      ReturnTypeOf:
+        - TypeOf:
+            symbol:
+              symbol: "withClassWrapperNoJsx#1"
+              source:
+                hash: "3026677710442868220"
+                path: src/wrapped-components/wrapped-components.tsx
+                package_name: UNKNOWN
+                mtype: local
+            is_local: true
+        - - TypeOf:
+              symbol:
+                symbol: "WrappedComponent#1"
+                source:
+                  hash: "3026677710442868220"
+                  path: src/wrapped-components/wrapped-components.tsx
+                  package_name: UNKNOWN
+                  mtype: local
+              is_local: true
+    start:
+      line: 13
+      column: 14
+    end:
+      line: 13
+      column: 44
+  - symbol: "ComponentWithExternalWrapper#1"
+    source:
+      hash: "3026677710442868220"
+      path: src/wrapped-components/wrapped-components.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      ReturnTypeOf:
+        - TypeOf:
+            symbol:
+              symbol: "injectIntl#1"
+              source:
+                hash: "3026677710442868220"
+                path: src/wrapped-components/wrapped-components.tsx
+                package_name: UNKNOWN
+                mtype: local
+            is_local: true
+        - - TypeOf:
+              symbol:
+                symbol: "WrappedComponent#1"
+                source:
+                  hash: "3026677710442868220"
+                  path: src/wrapped-components/wrapped-components.tsx
+                  package_name: UNKNOWN
+                  mtype: local
+              is_local: true
+    start:
+      line: 5
+      column: 14
+    end:
+      line: 5
+      column: 42
+  - symbol: "ComponentWithIntl#1"
+    source:
+      hash: "3026677710442868220"
+      path: src/wrapped-components/wrapped-components.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      TypeOf:
+        symbol:
+          symbol: "LocalComponentWithIntl#1"
+          source:
+            hash: "3026677710442868220"
+            path: src/wrapped-components/wrapped-components.tsx
+            package_name: UNKNOWN
+            mtype: local
+        is_local: true
+    start:
+      line: 35
+      column: 14
+    end:
+      line: 35
+      column: 31
+  - symbol: "ComponentWithWrapperJsx#1"
+    source:
+      hash: "3026677710442868220"
+      path: src/wrapped-components/wrapped-components.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      ReturnTypeOf:
+        - TypeOf:
+            symbol:
+              symbol: "withWrapperJsx#1"
+              source:
+                hash: "3026677710442868220"
+                path: src/wrapped-components/wrapped-components.tsx
+                package_name: UNKNOWN
+                mtype: local
+            is_local: true
+        - - TypeOf:
+              symbol:
+                symbol: "WrappedComponent#1"
+                source:
+                  hash: "3026677710442868220"
+                  path: src/wrapped-components/wrapped-components.tsx
+                  package_name: UNKNOWN
+                  mtype: local
+              is_local: true
+    start:
+      line: 7
+      column: 14
+    end:
+      line: 7
+      column: 37
+  - symbol: "ComponentWithWrapperNoJsx#1"
+    source:
+      hash: "3026677710442868220"
+      path: src/wrapped-components/wrapped-components.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      ReturnTypeOf:
+        - TypeOf:
+            symbol:
+              symbol: "withWrapperNoJsx#1"
+              source:
+                hash: "3026677710442868220"
+                path: src/wrapped-components/wrapped-components.tsx
+                package_name: UNKNOWN
+                mtype: local
+            is_local: true
+        - - TypeOf:
+              symbol:
+                symbol: "WrappedComponent#1"
+                source:
+                  hash: "3026677710442868220"
+                  path: src/wrapped-components/wrapped-components.tsx
+                  package_name: UNKNOWN
+                  mtype: local
+              is_local: true
+    start:
+      line: 9
+      column: 14
+    end:
+      line: 9
+      column: 39
+  - symbol: "ExternalComponentWithExternalWrapper#1"
+    source:
+      hash: "3026677710442868220"
+      path: src/wrapped-components/wrapped-components.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      ReturnTypeOf:
+        - TypeOf:
+            symbol:
+              symbol: "injectIntl#1"
+              source:
+                hash: "3026677710442868220"
+                path: src/wrapped-components/wrapped-components.tsx
+                package_name: UNKNOWN
+                mtype: local
+            is_local: true
+        - - TypeOf:
+              symbol:
+                symbol: "IntlLabel#1"
+                source:
+                  hash: "3026677710442868220"
+                  path: src/wrapped-components/wrapped-components.tsx
+                  package_name: UNKNOWN
+                  mtype: local
+              is_local: true
+    start:
+      line: 29
+      column: 14
+    end:
+      line: 29
+      column: 50
+  - symbol: "ExternalComponentWithWrapperJsx#1"
+    source:
+      hash: "3026677710442868220"
+      path: src/wrapped-components/wrapped-components.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      ReturnTypeOf:
+        - TypeOf:
+            symbol:
+              symbol: "withWrapperJsx#1"
+              source:
+                hash: "3026677710442868220"
+                path: src/wrapped-components/wrapped-components.tsx
+                package_name: UNKNOWN
+                mtype: local
+            is_local: true
+        - - TypeOf:
+              symbol:
+                symbol: "IntlLabel#1"
+                source:
+                  hash: "3026677710442868220"
+                  path: src/wrapped-components/wrapped-components.tsx
+                  package_name: UNKNOWN
+                  mtype: local
+              is_local: true
+    start:
+      line: 31
+      column: 14
+    end:
+      line: 31
+      column: 45
+  - symbol: "ExternalComponentWithWrapperNoJsx#1"
+    source:
+      hash: "3026677710442868220"
+      path: src/wrapped-components/wrapped-components.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      ReturnTypeOf:
+        - TypeOf:
+            symbol:
+              symbol: "withWrapperNoJsx#1"
+              source:
+                hash: "3026677710442868220"
+                path: src/wrapped-components/wrapped-components.tsx
+                package_name: UNKNOWN
+                mtype: local
+            is_local: true
+        - - TypeOf:
+              symbol:
+                symbol: "IntlLabel#1"
+                source:
+                  hash: "3026677710442868220"
+                  path: src/wrapped-components/wrapped-components.tsx
+                  package_name: UNKNOWN
+                  mtype: local
+              is_local: true
+    start:
+      line: 33
+      column: 14
+    end:
+      line: 33
+      column: 47
+  - symbol: "IntlLabel#1"
+    source:
+      hash: "3026677710442868220"
+      path: src/wrapped-components/wrapped-components.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('IntlLabel' type=dynamic), context: #1 }, source: ModuleId { hash: 12848967743216371208, path: \"\", pkg_name: \"react-intl\", mtype: Package } }>"
+    inferred_type:
+      TypeOf:
+        symbol:
+          symbol: "IntlLabel#1"
+          source:
+            hash: "12848967743216371208"
+            path: ""
+            package_name: react-intl
+            mtype: package
+        is_local: false
+    start:
+      line: 1
+      column: 10
+    end:
+      line: 1
+      column: 19
+  - symbol: "LocalComponentWithClassWrapperJsx#1"
+    source:
+      hash: "3026677710442868220"
+      path: src/wrapped-components/wrapped-components.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      ReturnTypeOf:
+        - TypeOf:
+            symbol:
+              symbol: "withClassWrapperJsx#1"
+              source:
+                hash: "3026677710442868220"
+                path: src/wrapped-components/wrapped-components.tsx
+                package_name: UNKNOWN
+                mtype: local
+            is_local: true
+        - - TypeOf:
+              symbol:
+                symbol: "LocalComponentWithIntl#1"
+                source:
+                  hash: "3026677710442868220"
+                  path: src/wrapped-components/wrapped-components.tsx
+                  package_name: UNKNOWN
+                  mtype: local
+              is_local: true
+    start:
+      line: 25
+      column: 14
+    end:
+      line: 25
+      column: 47
+  - symbol: "LocalComponentWithClassWrapperNoJsx#1"
+    source:
+      hash: "3026677710442868220"
+      path: src/wrapped-components/wrapped-components.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      ReturnTypeOf:
+        - TypeOf:
+            symbol:
+              symbol: "withClassWrapperNoJsx#1"
+              source:
+                hash: "3026677710442868220"
+                path: src/wrapped-components/wrapped-components.tsx
+                package_name: UNKNOWN
+                mtype: local
+            is_local: true
+        - - TypeOf:
+              symbol:
+                symbol: "LocalComponentWithIntl#1"
+                source:
+                  hash: "3026677710442868220"
+                  path: src/wrapped-components/wrapped-components.tsx
+                  package_name: UNKNOWN
+                  mtype: local
+              is_local: true
+    start:
+      line: 27
+      column: 14
+    end:
+      line: 27
+      column: 49
+  - symbol: "LocalComponentWithExternalWrapper#1"
+    source:
+      hash: "3026677710442868220"
+      path: src/wrapped-components/wrapped-components.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      ReturnTypeOf:
+        - TypeOf:
+            symbol:
+              symbol: "injectIntl#1"
+              source:
+                hash: "3026677710442868220"
+                path: src/wrapped-components/wrapped-components.tsx
+                package_name: UNKNOWN
+                mtype: local
+            is_local: true
+        - - TypeOf:
+              symbol:
+                symbol: "LocalComponentWithIntl#1"
+                source:
+                  hash: "3026677710442868220"
+                  path: src/wrapped-components/wrapped-components.tsx
+                  package_name: UNKNOWN
+                  mtype: local
+              is_local: true
+    start:
+      line: 19
+      column: 14
+    end:
+      line: 19
+      column: 47
+  - symbol: "LocalComponentWithIntl#1"
+    source:
+      hash: "3026677710442868220"
+      path: src/wrapped-components/wrapped-components.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<declaration>"
+    inferred_type:
+      Function:
+        - JSX
+    start:
+      line: 15
+      column: 1
+    end:
+      line: 17
+      column: 2
+  - symbol: "LocalComponentWithWrapperJsx#1"
+    source:
+      hash: "3026677710442868220"
+      path: src/wrapped-components/wrapped-components.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      ReturnTypeOf:
+        - TypeOf:
+            symbol:
+              symbol: "withWrapperJsx#1"
+              source:
+                hash: "3026677710442868220"
+                path: src/wrapped-components/wrapped-components.tsx
+                package_name: UNKNOWN
+                mtype: local
+            is_local: true
+        - - TypeOf:
+              symbol:
+                symbol: "LocalComponentWithIntl#1"
+                source:
+                  hash: "3026677710442868220"
+                  path: src/wrapped-components/wrapped-components.tsx
+                  package_name: UNKNOWN
+                  mtype: local
+              is_local: true
+    start:
+      line: 21
+      column: 14
+    end:
+      line: 21
+      column: 42
+  - symbol: "LocalComponentWithWrapperNoJsx#1"
+    source:
+      hash: "3026677710442868220"
+      path: src/wrapped-components/wrapped-components.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      ReturnTypeOf:
+        - TypeOf:
+            symbol:
+              symbol: "withWrapperNoJsx#1"
+              source:
+                hash: "3026677710442868220"
+                path: src/wrapped-components/wrapped-components.tsx
+                package_name: UNKNOWN
+                mtype: local
+            is_local: true
+        - - TypeOf:
+              symbol:
+                symbol: "LocalComponentWithIntl#1"
+                source:
+                  hash: "3026677710442868220"
+                  path: src/wrapped-components/wrapped-components.tsx
+                  package_name: UNKNOWN
+                  mtype: local
+              is_local: true
+    start:
+      line: 23
+      column: 14
+    end:
+      line: 23
+      column: 44
+  - symbol: "PlainComponent#1"
+    source:
+      hash: "3026677710442868220"
+      path: src/wrapped-components/wrapped-components.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('PlainComponent' type=dynamic), context: #1 }, source: ModuleId { hash: 15060290214910995762, path: \"src/wrapped-components/components\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    inferred_type:
+      TypeOf:
+        symbol:
+          symbol: "PlainComponent#1"
+          source:
+            hash: "15060290214910995762"
+            path: src/wrapped-components/components
+            package_name: UNKNOWN
+            mtype: local
+        is_local: false
+    start:
+      line: 2
+      column: 10
+    end:
+      line: 2
+      column: 24
+  - symbol: "WrappedComponent#1"
+    source:
+      hash: "3026677710442868220"
+      path: src/wrapped-components/wrapped-components.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('WrappedComponent' type=dynamic), context: #1 }, source: ModuleId { hash: 15060290214910995762, path: \"src/wrapped-components/components\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    inferred_type:
+      TypeOf:
+        symbol:
+          symbol: "WrappedComponent#1"
+          source:
+            hash: "15060290214910995762"
+            path: src/wrapped-components/components
+            package_name: UNKNOWN
+            mtype: local
+        is_local: false
+    start:
+      line: 2
+      column: 26
+    end:
+      line: 2
+      column: 42
+  - symbol: "injectIntl#1"
+    source:
+      hash: "3026677710442868220"
+      path: src/wrapped-components/wrapped-components.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('injectIntl' type=dynamic), context: #1 }, source: ModuleId { hash: 12848967743216371208, path: \"\", pkg_name: \"react-intl\", mtype: Package } }>"
+    inferred_type:
+      TypeOf:
+        symbol:
+          symbol: "injectIntl#1"
+          source:
+            hash: "12848967743216371208"
+            path: ""
+            package_name: react-intl
+            mtype: package
+        is_local: false
+    start:
+      line: 1
+      column: 21
+    end:
+      line: 1
+      column: 31
+  - symbol: "withClassWrapperJsx#1"
+    source:
+      hash: "3026677710442868220"
+      path: src/wrapped-components/wrapped-components.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('withClassWrapperJsx' type=dynamic), context: #1 }, source: ModuleId { hash: 5681964003813486762, path: \"src/wrapped-components/wrappers\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    inferred_type:
+      TypeOf:
+        symbol:
+          symbol: "withClassWrapperJsx#1"
+          source:
+            hash: "5681964003813486762"
+            path: src/wrapped-components/wrappers
+            package_name: UNKNOWN
+            mtype: local
+        is_local: false
+    start:
+      line: 3
+      column: 10
+    end:
+      line: 3
+      column: 29
+  - symbol: "withClassWrapperNoJsx#1"
+    source:
+      hash: "3026677710442868220"
+      path: src/wrapped-components/wrapped-components.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('withClassWrapperNoJsx' type=dynamic), context: #1 }, source: ModuleId { hash: 5681964003813486762, path: \"src/wrapped-components/wrappers\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    inferred_type:
+      TypeOf:
+        symbol:
+          symbol: "withClassWrapperNoJsx#1"
+          source:
+            hash: "5681964003813486762"
+            path: src/wrapped-components/wrappers
+            package_name: UNKNOWN
+            mtype: local
+        is_local: false
+    start:
+      line: 3
+      column: 31
+    end:
+      line: 3
+      column: 52
+  - symbol: "withWrapperJsx#1"
+    source:
+      hash: "3026677710442868220"
+      path: src/wrapped-components/wrapped-components.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('withWrapperJsx' type=dynamic), context: #1 }, source: ModuleId { hash: 5681964003813486762, path: \"src/wrapped-components/wrappers\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    inferred_type:
+      TypeOf:
+        symbol:
+          symbol: "withWrapperJsx#1"
+          source:
+            hash: "5681964003813486762"
+            path: src/wrapped-components/wrappers
+            package_name: UNKNOWN
+            mtype: local
+        is_local: false
+    start:
+      line: 3
+      column: 54
+    end:
+      line: 3
+      column: 68
+  - symbol: "withWrapperNoJsx#1"
+    source:
+      hash: "3026677710442868220"
+      path: src/wrapped-components/wrapped-components.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('withWrapperNoJsx' type=dynamic), context: #1 }, source: ModuleId { hash: 5681964003813486762, path: \"src/wrapped-components/wrappers\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    inferred_type:
+      TypeOf:
+        symbol:
+          symbol: "withWrapperNoJsx#1"
+          source:
+            hash: "5681964003813486762"
+            path: src/wrapped-components/wrappers
+            package_name: UNKNOWN
+            mtype: local
+        is_local: false
+    start:
+      line: 3
+      column: 70
+    end:
+      line: 3
+      column: 86
+scopes:
+  - owner: "__global#0"
+    parent: ~
+    children:
+      - "ComponentWithExternalWrapper#1"
+      - "ComponentWithExternalWrapper#1"
+      - "ComponentWithWrapperJsx#1"
+      - "ComponentWithWrapperJsx#1"
+      - "ComponentWithWrapperNoJsx#1"
+      - "ComponentWithWrapperNoJsx#1"
+      - "ComponentWithClassWrapperJsx#1"
+      - "ComponentWithClassWrapperJsx#1"
+      - "ComponentWithClassWrapperNoJsx#1"
+      - "ComponentWithClassWrapperNoJsx#1"
+      - "LocalComponentWithIntl#1"
+      - "LocalComponentWithExternalWrapper#1"
+      - "LocalComponentWithExternalWrapper#1"
+      - "LocalComponentWithWrapperJsx#1"
+      - "LocalComponentWithWrapperJsx#1"
+      - "LocalComponentWithWrapperNoJsx#1"
+      - "LocalComponentWithWrapperNoJsx#1"
+      - "LocalComponentWithClassWrapperJsx#1"
+      - "LocalComponentWithClassWrapperJsx#1"
+      - "LocalComponentWithClassWrapperNoJsx#1"
+      - "LocalComponentWithClassWrapperNoJsx#1"
+      - "ExternalComponentWithExternalWrapper#1"
+      - "ExternalComponentWithExternalWrapper#1"
+      - "ExternalComponentWithWrapperJsx#1"
+      - "ExternalComponentWithWrapperJsx#1"
+      - "ExternalComponentWithWrapperNoJsx#1"
+      - "ExternalComponentWithWrapperNoJsx#1"
+      - "ComponentWithIntl#1"
+      - "ComponentWithIntl#1"
+      - "AnonymousWrappedComponent#1"
+      - "AnonymousWrappedComponent#1"
+      - "<anonymous-3>#0"
+    references:
+      - "AnonymousWrappedComponent#1"
+      - "ComponentWithClassWrapperJsx#1"
+      - "ComponentWithClassWrapperNoJsx#1"
+      - "ComponentWithExternalWrapper#1"
+      - "ComponentWithIntl#1"
+      - "ComponentWithWrapperJsx#1"
+      - "ComponentWithWrapperNoJsx#1"
+      - "ExternalComponentWithExternalWrapper#1"
+      - "ExternalComponentWithWrapperJsx#1"
+      - "ExternalComponentWithWrapperNoJsx#1"
+      - "IntlLabel#1"
+      - "LocalComponentWithClassWrapperJsx#1"
+      - "LocalComponentWithClassWrapperNoJsx#1"
+      - "LocalComponentWithExternalWrapper#1"
+      - "LocalComponentWithIntl#1"
+      - "LocalComponentWithWrapperJsx#1"
+      - "LocalComponentWithWrapperNoJsx#1"
+      - "PlainComponent#1"
+      - "WrappedComponent#1"
+      - "div#2"
+      - "id#0"
+      - "injectIntl#1"
+      - "withClassWrapperJsx#1"
+      - "withClassWrapperNoJsx#1"
+      - "withWrapperJsx#1"
+      - "withWrapperNoJsx#1"
+    jsx_references:
+      - "IntlLabel#1"
+      - "PlainComponent#1"
+      - "WrappedComponent#1"
+      - "div#2"
+  - owner: "ComponentWithExternalWrapper#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "WrappedComponent#1"
+      - "injectIntl#1"
+    jsx_references: []
+  - owner: "ComponentWithExternalWrapper#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "WrappedComponent#1"
+      - "injectIntl#1"
+    jsx_references: []
+  - owner: "ComponentWithWrapperJsx#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "WrappedComponent#1"
+      - "withWrapperJsx#1"
+    jsx_references: []
+  - owner: "ComponentWithWrapperJsx#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "WrappedComponent#1"
+      - "withWrapperJsx#1"
+    jsx_references: []
+  - owner: "ComponentWithWrapperNoJsx#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "WrappedComponent#1"
+      - "withWrapperNoJsx#1"
+    jsx_references: []
+  - owner: "ComponentWithWrapperNoJsx#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "WrappedComponent#1"
+      - "withWrapperNoJsx#1"
+    jsx_references: []
+  - owner: "ComponentWithClassWrapperJsx#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "WrappedComponent#1"
+      - "withClassWrapperJsx#1"
+    jsx_references: []
+  - owner: "ComponentWithClassWrapperJsx#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "WrappedComponent#1"
+      - "withClassWrapperJsx#1"
+    jsx_references: []
+  - owner: "ComponentWithClassWrapperNoJsx#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "WrappedComponent#1"
+      - "withClassWrapperNoJsx#1"
+    jsx_references: []
+  - owner: "ComponentWithClassWrapperNoJsx#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "WrappedComponent#1"
+      - "withClassWrapperNoJsx#1"
+    jsx_references: []
+  - owner: "LocalComponentWithIntl#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "IntlLabel#1"
+      - "WrappedComponent#1"
+      - "div#2"
+      - "id#0"
+    jsx_references:
+      - "IntlLabel#1"
+      - "WrappedComponent#1"
+      - "div#2"
+  - owner: "LocalComponentWithExternalWrapper#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "LocalComponentWithIntl#1"
+      - "injectIntl#1"
+    jsx_references: []
+  - owner: "LocalComponentWithExternalWrapper#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "LocalComponentWithIntl#1"
+      - "injectIntl#1"
+    jsx_references: []
+  - owner: "LocalComponentWithWrapperJsx#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "LocalComponentWithIntl#1"
+      - "withWrapperJsx#1"
+    jsx_references: []
+  - owner: "LocalComponentWithWrapperJsx#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "LocalComponentWithIntl#1"
+      - "withWrapperJsx#1"
+    jsx_references: []
+  - owner: "LocalComponentWithWrapperNoJsx#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "LocalComponentWithIntl#1"
+      - "withWrapperNoJsx#1"
+    jsx_references: []
+  - owner: "LocalComponentWithWrapperNoJsx#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "LocalComponentWithIntl#1"
+      - "withWrapperNoJsx#1"
+    jsx_references: []
+  - owner: "LocalComponentWithClassWrapperJsx#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "LocalComponentWithIntl#1"
+      - "withClassWrapperJsx#1"
+    jsx_references: []
+  - owner: "LocalComponentWithClassWrapperJsx#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "LocalComponentWithIntl#1"
+      - "withClassWrapperJsx#1"
+    jsx_references: []
+  - owner: "LocalComponentWithClassWrapperNoJsx#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "LocalComponentWithIntl#1"
+      - "withClassWrapperNoJsx#1"
+    jsx_references: []
+  - owner: "LocalComponentWithClassWrapperNoJsx#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "LocalComponentWithIntl#1"
+      - "withClassWrapperNoJsx#1"
+    jsx_references: []
+  - owner: "ExternalComponentWithExternalWrapper#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "IntlLabel#1"
+      - "injectIntl#1"
+    jsx_references: []
+  - owner: "ExternalComponentWithExternalWrapper#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "IntlLabel#1"
+      - "injectIntl#1"
+    jsx_references: []
+  - owner: "ExternalComponentWithWrapperJsx#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "IntlLabel#1"
+      - "withWrapperJsx#1"
+    jsx_references: []
+  - owner: "ExternalComponentWithWrapperJsx#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "IntlLabel#1"
+      - "withWrapperJsx#1"
+    jsx_references: []
+  - owner: "ExternalComponentWithWrapperNoJsx#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "IntlLabel#1"
+      - "withWrapperNoJsx#1"
+    jsx_references: []
+  - owner: "ExternalComponentWithWrapperNoJsx#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "IntlLabel#1"
+      - "withWrapperNoJsx#1"
+    jsx_references: []
+  - owner: "ComponentWithIntl#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "LocalComponentWithIntl#1"
+    jsx_references: []
+  - owner: "ComponentWithIntl#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "LocalComponentWithIntl#1"
+    jsx_references: []
+  - owner: "AnonymousWrappedComponent#1"
+    parent: "__global#0"
+    children:
+      - "<anonymous-1>#0"
+    references:
+      - "IntlLabel#1"
+      - "PlainComponent#1"
+      - "div#2"
+      - "id#0"
+      - "withClassWrapperNoJsx#1"
+    jsx_references:
+      - "IntlLabel#1"
+      - "PlainComponent#1"
+      - "div#2"
+  - owner: "<anonymous-1>#0"
+    parent: "AnonymousWrappedComponent#1"
+    children: []
+    references:
+      - "IntlLabel#1"
+      - "PlainComponent#1"
+      - "div#2"
+      - "id#0"
+    jsx_references:
+      - "IntlLabel#1"
+      - "PlainComponent#1"
+      - "div#2"
+  - owner: "AnonymousWrappedComponent#1"
+    parent: "__global#0"
+    children:
+      - "<anonymous-2>#0"
+    references:
+      - "IntlLabel#1"
+      - "PlainComponent#1"
+      - "div#2"
+      - "id#0"
+      - "withClassWrapperNoJsx#1"
+    jsx_references:
+      - "IntlLabel#1"
+      - "PlainComponent#1"
+      - "div#2"
+  - owner: "<anonymous-2>#0"
+    parent: "AnonymousWrappedComponent#1"
+    children: []
+    references:
+      - "IntlLabel#1"
+      - "PlainComponent#1"
+      - "div#2"
+      - "id#0"
+    jsx_references:
+      - "IntlLabel#1"
+      - "PlainComponent#1"
+      - "div#2"
+  - owner: "<anonymous-3>#0"
+    parent: "__global#0"
+    children: []
+    references:
+      - "IntlLabel#1"
+      - "PlainComponent#1"
+      - "div#2"
+      - "id#0"
+    jsx_references:
+      - "IntlLabel#1"
+      - "PlainComponent#1"
+      - "div#2"
+body:
+  - type: ImportDeclaration
+    span:
+      start: 1
+      end: 52
+      ctxt: 0
+    specifiers:
+      - type: ImportSpecifier
+        span:
+          start: 10
+          end: 19
+          ctxt: 0
+        local:
+          type: Identifier
+          span:
+            start: 10
+            end: 19
+            ctxt: 1
+          value: IntlLabel
+          optional: false
+        imported: ~
+        isTypeOnly: false
+      - type: ImportSpecifier
+        span:
+          start: 21
+          end: 31
+          ctxt: 0
+        local:
+          type: Identifier
+          span:
+            start: 21
+            end: 31
+            ctxt: 1
+          value: injectIntl
+          optional: false
+        imported: ~
+        isTypeOnly: false
+    source:
+      type: StringLiteral
+      span:
+        start: 39
+        end: 51
+        ctxt: 0
+      value: react-intl
+      raw: "\"react-intl\""
+    typeOnly: false
+    asserts: ~
+  - type: ImportDeclaration
+    span:
+      start: 53
+      end: 117
+      ctxt: 0
+    specifiers:
+      - type: ImportSpecifier
+        span:
+          start: 62
+          end: 76
+          ctxt: 0
+        local:
+          type: Identifier
+          span:
+            start: 62
+            end: 76
+            ctxt: 1
+          value: PlainComponent
+          optional: false
+        imported: ~
+        isTypeOnly: false
+      - type: ImportSpecifier
+        span:
+          start: 78
+          end: 94
+          ctxt: 0
+        local:
+          type: Identifier
+          span:
+            start: 78
+            end: 94
+            ctxt: 1
+          value: WrappedComponent
+          optional: false
+        imported: ~
+        isTypeOnly: false
+    source:
+      type: StringLiteral
+      span:
+        start: 102
+        end: 116
+        ctxt: 0
+      value: "./components"
+      raw: "\"./components\""
+    typeOnly: false
+    asserts: ~
+  - type: ImportDeclaration
+    span:
+      start: 118
+      end: 224
+      ctxt: 0
+    specifiers:
+      - type: ImportSpecifier
+        span:
+          start: 127
+          end: 146
+          ctxt: 0
+        local:
+          type: Identifier
+          span:
+            start: 127
+            end: 146
+            ctxt: 1
+          value: withClassWrapperJsx
+          optional: false
+        imported: ~
+        isTypeOnly: false
+      - type: ImportSpecifier
+        span:
+          start: 148
+          end: 169
+          ctxt: 0
+        local:
+          type: Identifier
+          span:
+            start: 148
+            end: 169
+            ctxt: 1
+          value: withClassWrapperNoJsx
+          optional: false
+        imported: ~
+        isTypeOnly: false
+      - type: ImportSpecifier
+        span:
+          start: 171
+          end: 185
+          ctxt: 0
+        local:
+          type: Identifier
+          span:
+            start: 171
+            end: 185
+            ctxt: 1
+          value: withWrapperJsx
+          optional: false
+        imported: ~
+        isTypeOnly: false
+      - type: ImportSpecifier
+        span:
+          start: 187
+          end: 203
+          ctxt: 0
+        local:
+          type: Identifier
+          span:
+            start: 187
+            end: 203
+            ctxt: 1
+          value: withWrapperNoJsx
+          optional: false
+        imported: ~
+        isTypeOnly: false
+    source:
+      type: StringLiteral
+      span:
+        start: 211
+        end: 223
+        ctxt: 0
+      value: "./wrappers"
+      raw: "\"./wrappers\""
+    typeOnly: false
+    asserts: ~
+  - type: ExportDeclaration
+    span:
+      start: 226
+      end: 299
+      ctxt: 0
+    declaration:
+      type: VariableDeclaration
+      span:
+        start: 233
+        end: 299
+        ctxt: 0
+      kind: const
+      declare: false
+      declarations:
+        - type: VariableDeclarator
+          span:
+            start: 239
+            end: 298
+            ctxt: 0
+          id:
+            optional: false
+            span:
+              start: 239
+              end: 267
+              ctxt: 1
+            type: Identifier
+            typeAnnotation: ~
+            value: ComponentWithExternalWrapper
+          init:
+            type: CallExpression
+            span:
+              start: 270
+              end: 298
+              ctxt: 0
+            callee:
+              type: Identifier
+              span:
+                start: 270
+                end: 280
+                ctxt: 1
+              value: injectIntl
+              optional: false
+            arguments:
+              - spread: ~
+                expression:
+                  type: Identifier
+                  span:
+                    start: 281
+                    end: 297
+                    ctxt: 1
+                  value: WrappedComponent
+                  optional: false
+            typeArguments: ~
+          definite: false
+  - type: ExportDeclaration
+    span:
+      start: 301
+      end: 373
+      ctxt: 0
+    declaration:
+      type: VariableDeclaration
+      span:
+        start: 308
+        end: 373
+        ctxt: 0
+      kind: const
+      declare: false
+      declarations:
+        - type: VariableDeclarator
+          span:
+            start: 314
+            end: 372
+            ctxt: 0
+          id:
+            optional: false
+            span:
+              start: 314
+              end: 337
+              ctxt: 1
+            type: Identifier
+            typeAnnotation: ~
+            value: ComponentWithWrapperJsx
+          init:
+            type: CallExpression
+            span:
+              start: 340
+              end: 372
+              ctxt: 0
+            callee:
+              type: Identifier
+              span:
+                start: 340
+                end: 354
+                ctxt: 1
+              value: withWrapperJsx
+              optional: false
+            arguments:
+              - spread: ~
+                expression:
+                  type: Identifier
+                  span:
+                    start: 355
+                    end: 371
+                    ctxt: 1
+                  value: WrappedComponent
+                  optional: false
+            typeArguments: ~
+          definite: false
+  - type: ExportDeclaration
+    span:
+      start: 375
+      end: 451
+      ctxt: 0
+    declaration:
+      type: VariableDeclaration
+      span:
+        start: 382
+        end: 451
+        ctxt: 0
+      kind: const
+      declare: false
+      declarations:
+        - type: VariableDeclarator
+          span:
+            start: 388
+            end: 450
+            ctxt: 0
+          id:
+            optional: false
+            span:
+              start: 388
+              end: 413
+              ctxt: 1
+            type: Identifier
+            typeAnnotation: ~
+            value: ComponentWithWrapperNoJsx
+          init:
+            type: CallExpression
+            span:
+              start: 416
+              end: 450
+              ctxt: 0
+            callee:
+              type: Identifier
+              span:
+                start: 416
+                end: 432
+                ctxt: 1
+              value: withWrapperNoJsx
+              optional: false
+            arguments:
+              - spread: ~
+                expression:
+                  type: Identifier
+                  span:
+                    start: 433
+                    end: 449
+                    ctxt: 1
+                  value: WrappedComponent
+                  optional: false
+            typeArguments: ~
+          definite: false
+  - type: ExportDeclaration
+    span:
+      start: 453
+      end: 535
+      ctxt: 0
+    declaration:
+      type: VariableDeclaration
+      span:
+        start: 460
+        end: 535
+        ctxt: 0
+      kind: const
+      declare: false
+      declarations:
+        - type: VariableDeclarator
+          span:
+            start: 466
+            end: 534
+            ctxt: 0
+          id:
+            optional: false
+            span:
+              start: 466
+              end: 494
+              ctxt: 1
+            type: Identifier
+            typeAnnotation: ~
+            value: ComponentWithClassWrapperJsx
+          init:
+            type: CallExpression
+            span:
+              start: 497
+              end: 534
+              ctxt: 0
+            callee:
+              type: Identifier
+              span:
+                start: 497
+                end: 516
+                ctxt: 1
+              value: withClassWrapperJsx
+              optional: false
+            arguments:
+              - spread: ~
+                expression:
+                  type: Identifier
+                  span:
+                    start: 517
+                    end: 533
+                    ctxt: 1
+                  value: WrappedComponent
+                  optional: false
+            typeArguments: ~
+          definite: false
+  - type: ExportDeclaration
+    span:
+      start: 537
+      end: 623
+      ctxt: 0
+    declaration:
+      type: VariableDeclaration
+      span:
+        start: 544
+        end: 623
+        ctxt: 0
+      kind: const
+      declare: false
+      declarations:
+        - type: VariableDeclarator
+          span:
+            start: 550
+            end: 622
+            ctxt: 0
+          id:
+            optional: false
+            span:
+              start: 550
+              end: 580
+              ctxt: 1
+            type: Identifier
+            typeAnnotation: ~
+            value: ComponentWithClassWrapperNoJsx
+          init:
+            type: CallExpression
+            span:
+              start: 583
+              end: 622
+              ctxt: 0
+            callee:
+              type: Identifier
+              span:
+                start: 583
+                end: 604
+                ctxt: 1
+              value: withClassWrapperNoJsx
+              optional: false
+            arguments:
+              - spread: ~
+                expression:
+                  type: Identifier
+                  span:
+                    start: 605
+                    end: 621
+                    ctxt: 1
+                  value: WrappedComponent
+                  optional: false
+            typeArguments: ~
+          definite: false
+  - async: false
+    body:
+      type: BlockStatement
+      span:
+        start: 659
+        end: 729
+        ctxt: 0
+      stmts:
+        - type: ReturnStatement
+          span:
+            start: 665
+            end: 727
+            ctxt: 0
+          argument:
+            type: JSXElement
+            span:
+              start: 672
+              end: 726
+              ctxt: 0
+            opening:
+              type: JSXOpeningElement
+              name:
+                type: Identifier
+                span:
+                  start: 673
+                  end: 676
+                  ctxt: 2
+                value: div
+                optional: false
+              span:
+                start: 672
+                end: 677
+                ctxt: 0
+              attributes: []
+              selfClosing: false
+              typeArguments: ~
+            children:
+              - type: JSXElement
+                span:
+                  start: 677
+                  end: 696
+                  ctxt: 0
+                opening:
+                  type: JSXOpeningElement
+                  name:
+                    type: Identifier
+                    span:
+                      start: 678
+                      end: 694
+                      ctxt: 1
+                    value: WrappedComponent
+                    optional: false
+                  span:
+                    start: 677
+                    end: 696
+                    ctxt: 0
+                  attributes: []
+                  selfClosing: true
+                  typeArguments: ~
+                children: []
+                closing: ~
+              - type: JSXElement
+                span:
+                  start: 696
+                  end: 720
+                  ctxt: 0
+                opening:
+                  type: JSXOpeningElement
+                  name:
+                    type: Identifier
+                    span:
+                      start: 697
+                      end: 706
+                      ctxt: 1
+                    value: IntlLabel
+                    optional: false
+                  span:
+                    start: 696
+                    end: 720
+                    ctxt: 0
+                  attributes:
+                    - type: JSXAttribute
+                      span:
+                        start: 707
+                        end: 717
+                        ctxt: 0
+                      name:
+                        type: Identifier
+                        span:
+                          start: 707
+                          end: 709
+                          ctxt: 0
+                        value: id
+                        optional: false
+                      value:
+                        type: StringLiteral
+                        span:
+                          start: 710
+                          end: 717
+                          ctxt: 0
+                        value: hello
+                        raw: "\"hello\""
+                  selfClosing: true
+                  typeArguments: ~
+                children: []
+                closing: ~
+            closing:
+              type: JSXClosingElement
+              span:
+                start: 720
+                end: 726
+                ctxt: 0
+              name:
+                type: Identifier
+                span:
+                  start: 722
+                  end: 725
+                  ctxt: 2
+                value: div
+                optional: false
+    declare: false
+    decorators: []
+    generator: false
+    identifier:
+      type: Identifier
+      span:
+        start: 634
+        end: 656
+        ctxt: 1
+      value: LocalComponentWithIntl
+      optional: false
+    params: []
+    returnType: ~
+    span:
+      start: 625
+      end: 729
+      ctxt: 0
+    type: FunctionDeclaration
+    typeParameters: ~
+  - type: ExportDeclaration
+    span:
+      start: 731
+      end: 815
+      ctxt: 0
+    declaration:
+      type: VariableDeclaration
+      span:
+        start: 738
+        end: 815
+        ctxt: 0
+      kind: const
+      declare: false
+      declarations:
+        - type: VariableDeclarator
+          span:
+            start: 744
+            end: 814
+            ctxt: 0
+          id:
+            optional: false
+            span:
+              start: 744
+              end: 777
+              ctxt: 1
+            type: Identifier
+            typeAnnotation: ~
+            value: LocalComponentWithExternalWrapper
+          init:
+            type: CallExpression
+            span:
+              start: 780
+              end: 814
+              ctxt: 0
+            callee:
+              type: Identifier
+              span:
+                start: 780
+                end: 790
+                ctxt: 1
+              value: injectIntl
+              optional: false
+            arguments:
+              - spread: ~
+                expression:
+                  type: Identifier
+                  span:
+                    start: 791
+                    end: 813
+                    ctxt: 1
+                  value: LocalComponentWithIntl
+                  optional: false
+            typeArguments: ~
+          definite: false
+  - type: ExportDeclaration
+    span:
+      start: 817
+      end: 900
+      ctxt: 0
+    declaration:
+      type: VariableDeclaration
+      span:
+        start: 824
+        end: 900
+        ctxt: 0
+      kind: const
+      declare: false
+      declarations:
+        - type: VariableDeclarator
+          span:
+            start: 830
+            end: 899
+            ctxt: 0
+          id:
+            optional: false
+            span:
+              start: 830
+              end: 858
+              ctxt: 1
+            type: Identifier
+            typeAnnotation: ~
+            value: LocalComponentWithWrapperJsx
+          init:
+            type: CallExpression
+            span:
+              start: 861
+              end: 899
+              ctxt: 0
+            callee:
+              type: Identifier
+              span:
+                start: 861
+                end: 875
+                ctxt: 1
+              value: withWrapperJsx
+              optional: false
+            arguments:
+              - spread: ~
+                expression:
+                  type: Identifier
+                  span:
+                    start: 876
+                    end: 898
+                    ctxt: 1
+                  value: LocalComponentWithIntl
+                  optional: false
+            typeArguments: ~
+          definite: false
+  - type: ExportDeclaration
+    span:
+      start: 902
+      end: 989
+      ctxt: 0
+    declaration:
+      type: VariableDeclaration
+      span:
+        start: 909
+        end: 989
+        ctxt: 0
+      kind: const
+      declare: false
+      declarations:
+        - type: VariableDeclarator
+          span:
+            start: 915
+            end: 988
+            ctxt: 0
+          id:
+            optional: false
+            span:
+              start: 915
+              end: 945
+              ctxt: 1
+            type: Identifier
+            typeAnnotation: ~
+            value: LocalComponentWithWrapperNoJsx
+          init:
+            type: CallExpression
+            span:
+              start: 948
+              end: 988
+              ctxt: 0
+            callee:
+              type: Identifier
+              span:
+                start: 948
+                end: 964
+                ctxt: 1
+              value: withWrapperNoJsx
+              optional: false
+            arguments:
+              - spread: ~
+                expression:
+                  type: Identifier
+                  span:
+                    start: 965
+                    end: 987
+                    ctxt: 1
+                  value: LocalComponentWithIntl
+                  optional: false
+            typeArguments: ~
+          definite: false
+  - type: ExportDeclaration
+    span:
+      start: 991
+      end: 1084
+      ctxt: 0
+    declaration:
+      type: VariableDeclaration
+      span:
+        start: 998
+        end: 1084
+        ctxt: 0
+      kind: const
+      declare: false
+      declarations:
+        - type: VariableDeclarator
+          span:
+            start: 1004
+            end: 1083
+            ctxt: 0
+          id:
+            optional: false
+            span:
+              start: 1004
+              end: 1037
+              ctxt: 1
+            type: Identifier
+            typeAnnotation: ~
+            value: LocalComponentWithClassWrapperJsx
+          init:
+            type: CallExpression
+            span:
+              start: 1040
+              end: 1083
+              ctxt: 0
+            callee:
+              type: Identifier
+              span:
+                start: 1040
+                end: 1059
+                ctxt: 1
+              value: withClassWrapperJsx
+              optional: false
+            arguments:
+              - spread: ~
+                expression:
+                  type: Identifier
+                  span:
+                    start: 1060
+                    end: 1082
+                    ctxt: 1
+                  value: LocalComponentWithIntl
+                  optional: false
+            typeArguments: ~
+          definite: false
+  - type: ExportDeclaration
+    span:
+      start: 1086
+      end: 1183
+      ctxt: 0
+    declaration:
+      type: VariableDeclaration
+      span:
+        start: 1093
+        end: 1183
+        ctxt: 0
+      kind: const
+      declare: false
+      declarations:
+        - type: VariableDeclarator
+          span:
+            start: 1099
+            end: 1182
+            ctxt: 0
+          id:
+            optional: false
+            span:
+              start: 1099
+              end: 1134
+              ctxt: 1
+            type: Identifier
+            typeAnnotation: ~
+            value: LocalComponentWithClassWrapperNoJsx
+          init:
+            type: CallExpression
+            span:
+              start: 1137
+              end: 1182
+              ctxt: 0
+            callee:
+              type: Identifier
+              span:
+                start: 1137
+                end: 1158
+                ctxt: 1
+              value: withClassWrapperNoJsx
+              optional: false
+            arguments:
+              - spread: ~
+                expression:
+                  type: Identifier
+                  span:
+                    start: 1159
+                    end: 1181
+                    ctxt: 1
+                  value: LocalComponentWithIntl
+                  optional: false
+            typeArguments: ~
+          definite: false
+  - type: ExportDeclaration
+    span:
+      start: 1185
+      end: 1259
+      ctxt: 0
+    declaration:
+      type: VariableDeclaration
+      span:
+        start: 1192
+        end: 1259
+        ctxt: 0
+      kind: const
+      declare: false
+      declarations:
+        - type: VariableDeclarator
+          span:
+            start: 1198
+            end: 1258
+            ctxt: 0
+          id:
+            optional: false
+            span:
+              start: 1198
+              end: 1234
+              ctxt: 1
+            type: Identifier
+            typeAnnotation: ~
+            value: ExternalComponentWithExternalWrapper
+          init:
+            type: CallExpression
+            span:
+              start: 1237
+              end: 1258
+              ctxt: 0
+            callee:
+              type: Identifier
+              span:
+                start: 1237
+                end: 1247
+                ctxt: 1
+              value: injectIntl
+              optional: false
+            arguments:
+              - spread: ~
+                expression:
+                  type: Identifier
+                  span:
+                    start: 1248
+                    end: 1257
+                    ctxt: 1
+                  value: IntlLabel
+                  optional: false
+            typeArguments: ~
+          definite: false
+  - type: ExportDeclaration
+    span:
+      start: 1261
+      end: 1334
+      ctxt: 0
+    declaration:
+      type: VariableDeclaration
+      span:
+        start: 1268
+        end: 1334
+        ctxt: 0
+      kind: const
+      declare: false
+      declarations:
+        - type: VariableDeclarator
+          span:
+            start: 1274
+            end: 1333
+            ctxt: 0
+          id:
+            optional: false
+            span:
+              start: 1274
+              end: 1305
+              ctxt: 1
+            type: Identifier
+            typeAnnotation: ~
+            value: ExternalComponentWithWrapperJsx
+          init:
+            type: CallExpression
+            span:
+              start: 1308
+              end: 1333
+              ctxt: 0
+            callee:
+              type: Identifier
+              span:
+                start: 1308
+                end: 1322
+                ctxt: 1
+              value: withWrapperJsx
+              optional: false
+            arguments:
+              - spread: ~
+                expression:
+                  type: Identifier
+                  span:
+                    start: 1323
+                    end: 1332
+                    ctxt: 1
+                  value: IntlLabel
+                  optional: false
+            typeArguments: ~
+          definite: false
+  - type: ExportDeclaration
+    span:
+      start: 1336
+      end: 1413
+      ctxt: 0
+    declaration:
+      type: VariableDeclaration
+      span:
+        start: 1343
+        end: 1413
+        ctxt: 0
+      kind: const
+      declare: false
+      declarations:
+        - type: VariableDeclarator
+          span:
+            start: 1349
+            end: 1412
+            ctxt: 0
+          id:
+            optional: false
+            span:
+              start: 1349
+              end: 1382
+              ctxt: 1
+            type: Identifier
+            typeAnnotation: ~
+            value: ExternalComponentWithWrapperNoJsx
+          init:
+            type: CallExpression
+            span:
+              start: 1385
+              end: 1412
+              ctxt: 0
+            callee:
+              type: Identifier
+              span:
+                start: 1385
+                end: 1401
+                ctxt: 1
+              value: withWrapperNoJsx
+              optional: false
+            arguments:
+              - spread: ~
+                expression:
+                  type: Identifier
+                  span:
+                    start: 1402
+                    end: 1411
+                    ctxt: 1
+                  value: IntlLabel
+                  optional: false
+            typeArguments: ~
+          definite: false
+  - type: ExportDeclaration
+    span:
+      start: 1415
+      end: 1471
+      ctxt: 0
+    declaration:
+      type: VariableDeclaration
+      span:
+        start: 1422
+        end: 1471
+        ctxt: 0
+      kind: const
+      declare: false
+      declarations:
+        - type: VariableDeclarator
+          span:
+            start: 1428
+            end: 1470
+            ctxt: 0
+          id:
+            optional: false
+            span:
+              start: 1428
+              end: 1445
+              ctxt: 1
+            type: Identifier
+            typeAnnotation: ~
+            value: ComponentWithIntl
+          init:
+            type: Identifier
+            span:
+              start: 1448
+              end: 1470
+              ctxt: 1
+            value: LocalComponentWithIntl
+            optional: false
+          definite: false
+  - type: ExportDeclaration
+    span:
+      start: 1473
+      end: 1618
+      ctxt: 0
+    declaration:
+      type: VariableDeclaration
+      span:
+        start: 1480
+        end: 1618
+        ctxt: 0
+      kind: const
+      declare: false
+      declarations:
+        - type: VariableDeclarator
+          span:
+            start: 1486
+            end: 1617
+            ctxt: 0
+          id:
+            optional: false
+            span:
+              start: 1486
+              end: 1511
+              ctxt: 1
+            type: Identifier
+            typeAnnotation: ~
+            value: AnonymousWrappedComponent
+          init:
+            type: CallExpression
+            span:
+              start: 1514
+              end: 1617
+              ctxt: 0
+            callee:
+              type: Identifier
+              span:
+                start: 1514
+                end: 1535
+                ctxt: 1
+              value: withClassWrapperNoJsx
+              optional: false
+            arguments:
+              - spread: ~
+                expression:
+                  async: false
+                  body:
+                    type: BlockStatement
+                    span:
+                      start: 1548
+                      end: 1616
+                      ctxt: 0
+                    stmts:
+                      - type: ReturnStatement
+                        span:
+                          start: 1554
+                          end: 1614
+                          ctxt: 0
+                        argument:
+                          type: JSXElement
+                          span:
+                            start: 1561
+                            end: 1613
+                            ctxt: 0
+                          opening:
+                            type: JSXOpeningElement
+                            name:
+                              type: Identifier
+                              span:
+                                start: 1562
+                                end: 1565
+                                ctxt: 2
+                              value: div
+                              optional: false
+                            span:
+                              start: 1561
+                              end: 1566
+                              ctxt: 0
+                            attributes: []
+                            selfClosing: false
+                            typeArguments: ~
+                          children:
+                            - type: JSXElement
+                              span:
+                                start: 1566
+                                end: 1583
+                                ctxt: 0
+                              opening:
+                                type: JSXOpeningElement
+                                name:
+                                  type: Identifier
+                                  span:
+                                    start: 1567
+                                    end: 1581
+                                    ctxt: 1
+                                  value: PlainComponent
+                                  optional: false
+                                span:
+                                  start: 1566
+                                  end: 1583
+                                  ctxt: 0
+                                attributes: []
+                                selfClosing: true
+                                typeArguments: ~
+                              children: []
+                              closing: ~
+                            - type: JSXElement
+                              span:
+                                start: 1583
+                                end: 1607
+                                ctxt: 0
+                              opening:
+                                type: JSXOpeningElement
+                                name:
+                                  type: Identifier
+                                  span:
+                                    start: 1584
+                                    end: 1593
+                                    ctxt: 1
+                                  value: IntlLabel
+                                  optional: false
+                                span:
+                                  start: 1583
+                                  end: 1607
+                                  ctxt: 0
+                                attributes:
+                                  - type: JSXAttribute
+                                    span:
+                                      start: 1594
+                                      end: 1604
+                                      ctxt: 0
+                                    name:
+                                      type: Identifier
+                                      span:
+                                        start: 1594
+                                        end: 1596
+                                        ctxt: 0
+                                      value: id
+                                      optional: false
+                                    value:
+                                      type: StringLiteral
+                                      span:
+                                        start: 1597
+                                        end: 1604
+                                        ctxt: 0
+                                      value: hello
+                                      raw: "\"hello\""
+                                selfClosing: true
+                                typeArguments: ~
+                              children: []
+                              closing: ~
+                          closing:
+                            type: JSXClosingElement
+                            span:
+                              start: 1607
+                              end: 1613
+                              ctxt: 0
+                            name:
+                              type: Identifier
+                              span:
+                                start: 1609
+                                end: 1612
+                                ctxt: 2
+                              value: div
+                              optional: false
+                  decorators: []
+                  generator: false
+                  identifier: ~
+                  params: []
+                  returnType: ~
+                  span:
+                    start: 1536
+                    end: 1616
+                    ctxt: 0
+                  type: FunctionExpression
+                  typeParameters: ~
+            typeArguments: ~
+          definite: false

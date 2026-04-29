@@ -1,0 +1,145 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&export_results"
+---
+num_of_exports: 19
+exports:
+  - name: TTable
+    source_path: src/subcomponent/table/named.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:1ff278b5f25a43cd52121c4649989e1a47f3a990c00936a32824056e2171ab34:TTable"
+  - name: TTable.Cell
+    source_path: src/subcomponent/table/named.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:1ff278b5f25a43cd52121c4649989e1a47f3a990c00936a32824056e2171ab34:TTable.Cell"
+      - "typescript-examples:1c59d241cf0b23b8efe9d74232266742e7fea6c843212b7362eb08e13c6e21be:default"
+  - name: TTable.Header
+    source_path: src/subcomponent/table/named.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:1ff278b5f25a43cd52121c4649989e1a47f3a990c00936a32824056e2171ab34:TTable.Header"
+  - name: TTable.Header.Cell
+    source_path: src/subcomponent/table/named.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:1ff278b5f25a43cd52121c4649989e1a47f3a990c00936a32824056e2171ab34:TTable.Header.Cell"
+      - "typescript-examples:2e199d92290034bd35ea81584872817a274d9bf089005f537d56b6b48d323de2:default"
+  - name: WTable
+    source_path: src/subcomponent/table/wildcard.tsx
+    is_component: false
+    inferred_type: "TypeOf<typescript-examples:1ff278b5f25a43cd52121c4649989e1a47f3a990c00936a32824056e2171ab34:<wildcard>>"
+    resolved_type: "TypeOf<typescript-examples:1ff278b5f25a43cd52121c4649989e1a47f3a990c00936a32824056e2171ab34:<wildcard>>"
+    trace_to_declaration:
+      - "typescript-examples:f8d1776c51b6ce89e17e882d108a7308ecdf509be5f8a20fef13b6f65428b197:WTable"
+  - name: default
+    source_path: src/subcomponent/table/default.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:29c139d83979f9d7406774f0914d281a97baaa97a0b893149e856880316705b3:default"
+  - name: default
+    source_path: src/subcomponent/table/object-assign.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:dac4d870fb704ccce541b65856869f656c1c84d793823bb641338c4412dc45cd:default"
+  - name: default
+    source_path: src/subcomponent/table/subcomponents/TCell.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:1c59d241cf0b23b8efe9d74232266742e7fea6c843212b7362eb08e13c6e21be:default"
+  - name: default
+    source_path: src/subcomponent/table/subcomponents/THeadCell.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:2e199d92290034bd35ea81584872817a274d9bf089005f537d56b6b48d323de2:default"
+  - name: default
+    source_path: src/subcomponent/table/usage.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:c29eec744e5034bddddf42307a8e0f6dc9101c8ee19829e504d3acce99808557:default"
+  - name: default
+    source_path: src/subcomponent/table/usage2.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:679612ddabe638df6094ff1e6a3d18886ad11ef7c842cf41b3e255c797019a5f:default"
+  - name: default
+    source_path: src/subcomponent/table/usage3.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:91a3446af7697b6c06328595b653e47ce31c02bc16c821551662a54b38c06d5b:default"
+  - name: default
+    source_path: src/subcomponent/table/usage4.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:18d068c66d0699c385f02820b9c855ce556ba0047138af3a87873effa06c32ad:default"
+  - name: default.Cell
+    source_path: src/subcomponent/table/default.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:29c139d83979f9d7406774f0914d281a97baaa97a0b893149e856880316705b3:default.Cell"
+      - "typescript-examples:1c59d241cf0b23b8efe9d74232266742e7fea6c843212b7362eb08e13c6e21be:default"
+  - name: default.Cell
+    source_path: src/subcomponent/table/object-assign.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:dac4d870fb704ccce541b65856869f656c1c84d793823bb641338c4412dc45cd:default.Cell"
+      - "typescript-examples:1c59d241cf0b23b8efe9d74232266742e7fea6c843212b7362eb08e13c6e21be:default"
+  - name: default.Header
+    source_path: src/subcomponent/table/default.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:29c139d83979f9d7406774f0914d281a97baaa97a0b893149e856880316705b3:default.Header"
+  - name: default.Header.Cell
+    source_path: src/subcomponent/table/default.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:29c139d83979f9d7406774f0914d281a97baaa97a0b893149e856880316705b3:default.Header.Cell"
+      - "typescript-examples:2e199d92290034bd35ea81584872817a274d9bf089005f537d56b6b48d323de2:default"
+  - name: default.Header.Cell
+    source_path: src/subcomponent/table/object-assign.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:dac4d870fb704ccce541b65856869f656c1c84d793823bb641338c4412dc45cd:default.Header.Cell"
+      - "typescript-examples:2e199d92290034bd35ea81584872817a274d9bf089005f537d56b6b48d323de2:default"
+  - name: default.THeader
+    source_path: src/subcomponent/table/object-assign.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:dac4d870fb704ccce541b65856869f656c1c84d793823bb641338c4412dc45cd:default.THeader"

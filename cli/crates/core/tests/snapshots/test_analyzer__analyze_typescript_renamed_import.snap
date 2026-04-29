@@ -1,0 +1,144 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&component_results"
+---
+num_of_components: 8
+components:
+  - definition_id: "ds:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Button"
+    name: Button
+    export_ids:
+      - "typescript-examples:src/redeclare-import/redeclare-and-export:RedeclaredButton"
+    package_name: ds
+    source_path: ""
+    dependencies: []
+    props: []
+    html_elements: []
+  - definition_id: "ds:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:default"
+    name: ds
+    export_ids: []
+    package_name: ds
+    source_path: ""
+    dependencies: []
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:f9f541ac25a340f5dc220ef3f85b579f7f77f9ef27919e2e842fc097b3a36370:MainWithDefaultImport"
+    name: MainWithDefaultImport
+    export_ids:
+      - "typescript-examples:src/renamed-import/ordinary-default-import:MainWithDefaultImport"
+    package_name: typescript-examples
+    source_path: src/renamed-import/ordinary-default-import.tsx
+    dependencies:
+      - from: "typescript-examples:f9f541ac25a340f5dc220ef3f85b579f7f77f9ef27919e2e842fc097b3a36370:MainWithDefaultImport"
+        to: "ds:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:default"
+        references:
+          - trace:
+              - "ds:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:default"
+            usages:
+              - start:
+                  line: 6
+                  column: 12
+                end:
+                  line: 6
+                  column: 21
+                props: []
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:861a22cbf90aa859663ee38cde69c22eff925fdce6c7039687e6ab4a07906dd4:MainWithOrdinaryImport"
+    name: MainWithOrdinaryImport
+    export_ids:
+      - "typescript-examples:src/renamed-import/ordinary-import:MainWithOrdinaryImport"
+    package_name: typescript-examples
+    source_path: src/renamed-import/ordinary-import.tsx
+    dependencies:
+      - from: "typescript-examples:861a22cbf90aa859663ee38cde69c22eff925fdce6c7039687e6ab4a07906dd4:MainWithOrdinaryImport"
+        to: "ds:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Button"
+        references:
+          - trace:
+              - "ds:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Button"
+            usages:
+              - start:
+                  line: 6
+                  column: 12
+                end:
+                  line: 6
+                  column: 21
+                props: []
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:3c07ed243be8b1a8e315f40be982f2c997087f56edf648d845a4f405bce6546e:MainWithRenamedDefaultImport"
+    name: MainWithRenamedDefaultImport
+    export_ids:
+      - "typescript-examples:src/renamed-import/renamed-default-import:MainWithRenamedDefaultImport"
+    package_name: typescript-examples
+    source_path: src/renamed-import/renamed-default-import.tsx
+    dependencies:
+      - from: "typescript-examples:3c07ed243be8b1a8e315f40be982f2c997087f56edf648d845a4f405bce6546e:MainWithRenamedDefaultImport"
+        to: "ds:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:default"
+        references:
+          - trace:
+              - "ds:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:default"
+            usages:
+              - start:
+                  line: 6
+                  column: 12
+                end:
+                  line: 6
+                  column: 21
+                props: []
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:61ddec70a7e8b73c311b7aebf9bedc2ab0507ec751d8f88e191340153b931235:MainWithRenamedImport"
+    name: MainWithRenamedImport
+    export_ids:
+      - "typescript-examples:src/renamed-import/renamed-import:MainWithRenamedImport"
+    package_name: typescript-examples
+    source_path: src/renamed-import/renamed-import.tsx
+    dependencies:
+      - from: "typescript-examples:61ddec70a7e8b73c311b7aebf9bedc2ab0507ec751d8f88e191340153b931235:MainWithRenamedImport"
+        to: "ds:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Button"
+        references:
+          - trace:
+              - "ds:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Button"
+            usages:
+              - start:
+                  line: 6
+                  column: 12
+                end:
+                  line: 6
+                  column: 23
+                props: []
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:9a6a6df6480c9dcae07cfa4bccc758809be4b45c89aa381f30c64069955b84e6:default"
+    name: Button
+    export_ids:
+      - "typescript-examples:src/renamed-import/renamed-string-export:default"
+    package_name: typescript-examples
+    source_path: src/renamed-import/renamed-string-export.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - button
+  - definition_id: "typescript-examples:fc9321bdeffb53e2705b2a606eb22351ab1b81efeb661a6c277421958f0dfb0a:MainWithRenamedStringImport"
+    name: MainWithRenamedStringImport
+    export_ids:
+      - "typescript-examples:src/renamed-import/renamed-string-import:MainWithRenamedStringImport"
+    package_name: typescript-examples
+    source_path: src/renamed-import/renamed-string-import.tsx
+    dependencies:
+      - from: "typescript-examples:fc9321bdeffb53e2705b2a606eb22351ab1b81efeb661a6c277421958f0dfb0a:MainWithRenamedStringImport"
+        to: "typescript-examples:9a6a6df6480c9dcae07cfa4bccc758809be4b45c89aa381f30c64069955b84e6:default"
+        references:
+          - trace:
+              - "typescript-examples:9a6a6df6480c9dcae07cfa4bccc758809be4b45c89aa381f30c64069955b84e6:default"
+            usages:
+              - start:
+                  line: 6
+                  column: 12
+                end:
+                  line: 6
+                  column: 21
+                props: []
+    props: []
+    html_elements: []
+

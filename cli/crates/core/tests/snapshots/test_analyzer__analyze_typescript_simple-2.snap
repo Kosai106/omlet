@@ -1,0 +1,80 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&export_results"
+---
+num_of_exports: 10
+exports:
+  - name: BackButton
+    source_path: src/simple/components/newNavigation.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:26bbf37435b0128ea57412df34a008b8d678321f2932b51ac77d1b5834a63b10:BackButton"
+  - name: CoreHeader
+    source_path: src/simple/components/core.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:dc860cf810add85d2cc89bfd12aa9c3e4a51aab28d43d163a5354fa2bbcfce10:CoreHeader"
+  - name: Header
+    source_path: src/simple/components/nav.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:4d8c4ec7b11c9f23a1bd5ae28e62d192d65bea52b2dd4daec56b0f8ae9ec8dd7:Header"
+      - "typescript-examples:dc860cf810add85d2cc89bfd12aa9c3e4a51aab28d43d163a5354fa2bbcfce10:CoreHeader"
+  - name: HeaderNew
+    source_path: src/simple/components/newNavigation.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:26bbf37435b0128ea57412df34a008b8d678321f2932b51ac77d1b5834a63b10:HeaderNew"
+      - "typescript-examples:4d8c4ec7b11c9f23a1bd5ae28e62d192d65bea52b2dd4daec56b0f8ae9ec8dd7:Header"
+      - "typescript-examples:dc860cf810add85d2cc89bfd12aa9c3e4a51aab28d43d163a5354fa2bbcfce10:CoreHeader"
+  - name: MenuLayout
+    source_path: src/simple/components/core.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:dc860cf810add85d2cc89bfd12aa9c3e4a51aab28d43d163a5354fa2bbcfce10:MenuLayout"
+  - name: UserAvatar
+    source_path: src/simple/components/nav.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:4d8c4ec7b11c9f23a1bd5ae28e62d192d65bea52b2dd4daec56b0f8ae9ec8dd7:UserAvatar"
+  - name: UserMenu
+    source_path: src/simple/components/nav.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:4d8c4ec7b11c9f23a1bd5ae28e62d192d65bea52b2dd4daec56b0f8ae9ec8dd7:UserMenu"
+  - name: UserMenuNew
+    source_path: src/simple/components/newNavigation.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:26bbf37435b0128ea57412df34a008b8d678321f2932b51ac77d1b5834a63b10:UserMenuNew"
+  - name: default
+    source_path: src/simple/about.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:419d3b7509217377a748728fc2fec251080f278c8c876895759dc341f3541a5c:default"
+  - name: default
+    source_path: src/simple/main.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:29a91d9df833a8e872c4bbd5818db9f87a167699641a7662ba86ecb989a4d227:default"
+

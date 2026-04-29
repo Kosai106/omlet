@@ -1,0 +1,123 @@
+---
+source: crates/core/tests/test_parser.rs
+expression: "&parser::Module::new(&RelativePathBuf::from_path(path.strip_prefix(&project_root).unwrap()).unwrap(),\n&project_root, &module_resolver,).unwrap()"
+input_file: samples/typescript/src/module-decls/default-export/default-export-reexport/default-export-reexport.tsx
+---
+source_path: src/module-decls/default-export/default-export-reexport/default-export-reexport.tsx
+id:
+  hash: "10729565759264828385"
+  path: src/module-decls/default-export/default-export-reexport/default-export-reexport.tsx
+  package_name: UNKNOWN
+  mtype: local
+created_at: ~
+updated_at: ~
+exports:
+  - source:
+      Internal: "default#0"
+    exported_name: default
+declarations:
+  - symbol: "NamedComponentReExport#1"
+    source:
+      hash: "10729565759264828385"
+      path: src/module-decls/default-export/default-export-reexport/default-export-reexport.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('NamedComponentReExport' type=dynamic), context: #1 }, source: ModuleId { hash: 14726289558862714903, path: \"src/module-decls/default-export/default-export-reexport/component\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    inferred_type:
+      TypeOf:
+        symbol:
+          symbol: "NamedComponentReExport#1"
+          source:
+            hash: "14726289558862714903"
+            path: src/module-decls/default-export/default-export-reexport/component
+            package_name: UNKNOWN
+            mtype: local
+        is_local: false
+    start:
+      line: 1
+      column: 10
+    end:
+      line: 1
+      column: 32
+  - symbol: "default#0"
+    source:
+      hash: "10729565759264828385"
+      path: src/module-decls/default-export/default-export-reexport/default-export-reexport.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      TypeOf:
+        symbol:
+          symbol: "NamedComponentReExport#1"
+          source:
+            hash: "10729565759264828385"
+            path: src/module-decls/default-export/default-export-reexport/default-export-reexport.tsx
+            package_name: UNKNOWN
+            mtype: local
+        is_local: true
+    start:
+      line: 3
+      column: 1
+    end:
+      line: 3
+      column: 39
+scopes:
+  - owner: "__global#0"
+    parent: ~
+    children:
+      - "default#0"
+    references:
+      - "NamedComponentReExport#1"
+    jsx_references: []
+  - owner: "default#0"
+    parent: "__global#0"
+    children: []
+    references:
+      - "NamedComponentReExport#1"
+    jsx_references: []
+body:
+  - type: ImportDeclaration
+    span:
+      start: 1
+      end: 54
+      ctxt: 0
+    specifiers:
+      - type: ImportSpecifier
+        span:
+          start: 10
+          end: 32
+          ctxt: 0
+        local:
+          type: Identifier
+          span:
+            start: 10
+            end: 32
+            ctxt: 1
+          value: NamedComponentReExport
+          optional: false
+        imported: ~
+        isTypeOnly: false
+    source:
+      type: StringLiteral
+      span:
+        start: 40
+        end: 53
+        ctxt: 0
+      value: "./component"
+      raw: "\"./component\""
+    typeOnly: false
+    asserts: ~
+  - type: ExportDefaultExpression
+    span:
+      start: 56
+      end: 94
+      ctxt: 0
+    expression:
+      type: Identifier
+      span:
+        start: 71
+        end: 93
+        ctxt: 1
+      value: NamedComponentReExport
+      optional: false

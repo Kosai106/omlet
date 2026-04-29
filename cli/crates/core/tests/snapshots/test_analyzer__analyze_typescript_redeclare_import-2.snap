@@ -1,0 +1,43 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&export_results"
+---
+num_of_exports: 5
+exports:
+  - name: MyContext
+    source_path: src/redeclare-import/member-expression.tsx
+    is_component: false
+    inferred_type: "ReturnTypeOf<TypeOf<typescript-examples:6e4afad5feeb876c530f1a47031ef477b7a5508d077b99efeacb4a7bd99daf2b:createContext>>"
+    resolved_type: ReturnTypeOf<Unknown>
+    trace_to_declaration:
+      - "typescript-examples:6e4afad5feeb876c530f1a47031ef477b7a5508d077b99efeacb4a7bd99daf2b:MyContext"
+  - name: MyProvider
+    source_path: src/redeclare-import/member-expression.tsx
+    is_component: true
+    inferred_type: "ReturnTypeOf<TypeOf<typescript-examples:6e4afad5feeb876c530f1a47031ef477b7a5508d077b99efeacb4a7bd99daf2b:createContext>>[Provider]"
+    resolved_type: "ReturnTypeOf<Unknown>[Provider]"
+    trace_to_declaration:
+      - "typescript-examples:6e4afad5feeb876c530f1a47031ef477b7a5508d077b99efeacb4a7bd99daf2b:MyProvider"
+  - name: Parent
+    source_path: src/redeclare-import/member-expression.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:6e4afad5feeb876c530f1a47031ef477b7a5508d077b99efeacb4a7bd99daf2b:Parent"
+  - name: RedeclareImport
+    source_path: src/redeclare-import/redeclare-import.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:b3791f9ff0fc82752d68a498f0f2ff264032694597ddddb78b13ed6bfab2ddb0:RedeclareImport"
+  - name: RedeclaredButton
+    source_path: src/redeclare-import/redeclare-and-export.tsx
+    is_component: true
+    inferred_type: Unknown
+    resolved_type: Unknown
+    trace_to_declaration:
+      - "typescript-examples:7a333b04cd1d995d1a4accdee078da85c7ea3011e17f92c9c09130e13f4e8db0:RedeclaredButton"
+      - "ds:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Button"
+

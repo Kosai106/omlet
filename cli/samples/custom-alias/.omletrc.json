@@ -1,0 +1,6 @@
+{
+    "aliases": {
+        "@components": "src/components/index.ts",
+        "@ignored/*": "src/ignored-components/*"
+    }
+}

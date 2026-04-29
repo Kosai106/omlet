@@ -1,0 +1,78 @@
+.main {
+    height: calc(100vh - var(--header-height));
+    width: 912px;
+    padding: 88px 0;
+    margin: 0 auto;
+}
+
+.main .header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-m);
+    margin-bottom: var(--spacing-l);
+    padding: 0 96px;
+}
+
+.main .header .h2 {
+    margin-bottom: 0;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    margin-top: var(--spacing-s);
+}
+
+.footer .leftButtons,
+.footer .rightButtons {
+    flex: 1;
+}
+
+.footer .rightButtons {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--spacing-s);
+}
+
+.footer .tutorialButton {
+    width: 192px;
+}
+
+.popularChartsImage {
+    width: 720px;
+    height: 417px;
+    line-height: 0;
+    background-image:
+        image-set(
+            url(/src/frontend/assets/img/imgTutorialPopularChartsHeader.png) 1x,
+            url(/src/frontend/assets/img/imgTutorialPopularChartsHeader@2x.png) 2x,
+            url(/src/frontend/assets/img/imgTutorialPopularChartsHeader@3x.png) 3x
+        ),
+        image-set(
+            url(/src/frontend/assets/img/imgTutorialPopularCharts.png) 1x,
+            url(/src/frontend/assets/img/imgTutorialPopularCharts@2x.png) 2x,
+            url(/src/frontend/assets/img/imgTutorialPopularCharts@3x.png) 3x
+        );
+    background-size: contain, cover;
+    background-position: 0 0, 0 0;
+    background-repeat: no-repeat;
+    animation: 5s ease-in-out infinite alternate scroll;
+}
+
+@keyframes scroll {
+    from {
+        background-position: 0 0, 0 0;
+    }
+
+    20% {
+        background-position: 0 0, 0 0;
+    }
+
+    80% {
+        background-position: 0 0, 0 100%;
+    }
+
+    to {
+        background-position: 0 0, 0 100%;
+    }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "@wildcard-exports/design-system-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "react": "^18.2.0"
+  },
+  "dependencies": {
+    "@wildcard-exports/design-system-button": "workspace:*",
+    "@wildcard-exports/design-system-form": "workspace:*",
+    "@wildcard-exports/design-system-input": "workspace:*"
+  }
+}

@@ -1,0 +1,267 @@
+---
+source: crates/core/tests/test_parser.rs
+expression: "&parser::Module::new(&RelativePathBuf::from_path(path.strip_prefix(&project_root).unwrap()).unwrap(),\n&project_root, &module_resolver,).unwrap()"
+input_file: samples/typescript/src/styled-component-workaround/my-styled-components.tsx
+---
+source_path: src/styled-component-workaround/my-styled-components.tsx
+id:
+  hash: "17217891852522968423"
+  path: src/styled-component-workaround/my-styled-components.tsx
+  package_name: UNKNOWN
+  mtype: local
+created_at: ~
+updated_at: ~
+exports:
+  - source:
+      External:
+        symbol: "<wildcard>#0"
+        source:
+          hash: "3407005538810520906"
+          path: ""
+          package_name: styled-components
+          mtype: package
+    exported_name: "<wildcard>"
+  - source:
+      Internal: "defaultStyled#1"
+    exported_name: default
+declarations:
+  - symbol: "defaultStyled#1"
+    source:
+      hash: "17217891852522968423"
+      path: src/styled-component-workaround/my-styled-components.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      Union:
+        - TypeOf:
+            symbol:
+              symbol: "styled#1"
+              source:
+                hash: "17217891852522968423"
+                path: src/styled-component-workaround/my-styled-components.tsx
+                package_name: UNKNOWN
+                mtype: local
+            is_local: true
+        - MemberOf:
+            - TypeOf:
+                symbol:
+                  symbol: "styled#1"
+                  source:
+                    hash: "17217891852522968423"
+                    path: src/styled-component-workaround/my-styled-components.tsx
+                    package_name: UNKNOWN
+                    mtype: local
+                is_local: true
+            - Object: default
+    start:
+      line: 5
+      column: 7
+    end:
+      line: 5
+      column: 20
+  - symbol: "styled#1"
+    source:
+      hash: "17217891852522968423"
+      path: src/styled-component-workaround/my-styled-components.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 3407005538810520906, path: \"\", pkg_name: \"styled-components\", mtype: Package } }>"
+    inferred_type:
+      TypeOf:
+        symbol:
+          symbol: "default#0"
+          source:
+            hash: "3407005538810520906"
+            path: ""
+            package_name: styled-components
+            mtype: package
+        is_local: false
+    start:
+      line: 1
+      column: 8
+    end:
+      line: 1
+      column: 14
+scopes:
+  - owner: "__global#0"
+    parent: ~
+    children:
+      - "defaultStyled#1"
+    references:
+      - "default#0"
+      - "default#2"
+      - "defaultStyled#1"
+      - "styled#1"
+    jsx_references: []
+  - owner: "defaultStyled#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "default#0"
+      - "styled#1"
+    jsx_references: []
+body:
+  - type: ImportDeclaration
+    span:
+      start: 1
+      end: 40
+      ctxt: 0
+    specifiers:
+      - type: ImportDefaultSpecifier
+        span:
+          start: 8
+          end: 14
+          ctxt: 0
+        local:
+          type: Identifier
+          span:
+            start: 8
+            end: 14
+            ctxt: 1
+          value: styled
+          optional: false
+    source:
+      type: StringLiteral
+      span:
+        start: 20
+        end: 39
+        ctxt: 0
+      value: styled-components
+      raw: "\"styled-components\""
+    typeOnly: false
+    asserts: ~
+  - type: ExportAllDeclaration
+    span:
+      start: 42
+      end: 76
+      ctxt: 0
+    source:
+      type: StringLiteral
+      span:
+        start: 56
+        end: 75
+        ctxt: 0
+      value: styled-components
+      raw: "\"styled-components\""
+    asserts: ~
+  - type: VariableDeclaration
+    span:
+      start: 78
+      end: 155
+      ctxt: 0
+    kind: const
+    declare: false
+    declarations:
+      - type: VariableDeclarator
+        span:
+          start: 84
+          end: 154
+          ctxt: 0
+        id:
+          optional: false
+          span:
+            start: 84
+            end: 97
+            ctxt: 1
+          type: Identifier
+          typeAnnotation: ~
+          value: defaultStyled
+        init:
+          type: ConditionalExpression
+          span:
+            start: 100
+            end: 154
+            ctxt: 0
+          test:
+            type: BinaryExpression
+            span:
+              start: 100
+              end: 128
+              ctxt: 0
+            operator: "==="
+            left:
+              type: UnaryExpression
+              span:
+                start: 100
+                end: 113
+                ctxt: 0
+              operator: typeof
+              argument:
+                type: Identifier
+                span:
+                  start: 107
+                  end: 113
+                  ctxt: 1
+                value: styled
+                optional: false
+            right:
+              type: StringLiteral
+              span:
+                start: 118
+                end: 128
+                ctxt: 0
+              value: function
+              raw: "\"function\""
+          consequent:
+            type: Identifier
+            span:
+              start: 131
+              end: 137
+              ctxt: 1
+            value: styled
+            optional: false
+          alternate:
+            type: MemberExpression
+            span:
+              start: 140
+              end: 154
+              ctxt: 0
+            object:
+              type: Identifier
+              span:
+                start: 140
+                end: 146
+                ctxt: 1
+              value: styled
+              optional: false
+            property:
+              type: Identifier
+              span:
+                start: 147
+                end: 154
+                ctxt: 0
+              value: default
+              optional: false
+        definite: false
+  - type: ExportNamedDeclaration
+    span:
+      start: 157
+      end: 193
+      ctxt: 0
+    specifiers:
+      - type: ExportSpecifier
+        span:
+          start: 166
+          end: 190
+          ctxt: 0
+        orig:
+          type: Identifier
+          span:
+            start: 166
+            end: 179
+            ctxt: 1
+          value: defaultStyled
+          optional: false
+        exported:
+          type: Identifier
+          span:
+            start: 183
+            end: 190
+            ctxt: 2
+          value: default
+          optional: false
+        isTypeOnly: false
+    source: ~
+    typeOnly: false
+    asserts: ~

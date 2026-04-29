@@ -1,0 +1,55 @@
+.renameProjectsDialog {
+    max-height: 880px;
+    overflow: hidden;
+    width: 640px;
+    display: flex;
+    flex-direction: column;
+    max-height: min(880px, calc(100vh - calc(2 * var(--spacing-xxl-2))))
+}
+
+.renameProjectsDialog .renameProjectsDialogBody {
+    padding-left: var(--spacing-l);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.renameProjectsDialog .header {
+    margin-bottom: var(--spacing-s);
+}
+
+.renameProjectsDialog .description {
+    margin: 0;
+}
+
+.renameProjectsDialog .content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-l);
+    overflow: hidden;
+    height: 100%;
+    padding-left: var(--spacing-s);
+}
+
+.renameProjectsDialog .projects {
+    margin-left: calc(-1 * var(--spacing-xs));
+    overflow: auto;
+}
+
+.renameProjectsDialog .projects .scrollShadow {
+    position: sticky;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    flex-shrink: 0;
+    background-color: var(--background-secondary-color);
+    z-index: 1;
+}
+
+.renameProjectsDialog .projects .scrollShadow.top {
+    top: 0;
+}
+
+.renameProjectsDialog .projects .scrollShadow.bottom {
+    bottom: 0;
+}

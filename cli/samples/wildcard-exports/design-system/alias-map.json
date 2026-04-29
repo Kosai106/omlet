@@ -1,0 +1,181 @@
+{
+  "root": {
+    "name": "@wildcard-exports/design-system-monorepo",
+    "path": "",
+    "version": "1.0.0",
+    "aliases": {},
+    "importMap": {
+      "@wildcard-exports/design-system-monorepo/*": [
+        "*"
+      ],
+      "@wildcard-exports/design-system-button/*": [
+        "packages/button/*"
+      ],
+      "@wildcard-exports/design-system-button": [
+        "packages/button/src/index.ts"
+      ],
+      "@wildcard-exports/design-system-button/dist/*": [
+        "packages/button/src/*"
+      ],
+      "@wildcard-exports/design-system-form/*": [
+        "packages/form/*"
+      ],
+      "@wildcard-exports/design-system-form": [
+        "packages/form/src/index.ts"
+      ],
+      "@wildcard-exports/design-system-form/dist/*": [
+        "packages/form/src/*"
+      ],
+      "@wildcard-exports/design-system-input/*": [
+        "packages/input/*"
+      ],
+      "@wildcard-exports/design-system-input": [
+        "packages/input/src/index.ts"
+      ],
+      "@wildcard-exports/design-system-input/dist/*": [
+        "packages/input/src/*"
+      ],
+      "@wildcard-exports/design-system-react/*": [
+        "packages/react-lib/*"
+      ],
+      "@wildcard-exports/design-system-react": [
+        "packages/react-lib/src/index.ts"
+      ],
+      "@wildcard-exports/design-system-react/dist/*": [
+        "packages/react-lib/src/*"
+      ]
+    },
+    "exportMap": {}
+  },
+  "packages": {
+    "@wildcard-exports/design-system-button": {
+      "name": "@wildcard-exports/design-system-button",
+      "path": "packages/button",
+      "version": "1.0.0",
+      "aliases": {},
+      "importMap": {
+        "@wildcard-exports/design-system-button/*": [
+          "packages/button/*"
+        ],
+        "@wildcard-exports/design-system-button": [
+          "packages/button/src/index.ts"
+        ]
+      },
+      "exportMap": {
+        ".": [
+          "src/index.ts"
+        ],
+        "dist/*": [
+          "src/*"
+        ]
+      },
+      "main": "src/index.ts"
+    },
+    "@wildcard-exports/design-system-form": {
+      "name": "@wildcard-exports/design-system-form",
+      "path": "packages/form",
+      "version": "1.0.0",
+      "aliases": {},
+      "importMap": {
+        "@wildcard-exports/design-system-form/*": [
+          "packages/form/*"
+        ],
+        "@wildcard-exports/design-system-form": [
+          "packages/form/src/index.ts"
+        ],
+        "@wildcard-exports/design-system-button/*": [
+          "packages/button/*"
+        ],
+        "@wildcard-exports/design-system-button": [
+          "packages/button/src/index.ts"
+        ],
+        "@wildcard-exports/design-system-button/dist/*": [
+          "packages/button/src/*"
+        ]
+      },
+      "exportMap": {
+        ".": [
+          "src/index.ts"
+        ],
+        "dist/*": [
+          "src/*"
+        ]
+      },
+      "main": "src/index.ts"
+    },
+    "@wildcard-exports/design-system-input": {
+      "name": "@wildcard-exports/design-system-input",
+      "path": "packages/input",
+      "version": "1.0.0",
+      "aliases": {},
+      "importMap": {
+        "@wildcard-exports/design-system-input/*": [
+          "packages/input/*"
+        ],
+        "@wildcard-exports/design-system-input": [
+          "packages/input/src/index.ts"
+        ]
+      },
+      "exportMap": {
+        ".": [
+          "src/index.ts"
+        ],
+        "dist/*": [
+          "src/*"
+        ]
+      },
+      "main": "src/index.ts"
+    },
+    "@wildcard-exports/design-system-react": {
+      "name": "@wildcard-exports/design-system-react",
+      "path": "packages/react-lib",
+      "version": "1.0.0",
+      "aliases": {},
+      "importMap": {
+        "@wildcard-exports/design-system-react/*": [
+          "packages/react-lib/*"
+        ],
+        "@wildcard-exports/design-system-react": [
+          "packages/react-lib/src/index.ts"
+        ],
+        "@wildcard-exports/design-system-button/*": [
+          "packages/button/*"
+        ],
+        "@wildcard-exports/design-system-button": [
+          "packages/button/src/index.ts"
+        ],
+        "@wildcard-exports/design-system-button/dist/*": [
+          "packages/button/src/*"
+        ],
+        "@wildcard-exports/design-system-form/*": [
+          "packages/form/*"
+        ],
+        "@wildcard-exports/design-system-form": [
+          "packages/form/src/index.ts"
+        ],
+        "@wildcard-exports/design-system-form/dist/*": [
+          "packages/form/src/*"
+        ],
+        "@wildcard-exports/design-system-input/*": [
+          "packages/input/*"
+        ],
+        "@wildcard-exports/design-system-input": [
+          "packages/input/src/index.ts"
+        ],
+        "@wildcard-exports/design-system-input/dist/*": [
+          "packages/input/src/*"
+        ]
+      },
+      "exportMap": {
+        ".": [
+          "src/index.ts"
+        ],
+        "dist/*": [
+          "src/*"
+        ]
+      },
+      "main": "src/index.ts"
+    }
+  },
+  "absolutePath": "/package"
+}

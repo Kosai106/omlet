@@ -1,0 +1,16 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&component_results"
+---
+num_of_components: 1
+components:
+  - definition_id: "typescript-examples:1c26358bf430b2384a75f672ef7690f712b6bcb123850bb2f496c4d3e3d4d580:default"
+    name: ReactIcon
+    export_ids:
+      - "typescript-examples:src/web-component/icon:default"
+    package_name: typescript-examples
+    source_path: src/web-component/icon.tsx
+    dependencies: []
+    props: []
+    html_elements: []
+

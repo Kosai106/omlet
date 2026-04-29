@@ -1,0 +1,24 @@
+{
+  "root": {
+    "name": "@acme/design-system",
+    "path": "",
+    "version": "1.0.0",
+    "aliases": {},
+    "importMap": {
+      "@acme/design-system/*": [
+        "*"
+      ],
+      "@acme/design-system": [
+        "src/index.ts"
+      ]
+    },
+    "exportMap": {
+      ".": [
+        "src/index.ts"
+      ]
+    },
+    "main": "src/index.ts"
+  },
+  "packages": {},
+  "absolutePath": "/package"
+}

@@ -1,0 +1,29 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&export_results"
+---
+num_of_exports: 3
+exports:
+  - name: App
+    source_path: app/src/App.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "app:8abd0cccac7d9db5a9857472f7c028f41df596f82257ba862e78cf18e370a407:App"
+  - name: Button
+    source_path: ds/src/Button.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "ds:7763d85bafc13b0173d2bac98b7592b247e3194b06cbb47f4e097abf3d724631:Button"
+  - name: Button
+    source_path: ds/src/index.ts
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "ds:fbe038a8c624e6ea029938b2e8bb7d90d3584ac9182ea1dbd791bef07c322dad:Button"
+      - "ds:7763d85bafc13b0173d2bac98b7592b247e3194b06cbb47f4e097abf3d724631:Button"
+

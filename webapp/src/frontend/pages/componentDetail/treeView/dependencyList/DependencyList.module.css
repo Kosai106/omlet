@@ -1,0 +1,208 @@
+.expandButton {
+    position: absolute;
+    right: var(--spacing-s);
+    top: var(--spacing-s);
+    background-color: var(--background-primary-color);
+    box-shadow: 0 0 2px 1px rgba(var(--label-primary-color-rgb), 0.08);
+    border-radius: 2px;
+    z-index: 50;
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--label-primary-color);
+}
+
+.dependencyList {
+    position: absolute;
+    right: var(--spacing-s);
+    top: var(--spacing-s);
+    bottom: var(--spacing-s);
+    background-color: var(--background-primary-color);
+    z-index: 50;
+    height: auto;
+    border-radius: 2px;
+    box-shadow: 0 0 2px 1px rgba(var(--label-primary-color-rgb), 0.08);
+    width: 284px;
+    display: flex;
+    flex-direction: column;
+}
+
+.dependencyList .header {
+    position: relative;
+    padding: var(--spacing-s);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.dependencyList .header .text {
+    color: var(--label-secondary-color);
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.dependencyList .header .row {
+    display: flex;
+    gap: var(--spacing-xs);
+}
+
+.dependencyList .header .row .search {
+    flex: 1;
+}
+
+.dependencyList .header .row .filter {
+    flex: 1;
+}
+
+.dependencyList .header .row .filter.priority {
+    flex: 2;
+}
+
+.dependencyList .header .collapseButton {
+    visibility: hidden;
+    position: absolute;
+    display: flex;
+    padding: var(--spacing-s);
+    right: 0;
+    top: 0;
+}
+
+.dependencyList .header:hover .collapseButton {
+    visibility: visible;
+}
+
+.dependencyList .emptyState {
+    padding: var(--spacing-xxl-2) var(--spacing-s);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-s);
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.dependencyList .emptyState .shrug {
+    color: var(--label-secondary-color)
+}
+
+.dependencyList .emptyState .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xs);
+    color: var(--label-primary-color);
+}
+
+.dependencyList .emptyState .text button {
+    color: var(--accent-green);
+}
+
+.dependencyList .list {
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.dependencyList .list .header {
+    padding: var(--spacing-xs) var(--spacing-s);
+    color: var(--label-secondary-color);
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.dependencyList .list .item {
+    cursor: pointer;
+    padding: 6px;
+}
+
+.dependencyList .list .item.loading .inner {
+    gap: 5px;
+}
+
+.dependencyList .list .item .inner .skeleton {
+    height: 16px;
+}
+
+.dependencyList .list .item .inner .mainRow .skeleton {
+    width: 160px;
+}
+
+.dependencyList .list .item .inner .detailsRow .skeleton {
+    width: 108px;
+}
+
+.dependencyList .list .item.withBorder {
+    border-top: var(--border-width) solid var(--background-secondary-color);
+}
+
+.dependencyList .list .item .inner {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 6px 10px;
+}
+
+.dependencyList .list .item .inner.selected {
+    background-color: rgba(var(--accent-green-rgb), 0.05);border-radius: 2px;
+    box-shadow: 0 0 0 var(--border-width) var(--accent-green);
+}
+
+.dependencyList .list .item .inner .mainRow {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dependencyList .list .item .inner .mainRow .name {
+    flex: auto;
+    overflow: hidden;
+    color: var(--label-primary-color);
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.dependencyList .list .item .inner .mainRow .usage {
+    color: var(--label-secondary-color);
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.dependencyList .list .item .inner .detailsRow {
+    display: flex;
+    gap: 4px;
+}
+
+.dependencyList .list .item .inner .detailsRow .packageName {
+    flex: auto;
+    overflow: hidden;
+    color: var(--label-secondary-color);
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.dependencyList .list .item .inner .detailsRow .moreTagsIndicator {
+    color: var(--label-secondary-color);
+    background-color: var(--background-secondary-color);
+    padding: 1px var(--spacing-xxs);
+    opacity: 0.9;
+    font-size: 11px;
+    line-height: 15px;
+    border-radius: 2px;
+}
+
+.filterPopup {
+    min-width: 146px;
+}
+
+
+@media screen and (max-width: 814px) {
+    .dependencyList {
+        visibility: hidden;
+    }
+    .expandButton {
+        visibility: hidden;
+    }
+}

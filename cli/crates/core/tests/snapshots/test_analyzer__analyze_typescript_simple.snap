@@ -1,0 +1,242 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&component_results"
+---
+num_of_components: 9
+components:
+  - definition_id: "@acme/components:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:AlertButton"
+    name: AlertButton
+    export_ids: []
+    package_name: "@acme/components"
+    source_path: ""
+    dependencies: []
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:419d3b7509217377a748728fc2fec251080f278c8c876895759dc341f3541a5c:default"
+    name: AboutPage
+    export_ids:
+      - "typescript-examples:src/simple/about:default"
+    package_name: typescript-examples
+    source_path: src/simple/about.tsx
+    dependencies:
+      - from: "typescript-examples:419d3b7509217377a748728fc2fec251080f278c8c876895759dc341f3541a5c:default"
+        to: "@acme/components:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:AlertButton"
+        references:
+          - trace:
+              - "@acme/components:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:AlertButton"
+            usages:
+              - start:
+                  line: 12
+                  column: 13
+                end:
+                  line: 12
+                  column: 27
+                props: []
+      - from: "typescript-examples:419d3b7509217377a748728fc2fec251080f278c8c876895759dc341f3541a5c:default"
+        to: "typescript-examples:4d8c4ec7b11c9f23a1bd5ae28e62d192d65bea52b2dd4daec56b0f8ae9ec8dd7:UserAvatar"
+        references:
+          - trace:
+              - "typescript-examples:4d8c4ec7b11c9f23a1bd5ae28e62d192d65bea52b2dd4daec56b0f8ae9ec8dd7:UserAvatar"
+            usages:
+              - start:
+                  line: 10
+                  column: 13
+                end:
+                  line: 10
+                  column: 26
+                props: []
+      - from: "typescript-examples:419d3b7509217377a748728fc2fec251080f278c8c876895759dc341f3541a5c:default"
+        to: "typescript-examples:dc860cf810add85d2cc89bfd12aa9c3e4a51aab28d43d163a5354fa2bbcfce10:CoreHeader"
+        references:
+          - trace:
+              - "typescript-examples:4d8c4ec7b11c9f23a1bd5ae28e62d192d65bea52b2dd4daec56b0f8ae9ec8dd7:Header"
+              - "typescript-examples:dc860cf810add85d2cc89bfd12aa9c3e4a51aab28d43d163a5354fa2bbcfce10:CoreHeader"
+            usages:
+              - start:
+                  line: 9
+                  column: 9
+                end:
+                  line: 13
+                  column: 18
+                props:
+                  - name: children
+                    value: JSXElement
+    props: []
+    html_elements:
+      - h1
+  - definition_id: "typescript-examples:dc860cf810add85d2cc89bfd12aa9c3e4a51aab28d43d163a5354fa2bbcfce10:CoreHeader"
+    name: CoreHeader
+    export_ids:
+      - "typescript-examples:src/simple/components/core:CoreHeader"
+      - "typescript-examples:src/simple/components/nav:Header"
+      - "typescript-examples:src/simple/components/newNavigation:HeaderNew"
+    package_name: typescript-examples
+    source_path: src/simple/components/core.tsx
+    dependencies: []
+    props:
+      - name: children
+        default_value: NONE
+    html_elements:
+      - div
+      - header
+  - definition_id: "typescript-examples:dc860cf810add85d2cc89bfd12aa9c3e4a51aab28d43d163a5354fa2bbcfce10:MenuLayout"
+    name: MenuLayout
+    export_ids:
+      - "typescript-examples:src/simple/components/core:MenuLayout"
+    package_name: typescript-examples
+    source_path: src/simple/components/core.tsx
+    dependencies: []
+    props:
+      - name: children
+        default_value: NONE
+    html_elements:
+      - div
+  - definition_id: "typescript-examples:4d8c4ec7b11c9f23a1bd5ae28e62d192d65bea52b2dd4daec56b0f8ae9ec8dd7:UserAvatar"
+    name: UserAvatar
+    export_ids:
+      - "typescript-examples:src/simple/components/nav:UserAvatar"
+    package_name: typescript-examples
+    source_path: src/simple/components/nav.tsx
+    dependencies:
+      - from: "typescript-examples:4d8c4ec7b11c9f23a1bd5ae28e62d192d65bea52b2dd4daec56b0f8ae9ec8dd7:UserAvatar"
+        to: "typescript-examples:dc860cf810add85d2cc89bfd12aa9c3e4a51aab28d43d163a5354fa2bbcfce10:MenuLayout"
+        references:
+          - trace:
+              - "typescript-examples:dc860cf810add85d2cc89bfd12aa9c3e4a51aab28d43d163a5354fa2bbcfce10:MenuLayout"
+            usages:
+              - start:
+                  line: 13
+                  column: 9
+                end:
+                  line: 15
+                  column: 22
+                props:
+                  - name: children
+                    value: JSXElement
+    props: []
+    html_elements:
+      - img
+  - definition_id: "typescript-examples:4d8c4ec7b11c9f23a1bd5ae28e62d192d65bea52b2dd4daec56b0f8ae9ec8dd7:UserMenu"
+    name: UserMenu
+    export_ids:
+      - "typescript-examples:src/simple/components/nav:UserMenu"
+    package_name: typescript-examples
+    source_path: src/simple/components/nav.tsx
+    dependencies:
+      - from: "typescript-examples:4d8c4ec7b11c9f23a1bd5ae28e62d192d65bea52b2dd4daec56b0f8ae9ec8dd7:UserMenu"
+        to: "typescript-examples:dc860cf810add85d2cc89bfd12aa9c3e4a51aab28d43d163a5354fa2bbcfce10:MenuLayout"
+        references:
+          - trace:
+              - "typescript-examples:dc860cf810add85d2cc89bfd12aa9c3e4a51aab28d43d163a5354fa2bbcfce10:MenuLayout"
+            usages:
+              - start:
+                  line: 5
+                  column: 9
+                end:
+                  line: 7
+                  column: 22
+                props:
+                  - name: children
+                    value: JSXElement
+    props: []
+    html_elements:
+      - div
+  - definition_id: "typescript-examples:26bbf37435b0128ea57412df34a008b8d678321f2932b51ac77d1b5834a63b10:BackButton"
+    name: BackButton
+    export_ids:
+      - "typescript-examples:src/simple/components/newNavigation:BackButton"
+    package_name: typescript-examples
+    source_path: src/simple/components/newNavigation.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - button
+  - definition_id: "typescript-examples:26bbf37435b0128ea57412df34a008b8d678321f2932b51ac77d1b5834a63b10:UserMenuNew"
+    name: UserMenuNew
+    export_ids:
+      - "typescript-examples:src/simple/components/newNavigation:UserMenuNew"
+    package_name: typescript-examples
+    source_path: src/simple/components/newNavigation.tsx
+    dependencies:
+      - from: "typescript-examples:26bbf37435b0128ea57412df34a008b8d678321f2932b51ac77d1b5834a63b10:UserMenuNew"
+        to: "typescript-examples:4d8c4ec7b11c9f23a1bd5ae28e62d192d65bea52b2dd4daec56b0f8ae9ec8dd7:UserAvatar"
+        references:
+          - trace:
+              - "typescript-examples:4d8c4ec7b11c9f23a1bd5ae28e62d192d65bea52b2dd4daec56b0f8ae9ec8dd7:UserAvatar"
+            usages:
+              - start:
+                  line: 7
+                  column: 13
+                end:
+                  line: 7
+                  column: 26
+                props: []
+      - from: "typescript-examples:26bbf37435b0128ea57412df34a008b8d678321f2932b51ac77d1b5834a63b10:UserMenuNew"
+        to: "typescript-examples:4d8c4ec7b11c9f23a1bd5ae28e62d192d65bea52b2dd4daec56b0f8ae9ec8dd7:UserMenu"
+        references:
+          - trace:
+              - "typescript-examples:4d8c4ec7b11c9f23a1bd5ae28e62d192d65bea52b2dd4daec56b0f8ae9ec8dd7:UserMenu"
+            usages:
+              - start:
+                  line: 6
+                  column: 13
+                end:
+                  line: 6
+                  column: 24
+                props: []
+    props: []
+    html_elements:
+      - div
+  - definition_id: "typescript-examples:29a91d9df833a8e872c4bbd5818db9f87a167699641a7662ba86ecb989a4d227:default"
+    name: MainPage
+    export_ids:
+      - "typescript-examples:src/simple/main:default"
+    package_name: typescript-examples
+    source_path: src/simple/main.tsx
+    dependencies:
+      - from: "typescript-examples:29a91d9df833a8e872c4bbd5818db9f87a167699641a7662ba86ecb989a4d227:default"
+        to: "typescript-examples:26bbf37435b0128ea57412df34a008b8d678321f2932b51ac77d1b5834a63b10:BackButton"
+        references:
+          - trace:
+              - "typescript-examples:26bbf37435b0128ea57412df34a008b8d678321f2932b51ac77d1b5834a63b10:BackButton"
+            usages:
+              - start:
+                  line: 6
+                  column: 13
+                end:
+                  line: 6
+                  column: 26
+                props: []
+      - from: "typescript-examples:29a91d9df833a8e872c4bbd5818db9f87a167699641a7662ba86ecb989a4d227:default"
+        to: "typescript-examples:26bbf37435b0128ea57412df34a008b8d678321f2932b51ac77d1b5834a63b10:UserMenuNew"
+        references:
+          - trace:
+              - "typescript-examples:26bbf37435b0128ea57412df34a008b8d678321f2932b51ac77d1b5834a63b10:UserMenuNew"
+            usages:
+              - start:
+                  line: 7
+                  column: 13
+                end:
+                  line: 7
+                  column: 27
+                props: []
+      - from: "typescript-examples:29a91d9df833a8e872c4bbd5818db9f87a167699641a7662ba86ecb989a4d227:default"
+        to: "typescript-examples:dc860cf810add85d2cc89bfd12aa9c3e4a51aab28d43d163a5354fa2bbcfce10:CoreHeader"
+        references:
+          - trace:
+              - "typescript-examples:26bbf37435b0128ea57412df34a008b8d678321f2932b51ac77d1b5834a63b10:HeaderNew"
+              - "typescript-examples:4d8c4ec7b11c9f23a1bd5ae28e62d192d65bea52b2dd4daec56b0f8ae9ec8dd7:Header"
+              - "typescript-examples:dc860cf810add85d2cc89bfd12aa9c3e4a51aab28d43d163a5354fa2bbcfce10:CoreHeader"
+            usages:
+              - start:
+                  line: 5
+                  column: 9
+                end:
+                  line: 9
+                  column: 21
+                props:
+                  - name: children
+                    value: JSXElement
+    props: []
+    html_elements: []
+

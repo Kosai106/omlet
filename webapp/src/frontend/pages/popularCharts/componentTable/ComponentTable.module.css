@@ -1,0 +1,16 @@
+.componentColumn {
+    flex: 1;
+}
+
+.componentRow:not(.linksDisabled):hover .componentColumn {
+    text-decoration: underline;
+}
+
+.createdColumn {
+    width: 96px;
+}
+
+.numberUsedColumn {
+    width: 64px;
+    text-align: right;
+}

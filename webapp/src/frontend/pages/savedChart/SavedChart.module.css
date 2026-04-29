@@ -1,0 +1,13 @@
+.chartNameInput,
+.chartDescriptionInput {
+    position: relative;
+    left: calc(-1 * var(--spacing-xs));
+    top: -3.5px;
+}
+
+.chartDescriptionInput {
+    height: 22px;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--label-secondary-color);
+}

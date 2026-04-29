@@ -1,0 +1,298 @@
+---
+source: crates/core/tests/test_parser.rs
+expression: "&parser::Module::new(&RelativePathBuf::from_path(path.strip_prefix(&project_root).unwrap()).unwrap(),\n&project_root, &module_resolver,).unwrap()"
+input_file: samples/typescript/src/multiple-exports/parent.tsx
+---
+source_path: src/multiple-exports/parent.tsx
+id:
+  hash: "11787136077526884374"
+  path: src/multiple-exports/parent.tsx
+  package_name: UNKNOWN
+  mtype: local
+created_at: ~
+updated_at: ~
+exports:
+  - source:
+      Internal: "Parent#1"
+    exported_name: Parent
+declarations:
+  - symbol: "Child#1"
+    source:
+      hash: "11787136077526884374"
+      path: src/multiple-exports/parent.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 15799224372355022261, path: \"src/multiple-exports/child\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    inferred_type:
+      TypeOf:
+        symbol:
+          symbol: "default#0"
+          source:
+            hash: "15799224372355022261"
+            path: src/multiple-exports/child
+            package_name: UNKNOWN
+            mtype: local
+        is_local: false
+    start:
+      line: 1
+      column: 18
+    end:
+      line: 1
+      column: 34
+  - symbol: "Margin#1"
+    source:
+      hash: "11787136077526884374"
+      path: src/multiple-exports/parent.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('Margin' type=inline), context: #1 }, source: ModuleId { hash: 15799224372355022261, path: \"src/multiple-exports/child\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    inferred_type:
+      TypeOf:
+        symbol:
+          symbol: "Margin#1"
+          source:
+            hash: "15799224372355022261"
+            path: src/multiple-exports/child
+            package_name: UNKNOWN
+            mtype: local
+        is_local: false
+    start:
+      line: 1
+      column: 10
+    end:
+      line: 1
+      column: 16
+  - symbol: "Parent#1"
+    source:
+      hash: "11787136077526884374"
+      path: src/multiple-exports/parent.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<declaration>"
+    inferred_type:
+      Function:
+        - JSX
+    start:
+      line: 3
+      column: 8
+    end:
+      line: 10
+      column: 2
+scopes:
+  - owner: "__global#0"
+    parent: ~
+    children:
+      - "Parent#1"
+      - "Parent#1"
+    references:
+      - "Child#1"
+      - "Margin#1"
+      - "Parent#1"
+      - "default#0"
+    jsx_references:
+      - "Child#1"
+      - "Margin#1"
+  - owner: "Parent#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "Child#1"
+      - "Margin#1"
+    jsx_references:
+      - "Child#1"
+      - "Margin#1"
+  - owner: "Parent#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "Child#1"
+      - "Margin#1"
+    jsx_references:
+      - "Child#1"
+      - "Margin#1"
+body:
+  - type: ImportDeclaration
+    span:
+      start: 1
+      end: 52
+      ctxt: 0
+    specifiers:
+      - type: ImportSpecifier
+        span:
+          start: 10
+          end: 16
+          ctxt: 0
+        local:
+          type: Identifier
+          span:
+            start: 10
+            end: 16
+            ctxt: 1
+          value: Margin
+          optional: false
+        imported: ~
+        isTypeOnly: false
+      - type: ImportSpecifier
+        span:
+          start: 18
+          end: 34
+          ctxt: 0
+        local:
+          type: Identifier
+          span:
+            start: 29
+            end: 34
+            ctxt: 1
+          value: Child
+          optional: false
+        imported:
+          type: Identifier
+          span:
+            start: 18
+            end: 25
+            ctxt: 0
+          value: default
+          optional: false
+        isTypeOnly: false
+    source:
+      type: StringLiteral
+      span:
+        start: 42
+        end: 51
+        ctxt: 0
+      value: "./child"
+      raw: "\"./child\""
+    typeOnly: false
+    asserts: ~
+  - type: ExportDeclaration
+    span:
+      start: 54
+      end: 168
+      ctxt: 0
+    declaration:
+      async: false
+      body:
+        type: BlockStatement
+        span:
+          start: 79
+          end: 168
+          ctxt: 0
+        stmts:
+          - type: ReturnStatement
+            span:
+              start: 85
+              end: 166
+              ctxt: 0
+            argument:
+              type: ParenthesisExpression
+              span:
+                start: 92
+                end: 165
+                ctxt: 0
+              expression:
+                type: JSXFragment
+                span:
+                  start: 102
+                  end: 159
+                  ctxt: 0
+                opening:
+                  type: JSXOpeningFragment
+                  span:
+                    start: 102
+                    end: 104
+                    ctxt: 0
+                children:
+                  - type: JSXText
+                    span:
+                      start: 104
+                      end: 117
+                      ctxt: 0
+                    value: "\n\n            "
+                    raw: "\n\n            "
+                  - type: JSXElement
+                    span:
+                      start: 117
+                      end: 125
+                      ctxt: 0
+                    opening:
+                      type: JSXOpeningElement
+                      name:
+                        type: Identifier
+                        span:
+                          start: 118
+                          end: 123
+                          ctxt: 1
+                        value: Child
+                        optional: false
+                      span:
+                        start: 117
+                        end: 125
+                        ctxt: 0
+                      attributes: []
+                      selfClosing: true
+                      typeArguments: ~
+                    children: []
+                    closing: ~
+                  - type: JSXText
+                    span:
+                      start: 125
+                      end: 138
+                      ctxt: 0
+                    value: "\n\n            "
+                    raw: "\n\n            "
+                  - type: JSXElement
+                    span:
+                      start: 138
+                      end: 147
+                      ctxt: 0
+                    opening:
+                      type: JSXOpeningElement
+                      name:
+                        type: Identifier
+                        span:
+                          start: 139
+                          end: 145
+                          ctxt: 1
+                        value: Margin
+                        optional: false
+                      span:
+                        start: 138
+                        end: 147
+                        ctxt: 0
+                      attributes: []
+                      selfClosing: true
+                      typeArguments: ~
+                    children: []
+                    closing: ~
+                  - type: JSXText
+                    span:
+                      start: 147
+                      end: 156
+                      ctxt: 0
+                    value: "\n\n        "
+                    raw: "\n\n        "
+                closing:
+                  type: JSXClosingFragment
+                  span:
+                    start: 156
+                    end: 159
+                    ctxt: 0
+      declare: false
+      decorators: []
+      generator: false
+      identifier:
+        type: Identifier
+        span:
+          start: 70
+          end: 76
+          ctxt: 1
+        value: Parent
+        optional: false
+      params: []
+      returnType: ~
+      span:
+        start: 61
+        end: 168
+        ctxt: 0
+      type: FunctionDeclaration
+      typeParameters: ~

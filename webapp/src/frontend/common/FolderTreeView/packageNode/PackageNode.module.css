@@ -1,0 +1,130 @@
+.packageNode {
+    position: relative;
+}
+
+.packageNode .packageLine {
+    position: absolute;
+    top: 24px;
+    left: 26px;
+    width: 1px;
+    height: calc(100% - 13px);
+    border-radius: 1px;
+    background-color: var(--border-secondary-color);
+}
+
+.packageNode:last-child .packageLine::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--border-secondary-color);
+    transform: translateX(-50%);
+}
+
+.packageNode .verticalLine {
+    position: absolute;
+    top: 24px;
+    left: 26px;
+    width: 1px;
+    border-radius: 1px;
+    background-color: var(--border-secondary-color);
+}
+
+.packageNode .verticalLine.selected,
+.packageNode:last-child .packageLine.selected::after,
+.packageNode .packageLine.selected {
+    background-color: var(--accent-green);
+    z-index: 1;
+}
+
+.packageNode .packageInfo {
+    height: 22px;
+    margin: 12px 0 4px;
+    display: flex;
+    align-items: center;
+}
+
+.packageNode:first-child .packageInfo {
+    margin-top: 0;
+}
+
+.packageNode .packageInfo .packageSelector {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 22px;
+    border-radius: 2px;
+    font-size: 13px;
+    line-height: 18px;
+    user-select: none;
+    cursor: pointer;
+    overflow: hidden;
+    margin-left: 4px;
+    padding: 0 4px 2px;
+}
+
+.packageNode .packageInfo .packageSelector:hover {
+    background-color: var(--button-background-hover-color);
+}
+
+.packageNode .packageInfo .packageSelector:active {
+    background-color: var(--button-background-active-color);
+}
+
+.packageNode .packageInfo .packageSelector.selected {
+    background-color: rgba(var(--accent-green-rgb), 0.1);
+    box-shadow: 0 0 0 1px var(--accent-green);
+}
+
+.packageNode .packageInfo .packageSelector.selected.partiallySelected {
+    background-color: transparent;
+    background-image: repeating-linear-gradient(
+            -45deg,
+            rgba(var(--accent-green-rgb), 0.1),
+            rgba(var(--accent-green-rgb), 0.1) 8px,
+            rgba(var(--accent-yellow-rgb), 0.1) 8px,
+            rgba(var(--accent-yellow-rgb), 0.1) 16px
+    );
+    box-shadow: 0 0 0 1px var(--accent-green);
+}
+
+.packageNode .packageInfo .packageSelector .packageName {
+    color: var(--label-primary-color);
+}
+
+.packageNode .packageInfo .packageSelector .separatorDot {
+    display: inline-block;
+    width: 2px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: var(--label-secondary-color);
+}
+
+.packageNode .packageInfo .packageSelector .componentCount {
+    color: var(--label-secondary-color);
+}
+
+.packageNode .packageInfo .packageSelector input {
+    display: none;
+}
+
+.packageNode .collapseButton {
+    padding: 4px;
+    line-height: 0;
+    transform-origin: center;
+    transition-property: transform;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+}
+
+.packageNode .collapseButton.collapsed {
+    transform: rotate(-90deg);
+}
+
+.packageNode .folders {
+    padding-left: 10px;
+}
+

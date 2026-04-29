@@ -1,0 +1,7 @@
+{
+    "exports": {
+        ".": "src/index.ts",
+        "build/*": "src/*",
+        "TextInput": "src/data-entry/TextInput/index.ts"
+    }
+}

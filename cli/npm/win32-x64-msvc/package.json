@@ -1,0 +1,18 @@
+{
+  "name": "@omlet/cli-win32-x64-msvc",
+  "version": "2.2.0",
+  "os": [
+    "win32"
+  ],
+  "cpu": [
+    "x64"
+  ],
+  "main": "cli.win32-x64-msvc.node",
+  "files": [
+    "cli.win32-x64-msvc.node"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">= 10"
+  }
+}

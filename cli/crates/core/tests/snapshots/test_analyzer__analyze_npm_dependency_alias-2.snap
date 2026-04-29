@@ -1,0 +1,14 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&export_results"
+---
+num_of_exports: 1
+exports:
+  - name: Main
+    source_path: src/main.jsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "test:32d49112ca8c65ad226a8128c3e567e8f354468efde24c10ed9dcb7980e2387c:Main"
+

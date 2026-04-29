@@ -1,0 +1,18 @@
+.popoverOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+.popover {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    max-height: min(var(--max-height, 100%), calc(100% - var(--top) - var(--spacing-s)));
+    background-color: var(--background-primary-color);
+    box-shadow: var(--shadow-default);
+    border-radius: 4px;
+}

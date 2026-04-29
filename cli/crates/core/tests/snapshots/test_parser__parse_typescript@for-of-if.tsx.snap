@@ -1,0 +1,398 @@
+---
+source: crates/core/tests/test_parser.rs
+expression: "&parser::Module::new(&RelativePathBuf::from_path(path.strip_prefix(&project_root).unwrap()).unwrap(),\n&project_root, &module_resolver,).unwrap()"
+input_file: samples/typescript/src/functional-component/control-statements/loop-for-of/for-of-if.tsx
+---
+source_path: src/functional-component/control-statements/loop-for-of/for-of-if.tsx
+id:
+  hash: "1701424192065571836"
+  path: src/functional-component/control-statements/loop-for-of/for-of-if.tsx
+  package_name: UNKNOWN
+  mtype: local
+created_at: ~
+updated_at: ~
+exports:
+  - source:
+      Internal: "Sample#1"
+    exported_name: Sample
+declarations:
+  - symbol: "React#1"
+    source:
+      hash: "1701424192065571836"
+      path: src/functional-component/control-statements/loop-for-of/for-of-if.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
+    inferred_type:
+      TypeOf:
+        symbol:
+          symbol: "default#0"
+          source:
+            hash: "11002248552354871051"
+            path: ""
+            package_name: react
+            mtype: package
+        is_local: false
+    start:
+      line: 1
+      column: 8
+    end:
+      line: 1
+      column: 13
+  - symbol: "Sample#1"
+    source:
+      hash: "1701424192065571836"
+      path: src/functional-component/control-statements/loop-for-of/for-of-if.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<declaration>"
+    inferred_type:
+      Function:
+        - JSX
+        - Unknown
+    start:
+      line: 3
+      column: 8
+    end:
+      line: 11
+      column: 2
+  - symbol: "i#2"
+    source:
+      hash: "1701424192065571836"
+      path: src/functional-component/control-statements/loop-for-of/for-of-if.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<empty>"
+    inferred_type: Unknown
+    start:
+      line: 4
+      column: 16
+    end:
+      line: 4
+      column: 17
+scopes:
+  - owner: "__global#0"
+    parent: ~
+    children:
+      - "Sample#1"
+      - "Sample#1"
+    references:
+      - "React#1"
+      - "Sample#1"
+      - "div#3"
+      - "i#2"
+    jsx_references:
+      - "div#3"
+  - owner: "Sample#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "div#3"
+      - "i#2"
+    jsx_references:
+      - "div#3"
+  - owner: "Sample#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "div#3"
+      - "i#2"
+    jsx_references:
+      - "div#3"
+body:
+  - type: ImportDeclaration
+    span:
+      start: 1
+      end: 27
+      ctxt: 0
+    specifiers:
+      - type: ImportDefaultSpecifier
+        span:
+          start: 8
+          end: 13
+          ctxt: 0
+        local:
+          type: Identifier
+          span:
+            start: 8
+            end: 13
+            ctxt: 1
+          value: React
+          optional: false
+    source:
+      type: StringLiteral
+      span:
+        start: 19
+        end: 26
+        ctxt: 0
+      value: react
+      raw: "\"react\""
+    typeOnly: false
+    asserts: ~
+  - type: ExportDeclaration
+    span:
+      start: 29
+      end: 204
+      ctxt: 0
+    declaration:
+      async: false
+      body:
+        type: BlockStatement
+        span:
+          start: 54
+          end: 204
+          ctxt: 0
+        stmts:
+          - type: ForOfStatement
+            span:
+              start: 60
+              end: 186
+              ctxt: 0
+            await: ~
+            left:
+              type: VariableDeclaration
+              span:
+                start: 65
+                end: 72
+                ctxt: 0
+              kind: const
+              declare: false
+              declarations:
+                - type: VariableDeclarator
+                  span:
+                    start: 71
+                    end: 72
+                    ctxt: 0
+                  id:
+                    optional: false
+                    span:
+                      start: 71
+                      end: 72
+                      ctxt: 2
+                    type: Identifier
+                    typeAnnotation: ~
+                    value: i
+                  init: ~
+                  definite: false
+            right:
+              type: ArrayExpression
+              span:
+                start: 76
+                end: 106
+                ctxt: 0
+              elements:
+                - spread: ~
+                  expression:
+                    type: NumericLiteral
+                    span:
+                      start: 77
+                      end: 78
+                      ctxt: 0
+                    value: 0.0
+                    raw: "0"
+                - spread: ~
+                  expression:
+                    type: NumericLiteral
+                    span:
+                      start: 80
+                      end: 81
+                      ctxt: 0
+                    value: 1.0
+                    raw: "1"
+                - spread: ~
+                  expression:
+                    type: NumericLiteral
+                    span:
+                      start: 83
+                      end: 84
+                      ctxt: 0
+                    value: 2.0
+                    raw: "2"
+                - spread: ~
+                  expression:
+                    type: NumericLiteral
+                    span:
+                      start: 86
+                      end: 87
+                      ctxt: 0
+                    value: 3.0
+                    raw: "3"
+                - spread: ~
+                  expression:
+                    type: NumericLiteral
+                    span:
+                      start: 89
+                      end: 90
+                      ctxt: 0
+                    value: 4.0
+                    raw: "4"
+                - spread: ~
+                  expression:
+                    type: NumericLiteral
+                    span:
+                      start: 92
+                      end: 93
+                      ctxt: 0
+                    value: 5.0
+                    raw: "5"
+                - spread: ~
+                  expression:
+                    type: NumericLiteral
+                    span:
+                      start: 95
+                      end: 96
+                      ctxt: 0
+                    value: 6.0
+                    raw: "6"
+                - spread: ~
+                  expression:
+                    type: NumericLiteral
+                    span:
+                      start: 98
+                      end: 99
+                      ctxt: 0
+                    value: 7.0
+                    raw: "7"
+                - spread: ~
+                  expression:
+                    type: NumericLiteral
+                    span:
+                      start: 101
+                      end: 102
+                      ctxt: 0
+                    value: 8.0
+                    raw: "8"
+                - spread: ~
+                  expression:
+                    type: NumericLiteral
+                    span:
+                      start: 104
+                      end: 105
+                      ctxt: 0
+                    value: 9.0
+                    raw: "9"
+            body:
+              type: BlockStatement
+              span:
+                start: 108
+                end: 186
+                ctxt: 0
+              stmts:
+                - type: IfStatement
+                  span:
+                    start: 118
+                    end: 180
+                    ctxt: 0
+                  test:
+                    type: BinaryExpression
+                    span:
+                      start: 122
+                      end: 129
+                      ctxt: 0
+                    operator: "==="
+                    left:
+                      type: Identifier
+                      span:
+                        start: 122
+                        end: 123
+                        ctxt: 2
+                      value: i
+                      optional: false
+                    right:
+                      type: NumericLiteral
+                      span:
+                        start: 128
+                        end: 129
+                        ctxt: 0
+                      value: 5.0
+                      raw: "5"
+                  consequent:
+                    type: BlockStatement
+                    span:
+                      start: 131
+                      end: 180
+                      ctxt: 0
+                    stmts:
+                      - type: ReturnStatement
+                        span:
+                          start: 145
+                          end: 170
+                          ctxt: 0
+                        argument:
+                          type: JSXElement
+                          span:
+                            start: 152
+                            end: 169
+                            ctxt: 0
+                          opening:
+                            type: JSXOpeningElement
+                            name:
+                              type: Identifier
+                              span:
+                                start: 153
+                                end: 156
+                                ctxt: 3
+                              value: div
+                              optional: false
+                            span:
+                              start: 152
+                              end: 157
+                              ctxt: 0
+                            attributes: []
+                            selfClosing: false
+                            typeArguments: ~
+                          children:
+                            - type: JSXText
+                              span:
+                                start: 157
+                                end: 163
+                                ctxt: 0
+                              value: Sample
+                              raw: Sample
+                          closing:
+                            type: JSXClosingElement
+                            span:
+                              start: 163
+                              end: 169
+                              ctxt: 0
+                            name:
+                              type: Identifier
+                              span:
+                                start: 165
+                                end: 168
+                                ctxt: 3
+                              value: div
+                              optional: false
+                  alternate: ~
+          - type: ReturnStatement
+            span:
+              start: 192
+              end: 202
+              ctxt: 0
+            argument:
+              type: NumericLiteral
+              span:
+                start: 199
+                end: 201
+                ctxt: 0
+              value: 42.0
+              raw: "42"
+      declare: false
+      decorators: []
+      generator: false
+      identifier:
+        type: Identifier
+        span:
+          start: 45
+          end: 51
+          ctxt: 1
+        value: Sample
+        optional: false
+      params: []
+      returnType: ~
+      span:
+        start: 36
+        end: 204
+        ctxt: 0
+      type: FunctionDeclaration
+      typeParameters: ~

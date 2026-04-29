@@ -1,0 +1,38 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&export_results"
+---
+num_of_exports: 4
+exports:
+  - name: Accordion
+    source_path: src/wildcard-re-export/components/Accordion/Accordion.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:389da781ceac91e86a3571b7c7d2698ee0b3581947f45eaa0b8dc6847e8c98e2:Accordion"
+  - name: Accordion
+    source_path: src/wildcard-re-export/components/Accordion/index.ts
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:12e30bc9b1573b93ffaf7665589e9ba5c3924ce7a3b60c1f8e9d3b7babf8c619:Accordion"
+      - "typescript-examples:389da781ceac91e86a3571b7c7d2698ee0b3581947f45eaa0b8dc6847e8c98e2:Accordion"
+  - name: Accordion
+    source_path: src/wildcard-re-export/components/index.ts
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:bf32e8e5a0e867f2852441136509443315b67529ea5e29b551fc789a99dd762e:Accordion"
+      - "typescript-examples:12e30bc9b1573b93ffaf7665589e9ba5c3924ce7a3b60c1f8e9d3b7babf8c619:Accordion"
+      - "typescript-examples:389da781ceac91e86a3571b7c7d2698ee0b3581947f45eaa0b8dc6847e8c98e2:Accordion"
+  - name: App
+    source_path: src/wildcard-re-export/app.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:a27c8fd3b817b5f767fe871eb326a8b4cab33cf4a6f8a8e868fbe77e7ebd9428:App"
+

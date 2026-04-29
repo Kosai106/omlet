@@ -1,0 +1,36 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&export_results"
+---
+num_of_exports: 4
+exports:
+  - name: Divider
+    source_path: src/Divider/index.ts
+    is_component: true
+    inferred_type: Unknown
+    resolved_type: Unknown
+    trace_to_declaration:
+      - "color:bcb4d56163cd41c6b1900a5fc59dac230ef90485b082e74c857b225e16449ad5:Divider"
+      - "@mui/material:cc29053ff492a0bc6ceac79687e3583259d95bb2cf7aa32d6718a546061e124d:default"
+  - name: SimpleDividerComponent
+    source_path: src/TimestampDivider/TimestampDivider.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "color:036d3f1c984043aaf44fd9519371d17afcc29dfa5e457044e017a312d9c92ff1:SimpleDividerComponent"
+  - name: SubDivider
+    source_path: src/Divider/SubDivider/SubDivider.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "color:b8ec40cbfba161d2088254bebb62061d06108948206a10fd6eaddaa2b827bb6c:SubDivider"
+  - name: SubDivider
+    source_path: src/Divider/SubDivider/index.ts
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "color:ad6563e37bd39c4cbcd1486643a7a61a281ea5f4602e1f017d77fc30b424299d:SubDivider"
+      - "color:b8ec40cbfba161d2088254bebb62061d06108948206a10fd6eaddaa2b827bb6c:SubDivider"

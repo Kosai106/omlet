@@ -1,0 +1,21 @@
+.singleDataLineChart {
+    --chart-height: 550px;
+
+    display: flex;
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    padding: 0 48px 0 0;
+}
+
+.singleDataLineChart.small {
+    padding: 0;
+}
+
+.singleDataLineChart .chartContainer {
+    flex: 1;
+    min-width: 0;
+    height: var(--chart-height);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}

@@ -1,0 +1,69 @@
+---
+source: crates/core/tests/test_parser.rs
+expression: "&parser::Module::new(&RelativePathBuf::from_path(path.strip_prefix(&project_root).unwrap()).unwrap(),\n            &project_root, &module_resolver).unwrap()"
+input_file: samples/typescript/src/wildcard-re-export/components/index.ts
+---
+source_path: src/wildcard-re-export/components/index.ts
+id:
+  hash: "12011020999155121260"
+  path: src/wildcard-re-export/components/index.ts
+  package_name: UNKNOWN
+  mtype: local
+created_at: ~
+updated_at: ~
+exports:
+  - source:
+      External:
+        symbol: "<wildcard>#0"
+        source:
+          hash: "16158105738101550855"
+          path: src/wildcard-re-export/components/Divider
+          package_name: UNKNOWN
+          mtype: local
+    exported_name: "<wildcard>"
+  - source:
+      External:
+        symbol: "<wildcard>#0"
+        source:
+          hash: "10457983299105045357"
+          path: src/wildcard-re-export/components/Accordion
+          package_name: UNKNOWN
+          mtype: local
+    exported_name: "<wildcard>"
+declarations: []
+scopes:
+  - owner: "__global#0"
+    parent: ~
+    children: []
+    references: []
+    jsx_references: []
+body:
+  - type: ExportAllDeclaration
+    span:
+      start: 1
+      end: 27
+      ctxt: 0
+    source:
+      type: StringLiteral
+      span:
+        start: 15
+        end: 26
+        ctxt: 0
+      value: "./Divider"
+      raw: "\"./Divider\""
+    asserts: ~
+  - type: ExportAllDeclaration
+    span:
+      start: 28
+      end: 56
+      ctxt: 0
+    source:
+      type: StringLiteral
+      span:
+        start: 42
+        end: 55
+        ctxt: 0
+      value: "./Accordion"
+      raw: "\"./Accordion\""
+    asserts: ~
+

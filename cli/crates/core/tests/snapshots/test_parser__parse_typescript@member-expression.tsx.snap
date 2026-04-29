@@ -1,0 +1,397 @@
+---
+source: crates/core/tests/test_parser.rs
+expression: "&parser::Module::new(&RelativePathBuf::from_path(path.strip_prefix(&project_root).unwrap()).unwrap(),\n&project_root, &module_resolver,).unwrap()"
+input_file: samples/typescript/src/redeclare-import/member-expression.tsx
+---
+source_path: src/redeclare-import/member-expression.tsx
+id:
+  hash: "6570801777991694602"
+  path: src/redeclare-import/member-expression.tsx
+  package_name: UNKNOWN
+  mtype: local
+created_at: ~
+updated_at: ~
+exports:
+  - source:
+      Internal: "MyContext#1"
+    exported_name: MyContext
+  - source:
+      Internal: "MyProvider#1"
+    exported_name: MyProvider
+  - source:
+      Internal: "Parent#1"
+    exported_name: Parent
+declarations:
+  - symbol: "MyContext#1"
+    source:
+      hash: "6570801777991694602"
+      path: src/redeclare-import/member-expression.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      ReturnTypeOf:
+        - TypeOf:
+            symbol:
+              symbol: "createContext#1"
+              source:
+                hash: "6570801777991694602"
+                path: src/redeclare-import/member-expression.tsx
+                package_name: UNKNOWN
+                mtype: local
+            is_local: true
+        - - Str: test
+    start:
+      line: 4
+      column: 14
+    end:
+      line: 4
+      column: 23
+  - symbol: "MyProvider#1"
+    source:
+      hash: "6570801777991694602"
+      path: src/redeclare-import/member-expression.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      MemberOf:
+        - TypeOf:
+            symbol:
+              symbol: "MyContext#1"
+              source:
+                hash: "6570801777991694602"
+                path: src/redeclare-import/member-expression.tsx
+                package_name: UNKNOWN
+                mtype: local
+            is_local: true
+        - Object: Provider
+    start:
+      line: 6
+      column: 14
+    end:
+      line: 6
+      column: 24
+  - symbol: "Parent#1"
+    source:
+      hash: "6570801777991694602"
+      path: src/redeclare-import/member-expression.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<declaration>"
+    inferred_type:
+      Function:
+        - JSX
+    start:
+      line: 9
+      column: 8
+    end:
+      line: 15
+      column: 2
+  - symbol: "createContext#1"
+    source:
+      hash: "6570801777991694602"
+      path: src/redeclare-import/member-expression.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('createContext' type=dynamic), context: #1 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
+    inferred_type:
+      TypeOf:
+        symbol:
+          symbol: "createContext#1"
+          source:
+            hash: "11002248552354871051"
+            path: ""
+            package_name: react
+            mtype: package
+        is_local: false
+    start:
+      line: 1
+      column: 10
+    end:
+      line: 1
+      column: 23
+scopes:
+  - owner: "__global#0"
+    parent: ~
+    children:
+      - "MyContext#1"
+      - "MyContext#1"
+      - "MyProvider#1"
+      - "MyProvider#1"
+      - "Parent#1"
+      - "Parent#1"
+    references:
+      - "MyContext#1"
+      - "MyProvider#1"
+      - "Parent#1"
+      - "Provider#0"
+      - "createContext#1"
+    jsx_references:
+      - "MyProvider#1"
+  - owner: "MyContext#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "createContext#1"
+    jsx_references: []
+  - owner: "MyContext#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "createContext#1"
+    jsx_references: []
+  - owner: "MyProvider#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "MyContext#1"
+      - "Provider#0"
+    jsx_references: []
+  - owner: "MyProvider#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "MyContext#1"
+      - "Provider#0"
+    jsx_references: []
+  - owner: "Parent#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "MyProvider#1"
+    jsx_references:
+      - "MyProvider#1"
+  - owner: "Parent#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "MyProvider#1"
+    jsx_references:
+      - "MyProvider#1"
+body:
+  - type: ImportDeclaration
+    span:
+      start: 1
+      end: 39
+      ctxt: 0
+    specifiers:
+      - type: ImportSpecifier
+        span:
+          start: 10
+          end: 23
+          ctxt: 0
+        local:
+          type: Identifier
+          span:
+            start: 10
+            end: 23
+            ctxt: 1
+          value: createContext
+          optional: false
+        imported: ~
+        isTypeOnly: false
+    source:
+      type: StringLiteral
+      span:
+        start: 31
+        end: 38
+        ctxt: 0
+      value: react
+      raw: "\"react\""
+    typeOnly: false
+    asserts: ~
+  - type: ExportDeclaration
+    span:
+      start: 42
+      end: 90
+      ctxt: 0
+    declaration:
+      type: VariableDeclaration
+      span:
+        start: 49
+        end: 90
+        ctxt: 0
+      kind: const
+      declare: false
+      declarations:
+        - type: VariableDeclarator
+          span:
+            start: 55
+            end: 89
+            ctxt: 0
+          id:
+            optional: false
+            span:
+              start: 55
+              end: 64
+              ctxt: 1
+            type: Identifier
+            typeAnnotation: ~
+            value: MyContext
+          init:
+            type: CallExpression
+            span:
+              start: 68
+              end: 89
+              ctxt: 0
+            callee:
+              type: Identifier
+              span:
+                start: 68
+                end: 81
+                ctxt: 1
+              value: createContext
+              optional: false
+            arguments:
+              - spread: ~
+                expression:
+                  type: StringLiteral
+                  span:
+                    start: 82
+                    end: 88
+                    ctxt: 0
+                  value: test
+                  raw: "\"test\""
+            typeArguments: ~
+          definite: false
+  - type: ExportDeclaration
+    span:
+      start: 92
+      end: 137
+      ctxt: 0
+    declaration:
+      type: VariableDeclaration
+      span:
+        start: 99
+        end: 137
+        ctxt: 0
+      kind: const
+      declare: false
+      declarations:
+        - type: VariableDeclarator
+          span:
+            start: 105
+            end: 136
+            ctxt: 0
+          id:
+            optional: false
+            span:
+              start: 105
+              end: 115
+              ctxt: 1
+            type: Identifier
+            typeAnnotation: ~
+            value: MyProvider
+          init:
+            type: MemberExpression
+            span:
+              start: 118
+              end: 136
+              ctxt: 0
+            object:
+              type: Identifier
+              span:
+                start: 118
+                end: 127
+                ctxt: 1
+              value: MyContext
+              optional: false
+            property:
+              type: Identifier
+              span:
+                start: 128
+                end: 136
+                ctxt: 0
+              value: Provider
+              optional: false
+          definite: false
+  - type: ExportDeclaration
+    span:
+      start: 140
+      end: 249
+      ctxt: 0
+    declaration:
+      async: false
+      body:
+        type: BlockStatement
+        span:
+          start: 165
+          end: 249
+          ctxt: 0
+        stmts:
+          - type: ReturnStatement
+            span:
+              start: 171
+              end: 247
+              ctxt: 0
+            argument:
+              type: ParenthesisExpression
+              span:
+                start: 178
+                end: 246
+                ctxt: 0
+              expression:
+                type: JSXElement
+                span:
+                  start: 188
+                  end: 240
+                  ctxt: 0
+                opening:
+                  type: JSXOpeningElement
+                  name:
+                    type: Identifier
+                    span:
+                      start: 189
+                      end: 199
+                      ctxt: 1
+                    value: MyProvider
+                    optional: false
+                  span:
+                    start: 188
+                    end: 200
+                    ctxt: 0
+                  attributes: []
+                  selfClosing: false
+                  typeArguments: ~
+                children:
+                  - type: JSXText
+                    span:
+                      start: 200
+                      end: 227
+                      ctxt: 0
+                    value: "\n\n            Hello\n\n        "
+                    raw: "\n\n            Hello\n\n        "
+                closing:
+                  type: JSXClosingElement
+                  span:
+                    start: 227
+                    end: 240
+                    ctxt: 0
+                  name:
+                    type: Identifier
+                    span:
+                      start: 229
+                      end: 239
+                      ctxt: 1
+                    value: MyProvider
+                    optional: false
+      declare: false
+      decorators: []
+      generator: false
+      identifier:
+        type: Identifier
+        span:
+          start: 156
+          end: 162
+          ctxt: 1
+        value: Parent
+        optional: false
+      params: []
+      returnType: ~
+      span:
+        start: 147
+        end: 249
+        ctxt: 0
+      type: FunctionDeclaration
+      typeParameters: ~

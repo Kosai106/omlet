@@ -1,0 +1,121 @@
+---
+source: crates/core/tests/test_parser.rs
+expression: "&parser::Module::new(&RelativePathBuf::from_path(path.strip_prefix(&project_root).unwrap()).unwrap(),\n&project_root, &module_resolver,).unwrap()"
+input_file: samples/typescript/src/hess/component/componentBody.tsx
+---
+source_path: src/hess/component/componentBody.tsx
+id:
+  hash: "10335023068409944853"
+  path: src/hess/component/componentBody.tsx
+  package_name: UNKNOWN
+  mtype: local
+created_at: ~
+updated_at: ~
+exports:
+  - source:
+      Internal: "default#0"
+    exported_name: default
+declarations:
+  - symbol: "ComponentReal#1"
+    source:
+      hash: "10335023068409944853"
+      path: src/hess/component/componentBody.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 4391586875326609996, path: \"src/hess/component/real\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    inferred_type:
+      TypeOf:
+        symbol:
+          symbol: "default#0"
+          source:
+            hash: "4391586875326609996"
+            path: src/hess/component/real
+            package_name: UNKNOWN
+            mtype: local
+        is_local: false
+    start:
+      line: 1
+      column: 8
+    end:
+      line: 1
+      column: 21
+  - symbol: "default#0"
+    source:
+      hash: "10335023068409944853"
+      path: src/hess/component/componentBody.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      TypeOf:
+        symbol:
+          symbol: "ComponentReal#1"
+          source:
+            hash: "10335023068409944853"
+            path: src/hess/component/componentBody.tsx
+            package_name: UNKNOWN
+            mtype: local
+        is_local: true
+    start:
+      line: 3
+      column: 1
+    end:
+      line: 3
+      column: 30
+scopes:
+  - owner: "__global#0"
+    parent: ~
+    children:
+      - "default#0"
+    references:
+      - "ComponentReal#1"
+    jsx_references: []
+  - owner: "default#0"
+    parent: "__global#0"
+    children: []
+    references:
+      - "ComponentReal#1"
+    jsx_references: []
+body:
+  - type: ImportDeclaration
+    span:
+      start: 1
+      end: 36
+      ctxt: 0
+    specifiers:
+      - type: ImportDefaultSpecifier
+        span:
+          start: 8
+          end: 21
+          ctxt: 0
+        local:
+          type: Identifier
+          span:
+            start: 8
+            end: 21
+            ctxt: 1
+          value: ComponentReal
+          optional: false
+    source:
+      type: StringLiteral
+      span:
+        start: 27
+        end: 35
+        ctxt: 0
+      value: "./real"
+      raw: "\"./real\""
+    typeOnly: false
+    asserts: ~
+  - type: ExportDefaultExpression
+    span:
+      start: 38
+      end: 67
+      ctxt: 0
+    expression:
+      type: Identifier
+      span:
+        start: 53
+        end: 66
+        ctxt: 1
+      value: ComponentReal
+      optional: false

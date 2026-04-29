@@ -1,0 +1,472 @@
+---
+source: crates/core/tests/test_parser.rs
+expression: "&parser::Module::new(&RelativePathBuf::from_path(path.strip_prefix(&project_root).unwrap()).unwrap(),\n&project_root, &module_resolver,).unwrap()"
+input_file: samples/typescript/src/dynamic-import/with-custom-wrapper.tsx
+---
+source_path: src/dynamic-import/with-custom-wrapper.tsx
+id:
+  hash: "4215404662257008312"
+  path: src/dynamic-import/with-custom-wrapper.tsx
+  package_name: UNKNOWN
+  mtype: local
+created_at: ~
+updated_at: ~
+exports:
+  - source:
+      Internal: "WithCustomWrapper#1"
+    exported_name: WithCustomWrapper
+declarations:
+  - symbol: "ImportedComponent#1"
+    source:
+      hash: "4215404662257008312"
+      path: src/dynamic-import/with-custom-wrapper.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      ReturnTypeOf:
+        - TypeOf:
+            symbol:
+              symbol: "lazyComponent#1"
+              source:
+                hash: "4215404662257008312"
+                path: src/dynamic-import/with-custom-wrapper.tsx
+                package_name: UNKNOWN
+                mtype: local
+            is_local: true
+        - - Function:
+              - TypeOf:
+                  symbol:
+                    symbol: "<wildcard>#0"
+                    source:
+                      hash: "11115586911716464803"
+                      path: src/dynamic-import/imported-component
+                      package_name: UNKNOWN
+                      mtype: local
+                  is_local: false
+    start:
+      line: 5
+      column: 7
+    end:
+      line: 5
+      column: 24
+  - symbol: "WithCustomWrapper#1"
+    source:
+      hash: "4215404662257008312"
+      path: src/dynamic-import/with-custom-wrapper.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<declaration>"
+    inferred_type:
+      Function:
+        - JSX
+    start:
+      line: 7
+      column: 8
+    end:
+      line: 14
+      column: 2
+  - symbol: "callback#2"
+    source:
+      hash: "4215404662257008312"
+      path: src/dynamic-import/with-custom-wrapper.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "Parameter<Symbol { name: Atom('lazyComponent' type=dynamic), context: #1 }>[0]"
+    inferred_type:
+      ParameterOf:
+        function:
+          symbol: "lazyComponent#1"
+          source:
+            hash: "4215404662257008312"
+            path: src/dynamic-import/with-custom-wrapper.tsx
+            package_name: UNKNOWN
+            mtype: local
+        index: 0
+    start:
+      line: 1
+      column: 24
+    end:
+      line: 1
+      column: 32
+  - symbol: "lazyComponent#1"
+    source:
+      hash: "4215404662257008312"
+      path: src/dynamic-import/with-custom-wrapper.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<declaration>"
+    inferred_type:
+      Function:
+        - MemberOf:
+            - ReturnTypeOf:
+                - TypeOf:
+                    symbol:
+                      symbol: "callback#2"
+                      source:
+                        hash: "4215404662257008312"
+                        path: src/dynamic-import/with-custom-wrapper.tsx
+                        package_name: UNKNOWN
+                        mtype: local
+                    is_local: true
+                - []
+            - Object: default
+    start:
+      line: 1
+      column: 1
+    end:
+      line: 3
+      column: 2
+scopes:
+  - owner: "__global#0"
+    parent: ~
+    children:
+      - "lazyComponent#1"
+      - "ImportedComponent#1"
+      - "WithCustomWrapper#1"
+      - "WithCustomWrapper#1"
+    references:
+      - "ImportedComponent#1"
+      - "WithCustomWrapper#1"
+      - "callback#2"
+      - "default#0"
+      - "div#3"
+      - "lazyComponent#1"
+    jsx_references:
+      - "ImportedComponent#1"
+      - "div#3"
+  - owner: "lazyComponent#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "callback#2"
+      - "default#0"
+    jsx_references: []
+  - owner: "ImportedComponent#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "lazyComponent#1"
+    jsx_references: []
+  - owner: "WithCustomWrapper#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "ImportedComponent#1"
+      - "div#3"
+    jsx_references:
+      - "ImportedComponent#1"
+      - "div#3"
+  - owner: "WithCustomWrapper#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "ImportedComponent#1"
+      - "div#3"
+    jsx_references:
+      - "ImportedComponent#1"
+      - "div#3"
+body:
+  - async: false
+    body:
+      type: BlockStatement
+      span:
+        start: 34
+        end: 68
+        ctxt: 0
+      stmts:
+        - type: ReturnStatement
+          span:
+            start: 40
+            end: 66
+            ctxt: 0
+          argument:
+            type: MemberExpression
+            span:
+              start: 47
+              end: 65
+              ctxt: 0
+            object:
+              type: CallExpression
+              span:
+                start: 47
+                end: 57
+                ctxt: 0
+              callee:
+                type: Identifier
+                span:
+                  start: 47
+                  end: 55
+                  ctxt: 2
+                value: callback
+                optional: false
+              arguments: []
+              typeArguments: ~
+            property:
+              type: Identifier
+              span:
+                start: 58
+                end: 65
+                ctxt: 0
+              value: default
+              optional: false
+    declare: false
+    decorators: []
+    generator: false
+    identifier:
+      type: Identifier
+      span:
+        start: 10
+        end: 23
+        ctxt: 1
+      value: lazyComponent
+      optional: false
+    params:
+      - type: Parameter
+        span:
+          start: 24
+          end: 32
+          ctxt: 0
+        decorators: []
+        pat:
+          optional: false
+          span:
+            start: 24
+            end: 32
+            ctxt: 2
+          type: Identifier
+          typeAnnotation: ~
+          value: callback
+    returnType: ~
+    span:
+      start: 1
+      end: 68
+      ctxt: 0
+    type: FunctionDeclaration
+    typeParameters: ~
+  - type: VariableDeclaration
+    span:
+      start: 70
+      end: 148
+      ctxt: 0
+    kind: const
+    declare: false
+    declarations:
+      - type: VariableDeclarator
+        span:
+          start: 76
+          end: 147
+          ctxt: 0
+        id:
+          optional: false
+          span:
+            start: 76
+            end: 93
+            ctxt: 1
+          type: Identifier
+          typeAnnotation: ~
+          value: ImportedComponent
+        init:
+          type: CallExpression
+          span:
+            start: 96
+            end: 147
+            ctxt: 0
+          callee:
+            type: Identifier
+            span:
+              start: 96
+              end: 109
+              ctxt: 1
+            value: lazyComponent
+            optional: false
+          arguments:
+            - spread: ~
+              expression:
+                type: ArrowFunctionExpression
+                span:
+                  start: 110
+                  end: 146
+                  ctxt: 0
+                params: []
+                body:
+                  type: CallExpression
+                  span:
+                    start: 116
+                    end: 146
+                    ctxt: 0
+                  callee:
+                    type: Import
+                    span:
+                      start: 116
+                      end: 122
+                      ctxt: 0
+                  arguments:
+                    - spread: ~
+                      expression:
+                        type: StringLiteral
+                        span:
+                          start: 123
+                          end: 145
+                          ctxt: 0
+                        value: "./imported-component"
+                        raw: "\"./imported-component\""
+                  typeArguments: ~
+                async: false
+                generator: false
+                typeParameters: ~
+                returnType: ~
+          typeArguments: ~
+        definite: false
+  - type: ExportDeclaration
+    span:
+      start: 150
+      end: 307
+      ctxt: 0
+    declaration:
+      async: false
+      body:
+        type: BlockStatement
+        span:
+          start: 186
+          end: 307
+          ctxt: 0
+        stmts:
+          - type: ReturnStatement
+            span:
+              start: 192
+              end: 305
+              ctxt: 0
+            argument:
+              type: ParenthesisExpression
+              span:
+                start: 199
+                end: 304
+                ctxt: 0
+              expression:
+                type: JSXFragment
+                span:
+                  start: 209
+                  end: 298
+                  ctxt: 0
+                opening:
+                  type: JSXOpeningFragment
+                  span:
+                    start: 209
+                    end: 211
+                    ctxt: 0
+                children:
+                  - type: JSXText
+                    span:
+                      start: 211
+                      end: 224
+                      ctxt: 0
+                    value: "\n\n            "
+                    raw: "\n\n            "
+                  - type: JSXElement
+                    span:
+                      start: 224
+                      end: 244
+                      ctxt: 0
+                    opening:
+                      type: JSXOpeningElement
+                      name:
+                        type: Identifier
+                        span:
+                          start: 225
+                          end: 242
+                          ctxt: 1
+                        value: ImportedComponent
+                        optional: false
+                      span:
+                        start: 224
+                        end: 244
+                        ctxt: 0
+                      attributes: []
+                      selfClosing: true
+                      typeArguments: ~
+                    children: []
+                    closing: ~
+                  - type: JSXText
+                    span:
+                      start: 244
+                      end: 257
+                      ctxt: 0
+                    value: "\n\n            "
+                    raw: "\n\n            "
+                  - type: JSXElement
+                    span:
+                      start: 257
+                      end: 286
+                      ctxt: 0
+                    opening:
+                      type: JSXOpeningElement
+                      name:
+                        type: Identifier
+                        span:
+                          start: 258
+                          end: 261
+                          ctxt: 3
+                        value: div
+                        optional: false
+                      span:
+                        start: 257
+                        end: 262
+                        ctxt: 0
+                      attributes: []
+                      selfClosing: false
+                      typeArguments: ~
+                    children:
+                      - type: JSXText
+                        span:
+                          start: 262
+                          end: 280
+                          ctxt: 0
+                        value: some sync jsx code
+                        raw: some sync jsx code
+                    closing:
+                      type: JSXClosingElement
+                      span:
+                        start: 280
+                        end: 286
+                        ctxt: 0
+                      name:
+                        type: Identifier
+                        span:
+                          start: 282
+                          end: 285
+                          ctxt: 3
+                        value: div
+                        optional: false
+                  - type: JSXText
+                    span:
+                      start: 286
+                      end: 295
+                      ctxt: 0
+                    value: "\n\n        "
+                    raw: "\n\n        "
+                closing:
+                  type: JSXClosingFragment
+                  span:
+                    start: 295
+                    end: 298
+                    ctxt: 0
+      declare: false
+      decorators: []
+      generator: false
+      identifier:
+        type: Identifier
+        span:
+          start: 166
+          end: 183
+          ctxt: 1
+        value: WithCustomWrapper
+        optional: false
+      params: []
+      returnType: ~
+      span:
+        start: 157
+        end: 307
+        ctxt: 0
+      type: FunctionDeclaration
+      typeParameters: ~

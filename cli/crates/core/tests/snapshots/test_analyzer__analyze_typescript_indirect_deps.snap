@@ -1,0 +1,274 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&component_results"
+---
+num_of_components: 12
+components:
+  - definition_id: "rsg-components:481da3a767b1d5439ffb4b0e25b6958533c113d5492236705f4bdd4296b500e4:default"
+    name: Argument
+    export_ids: []
+    package_name: rsg-components
+    source_path: Argument
+    dependencies: []
+    props: []
+    html_elements: []
+  - definition_id: "rsg-components:7f816072c1c6a23b88dfde54c5aa48559a81803890d297d21f17943c4f2b643d:default"
+    name: Arguments
+    export_ids: []
+    package_name: rsg-components
+    source_path: Arguments
+    dependencies: []
+    props: []
+    html_elements: []
+  - definition_id: "rsg-components:9b79a0b1c67fb5e7f628bd057399de28a517b0be1c1a108fd04618c86a89f9b3:default"
+    name: JsDoc
+    export_ids: []
+    package_name: rsg-components
+    source_path: JsDoc
+    dependencies: []
+    props: []
+    html_elements: []
+  - definition_id: "rsg-components:0e52f6b9d02515c59bb4fdeec2762fdbe701080c82986fc4dfbefcb1e2389817:default"
+    name: Markdown
+    export_ids: []
+    package_name: rsg-components
+    source_path: Markdown
+    dependencies: []
+    props: []
+    html_elements: []
+  - definition_id: "rsg-components:dcd1d5223f73b3a965c07e3ff5dbee3eedcfedb806686a05b9b3868a2c3d6d50:default"
+    name: Name
+    export_ids: []
+    package_name: rsg-components
+    source_path: Name
+    dependencies: []
+    props: []
+    html_elements: []
+  - definition_id: "rsg-components:16d1c9050a0b32e83764a81d801a880773abedfd7f8b0b08a1cd87ca0e404f12:default"
+    name: Table
+    export_ids: []
+    package_name: rsg-components
+    source_path: Table
+    dependencies: []
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:b0f5a7057b624387246abad4a8b5fe01f895e212441dfb6832b86b7fbb1ffa33:AnotherDialog"
+    name: AnotherDialog
+    export_ids:
+      - "typescript-examples:src/indirect-deps/indirect-deps:AnotherDialog"
+    package_name: typescript-examples
+    source_path: src/indirect-deps/indirect-deps.tsx
+    dependencies:
+      - from: "typescript-examples:b0f5a7057b624387246abad4a8b5fe01f895e212441dfb6832b86b7fbb1ffa33:AnotherDialog"
+        to: "typescript-examples:750a7d68d8ef1fb58d722c3a74cc514249cb00a1109f7fc7063bd5d87d454030:Input"
+        references:
+          - trace:
+              - "typescript-examples:750a7d68d8ef1fb58d722c3a74cc514249cb00a1109f7fc7063bd5d87d454030:Input"
+            usages: []
+      - from: "typescript-examples:b0f5a7057b624387246abad4a8b5fe01f895e212441dfb6832b86b7fbb1ffa33:AnotherDialog"
+        to: "typescript-examples:b0f5a7057b624387246abad4a8b5fe01f895e212441dfb6832b86b7fbb1ffa33:ExportedFooter"
+        references:
+          - trace: []
+            usages:
+              - start:
+                  line: 36
+                  column: 9
+                end:
+                  line: 36
+                  column: 26
+                props: []
+    props: []
+    html_elements:
+      - div
+      - h1
+  - definition_id: "typescript-examples:b0f5a7057b624387246abad4a8b5fe01f895e212441dfb6832b86b7fbb1ffa33:Dialog"
+    name: Dialog
+    export_ids:
+      - "typescript-examples:src/indirect-deps/indirect-deps:Dialog"
+    package_name: typescript-examples
+    source_path: src/indirect-deps/indirect-deps.tsx
+    dependencies:
+      - from: "typescript-examples:b0f5a7057b624387246abad4a8b5fe01f895e212441dfb6832b86b7fbb1ffa33:Dialog"
+        to: "typescript-examples:750a7d68d8ef1fb58d722c3a74cc514249cb00a1109f7fc7063bd5d87d454030:Button"
+        references:
+          - trace:
+              - "typescript-examples:750a7d68d8ef1fb58d722c3a74cc514249cb00a1109f7fc7063bd5d87d454030:Button"
+            usages:
+              - start:
+                  line: 11
+                  column: 9
+                end:
+                  line: 11
+                  column: 18
+                props: []
+      - from: "typescript-examples:b0f5a7057b624387246abad4a8b5fe01f895e212441dfb6832b86b7fbb1ffa33:Dialog"
+        to: "typescript-examples:750a7d68d8ef1fb58d722c3a74cc514249cb00a1109f7fc7063bd5d87d454030:Input"
+        references:
+          - trace:
+              - "typescript-examples:750a7d68d8ef1fb58d722c3a74cc514249cb00a1109f7fc7063bd5d87d454030:Input"
+            usages: []
+      - from: "typescript-examples:b0f5a7057b624387246abad4a8b5fe01f895e212441dfb6832b86b7fbb1ffa33:Dialog"
+        to: "typescript-examples:b0f5a7057b624387246abad4a8b5fe01f895e212441dfb6832b86b7fbb1ffa33:ExportedFooter"
+        references:
+          - trace: []
+            usages:
+              - start:
+                  line: 26
+                  column: 9
+                end:
+                  line: 26
+                  column: 26
+                props: []
+    props: []
+    html_elements:
+      - div
+      - h1
+  - definition_id: "typescript-examples:b0f5a7057b624387246abad4a8b5fe01f895e212441dfb6832b86b7fbb1ffa33:ExportedFooter"
+    name: ExportedFooter
+    export_ids:
+      - "typescript-examples:src/indirect-deps/indirect-deps:ExportedFooter"
+    package_name: typescript-examples
+    source_path: src/indirect-deps/indirect-deps.tsx
+    dependencies:
+      - from: "typescript-examples:b0f5a7057b624387246abad4a8b5fe01f895e212441dfb6832b86b7fbb1ffa33:ExportedFooter"
+        to: "typescript-examples:750a7d68d8ef1fb58d722c3a74cc514249cb00a1109f7fc7063bd5d87d454030:Button"
+        references:
+          - trace:
+              - "typescript-examples:750a7d68d8ef1fb58d722c3a74cc514249cb00a1109f7fc7063bd5d87d454030:Button"
+            usages:
+              - start:
+                  line: 5
+                  column: 9
+                end:
+                  line: 5
+                  column: 18
+                props: []
+    props: []
+    html_elements:
+      - div
+  - definition_id: "typescript-examples:e18f8ed7dac11a940551a95199e7db5c6b7bed444914d39555708435e498dd37:MethodsRenderer"
+    name: MethodsRenderer
+    export_ids:
+      - "typescript-examples:src/indirect-deps/rsg:MethodsRenderer"
+    package_name: typescript-examples
+    source_path: src/indirect-deps/rsg.tsx
+    dependencies:
+      - from: "typescript-examples:e18f8ed7dac11a940551a95199e7db5c6b7bed444914d39555708435e498dd37:MethodsRenderer"
+        to: "rsg-components:0e52f6b9d02515c59bb4fdeec2762fdbe701080c82986fc4dfbefcb1e2389817:default"
+        references:
+          - trace:
+              - "rsg-components:0e52f6b9d02515c59bb4fdeec2762fdbe701080c82986fc4dfbefcb1e2389817:default"
+            usages:
+              - start:
+                  line: 25
+                  column: 33
+                end:
+                  line: 25
+                  column: 64
+                props:
+                  - name: text
+                    value: "Identifier { value: \"description\" }"
+      - from: "typescript-examples:e18f8ed7dac11a940551a95199e7db5c6b7bed444914d39555708435e498dd37:MethodsRenderer"
+        to: "rsg-components:16d1c9050a0b32e83764a81d801a880773abedfd7f8b0b08a1cd87ca0e404f12:default"
+        references:
+          - trace:
+              - "rsg-components:16d1c9050a0b32e83764a81d801a880773abedfd7f8b0b08a1cd87ca0e404f12:default"
+            usages:
+              - start:
+                  line: 34
+                  column: 5
+                end:
+                  line: 34
+                  column: 32
+                props:
+                  - name: columns
+                    value: "Identifier { value: \"columns\" }"
+      - from: "typescript-examples:e18f8ed7dac11a940551a95199e7db5c6b7bed444914d39555708435e498dd37:MethodsRenderer"
+        to: "rsg-components:481da3a767b1d5439ffb4b0e25b6958533c113d5492236705f4bdd4296b500e4:default"
+        references:
+          - trace:
+              - "rsg-components:481da3a767b1d5439ffb4b0e25b6958533c113d5492236705f4bdd4296b500e4:default"
+            usages:
+              - start:
+                  line: 26
+                  column: 29
+                end:
+                  line: 26
+                  column: 68
+                props:
+                  - name: ""
+                    value: "Spread { value: Identifier { value: \"returns\" } }"
+                  - name: block
+                    value: "Bool { value: true }"
+                  - name: returns
+                    value: "Bool { value: true }"
+      - from: "typescript-examples:e18f8ed7dac11a940551a95199e7db5c6b7bed444914d39555708435e498dd37:MethodsRenderer"
+        to: "rsg-components:7f816072c1c6a23b88dfde54c5aa48559a81803890d297d21f17943c4f2b643d:default"
+        references:
+          - trace:
+              - "rsg-components:7f816072c1c6a23b88dfde54c5aa48559a81803890d297d21f17943c4f2b643d:default"
+            usages:
+              - start:
+                  line: 19
+                  column: 38
+                end:
+                  line: 19
+                  column: 65
+                props:
+                  - name: args
+                    value: "Identifier { value: \"params\" }"
+      - from: "typescript-examples:e18f8ed7dac11a940551a95199e7db5c6b7bed444914d39555708435e498dd37:MethodsRenderer"
+        to: "rsg-components:9b79a0b1c67fb5e7f628bd057399de28a517b0be1c1a108fd04618c86a89f9b3:default"
+        references:
+          - trace:
+              - "rsg-components:9b79a0b1c67fb5e7f628bd057399de28a517b0be1c1a108fd04618c86a89f9b3:default"
+            usages:
+              - start:
+                  line: 27
+                  column: 17
+                end:
+                  line: 27
+                  column: 36
+                props:
+                  - name: ""
+                    value: "Spread { value: Identifier { value: \"tags\" } }"
+      - from: "typescript-examples:e18f8ed7dac11a940551a95199e7db5c6b7bed444914d39555708435e498dd37:MethodsRenderer"
+        to: "rsg-components:dcd1d5223f73b3a965c07e3ff5dbee3eedcfedb806686a05b9b3868a2c3d6d50:default"
+        references:
+          - trace:
+              - "rsg-components:dcd1d5223f73b3a965c07e3ff5dbee3eedcfedb806686a05b9b3868a2c3d6d50:default"
+            usages:
+              - start:
+                  line: 14
+                  column: 13
+                end:
+                  line: 14
+                  column: 70
+                props:
+                  - name: children
+                    value: JSXElement
+                  - name: deprecated
+                    value: Expression
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:750a7d68d8ef1fb58d722c3a74cc514249cb00a1109f7fc7063bd5d87d454030:Button"
+    name: Button
+    export_ids:
+      - "typescript-examples:src/indirect-deps/used-indirectly:Button"
+    package_name: typescript-examples
+    source_path: src/indirect-deps/used-indirectly.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - button
+  - definition_id: "typescript-examples:750a7d68d8ef1fb58d722c3a74cc514249cb00a1109f7fc7063bd5d87d454030:Input"
+    name: Input
+    export_ids:
+      - "typescript-examples:src/indirect-deps/used-indirectly:Input"
+    package_name: typescript-examples
+    source_path: src/indirect-deps/used-indirectly.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - input
+

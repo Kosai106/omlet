@@ -1,0 +1,14 @@
+.demoIndicator {
+    padding: calc(2px - var(--border-width)) calc(var(--spacing-xs) - var(--border-width));
+    margin-left: var(--spacing-xs);
+    opacity: 0.8;
+    border-radius: 12px;
+    border: solid var(--border-width) var(--label-selected-color);
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--label-selected-color);
+}
+
+.withTallHeader {
+    --header-height: var(--tall-header-height);
+}

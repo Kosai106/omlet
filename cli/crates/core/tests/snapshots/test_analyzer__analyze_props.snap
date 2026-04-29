@@ -1,0 +1,404 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&component_results"
+---
+num_of_components: 13
+components:
+  - definition_id: "props:4536b08c4f8352629c7efe3f0a72019dee9645f01ce800fbb8fec8580bbba25e:default"
+    name: DefaultExportComponent
+    export_ids:
+      - "props:src/defaultExport:default"
+    package_name: props
+    source_path: src/defaultExport.tsx
+    dependencies: []
+    props:
+      - name: prop
+        default_value: NONE
+    html_elements:
+      - span
+  - definition_id: "props:d4ed3e0b5c1ea420770fc778f6cf89209fc1e196e16dd62d66afa8f2db271551:default"
+    name: defaultExportArrow
+    export_ids:
+      - "props:src/defaultExportArrow:default"
+    package_name: props
+    source_path: src/defaultExportArrow.tsx
+    dependencies: []
+    props:
+      - name: prop
+        default_value: NONE
+    html_elements:
+      - span
+  - definition_id: "props:165d96dfac01c77ed3a146c631b75a21ca343b05e62db5d8dfe32189b76a425c:ComponentWithDefaultProps"
+    name: ComponentWithDefaultProps
+    export_ids:
+      - "props:src/defaultProp:ComponentWithDefaultProps"
+      - "props:src/reExport:ReExportedComponent"
+    package_name: props
+    source_path: src/defaultProp.tsx
+    dependencies: []
+    props:
+      - name: arrowProp
+        default_value: Function
+      - name: boolean
+        default_value: "Bool { value: true }"
+      - name: jsxFragment
+        default_value: JSXElement
+      - name: myArray
+        default_value: "Array { values: [Number { value: 1.0 }, String { value: \"adsad\" }, JSXElement, Spread { value: Identifier { value: \"MY_DEFAULT_ARRAY\" } }] }"
+      - name: myArrayField
+        default_value: "Member { value: Identifier { value: \"MY_DEFAULT_ARRAY\" }, property: Number { value: 0.0 } }"
+      - name: myComputedField
+        default_value: "Member { value: Identifier { value: \"MY_DEFAULT_OBJECT\" }, property: String { value: \"foo\" } }"
+      - name: myEnum
+        default_value: "Member { value: Identifier { value: \"MyEnum\" }, property: String { value: \"Value2\" } }"
+      - name: myExpression
+        default_value: Expression
+      - name: myField
+        default_value: "Member { value: Identifier { value: \"MY_DEFAULT_OBJECT\" }, property: String { value: \"foo\" } }"
+      - name: myKeyValuePattern
+        default_value: "Object { props: [KeyValue { key: \"foo\", value: String { value: \"\" } }, KeyValue { key: \"bar\", value: Number { value: 1.0 } }] }"
+      - name: myObject
+        default_value: "Object { props: [KeyValue { key: \"key\", value: String { value: \"key\" } }, KeyValue { key: \"string\", value: String { value: \"string\" } }, Shorthand { key: \"shorthand\" }, KeyValue { key: \"getter\", value: Getter }, KeyValue { key: \"setter\", value: Setter }, KeyValue { key: \"myFunction\", value: Function }, Spread { value: Identifier { value: \"MY_DEFAULT_OBJECT\" } }] }"
+      - name: myOptionalChain
+        default_value: "Member { value: Identifier { value: \"MY_DEFAULT_OBJECT\" }, property: String { value: \"foo\" } }"
+      - name: mySuperValue
+        default_value: "Member { value: Super, property: String { value: \"foo\" } }"
+      - name: myTemplateLiteral
+        default_value: TemplateLiteral
+      - name: myThisValue
+        default_value: "Member { value: This, property: String { value: \"foo\" } }"
+      - name: nullable
+        default_value: "Null"
+      - name: number
+        default_value: "Number { value: 1.0 }"
+      - name: reactNode
+        default_value: JSXElement
+      - name: regex
+        default_value: "Regex { value: \"dasdsa\", flags: \"i\" }"
+      - name: string
+        default_value: "String { value: \"string\" }"
+      - name: undefinedValue
+        default_value: "Identifier { value: \"undefined\" }"
+      - name: variable
+        default_value: "Identifier { value: \"DEFAULT_VARIABLE\" }"
+    html_elements:
+      - button
+      - span
+  - definition_id: "props:c23854b2d4066c5623c91388c0dc70e5be9cd148d0e5dde1380953103363babb:Button"
+    name: Button
+    export_ids:
+      - "props:src/functionWithDestruct:Button"
+    package_name: props
+    source_path: src/functionWithDestruct.jsx
+    dependencies: []
+    props:
+      - name: onClick
+        default_value: NONE
+      - name: position
+        default_value: NONE
+      - name: text
+        default_value: NONE
+      - name: type
+        default_value: "String { value: \"primary\" }"
+    html_elements:
+      - button
+  - definition_id: "props:c23854b2d4066c5623c91388c0dc70e5be9cd148d0e5dde1380953103363babb:ButtonWithArrowFunction"
+    name: ButtonWithArrowFunction
+    export_ids:
+      - "props:src/functionWithDestruct:ButtonWithArrowFunction"
+    package_name: props
+    source_path: src/functionWithDestruct.jsx
+    dependencies: []
+    props:
+      - name: onClick
+        default_value: NONE
+      - name: position
+        default_value: NONE
+      - name: text
+        default_value: NONE
+      - name: type
+        default_value: "String { value: \"primary\" }"
+    html_elements:
+      - button
+  - definition_id: "props:c23854b2d4066c5623c91388c0dc70e5be9cd148d0e5dde1380953103363babb:ButtonWithFunctionExpression"
+    name: ButtonWithFunctionExpression
+    export_ids:
+      - "props:src/functionWithDestruct:ButtonWithFunctionExpression"
+    package_name: props
+    source_path: src/functionWithDestruct.jsx
+    dependencies: []
+    props:
+      - name: onClick
+        default_value: NONE
+      - name: position
+        default_value: NONE
+      - name: text
+        default_value: NONE
+      - name: type
+        default_value: "String { value: \"primary\" }"
+    html_elements:
+      - button
+  - definition_id: "props:05604564ac2198cd4223d15b600f318a2e1afa116a9041686ae168e89105e8db:ComponentWithRest"
+    name: ComponentWithRest
+    export_ids:
+      - "props:src/functionWithParamsInBody:ComponentWithRest"
+    package_name: props
+    source_path: src/functionWithParamsInBody.jsx
+    dependencies: []
+    props:
+      - name: onClick
+        default_value: NONE
+      - name: position
+        default_value: NONE
+      - name: text
+        default_value: NONE
+      - name: type
+        default_value: NONE
+    html_elements:
+      - button
+  - definition_id: "props:05604564ac2198cd4223d15b600f318a2e1afa116a9041686ae168e89105e8db:DestructInBody"
+    name: DestructInBody
+    export_ids:
+      - "props:src/functionWithParamsInBody:DestructInBody"
+    package_name: props
+    source_path: src/functionWithParamsInBody.jsx
+    dependencies: []
+    props:
+      - name: onClick
+        default_value: NONE
+      - name: position
+        default_value: NONE
+      - name: text
+        default_value: NONE
+      - name: type
+        default_value: "String { value: \"primary\" }"
+    html_elements:
+      - button
+  - definition_id: "props:05604564ac2198cd4223d15b600f318a2e1afa116a9041686ae168e89105e8db:MemberInBody"
+    name: MemberInBody
+    export_ids:
+      - "props:src/functionWithParamsInBody:MemberInBody"
+    package_name: props
+    source_path: src/functionWithParamsInBody.jsx
+    dependencies: []
+    props:
+      - name: onClick
+        default_value: NONE
+      - name: text
+        default_value: NONE
+      - name: type
+        default_value: NONE
+    html_elements:
+      - button
+  - definition_id: "props:05604564ac2198cd4223d15b600f318a2e1afa116a9041686ae168e89105e8db:MultipleDestruct"
+    name: MultipleDestruct
+    export_ids:
+      - "props:src/functionWithParamsInBody:MultipleDestruct"
+    package_name: props
+    source_path: src/functionWithParamsInBody.jsx
+    dependencies: []
+    props:
+      - name: onClick
+        default_value: Function
+      - name: text
+        default_value: NONE
+      - name: type
+        default_value: "String { value: \"primary\" }"
+    html_elements:
+      - button
+  - definition_id: "props:0756023d354d569f2e04e76b39dc7a535c7a3bd071c237ee0fadf3f0ebea3978:ParentComponent"
+    name: ParentComponent
+    export_ids:
+      - "props:src/subcomponent:ParentComponent"
+    package_name: props
+    source_path: src/subcomponent.tsx
+    dependencies:
+      - from: "props:0756023d354d569f2e04e76b39dc7a535c7a3bd071c237ee0fadf3f0ebea3978:ParentComponent"
+        to: "props:4536b08c4f8352629c7efe3f0a72019dee9645f01ce800fbb8fec8580bbba25e:default"
+        references:
+          - trace:
+              - "props:4536b08c4f8352629c7efe3f0a72019dee9645f01ce800fbb8fec8580bbba25e:default"
+            usages:
+              - start:
+                  line: 11
+                  column: 13
+                end:
+                  line: 11
+                  column: 64
+                props:
+                  - name: prop
+                    value: "String { value: \"indirect-usage\" }"
+    props: []
+    html_elements: []
+  - definition_id: "props:ba066cad0a50c562b8d6c5b3e059892da93b459fa83843afc6a5734d530d83fe:IndirectParent"
+    name: IndirectParent
+    export_ids:
+      - "props:src/usage:IndirectParent"
+    package_name: props
+    source_path: src/usage.tsx
+    dependencies:
+      - from: "props:ba066cad0a50c562b8d6c5b3e059892da93b459fa83843afc6a5734d530d83fe:IndirectParent"
+        to: "props:4536b08c4f8352629c7efe3f0a72019dee9645f01ce800fbb8fec8580bbba25e:default"
+        references:
+          - trace:
+              - "props:4536b08c4f8352629c7efe3f0a72019dee9645f01ce800fbb8fec8580bbba25e:default"
+            usages:
+              - start:
+                  line: 69
+                  column: 12
+                end:
+                  line: 69
+                  column: 60
+                props:
+                  - name: prop
+                    value: "String { value: \"indirect-usage\" }"
+              - start:
+                  line: 75
+                  column: 13
+                end:
+                  line: 75
+                  column: 59
+                props:
+                  - name: prop
+                    value: "String { value: \"direct-usage\" }"
+    props: []
+    html_elements: []
+  - definition_id: "props:ba066cad0a50c562b8d6c5b3e059892da93b459fa83843afc6a5734d530d83fe:ParentComponent"
+    name: ParentComponent
+    export_ids:
+      - "props:src/usage:ParentComponent"
+    package_name: props
+    source_path: src/usage.tsx
+    dependencies:
+      - from: "props:ba066cad0a50c562b8d6c5b3e059892da93b459fa83843afc6a5734d530d83fe:ParentComponent"
+        to: "props:165d96dfac01c77ed3a146c631b75a21ca343b05e62db5d8dfe32189b76a425c:ComponentWithDefaultProps"
+        references:
+          - trace:
+              - "props:165d96dfac01c77ed3a146c631b75a21ca343b05e62db5d8dfe32189b76a425c:ComponentWithDefaultProps"
+            usages:
+              - start:
+                  line: 21
+                  column: 13
+                end:
+                  line: 57
+                  column: 41
+                props:
+                  - name: arrowProp
+                    value: Function
+                  - name: boolean
+                    value: "Bool { value: false }"
+                  - name: children
+                    value: JSXElement
+                  - name: jsxFragment
+                    value: JSXElement
+                  - name: myArray
+                    value: "Array { values: [] }"
+                  - name: myArrayField
+                    value: "Member { value: Identifier { value: \"MY_DEFAULT_ARRAY\" }, property: Number { value: 1.0 } }"
+                  - name: myComputedField
+                    value: "Member { value: Identifier { value: \"MY_DEFAULT_OBJECT\" }, property: String { value: \"foo\" } }"
+                  - name: myEnum
+                    value: "Member { value: Identifier { value: \"MyEnum\" }, property: String { value: \"Value2\" } }"
+                  - name: myExpression
+                    value: Expression
+                  - name: myField
+                    value: "Member { value: Identifier { value: \"MY_DEFAULT_OBJECT\" }, property: String { value: \"foo\" } }"
+                  - name: myObject
+                    value: "Object { props: [KeyValue { key: \"key\", value: String { value: \"key\" } }, KeyValue { key: \"string\", value: String { value: \"string\" } }, Shorthand { key: \"shorthand\" }, KeyValue { key: \"getter\", value: Getter }, KeyValue { key: \"setter\", value: Setter }, KeyValue { key: \"myFunction\", value: Function }, Spread { value: Identifier { value: \"MY_DEFAULT_OBJECT\" } }] }"
+                  - name: myOptionalChain
+                    value: "Member { value: Identifier { value: \"MY_DEFAULT_OBJECT\" }, property: String { value: \"foo\" } }"
+                  - name: mySuperValue
+                    value: "Member { value: Super, property: String { value: \"foo\" } }"
+                  - name: myTemplateLiteral
+                    value: TemplateLiteral
+                  - name: myThisValue
+                    value: "Member { value: This, property: String { value: \"foo\" } }"
+                  - name: nullable
+                    value: "Null"
+                  - name: number
+                    value: "Number { value: 1.0 }"
+                  - name: reactNode
+                    value: JSXElement
+                  - name: regex
+                    value: "Regex { value: \"foo\", flags: \"i\" }"
+                  - name: string
+                    value: "String { value: \"foo\" }"
+                  - name: undefinedValue
+                    value: "Identifier { value: \"undefined\" }"
+                  - name: variable
+                    value: "Identifier { value: \"bar\" }"
+              - start:
+                  line: 58
+                  column: 13
+                end:
+                  line: 58
+                  column: 63
+                props:
+                  - name: boolean
+                    value: "Bool { value: true }"
+                  - name: string
+                    value: "String { value: \"bar\" }"
+              - start:
+                  line: 59
+                  column: 13
+                end:
+                  line: 59
+                  column: 67
+                props:
+                  - name: ""
+                    value: "Spread { value: Object { props: [KeyValue { key: \"string\", value: String { value: \"hello\" } }] } }"
+              - start:
+                  line: 60
+                  column: 13
+                end:
+                  line: 60
+                  column: 53
+                props:
+                  - name: ""
+                    value: "Spread { value: Identifier { value: \"props\" } }"
+          - trace:
+              - "props:f67332c59a9230ea61f05fc0899e90a7c87aa237c3a898dc9fa17d6132f33298:ReExportedComponent"
+              - "props:165d96dfac01c77ed3a146c631b75a21ca343b05e62db5d8dfe32189b76a425c:ComponentWithDefaultProps"
+            usages:
+              - start:
+                  line: 61
+                  column: 13
+                end:
+                  line: 61
+                  column: 55
+                props:
+                  - name: string
+                    value: "String { value: \"re-export\" }"
+      - from: "props:ba066cad0a50c562b8d6c5b3e059892da93b459fa83843afc6a5734d530d83fe:ParentComponent"
+        to: "props:4536b08c4f8352629c7efe3f0a72019dee9645f01ce800fbb8fec8580bbba25e:default"
+        references:
+          - trace:
+              - "props:4536b08c4f8352629c7efe3f0a72019dee9645f01ce800fbb8fec8580bbba25e:default"
+            usages:
+              - start:
+                  line: 62
+                  column: 13
+                end:
+                  line: 62
+                  column: 50
+                props:
+                  - name: prop
+                    value: "String { value: \"foo\" }"
+      - from: "props:ba066cad0a50c562b8d6c5b3e059892da93b459fa83843afc6a5734d530d83fe:ParentComponent"
+        to: "props:d4ed3e0b5c1ea420770fc778f6cf89209fc1e196e16dd62d66afa8f2db271551:default"
+        references:
+          - trace:
+              - "props:d4ed3e0b5c1ea420770fc778f6cf89209fc1e196e16dd62d66afa8f2db271551:default"
+            usages:
+              - start:
+                  line: 63
+                  column: 13
+                end:
+                  line: 63
+                  column: 57
+                props:
+                  - name: prop
+                    value: "String { value: \"arrow\" }"
+    props: []
+    html_elements:
+      - span

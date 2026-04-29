@@ -1,0 +1,1252 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`\`parse\` command should match the snapshot 1`] = `
+[
+  {
+    "body": [
+      {
+        "asserts": null,
+        "source": {
+          "raw": ""./components/newNavigation"",
+          "span": {
+            "ctxt": 0,
+            "end": 80,
+            "start": 52,
+          },
+          "type": "StringLiteral",
+          "value": "./components/newNavigation",
+        },
+        "span": {
+          "ctxt": 0,
+          "end": 81,
+          "start": 1,
+        },
+        "specifiers": [
+          {
+            "imported": null,
+            "isTypeOnly": false,
+            "local": {
+              "optional": false,
+              "span": {
+                "ctxt": 1,
+                "end": 19,
+                "start": 10,
+              },
+              "type": "Identifier",
+              "value": "HeaderNew",
+            },
+            "span": {
+              "ctxt": 0,
+              "end": 19,
+              "start": 10,
+            },
+            "type": "ImportSpecifier",
+          },
+          {
+            "imported": null,
+            "isTypeOnly": false,
+            "local": {
+              "optional": false,
+              "span": {
+                "ctxt": 1,
+                "end": 32,
+                "start": 21,
+              },
+              "type": "Identifier",
+              "value": "UserMenuNew",
+            },
+            "span": {
+              "ctxt": 0,
+              "end": 32,
+              "start": 21,
+            },
+            "type": "ImportSpecifier",
+          },
+          {
+            "imported": null,
+            "isTypeOnly": false,
+            "local": {
+              "optional": false,
+              "span": {
+                "ctxt": 1,
+                "end": 44,
+                "start": 34,
+              },
+              "type": "Identifier",
+              "value": "BackButton",
+            },
+            "span": {
+              "ctxt": 0,
+              "end": 44,
+              "start": 34,
+            },
+            "type": "ImportSpecifier",
+          },
+        ],
+        "type": "ImportDeclaration",
+        "typeOnly": false,
+      },
+      {
+        "decl": {
+          "async": false,
+          "body": {
+            "span": {
+              "ctxt": 0,
+              "end": 255,
+              "start": 118,
+            },
+            "stmts": [
+              {
+                "argument": {
+                  "expression": {
+                    "children": [
+                      {
+                        "raw": "
+
+            ",
+                        "span": {
+                          "ctxt": 0,
+                          "end": 165,
+                          "start": 152,
+                        },
+                        "type": "JSXText",
+                        "value": "
+
+            ",
+                      },
+                      {
+                        "children": [],
+                        "closing": null,
+                        "opening": {
+                          "attributes": [],
+                          "name": {
+                            "optional": false,
+                            "span": {
+                              "ctxt": 1,
+                              "end": 176,
+                              "start": 166,
+                            },
+                            "type": "Identifier",
+                            "value": "BackButton",
+                          },
+                          "selfClosing": true,
+                          "span": {
+                            "ctxt": 0,
+                            "end": 178,
+                            "start": 165,
+                          },
+                          "type": "JSXOpeningElement",
+                          "typeArguments": null,
+                        },
+                        "span": {
+                          "ctxt": 0,
+                          "end": 178,
+                          "start": 165,
+                        },
+                        "type": "JSXElement",
+                      },
+                      {
+                        "raw": "
+
+            ",
+                        "span": {
+                          "ctxt": 0,
+                          "end": 191,
+                          "start": 178,
+                        },
+                        "type": "JSXText",
+                        "value": "
+
+            ",
+                      },
+                      {
+                        "children": [],
+                        "closing": null,
+                        "opening": {
+                          "attributes": [],
+                          "name": {
+                            "optional": false,
+                            "span": {
+                              "ctxt": 1,
+                              "end": 203,
+                              "start": 192,
+                            },
+                            "type": "Identifier",
+                            "value": "UserMenuNew",
+                          },
+                          "selfClosing": true,
+                          "span": {
+                            "ctxt": 0,
+                            "end": 205,
+                            "start": 191,
+                          },
+                          "type": "JSXOpeningElement",
+                          "typeArguments": null,
+                        },
+                        "span": {
+                          "ctxt": 0,
+                          "end": 205,
+                          "start": 191,
+                        },
+                        "type": "JSXElement",
+                      },
+                      {
+                        "raw": "
+
+            Content
+
+        ",
+                        "span": {
+                          "ctxt": 0,
+                          "end": 234,
+                          "start": 205,
+                        },
+                        "type": "JSXText",
+                        "value": "
+
+            Content
+
+        ",
+                      },
+                    ],
+                    "closing": {
+                      "name": {
+                        "optional": false,
+                        "span": {
+                          "ctxt": 1,
+                          "end": 245,
+                          "start": 236,
+                        },
+                        "type": "Identifier",
+                        "value": "HeaderNew",
+                      },
+                      "span": {
+                        "ctxt": 0,
+                        "end": 246,
+                        "start": 234,
+                      },
+                      "type": "JSXClosingElement",
+                    },
+                    "opening": {
+                      "attributes": [],
+                      "name": {
+                        "optional": false,
+                        "span": {
+                          "ctxt": 1,
+                          "end": 151,
+                          "start": 142,
+                        },
+                        "type": "Identifier",
+                        "value": "HeaderNew",
+                      },
+                      "selfClosing": false,
+                      "span": {
+                        "ctxt": 0,
+                        "end": 152,
+                        "start": 141,
+                      },
+                      "type": "JSXOpeningElement",
+                      "typeArguments": null,
+                    },
+                    "span": {
+                      "ctxt": 0,
+                      "end": 246,
+                      "start": 141,
+                    },
+                    "type": "JSXElement",
+                  },
+                  "span": {
+                    "ctxt": 0,
+                    "end": 252,
+                    "start": 131,
+                  },
+                  "type": "ParenthesisExpression",
+                },
+                "span": {
+                  "ctxt": 0,
+                  "end": 253,
+                  "start": 124,
+                },
+                "type": "ReturnStatement",
+              },
+            ],
+            "type": "BlockStatement",
+          },
+          "decorators": [],
+          "generator": false,
+          "identifier": {
+            "optional": false,
+            "span": {
+              "ctxt": 1,
+              "end": 115,
+              "start": 107,
+            },
+            "type": "Identifier",
+            "value": "MainPage",
+          },
+          "params": [],
+          "returnType": null,
+          "span": {
+            "ctxt": 0,
+            "end": 255,
+            "start": 98,
+          },
+          "type": "FunctionExpression",
+          "typeParameters": null,
+        },
+        "span": {
+          "ctxt": 0,
+          "end": 255,
+          "start": 83,
+        },
+        "type": "ExportDefaultDeclaration",
+      },
+    ],
+    "created_at": null,
+    "declarations": [
+      {
+        "definition": "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('BackButton' type=dynamic), context: #1 }, source: ModuleId { hash: 10004515936686217676, path: "src/simple/components/newNavigation", pkg_name: "typescript-examples", mtype: Local } }>",
+        "end": {
+          "column": 44,
+          "line": 1,
+        },
+        "inferred_type": {
+          "TypeOf": {
+            "is_local": false,
+            "symbol": {
+              "source": {
+                "hash": "10004515936686217676",
+                "mtype": "local",
+                "package_name": "typescript-examples",
+                "path": "src/simple/components/newNavigation",
+              },
+              "symbol": "BackButton#1",
+            },
+          },
+        },
+        "source": {
+          "hash": "11931063239530120441",
+          "mtype": "local",
+          "package_name": "typescript-examples",
+          "path": "src/simple/main.tsx",
+        },
+        "start": {
+          "column": 34,
+          "line": 1,
+        },
+        "symbol": "BackButton#1",
+      },
+      {
+        "definition": "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('HeaderNew' type=dynamic), context: #1 }, source: ModuleId { hash: 10004515936686217676, path: "src/simple/components/newNavigation", pkg_name: "typescript-examples", mtype: Local } }>",
+        "end": {
+          "column": 19,
+          "line": 1,
+        },
+        "inferred_type": {
+          "TypeOf": {
+            "is_local": false,
+            "symbol": {
+              "source": {
+                "hash": "10004515936686217676",
+                "mtype": "local",
+                "package_name": "typescript-examples",
+                "path": "src/simple/components/newNavigation",
+              },
+              "symbol": "HeaderNew#1",
+            },
+          },
+        },
+        "source": {
+          "hash": "11931063239530120441",
+          "mtype": "local",
+          "package_name": "typescript-examples",
+          "path": "src/simple/main.tsx",
+        },
+        "start": {
+          "column": 10,
+          "line": 1,
+        },
+        "symbol": "HeaderNew#1",
+      },
+      {
+        "definition": "<expression>",
+        "end": {
+          "column": 2,
+          "line": 11,
+        },
+        "inferred_type": {
+          "Function": [
+            "JSX",
+          ],
+        },
+        "source": {
+          "hash": "11931063239530120441",
+          "mtype": "local",
+          "package_name": "typescript-examples",
+          "path": "src/simple/main.tsx",
+        },
+        "start": {
+          "column": 16,
+          "line": 3,
+        },
+        "symbol": "MainPage#1",
+      },
+      {
+        "definition": "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('UserMenuNew' type=dynamic), context: #1 }, source: ModuleId { hash: 10004515936686217676, path: "src/simple/components/newNavigation", pkg_name: "typescript-examples", mtype: Local } }>",
+        "end": {
+          "column": 32,
+          "line": 1,
+        },
+        "inferred_type": {
+          "TypeOf": {
+            "is_local": false,
+            "symbol": {
+              "source": {
+                "hash": "10004515936686217676",
+                "mtype": "local",
+                "package_name": "typescript-examples",
+                "path": "src/simple/components/newNavigation",
+              },
+              "symbol": "UserMenuNew#1",
+            },
+          },
+        },
+        "source": {
+          "hash": "11931063239530120441",
+          "mtype": "local",
+          "package_name": "typescript-examples",
+          "path": "src/simple/main.tsx",
+        },
+        "start": {
+          "column": 21,
+          "line": 1,
+        },
+        "symbol": "UserMenuNew#1",
+      },
+    ],
+    "exports": [
+      {
+        "exported_name": "default",
+        "source": {
+          "Internal": "MainPage#1",
+        },
+      },
+    ],
+    "id": {
+      "hash": "11931063239530120441",
+      "mtype": "local",
+      "package_name": "typescript-examples",
+      "path": "src/simple/main.tsx",
+    },
+    "scopes": [
+      {
+        "children": [
+          "MainPage#1",
+          "MainPage#1",
+        ],
+        "jsx_references": [
+          "BackButton#1",
+          "HeaderNew#1",
+          "UserMenuNew#1",
+        ],
+        "owner": "__global#0",
+        "parent": null,
+        "references": [
+          "BackButton#1",
+          "HeaderNew#1",
+          "MainPage#1",
+          "UserMenuNew#1",
+        ],
+      },
+      {
+        "children": [],
+        "jsx_references": [
+          "BackButton#1",
+          "HeaderNew#1",
+          "UserMenuNew#1",
+        ],
+        "owner": "MainPage#1",
+        "parent": "__global#0",
+        "references": [
+          "BackButton#1",
+          "HeaderNew#1",
+          "UserMenuNew#1",
+        ],
+      },
+      {
+        "children": [],
+        "jsx_references": [
+          "BackButton#1",
+          "HeaderNew#1",
+          "UserMenuNew#1",
+        ],
+        "owner": "MainPage#1",
+        "parent": "__global#0",
+        "references": [
+          "BackButton#1",
+          "HeaderNew#1",
+          "UserMenuNew#1",
+        ],
+      },
+    ],
+    "source_path": "src/simple/main.tsx",
+    "updated_at": null,
+  },
+  {
+    "body": [
+      {
+        "asserts": null,
+        "source": {
+          "raw": ""@acme/components"",
+          "span": {
+            "ctxt": 0,
+            "end": 47,
+            "start": 29,
+          },
+          "type": "StringLiteral",
+          "value": "@acme/components",
+        },
+        "span": {
+          "ctxt": 0,
+          "end": 48,
+          "start": 1,
+        },
+        "specifiers": [
+          {
+            "imported": null,
+            "isTypeOnly": false,
+            "local": {
+              "optional": false,
+              "span": {
+                "ctxt": 1,
+                "end": 21,
+                "start": 10,
+              },
+              "type": "Identifier",
+              "value": "AlertButton",
+            },
+            "span": {
+              "ctxt": 0,
+              "end": 21,
+              "start": 10,
+            },
+            "type": "ImportSpecifier",
+          },
+        ],
+        "type": "ImportDeclaration",
+        "typeOnly": false,
+      },
+      {
+        "asserts": null,
+        "source": {
+          "raw": ""./components/nav"",
+          "span": {
+            "ctxt": 0,
+            "end": 98,
+            "start": 80,
+          },
+          "type": "StringLiteral",
+          "value": "./components/nav",
+        },
+        "span": {
+          "ctxt": 0,
+          "end": 99,
+          "start": 49,
+        },
+        "specifiers": [
+          {
+            "local": {
+              "optional": false,
+              "span": {
+                "ctxt": 1,
+                "end": 74,
+                "start": 61,
+              },
+              "type": "Identifier",
+              "value": "navComponents",
+            },
+            "span": {
+              "ctxt": 0,
+              "end": 74,
+              "start": 56,
+            },
+            "type": "ImportNamespaceSpecifier",
+          },
+        ],
+        "type": "ImportDeclaration",
+        "typeOnly": false,
+      },
+      {
+        "declarations": [
+          {
+            "definite": false,
+            "id": {
+              "optional": false,
+              "span": {
+                "ctxt": 1,
+                "end": 117,
+                "start": 107,
+              },
+              "type": "Identifier",
+              "typeAnnotation": null,
+              "value": "UserAvatar",
+            },
+            "init": {
+              "object": {
+                "optional": false,
+                "span": {
+                  "ctxt": 1,
+                  "end": 133,
+                  "start": 120,
+                },
+                "type": "Identifier",
+                "value": "navComponents",
+              },
+              "property": {
+                "optional": false,
+                "span": {
+                  "ctxt": 0,
+                  "end": 144,
+                  "start": 134,
+                },
+                "type": "Identifier",
+                "value": "UserAvatar",
+              },
+              "span": {
+                "ctxt": 0,
+                "end": 144,
+                "start": 120,
+              },
+              "type": "MemberExpression",
+            },
+            "span": {
+              "ctxt": 0,
+              "end": 144,
+              "start": 107,
+            },
+            "type": "VariableDeclarator",
+          },
+        ],
+        "declare": false,
+        "kind": "const",
+        "span": {
+          "ctxt": 0,
+          "end": 145,
+          "start": 101,
+        },
+        "type": "VariableDeclaration",
+      },
+      {
+        "declarations": [
+          {
+            "definite": false,
+            "id": {
+              "optional": false,
+              "properties": [
+                {
+                  "key": {
+                    "optional": false,
+                    "span": {
+                      "ctxt": 1,
+                      "end": 160,
+                      "start": 154,
+                    },
+                    "type": "Identifier",
+                    "value": "Header",
+                  },
+                  "span": {
+                    "ctxt": 0,
+                    "end": 160,
+                    "start": 154,
+                  },
+                  "type": "AssignmentPatternProperty",
+                  "value": null,
+                },
+              ],
+              "span": {
+                "ctxt": 0,
+                "end": 162,
+                "start": 152,
+              },
+              "type": "ObjectPattern",
+              "typeAnnotation": null,
+            },
+            "init": {
+              "optional": false,
+              "span": {
+                "ctxt": 1,
+                "end": 178,
+                "start": 165,
+              },
+              "type": "Identifier",
+              "value": "navComponents",
+            },
+            "span": {
+              "ctxt": 0,
+              "end": 178,
+              "start": 152,
+            },
+            "type": "VariableDeclarator",
+          },
+        ],
+        "declare": false,
+        "kind": "const",
+        "span": {
+          "ctxt": 0,
+          "end": 179,
+          "start": 146,
+        },
+        "type": "VariableDeclaration",
+      },
+      {
+        "decl": {
+          "async": false,
+          "body": {
+            "span": {
+              "ctxt": 0,
+              "end": 355,
+              "start": 217,
+            },
+            "stmts": [
+              {
+                "argument": {
+                  "expression": {
+                    "children": [
+                      {
+                        "raw": "
+
+            ",
+                        "span": {
+                          "ctxt": 0,
+                          "end": 261,
+                          "start": 248,
+                        },
+                        "type": "JSXText",
+                        "value": "
+
+            ",
+                      },
+                      {
+                        "children": [],
+                        "closing": null,
+                        "opening": {
+                          "attributes": [],
+                          "name": {
+                            "optional": false,
+                            "span": {
+                              "ctxt": 1,
+                              "end": 272,
+                              "start": 262,
+                            },
+                            "type": "Identifier",
+                            "value": "UserAvatar",
+                          },
+                          "selfClosing": true,
+                          "span": {
+                            "ctxt": 0,
+                            "end": 274,
+                            "start": 261,
+                          },
+                          "type": "JSXOpeningElement",
+                          "typeArguments": null,
+                        },
+                        "span": {
+                          "ctxt": 0,
+                          "end": 274,
+                          "start": 261,
+                        },
+                        "type": "JSXElement",
+                      },
+                      {
+                        "raw": "
+
+            ",
+                        "span": {
+                          "ctxt": 0,
+                          "end": 287,
+                          "start": 274,
+                        },
+                        "type": "JSXText",
+                        "value": "
+
+            ",
+                      },
+                      {
+                        "children": [
+                          {
+                            "raw": "About",
+                            "span": {
+                              "ctxt": 0,
+                              "end": 296,
+                              "start": 291,
+                            },
+                            "type": "JSXText",
+                            "value": "About",
+                          },
+                        ],
+                        "closing": {
+                          "name": {
+                            "optional": false,
+                            "span": {
+                              "ctxt": 2,
+                              "end": 300,
+                              "start": 298,
+                            },
+                            "type": "Identifier",
+                            "value": "h1",
+                          },
+                          "span": {
+                            "ctxt": 0,
+                            "end": 301,
+                            "start": 296,
+                          },
+                          "type": "JSXClosingElement",
+                        },
+                        "opening": {
+                          "attributes": [],
+                          "name": {
+                            "optional": false,
+                            "span": {
+                              "ctxt": 2,
+                              "end": 290,
+                              "start": 288,
+                            },
+                            "type": "Identifier",
+                            "value": "h1",
+                          },
+                          "selfClosing": false,
+                          "span": {
+                            "ctxt": 0,
+                            "end": 291,
+                            "start": 287,
+                          },
+                          "type": "JSXOpeningElement",
+                          "typeArguments": null,
+                        },
+                        "span": {
+                          "ctxt": 0,
+                          "end": 301,
+                          "start": 287,
+                        },
+                        "type": "JSXElement",
+                      },
+                      {
+                        "raw": "
+
+            ",
+                        "span": {
+                          "ctxt": 0,
+                          "end": 314,
+                          "start": 301,
+                        },
+                        "type": "JSXText",
+                        "value": "
+
+            ",
+                      },
+                      {
+                        "children": [],
+                        "closing": null,
+                        "opening": {
+                          "attributes": [],
+                          "name": {
+                            "optional": false,
+                            "span": {
+                              "ctxt": 1,
+                              "end": 326,
+                              "start": 315,
+                            },
+                            "type": "Identifier",
+                            "value": "AlertButton",
+                          },
+                          "selfClosing": true,
+                          "span": {
+                            "ctxt": 0,
+                            "end": 328,
+                            "start": 314,
+                          },
+                          "type": "JSXOpeningElement",
+                          "typeArguments": null,
+                        },
+                        "span": {
+                          "ctxt": 0,
+                          "end": 328,
+                          "start": 314,
+                        },
+                        "type": "JSXElement",
+                      },
+                      {
+                        "raw": "
+
+        ",
+                        "span": {
+                          "ctxt": 0,
+                          "end": 337,
+                          "start": 328,
+                        },
+                        "type": "JSXText",
+                        "value": "
+
+        ",
+                      },
+                    ],
+                    "closing": {
+                      "name": {
+                        "optional": false,
+                        "span": {
+                          "ctxt": 1,
+                          "end": 345,
+                          "start": 339,
+                        },
+                        "type": "Identifier",
+                        "value": "Header",
+                      },
+                      "span": {
+                        "ctxt": 0,
+                        "end": 346,
+                        "start": 337,
+                      },
+                      "type": "JSXClosingElement",
+                    },
+                    "opening": {
+                      "attributes": [],
+                      "name": {
+                        "optional": false,
+                        "span": {
+                          "ctxt": 1,
+                          "end": 247,
+                          "start": 241,
+                        },
+                        "type": "Identifier",
+                        "value": "Header",
+                      },
+                      "selfClosing": false,
+                      "span": {
+                        "ctxt": 0,
+                        "end": 248,
+                        "start": 240,
+                      },
+                      "type": "JSXOpeningElement",
+                      "typeArguments": null,
+                    },
+                    "span": {
+                      "ctxt": 0,
+                      "end": 346,
+                      "start": 240,
+                    },
+                    "type": "JSXElement",
+                  },
+                  "span": {
+                    "ctxt": 0,
+                    "end": 352,
+                    "start": 230,
+                  },
+                  "type": "ParenthesisExpression",
+                },
+                "span": {
+                  "ctxt": 0,
+                  "end": 353,
+                  "start": 223,
+                },
+                "type": "ReturnStatement",
+              },
+            ],
+            "type": "BlockStatement",
+          },
+          "decorators": [],
+          "generator": false,
+          "identifier": {
+            "optional": false,
+            "span": {
+              "ctxt": 1,
+              "end": 214,
+              "start": 205,
+            },
+            "type": "Identifier",
+            "value": "AboutPage",
+          },
+          "params": [],
+          "returnType": null,
+          "span": {
+            "ctxt": 0,
+            "end": 355,
+            "start": 196,
+          },
+          "type": "FunctionExpression",
+          "typeParameters": null,
+        },
+        "span": {
+          "ctxt": 0,
+          "end": 355,
+          "start": 181,
+        },
+        "type": "ExportDefaultDeclaration",
+      },
+    ],
+    "created_at": null,
+    "declarations": [
+      {
+        "definition": "<expression>",
+        "end": {
+          "column": 2,
+          "line": 15,
+        },
+        "inferred_type": {
+          "Function": [
+            "JSX",
+          ],
+        },
+        "source": {
+          "hash": "10649471343696310102",
+          "mtype": "local",
+          "package_name": "typescript-examples",
+          "path": "src/simple/about.tsx",
+        },
+        "start": {
+          "column": 16,
+          "line": 7,
+        },
+        "symbol": "AboutPage#1",
+      },
+      {
+        "definition": "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('AlertButton' type=dynamic), context: #1 }, source: ModuleId { hash: 5148538744336220601, path: "", pkg_name: "@acme/components", mtype: Package } }>",
+        "end": {
+          "column": 21,
+          "line": 1,
+        },
+        "inferred_type": {
+          "TypeOf": {
+            "is_local": false,
+            "symbol": {
+              "source": {
+                "hash": "5148538744336220601",
+                "mtype": "package",
+                "package_name": "@acme/components",
+                "path": "",
+              },
+              "symbol": "AlertButton#1",
+            },
+          },
+        },
+        "source": {
+          "hash": "10649471343696310102",
+          "mtype": "local",
+          "package_name": "typescript-examples",
+          "path": "src/simple/about.tsx",
+        },
+        "start": {
+          "column": 10,
+          "line": 1,
+        },
+        "symbol": "AlertButton#1",
+      },
+      {
+        "definition": "<expression>",
+        "end": {
+          "column": 15,
+          "line": 5,
+        },
+        "inferred_type": {
+          "MemberOf": [
+            {
+              "TypeOf": {
+                "is_local": true,
+                "symbol": {
+                  "source": {
+                    "hash": "10649471343696310102",
+                    "mtype": "local",
+                    "package_name": "typescript-examples",
+                    "path": "src/simple/about.tsx",
+                  },
+                  "symbol": "navComponents#1",
+                },
+              },
+            },
+            {
+              "Object": "Header",
+            },
+          ],
+        },
+        "source": {
+          "hash": "10649471343696310102",
+          "mtype": "local",
+          "package_name": "typescript-examples",
+          "path": "src/simple/about.tsx",
+        },
+        "start": {
+          "column": 9,
+          "line": 5,
+        },
+        "symbol": "Header#1",
+      },
+      {
+        "definition": "<expression>",
+        "end": {
+          "column": 17,
+          "line": 4,
+        },
+        "inferred_type": {
+          "MemberOf": [
+            {
+              "TypeOf": {
+                "is_local": true,
+                "symbol": {
+                  "source": {
+                    "hash": "10649471343696310102",
+                    "mtype": "local",
+                    "package_name": "typescript-examples",
+                    "path": "src/simple/about.tsx",
+                  },
+                  "symbol": "navComponents#1",
+                },
+              },
+            },
+            {
+              "Object": "UserAvatar",
+            },
+          ],
+        },
+        "source": {
+          "hash": "10649471343696310102",
+          "mtype": "local",
+          "package_name": "typescript-examples",
+          "path": "src/simple/about.tsx",
+        },
+        "start": {
+          "column": 7,
+          "line": 4,
+        },
+        "symbol": "UserAvatar#1",
+      },
+      {
+        "definition": "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('<wildcard>' type=dynamic), context: #0 }, source: ModuleId { hash: 56435560017408417, path: "src/simple/components/nav", pkg_name: "typescript-examples", mtype: Local } }>",
+        "end": {
+          "column": 26,
+          "line": 2,
+        },
+        "inferred_type": {
+          "TypeOf": {
+            "is_local": false,
+            "symbol": {
+              "source": {
+                "hash": "56435560017408417",
+                "mtype": "local",
+                "package_name": "typescript-examples",
+                "path": "src/simple/components/nav",
+              },
+              "symbol": "<wildcard>#0",
+            },
+          },
+        },
+        "source": {
+          "hash": "10649471343696310102",
+          "mtype": "local",
+          "package_name": "typescript-examples",
+          "path": "src/simple/about.tsx",
+        },
+        "start": {
+          "column": 8,
+          "line": 2,
+        },
+        "symbol": "navComponents#1",
+      },
+    ],
+    "exports": [
+      {
+        "exported_name": "default",
+        "source": {
+          "Internal": "AboutPage#1",
+        },
+      },
+    ],
+    "id": {
+      "hash": "10649471343696310102",
+      "mtype": "local",
+      "package_name": "typescript-examples",
+      "path": "src/simple/about.tsx",
+    },
+    "scopes": [
+      {
+        "children": [
+          "UserAvatar#1",
+          "Header#1",
+          "AboutPage#1",
+          "AboutPage#1",
+        ],
+        "jsx_references": [
+          "AlertButton#1",
+          "Header#1",
+          "UserAvatar#1",
+          "h1#2",
+        ],
+        "owner": "__global#0",
+        "parent": null,
+        "references": [
+          "AboutPage#1",
+          "AlertButton#1",
+          "Header#1",
+          "UserAvatar#0",
+          "UserAvatar#1",
+          "h1#2",
+          "navComponents#1",
+        ],
+      },
+      {
+        "children": [],
+        "jsx_references": [],
+        "owner": "UserAvatar#1",
+        "parent": "__global#0",
+        "references": [
+          "UserAvatar#0",
+          "navComponents#1",
+        ],
+      },
+      {
+        "children": [],
+        "jsx_references": [],
+        "owner": "Header#1",
+        "parent": "__global#0",
+        "references": [
+          "navComponents#1",
+        ],
+      },
+      {
+        "children": [],
+        "jsx_references": [
+          "AlertButton#1",
+          "Header#1",
+          "UserAvatar#1",
+          "h1#2",
+        ],
+        "owner": "AboutPage#1",
+        "parent": "__global#0",
+        "references": [
+          "AlertButton#1",
+          "Header#1",
+          "UserAvatar#1",
+          "h1#2",
+        ],
+      },
+      {
+        "children": [],
+        "jsx_references": [
+          "AlertButton#1",
+          "Header#1",
+          "UserAvatar#1",
+          "h1#2",
+        ],
+        "owner": "AboutPage#1",
+        "parent": "__global#0",
+        "references": [
+          "AlertButton#1",
+          "Header#1",
+          "UserAvatar#1",
+          "h1#2",
+        ],
+      },
+    ],
+    "source_path": "src/simple/about.tsx",
+    "updated_at": null,
+  },
+]
+`;

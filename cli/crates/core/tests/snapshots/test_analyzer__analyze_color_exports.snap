@@ -1,0 +1,82 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&component_results"
+---
+num_of_components: 3
+components:
+  - definition_id: "@mui/material:cc29053ff492a0bc6ceac79687e3583259d95bb2cf7aa32d6718a546061e124d:default"
+    name: Divider
+    export_ids:
+      - "color:src/Divider:Divider"
+    package_name: "@mui/material"
+    source_path: Divider
+    dependencies: []
+    props: []
+    html_elements: []
+  - definition_id: "color:b8ec40cbfba161d2088254bebb62061d06108948206a10fd6eaddaa2b827bb6c:SubDivider"
+    name: SubDivider
+    export_ids:
+      - "color:src/Divider/SubDivider/SubDivider:SubDivider"
+      - "color:src/Divider/SubDivider:SubDivider"
+    package_name: color
+    source_path: src/Divider/SubDivider/SubDivider.tsx
+    dependencies:
+      - from: "color:b8ec40cbfba161d2088254bebb62061d06108948206a10fd6eaddaa2b827bb6c:SubDivider"
+        to: "@mui/material:cc29053ff492a0bc6ceac79687e3583259d95bb2cf7aa32d6718a546061e124d:default"
+        references:
+          - trace:
+              - "@mui/material:cc29053ff492a0bc6ceac79687e3583259d95bb2cf7aa32d6718a546061e124d:default"
+            usages:
+              - start:
+                  line: 7
+                  column: 13
+                end:
+                  line: 7
+                  column: 23
+                props: []
+    props: []
+    html_elements:
+      - div
+      - h1
+      - p
+  - definition_id: "color:036d3f1c984043aaf44fd9519371d17afcc29dfa5e457044e017a312d9c92ff1:SimpleDividerComponent"
+    name: SimpleDividerComponent
+    export_ids:
+      - "color:src/TimestampDivider/TimestampDivider:SimpleDividerComponent"
+      - "color:src:SimpleDividerComponent"
+    package_name: color
+    source_path: src/TimestampDivider/TimestampDivider.tsx
+    dependencies:
+      - from: "color:036d3f1c984043aaf44fd9519371d17afcc29dfa5e457044e017a312d9c92ff1:SimpleDividerComponent"
+        to: "@mui/material:cc29053ff492a0bc6ceac79687e3583259d95bb2cf7aa32d6718a546061e124d:default"
+        references:
+          - trace:
+              - "color:bcb4d56163cd41c6b1900a5fc59dac230ef90485b082e74c857b225e16449ad5:Divider"
+              - "@mui/material:cc29053ff492a0bc6ceac79687e3583259d95bb2cf7aa32d6718a546061e124d:default"
+            usages:
+              - start:
+                  line: 7
+                  column: 9
+                end:
+                  line: 7
+                  column: 20
+                props: []
+      - from: "color:036d3f1c984043aaf44fd9519371d17afcc29dfa5e457044e017a312d9c92ff1:SimpleDividerComponent"
+        to: "color:b8ec40cbfba161d2088254bebb62061d06108948206a10fd6eaddaa2b827bb6c:SubDivider"
+        references:
+          - trace:
+              - "color:ad6563e37bd39c4cbcd1486643a7a61a281ea5f4602e1f017d77fc30b424299d:SubDivider"
+              - "color:b8ec40cbfba161d2088254bebb62061d06108948206a10fd6eaddaa2b827bb6c:SubDivider"
+            usages:
+              - start:
+                  line: 8
+                  column: 9
+                end:
+                  line: 8
+                  column: 22
+                props: []
+    props: []
+    html_elements:
+      - div
+      - h1
+      - p

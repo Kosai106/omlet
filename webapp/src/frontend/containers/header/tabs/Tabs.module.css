@@ -1,0 +1,41 @@
+.tabs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tabs .tab {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 24px;
+    padding: 0 10px 1px;
+    border-radius: 12px;
+    border: 2px solid transparent;
+    font-size: 13px;
+    color: var(--label-selected-color);
+}
+
+.tabs .tab:hover {
+    background-color: rgba(var(--background-secondary-color-rgb), 0.2);
+}
+
+.tabs .tab:active {
+    background-color: rgba(var(--background-secondary-color-rgb), 0.2);
+    border-color: rgba(var(--background-tertiary-color-rgb), 0.5);
+}
+
+.tabs .tab.selected {
+    background-color: rgba(var(--accent-green-rgb), 0.2);
+    border-color: var(--accent-green);
+}
+
+.tabs .tab.selected:hover {
+    background-color: rgba(var(--accent-green-rgb), 0.35);
+    border-color: var(--accent-green);
+}
+
+.tabs .tab.selected:active {
+    background-color: rgba(var(--accent-green-rgb), 0.5);
+    border-color: var(--accent-green);
+}

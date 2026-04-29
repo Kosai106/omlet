@@ -1,0 +1,313 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&component_results"
+---
+num_of_components: 14
+components:
+  - definition_id: "@wildcard-exports/design-system-input:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Input"
+    name: Input
+    export_ids: []
+    package_name: "@wildcard-exports/design-system-input"
+    source_path: ""
+    dependencies: []
+    props: []
+    html_elements: []
+  - definition_id: "@wildcard-exports/design-system-react:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Button"
+    name: Button
+    export_ids: []
+    package_name: "@wildcard-exports/design-system-react"
+    source_path: ""
+    dependencies: []
+    props: []
+    html_elements: []
+  - definition_id: "@wildcard-exports/design-system-react:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:DatePicker"
+    name: DatePicker
+    export_ids: []
+    package_name: "@wildcard-exports/design-system-react"
+    source_path: ""
+    dependencies: []
+    props: []
+    html_elements: []
+  - definition_id: "@wildcard-exports/design-system-react:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Form"
+    name: Form
+    export_ids: []
+    package_name: "@wildcard-exports/design-system-react"
+    source_path: ""
+    dependencies: []
+    props: []
+    html_elements: []
+  - definition_id: "@wildcard-exports/design-system-react:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Input"
+    name: Input
+    export_ids: []
+    package_name: "@wildcard-exports/design-system-react"
+    source_path: ""
+    dependencies: []
+    props: []
+    html_elements: []
+  - definition_id: "@wildcard-exports/webapp:f2cd6bd7313b24013cd04d20b4dadb413f898c07f7c1a46ecc971d28d719accd:App"
+    name: App
+    export_ids:
+      - "@wildcard-exports/webapp:.:App"
+      - "@wildcard-exports/webapp:src/app:App"
+    package_name: "@wildcard-exports/webapp"
+    source_path: src/app.tsx
+    dependencies:
+      - from: "@wildcard-exports/webapp:f2cd6bd7313b24013cd04d20b4dadb413f898c07f7c1a46ecc971d28d719accd:App"
+        to: "@wildcard-exports/design-system-input:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Input"
+        references:
+          - trace:
+              - "@wildcard-exports/design-system-input:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Input"
+            usages:
+              - start:
+                  line: 12
+                  column: 9
+                end:
+                  line: 12
+                  column: 17
+                props: []
+      - from: "@wildcard-exports/webapp:f2cd6bd7313b24013cd04d20b4dadb413f898c07f7c1a46ecc971d28d719accd:App"
+        to: "@wildcard-exports/webapp:33ac7052a3990fb6873572eb0c68a998e19700b3f622198f398458ed61954d14:ComponentFromCircularExportModuleC"
+        references:
+          - trace:
+              - "@wildcard-exports/webapp:e898d30fae4aa89d08440fc45759b9e468cfd39939ed255bb44ad3b39e44ee1e:ComponentFromCircularExportModuleC"
+              - "@wildcard-exports/webapp:33ac7052a3990fb6873572eb0c68a998e19700b3f622198f398458ed61954d14:ComponentFromCircularExportModuleC"
+            usages:
+              - start:
+                  line: 15
+                  column: 9
+                end:
+                  line: 15
+                  column: 47
+                props: []
+      - from: "@wildcard-exports/webapp:f2cd6bd7313b24013cd04d20b4dadb413f898c07f7c1a46ecc971d28d719accd:App"
+        to: "@wildcard-exports/webapp:34c5c26de4a46aaa97e73b783b954b77aebcd621a4b8c26db1eaac588529cc71:ComponentFromCircularExportModuleB"
+        references:
+          - trace:
+              - "@wildcard-exports/webapp:e898d30fae4aa89d08440fc45759b9e468cfd39939ed255bb44ad3b39e44ee1e:ComponentFromCircularExportModuleB"
+              - "@wildcard-exports/webapp:d0f3aa9becd6dbdcb8551d94fd6ed28514471df4b94eb5d171f2f1cb67e3f2b6:ComponentFromCircularExportModuleB"
+              - "@wildcard-exports/webapp:34c5c26de4a46aaa97e73b783b954b77aebcd621a4b8c26db1eaac588529cc71:ComponentFromCircularExportModuleB"
+            usages:
+              - start:
+                  line: 14
+                  column: 9
+                end:
+                  line: 14
+                  column: 46
+                props: []
+      - from: "@wildcard-exports/webapp:f2cd6bd7313b24013cd04d20b4dadb413f898c07f7c1a46ecc971d28d719accd:App"
+        to: "@wildcard-exports/webapp:c4f7056e1fab99cbf275c63a898c9112a13bb945a8f1960f816e8f7fcbbb1993:MainForm"
+        references:
+          - trace:
+              - "@wildcard-exports/webapp:44145b4646ba00cf3afdd124b880a23f47279f07dad0d139a7b26cd531123cf3:MainForm"
+              - "@wildcard-exports/webapp:c4f7056e1fab99cbf275c63a898c9112a13bb945a8f1960f816e8f7fcbbb1993:MainForm"
+            usages:
+              - start:
+                  line: 10
+                  column: 9
+                end:
+                  line: 10
+                  column: 20
+                props: []
+      - from: "@wildcard-exports/webapp:f2cd6bd7313b24013cd04d20b4dadb413f898c07f7c1a46ecc971d28d719accd:App"
+        to: "@wildcard-exports/webapp:c4f7056e1fab99cbf275c63a898c9112a13bb945a8f1960f816e8f7fcbbb1993:RightPanel"
+        references:
+          - trace:
+              - "@wildcard-exports/webapp:44145b4646ba00cf3afdd124b880a23f47279f07dad0d139a7b26cd531123cf3:RightPanel"
+              - "@wildcard-exports/webapp:c4f7056e1fab99cbf275c63a898c9112a13bb945a8f1960f816e8f7fcbbb1993:RightPanel"
+            usages:
+              - start:
+                  line: 9
+                  column: 9
+                end:
+                  line: 9
+                  column: 22
+                props: []
+      - from: "@wildcard-exports/webapp:f2cd6bd7313b24013cd04d20b4dadb413f898c07f7c1a46ecc971d28d719accd:App"
+        to: "@wildcard-exports/webapp:c4f7056e1fab99cbf275c63a898c9112a13bb945a8f1960f816e8f7fcbbb1993:SearchBar"
+        references:
+          - trace:
+              - "@wildcard-exports/webapp:44145b4646ba00cf3afdd124b880a23f47279f07dad0d139a7b26cd531123cf3:SearchBar"
+              - "@wildcard-exports/webapp:c4f7056e1fab99cbf275c63a898c9112a13bb945a8f1960f816e8f7fcbbb1993:SearchBar"
+            usages:
+              - start:
+                  line: 11
+                  column: 9
+                end:
+                  line: 11
+                  column: 21
+                props: []
+      - from: "@wildcard-exports/webapp:f2cd6bd7313b24013cd04d20b4dadb413f898c07f7c1a46ecc971d28d719accd:App"
+        to: "@wildcard-exports/webapp:d0f3aa9becd6dbdcb8551d94fd6ed28514471df4b94eb5d171f2f1cb67e3f2b6:ComponentFromCircularExportModuleA"
+        references:
+          - trace:
+              - "@wildcard-exports/webapp:e898d30fae4aa89d08440fc45759b9e468cfd39939ed255bb44ad3b39e44ee1e:ComponentFromCircularExportModuleA"
+              - "@wildcard-exports/webapp:d0f3aa9becd6dbdcb8551d94fd6ed28514471df4b94eb5d171f2f1cb67e3f2b6:ComponentFromCircularExportModuleA"
+            usages:
+              - start:
+                  line: 13
+                  column: 9
+                end:
+                  line: 13
+                  column: 46
+                props: []
+    props: []
+    html_elements:
+      - div
+      - h1
+  - definition_id: "@wildcard-exports/webapp:d0f3aa9becd6dbdcb8551d94fd6ed28514471df4b94eb5d171f2f1cb67e3f2b6:ComponentFromCircularExportModuleA"
+    name: ComponentFromCircularExportModuleA
+    export_ids:
+      - "@wildcard-exports/webapp:src/circular-exports/circular-export-module-A:ComponentFromCircularExportModuleA"
+      - "@wildcard-exports/webapp:src/circular-exports/circular-export-module-B:ComponentFromCircularExportModuleA"
+      - "@wildcard-exports/webapp:src/circular-exports:ComponentFromCircularExportModuleA"
+    package_name: "@wildcard-exports/webapp"
+    source_path: src/circular-exports/circular-export-module-A.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - img
+  - definition_id: "@wildcard-exports/webapp:34c5c26de4a46aaa97e73b783b954b77aebcd621a4b8c26db1eaac588529cc71:ComponentFromCircularExportModuleB"
+    name: ComponentFromCircularExportModuleB
+    export_ids:
+      - "@wildcard-exports/webapp:src/circular-exports/circular-export-module-A:ComponentFromCircularExportModuleB"
+      - "@wildcard-exports/webapp:src/circular-exports/circular-export-module-B:ComponentFromCircularExportModuleB"
+      - "@wildcard-exports/webapp:src/circular-exports:ComponentFromCircularExportModuleB"
+    package_name: "@wildcard-exports/webapp"
+    source_path: src/circular-exports/circular-export-module-B.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - img
+  - definition_id: "@wildcard-exports/webapp:33ac7052a3990fb6873572eb0c68a998e19700b3f622198f398458ed61954d14:ComponentFromCircularExportModuleC"
+    name: ComponentFromCircularExportModuleC
+    export_ids:
+      - "@wildcard-exports/webapp:src/circular-exports/circular-export-module-C:ComponentFromCircularExportModuleC"
+      - "@wildcard-exports/webapp:src/circular-exports:ComponentFromCircularExportModuleC"
+    package_name: "@wildcard-exports/webapp"
+    source_path: src/circular-exports/circular-export-module-C.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - img
+  - definition_id: "@wildcard-exports/webapp:c4f7056e1fab99cbf275c63a898c9112a13bb945a8f1960f816e8f7fcbbb1993:MainForm"
+    name: MainForm
+    export_ids:
+      - "@wildcard-exports/webapp:src/components/components:MainForm"
+      - "@wildcard-exports/webapp:src/components:MainForm"
+    package_name: "@wildcard-exports/webapp"
+    source_path: src/components/components.tsx
+    dependencies:
+      - from: "@wildcard-exports/webapp:c4f7056e1fab99cbf275c63a898c9112a13bb945a8f1960f816e8f7fcbbb1993:MainForm"
+        to: "@wildcard-exports/design-system-react:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Form"
+        references:
+          - trace:
+              - "@wildcard-exports/design-system-react:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Form"
+            usages:
+              - start:
+                  line: 16
+                  column: 12
+                end:
+                  line: 16
+                  column: 19
+                props: []
+    props: []
+    html_elements: []
+  - definition_id: "@wildcard-exports/webapp:c4f7056e1fab99cbf275c63a898c9112a13bb945a8f1960f816e8f7fcbbb1993:RightPanel"
+    name: RightPanel
+    export_ids:
+      - "@wildcard-exports/webapp:src/components/components:RightPanel"
+      - "@wildcard-exports/webapp:src/components:RightPanel"
+    package_name: "@wildcard-exports/webapp"
+    source_path: src/components/components.tsx
+    dependencies:
+      - from: "@wildcard-exports/webapp:c4f7056e1fab99cbf275c63a898c9112a13bb945a8f1960f816e8f7fcbbb1993:RightPanel"
+        to: "@wildcard-exports/design-system-react:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:DatePicker"
+        references:
+          - trace:
+              - "@wildcard-exports/design-system-react:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:DatePicker"
+            usages:
+              - start:
+                  line: 8
+                  column: 37
+                end:
+                  line: 8
+                  column: 50
+                props: []
+      - from: "@wildcard-exports/webapp:c4f7056e1fab99cbf275c63a898c9112a13bb945a8f1960f816e8f7fcbbb1993:RightPanel"
+        to: "@wildcard-exports/design-system-react:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Input"
+        references:
+          - trace:
+              - "@wildcard-exports/design-system-react:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Input"
+            usages:
+              - start:
+                  line: 8
+                  column: 50
+                end:
+                  line: 8
+                  column: 58
+                props: []
+    props: []
+    html_elements:
+      - div
+      - h1
+  - definition_id: "@wildcard-exports/webapp:c4f7056e1fab99cbf275c63a898c9112a13bb945a8f1960f816e8f7fcbbb1993:SearchBar"
+    name: SearchBar
+    export_ids:
+      - "@wildcard-exports/webapp:src/components/components:SearchBar"
+      - "@wildcard-exports/webapp:src/components:SearchBar"
+    package_name: "@wildcard-exports/webapp"
+    source_path: src/components/components.tsx
+    dependencies:
+      - from: "@wildcard-exports/webapp:c4f7056e1fab99cbf275c63a898c9112a13bb945a8f1960f816e8f7fcbbb1993:SearchBar"
+        to: "@wildcard-exports/design-system-react:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Button"
+        references:
+          - trace:
+              - "@wildcard-exports/design-system-react:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Button"
+            usages:
+              - start:
+                  line: 12
+                  column: 44
+                end:
+                  line: 12
+                  column: 53
+                props: []
+      - from: "@wildcard-exports/webapp:c4f7056e1fab99cbf275c63a898c9112a13bb945a8f1960f816e8f7fcbbb1993:SearchBar"
+        to: "@wildcard-exports/design-system-react:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Input"
+        references:
+          - trace:
+              - "@wildcard-exports/design-system-react:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Input"
+            usages:
+              - start:
+                  line: 12
+                  column: 36
+                end:
+                  line: 12
+                  column: 44
+                props: []
+    props: []
+    html_elements:
+      - div
+      - h1
+  - definition_id: "@wildcard-exports/webapp:7b2ad764e05ca56047e6f08969a18b952a3a4ad97b566b14bd19da1affb5fd86:MainView"
+    name: MainView
+    export_ids:
+      - "@wildcard-exports/webapp:src/components/views:MainView"
+      - "@wildcard-exports/webapp:src/components:MainView"
+    package_name: "@wildcard-exports/webapp"
+    source_path: src/components/views.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - div
+  - definition_id: "@wildcard-exports/webapp:7b2ad764e05ca56047e6f08969a18b952a3a4ad97b566b14bd19da1affb5fd86:SideView"
+    name: SideView
+    export_ids:
+      - "@wildcard-exports/webapp:src/components/views:SideView"
+      - "@wildcard-exports/webapp:src/components:SideView"
+    package_name: "@wildcard-exports/webapp"
+    source_path: src/components/views.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - div
+

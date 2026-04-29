@@ -1,0 +1,120 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&export_results"
+---
+num_of_exports: 16
+exports:
+  - name: Button
+    source_path: src/wildcard-import/ds.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:bf0d0c920397c9d1106c0d212e0e68b49b760875c939edf8086e9b6fb9c68f42:Button"
+  - name: Link
+    source_path: src/wildcard-import/ds.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:bf0d0c920397c9d1106c0d212e0e68b49b760875c939edf8086e9b6fb9c68f42:Link"
+  - name: LinkOrButton
+    source_path: src/wildcard-import/condition-operator.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:ad7915ba82a054badb6224501ba8d788fecc3f7dbec85f3a857ff68945a4a6ff:LinkOrButton"
+  - name: NewButton
+    source_path: src/wildcard-import/use-in-return.tsx
+    is_component: true
+    inferred_type: "ReturnTypeOf<TypeOf<typescript-examples:a310cdd6015b963f42b22f07f3dc64c3978e0b6efb4bd58bb97a52e7bec43eb5:wrapper>>[Button]"
+    resolved_type: "ReturnTypeOf<(Function -> TypeOf<typescript-examples:bf0d0c920397c9d1106c0d212e0e68b49b760875c939edf8086e9b6fb9c68f42:<wildcard>> | TypeOf<ds:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:<wildcard>>)>[Button]"
+    trace_to_declaration:
+      - "typescript-examples:a310cdd6015b963f42b22f07f3dc64c3978e0b6efb4bd58bb97a52e7bec43eb5:NewButton"
+  - name: NewButtonByUsingUtil
+    source_path: src/wildcard-import/use-in-return.tsx
+    is_component: true
+    inferred_type: "ReturnTypeOf<TypeOf<typescript-examples:a310cdd6015b963f42b22f07f3dc64c3978e0b6efb4bd58bb97a52e7bec43eb5:util>[wrapper]>[Button]"
+    resolved_type: "ReturnTypeOf<{ wrapper: (Function -> TypeOf<typescript-examples:bf0d0c920397c9d1106c0d212e0e68b49b760875c939edf8086e9b6fb9c68f42:<wildcard>> | TypeOf<ds:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:<wildcard>>) }[wrapper]>[Button]"
+    trace_to_declaration:
+      - "typescript-examples:a310cdd6015b963f42b22f07f3dc64c3978e0b6efb4bd58bb97a52e7bec43eb5:NewButtonByUsingUtil"
+  - name: OldButton
+    source_path: src/wildcard-import/use-in-return.tsx
+    is_component: true
+    inferred_type: "ReturnTypeOf<TypeOf<typescript-examples:a310cdd6015b963f42b22f07f3dc64c3978e0b6efb4bd58bb97a52e7bec43eb5:wrapper>>[Button]"
+    resolved_type: "ReturnTypeOf<(Function -> TypeOf<typescript-examples:bf0d0c920397c9d1106c0d212e0e68b49b760875c939edf8086e9b6fb9c68f42:<wildcard>> | TypeOf<ds:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:<wildcard>>)>[Button]"
+    trace_to_declaration:
+      - "typescript-examples:a310cdd6015b963f42b22f07f3dc64c3978e0b6efb4bd58bb97a52e7bec43eb5:OldButton"
+  - name: Parent
+    source_path: src/wildcard-import/condition-operator.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:ad7915ba82a054badb6224501ba8d788fecc3f7dbec85f3a857ff68945a4a6ff:Parent"
+  - name: Parent
+    source_path: src/wildcard-import/use-in-return.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:a310cdd6015b963f42b22f07f3dc64c3978e0b6efb4bd58bb97a52e7bec43eb5:Parent"
+  - name: RedeclareExternalImport
+    source_path: src/wildcard-import/redeclare-external-import.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:400656bf80a91afee30c6957d918fd1da1ca2b65b2cc56676f3e4e4a57011e7f:RedeclareExternalImport"
+  - name: RedeclareImport
+    source_path: src/wildcard-import/redeclare-import.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:36c63c09e1590105403d5e564633e9b2ebcb46a997f58415c63c9b8de0e8a2fe:RedeclareImport"
+  - name: WildcardImport
+    source_path: src/wildcard-import/wildcard-import.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:a2211841d562f032415304efe9312a75094214b56a3053659e05b5be853607aa:WildcardImport"
+  - name: child
+    source_path: src/wildcard-import/child.ts
+    is_component: false
+    inferred_type: "(Function -> ReturnTypeOf<TypeOf<typescript-examples:615514e948052a407365dd56798dc57f5c91cafe877f24a08fa6bc537a78b795:foo>[child]>)"
+    resolved_type: "(Function -> ReturnTypeOf<Unknown[child]>)"
+    trace_to_declaration:
+      - "typescript-examples:615514e948052a407365dd56798dc57f5c91cafe877f24a08fa6bc537a78b795:child"
+  - name: default
+    source_path: src/wildcard-import/export-default.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:b526f3b6d19e2f2bc2f4e51f83aa8101933039cdf5d02a1e98b5526267863436:default"
+  - name: ds
+    source_path: src/wildcard-import/re-export.ts
+    is_component: false
+    inferred_type: "TypeOf<typescript-examples:bf0d0c920397c9d1106c0d212e0e68b49b760875c939edf8086e9b6fb9c68f42:<wildcard>>"
+    resolved_type: "TypeOf<typescript-examples:bf0d0c920397c9d1106c0d212e0e68b49b760875c939edf8086e9b6fb9c68f42:<wildcard>>"
+    trace_to_declaration:
+      - "typescript-examples:cde99b04e196727c6d2f4b89b067db4f4ad0100a273fbb1cee5d65c28b01005e:ds"
+      - "typescript-examples:98c6ba439e2f841eedcf473e72f3e843d885ee6d79233fc4cd033ac276857ed8:ds"
+  - name: ds
+    source_path: src/wildcard-import/wildcard-export.ts
+    is_component: false
+    inferred_type: "TypeOf<typescript-examples:bf0d0c920397c9d1106c0d212e0e68b49b760875c939edf8086e9b6fb9c68f42:<wildcard>>"
+    resolved_type: "TypeOf<typescript-examples:bf0d0c920397c9d1106c0d212e0e68b49b760875c939edf8086e9b6fb9c68f42:<wildcard>>"
+    trace_to_declaration:
+      - "typescript-examples:98c6ba439e2f841eedcf473e72f3e843d885ee6d79233fc4cd033ac276857ed8:ds"
+  - name: parent
+    source_path: src/wildcard-import/parent.ts
+    is_component: false
+    inferred_type: "(Function -> ReturnTypeOf<TypeOf<typescript-examples:f5a99e48696de83419cf1c3caec6724ab732698cc9cd6c8c3af54d8e8be55476:child>[child]>)"
+    resolved_type: "(Function -> ReturnTypeOf<TypeOf<typescript-examples:615514e948052a407365dd56798dc57f5c91cafe877f24a08fa6bc537a78b795:<wildcard>>[child]>)"
+    trace_to_declaration:
+      - "typescript-examples:f5a99e48696de83419cf1c3caec6724ab732698cc9cd6c8c3af54d8e8be55476:parent"
+

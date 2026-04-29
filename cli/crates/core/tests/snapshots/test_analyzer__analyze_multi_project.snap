@@ -1,0 +1,58 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&component_results_design_system"
+---
+num_of_components: 3
+components:
+  - definition_id: "@acme/design-system:bf8a9e3aaa8690860f36d24bf1b694c9c0efbfe3526ec806cdec65ff72d1f45a:Button"
+    name: Button
+    export_ids:
+      - "@acme/design-system:.:Button"
+      - "@acme/design-system:src/button:Button"
+      - "@acme/design-system:src:Button"
+    package_name: "@acme/design-system"
+    source_path: src/button.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - button
+  - definition_id: "@acme/design-system:07a4a42cecf56a6bc3c87405c5175b414ce494e41d737c18234abb15b67fe894:DatePicker"
+    name: DatePicker
+    export_ids:
+      - "@acme/design-system:.:DatePicker"
+      - "@acme/design-system:src/datepicker:DatePicker"
+      - "@acme/design-system:src:DatePicker"
+    package_name: "@acme/design-system"
+    source_path: src/datepicker.tsx
+    dependencies:
+      - from: "@acme/design-system:07a4a42cecf56a6bc3c87405c5175b414ce494e41d737c18234abb15b67fe894:DatePicker"
+        to: "@acme/design-system:bf8a9e3aaa8690860f36d24bf1b694c9c0efbfe3526ec806cdec65ff72d1f45a:Button"
+        references:
+          - trace:
+              - "@acme/design-system:bf8a9e3aaa8690860f36d24bf1b694c9c0efbfe3526ec806cdec65ff72d1f45a:Button"
+            usages:
+              - start:
+                  line: 6
+                  column: 32
+                end:
+                  line: 6
+                  column: 55
+                props:
+                  - name: children
+                    value: JSXElement
+    props: []
+    html_elements:
+      - div
+  - definition_id: "@acme/design-system:8603e95bcebf4c8646bb9a5b23318d975779e95fad8718f90666485661738345:Input"
+    name: Input
+    export_ids:
+      - "@acme/design-system:.:Input"
+      - "@acme/design-system:src/input:Input"
+      - "@acme/design-system:src:Input"
+    package_name: "@acme/design-system"
+    source_path: src/input.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - input
+

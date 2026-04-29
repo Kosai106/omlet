@@ -1,0 +1,80 @@
+.dataIssueDialog .heading {
+    margin-bottom: var(--spacing-s);
+}
+
+.dataIssueDialog .reachOutButton {
+    font-weight: 600;
+    color: var(--label-accent-color);
+}
+
+.dataIssueDialog .dataIssue {
+    margin-top: var(--spacing-l);
+}
+
+.dataIssueDialog .dataIssue .title {
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.dataIssueDialog .dataIssue .title .repositoryText {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: normal;
+    color: var(--label-secondary-color);
+}
+
+.dataIssueDialog .dataIssue .detail {
+    margin-top: var(--spacing-l);
+}
+
+.dataIssueDialog .dataIssue .detail .issueDetailTitle {
+    display: flex;
+    gap: var(--spacing-xs);
+    align-items: center;
+    margin-bottom: var(--spacing-s);
+}
+
+.dataIssueDialog .dataIssue .detail .issues {
+    margin-bottom: var(--spacing-l);
+}
+
+.dataIssueDialog .dataIssue .detail .issues .column {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: var(--spacing-s);
+}
+
+.dataIssueDialog .dataIssue .detail .issues .column .showMoreButton {
+    font-weight: 600;
+    color: var(--label-accent-color);
+}
+
+.dataIssueDialog .dataIssue .detail .suggestion .suggestionTitle {
+    margin-bottom: var(--spacing-s);
+}
+
+.dataIssueDialog .dataIssue .detail .suggestion .exampleSolution {
+    margin-bottom: var(--spacing-s);
+}
+
+.dataIssueDialog .dataIssue .detail .suggestion .exampleSolution .placeholder {
+    color: var(--label-critical-color);
+}
+
+.dataIssueDialog .dataIssue .detail .suggestion .code {
+    font-family: var(--font-family-secondary);
+}
+
+.dataIssueDialog .dataIssue .detail .suggestion a.code {
+    color: var(--label-accent-color);
+}
+
+.dataIssueDialog .dataIssue .detail .suggestion .docLink {
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 600;
+    color: var(--label-accent-color);
+}

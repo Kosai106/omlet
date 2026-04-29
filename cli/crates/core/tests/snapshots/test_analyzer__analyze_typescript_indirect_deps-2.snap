@@ -1,0 +1,56 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&export_results"
+---
+num_of_exports: 7
+exports:
+  - name: AnotherDialog
+    source_path: src/indirect-deps/indirect-deps.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:b0f5a7057b624387246abad4a8b5fe01f895e212441dfb6832b86b7fbb1ffa33:AnotherDialog"
+  - name: Button
+    source_path: src/indirect-deps/used-indirectly.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:750a7d68d8ef1fb58d722c3a74cc514249cb00a1109f7fc7063bd5d87d454030:Button"
+  - name: Dialog
+    source_path: src/indirect-deps/indirect-deps.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:b0f5a7057b624387246abad4a8b5fe01f895e212441dfb6832b86b7fbb1ffa33:Dialog"
+  - name: ExportedFooter
+    source_path: src/indirect-deps/indirect-deps.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:b0f5a7057b624387246abad4a8b5fe01f895e212441dfb6832b86b7fbb1ffa33:ExportedFooter"
+  - name: Input
+    source_path: src/indirect-deps/used-indirectly.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:750a7d68d8ef1fb58d722c3a74cc514249cb00a1109f7fc7063bd5d87d454030:Input"
+  - name: MethodsRenderer
+    source_path: src/indirect-deps/rsg.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:e18f8ed7dac11a940551a95199e7db5c6b7bed444914d39555708435e498dd37:MethodsRenderer"
+  - name: columns
+    source_path: src/indirect-deps/rsg.tsx
+    is_component: false
+    inferred_type: "Array<{ caption: String<Method name>, render: (Function -> JSX) } | { caption: String<Parameters>, render: (Function -> JSX) } | { caption: String<Description>, render: (Function -> JSX) }>"
+    resolved_type: "Array<{ caption: String<Method name>, render: (Function -> JSX) } | { caption: String<Parameters>, render: (Function -> JSX) } | { caption: String<Description>, render: (Function -> JSX) }>"
+    trace_to_declaration:
+      - "typescript-examples:e18f8ed7dac11a940551a95199e7db5c6b7bed444914d39555708435e498dd37:columns"
+

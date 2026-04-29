@@ -1,0 +1,32 @@
+.changeEmailPopover {
+    border-radius: 2px;
+}
+
+.changeEmailPopoverContent {
+    width: 328px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-s);
+    padding: var(--spacing-s);
+}
+
+.changeEmailPopoverContent .text {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xxs);
+}
+
+.changeEmailPopoverContent .description {
+    font-size: 11px;
+    line-height: 15px;
+    color: var(--label-secondary-color);
+}
+
+.changeEmailPopoverContent .form {
+    display: flex;
+    gap: var(--spacing-xs);
+}
+
+.changeEmailPopoverContent .form .input {
+    flex: 1;
+}

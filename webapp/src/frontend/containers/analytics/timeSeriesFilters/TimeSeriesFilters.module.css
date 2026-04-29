@@ -1,0 +1,15 @@
+.timeSeriesFilters {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin: 16px 48px 8px;
+}
+
+.timeSeriesFilters .timeSeriesFilterDropdown {
+    color: var(--label-secondary-color);
+    text-transform: capitalize;
+}
+
+.timeSeriesFilterDropdownOption {
+    text-transform: capitalize;
+}

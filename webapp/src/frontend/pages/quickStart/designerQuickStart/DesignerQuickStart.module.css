@@ -1,0 +1,68 @@
+.designerQuickStart {
+    height: calc(100vh - var(--header-height));
+    padding: 144px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+}
+
+.designerQuickStart .content {
+    width: 720px;
+}
+
+.designerQuickStart .h2 {
+    margin: 0;
+}
+
+.designerQuickStart p {
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--label-primary-color);
+}
+
+.designerQuickStart a {
+    color: var(--accent-green);
+}
+
+.designerQuickStart .setup {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-s);
+    margin-bottom: var(--spacing-l);
+}
+
+.designerQuickStart .invite {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-s);
+    margin-bottom: var(--spacing-xxl);
+}
+
+.designerQuickStart .invite .inviteButtons {
+    display: flex;
+    gap: var(--spacing-s);
+}
+
+.designerQuickStart .invite .inviteButtons .copyInviteLinkButton {
+    width: 130px;
+}
+
+.designerQuickStart .invite .scanTip {
+    color: var(--label-secondary-color);
+}
+
+.designerQuickStart .explore {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-l);
+    background-color: var(--background-tertiary-color);
+    border-radius: 4px;
+}
+
+.designerQuickStart .explore .demos {
+    display: flex;
+    gap: var(--spacing-l);
+    margin-top: var(--spacing-xs);
+}

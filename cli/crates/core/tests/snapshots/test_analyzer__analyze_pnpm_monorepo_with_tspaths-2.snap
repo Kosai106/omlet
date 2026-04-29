@@ -1,0 +1,191 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&export_results"
+---
+num_of_exports: 26
+exports:
+  - name: App
+    source_path: apps/cra/src/components/app.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@nighttrax/cra-example:6717bd9550d43276373c270c4868aeccfbf95c8fe82ddc7808500e87c18d73b2:App"
+  - name: AppController
+    source_path: apps/nestjs/src/app.controller.ts
+    is_component: false
+    inferred_type: Unknown
+    resolved_type: Unknown
+    trace_to_declaration:
+      - "nestjs:49177ad3d265e8d9d338fe661576fac8e0332f03c46907332ea199d4d3970e57:AppController"
+  - name: AppModule
+    source_path: apps/nestjs/src/app.module.ts
+    is_component: false
+    inferred_type: Unknown
+    resolved_type: Unknown
+    trace_to_declaration:
+      - "nestjs:ce53ff75eb0d873dcbe42a9283adb6c992579fc402876e9a3977e10d41a330cb:AppModule"
+  - name: AppService
+    source_path: apps/nestjs/src/app.service.ts
+    is_component: false
+    inferred_type: Unknown
+    resolved_type: Unknown
+    trace_to_declaration:
+      - "nestjs:c6d7a58cf3e5e5416df89c3472e8b8dc515ed4fbd33418f1b593da9828334ab3:AppService"
+  - name: BarComponent
+    source_path: packages/bar/src/index.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@nighttrax/bar:b735c973d9cea6bab8f094d05e8c7272b2e430df63dc76cdc9ecf12bf2ed9481:BarComponent"
+  - name: Button
+    source_path: packages/components/src/button.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@nighttrax/components:c49a3a21d6e61f2fedb9483da713ac10b98483eb464aa17c71f49a02434cc32b:Button"
+  - name: Button
+    source_path: packages/components/src/index.ts
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@nighttrax/components:b0f157fe837457d245a972867adc987224340e669add454e9a67708cfe9ec9c8:Button"
+      - "@nighttrax/components:c49a3a21d6e61f2fedb9483da713ac10b98483eb464aa17c71f49a02434cc32b:Button"
+  - name: Foo
+    source_path: apps/storybook/src/components/foo.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@nighttrax/storybook-example:35a67b1436992807329526bd8e76951bdddb24009645ff6ca89abe5add536364:Foo"
+  - name: FooComponent
+    source_path: packages/foo/src/index.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@nighttrax/foo:0b5b9c04ef1f34674fdec0d6fcee29366d7c8354da6ae8f6145de8a5e0957589:FooComponent"
+  - name: Local
+    source_path: apps/storybook/src/index.stories.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@nighttrax/storybook-example:8a4b1bc0a041172194afac24dd9689b61200102f37d055a6de89084611d1fd97:Local"
+  - name: Monorepo
+    source_path: apps/storybook/src/index.stories.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@nighttrax/storybook-example:8a4b1bc0a041172194afac24dd9689b61200102f37d055a6de89084611d1fd97:Monorepo"
+  - name: PageComponent
+    source_path: packages/components/src/pageComponents.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@nighttrax/components:73cce86c0d6f02defeea49c3705c8de053e65d7266d9a7e1a5cad47310994967:PageComponent"
+  - name: StyledButton
+    source_path: packages/components/src/styled/button.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@nighttrax/components:f7ef7a1afc05348d935226419b12d95a42d72ed62bd722f0baf83e640c9d79ad:StyledButton"
+  - name: StyledButton
+    source_path: packages/components/src/styled/index.ts
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@nighttrax/components:a96c5049582431896afde74a2cc3c58cb086e0b9fd61bbc31ae0443528cfaf16:StyledButton"
+      - "@nighttrax/components:f7ef7a1afc05348d935226419b12d95a42d72ed62bd722f0baf83e640c9d79ad:StyledButton"
+  - name: default
+    source_path: apps/jest-tsjest/jest.config.ts
+    is_component: false
+    inferred_type: "{ moduleNameMapper: ReturnTypeOf<TypeOf<@nighttrax/jest-example:fad2b317df6eacd5fda05af269c43e03be1ceaf993a4be2be6c1171d41c58ef3:pathsToModuleNameMapper>>, preset: String<ts-jest> }"
+    resolved_type: "{ moduleNameMapper: ReturnTypeOf<Unknown>, preset: String<ts-jest> }"
+    trace_to_declaration:
+      - "@nighttrax/jest-example:fad2b317df6eacd5fda05af269c43e03be1ceaf993a4be2be6c1171d41c58ef3:default"
+  - name: default
+    source_path: apps/nextjs/pages/index.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@nighttrax/nextjs-example:7a64238d93b629cf6638e9b2d79cd9a277ca970bef0edf573bfda84e2f7626bc:default"
+  - name: default
+    source_path: apps/rollup/rollup.config.ts
+    is_component: false
+    inferred_type: "ReturnTypeOf<TypeOf<@nighttrax/rollup-example:8fdbda334e57ca0806e716b3434d2ce220fdc5f41b17f4ef1506a3253a579948:defineConfig>>"
+    resolved_type: ReturnTypeOf<Unknown>
+    trace_to_declaration:
+      - "@nighttrax/rollup-example:8fdbda334e57ca0806e716b3434d2ce220fdc5f41b17f4ef1506a3253a579948:default"
+  - name: default
+    source_path: apps/storybook/.storybook/main.ts
+    is_component: false
+    inferred_type: "{ addons: Array<>, core: { builder: String<webpack5> }, framework: String<@storybook/react>, stories: Array<String<../src/*.stories.tsx>>, webpackFinal: (Function -> TypeOf<@nighttrax/storybook-example:a4f23891bcc66b43d19a70f7b645f2985fbc7ea924a712ed21df7450d23565ab:config>) }"
+    resolved_type: "{ addons: Array<>, core: { builder: String<webpack5> }, framework: String<@storybook/react>, stories: Array<String<../src/*.stories.tsx>>, webpackFinal: (Function -> Unknown) }"
+    trace_to_declaration:
+      - "@nighttrax/storybook-example:a4f23891bcc66b43d19a70f7b645f2985fbc7ea924a712ed21df7450d23565ab:default"
+  - name: default
+    source_path: apps/storybook/src/index.stories.tsx
+    is_component: false
+    inferred_type: "{ title: String<Index> }"
+    resolved_type: "{ title: String<Index> }"
+    trace_to_declaration:
+      - "@nighttrax/storybook-example:8a4b1bc0a041172194afac24dd9689b61200102f37d055a6de89084611d1fd97:default"
+  - name: default
+    source_path: apps/vite/src/App.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@nighttrax/vite-example:c0c33d2e84ab7127e89c5f8e6efa4dc6314e421c30d84dd4c6bd7c9d7db2ba6d:default"
+  - name: default
+    source_path: apps/vite/vite.config.ts
+    is_component: false
+    inferred_type: "ReturnTypeOf<TypeOf<@nighttrax/vite-example:9483b92af7658b294c1ab56e14f76b7dd26ce65301768720290eb2f7debf2ea2:defineConfig>>"
+    resolved_type: ReturnTypeOf<Unknown>
+    trace_to_declaration:
+      - "@nighttrax/vite-example:9483b92af7658b294c1ab56e14f76b7dd26ce65301768720290eb2f7debf2ea2:default"
+  - name: meaningOfLife
+    source_path: packages/foo/src/index.tsx
+    is_component: false
+    inferred_type: Unknown
+    resolved_type: Unknown
+    trace_to_declaration:
+      - "@nighttrax/foo:0b5b9c04ef1f34674fdec0d6fcee29366d7c8354da6ae8f6145de8a5e0957589:meaningOfLife"
+  - name: parameters
+    source_path: apps/storybook/.storybook/preview.ts
+    is_component: false
+    inferred_type: "{ actions: { argTypesRegex: String<^on[A-Z].*> }, controls: { matchers: { color: Unknown, date: Unknown } } }"
+    resolved_type: "{ actions: { argTypesRegex: String<^on[A-Z].*> }, controls: { matchers: { color: Unknown, date: Unknown } } }"
+    trace_to_declaration:
+      - "@nighttrax/storybook-example:26b3d427bb0f983b4d71b91e81cafd51943e06b473452a4bbe1a59c114cc3725:parameters"
+  - name: useTest
+    source_path: apps/cra/src/hooks/test.tsx
+    is_component: false
+    inferred_type: (Function -> Unknown)
+    resolved_type: (Function -> Unknown)
+    trace_to_declaration:
+      - "@nighttrax/cra-example:a5bf8909aa924afd4f20fe69c8878b18dfcacd06cfa0e95e9893e8775032aa2f:useTest"
+  - name: whatIsTheMeaningOfLife
+    source_path: apps/jest-babel/src/index.ts
+    is_component: false
+    inferred_type: "(Function -> TypeOf<@nighttrax/jest-babel-example:5948230847fff61ea49471dfffecb2766193985691bfe2ab84d6414be5ae852a:meaningOfLife>)"
+    resolved_type: (Function -> Unknown)
+    trace_to_declaration:
+      - "@nighttrax/jest-babel-example:5948230847fff61ea49471dfffecb2766193985691bfe2ab84d6414be5ae852a:whatIsTheMeaningOfLife"
+  - name: whatIsTheMeaningOfLife
+    source_path: apps/jest-tsjest/src/index.ts
+    is_component: false
+    inferred_type: "(Function -> TypeOf<@nighttrax/jest-example:948ddcefe03b0e7cc998f28460b4ab48bd422d40e4ea6e353066d7dc36d9ca4e:meaningOfLife>)"
+    resolved_type: (Function -> Unknown)
+    trace_to_declaration:
+      - "@nighttrax/jest-example:948ddcefe03b0e7cc998f28460b4ab48bd422d40e4ea6e353066d7dc36d9ca4e:whatIsTheMeaningOfLife"
+

@@ -1,0 +1,21 @@
+.propertyColumn {
+    flex: 1;
+}
+
+.propertyRow .propertyColumn {
+    font-family: var(--font-family-secondary);
+}
+
+.propertyRow:not(.linksDisabled):hover .propertyColumn {
+    text-decoration: underline;
+}
+
+.componentColumn {
+    flex: 1;
+    overflow: hidden;
+}
+
+.numberUsedColumn {
+    width: 64px;
+    text-align: right;
+}

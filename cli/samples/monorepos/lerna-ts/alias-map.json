@@ -1,0 +1,75 @@
+{
+  "root": {
+    "name": "pnpm-ts",
+    "path": "",
+    "version": "0.0.0",
+    "aliases": {},
+    "importMap": {
+      "pnpm-ts/*": [
+        "*"
+      ],
+      "pack-a/*": [
+        "packages/pack-a/*"
+      ],
+      "pack-a": [
+        "packages/pack-a/src/index.tsx"
+      ],
+      "pack-b/*": [
+        "packages/pack-b/*"
+      ],
+      "pack-b": [
+        "packages/pack-b/index.tsx"
+      ]
+    },
+    "exportMap": {}
+  },
+  "packages": {
+    "pack-a": {
+      "name": "pack-a",
+      "path": "packages/pack-a",
+      "version": "1.0.0",
+      "aliases": {},
+      "importMap": {
+        "pack-a/*": [
+          "packages/pack-a/*"
+        ],
+        "pack-a": [
+          "packages/pack-a/src/index.tsx"
+        ],
+        "pack-b/*": [
+          "packages/pack-b/*"
+        ],
+        "pack-b": [
+          "packages/pack-b/index.tsx"
+        ]
+      },
+      "exportMap": {
+        ".": [
+          "src/index.tsx"
+        ]
+      },
+      "main": "src/index.tsx"
+    },
+    "pack-b": {
+      "name": "pack-b",
+      "path": "packages/pack-b",
+      "version": "1.0.0",
+      "aliases": {},
+      "importMap": {
+        "pack-b/*": [
+          "packages/pack-b/*"
+        ],
+        "pack-b": [
+          "packages/pack-b/index.tsx"
+        ]
+      },
+      "exportMap": {
+        ".": [
+          "index.tsx"
+        ]
+      },
+      "main": "index.tsx"
+    }
+  },
+ "absolutePath": "/package"
+}

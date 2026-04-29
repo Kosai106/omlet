@@ -1,0 +1,523 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&component_results"
+---
+num_of_components: 30
+components:
+  - definition_id: "@acme/copper:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:CopperButton"
+    name: CopperButton
+    export_ids:
+      - "typescript-examples:src/wrapped-components/sample-issues:StyledWrappedComponent.CopperButton"
+    package_name: "@acme/copper"
+    source_path: ""
+    dependencies: []
+    props: []
+    html_elements: []
+  - definition_id: "react-intl:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:IntlLabel"
+    name: IntlLabel
+    export_ids: []
+    package_name: react-intl
+    source_path: ""
+    dependencies: []
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:baa31a9b47e720c8fd4c2c02751ba309ee07334eacc3e0e0fb899f0d28c3b2e3:PlainComponent"
+    name: PlainComponent
+    export_ids:
+      - "typescript-examples:src/wrapped-components/components:PlainComponent"
+    package_name: typescript-examples
+    source_path: src/wrapped-components/components.tsx
+    dependencies:
+      - from: "typescript-examples:baa31a9b47e720c8fd4c2c02751ba309ee07334eacc3e0e0fb899f0d28c3b2e3:PlainComponent"
+        to: "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:ComponentWithIntl"
+        references:
+          - trace:
+              - "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:ComponentWithIntl"
+            usages:
+              - start:
+                  line: 9
+                  column: 9
+                end:
+                  line: 9
+                  column: 29
+                props: []
+    props: []
+    html_elements:
+      - div
+  - definition_id: "typescript-examples:baa31a9b47e720c8fd4c2c02751ba309ee07334eacc3e0e0fb899f0d28c3b2e3:WrappedComponent"
+    name: WrappedComponent
+    export_ids:
+      - "typescript-examples:src/wrapped-components/components:WrappedComponent"
+    package_name: typescript-examples
+    source_path: src/wrapped-components/components.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - div
+  - definition_id: "typescript-examples:fd775f3e8cc1846eec57ce3c17a0cfd9e91132918e2616cbe37f5c154188c157:Wrapped"
+    name: Wrapped
+    export_ids:
+      - "typescript-examples:src/wrapped-components/double-wrapper:Wrapped"
+    package_name: typescript-examples
+    source_path: src/wrapped-components/double-wrapper.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - div
+  - definition_id: "typescript-examples:fd775f3e8cc1846eec57ce3c17a0cfd9e91132918e2616cbe37f5c154188c157:WrappedFromWrapperWithComponentArg"
+    name: WrappedFromWrapperWithComponentArg
+    export_ids:
+      - "typescript-examples:src/wrapped-components/double-wrapper:WrappedFromWrapperWithComponentArg"
+    package_name: typescript-examples
+    source_path: src/wrapped-components/double-wrapper.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - div
+  - definition_id: "typescript-examples:fd775f3e8cc1846eec57ce3c17a0cfd9e91132918e2616cbe37f5c154188c157:WrappedWithComponentArg"
+    name: WrappedWithComponentArg
+    export_ids:
+      - "typescript-examples:src/wrapped-components/double-wrapper:WrappedWithComponentArg"
+    package_name: typescript-examples
+    source_path: src/wrapped-components/double-wrapper.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - div
+  - definition_id: "typescript-examples:fd775f3e8cc1846eec57ce3c17a0cfd9e91132918e2616cbe37f5c154188c157:WrappedWithComponentArgFromWrapperWithComponentArg"
+    name: WrappedWithComponentArgFromWrapperWithComponentArg
+    export_ids:
+      - "typescript-examples:src/wrapped-components/double-wrapper:WrappedWithComponentArgFromWrapperWithComponentArg"
+    package_name: typescript-examples
+    source_path: src/wrapped-components/double-wrapper.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - div
+  - definition_id: "typescript-examples:eb4db0f8d55b445b4e092e919cbe2696218184a09739885388ec8760d37d4a8d:Button"
+    name: Button
+    export_ids:
+      - "typescript-examples:src/wrapped-components/sample-issues:Button"
+    package_name: typescript-examples
+    source_path: src/wrapped-components/sample-issues.tsx
+    dependencies: []
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:eb4db0f8d55b445b4e092e919cbe2696218184a09739885388ec8760d37d4a8d:ComponentWrappedByObjectAssign"
+    name: ComponentWrappedByObjectAssign
+    export_ids:
+      - "typescript-examples:src/wrapped-components/sample-issues:ComponentWrappedByObjectAssign"
+    package_name: typescript-examples
+    source_path: src/wrapped-components/sample-issues.tsx
+    dependencies:
+      - from: "typescript-examples:eb4db0f8d55b445b4e092e919cbe2696218184a09739885388ec8760d37d4a8d:ComponentWrappedByObjectAssign"
+        to: "@acme/copper:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:CopperButton"
+        references:
+          - trace:
+              - "@acme/copper:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:CopperButton"
+            usages: []
+      - from: "typescript-examples:eb4db0f8d55b445b4e092e919cbe2696218184a09739885388ec8760d37d4a8d:ComponentWrappedByObjectAssign"
+        to: "typescript-examples:eb4db0f8d55b445b4e092e919cbe2696218184a09739885388ec8760d37d4a8d:SampleComponent"
+        references:
+          - trace: []
+            usages: []
+      - from: "typescript-examples:eb4db0f8d55b445b4e092e919cbe2696218184a09739885388ec8760d37d4a8d:ComponentWrappedByObjectAssign"
+        to: "typescript-examples:eb4db0f8d55b445b4e092e919cbe2696218184a09739885388ec8760d37d4a8d:StyledWrappedComponent"
+        references:
+          - trace: []
+            usages: []
+      - from: "typescript-examples:eb4db0f8d55b445b4e092e919cbe2696218184a09739885388ec8760d37d4a8d:ComponentWrappedByObjectAssign"
+        to: "typescript-examples:eb4db0f8d55b445b4e092e919cbe2696218184a09739885388ec8760d37d4a8d:WrappedCopperComponent"
+        references:
+          - trace: []
+            usages: []
+    props: []
+    html_elements:
+      - div
+      - ul
+  - definition_id: "typescript-examples:eb4db0f8d55b445b4e092e919cbe2696218184a09739885388ec8760d37d4a8d:CopperSimpleComponent"
+    name: CopperSimpleComponent
+    export_ids:
+      - "typescript-examples:src/wrapped-components/sample-issues:CopperSimpleComponent"
+    package_name: typescript-examples
+    source_path: src/wrapped-components/sample-issues.tsx
+    dependencies:
+      - from: "typescript-examples:eb4db0f8d55b445b4e092e919cbe2696218184a09739885388ec8760d37d4a8d:CopperSimpleComponent"
+        to: "@acme/copper:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:CopperButton"
+        references:
+          - trace:
+              - "@acme/copper:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:CopperButton"
+            usages:
+              - start:
+                  line: 23
+                  column: 17
+                end:
+                  line: 23
+                  column: 51
+                props:
+                  - name: children
+                    value: JSXElement
+    props: []
+    html_elements:
+      - div
+  - definition_id: "typescript-examples:eb4db0f8d55b445b4e092e919cbe2696218184a09739885388ec8760d37d4a8d:HoveringComponent"
+    name: HoveringComponent
+    export_ids:
+      - "typescript-examples:src/wrapped-components/sample-issues:HoveringComponent"
+    package_name: typescript-examples
+    source_path: src/wrapped-components/sample-issues.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - img
+  - definition_id: "typescript-examples:eb4db0f8d55b445b4e092e919cbe2696218184a09739885388ec8760d37d4a8d:IntlComponent"
+    name: IntlComponent
+    export_ids:
+      - "typescript-examples:src/wrapped-components/sample-issues:IntlComponent"
+    package_name: typescript-examples
+    source_path: src/wrapped-components/sample-issues.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - img
+  - definition_id: "typescript-examples:eb4db0f8d55b445b4e092e919cbe2696218184a09739885388ec8760d37d4a8d:SampleComponent"
+    name: SampleComponent
+    export_ids:
+      - "typescript-examples:src/wrapped-components/sample-issues:SampleComponent"
+      - "typescript-examples:src/wrapped-components/sample-issues:StyledWrappedComponent.SampleComponent"
+    package_name: typescript-examples
+    source_path: src/wrapped-components/sample-issues.tsx
+    dependencies:
+      - from: "typescript-examples:eb4db0f8d55b445b4e092e919cbe2696218184a09739885388ec8760d37d4a8d:SampleComponent"
+        to: "@acme/copper:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:CopperButton"
+        references:
+          - trace:
+              - "@acme/copper:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:CopperButton"
+            usages:
+              - start:
+                  line: 43
+                  column: 17
+                end:
+                  line: 43
+                  column: 77
+                props:
+                  - name: ""
+                    value: "Spread { value: Identifier { value: \"item\" } }"
+                  - name: classes
+                    value: "Identifier { value: \"classes\" }"
+                  - name: key
+                    value: "Member { value: Identifier { value: \"item\" }, property: String { value: \"slug\" } }"
+    props:
+      - name: classes
+        default_value: NONE
+      - name: items
+        default_value: NONE
+    html_elements:
+      - ul
+  - definition_id: "typescript-examples:eb4db0f8d55b445b4e092e919cbe2696218184a09739885388ec8760d37d4a8d:StyledWrappedComponent"
+    name: StyledWrappedComponent
+    export_ids:
+      - "typescript-examples:src/wrapped-components/sample-issues:StyledWrappedComponent"
+    package_name: typescript-examples
+    source_path: src/wrapped-components/sample-issues.tsx
+    dependencies:
+      - from: "typescript-examples:eb4db0f8d55b445b4e092e919cbe2696218184a09739885388ec8760d37d4a8d:StyledWrappedComponent"
+        to: "typescript-examples:eb4db0f8d55b445b4e092e919cbe2696218184a09739885388ec8760d37d4a8d:SampleComponent"
+        references:
+          - trace: []
+            usages: []
+    props: []
+    html_elements:
+      - ul
+  - definition_id: "typescript-examples:eb4db0f8d55b445b4e092e919cbe2696218184a09739885388ec8760d37d4a8d:WrappedCopperClassComponent"
+    name: WrappedCopperClassComponent
+    export_ids:
+      - "typescript-examples:src/wrapped-components/sample-issues:WrappedCopperClassComponent"
+    package_name: typescript-examples
+    source_path: src/wrapped-components/sample-issues.tsx
+    dependencies:
+      - from: "typescript-examples:eb4db0f8d55b445b4e092e919cbe2696218184a09739885388ec8760d37d4a8d:WrappedCopperClassComponent"
+        to: "@acme/copper:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:CopperButton"
+        references:
+          - trace:
+              - "@acme/copper:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:CopperButton"
+            usages:
+              - start:
+                  line: 32
+                  column: 21
+                end:
+                  line: 32
+                  column: 55
+                props:
+                  - name: children
+                    value: JSXElement
+    props: []
+    html_elements:
+      - div
+  - definition_id: "typescript-examples:eb4db0f8d55b445b4e092e919cbe2696218184a09739885388ec8760d37d4a8d:WrappedCopperComponent"
+    name: WrappedCopperComponent
+    export_ids:
+      - "typescript-examples:src/wrapped-components/sample-issues:StyledWrappedComponent.WrappedCopperComponent"
+      - "typescript-examples:src/wrapped-components/sample-issues:WrappedCopperComponent"
+    package_name: typescript-examples
+    source_path: src/wrapped-components/sample-issues.tsx
+    dependencies:
+      - from: "typescript-examples:eb4db0f8d55b445b4e092e919cbe2696218184a09739885388ec8760d37d4a8d:WrappedCopperComponent"
+        to: "@acme/copper:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:CopperButton"
+        references:
+          - trace:
+              - "@acme/copper:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:CopperButton"
+            usages:
+              - start:
+                  line: 27
+                  column: 17
+                end:
+                  line: 27
+                  column: 51
+                props:
+                  - name: children
+                    value: JSXElement
+    props: []
+    html_elements:
+      - div
+  - definition_id: "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:AnonymousWrappedComponent"
+    name: AnonymousWrappedComponent
+    export_ids:
+      - "typescript-examples:src/wrapped-components/wrapped-components:AnonymousWrappedComponent"
+    package_name: typescript-examples
+    source_path: src/wrapped-components/wrapped-components.tsx
+    dependencies:
+      - from: "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:AnonymousWrappedComponent"
+        to: "react-intl:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:IntlLabel"
+        references:
+          - trace:
+              - "react-intl:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:IntlLabel"
+            usages:
+              - start:
+                  line: 38
+                  column: 34
+                end:
+                  line: 38
+                  column: 58
+                props:
+                  - name: id
+                    value: "String { value: \"hello\" }"
+      - from: "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:AnonymousWrappedComponent"
+        to: "typescript-examples:baa31a9b47e720c8fd4c2c02751ba309ee07334eacc3e0e0fb899f0d28c3b2e3:PlainComponent"
+        references:
+          - trace:
+              - "typescript-examples:baa31a9b47e720c8fd4c2c02751ba309ee07334eacc3e0e0fb899f0d28c3b2e3:PlainComponent"
+            usages:
+              - start:
+                  line: 38
+                  column: 17
+                end:
+                  line: 38
+                  column: 34
+                props: []
+    props: []
+    html_elements:
+      - div
+  - definition_id: "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:ComponentWithClassWrapperJsx"
+    name: ComponentWithClassWrapperJsx
+    export_ids:
+      - "typescript-examples:src/wrapped-components/wrapped-components:ComponentWithClassWrapperJsx"
+    package_name: typescript-examples
+    source_path: src/wrapped-components/wrapped-components.tsx
+    dependencies:
+      - from: "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:ComponentWithClassWrapperJsx"
+        to: "typescript-examples:baa31a9b47e720c8fd4c2c02751ba309ee07334eacc3e0e0fb899f0d28c3b2e3:WrappedComponent"
+        references:
+          - trace:
+              - "typescript-examples:baa31a9b47e720c8fd4c2c02751ba309ee07334eacc3e0e0fb899f0d28c3b2e3:WrappedComponent"
+            usages: []
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:ComponentWithClassWrapperNoJsx"
+    name: ComponentWithClassWrapperNoJsx
+    export_ids:
+      - "typescript-examples:src/wrapped-components/wrapped-components:ComponentWithClassWrapperNoJsx"
+    package_name: typescript-examples
+    source_path: src/wrapped-components/wrapped-components.tsx
+    dependencies:
+      - from: "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:ComponentWithClassWrapperNoJsx"
+        to: "typescript-examples:baa31a9b47e720c8fd4c2c02751ba309ee07334eacc3e0e0fb899f0d28c3b2e3:WrappedComponent"
+        references:
+          - trace:
+              - "typescript-examples:baa31a9b47e720c8fd4c2c02751ba309ee07334eacc3e0e0fb899f0d28c3b2e3:WrappedComponent"
+            usages: []
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:ComponentWithExternalWrapper"
+    name: ComponentWithExternalWrapper
+    export_ids:
+      - "typescript-examples:src/wrapped-components/wrapped-components:ComponentWithExternalWrapper"
+    package_name: typescript-examples
+    source_path: src/wrapped-components/wrapped-components.tsx
+    dependencies:
+      - from: "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:ComponentWithExternalWrapper"
+        to: "typescript-examples:baa31a9b47e720c8fd4c2c02751ba309ee07334eacc3e0e0fb899f0d28c3b2e3:WrappedComponent"
+        references:
+          - trace:
+              - "typescript-examples:baa31a9b47e720c8fd4c2c02751ba309ee07334eacc3e0e0fb899f0d28c3b2e3:WrappedComponent"
+            usages: []
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:ComponentWithIntl"
+    name: ComponentWithIntl
+    export_ids:
+      - "typescript-examples:src/wrapped-components/wrapped-components:ComponentWithIntl"
+    package_name: typescript-examples
+    source_path: src/wrapped-components/wrapped-components.tsx
+    dependencies:
+      - from: "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:ComponentWithIntl"
+        to: "react-intl:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:IntlLabel"
+        references:
+          - trace:
+              - "react-intl:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:IntlLabel"
+            usages:
+              - start:
+                  line: 16
+                  column: 36
+                end:
+                  line: 16
+                  column: 60
+                props:
+                  - name: id
+                    value: "String { value: \"hello\" }"
+      - from: "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:ComponentWithIntl"
+        to: "typescript-examples:baa31a9b47e720c8fd4c2c02751ba309ee07334eacc3e0e0fb899f0d28c3b2e3:WrappedComponent"
+        references:
+          - trace:
+              - "typescript-examples:baa31a9b47e720c8fd4c2c02751ba309ee07334eacc3e0e0fb899f0d28c3b2e3:WrappedComponent"
+            usages:
+              - start:
+                  line: 16
+                  column: 17
+                end:
+                  line: 16
+                  column: 36
+                props: []
+    props: []
+    html_elements:
+      - div
+  - definition_id: "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:ComponentWithWrapperJsx"
+    name: ComponentWithWrapperJsx
+    export_ids:
+      - "typescript-examples:src/wrapped-components/wrapped-components:ComponentWithWrapperJsx"
+    package_name: typescript-examples
+    source_path: src/wrapped-components/wrapped-components.tsx
+    dependencies:
+      - from: "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:ComponentWithWrapperJsx"
+        to: "typescript-examples:baa31a9b47e720c8fd4c2c02751ba309ee07334eacc3e0e0fb899f0d28c3b2e3:WrappedComponent"
+        references:
+          - trace:
+              - "typescript-examples:baa31a9b47e720c8fd4c2c02751ba309ee07334eacc3e0e0fb899f0d28c3b2e3:WrappedComponent"
+            usages: []
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:ComponentWithWrapperNoJsx"
+    name: ComponentWithWrapperNoJsx
+    export_ids:
+      - "typescript-examples:src/wrapped-components/wrapped-components:ComponentWithWrapperNoJsx"
+    package_name: typescript-examples
+    source_path: src/wrapped-components/wrapped-components.tsx
+    dependencies:
+      - from: "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:ComponentWithWrapperNoJsx"
+        to: "typescript-examples:baa31a9b47e720c8fd4c2c02751ba309ee07334eacc3e0e0fb899f0d28c3b2e3:WrappedComponent"
+        references:
+          - trace:
+              - "typescript-examples:baa31a9b47e720c8fd4c2c02751ba309ee07334eacc3e0e0fb899f0d28c3b2e3:WrappedComponent"
+            usages: []
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:ExternalComponentWithWrapperJsx"
+    name: ExternalComponentWithWrapperJsx
+    export_ids:
+      - "typescript-examples:src/wrapped-components/wrapped-components:ExternalComponentWithWrapperJsx"
+    package_name: typescript-examples
+    source_path: src/wrapped-components/wrapped-components.tsx
+    dependencies:
+      - from: "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:ExternalComponentWithWrapperJsx"
+        to: "react-intl:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:IntlLabel"
+        references:
+          - trace:
+              - "react-intl:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:IntlLabel"
+            usages: []
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:LocalComponentWithClassWrapperJsx"
+    name: LocalComponentWithClassWrapperJsx
+    export_ids:
+      - "typescript-examples:src/wrapped-components/wrapped-components:LocalComponentWithClassWrapperJsx"
+    package_name: typescript-examples
+    source_path: src/wrapped-components/wrapped-components.tsx
+    dependencies:
+      - from: "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:LocalComponentWithClassWrapperJsx"
+        to: "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:ComponentWithIntl"
+        references:
+          - trace: []
+            usages: []
+    props: []
+    html_elements:
+      - div
+  - definition_id: "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:LocalComponentWithClassWrapperNoJsx"
+    name: LocalComponentWithClassWrapperNoJsx
+    export_ids:
+      - "typescript-examples:src/wrapped-components/wrapped-components:LocalComponentWithClassWrapperNoJsx"
+    package_name: typescript-examples
+    source_path: src/wrapped-components/wrapped-components.tsx
+    dependencies:
+      - from: "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:LocalComponentWithClassWrapperNoJsx"
+        to: "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:ComponentWithIntl"
+        references:
+          - trace: []
+            usages: []
+    props: []
+    html_elements:
+      - div
+  - definition_id: "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:LocalComponentWithExternalWrapper"
+    name: LocalComponentWithExternalWrapper
+    export_ids:
+      - "typescript-examples:src/wrapped-components/wrapped-components:LocalComponentWithExternalWrapper"
+    package_name: typescript-examples
+    source_path: src/wrapped-components/wrapped-components.tsx
+    dependencies:
+      - from: "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:LocalComponentWithExternalWrapper"
+        to: "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:ComponentWithIntl"
+        references:
+          - trace: []
+            usages: []
+    props: []
+    html_elements:
+      - div
+  - definition_id: "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:LocalComponentWithWrapperJsx"
+    name: LocalComponentWithWrapperJsx
+    export_ids:
+      - "typescript-examples:src/wrapped-components/wrapped-components:LocalComponentWithWrapperJsx"
+    package_name: typescript-examples
+    source_path: src/wrapped-components/wrapped-components.tsx
+    dependencies:
+      - from: "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:LocalComponentWithWrapperJsx"
+        to: "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:ComponentWithIntl"
+        references:
+          - trace: []
+            usages: []
+    props: []
+    html_elements:
+      - div
+  - definition_id: "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:LocalComponentWithWrapperNoJsx"
+    name: LocalComponentWithWrapperNoJsx
+    export_ids:
+      - "typescript-examples:src/wrapped-components/wrapped-components:LocalComponentWithWrapperNoJsx"
+    package_name: typescript-examples
+    source_path: src/wrapped-components/wrapped-components.tsx
+    dependencies:
+      - from: "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:LocalComponentWithWrapperNoJsx"
+        to: "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:ComponentWithIntl"
+        references:
+          - trace: []
+            usages: []
+    props: []
+    html_elements:
+      - div

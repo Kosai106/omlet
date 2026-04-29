@@ -1,0 +1,134 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&component_results"
+---
+num_of_components: 6
+components:
+  - definition_id: "typescript-paths:3a42ac99adc7821f583e8cdec9d448ca76b2ae5e2e01a29f3b3bd44137f6b276:Button"
+    name: Button
+    export_ids:
+      - "typescript-paths:pack-b/component/button:Button"
+      - "typescript-paths:pack-b/component:Button"
+    package_name: typescript-paths
+    source_path: pack-b/component/button.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - button
+  - definition_id: "typescript-paths:f48f480d7d76f72ade8670fc4ff78cfc64d83301df503aa7b77eca9c5c94488a:default"
+    name: PackBMain
+    export_ids:
+      - "typescript-paths:pack-b:default"
+    package_name: typescript-paths
+    source_path: pack-b/index.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - img
+  - definition_id: "typescript-paths:b13abac09964a1ee70ff0c476cfdeeae8a689b0b450084718cb490eb0ea6ee58:default"
+    name: PackBTitle
+    export_ids:
+      - "typescript-paths:pack-b/title:default"
+    package_name: typescript-paths
+    source_path: pack-b/title.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - h1
+  - definition_id: "typescript-paths:3e2c389f6ff62ecfbb815cda8e2af58ba3e35ec4a49a974bf699f4d8f59908c0:default"
+    name: Input
+    export_ids:
+      - "typescript-paths:src/alias-comps/input:default"
+    package_name: typescript-paths
+    source_path: src/alias-comps/input.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - input
+  - definition_id: "typescript-paths:25a6634263c1b1f6fc4697a04e2b9904ea4b042a89af59dc93ec1f5d44848a26:App"
+    name: App
+    export_ids:
+      - "typescript-paths:.:App"
+      - "typescript-paths:src:App"
+    package_name: typescript-paths
+    source_path: src/index.tsx
+    dependencies:
+      - from: "typescript-paths:25a6634263c1b1f6fc4697a04e2b9904ea4b042a89af59dc93ec1f5d44848a26:App"
+        to: "typescript-paths:3a42ac99adc7821f583e8cdec9d448ca76b2ae5e2e01a29f3b3bd44137f6b276:Button"
+        references:
+          - trace:
+              - "typescript-paths:5266e8c35397504b09d02d33a48e3bc3729d7ad5ddd894ab6dd8b18e57a551b0:Button"
+              - "typescript-paths:3a42ac99adc7821f583e8cdec9d448ca76b2ae5e2e01a29f3b3bd44137f6b276:Button"
+            usages:
+              - start:
+                  line: 16
+                  column: 7
+                end:
+                  line: 16
+                  column: 16
+                props: []
+      - from: "typescript-paths:25a6634263c1b1f6fc4697a04e2b9904ea4b042a89af59dc93ec1f5d44848a26:App"
+        to: "typescript-paths:3e2c389f6ff62ecfbb815cda8e2af58ba3e35ec4a49a974bf699f4d8f59908c0:default"
+        references:
+          - trace:
+              - "typescript-paths:3e2c389f6ff62ecfbb815cda8e2af58ba3e35ec4a49a974bf699f4d8f59908c0:default"
+            usages:
+              - start:
+                  line: 13
+                  column: 7
+                end:
+                  line: 13
+                  column: 20
+                props: []
+      - from: "typescript-paths:25a6634263c1b1f6fc4697a04e2b9904ea4b042a89af59dc93ec1f5d44848a26:App"
+        to: "typescript-paths:b13abac09964a1ee70ff0c476cfdeeae8a689b0b450084718cb490eb0ea6ee58:default"
+        references:
+          - trace:
+              - "typescript-paths:b13abac09964a1ee70ff0c476cfdeeae8a689b0b450084718cb490eb0ea6ee58:default"
+            usages:
+              - start:
+                  line: 14
+                  column: 7
+                end:
+                  line: 14
+                  column: 20
+                props: []
+      - from: "typescript-paths:25a6634263c1b1f6fc4697a04e2b9904ea4b042a89af59dc93ec1f5d44848a26:App"
+        to: "typescript-paths:f48f480d7d76f72ade8670fc4ff78cfc64d83301df503aa7b77eca9c5c94488a:default"
+        references:
+          - trace:
+              - "typescript-paths:f48f480d7d76f72ade8670fc4ff78cfc64d83301df503aa7b77eca9c5c94488a:default"
+            usages:
+              - start:
+                  line: 15
+                  column: 7
+                end:
+                  line: 15
+                  column: 19
+                props: []
+    props: []
+    html_elements: []
+  - definition_id: "typescript-paths:25a6634263c1b1f6fc4697a04e2b9904ea4b042a89af59dc93ec1f5d44848a26:Applet"
+    name: Applet
+    export_ids:
+      - "typescript-paths:.:Applet"
+      - "typescript-paths:src:Applet"
+    package_name: typescript-paths
+    source_path: src/index.tsx
+    dependencies:
+      - from: "typescript-paths:25a6634263c1b1f6fc4697a04e2b9904ea4b042a89af59dc93ec1f5d44848a26:Applet"
+        to: "typescript-paths:3e2c389f6ff62ecfbb815cda8e2af58ba3e35ec4a49a974bf699f4d8f59908c0:default"
+        references:
+          - trace:
+              - "typescript-paths:3e2c389f6ff62ecfbb815cda8e2af58ba3e35ec4a49a974bf699f4d8f59908c0:default"
+            usages:
+              - start:
+                  line: 7
+                  column: 10
+                end:
+                  line: 7
+                  column: 35
+                props: []
+    props: []
+    html_elements: []
+

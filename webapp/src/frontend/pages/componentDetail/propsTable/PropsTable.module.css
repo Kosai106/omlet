@@ -1,0 +1,220 @@
+.emptyState {
+    display: flex;
+    flex-direction: column;
+    padding: 96px var(--spacing-xxl);
+    gap: var(--spacing-s);
+    align-items: center;
+    background-color: var(--background-tertiary-color);
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--label-primary-color)
+}
+
+.emptyState .kaomoji {
+    color: var(--label-secondary-color);
+}
+
+.propsTable {
+    padding: 0 var(--spacing-xs);
+    display: grid;
+    grid-template-columns: 1fr 1fr max-content;
+    overflow: auto;
+}
+
+
+.propsTable .header {
+    display: contents;
+}
+
+.propsTable .cell.propName {
+    padding: 0 var(--spacing-xxl-2) 0 var(--spacing-s);
+    border-radius: var(--spacing-xxs) 0 0 var(--spacing-xxs);
+}
+
+.propsTable .cell.numberOfUsed {
+    padding: 0 var(--spacing-s) 0 var(--spacing-xxl-2);
+    justify-content: flex-end;
+    border-radius: 0 var(--spacing-xxs) var(--spacing-xxs) 0;
+}
+
+.propsTable .header .cell {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    height: 43px;
+    gap: 6px;
+    background-color: var(--background-primary-color);
+    z-index: 1;
+}
+
+.propsTable .header .cell.propName {
+    color: var(--label-primary-color);
+    gap: var(--spacing-xs);
+}
+
+/* TODO: remove alignment workaround and find a better solution */
+.propsTable .header .cell.propName span {
+    margin-bottom: 2px;
+}
+
+
+.propsTable .header .cell:not(.propName) {
+    color: var(--label-secondary-color);
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.propsTable .row {
+    display: contents;
+}
+
+.propsTable .row .cell {
+    display: flex;
+    align-items: center;
+    height: 56px;
+    gap: var(--spacing-m);
+    font-size: 13px;
+    color: var(--label-primary-color);
+}
+
+.propsTable .row.expandable .cell {
+    cursor: pointer;
+}
+
+
+.propsTable.loading .row .cell .skeleton {
+    height: var(--spacing-s);
+}
+
+.propsTable:not(.loading) .row.expandable:not(.expanded):hover .cell {
+    background-color: var(--background-tertiary-color);
+}
+
+.propsTable .row.expanded .cell {
+    background-color: rgb(var(--accent-green-rgb), 0.1);
+}
+
+.propsTable .row .cell.propName {
+    padding: 0 var(--spacing-xxl-2) 0 var(--spacing-s);
+    font-family: var(--font-family-secondary);
+}
+
+.propsTable.loading .row .cell.propName .skeleton {
+    width: 160px;
+}
+
+.propsTable .row .cell.defaultValue {
+    font-family: var(--font-family-secondary);
+    color: var(--label-secondary-color);
+}
+
+.propsTable.loading .row .cell.defaultValue .skeleton {
+    width: 120px;
+}
+
+.propsTable .row .cell.numberOfUsed {
+    padding: 0 var(--spacing-s) 0 var(--spacing-xxl-2);
+    line-height: 18px;
+    justify-content: flex-end;
+}
+
+.propsTable .row .cell.numberOfUsed .usageDetailButton {
+    gap: 6px;
+    padding-right: 12px;
+    visibility: hidden;
+}
+
+.propsTable .row:hover .cell.numberOfUsed .usageDetailButton {
+    visibility: visible;
+}
+
+.propsTable .row .cell.numberOfUsed .count {
+    display: flex;
+    gap: 6px;
+    height: var(--spacing-m);
+    align-items: center;
+}
+
+.propsTable.loading .row .cell.numberOfUsed .skeleton {
+    width: 32px;
+}
+
+.usageIndicator {
+    display: flex;
+    gap: 3px;
+    padding: 2px 3px;
+    background-color: rgba(var(--accent-green-rgb), 0.2);
+    border-radius: 2px;
+}
+
+.usageIndicator .bar {
+    width: 4px;
+    height: 12px;
+    border-radius: 1px;
+    background-color: var(--accent-green);
+}
+
+.usageIndicator .bar.empty {
+    background-color: rgba(var(--accent-green-rgb), 0.2);
+}
+
+.usageIndicator.empty {
+    background-color: rgba(var(--accent-yellow-rgb), 0.2);
+}
+
+.usageIndicator.empty .bar.empty {
+    background-color: rgba(var(--accent-yellow-rgb), 0.2);
+}
+
+.propsTable .row .propValuesDetail {
+    grid-column: span 3;
+    display: flex;
+    padding: var(--spacing-s);
+    gap: var(--spacing-m)
+}
+
+.propsTable .row .propValuesDetail .bar {
+    border-radius: 2px;
+    width: 4px;
+    align-self: stretch;
+    background-color: rgba(var(--accent-green-rgb), 0.15);
+}
+
+.propsTable .row .propValuesDetail .content {
+    flex: 1;
+    padding: var(--spacing-xs) 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.propsTable .row .propValuesDetail .content .barChart {
+    padding: 0;
+    max-width: 640px;
+}
+
+.propsTable .row .propValuesDetail .content .barChart .barLabel {
+    flex: 0 0 240px;
+    font-family: var(--font-family-secondary);
+    color: var(--label-secondary-color);
+}
+
+.propsTable .row .separator {
+    grid-column: span 3;
+    height: var(--border-width);
+    background-color: var(--border-primary-color);
+    margin: 0 var(--spacing-s);
+}
+
+.propsTable:not(.loading) .row.expandable:is(:hover, .expanded) .separator {
+    background: none;
+}
+
+.propsTable:not(.loading) .row.expandable:is(:hover, .expanded)+.row .separator {
+    background: none;
+}
+
+.tooltipPropName {
+    font-family: var(--font-family-secondary);
+}

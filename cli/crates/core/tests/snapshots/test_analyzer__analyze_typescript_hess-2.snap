@@ -1,0 +1,45 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&export_results"
+---
+num_of_exports: 5
+exports:
+  - name: NamedComponent
+    source_path: src/hess/component/index.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:af9d3108c004e5be67a33ba94c2bbb197b81aa7b7a88d1cf897d2bbcb421a812:NamedComponent"
+  - name: default
+    source_path: src/hess/component/componentBody.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:73dbdda807d648a93e1bf24c265133e1c52d909e64cb556a8b5b8a807d9a637d:default"
+      - "typescript-examples:3a82afdf34d9b002f3a9394e552ff19d3a2a7db7cb96dbb6a1dcd091bc4d16f3:default"
+  - name: default
+    source_path: src/hess/component/index.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:af9d3108c004e5be67a33ba94c2bbb197b81aa7b7a88d1cf897d2bbcb421a812:default"
+      - "typescript-examples:73dbdda807d648a93e1bf24c265133e1c52d909e64cb556a8b5b8a807d9a637d:default"
+      - "typescript-examples:3a82afdf34d9b002f3a9394e552ff19d3a2a7db7cb96dbb6a1dcd091bc4d16f3:default"
+  - name: default
+    source_path: src/hess/component/real.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:3a82afdf34d9b002f3a9394e552ff19d3a2a7db7cb96dbb6a1dcd091bc4d16f3:default"
+  - name: default
+    source_path: src/hess/main.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:7c3bfb5e7cda9bce1047257d624deced6a00d4679438ee38f921b479aab5ed44:default"
+

@@ -1,0 +1,329 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&component_results"
+---
+num_of_components: 17
+components:
+  - definition_id: "@acme/button-component:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:default"
+    name: "@acme/button-component"
+    export_ids: []
+    package_name: "@acme/button-component"
+    source_path: ""
+    dependencies: []
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:b424b681f43088ab16f34e79060879e85d45301b07da1fbff944620ab198be9f:ComponentUsingNamedWrappedComponent"
+    name: ComponentUsingNamedWrappedComponent
+    export_ids:
+      - "typescript-examples:src/module-decls/default-export/default-export-anon-expr-wrapped:ComponentUsingNamedWrappedComponent"
+    package_name: typescript-examples
+    source_path: src/module-decls/default-export/default-export-anon-expr-wrapped.tsx
+    dependencies:
+      - from: "typescript-examples:b424b681f43088ab16f34e79060879e85d45301b07da1fbff944620ab198be9f:ComponentUsingNamedWrappedComponent"
+        to: "typescript-examples:b424b681f43088ab16f34e79060879e85d45301b07da1fbff944620ab198be9f:NamedComponentWrapped"
+        references:
+          - trace: []
+            usages:
+              - start:
+                  line: 7
+                  column: 12
+                end:
+                  line: 7
+                  column: 36
+                props: []
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:b424b681f43088ab16f34e79060879e85d45301b07da1fbff944620ab198be9f:NamedComponentWrapped"
+    name: NamedComponentWrapped
+    export_ids:
+      - "typescript-examples:src/module-decls/default-export/default-export-anon-expr-wrapped:NamedComponentWrapped"
+    package_name: typescript-examples
+    source_path: src/module-decls/default-export/default-export-anon-expr-wrapped.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - div
+  - definition_id: "typescript-examples:b424b681f43088ab16f34e79060879e85d45301b07da1fbff944620ab198be9f:default"
+    name: default-export-anon-expr-wrapped
+    export_ids:
+      - "typescript-examples:src/module-decls/default-export/default-export-anon-expr-wrapped:default"
+    package_name: typescript-examples
+    source_path: src/module-decls/default-export/default-export-anon-expr-wrapped.tsx
+    dependencies:
+      - from: "typescript-examples:b424b681f43088ab16f34e79060879e85d45301b07da1fbff944620ab198be9f:default"
+        to: "typescript-examples:b424b681f43088ab16f34e79060879e85d45301b07da1fbff944620ab198be9f:NamedComponentWrapped"
+        references:
+          - trace: []
+            usages: []
+    props: []
+    html_elements:
+      - div
+  - definition_id: "typescript-examples:b14bbd35ab736464a554cebf5f011e0088564382d486dded1357c46012fbbc59:default"
+    name: default-export-anon-func-index
+    export_ids:
+      - "typescript-examples:src/module-decls/default-export/default-export-anon-func-index:default"
+    package_name: typescript-examples
+    source_path: src/module-decls/default-export/default-export-anon-func-index/index.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - div
+  - definition_id: "typescript-examples:b24f5fabb2b67f9365e6d186a5baf80e1b25b0fce727661d7daa74e3c1415533:default"
+    name: default-export-anon-func
+    export_ids:
+      - "typescript-examples:src/module-decls/default-export/default-export-anon-func:default"
+    package_name: typescript-examples
+    source_path: src/module-decls/default-export/default-export-anon-func.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - div
+  - definition_id: "typescript-examples:a08265ec926fb58ba1ccc6121ee3e5529ed098f8127768279893311220593640:ComponentUsingNamedComponentDoubleExport"
+    name: ComponentUsingNamedComponentDoubleExport
+    export_ids:
+      - "typescript-examples:src/module-decls/default-export/default-export-default-and-named:ComponentUsingNamedComponentDoubleExport"
+    package_name: typescript-examples
+    source_path: src/module-decls/default-export/default-export-default-and-named.tsx
+    dependencies:
+      - from: "typescript-examples:a08265ec926fb58ba1ccc6121ee3e5529ed098f8127768279893311220593640:ComponentUsingNamedComponentDoubleExport"
+        to: "typescript-examples:a08265ec926fb58ba1ccc6121ee3e5529ed098f8127768279893311220593640:NamedComponentDoubleExport"
+        references:
+          - trace: []
+            usages:
+              - start:
+                  line: 6
+                  column: 12
+                end:
+                  line: 6
+                  column: 41
+                props: []
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:a08265ec926fb58ba1ccc6121ee3e5529ed098f8127768279893311220593640:NamedComponentDoubleExport"
+    name: NamedComponentDoubleExport
+    export_ids:
+      - "typescript-examples:src/module-decls/default-export/default-export-default-and-named:NamedComponentDoubleExport"
+      - "typescript-examples:src/module-decls/default-export/default-export-default-and-named:default"
+    package_name: typescript-examples
+    source_path: src/module-decls/default-export/default-export-default-and-named.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - div
+  - definition_id: "typescript-examples:b093036782ab544fc44a3843d4c1a921cb7578cba9080168233beb61dd50a253:DefaultExportMain"
+    name: DefaultExportMain
+    export_ids:
+      - "typescript-examples:src/module-decls/default-export/default-export-main:DefaultExportMain"
+    package_name: typescript-examples
+    source_path: src/module-decls/default-export/default-export-main.tsx
+    dependencies:
+      - from: "typescript-examples:b093036782ab544fc44a3843d4c1a921cb7578cba9080168233beb61dd50a253:DefaultExportMain"
+        to: "@acme/button-component:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:default"
+        references:
+          - trace:
+              - "@acme/button-component:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:default"
+            usages:
+              - start:
+                  line: 23
+                  column: 13
+                end:
+                  line: 23
+                  column: 39
+                props: []
+      - from: "typescript-examples:b093036782ab544fc44a3843d4c1a921cb7578cba9080168233beb61dd50a253:DefaultExportMain"
+        to: "typescript-examples:3a535450b7390ccd615877f11c0ef38aba2689890eaef68a709219e982f2cfad:default"
+        references:
+          - trace:
+              - "typescript-examples:3a535450b7390ccd615877f11c0ef38aba2689890eaef68a709219e982f2cfad:default"
+            usages:
+              - start:
+                  line: 22
+                  column: 13
+                end:
+                  line: 22
+                  column: 28
+                props: []
+      - from: "typescript-examples:b093036782ab544fc44a3843d4c1a921cb7578cba9080168233beb61dd50a253:DefaultExportMain"
+        to: "typescript-examples:5702dbae9d5c475fa03398a93cd7c361ef5f91cecd27671402e979e138a89e9e:NamedComponentReExport"
+        references:
+          - trace:
+              - "typescript-examples:f3566e655b66baab0473b9a1d49d3b0832896da42bcf86eb9ad4633c00ed0451:default"
+              - "typescript-examples:5702dbae9d5c475fa03398a93cd7c361ef5f91cecd27671402e979e138a89e9e:NamedComponentReExport"
+            usages:
+              - start:
+                  line: 16
+                  column: 13
+                end:
+                  line: 16
+                  column: 26
+                props: []
+      - from: "typescript-examples:b093036782ab544fc44a3843d4c1a921cb7578cba9080168233beb61dd50a253:DefaultExportMain"
+        to: "typescript-examples:7989ae769d7f946009ebd0af76441e93b05afe5008d10b79bd85cb5287c79b1a:default"
+        references:
+          - trace:
+              - "typescript-examples:7989ae769d7f946009ebd0af76441e93b05afe5008d10b79bd85cb5287c79b1a:default"
+            usages:
+              - start:
+                  line: 15
+                  column: 13
+                end:
+                  line: 15
+                  column: 30
+                props: []
+      - from: "typescript-examples:b093036782ab544fc44a3843d4c1a921cb7578cba9080168233beb61dd50a253:DefaultExportMain"
+        to: "typescript-examples:a08265ec926fb58ba1ccc6121ee3e5529ed098f8127768279893311220593640:NamedComponentDoubleExport"
+        references:
+          - trace:
+              - "typescript-examples:a08265ec926fb58ba1ccc6121ee3e5529ed098f8127768279893311220593640:NamedComponentDoubleExport"
+            usages:
+              - start:
+                  line: 20
+                  column: 13
+                end:
+                  line: 20
+                  column: 42
+                props: []
+          - trace:
+              - "typescript-examples:a08265ec926fb58ba1ccc6121ee3e5529ed098f8127768279893311220593640:default"
+            usages:
+              - start:
+                  line: 19
+                  column: 13
+                end:
+                  line: 19
+                  column: 37
+                props: []
+      - from: "typescript-examples:b093036782ab544fc44a3843d4c1a921cb7578cba9080168233beb61dd50a253:DefaultExportMain"
+        to: "typescript-examples:b14bbd35ab736464a554cebf5f011e0088564382d486dded1357c46012fbbc59:default"
+        references:
+          - trace:
+              - "typescript-examples:b14bbd35ab736464a554cebf5f011e0088564382d486dded1357c46012fbbc59:default"
+            usages:
+              - start:
+                  line: 14
+                  column: 13
+                end:
+                  line: 14
+                  column: 29
+                props: []
+      - from: "typescript-examples:b093036782ab544fc44a3843d4c1a921cb7578cba9080168233beb61dd50a253:DefaultExportMain"
+        to: "typescript-examples:b24f5fabb2b67f9365e6d186a5baf80e1b25b0fce727661d7daa74e3c1415533:default"
+        references:
+          - trace:
+              - "typescript-examples:b24f5fabb2b67f9365e6d186a5baf80e1b25b0fce727661d7daa74e3c1415533:default"
+            usages:
+              - start:
+                  line: 18
+                  column: 13
+                end:
+                  line: 18
+                  column: 24
+                props: []
+      - from: "typescript-examples:b093036782ab544fc44a3843d4c1a921cb7578cba9080168233beb61dd50a253:DefaultExportMain"
+        to: "typescript-examples:b424b681f43088ab16f34e79060879e85d45301b07da1fbff944620ab198be9f:default"
+        references:
+          - trace:
+              - "typescript-examples:b424b681f43088ab16f34e79060879e85d45301b07da1fbff944620ab198be9f:default"
+            usages:
+              - start:
+                  line: 17
+                  column: 13
+                end:
+                  line: 17
+                  column: 31
+                props: []
+      - from: "typescript-examples:b093036782ab544fc44a3843d4c1a921cb7578cba9080168233beb61dd50a253:DefaultExportMain"
+        to: "typescript-examples:fb374baffc6e4f7a0662b21a2b1be276996bb9b0268e220b398be3c851443c2d:default"
+        references:
+          - trace:
+              - "typescript-examples:fb374baffc6e4f7a0662b21a2b1be276996bb9b0268e220b398be3c851443c2d:default"
+            usages:
+              - start:
+                  line: 21
+                  column: 13
+                end:
+                  line: 21
+                  column: 25
+                props: []
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:7989ae769d7f946009ebd0af76441e93b05afe5008d10b79bd85cb5287c79b1a:default"
+    name: NamedComponentIndex
+    export_ids:
+      - "typescript-examples:src/module-decls/default-export/default-export-named-func-index:default"
+    package_name: typescript-examples
+    source_path: src/module-decls/default-export/default-export-named-func-index/index.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - div
+  - definition_id: "typescript-examples:fb374baffc6e4f7a0662b21a2b1be276996bb9b0268e220b398be3c851443c2d:default"
+    name: NamedComponent
+    export_ids:
+      - "typescript-examples:src/module-decls/default-export/default-export-named-func:default"
+    package_name: typescript-examples
+    source_path: src/module-decls/default-export/default-export-named-func.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - div
+  - definition_id: "typescript-examples:3a535450b7390ccd615877f11c0ef38aba2689890eaef68a709219e982f2cfad:default"
+    name: NamedVarDeclComponent
+    export_ids:
+      - "typescript-examples:src/module-decls/default-export/default-export-named-var-decl:default"
+    package_name: typescript-examples
+    source_path: src/module-decls/default-export/default-export-named-var-decl.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - div
+  - definition_id: "typescript-examples:5702dbae9d5c475fa03398a93cd7c361ef5f91cecd27671402e979e138a89e9e:NamedComponentReExport"
+    name: NamedComponentReExport
+    export_ids:
+      - "typescript-examples:src/module-decls/default-export/default-export-reexport/component:NamedComponentReExport"
+      - "typescript-examples:src/module-decls/default-export/default-export-reexport/default-export-reexport:default"
+    package_name: typescript-examples
+    source_path: src/module-decls/default-export/default-export-reexport/component.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - div
+  - definition_id: "typescript-examples:89075f92966e0aca390086b10803d145ff9f9612b1c85b21e129886d0d971b0c:exported"
+    name: exported
+    export_ids:
+      - "typescript-examples:src/module-decls/wildcard-export/exporter:exported"
+    package_name: typescript-examples
+    source_path: src/module-decls/wildcard-export/exporter.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - div
+  - definition_id: "typescript-examples:edb246d0758f94e190bcfb4dc52534326eef5e4b3d68284fd24fabac8c6fff6f:Main"
+    name: Main
+    export_ids:
+      - "typescript-examples:src/module-decls/wildcard-export/main:Main"
+    package_name: typescript-examples
+    source_path: src/module-decls/wildcard-export/main.tsx
+    dependencies: []
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:6997e7b3ce84150de8a30f6324a5a39a0fb116b74afe49dd80065b3509927d69:exported"
+    name: exported
+    export_ids:
+      - "typescript-examples:src/module-decls/wildcard-import/exporter:exported"
+    package_name: typescript-examples
+    source_path: src/module-decls/wildcard-import/exporter.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - div
+  - definition_id: "typescript-examples:dedcc8620be92641bbc8e9e0beda99cf1f75a9532b07d869914d1eac5b8371c6:Main"
+    name: Main
+    export_ids:
+      - "typescript-examples:src/module-decls/wildcard-import/main:Main"
+    package_name: typescript-examples
+    source_path: src/module-decls/wildcard-import/main.tsx
+    dependencies: []
+    props: []
+    html_elements: []
+

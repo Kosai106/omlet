@@ -1,0 +1,9 @@
+lockfileVersion: 5.4
+
+importers:
+
+  packages/pack-a:
+    specifiers:
+      pack-b: workspace:^1.0.0
+    dependencies:
+      pack-b: link:../pack-b

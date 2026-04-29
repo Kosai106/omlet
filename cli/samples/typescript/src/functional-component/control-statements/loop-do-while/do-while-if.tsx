@@ -1,0 +1,13 @@
+import React from "react";
+
+export function Sample() {
+    let i = 0;
+
+    do {
+        if (i === 5) {
+            return <div>Sample</div>;
+        }
+    } while (i++ < 10);
+
+    return 42;
+}

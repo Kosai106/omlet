@@ -1,0 +1,28 @@
+.input {
+    height: var(--spacing-l);
+}
+
+.button {
+    height: var(--spacing-l);
+    font-weight: 600;
+}
+
+.arrow {
+    transform: rotate(180deg);
+}
+
+.error {
+    font-size: 11px;
+    line-height: 15px;
+    color: var(--accent-warning-color);
+    margin-top: -12px;
+    margin-bottom: -8px;
+}
+
+.gmailButton {
+    align-self: center;
+}
+
+.main .emailSentColumn {
+    gap: var(--spacing-l);
+}

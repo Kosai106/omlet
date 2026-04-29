@@ -1,0 +1,285 @@
+---
+source: crates/core/tests/test_parser.rs
+expression: "&parser::Module::new(&RelativePathBuf::from_path(path.strip_prefix(&project_root).unwrap()).unwrap(),\n&project_root, &module_resolver,).unwrap()"
+input_file: samples/typescript/src/absolute-import/absolute-import-parent.tsx
+---
+source_path: src/absolute-import/absolute-import-parent.tsx
+id:
+  hash: "11593960075287755948"
+  path: src/absolute-import/absolute-import-parent.tsx
+  package_name: UNKNOWN
+  mtype: local
+created_at: ~
+updated_at: ~
+exports:
+  - source:
+      Internal: "AbsoluteImportParent#1"
+    exported_name: AbsoluteImportParent
+declarations:
+  - symbol: "AbsoluteImportChild#1"
+    source:
+      hash: "11593960075287755948"
+      path: src/absolute-import/absolute-import-parent.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('AbsoluteImportChild' type=dynamic), context: #1 }, source: ModuleId { hash: 15844164544862610796, path: \"package/src/absolute-import/absolute-import-child\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    inferred_type:
+      TypeOf:
+        symbol:
+          symbol: "AbsoluteImportChild#1"
+          source:
+            hash: "15844164544862610796"
+            path: package/src/absolute-import/absolute-import-child
+            package_name: UNKNOWN
+            mtype: local
+        is_local: false
+    start:
+      line: 4
+      column: 9
+    end:
+      line: 4
+      column: 28
+  - symbol: "AbsoluteImportParent#1"
+    source:
+      hash: "11593960075287755948"
+      path: src/absolute-import/absolute-import-parent.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<declaration>"
+    inferred_type:
+      Function:
+        - JSX
+    start:
+      line: 6
+      column: 8
+    end:
+      line: 11
+      column: 2
+scopes:
+  - owner: "__global#0"
+    parent: ~
+    children:
+      - "AbsoluteImportParent#1"
+      - "AbsoluteImportParent#1"
+    references:
+      - "AbsoluteImportChild#1"
+      - "AbsoluteImportParent#1"
+      - "div#2"
+    jsx_references:
+      - "AbsoluteImportChild#1"
+      - "div#2"
+  - owner: "AbsoluteImportParent#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "AbsoluteImportChild#1"
+      - "div#2"
+    jsx_references:
+      - "AbsoluteImportChild#1"
+      - "div#2"
+  - owner: "AbsoluteImportParent#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "AbsoluteImportChild#1"
+      - "div#2"
+    jsx_references:
+      - "AbsoluteImportChild#1"
+      - "div#2"
+body:
+  - type: ImportDeclaration
+    span:
+      start: 269
+      end: 356
+      ctxt: 0
+    specifiers:
+      - type: ImportSpecifier
+        span:
+          start: 277
+          end: 296
+          ctxt: 0
+        local:
+          type: Identifier
+          span:
+            start: 277
+            end: 296
+            ctxt: 1
+          value: AbsoluteImportChild
+          optional: false
+        imported: ~
+        isTypeOnly: false
+    source:
+      type: StringLiteral
+      span:
+        start: 303
+        end: 355
+        ctxt: 0
+      value: /package/src/absolute-import/absolute-import-child
+      raw: "\"/package/src/absolute-import/absolute-import-child\""
+    typeOnly: false
+    asserts: ~
+  - type: ExportDeclaration
+    span:
+      start: 358
+      end: 486
+      ctxt: 0
+    declaration:
+      async: false
+      body:
+        type: BlockStatement
+        span:
+          start: 397
+          end: 486
+          ctxt: 0
+        stmts:
+          - type: ReturnStatement
+            span:
+              start: 403
+              end: 484
+              ctxt: 0
+            argument:
+              type: JSXElement
+              span:
+                start: 410
+                end: 483
+                ctxt: 0
+              opening:
+                type: JSXOpeningElement
+                name:
+                  type: Identifier
+                  span:
+                    start: 411
+                    end: 414
+                    ctxt: 2
+                  value: div
+                  optional: false
+                span:
+                  start: 410
+                  end: 415
+                  ctxt: 0
+                attributes: []
+                selfClosing: false
+                typeArguments: ~
+              children:
+                - type: JSXText
+                  span:
+                    start: 415
+                    end: 424
+                    ctxt: 0
+                  value: "\n\n        "
+                  raw: "\n\n        "
+                - type: JSXElement
+                  span:
+                    start: 424
+                    end: 441
+                    ctxt: 0
+                  opening:
+                    type: JSXOpeningElement
+                    name:
+                      type: Identifier
+                      span:
+                        start: 425
+                        end: 428
+                        ctxt: 2
+                      value: div
+                      optional: false
+                    span:
+                      start: 424
+                      end: 429
+                      ctxt: 0
+                    attributes: []
+                    selfClosing: false
+                    typeArguments: ~
+                  children:
+                    - type: JSXText
+                      span:
+                        start: 429
+                        end: 435
+                        ctxt: 0
+                      value: Parent
+                      raw: Parent
+                  closing:
+                    type: JSXClosingElement
+                    span:
+                      start: 435
+                      end: 441
+                      ctxt: 0
+                    name:
+                      type: Identifier
+                      span:
+                        start: 437
+                        end: 440
+                        ctxt: 2
+                      value: div
+                      optional: false
+                - type: JSXText
+                  span:
+                    start: 441
+                    end: 450
+                    ctxt: 0
+                  value: "\n\n        "
+                  raw: "\n\n        "
+                - type: JSXElement
+                  span:
+                    start: 450
+                    end: 472
+                    ctxt: 0
+                  opening:
+                    type: JSXOpeningElement
+                    name:
+                      type: Identifier
+                      span:
+                        start: 451
+                        end: 470
+                        ctxt: 1
+                      value: AbsoluteImportChild
+                      optional: false
+                    span:
+                      start: 450
+                      end: 472
+                      ctxt: 0
+                    attributes: []
+                    selfClosing: true
+                    typeArguments: ~
+                  children: []
+                  closing: ~
+                - type: JSXText
+                  span:
+                    start: 472
+                    end: 477
+                    ctxt: 0
+                  value: "\n\n    "
+                  raw: "\n\n    "
+              closing:
+                type: JSXClosingElement
+                span:
+                  start: 477
+                  end: 483
+                  ctxt: 0
+                name:
+                  type: Identifier
+                  span:
+                    start: 479
+                    end: 482
+                    ctxt: 2
+                  value: div
+                  optional: false
+      declare: false
+      decorators: []
+      generator: false
+      identifier:
+        type: Identifier
+        span:
+          start: 374
+          end: 394
+          ctxt: 1
+        value: AbsoluteImportParent
+        optional: false
+      params: []
+      returnType: ~
+      span:
+        start: 365
+        end: 486
+        ctxt: 0
+      type: FunctionDeclaration
+      typeParameters: ~

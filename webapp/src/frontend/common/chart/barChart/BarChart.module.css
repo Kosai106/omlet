@@ -1,0 +1,100 @@
+.barChart {
+    --bar-height: 24px;
+
+    flex: 1;
+    position: relative;
+    max-height: 100%;
+    padding: 44px 48px 32px;
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    overflow: hidden;
+}
+
+.barChart.largeBar {
+    --bar-height: 32px;
+}
+
+.barChart.hasLegend {
+    padding-top: 0;
+}
+
+.barChart .barChartLegend {
+    padding-left: calc(18% + 16px);
+}
+
+.barChart.hasGrid {
+    padding-bottom: 0;
+}
+
+.barChart .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 4px 4px 4px 0;
+    overflow: auto;
+    scrollbar-width: thin;
+}
+
+.showAll {
+    height: 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.showAll .showAllLabel {
+    width: 18%;
+    text-align: right;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: var(--label-secondary-color);
+}
+
+.showAll .showAllButton {
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 8px;
+    background-color: var(--background-secondary-color);
+    color: var(--label-secondary-color);
+}
+
+.grid {
+    position: absolute;
+    z-index: -1;
+    top: 48px;
+    right: 52px;
+    bottom: 24px;
+    left: 48px;
+    padding-left: calc(18% - 2px);
+    display: flex;
+    justify-content: space-between;
+}
+
+.grid .gridLine {
+    position: relative;
+    width: 1px;
+}
+
+.grid .gridLine:not(:first-child):not(:last-child) {
+    background-color: var(--background-secondary-color);
+}
+
+.bottomAxis {
+    padding: 8px 0 0 calc(18% + 15px);
+    display: flex;
+    gap: calc(calc(100% - 324px) / 10);
+    border-top: 1px solid var(--background-secondary-color);
+}
+
+.bottomAxis .bottomAxisLabel {
+    flex: 0 0 32px;
+    width: 32px;
+    transform: translateX(-50%);
+    color: var(--label-secondary-color);
+    text-align: center;
+}

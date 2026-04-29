@@ -1,0 +1,10 @@
+{
+  "ignore": [
+    "packages/ignored-package/**/*"
+  ],
+  "workspaces": {
+    "main": {
+      "exports": "./src/index.ts"
+    }
+  }
+}

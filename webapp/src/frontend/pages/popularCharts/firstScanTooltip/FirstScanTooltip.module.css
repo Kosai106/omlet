@@ -1,0 +1,7 @@
+.firstScanTooltip {
+    position: absolute;
+    left: 16px;
+    bottom: 69px;
+    width: 320px;
+    z-index: 10;
+}

@@ -1,0 +1,39 @@
+.project {
+    display: flex;
+    height: 40px;
+    gap: 24px;
+    align-items: center;
+}
+
+.project .inputRenamedText {
+    width: 200px;
+}
+
+.project .repository {
+    flex: 1;
+    font-size: 12px;
+    line-height: 16px;
+    align-self: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: var(--label-secondary-color);;
+}
+
+.project .renamedText {
+    font-size: 11px;
+    line-height: 15px;
+    color: var(--label-secondary-color);
+    padding: 0 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    position: relative;
+}
+
+.project .inputRenamedText .input {
+    height: 24px;
+    width: 200px;
+    font-weight: 600;
+    line-height: 18px;
+}

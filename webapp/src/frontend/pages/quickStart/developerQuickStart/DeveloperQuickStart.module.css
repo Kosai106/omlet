@@ -1,0 +1,67 @@
+.developerQuickStart {
+    height: calc(100vh - var(--header-height));
+    padding: 184px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+}
+
+.developerQuickStart .content {
+    width: 720px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-l);
+}
+
+.developerQuickStart .h2 {
+    margin: 0;
+}
+
+.developerQuickStart .h2 .hint {
+    color: var(--label-secondary-color);
+}
+
+.developerQuickStart p {
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--label-primary-color);
+}
+
+.developerQuickStart a,
+.developerQuickStart .inviteButton {
+    color: var(--accent-green);
+}
+
+.developerQuickStart section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-s);
+}
+
+.developerQuickStart section .title {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.developerQuickStart section .title .step {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--label-inverse-color);
+    background-color: var(--label-primary-color);
+}
+
+.developerQuickStart section .codeSnippet {
+    margin: 0;
+}
+
+.developerQuickStart .setupTip {
+    color: var(--label-secondary-color);
+}

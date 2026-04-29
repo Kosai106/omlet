@@ -1,0 +1,29 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&export_results"
+---
+num_of_exports: 3
+exports:
+  - name: App
+    source_path: src/App.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "custom-alias:e4b98a7939aedea0377e98e6254ac710a4b3d00f240b13d6bb2dd9d394e35204:App"
+  - name: Button
+    source_path: src/components/Button.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "custom-alias:434eeb01d71a4fec29d8982d83064deb2b42aac4ac37a91efc81d74c816a11d4:Button"
+  - name: Button
+    source_path: src/components/index.ts
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "custom-alias:44145b4646ba00cf3afdd124b880a23f47279f07dad0d139a7b26cd531123cf3:Button"
+      - "custom-alias:434eeb01d71a4fec29d8982d83064deb2b42aac4ac37a91efc81d74c816a11d4:Button"
+

@@ -1,0 +1,29 @@
+{
+  "root": {
+    "name": "color",
+    "path": "",
+    "version": "1.0.0",
+    "aliases": {
+      "Divider/*": [
+        "src/Divider/*"
+      ],
+      "Divider": [
+        "src/Divider"
+      ],
+      "TimestampDivider/*": [
+        "src/TimestampDivider/*"
+      ],
+      "index.ts": [
+        "src/index.ts"
+      ]
+    },
+    "importMap": {
+      "color/*": [
+        "*"
+      ]
+    },
+    "exportMap": {}
+  },
+  "packages": {},
+  "absolutePath": "./package"
+}

@@ -1,0 +1,103 @@
+.chartTooltip {
+    position: absolute;
+    padding: 16px;
+    border-radius: 2px;
+    border-left: 4px solid transparent;
+    background-color: var(--background-primary-color);
+    box-shadow: var(--shadow-default);
+    overflow: hidden;
+    z-index: 100;
+}
+
+.chartTooltip.top {
+    transform: translate(-50%, calc(-100% - 8px));
+}
+
+.chartTooltip.right {
+    transform: translate(8px, -50%);
+}
+
+.chartTooltip.bottom {
+    transform: translate(-50%, 8px);
+}
+
+.chartTooltip.left {
+    transform: translate(calc(-100% - 8px), -50%);
+}
+
+.chartTooltipHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    margin-bottom: 16px;
+    font-size: 13px;
+    color: var(--label-primary-color);
+}
+
+.chartTooltipHeader .chartTooltipTitle {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--label-primary-color);
+}
+
+.chartTooltipHeader .chartTooltipSubtitle {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--label-secondary-color);
+}
+
+.chartTooltipHeader .tags {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 6px;
+    gap: 4px;
+}
+
+.chartTooltipValues {
+    display: flex;
+}
+
+.chartTooltipValueCell {
+    padding: 0 16px;
+}
+
+.chartTooltipValueCell:not(:first-child) {
+    border-left: 1px solid var(--background-secondary-color);
+}
+
+.chartTooltipValueCell:first-child {
+    padding-left: 0;
+}
+
+.chartTooltipValueCell:last-child {
+    padding-right: 0;
+}
+
+.chartTooltipValueCell .chartTooltipValue {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--label-primary-color);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.chartTooltipValueCell .chartTooltipTotal {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--label-secondary-color);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.chartTooltipSingleValue {
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--label-secondary-color);
+}
+
+.chartTooltipSingleValue strong {
+    color: var(--label-primary-color);
+}

@@ -1,0 +1,20 @@
+.skeleton {
+    border-radius: 4px;
+    background-color: var(--background-secondary-color);
+    animation: changeOpacity 2s ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes changeOpacity {
+    from {
+        opacity: 100%;
+    }
+
+    50% {
+        opacity: 60%;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}

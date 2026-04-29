@@ -1,0 +1,1064 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Analyse latest data should return ok status (subject = component & filters = clientProject, updatedAt, numOfDependencies) 1`] = `
+[
+  {
+    "id": "@omlet/webapp:a56f4033cc5ea27e637fd60f947ad8506574619756adedaf10edc4c35b6ed97e:Header",
+    "label": "Header",
+    "link": "/da127bcb/components/Header%3A%3A%40omlet%2Fwebapp%3Aa56f4033cc5ea27e637fd60f947ad8506574619756adedaf10edc4c35b6ed97e%3AHeader",
+    "values": [
+      {
+        "color": "var(--tag-color-1)",
+        "extra": "@omlet/webapp",
+        "id": "path",
+        "link": "/da127bcb/components/Header%3A%3A%40omlet%2Fwebapp%3Aa56f4033cc5ea27e637fd60f947ad8506574619756adedaf10edc4c35b6ed97e%3AHeader",
+        "name": "Path",
+        "tags": [
+          "path",
+        ],
+        "value": 11,
+      },
+    ],
+  },
+  {
+    "id": "opencollective-frontend:261f4ce4511885de630e380fcb1eb8e7fa7422f82c49879b6727112b3577ed0f:default",
+    "label": "ApplyToHostModal",
+    "link": "/da127bcb/components/ApplyToHostModal%3A%3Aopencollective-frontend%3A261f4ce4511885de630e380fcb1eb8e7fa7422f82c49879b6727112b3577ed0f%3Adefault",
+    "values": [
+      {
+        "color": "var(--tag-color-untagged)",
+        "extra": "opencollective-frontend",
+        "id": "<untagged>",
+        "link": "/da127bcb/components/ApplyToHostModal%3A%3Aopencollective-frontend%3A261f4ce4511885de630e380fcb1eb8e7fa7422f82c49879b6727112b3577ed0f%3Adefault",
+        "name": "Untagged",
+        "tags": [],
+        "value": 1,
+      },
+    ],
+  },
+  {
+    "id": "@omlet/webapp:94c1a58b7b75ea33977d7ad224bb0b2f8ad4265bb7dc3e30e0b10f6d98c40bc0:Components",
+    "label": "Components",
+    "link": "/da127bcb/components/Components%3A%3A%40omlet%2Fwebapp%3A94c1a58b7b75ea33977d7ad224bb0b2f8ad4265bb7dc3e30e0b10f6d98c40bc0%3AComponents",
+    "values": [
+      {
+        "color": "var(--tag-color-1)",
+        "extra": "@omlet/webapp",
+        "id": "path",
+        "link": "/da127bcb/components/Components%3A%3A%40omlet%2Fwebapp%3A94c1a58b7b75ea33977d7ad224bb0b2f8ad4265bb7dc3e30e0b10f6d98c40bc0%3AComponents",
+        "name": "Path",
+        "tags": [
+          "path",
+        ],
+        "value": 1,
+      },
+    ],
+  },
+  {
+    "id": "@omlet/webapp:2a83c4b6dfa55b9b402e2f1eddce0b268dd67a5ea6212c94a5cb938ef2bdcc65:DataRetentionLimitReached",
+    "label": "DataRetentionLimitReached",
+    "link": "/da127bcb/components/DataRetentionLimitReached%3A%3A%40omlet%2Fwebapp%3A2a83c4b6dfa55b9b402e2f1eddce0b268dd67a5ea6212c94a5cb938ef2bdcc65%3ADataRetentionLimitReached",
+    "values": [
+      {
+        "color": "var(--tag-color-1)",
+        "extra": "@omlet/webapp",
+        "id": "path",
+        "link": "/da127bcb/components/DataRetentionLimitReached%3A%3A%40omlet%2Fwebapp%3A2a83c4b6dfa55b9b402e2f1eddce0b268dd67a5ea6212c94a5cb938ef2bdcc65%3ADataRetentionLimitReached",
+        "name": "Path",
+        "tags": [
+          "path",
+        ],
+        "value": 1,
+      },
+    ],
+  },
+  {
+    "id": "@omlet/webapp:db4767e098dac7cd8905e7835f2095cbd939fc33de1b70fe0d083178b1fe02cf:PricingTable",
+    "label": "PricingTable",
+    "link": "/da127bcb/components/PricingTable%3A%3A%40omlet%2Fwebapp%3Adb4767e098dac7cd8905e7835f2095cbd939fc33de1b70fe0d083178b1fe02cf%3APricingTable",
+    "values": [
+      {
+        "color": "var(--tag-color-untagged)",
+        "extra": "@omlet/webapp",
+        "id": "<untagged>",
+        "link": "/da127bcb/components/PricingTable%3A%3A%40omlet%2Fwebapp%3Adb4767e098dac7cd8905e7835f2095cbd939fc33de1b70fe0d083178b1fe02cf%3APricingTable",
+        "name": "Untagged",
+        "tags": [],
+        "value": 1,
+      },
+    ],
+  },
+  {
+    "id": "@omlet/webapp:5455bc3382faf6d845687bf5577c7dfe2ab9263ba6f7394e29c35f97b4ff4e3d:PropsTable",
+    "label": "PropsTable",
+    "link": "/da127bcb/components/PropsTable%3A%3A%40omlet%2Fwebapp%3A5455bc3382faf6d845687bf5577c7dfe2ab9263ba6f7394e29c35f97b4ff4e3d%3APropsTable",
+    "values": [
+      {
+        "color": "var(--tag-color-1)",
+        "extra": "@omlet/webapp",
+        "id": "path",
+        "link": "/da127bcb/components/PropsTable%3A%3A%40omlet%2Fwebapp%3A5455bc3382faf6d845687bf5577c7dfe2ab9263ba6f7394e29c35f97b4ff4e3d%3APropsTable",
+        "name": "Path",
+        "tags": [
+          "path",
+        ],
+        "value": 1,
+      },
+    ],
+  },
+  {
+    "id": "opencollective-frontend:cd8a3c25cabfd199c656a5ee721fb8a1468d765df51c9417124d3465c511f76e:default",
+    "label": "AccountingCategorySelect",
+    "link": "/da127bcb/components/AccountingCategorySelect%3A%3Aopencollective-frontend%3Acd8a3c25cabfd199c656a5ee721fb8a1468d765df51c9417124d3465c511f76e%3Adefault",
+    "values": [
+      {
+        "color": "var(--tag-color-untagged)",
+        "extra": "opencollective-frontend",
+        "id": "<untagged>",
+        "link": "/da127bcb/components/AccountingCategorySelect%3A%3Aopencollective-frontend%3Acd8a3c25cabfd199c656a5ee721fb8a1468d765df51c9417124d3465c511f76e%3Adefault",
+        "name": "Untagged",
+        "tags": [],
+        "value": 0,
+      },
+    ],
+  },
+  {
+    "id": "opencollective-frontend:00f1a48dab6812d4a9f3fae335ec84006415616d009e151b6b938dbb2aadd919:default",
+    "label": "ContributionConfirmationModal",
+    "link": "/da127bcb/components/ContributionConfirmationModal%3A%3Aopencollective-frontend%3A00f1a48dab6812d4a9f3fae335ec84006415616d009e151b6b938dbb2aadd919%3Adefault",
+    "values": [
+      {
+        "color": "var(--tag-color-untagged)",
+        "extra": "opencollective-frontend",
+        "id": "<untagged>",
+        "link": "/da127bcb/components/ContributionConfirmationModal%3A%3Aopencollective-frontend%3A00f1a48dab6812d4a9f3fae335ec84006415616d009e151b6b938dbb2aadd919%3Adefault",
+        "name": "Untagged",
+        "tags": [],
+        "value": 0,
+      },
+    ],
+  },
+]
+`;
+
+exports[`Analyse latest data should return ok status (subject = component & filters = sourceProject, tag, path) 1`] = `[]`;
+
+exports[`Analyse latest data should return ok status (subject = components & filters = sourceProject and numOfUsages) 1`] = `
+[
+  {
+    "id": "opencollective-frontend:f8f364e32faeecb22c96364d03ad8ca5cadfe7203c5466069e46a4dee3803c5c:Flex",
+    "label": "Flex",
+    "link": "/da127bcb/components/Flex%3A%3Aopencollective-frontend%3Af8f364e32faeecb22c96364d03ad8ca5cadfe7203c5466069e46a4dee3803c5c%3AFlex",
+    "values": [
+      {
+        "color": "var(--tag-color-2)",
+        "extra": "opencollective-frontend",
+        "id": "most-used",
+        "link": "/da127bcb/components/Flex%3A%3Aopencollective-frontend%3Af8f364e32faeecb22c96364d03ad8ca5cadfe7203c5466069e46a4dee3803c5c%3AFlex",
+        "name": "Most Used",
+        "tags": [
+          "most-used",
+        ],
+        "value": 69,
+      },
+    ],
+  },
+  {
+    "id": "opencollective-frontend:46e7bc1411c504214e546fe0cbc845dc262f369736bb0498f1102cb835ce5a18:default",
+    "label": "Container",
+    "link": "/da127bcb/components/Container%3A%3Aopencollective-frontend%3A46e7bc1411c504214e546fe0cbc845dc262f369736bb0498f1102cb835ce5a18%3Adefault",
+    "values": [
+      {
+        "color": "var(--tag-color-2)",
+        "extra": "opencollective-frontend",
+        "id": "most-used",
+        "link": "/da127bcb/components/Container%3A%3Aopencollective-frontend%3A46e7bc1411c504214e546fe0cbc845dc262f369736bb0498f1102cb835ce5a18%3Adefault",
+        "name": "Most Used",
+        "tags": [
+          "most-used",
+        ],
+        "value": 60,
+      },
+    ],
+  },
+  {
+    "id": "opencollective-frontend:f8f364e32faeecb22c96364d03ad8ca5cadfe7203c5466069e46a4dee3803c5c:Box",
+    "label": "Box",
+    "link": "/da127bcb/components/Box%3A%3Aopencollective-frontend%3Af8f364e32faeecb22c96364d03ad8ca5cadfe7203c5466069e46a4dee3803c5c%3ABox",
+    "values": [
+      {
+        "color": "var(--tag-color-2)",
+        "extra": "opencollective-frontend",
+        "id": "most-used",
+        "link": "/da127bcb/components/Box%3A%3Aopencollective-frontend%3Af8f364e32faeecb22c96364d03ad8ca5cadfe7203c5466069e46a4dee3803c5c%3ABox",
+        "name": "Most Used",
+        "tags": [
+          "most-used",
+        ],
+        "value": 49,
+      },
+    ],
+  },
+  {
+    "id": "opencollective-frontend:2e3538d850bd3ea0e5c2db89b4fb9845982045acb99f5ba5775d1ca955d224f3:default",
+    "label": "StyledButton",
+    "link": "/da127bcb/components/StyledButton%3A%3Aopencollective-frontend%3A2e3538d850bd3ea0e5c2db89b4fb9845982045acb99f5ba5775d1ca955d224f3%3Adefault",
+    "values": [
+      {
+        "color": "var(--tag-color-2)",
+        "extra": "opencollective-frontend",
+        "id": "most-used",
+        "link": "/da127bcb/components/StyledButton%3A%3Aopencollective-frontend%3A2e3538d850bd3ea0e5c2db89b4fb9845982045acb99f5ba5775d1ca955d224f3%3Adefault",
+        "name": "Most Used",
+        "tags": [
+          "most-used",
+        ],
+        "value": 42,
+      },
+    ],
+  },
+  {
+    "id": "opencollective-frontend:c0b9b35ce75f2f230205329b995218ac5031c8c8223a5231ed8b381f2c8eebb2:P",
+    "label": "P",
+    "link": "/da127bcb/components/P%3A%3Aopencollective-frontend%3Ac0b9b35ce75f2f230205329b995218ac5031c8c8223a5231ed8b381f2c8eebb2%3AP",
+    "values": [
+      {
+        "color": "var(--tag-color-2)",
+        "extra": "opencollective-frontend",
+        "id": "most-used",
+        "link": "/da127bcb/components/P%3A%3Aopencollective-frontend%3Ac0b9b35ce75f2f230205329b995218ac5031c8c8223a5231ed8b381f2c8eebb2%3AP",
+        "name": "Most Used",
+        "tags": [
+          "most-used",
+        ],
+        "value": 40,
+      },
+    ],
+  },
+  {
+    "id": "opencollective-frontend:c0b9b35ce75f2f230205329b995218ac5031c8c8223a5231ed8b381f2c8eebb2:Span",
+    "label": "Span",
+    "link": "/da127bcb/components/Span%3A%3Aopencollective-frontend%3Ac0b9b35ce75f2f230205329b995218ac5031c8c8223a5231ed8b381f2c8eebb2%3ASpan",
+    "values": [
+      {
+        "color": "var(--tag-color-2)",
+        "extra": "opencollective-frontend",
+        "id": "most-used",
+        "link": "/da127bcb/components/Span%3A%3Aopencollective-frontend%3Ac0b9b35ce75f2f230205329b995218ac5031c8c8223a5231ed8b381f2c8eebb2%3ASpan",
+        "name": "Most Used",
+        "tags": [
+          "most-used",
+        ],
+        "value": 40,
+      },
+    ],
+  },
+  {
+    "id": "@omlet/webapp:4e698eb9375b1c2919bcb1660795139191b4256aa9bec39ed5565295a2dd8ed4:Button",
+    "label": "Button",
+    "link": "/da127bcb/components/Button%3A%3A%40omlet%2Fwebapp%3A4e698eb9375b1c2919bcb1660795139191b4256aa9bec39ed5565295a2dd8ed4%3AButton",
+    "values": [
+      {
+        "color": "var(--tag-color-1)",
+        "extra": "@omlet/webapp",
+        "id": "path",
+        "link": "/da127bcb/components/Button%3A%3A%40omlet%2Fwebapp%3A4e698eb9375b1c2919bcb1660795139191b4256aa9bec39ed5565295a2dd8ed4%3AButton",
+        "name": "Path",
+        "tags": [
+          "path",
+          "most-used",
+        ],
+        "value": 33,
+      },
+    ],
+  },
+  {
+    "id": "opencollective-frontend:a794fd50c819e8234f1901f2bd26a1a30cc239930e810e355fc8413a5fa1275b:default",
+    "label": "Link",
+    "link": "/da127bcb/components/Link%3A%3Aopencollective-frontend%3Aa794fd50c819e8234f1901f2bd26a1a30cc239930e810e355fc8413a5fa1275b%3Adefault",
+    "values": [
+      {
+        "color": "var(--tag-color-2)",
+        "extra": "opencollective-frontend",
+        "id": "most-used",
+        "link": "/da127bcb/components/Link%3A%3Aopencollective-frontend%3Aa794fd50c819e8234f1901f2bd26a1a30cc239930e810e355fc8413a5fa1275b%3Adefault",
+        "name": "Most Used",
+        "tags": [
+          "most-used",
+        ],
+        "value": 33,
+      },
+    ],
+  },
+  {
+    "id": "@omlet/webapp:432369139af0f77fde4cadc2d635132bb446b5526a3d163f16fd7a60dd649be7:H3",
+    "label": "H3",
+    "link": "/da127bcb/components/H3%3A%3A%40omlet%2Fwebapp%3A432369139af0f77fde4cadc2d635132bb446b5526a3d163f16fd7a60dd649be7%3AH3",
+    "values": [
+      {
+        "color": "var(--tag-color-1)",
+        "extra": "@omlet/webapp",
+        "id": "path",
+        "link": "/da127bcb/components/H3%3A%3A%40omlet%2Fwebapp%3A432369139af0f77fde4cadc2d635132bb446b5526a3d163f16fd7a60dd649be7%3AH3",
+        "name": "Path",
+        "tags": [
+          "path",
+          "most-used",
+        ],
+        "value": 26,
+      },
+    ],
+  },
+  {
+    "id": "@omlet/webapp:432369139af0f77fde4cadc2d635132bb446b5526a3d163f16fd7a60dd649be7:H2",
+    "label": "H2",
+    "link": "/da127bcb/components/H2%3A%3A%40omlet%2Fwebapp%3A432369139af0f77fde4cadc2d635132bb446b5526a3d163f16fd7a60dd649be7%3AH2",
+    "values": [
+      {
+        "color": "var(--tag-color-1)",
+        "extra": "@omlet/webapp",
+        "id": "path",
+        "link": "/da127bcb/components/H2%3A%3A%40omlet%2Fwebapp%3A432369139af0f77fde4cadc2d635132bb446b5526a3d163f16fd7a60dd649be7%3AH2",
+        "name": "Path",
+        "tags": [
+          "path",
+          "most-used",
+        ],
+        "value": 23,
+      },
+    ],
+  },
+  {
+    "id": "opencollective-frontend:fd9e595445358c3e162d881559b97f0985d8207d989cfcbec2e539edc9421fa1:default",
+    "label": "MessageBox",
+    "link": "/da127bcb/components/MessageBox%3A%3Aopencollective-frontend%3Afd9e595445358c3e162d881559b97f0985d8207d989cfcbec2e539edc9421fa1%3Adefault",
+    "values": [
+      {
+        "color": "var(--tag-color-2)",
+        "extra": "opencollective-frontend",
+        "id": "most-used",
+        "link": "/da127bcb/components/MessageBox%3A%3Aopencollective-frontend%3Afd9e595445358c3e162d881559b97f0985d8207d989cfcbec2e539edc9421fa1%3Adefault",
+        "name": "Most Used",
+        "tags": [
+          "most-used",
+        ],
+        "value": 21,
+      },
+    ],
+  },
+  {
+    "id": "@omlet/webapp:36e912f4fa7b0f01ac85ec9236ab6719b98f3961ff3600347067fbe42d3856ed:Popover",
+    "label": "Popover",
+    "link": "/da127bcb/components/Popover%3A%3A%40omlet%2Fwebapp%3A36e912f4fa7b0f01ac85ec9236ab6719b98f3961ff3600347067fbe42d3856ed%3APopover",
+    "values": [
+      {
+        "color": "var(--tag-color-1)",
+        "extra": "@omlet/webapp",
+        "id": "path",
+        "link": "/da127bcb/components/Popover%3A%3A%40omlet%2Fwebapp%3A36e912f4fa7b0f01ac85ec9236ab6719b98f3961ff3600347067fbe42d3856ed%3APopover",
+        "name": "Path",
+        "tags": [
+          "path",
+          "most-used",
+        ],
+        "value": 21,
+      },
+    ],
+  },
+]
+`;
+
+exports[`Analyse latest data should return ok status (subject = projects & breakdownType = tag) 1`] = `
+[
+  {
+    "id": "@omlet/webapp",
+    "label": "@omlet/webapp",
+    "link": "/da127bcb/analytics/view?subject=components&filters=NobwRALgngDgpmAXGGAnA9gKzgYwgVQGc4ATASQDswAaMdeVAQwgEt0rk4BHAV0YBtCNMADcBPBImBgAAugC2-OBAD0AdzgAjRjBhgAugF99QA",
+    "values": [
+      {
+        "color": "var(--tag-color-external)",
+        "id": "<external>",
+        "link": "/da127bcb/analytics/view?subject=components&filters=NobwRALgngDgpmAXGGAnA9gKzgYwgVQGc4ATASQDswAaMdeVAQwgEt0rk4BHAV0YBtCNMADcBPBImBgAAugC2-OBAD0AdzgAjRjBhgAugF9q4aPCSRGAc2H04TVuwvc%2Bg4WP4Sk0gDxwAHhD2FAIAfAaG%2BkA",
+        "name": "external",
+        "value": 42,
+      },
+      {
+        "color": "var(--tag-color-1)",
+        "id": "path",
+        "link": "/da127bcb/analytics/view?subject=components&filters=NobwRALgngDgpmAXGGAnA9gKzgYwgVQGc4ATASQDswAaMdeVAQwgEt0rk4BHAV0YBtCNMADcBPBImBgAAugC2-OBAD0AdzgAjRjBhgAugF9q4aPCSRGAc2H04TVuwvc%2Bg4WP4Sk0mMwAWBob6QA",
+        "name": "Path",
+        "value": 613,
+      },
+      {
+        "color": "var(--tag-color-2)",
+        "id": "most-used",
+        "link": "/da127bcb/analytics/view?subject=components&filters=NobwRALgngDgpmAXGGAnA9gKzgYwgVQGc4ATASQDswAaMdeVAQwgEt0rk4BHAV0YBtCNMADcBPBImBgAAugC2-OBAD0AdzgAjRjBhgAugF9q4aPCSRGAc2H04TVuwvc%2Bg4WP4Sk0%2BekIQAWh5iEgNDfSA",
+        "name": "Most Used",
+        "value": 125,
+      },
+      {
+        "color": "var(--tag-color-untagged)",
+        "id": "<untagged>",
+        "link": "/da127bcb/analytics/view?subject=components&filters=NobwRALgngDgpmAXGGAnA9gKzgYwgVQGc4ATASQDswAaMdeVAQwgEt0rk4BHAV0YBtCNMADcBPBImBgAAugC2-OBAD0AdzgAjRjBhgAugF9q4aPCSRGAc2H04TVuwvc%2Bg4WP4Sk0gDw8KENZWpAB8Bob6QA",
+        "name": "Untagged",
+        "value": 21,
+      },
+    ],
+  },
+  {
+    "id": "opencollective-frontend",
+    "label": "opencollective-frontend",
+    "link": "/da127bcb/analytics/view?subject=components&filters=NobwRALgngDgpmAXGGAnA9gKzgYwgVQGc4ATASQDswAaMdeVAQwgEt0rk4BHAV0YBtCNMADcBPBImB14FHOn79crEXAC0AMwwUIcCiTABdAL6GgA",
+    "values": [
+      {
+        "color": "var(--tag-color-external)",
+        "id": "<external>",
+        "link": "/da127bcb/analytics/view?subject=components&filters=NobwRALgngDgpmAXGGAnA9gKzgYwgVQGc4ATASQDswAaMdeVAQwgEt0rk4BHAV0YBtCNMADcBPBImB14FHOn79crEXAC0AMwwUIcCiTABdAL7Vw0eEkiMA5sPpwmrdle59BwsfwlJpAHjgAD11UCgEAPiNjQyA",
+        "name": "external",
+        "value": 302,
+      },
+      {
+        "color": "var(--tag-color-2)",
+        "id": "most-used",
+        "link": "/da127bcb/analytics/view?subject=components&filters=NobwRALgngDgpmAXGGAnA9gKzgYwgVQGc4ATASQDswAaMdeVAQwgEt0rk4BHAV0YBtCNMADcBPBImB14FHOn79crEXAC0AMwwUIcCiTABdAL7Vw0eEkiMA5sPpwmrdle59BwsfwlJpAW3RCCDUeYgMTQyA",
+        "name": "Most Used",
+        "value": 461,
+      },
+      {
+        "color": "var(--tag-color-untagged)",
+        "id": "<untagged>",
+        "link": "/da127bcb/analytics/view?subject=components&filters=NobwRALgngDgpmAXGGAnA9gKzgYwgVQGc4ATASQDswAaMdeVAQwgEt0rk4BHAV0YBtCNMADcBPBImB14FHOn79crEXAC0AMwwUIcCiTABdAL7Vw0eEkiMA5sPpwmrdle59BwsfwlJpAHh4dWxtSAD4jY0MgA",
+        "name": "Untagged",
+        "value": 383,
+      },
+    ],
+  },
+]
+`;
+
+exports[`Analyse latest data should return ok status (subject = projects & filters = numOfDependencies) 1`] = `
+[
+  {
+    "id": "opencollective-frontend",
+    "label": "opencollective-frontend",
+    "link": "/da127bcb/analytics/view?subject=components&filters=NobwRALgngDgpmAXGGAnA9gKzgYwgVQGc4ATASQDswAaMdeVAQwgEt0rk4BHAV0YBtCNMADcBPBImB14FHOn79crEXAC0AMwwUIcCiTABdAL6GgA",
+    "values": [
+      {
+        "id": "Usage count",
+        "link": "/da127bcb/analytics/view?subject=components&filters=NobwRALgngDgpmAXGGAnA9gKzgYwgVQGc4ATASQDswAaMdeVAQwgEt0rk4BHAV0YBtCNMADcBPBImB14FHOn79crEXAC0AMwwUIcCiTABdAL6GgA",
+        "name": "Usage count",
+        "value": 5,
+      },
+    ],
+  },
+  {
+    "id": "@omlet/webapp",
+    "label": "@omlet/webapp",
+    "link": "/da127bcb/analytics/view?subject=components&filters=NobwRALgngDgpmAXGGAnA9gKzgYwgVQGc4ATASQDswAaMdeVAQwgEt0rk4BHAV0YBtCNMADcBPBImBgAAugC2-OBAD0AdzgAjRjBhgAugF99QA",
+    "values": [
+      {
+        "id": "Usage count",
+        "link": "/da127bcb/analytics/view?subject=components&filters=NobwRALgngDgpmAXGGAnA9gKzgYwgVQGc4ATASQDswAaMdeVAQwgEt0rk4BHAV0YBtCNMADcBPBImBgAAugC2-OBAD0AdzgAjRjBhgAugF99QA",
+        "name": "Usage count",
+        "value": 2,
+      },
+    ],
+  },
+]
+`;
+
+exports[`Analyse latest data should return ok status (subject = tags & filters = createdAt and path) 1`] = `
+[
+  {
+    "id": "path",
+    "label": "Path",
+    "link": "/da127bcb/analytics/view?subject=components&filters=NobwRALgngDgpmAXJAhgczAGjAe3gJxQgEscA7JMOARwFcUAbAZyzADdHaFFgwYiAFmAC6AX2FA",
+    "values": [
+      {
+        "color": "var(--tag-color-1)",
+        "id": "path",
+        "link": "/da127bcb/analytics/view?subject=components&filters=NobwRALgngDgpmAXJAhgczAGjAe3gJxQgEscA7JMOARwFcUAbAZyzADdHaFFgwYiAFmAC6AX2FA",
+        "name": "Path",
+        "value": 5,
+      },
+    ],
+  },
+  {
+    "id": "<untagged>",
+    "label": "Untagged",
+    "link": "/da127bcb/analytics/view?subject=components&filters=NobwRALgngDgpmAXJAhgczAGjAe3gJxQgEscA7JMOARwFcUAbAZyzADdHaFFgwAeWmQjo0cACYA%2BMAF0AvtKA",
+    "values": [
+      {
+        "color": "var(--tag-color-untagged)",
+        "id": "<untagged>",
+        "link": "/da127bcb/analytics/view?subject=components&filters=NobwRALgngDgpmAXJAhgczAGjAe3gJxQgEscA7JMOARwFcUAbAZyzADdHaFFgwAeWmQjo0cACYA%2BMAF0AvtKA",
+        "name": "Untagged",
+        "value": 1,
+      },
+    ],
+  },
+]
+`;
+
+exports[`Analyse latest data should return ok status (subject = tags & filters = sourceProject and numOfUsages) 1`] = `
+[
+  {
+    "id": "most-used",
+    "label": "Most Used",
+    "link": "/da127bcb/analytics/view?subject=components&filters=NobwRALgngDgpmAXJAhgczAGjAe3gJxQgEscA7JMOARwFcUAbAZyzADdHaFFgwBbHEwgBaWkzgATMAF0AvtKA",
+    "values": [
+      {
+        "color": "var(--tag-color-2)",
+        "id": "most-used",
+        "link": "/da127bcb/analytics/view?subject=components&filters=NobwRALgngDgpmAXJAhgczAGjAe3gJxQgEscA7JMOARwFcUAbAZyzADdHaFFgwBbHEwgBaWkzgATMAF0AvtKA",
+        "name": "Most Used",
+        "value": 66,
+      },
+    ],
+  },
+  {
+    "id": "path",
+    "label": "Path",
+    "link": "/da127bcb/analytics/view?subject=components&filters=NobwRALgngDgpmAXJAhgczAGjAe3gJxQgEscA7JMOARwFcUAbAZyzADdHaFFgwYiAFmAC6AX2FA",
+    "values": [
+      {
+        "color": "var(--tag-color-1)",
+        "id": "path",
+        "link": "/da127bcb/analytics/view?subject=components&filters=NobwRALgngDgpmAXJAhgczAGjAe3gJxQgEscA7JMOARwFcUAbAZyzADdHaFFgwYiAFmAC6AX2FA",
+        "name": "Path",
+        "value": 33,
+      },
+    ],
+  },
+]
+`;
+
+exports[`Analyse latest data should return ok status as CSV (subject = projects) 1`] = `
+""Analysis date","Component name","Project it's from","Project it's used in","Tags","Number of usages"
+"2024-05-24T00:00:00.000Z","Mutation","@apollo/client","opencollective-frontend","external","2"
+"2024-05-24T00:00:00.000Z","Query","@apollo/client","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","DndContext","@dnd-kit/core","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","DragOverlay","@dnd-kit/core","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","SortableContext","@dnd-kit/sortable","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","@hcaptcha/react-hcaptcha","@hcaptcha/react-hcaptcha","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","SiOpencollective","@icons-pack/react-simple-icons","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","SiPaypal","@icons-pack/react-simple-icons","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","SiStripe","@icons-pack/react-simple-icons","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","SiWise","@icons-pack/react-simple-icons","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","ResponsiveLine","@nivo/line","@omlet/webapp","external","2"
+"2024-05-24T00:00:00.000Z","ResponsiveStream","@nivo/stream","@omlet/webapp","external","2"
+"2024-05-24T00:00:00.000Z","NinjaInput","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","SetupRegularScansDialog","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","IconChild","@omlet/webapp","@omlet/webapp","Path","2"
+"2024-05-24T00:00:00.000Z","TextInput","@omlet/webapp","@omlet/webapp","Path","10"
+"2024-05-24T00:00:00.000Z","IconWarning","@omlet/webapp","@omlet/webapp","Path","3"
+"2024-05-24T00:00:00.000Z","AddMoreTagsDialog","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","AngelIllustration","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","ProfessionCard","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","DataRetentionLimitReached","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","OtherTagsStep","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","TalkToAnExpertPopup","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","InviteDialog","@omlet/webapp","@omlet/webapp","","2"
+"2024-05-24T00:00:00.000Z","TrialEnd","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","IconChevronUp","@omlet/webapp","@omlet/webapp","Path","2"
+"2024-05-24T00:00:00.000Z","SaveChartPopover","@omlet/webapp","@omlet/webapp","Path","4"
+"2024-05-24T00:00:00.000Z","AnalyticsShell","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","LogoCookie","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","LogoChef","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","DropdownString","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","SavedDashboardChart","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","TalkToAnExpertButton","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","InteractiveLegend","@omlet/webapp","@omlet/webapp","Path","2"
+"2024-05-24T00:00:00.000Z","WidgetDropdown","@omlet/webapp","@omlet/webapp","Path","3"
+"2024-05-24T00:00:00.000Z","PackageNode","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","Button","@omlet/webapp","@omlet/webapp","Path,Most Used","33"
+"2024-05-24T00:00:00.000Z","Button","@omlet/webapp","@omlet/webapp","Path,Most Used","33"
+"2024-05-24T00:00:00.000Z","ButtonAnchor","@omlet/webapp","@omlet/webapp","Path","9"
+"2024-05-24T00:00:00.000Z","ButtonLink","@omlet/webapp","@omlet/webapp","Path","9"
+"2024-05-24T00:00:00.000Z","ComponentLimitExceededInstructions","@omlet/webapp","@omlet/webapp","Path","2"
+"2024-05-24T00:00:00.000Z","IconCopy","@omlet/webapp","@omlet/webapp","Path","2"
+"2024-05-24T00:00:00.000Z","EmptyBlock","@omlet/webapp","@omlet/webapp","Path","2"
+"2024-05-24T00:00:00.000Z","DashboardHeader","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","FilterWidget","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","TreeViewWithReactFlowProvider","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","IconMetadata","@omlet/webapp","@omlet/webapp","Path","4"
+"2024-05-24T00:00:00.000Z","ComponentLimitExceededBanner","@omlet/webapp","@omlet/webapp","","2"
+"2024-05-24T00:00:00.000Z","SwitchBoolean","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","FolderNode","@omlet/webapp","@omlet/webapp","","1"
+"2024-05-24T00:00:00.000Z","PackageNode","@omlet/webapp","@omlet/webapp","","1"
+"2024-05-24T00:00:00.000Z","Callout","@omlet/webapp","@omlet/webapp","Path","14"
+"2024-05-24T00:00:00.000Z","FilterCell","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","IconSearch","@omlet/webapp","@omlet/webapp","Path","6"
+"2024-05-24T00:00:00.000Z","DropdownMulti","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","IconPlay","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","Spinner","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","IconProfile","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","ImgScanMoreProjects","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","IconBack","@omlet/webapp","@omlet/webapp","Path","4"
+"2024-05-24T00:00:00.000Z","Filters","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","DashboardTabs","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","ChartTooltip","@omlet/webapp","@omlet/webapp","Path","2"
+"2024-05-24T00:00:00.000Z","IconCancel","@omlet/webapp","@omlet/webapp","Path","2"
+"2024-05-24T00:00:00.000Z","DashboardTable","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","TextArea","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","SubscriptionRequiredPage","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","TagManagementTree","@omlet/webapp","@omlet/webapp","","1"
+"2024-05-24T00:00:00.000Z","Pill","@omlet/webapp","@omlet/webapp","Path","2"
+"2024-05-24T00:00:00.000Z","IconRemove","@omlet/webapp","@omlet/webapp","Path","11"
+"2024-05-24T00:00:00.000Z","IconProps","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","BarChartTooltip","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","IconForward","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","YoutubePlayer","@omlet/webapp","@omlet/webapp","Path","2"
+"2024-05-24T00:00:00.000Z","SearchInput","@omlet/webapp","@omlet/webapp","Path","3"
+"2024-05-24T00:00:00.000Z","TutorialStepIndicator","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","IconCollapse","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","AreaChart","@omlet/webapp","@omlet/webapp","Path","3"
+"2024-05-24T00:00:00.000Z","TruncateMultiline","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","PropUsages","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","ComponentList","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","Popover","@omlet/webapp","@omlet/webapp","Path,Most Used","21"
+"2024-05-24T00:00:00.000Z","Popover","@omlet/webapp","@omlet/webapp","Path,Most Used","21"
+"2024-05-24T00:00:00.000Z","PaginatedTable","@omlet/webapp","@omlet/webapp","Path","2"
+"2024-05-24T00:00:00.000Z","MemberLimitExceeded","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","OnboardingStep","@omlet/webapp","@omlet/webapp","Path","3"
+"2024-05-24T00:00:00.000Z","Tag","@omlet/webapp","@omlet/webapp","Path","10"
+"2024-05-24T00:00:00.000Z","BillingDialog","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","DesignerQuickStart","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","AllScans","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","IconBookmark","@omlet/webapp","@omlet/webapp","Path","3"
+"2024-05-24T00:00:00.000Z","NewAnalytics","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","PlayButton","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","LogoCard","@omlet/webapp","@omlet/webapp","Path","6"
+"2024-05-24T00:00:00.000Z","BillingInfo","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","IconQuestion","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","DataIssueDialog","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","TreeContainer","@omlet/webapp","@omlet/webapp","Path","3"
+"2024-05-24T00:00:00.000Z","DashboardSectionHeader","@omlet/webapp","@omlet/webapp","Path","2"
+"2024-05-24T00:00:00.000Z","SnitchIllustration","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","Quote","@omlet/webapp","@omlet/webapp","Path","2"
+"2024-05-24T00:00:00.000Z","LoginSuccess","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","AnalysisSubjectPicker","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","TruncateEnd","@omlet/webapp","@omlet/webapp","Path","3"
+"2024-05-24T00:00:00.000Z","AreaChartTooltip","@omlet/webapp","@omlet/webapp","Path","2"
+"2024-05-24T00:00:00.000Z","BarChart","@omlet/webapp","@omlet/webapp","Path","3"
+"2024-05-24T00:00:00.000Z","LandingPageLink","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","SingleDataLineChart","@omlet/webapp","@omlet/webapp","Path","3"
+"2024-05-24T00:00:00.000Z","Components","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","ComponentListHeader","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","Egg","@omlet/webapp","@omlet/webapp","Path","4"
+"2024-05-24T00:00:00.000Z","LineChartTooltip","@omlet/webapp","@omlet/webapp","Path","2"
+"2024-05-24T00:00:00.000Z","DropdownCustomProperty","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","IconFolder","@omlet/webapp","@omlet/webapp","Path","2"
+"2024-05-24T00:00:00.000Z","HeaderMenu","@omlet/webapp","@omlet/webapp","Path","2"
+"2024-05-24T00:00:00.000Z","TruncateFromMiddle","@omlet/webapp","@omlet/webapp","Path","13"
+"2024-05-24T00:00:00.000Z","Loading","@omlet/webapp","@omlet/webapp","Path","5"
+"2024-05-24T00:00:00.000Z","IconTrash","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","Sparkles","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","CliLoginSuccess","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","IconTag","@omlet/webapp","@omlet/webapp","Path","3"
+"2024-05-24T00:00:00.000Z","FilterPill","@omlet/webapp","@omlet/webapp","Path","2"
+"2024-05-24T00:00:00.000Z","TableInsight","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","CreateWorkspace","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","CoreFoldersStep","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","IconFilter","@omlet/webapp","@omlet/webapp","Path","2"
+"2024-05-24T00:00:00.000Z","ViewOnlyBanner","@omlet/webapp","@omlet/webapp","","1"
+"2024-05-24T00:00:00.000Z","SegmentedControl","@omlet/webapp","@omlet/webapp","Path","4"
+"2024-05-24T00:00:00.000Z","PopularDashboardChart","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","WidgetDate","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","WidgetButton","@omlet/webapp","@omlet/webapp","Path","2"
+"2024-05-24T00:00:00.000Z","VerticalLine","@omlet/webapp","@omlet/webapp","","1"
+"2024-05-24T00:00:00.000Z","StoreProvider","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","Dialog","@omlet/webapp","@omlet/webapp","Path","11"
+"2024-05-24T00:00:00.000Z","Bar","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","ComponentCell","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","PropsTable","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","PropertyTable","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","DropdownPath","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","LoginWithEmail","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","DropdownTags","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","FolderTreeView","@omlet/webapp","@omlet/webapp","Path","2"
+"2024-05-24T00:00:00.000Z","IconDependencyTree","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","WidgetDropdownMulti","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","IconChevronDown","@omlet/webapp","@omlet/webapp","Path","17"
+"2024-05-24T00:00:00.000Z","ShareFeedbackDialog","@omlet/webapp","@omlet/webapp","Path","2"
+"2024-05-24T00:00:00.000Z","LogoHome","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","ComponentDetail","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","LandingPageAnchor","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","HeaderButton","@omlet/webapp","@omlet/webapp","Path","2"
+"2024-05-24T00:00:00.000Z","HeaderHighlightButton","@omlet/webapp","@omlet/webapp","Path","2"
+"2024-05-24T00:00:00.000Z","IconCheck","@omlet/webapp","@omlet/webapp","Path","7"
+"2024-05-24T00:00:00.000Z","DependencyList","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","FirstScanTooltip","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","BreakdownWidget","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","SavedChartsInfoDialog","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","IconMenu","@omlet/webapp","@omlet/webapp","Path","4"
+"2024-05-24T00:00:00.000Z","IconCancelWithContainer","@omlet/webapp","@omlet/webapp","Path","4"
+"2024-05-24T00:00:00.000Z","DesignSystemUsageExample","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","AuthButton","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","IconElbow","@omlet/webapp","@omlet/webapp","Path","2"
+"2024-05-24T00:00:00.000Z","LogoOmlet","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","PopularCharts","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","DataCacheProvider","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","Tabs","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","SharePopover","@omlet/webapp","@omlet/webapp","","2"
+"2024-05-24T00:00:00.000Z","ComponentLimitExceeded","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","ChartInsight","@omlet/webapp","@omlet/webapp","Path","3"
+"2024-05-24T00:00:00.000Z","Onboarding","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","DropdownTags","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","LogoLock","@omlet/webapp","@omlet/webapp","Path","2"
+"2024-05-24T00:00:00.000Z","IconComponents","@omlet/webapp","@omlet/webapp","Path","2"
+"2024-05-24T00:00:00.000Z","PaymentSuccessDialog","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","H1","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","H2","@omlet/webapp","@omlet/webapp","Path,Most Used","23"
+"2024-05-24T00:00:00.000Z","H2","@omlet/webapp","@omlet/webapp","Path,Most Used","23"
+"2024-05-24T00:00:00.000Z","H3","@omlet/webapp","@omlet/webapp","Path,Most Used","26"
+"2024-05-24T00:00:00.000Z","H3","@omlet/webapp","@omlet/webapp","Path,Most Used","26"
+"2024-05-24T00:00:00.000Z","H4","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","IconArrow","@omlet/webapp","@omlet/webapp","Path","5"
+"2024-05-24T00:00:00.000Z","Dropdown","@omlet/webapp","@omlet/webapp","Path","6"
+"2024-05-24T00:00:00.000Z","WordMarkOmlet","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","IconLink","@omlet/webapp","@omlet/webapp","Path","5"
+"2024-05-24T00:00:00.000Z","SubscriptionInfoButton","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","IconBranch","@omlet/webapp","@omlet/webapp","Path","2"
+"2024-05-24T00:00:00.000Z","OtherProfessionCard","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","WindowSizeProvider","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","Radio","@omlet/webapp","@omlet/webapp","Path","2"
+"2024-05-24T00:00:00.000Z","LineChart","@omlet/webapp","@omlet/webapp","Path","3"
+"2024-05-24T00:00:00.000Z","Header","@omlet/webapp","@omlet/webapp","Path","11"
+"2024-05-24T00:00:00.000Z","DropdownNumber","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","AddCustomPropertyButton","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","ImgDesignSystemUsageExample","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","TagList","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","Switch","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","MemberRow","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","Analytics","@omlet/webapp","@omlet/webapp","Path","2"
+"2024-05-24T00:00:00.000Z","SelectProfession","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","DashboardChart","@omlet/webapp","@omlet/webapp","Path","2"
+"2024-05-24T00:00:00.000Z","FolderNode","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","MainHeaderButton","@omlet/webapp","@omlet/webapp","Path","10"
+"2024-05-24T00:00:00.000Z","DropdownDate","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","AnalyzeWidget","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","DropdownTagPopup","@omlet/webapp","@omlet/webapp","","2"
+"2024-05-24T00:00:00.000Z","Legend","@omlet/webapp","@omlet/webapp","Path","3"
+"2024-05-24T00:00:00.000Z","Node","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","Tutorial","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","OnboardingStepCard","@omlet/webapp","@omlet/webapp","Path","3"
+"2024-05-24T00:00:00.000Z","VerticalSeparator","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","ComponentTable","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","DeveloperQuickStart","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","TagItem","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","Analyses","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","Tabs","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","PreferencesStoreProvider","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","ToastProvider","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","IconAdd","@omlet/webapp","@omlet/webapp","Path","2"
+"2024-05-24T00:00:00.000Z","Dropdown","@omlet/webapp","@omlet/webapp","","1"
+"2024-05-24T00:00:00.000Z","IconChevronRight","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","Sparkle","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","DashboardSection","@omlet/webapp","@omlet/webapp","Path","2"
+"2024-05-24T00:00:00.000Z","AppShell","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","Checkbox","@omlet/webapp","@omlet/webapp","Path","7"
+"2024-05-24T00:00:00.000Z","SingleDataAreaChart","@omlet/webapp","@omlet/webapp","Path","3"
+"2024-05-24T00:00:00.000Z","Auth","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","LandingPageButton","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","CustomPropertiesDialog","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","AskToJoinPopover","@omlet/webapp","@omlet/webapp","","1"
+"2024-05-24T00:00:00.000Z","TagLimitDialog","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","LogoGoogle","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","SetupSteps","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","SavedChart","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","SubscriptionInfoDialog","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","PricingTable","@omlet/webapp","@omlet/webapp","","1"
+"2024-05-24T00:00:00.000Z","IconAddMetadata","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","EmptyState","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","DefaultIllustration","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","Default","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","TutorialStep","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","CreateTagPopover","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","QuickStart","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","Badge","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","InvalidInvite","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","IconLock","@omlet/webapp","@omlet/webapp","Path","5"
+"2024-05-24T00:00:00.000Z","Illustration","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","PaymentSuccess","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","AddTagButton","@omlet/webapp","@omlet/webapp","","2"
+"2024-05-24T00:00:00.000Z","Skeleton","@omlet/webapp","@omlet/webapp","Path","5"
+"2024-05-24T00:00:00.000Z","CoreNameStep","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","NumberInput","@omlet/webapp","@omlet/webapp","Path","2"
+"2024-05-24T00:00:00.000Z","TruncatePath","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","AnimatedArrow","@omlet/webapp","@omlet/webapp","Path","2"
+"2024-05-24T00:00:00.000Z","CodeSnippet","@omlet/webapp","@omlet/webapp","Path","6"
+"2024-05-24T00:00:00.000Z","IconCharts","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","LogoGithub","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","InfiniteScroll","@omlet/webapp","@omlet/webapp","Path","2"
+"2024-05-24T00:00:00.000Z","Dashboard","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","ComponentDetailInfo","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","ContextMenu","@omlet/webapp","@omlet/webapp","Path","6"
+"2024-05-24T00:00:00.000Z","PricingTableDialog","@omlet/webapp","@omlet/webapp","","3"
+"2024-05-24T00:00:00.000Z","Tooltip","@omlet/webapp","@omlet/webapp","Path","20"
+"2024-05-24T00:00:00.000Z","SavedCharts","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","DropdownTags","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","ScanMoreProjectsDialog","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","CloudIllustration","@omlet/webapp","@omlet/webapp","Path","1"
+"2024-05-24T00:00:00.000Z","Root","@radix-ui/react-alert-dialog","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","Root","@radix-ui/react-collapsible","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","Close","@radix-ui/react-dialog","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","Content","@radix-ui/react-dialog","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","DialogClose","@radix-ui/react-dialog","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","Root","@radix-ui/react-dialog","opencollective-frontend","external","7"
+"2024-05-24T00:00:00.000Z","Root","@radix-ui/react-dropdown-menu","opencollective-frontend","external","2"
+"2024-05-24T00:00:00.000Z","Trigger","@radix-ui/react-dropdown-menu","opencollective-frontend","external","2"
+"2024-05-24T00:00:00.000Z","Root","@radix-ui/react-hover-card","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","Trigger","@radix-ui/react-hover-card","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","Root","@radix-ui/react-popover","opencollective-frontend","external","3"
+"2024-05-24T00:00:00.000Z","Trigger","@radix-ui/react-popover","opencollective-frontend","external","3"
+"2024-05-24T00:00:00.000Z","Root","@radix-ui/react-select","opencollective-frontend","external","2"
+"2024-05-24T00:00:00.000Z","Value","@radix-ui/react-select","opencollective-frontend","external","2"
+"2024-05-24T00:00:00.000Z","Close","@radix-ui/react-toast","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","Root","@radix-ui/react-tooltip","opencollective-frontend","external","4"
+"2024-05-24T00:00:00.000Z","Elements","@stripe/react-stripe-js","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","ElementsConsumer","@stripe/react-stripe-js","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","VideoPlus","@styled-icons/boxicons-regular","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","CheckCircle","@styled-icons/boxicons-regular","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","ChevronLeft","@styled-icons/boxicons-regular","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","Support","@styled-icons/boxicons-regular","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","ChevronRight","@styled-icons/boxicons-regular","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","ChevronDown","@styled-icons/boxicons-regular","opencollective-frontend","external","2"
+"2024-05-24T00:00:00.000Z","InfoCircle","@styled-icons/boxicons-regular","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","ChevronUp","@styled-icons/boxicons-regular","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","StripeS","@styled-icons/fa-brands","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","Discord","@styled-icons/fa-brands","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","Github","@styled-icons/fa-brands","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","Twitter","@styled-icons/fa-brands","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","Paypal","@styled-icons/fa-brands","opencollective-frontend","external","2"
+"2024-05-24T00:00:00.000Z","Alipay","@styled-icons/fa-brands","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","Times","@styled-icons/fa-solid","opencollective-frontend","external","2"
+"2024-05-24T00:00:00.000Z","CreditCard","@styled-icons/fa-solid","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","ExclamationCircle","@styled-icons/fa-solid","opencollective-frontend","external","3"
+"2024-05-24T00:00:00.000Z","CaretDown","@styled-icons/fa-solid","opencollective-frontend","external","2"
+"2024-05-24T00:00:00.000Z","ExchangeAlt","@styled-icons/fa-solid","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","Check","@styled-icons/fa-solid","opencollective-frontend","external","2"
+"2024-05-24T00:00:00.000Z","Code","@styled-icons/fa-solid","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","ExclamationTriangle","@styled-icons/fa-solid","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","CaretUp","@styled-icons/fa-solid","opencollective-frontend","external","2"
+"2024-05-24T00:00:00.000Z","CheckCircle","@styled-icons/fa-solid","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","Redo","@styled-icons/fa-solid","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","MoneyCheck","@styled-icons/fa-solid","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","InfoCircle","@styled-icons/fa-solid","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","Bars","@styled-icons/fa-solid","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","ChevronDown","@styled-icons/feather","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","Printer","@styled-icons/feather","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","FileText","@styled-icons/feather","opencollective-frontend","external","2"
+"2024-05-24T00:00:00.000Z","Clock","@styled-icons/feather","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","Clipboard","@styled-icons/feather","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","Github","@styled-icons/feather","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","ChevronUp","@styled-icons/feather","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","CheckCircle","@styled-icons/feather","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","ArrowDownCircle","@styled-icons/feather","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","PlusCircle","@styled-icons/feather","opencollective-frontend","external","3"
+"2024-05-24T00:00:00.000Z","Download","@styled-icons/feather","opencollective-frontend","external","2"
+"2024-05-24T00:00:00.000Z","Blog","@styled-icons/icomoon","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","Close","@styled-icons/material","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","Mail","@styled-icons/material","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","RadioButtonUnchecked","@styled-icons/material","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","RadioButtonChecked","@styled-icons/material","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","ArrowBack","@styled-icons/material","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","ArrowForward","@styled-icons/material","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","Question","@styled-icons/remix-line","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","QueryClientProvider","@tanstack/react-query","@omlet/webapp","external","1"
+"2024-05-24T00:00:00.000Z","Editor","draft-js","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","FastField","formik","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","Field","formik","opencollective-frontend","external","4"
+"2024-05-24T00:00:00.000Z","Form","formik","opencollective-frontend","external","5"
+"2024-05-24T00:00:00.000Z","Formik","formik","opencollective-frontend","external","6"
+"2024-05-24T00:00:00.000Z","Markup","interweave","opencollective-frontend","external","2"
+"2024-05-24T00:00:00.000Z","Banknote","lucide-react","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","Calendar","lucide-react","opencollective-frontend","external","2"
+"2024-05-24T00:00:00.000Z","Check","lucide-react","opencollective-frontend","external","2"
+"2024-05-24T00:00:00.000Z","ChevronDown","lucide-react","opencollective-frontend","external","2"
+"2024-05-24T00:00:00.000Z","ChevronLeft","lucide-react","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","ChevronRight","lucide-react","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","Copy","lucide-react","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","Download","lucide-react","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","ExternalLink","lucide-react","opencollective-frontend","external","2"
+"2024-05-24T00:00:00.000Z","FileText","lucide-react","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","HelpCircle","lucide-react","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","InfoIcon","lucide-react","opencollective-frontend","external","2"
+"2024-05-24T00:00:00.000Z","Landmark","lucide-react","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","LanguagesIcon","lucide-react","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","Mail","lucide-react","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","MoreHorizontal","lucide-react","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","Receipt","lucide-react","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","Search","lucide-react","opencollective-frontend","external","4"
+"2024-05-24T00:00:00.000Z","Sparkles","lucide-react","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","Tags","lucide-react","opencollective-frontend","external","2"
+"2024-05-24T00:00:00.000Z","Upload","lucide-react","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","UserCog","lucide-react","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","Users","lucide-react","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","X","lucide-react","opencollective-frontend","external","6"
+"2024-05-24T00:00:00.000Z","head","next","opencollective-frontend","external","2"
+"2024-05-24T00:00:00.000Z","image","next","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","link","next","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","SearchIcon","opencollective-frontend","opencollective-frontend","","2"
+"2024-05-24T00:00:00.000Z","DropdownArrow","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","DropdownContent","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","StyledInput","opencollective-frontend","opencollective-frontend","","20"
+"2024-05-24T00:00:00.000Z","CreateEventForm","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","PaymentMethodServiceLabel","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","ErrorComponent","opencollective-frontend","opencollective-frontend","","2"
+"2024-05-24T00:00:00.000Z","StyledButton","opencollective-frontend","opencollective-frontend","Most Used","42"
+"2024-05-24T00:00:00.000Z","Member","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","StyledInputFormikField","opencollective-frontend","opencollective-frontend","","3"
+"2024-05-24T00:00:00.000Z","LoadingPlaceholder","opencollective-frontend","opencollective-frontend","","12"
+"2024-05-24T00:00:00.000Z","InviteCollectiveDropdownOption","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","EditPublicMessagePopup","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","CollectiveModalHeader","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","StyledModal","opencollective-frontend","opencollective-frontend","","8"
+"2024-05-24T00:00:00.000Z","ModalBody","opencollective-frontend","opencollective-frontend","","7"
+"2024-05-24T00:00:00.000Z","ModalFooter","opencollective-frontend","opencollective-frontend","","6"
+"2024-05-24T00:00:00.000Z","ModalHeader","opencollective-frontend","opencollective-frontend","","8"
+"2024-05-24T00:00:00.000Z","NotFound","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","SignIn","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","ContributorCard","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","StyledTooltip","opencollective-frontend","opencollective-frontend","","7"
+"2024-05-24T00:00:00.000Z","StyledFilters","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","Map","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","StyledUpdate","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","FormattedMoneyAmount","opencollective-frontend","opencollective-frontend","","4"
+"2024-05-24T00:00:00.000Z","Membership","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","CollectivePickerAsync","opencollective-frontend","opencollective-frontend","","2"
+"2024-05-24T00:00:00.000Z","StyledHr","opencollective-frontend","opencollective-frontend","","8"
+"2024-05-24T00:00:00.000Z","CreateOrganizationForm","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","NewsAndUpdatesModal","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","WarnIfUnsavedChanges","opencollective-frontend","opencollective-frontend","","2"
+"2024-05-24T00:00:00.000Z","StyledTextarea","opencollective-frontend","opencollective-frontend","","8"
+"2024-05-24T00:00:00.000Z","ContactCollectiveModal","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","Response","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","PeriodFilterPresetsSelect","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","StyledSelectFilter","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","StyledButtonSet","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","StyledRoundButton","opencollective-frontend","opencollective-frontend","","6"
+"2024-05-24T00:00:00.000Z","StyledRadioList","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","ConfirmationModal","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","PayoutMethodIcon","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","LocalFilePreview","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","SignInOrJoinFree","opencollective-frontend","opencollective-frontend","","2"
+"2024-05-24T00:00:00.000Z","formatFxRateInfo","opencollective-frontend","opencollective-frontend","","2"
+"2024-05-24T00:00:00.000Z","ReplyToMemberInvitationCard","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","AccountHoverCard","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","CollectiveCard","opencollective-frontend","opencollective-frontend","","2"
+"2024-05-24T00:00:00.000Z","Container","opencollective-frontend","opencollective-frontend","Most Used","60"
+"2024-05-24T00:00:00.000Z","GlobalWarnings","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","ErrorFallbackLinks","opencollective-frontend","opencollective-frontend","","2"
+"2024-05-24T00:00:00.000Z","MemberRoleDescription","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","CreateGiftCardsSuccess","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","Page","opencollective-frontend","opencollective-frontend","","3"
+"2024-05-24T00:00:00.000Z","StyledMultiEmailInput","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","LinkContributor","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","CreateCollectiveMiniForm","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","Location","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","StyledInputLocation","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","AutocompleteEditTags","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","EditTags","opencollective-frontend","opencollective-frontend","","2"
+"2024-05-24T00:00:00.000Z","StyledLinkButton","opencollective-frontend","opencollective-frontend","","5"
+"2024-05-24T00:00:00.000Z","I18nCollectiveTags","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","ApplyToHostModal","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","LinkCollective","opencollective-frontend","opencollective-frontend","","7"
+"2024-05-24T00:00:00.000Z","Loading","opencollective-frontend","opencollective-frontend","","8"
+"2024-05-24T00:00:00.000Z","CollectiveTagsInput","opencollective-frontend","opencollective-frontend","","2"
+"2024-05-24T00:00:00.000Z","StyledInputGroup","opencollective-frontend","opencollective-frontend","","3"
+"2024-05-24T00:00:00.000Z","StyledInputAmount","opencollective-frontend","opencollective-frontend","","3"
+"2024-05-24T00:00:00.000Z","LoadingGrid","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","CollectiveContactForm","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","TopBarMobileMenu","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","InputTypeCountry","opencollective-frontend","opencollective-frontend","","2"
+"2024-05-24T00:00:00.000Z","StyledCollectiveCard","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","StyledCard","opencollective-frontend","opencollective-frontend","","6"
+"2024-05-24T00:00:00.000Z","PDFViewer","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","I18nAddressFields","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","SimpleLocationFieldRenderer","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","ContributorAvatar","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","Avatar","opencollective-frontend","opencollective-frontend","","15"
+"2024-05-24T00:00:00.000Z","GuestAvatar","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","IncognitoAvatar","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","StyledTag","opencollective-frontend","opencollective-frontend","","12"
+"2024-05-24T00:00:00.000Z","StyledInputField","opencollective-frontend","opencollective-frontend","","11"
+"2024-05-24T00:00:00.000Z","FollowButton","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","CollectiveTypePicker","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","UploadedFilePreview","opencollective-frontend","opencollective-frontend","","2"
+"2024-05-24T00:00:00.000Z","Currency","opencollective-frontend","opencollective-frontend","","4"
+"2024-05-24T00:00:00.000Z","CollectivePicker","opencollective-frontend","opencollective-frontend","","3"
+"2024-05-24T00:00:00.000Z","PaymentMethodSelect","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","EventSponsorCard","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","HideGlobalScroll","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","Body","opencollective-frontend","opencollective-frontend","","4"
+"2024-05-24T00:00:00.000Z","Link","opencollective-frontend","opencollective-frontend","Most Used","33"
+"2024-05-24T00:00:00.000Z","SearchModal","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","PayWithPaypalButton","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","DefaultPaletteStyle","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","InputField","opencollective-frontend","opencollective-frontend","","4"
+"2024-05-24T00:00:00.000Z","StyledCarousel","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","VideoPlayer","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","CreateProfile","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","StyledLink","opencollective-frontend","opencollective-frontend","","19"
+"2024-05-24T00:00:00.000Z","InputTypeLocation","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","H1","opencollective-frontend","opencollective-frontend","","9"
+"2024-05-24T00:00:00.000Z","H2","opencollective-frontend","opencollective-frontend","","2"
+"2024-05-24T00:00:00.000Z","H3","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","H4","opencollective-frontend","opencollective-frontend","","2"
+"2024-05-24T00:00:00.000Z","H5","opencollective-frontend","opencollective-frontend","","4"
+"2024-05-24T00:00:00.000Z","Label","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","P","opencollective-frontend","opencollective-frontend","Most Used","40"
+"2024-05-24T00:00:00.000Z","Span","opencollective-frontend","opencollective-frontend","Most Used","40"
+"2024-05-24T00:00:00.000Z","Strong","opencollective-frontend","opencollective-frontend","","2"
+"2024-05-24T00:00:00.000Z","MessageBoxGraphqlError","opencollective-frontend","opencollective-frontend","","2"
+"2024-05-24T00:00:00.000Z","I18nSupportLink","opencollective-frontend","opencollective-frontend","","2"
+"2024-05-24T00:00:00.000Z","getCategoryLabel","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","Header","opencollective-frontend","opencollective-frontend","","5"
+"2024-05-24T00:00:00.000Z","DateTime","opencollective-frontend","opencollective-frontend","","2"
+"2024-05-24T00:00:00.000Z","StyledSelect","opencollective-frontend","opencollective-frontend","","13"
+"2024-05-24T00:00:00.000Z","Hide","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","HTMLContent","opencollective-frontend","opencollective-frontend","","4"
+"2024-05-24T00:00:00.000Z","StyledCheckbox","opencollective-frontend","opencollective-frontend","","9"
+"2024-05-24T00:00:00.000Z","TimezonePicker","opencollective-frontend","opencollective-frontend","","2"
+"2024-05-24T00:00:00.000Z","StepsProgress","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","Image","opencollective-frontend","opencollective-frontend","","11"
+"2024-05-24T00:00:00.000Z","StyledCurrencyPicker","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","StyledSpinner","opencollective-frontend","opencollective-frontend","","10"
+"2024-05-24T00:00:00.000Z","ErrorPage","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","TopBar","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","StyledSelectCreatable","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","PopupMenu","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","Box","opencollective-frontend","opencollective-frontend","Most Used","49"
+"2024-05-24T00:00:00.000Z","Flex","opencollective-frontend","opencollective-frontend","Most Used","69"
+"2024-05-24T00:00:00.000Z","Grid","opencollective-frontend","opencollective-frontend","","2"
+"2024-05-24T00:00:00.000Z","SearchForm","opencollective-frontend","opencollective-frontend","","2"
+"2024-05-24T00:00:00.000Z","FileDownloader","opencollective-frontend","opencollective-frontend","","1"
+"2024-05-24T00:00:00.000Z","MessageBox","opencollective-frontend","opencollective-frontend","Most Used","21"
+"2024-05-24T00:00:00.000Z","react-animate-height","react-animate-height","opencollective-frontend","external","2"
+"2024-05-24T00:00:00.000Z","FormattedDate","react-intl","opencollective-frontend","external","11"
+"2024-05-24T00:00:00.000Z","FormattedMessage","react-intl","opencollective-frontend","external,Most Used","107"
+"2024-05-24T00:00:00.000Z","FormattedMessage","react-intl","opencollective-frontend","external,Most Used","107"
+"2024-05-24T00:00:00.000Z","Document","react-pdf","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","Page","react-pdf","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","Manager","react-popper","opencollective-frontend","external","2"
+"2024-05-24T00:00:00.000Z","Popper","react-popper","opencollective-frontend","external","4"
+"2024-05-24T00:00:00.000Z","Reference","react-popper","opencollective-frontend","external","2"
+"2024-05-24T00:00:00.000Z","Link","react-router-dom","@omlet/webapp","external,Most Used","22"
+"2024-05-24T00:00:00.000Z","Link","react-router-dom","@omlet/webapp","external,Most Used","22"
+"2024-05-24T00:00:00.000Z","Navigate","react-router-dom","@omlet/webapp","external","2"
+"2024-05-24T00:00:00.000Z","NavLink","react-router-dom","@omlet/webapp","external","2"
+"2024-05-24T00:00:00.000Z","Outlet","react-router-dom","@omlet/webapp","external","4"
+"2024-05-24T00:00:00.000Z","Route","react-router-dom","@omlet/webapp","external","1"
+"2024-05-24T00:00:00.000Z","RouterProvider","react-router-dom","@omlet/webapp","external","1"
+"2024-05-24T00:00:00.000Z","Scrollchor","react-scrollchor","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","creatable","react-select","opencollective-frontend","external","2"
+"2024-05-24T00:00:00.000Z","react-text-mask","react-text-mask","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","react-turnstile","react-turnstile","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","FixedSizeGrid","react-window","opencollective-frontend","external","1"
+"2024-05-24T00:00:00.000Z","Controls","reactflow","@omlet/webapp","external","1"
+"2024-05-24T00:00:00.000Z","reactflow","reactflow","@omlet/webapp","external","1"
+"2024-05-24T00:00:00.000Z","Handle","reactflow","@omlet/webapp","external","1"
+"2024-05-24T00:00:00.000Z","NodeToolbar","reactflow","@omlet/webapp","external","1"
+"2024-05-24T00:00:00.000Z","ReactFlowProvider","reactflow","@omlet/webapp","external","1""
+`;

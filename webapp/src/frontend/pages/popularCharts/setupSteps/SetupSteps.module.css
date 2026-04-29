@@ -1,0 +1,81 @@
+.setupSteps {
+    flex: 0 0 280px;
+    padding: 24px 8px 8px;
+    background-color: var(--background-primary-color);
+    box-shadow: var(--shadow-default);
+    border-radius: 2px;
+    font-size: 13px;
+    color: var(--label-primary-color);
+}
+
+.setupSteps .closeButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 8px;
+    border-radius: 50%;
+    line-height: 0;
+    color: var(--label-secondary-color);
+}
+
+.setupSteps .title {
+    margin-bottom: 16px;
+    padding-left: 30px;
+}
+
+.setupSteps li {
+    padding: 8px;
+    line-height: 18px;
+}
+
+.setupSteps li a {
+    color: inherit;
+}
+
+.setupSteps li button {
+    color: inherit;
+}
+
+.setupSteps .completedStep {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.setupSteps .completedStep .checkbox {
+    margin-top: 2.5px;
+}
+
+.setupSteps .completedStep s {
+    text-decoration: none;
+    position: relative;
+    white-space: pre;
+}
+
+.setupSteps .completedStep s::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/src/frontend/assets/img/icStrikethrough.svg);
+    background-repeat: repeat;
+    background-size: 16px 18px;
+    background-position: left 1px;
+    pointer-events: none;
+}
+
+.setupSteps .incompleteStep {
+    margin-left: 38px;
+    padding-left: 0;
+}
+
+.setupSteps .incompleteStep::marker {
+    content: "• ";
+}
+
+.setupSteps .incompleteStep a,
+.setupSteps .incompleteStep button {
+    text-decoration: underline;
+}

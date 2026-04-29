@@ -1,0 +1,449 @@
+---
+source: crates/core/tests/test_parser.rs
+expression: "&parser::Module::new(&RelativePathBuf::from_path(path.strip_prefix(&project_root).unwrap()).unwrap(),\n&project_root, &module_resolver,).unwrap()"
+input_file: samples/typescript/src/functional-component/control-statements/conditional-if/return-var/if-else-if.tsx
+---
+source_path: src/functional-component/control-statements/conditional-if/return-var/if-else-if.tsx
+id:
+  hash: "12726900177706873002"
+  path: src/functional-component/control-statements/conditional-if/return-var/if-else-if.tsx
+  package_name: UNKNOWN
+  mtype: local
+created_at: ~
+updated_at: ~
+exports:
+  - source:
+      Internal: "Sample#1"
+    exported_name: Sample
+declarations:
+  - symbol: "React#1"
+    source:
+      hash: "12726900177706873002"
+      path: src/functional-component/control-statements/conditional-if/return-var/if-else-if.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
+    inferred_type:
+      TypeOf:
+        symbol:
+          symbol: "default#0"
+          source:
+            hash: "11002248552354871051"
+            path: ""
+            package_name: react
+            mtype: package
+        is_local: false
+    start:
+      line: 1
+      column: 8
+    end:
+      line: 1
+      column: 13
+  - symbol: "Sample#1"
+    source:
+      hash: "12726900177706873002"
+      path: src/functional-component/control-statements/conditional-if/return-var/if-else-if.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<declaration>"
+    inferred_type:
+      Function:
+        - TypeOf:
+            symbol:
+              symbol: "result#2"
+              source:
+                hash: "12726900177706873002"
+                path: src/functional-component/control-statements/conditional-if/return-var/if-else-if.tsx
+                package_name: UNKNOWN
+                mtype: local
+            is_local: true
+    start:
+      line: 3
+      column: 8
+    end:
+      line: 15
+      column: 2
+  - symbol: "bool#2"
+    source:
+      hash: "12726900177706873002"
+      path: src/functional-component/control-statements/conditional-if/return-var/if-else-if.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "Parameter<Symbol { name: Atom('Sample' type=inline), context: #1 }>[0]"
+    inferred_type:
+      ParameterOf:
+        function:
+          symbol: "Sample#1"
+          source:
+            hash: "12726900177706873002"
+            path: src/functional-component/control-statements/conditional-if/return-var/if-else-if.tsx
+            package_name: UNKNOWN
+            mtype: local
+        index: 0
+    start:
+      line: 3
+      column: 24
+    end:
+      line: 3
+      column: 38
+  - symbol: "result#2"
+    source:
+      hash: "12726900177706873002"
+      path: src/functional-component/control-statements/conditional-if/return-var/if-else-if.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<empty>"
+    inferred_type: Unknown
+    start:
+      line: 4
+      column: 9
+    end:
+      line: 4
+      column: 15
+scopes:
+  - owner: "__global#0"
+    parent: ~
+    children:
+      - "Sample#1"
+      - "Sample#1"
+    references:
+      - "React#1"
+      - "Sample#1"
+      - "bool#2"
+      - "div#3"
+      - "result#2"
+      - "undefined#3"
+    jsx_references:
+      - "div#3"
+  - owner: "Sample#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "bool#2"
+      - "div#3"
+      - "result#2"
+      - "undefined#3"
+    jsx_references:
+      - "div#3"
+  - owner: "Sample#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "bool#2"
+      - "div#3"
+      - "result#2"
+      - "undefined#3"
+    jsx_references:
+      - "div#3"
+body:
+  - type: ImportDeclaration
+    span:
+      start: 1
+      end: 27
+      ctxt: 0
+    specifiers:
+      - type: ImportDefaultSpecifier
+        span:
+          start: 8
+          end: 13
+          ctxt: 0
+        local:
+          type: Identifier
+          span:
+            start: 8
+            end: 13
+            ctxt: 1
+          value: React
+          optional: false
+    source:
+      type: StringLiteral
+      span:
+        start: 19
+        end: 26
+        ctxt: 0
+      value: react
+      raw: "\"react\""
+    typeOnly: false
+    asserts: ~
+  - type: ExportDeclaration
+    span:
+      start: 29
+      end: 260
+      ctxt: 0
+    declaration:
+      async: false
+      body:
+        type: BlockStatement
+        span:
+          start: 68
+          end: 260
+          ctxt: 0
+        stmts:
+          - type: VariableDeclaration
+            span:
+              start: 74
+              end: 85
+              ctxt: 0
+            kind: let
+            declare: false
+            declarations:
+              - type: VariableDeclarator
+                span:
+                  start: 78
+                  end: 84
+                  ctxt: 0
+                id:
+                  optional: false
+                  span:
+                    start: 78
+                    end: 84
+                    ctxt: 2
+                  type: Identifier
+                  typeAnnotation: ~
+                  value: result
+                init: ~
+                definite: false
+          - type: IfStatement
+            span:
+              start: 91
+              end: 238
+              ctxt: 0
+            test:
+              type: BinaryExpression
+              span:
+                start: 95
+                end: 113
+                ctxt: 0
+              operator: "==="
+              left:
+                type: Identifier
+                span:
+                  start: 95
+                  end: 99
+                  ctxt: 2
+                value: bool
+                optional: false
+              right:
+                type: Identifier
+                span:
+                  start: 104
+                  end: 113
+                  ctxt: 3
+                value: undefined
+                optional: false
+            consequent:
+              type: BlockStatement
+              span:
+                start: 115
+                end: 145
+                ctxt: 0
+              stmts:
+                - type: ExpressionStatement
+                  span:
+                    start: 125
+                    end: 139
+                    ctxt: 0
+                  expression:
+                    type: AssignmentExpression
+                    span:
+                      start: 125
+                      end: 138
+                      ctxt: 0
+                    operator: "="
+                    left:
+                      optional: false
+                      span:
+                        start: 125
+                        end: 131
+                        ctxt: 2
+                      type: Identifier
+                      typeAnnotation: ~
+                      value: result
+                    right:
+                      type: NullLiteral
+                      span:
+                        start: 134
+                        end: 138
+                        ctxt: 0
+            alternate:
+              type: IfStatement
+              span:
+                start: 151
+                end: 238
+                ctxt: 0
+              test:
+                type: Identifier
+                span:
+                  start: 155
+                  end: 159
+                  ctxt: 2
+                value: bool
+                optional: false
+              consequent:
+                type: BlockStatement
+                span:
+                  start: 161
+                  end: 204
+                  ctxt: 0
+                stmts:
+                  - type: ExpressionStatement
+                    span:
+                      start: 171
+                      end: 198
+                      ctxt: 0
+                    expression:
+                      type: AssignmentExpression
+                      span:
+                        start: 171
+                        end: 197
+                        ctxt: 0
+                      operator: "="
+                      left:
+                        optional: false
+                        span:
+                          start: 171
+                          end: 177
+                          ctxt: 2
+                        type: Identifier
+                        typeAnnotation: ~
+                        value: result
+                      right:
+                        type: JSXElement
+                        span:
+                          start: 180
+                          end: 197
+                          ctxt: 0
+                        opening:
+                          type: JSXOpeningElement
+                          name:
+                            type: Identifier
+                            span:
+                              start: 181
+                              end: 184
+                              ctxt: 3
+                            value: div
+                            optional: false
+                          span:
+                            start: 180
+                            end: 185
+                            ctxt: 0
+                          attributes: []
+                          selfClosing: false
+                          typeArguments: ~
+                        children:
+                          - type: JSXText
+                            span:
+                              start: 185
+                              end: 191
+                              ctxt: 0
+                            value: Sample
+                            raw: Sample
+                        closing:
+                          type: JSXClosingElement
+                          span:
+                            start: 191
+                            end: 197
+                            ctxt: 0
+                          name:
+                            type: Identifier
+                            span:
+                              start: 193
+                              end: 196
+                              ctxt: 3
+                            value: div
+                            optional: false
+              alternate:
+                type: BlockStatement
+                span:
+                  start: 210
+                  end: 238
+                  ctxt: 0
+                stmts:
+                  - type: ExpressionStatement
+                    span:
+                      start: 220
+                      end: 232
+                      ctxt: 0
+                    expression:
+                      type: AssignmentExpression
+                      span:
+                        start: 220
+                        end: 231
+                        ctxt: 0
+                      operator: "="
+                      left:
+                        optional: false
+                        span:
+                          start: 220
+                          end: 226
+                          ctxt: 2
+                        type: Identifier
+                        typeAnnotation: ~
+                        value: result
+                      right:
+                        type: NumericLiteral
+                        span:
+                          start: 229
+                          end: 231
+                          ctxt: 0
+                        value: 42.0
+                        raw: "42"
+          - type: ReturnStatement
+            span:
+              start: 244
+              end: 258
+              ctxt: 0
+            argument:
+              type: Identifier
+              span:
+                start: 251
+                end: 257
+                ctxt: 2
+              value: result
+              optional: false
+      declare: false
+      decorators: []
+      generator: false
+      identifier:
+        type: Identifier
+        span:
+          start: 45
+          end: 51
+          ctxt: 1
+        value: Sample
+        optional: false
+      params:
+        - type: Parameter
+          span:
+            start: 52
+            end: 66
+            ctxt: 0
+          decorators: []
+          pat:
+            optional: true
+            span:
+              start: 52
+              end: 66
+              ctxt: 2
+            type: Identifier
+            typeAnnotation:
+              type: TsTypeAnnotation
+              span:
+                start: 57
+                end: 66
+                ctxt: 0
+              typeAnnotation:
+                type: TsKeywordType
+                span:
+                  start: 59
+                  end: 66
+                  ctxt: 0
+                kind: boolean
+            value: bool
+      returnType: ~
+      span:
+        start: 36
+        end: 260
+        ctxt: 0
+      type: FunctionDeclaration
+      typeParameters: ~

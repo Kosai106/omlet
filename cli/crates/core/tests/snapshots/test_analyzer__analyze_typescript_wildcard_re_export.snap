@@ -1,0 +1,67 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&component_results"
+---
+num_of_components: 3
+components:
+  - definition_id: "@mui/material:cc29053ff492a0bc6ceac79687e3583259d95bb2cf7aa32d6718a546061e124d:Divider"
+    name: Divider
+    export_ids: []
+    package_name: "@mui/material"
+    source_path: Divider
+    dependencies: []
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:a27c8fd3b817b5f767fe871eb326a8b4cab33cf4a6f8a8e868fbe77e7ebd9428:App"
+    name: App
+    export_ids:
+      - "typescript-examples:src/wildcard-re-export/app:App"
+    package_name: typescript-examples
+    source_path: src/wildcard-re-export/app.tsx
+    dependencies:
+      - from: "typescript-examples:a27c8fd3b817b5f767fe871eb326a8b4cab33cf4a6f8a8e868fbe77e7ebd9428:App"
+        to: "@mui/material:cc29053ff492a0bc6ceac79687e3583259d95bb2cf7aa32d6718a546061e124d:Divider"
+        references:
+          - trace:
+              - "typescript-examples:bf32e8e5a0e867f2852441136509443315b67529ea5e29b551fc789a99dd762e:Divider"
+              - "typescript-examples:377b7e3eadb533edc05721320ff94c7e3febd8dc61892c132abfbcc057b3c3e7:Divider"
+              - "@mui/material:cc29053ff492a0bc6ceac79687e3583259d95bb2cf7aa32d6718a546061e124d:Divider"
+            usages:
+              - start:
+                  line: 6
+                  column: 13
+                end:
+                  line: 6
+                  column: 24
+                props: []
+      - from: "typescript-examples:a27c8fd3b817b5f767fe871eb326a8b4cab33cf4a6f8a8e868fbe77e7ebd9428:App"
+        to: "typescript-examples:389da781ceac91e86a3571b7c7d2698ee0b3581947f45eaa0b8dc6847e8c98e2:Accordion"
+        references:
+          - trace:
+              - "typescript-examples:bf32e8e5a0e867f2852441136509443315b67529ea5e29b551fc789a99dd762e:Accordion"
+              - "typescript-examples:12e30bc9b1573b93ffaf7665589e9ba5c3924ce7a3b60c1f8e9d3b7babf8c619:Accordion"
+              - "typescript-examples:389da781ceac91e86a3571b7c7d2698ee0b3581947f45eaa0b8dc6847e8c98e2:Accordion"
+            usages:
+              - start:
+                  line: 7
+                  column: 13
+                end:
+                  line: 7
+                  column: 26
+                props: []
+    props: []
+    html_elements:
+      - div
+  - definition_id: "typescript-examples:389da781ceac91e86a3571b7c7d2698ee0b3581947f45eaa0b8dc6847e8c98e2:Accordion"
+    name: Accordion
+    export_ids:
+      - "typescript-examples:src/wildcard-re-export/components/Accordion/Accordion:Accordion"
+      - "typescript-examples:src/wildcard-re-export/components/Accordion:Accordion"
+      - "typescript-examples:src/wildcard-re-export/components:Accordion"
+    package_name: typescript-examples
+    source_path: src/wildcard-re-export/components/Accordion/Accordion.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - div
+

@@ -1,0 +1,268 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&component_results"
+---
+num_of_components: 11
+components:
+  - definition_id: "@nighttrax/bar:b735c973d9cea6bab8f094d05e8c7272b2e430df63dc76cdc9ecf12bf2ed9481:BarComponent"
+    name: BarComponent
+    export_ids:
+      - "@nighttrax/bar:.:BarComponent"
+      - "@nighttrax/bar:src:BarComponent"
+    package_name: "@nighttrax/bar"
+    source_path: packages/bar/src/index.tsx
+    dependencies:
+      - from: "@nighttrax/bar:b735c973d9cea6bab8f094d05e8c7272b2e430df63dc76cdc9ecf12bf2ed9481:BarComponent"
+        to: "@nighttrax/foo:0b5b9c04ef1f34674fdec0d6fcee29366d7c8354da6ae8f6145de8a5e0957589:FooComponent"
+        references:
+          - trace:
+              - "@nighttrax/foo:0b5b9c04ef1f34674fdec0d6fcee29366d7c8354da6ae8f6145de8a5e0957589:FooComponent"
+            usages:
+              - start:
+                  line: 8
+                  column: 12
+                end:
+                  line: 8
+                  column: 41
+                props: []
+    props: []
+    html_elements: []
+  - definition_id: "@nighttrax/components:c49a3a21d6e61f2fedb9483da713ac10b98483eb464aa17c71f49a02434cc32b:Button"
+    name: Button
+    export_ids:
+      - "@nighttrax/components:src/button:Button"
+      - "@nighttrax/components:src:Button"
+    package_name: "@nighttrax/components"
+    source_path: packages/components/src/button.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - button
+  - definition_id: "@nighttrax/components:73cce86c0d6f02defeea49c3705c8de053e65d7266d9a7e1a5cad47310994967:PageComponent"
+    name: PageComponent
+    export_ids:
+      - "@nighttrax/components:src/pageComponents:PageComponent"
+    package_name: "@nighttrax/components"
+    source_path: packages/components/src/pageComponents.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - div
+  - definition_id: "@nighttrax/components:f7ef7a1afc05348d935226419b12d95a42d72ed62bd722f0baf83e640c9d79ad:StyledButton"
+    name: StyledButton
+    export_ids:
+      - "@nighttrax/components:src/styled/button:StyledButton"
+      - "@nighttrax/components:src/styled:StyledButton"
+    package_name: "@nighttrax/components"
+    source_path: packages/components/src/styled/button.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - button
+  - definition_id: "@nighttrax/cra-example:6717bd9550d43276373c270c4868aeccfbf95c8fe82ddc7808500e87c18d73b2:App"
+    name: App
+    export_ids:
+      - "@nighttrax/cra-example:src/components/app:App"
+    package_name: "@nighttrax/cra-example"
+    source_path: apps/cra/src/components/app.tsx
+    dependencies:
+      - from: "@nighttrax/cra-example:6717bd9550d43276373c270c4868aeccfbf95c8fe82ddc7808500e87c18d73b2:App"
+        to: "@nighttrax/bar:b735c973d9cea6bab8f094d05e8c7272b2e430df63dc76cdc9ecf12bf2ed9481:BarComponent"
+        references:
+          - trace:
+              - "@nighttrax/bar:b735c973d9cea6bab8f094d05e8c7272b2e430df63dc76cdc9ecf12bf2ed9481:BarComponent"
+            usages:
+              - start:
+                  line: 13
+                  column: 7
+                end:
+                  line: 13
+                  column: 22
+                props: []
+      - from: "@nighttrax/cra-example:6717bd9550d43276373c270c4868aeccfbf95c8fe82ddc7808500e87c18d73b2:App"
+        to: "@nighttrax/components:73cce86c0d6f02defeea49c3705c8de053e65d7266d9a7e1a5cad47310994967:PageComponent"
+        references:
+          - trace:
+              - "@nighttrax/components:73cce86c0d6f02defeea49c3705c8de053e65d7266d9a7e1a5cad47310994967:PageComponent"
+            usages:
+              - start:
+                  line: 16
+                  column: 7
+                end:
+                  line: 16
+                  column: 23
+                props: []
+      - from: "@nighttrax/cra-example:6717bd9550d43276373c270c4868aeccfbf95c8fe82ddc7808500e87c18d73b2:App"
+        to: "@nighttrax/components:f7ef7a1afc05348d935226419b12d95a42d72ed62bd722f0baf83e640c9d79ad:StyledButton"
+        references:
+          - trace:
+              - "@nighttrax/components:a96c5049582431896afde74a2cc3c58cb086e0b9fd61bbc31ae0443528cfaf16:StyledButton"
+              - "@nighttrax/components:f7ef7a1afc05348d935226419b12d95a42d72ed62bd722f0baf83e640c9d79ad:StyledButton"
+            usages:
+              - start:
+                  line: 15
+                  column: 7
+                end:
+                  line: 15
+                  column: 23
+                props: []
+      - from: "@nighttrax/cra-example:6717bd9550d43276373c270c4868aeccfbf95c8fe82ddc7808500e87c18d73b2:App"
+        to: "@nighttrax/foo:0b5b9c04ef1f34674fdec0d6fcee29366d7c8354da6ae8f6145de8a5e0957589:FooComponent"
+        references:
+          - trace:
+              - "@nighttrax/foo:0b5b9c04ef1f34674fdec0d6fcee29366d7c8354da6ae8f6145de8a5e0957589:FooComponent"
+            usages:
+              - start:
+                  line: 12
+                  column: 5
+                end:
+                  line: 17
+                  column: 20
+                props:
+                  - name: children
+                    value: JSXElement
+    props: []
+    html_elements: []
+  - definition_id: "@nighttrax/foo:0b5b9c04ef1f34674fdec0d6fcee29366d7c8354da6ae8f6145de8a5e0957589:FooComponent"
+    name: FooComponent
+    export_ids:
+      - "@nighttrax/foo:.:FooComponent"
+      - "@nighttrax/foo:src:FooComponent"
+    package_name: "@nighttrax/foo"
+    source_path: packages/foo/src/index.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - div
+  - definition_id: "@nighttrax/nextjs-example:7a64238d93b629cf6638e9b2d79cd9a277ca970bef0edf573bfda84e2f7626bc:default"
+    name: pages
+    export_ids:
+      - "@nighttrax/nextjs-example:pages:default"
+    package_name: "@nighttrax/nextjs-example"
+    source_path: apps/nextjs/pages/index.tsx
+    dependencies:
+      - from: "@nighttrax/nextjs-example:7a64238d93b629cf6638e9b2d79cd9a277ca970bef0edf573bfda84e2f7626bc:default"
+        to: "@nighttrax/components:c49a3a21d6e61f2fedb9483da713ac10b98483eb464aa17c71f49a02434cc32b:Button"
+        references:
+          - trace:
+              - "@nighttrax/components:c49a3a21d6e61f2fedb9483da713ac10b98483eb464aa17c71f49a02434cc32b:Button"
+            usages:
+              - start:
+                  line: 4
+                  column: 22
+                end:
+                  line: 4
+                  column: 32
+                props: []
+    props: []
+    html_elements: []
+  - definition_id: "@nighttrax/storybook-example:35a67b1436992807329526bd8e76951bdddb24009645ff6ca89abe5add536364:Foo"
+    name: Foo
+    export_ids:
+      - "@nighttrax/storybook-example:src/components/foo:Foo"
+    package_name: "@nighttrax/storybook-example"
+    source_path: apps/storybook/src/components/foo.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - span
+  - definition_id: "@nighttrax/storybook-example:8a4b1bc0a041172194afac24dd9689b61200102f37d055a6de89084611d1fd97:Local"
+    name: Local
+    export_ids:
+      - "@nighttrax/storybook-example:src/index.stories:Local"
+    package_name: "@nighttrax/storybook-example"
+    source_path: apps/storybook/src/index.stories.tsx
+    dependencies:
+      - from: "@nighttrax/storybook-example:8a4b1bc0a041172194afac24dd9689b61200102f37d055a6de89084611d1fd97:Local"
+        to: "@nighttrax/storybook-example:35a67b1436992807329526bd8e76951bdddb24009645ff6ca89abe5add536364:Foo"
+        references:
+          - trace:
+              - "@nighttrax/storybook-example:35a67b1436992807329526bd8e76951bdddb24009645ff6ca89abe5add536364:Foo"
+            usages:
+              - start:
+                  line: 9
+                  column: 28
+                end:
+                  line: 9
+                  column: 35
+                props: []
+    props: []
+    html_elements: []
+  - definition_id: "@nighttrax/storybook-example:8a4b1bc0a041172194afac24dd9689b61200102f37d055a6de89084611d1fd97:Monorepo"
+    name: Monorepo
+    export_ids:
+      - "@nighttrax/storybook-example:src/index.stories:Monorepo"
+    package_name: "@nighttrax/storybook-example"
+    source_path: apps/storybook/src/index.stories.tsx
+    dependencies:
+      - from: "@nighttrax/storybook-example:8a4b1bc0a041172194afac24dd9689b61200102f37d055a6de89084611d1fd97:Monorepo"
+        to: "@nighttrax/components:c49a3a21d6e61f2fedb9483da713ac10b98483eb464aa17c71f49a02434cc32b:Button"
+        references:
+          - trace:
+              - "@nighttrax/components:c49a3a21d6e61f2fedb9483da713ac10b98483eb464aa17c71f49a02434cc32b:Button"
+            usages:
+              - start:
+                  line: 11
+                  column: 31
+                end:
+                  line: 11
+                  column: 41
+                props: []
+    props: []
+    html_elements: []
+  - definition_id: "@nighttrax/vite-example:c0c33d2e84ab7127e89c5f8e6efa4dc6314e421c30d84dd4c6bd7c9d7db2ba6d:default"
+    name: App
+    export_ids:
+      - "@nighttrax/vite-example:src/App:default"
+    package_name: "@nighttrax/vite-example"
+    source_path: apps/vite/src/App.tsx
+    dependencies:
+      - from: "@nighttrax/vite-example:c0c33d2e84ab7127e89c5f8e6efa4dc6314e421c30d84dd4c6bd7c9d7db2ba6d:default"
+        to: "@nighttrax/bar:b735c973d9cea6bab8f094d05e8c7272b2e430df63dc76cdc9ecf12bf2ed9481:BarComponent"
+        references:
+          - trace:
+              - "@nighttrax/bar:b735c973d9cea6bab8f094d05e8c7272b2e430df63dc76cdc9ecf12bf2ed9481:BarComponent"
+            usages:
+              - start:
+                  line: 20
+                  column: 9
+                end:
+                  line: 20
+                  column: 38
+                props: []
+      - from: "@nighttrax/vite-example:c0c33d2e84ab7127e89c5f8e6efa4dc6314e421c30d84dd4c6bd7c9d7db2ba6d:default"
+        to: "@nighttrax/components:c49a3a21d6e61f2fedb9483da713ac10b98483eb464aa17c71f49a02434cc32b:Button"
+        references:
+          - trace:
+              - "@nighttrax/components:c49a3a21d6e61f2fedb9483da713ac10b98483eb464aa17c71f49a02434cc32b:Button"
+            usages:
+              - start:
+                  line: 25
+                  column: 9
+                end:
+                  line: 25
+                  column: 19
+                props: []
+      - from: "@nighttrax/vite-example:c0c33d2e84ab7127e89c5f8e6efa4dc6314e421c30d84dd4c6bd7c9d7db2ba6d:default"
+        to: "@nighttrax/foo:0b5b9c04ef1f34674fdec0d6fcee29366d7c8354da6ae8f6145de8a5e0957589:FooComponent"
+        references:
+          - trace:
+              - "@nighttrax/foo:0b5b9c04ef1f34674fdec0d6fcee29366d7c8354da6ae8f6145de8a5e0957589:FooComponent"
+            usages:
+              - start:
+                  line: 21
+                  column: 9
+                end:
+                  line: 21
+                  column: 38
+                props: []
+    props: []
+    html_elements:
+      - a
+      - button
+      - code
+      - div
+      - h1
+      - img
+      - p
+

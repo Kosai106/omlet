@@ -1,0 +1,105 @@
+.folderNode {
+    position: relative;
+    padding-left: 16px;
+}
+
+.folderNode .verticalLine {
+    position: absolute;
+    top: 24px;
+    left: 32px;
+    width: 1px;
+    border-radius: 1px;
+    background-color: var(--border-secondary-color);
+}
+
+.folderNode .verticalLine.selected {
+    background-color: var(--accent-green);
+    z-index: 1;
+}
+
+.folderNode .current {
+    display: flex;
+    align-items: center;
+    margin: 4px 0;
+}
+
+.folderNode .current .branchIcon {
+    position: relative;
+    top: -2px;
+}
+
+.folderNode .current .collapseButton {
+    padding: 4px;
+    line-height: 0;
+    transform-origin: center;
+    transition-property: transform;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+}
+
+.folderNode .current .collapseButton.collapsed {
+    transform: rotate(-90deg);
+}
+
+.folderNode .current .folderSelector {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 22px;
+    padding: 0 var(--spacing-xxs);
+    border-radius: 2px;
+    font-size: 13px;
+    line-height: 18px;
+    user-select: none;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.folderNode .current .folderSelector.leaf {
+    margin-left: var(--spacing-xxs);
+}
+
+.folderNode .current .folderSelector:hover {
+    background-color: var(--button-background-hover-color);
+}
+
+.folderNode .current .folderSelector:active {
+    background-color: var(--button-background-active-color);
+}
+
+.folderNode .current .folderSelector.selected {
+    background-color: rgba(var(--accent-green-rgb), 0.1);
+    box-shadow: 0 0 0 1px var(--accent-green);
+}
+
+.folderNode .current .folderSelector.selected.partiallySelected {
+    background-color: transparent;
+    background-image: repeating-linear-gradient(
+        -45deg,
+        rgba(var(--accent-green-rgb), 0.1),
+        rgba(var(--accent-green-rgb), 0.1) 8px,
+        rgba(var(--accent-yellow-rgb), 0.1) 8px,
+        rgba(var(--accent-yellow-rgb), 0.1) 16px
+    );
+    box-shadow: 0 0 0 1px var(--accent-green);
+}
+
+.folderNode .current .folderSelector .folderInfo {
+    color: var(--label-primary-color);
+}
+
+.folderNode .current .folderSelector .separatorDot {
+    display: inline-block;
+    width: 2px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: var(--label-secondary-color);
+}
+
+.folderNode .current .folderSelector .componentCount {
+    color: var(--label-secondary-color);
+}
+
+.folderNode .current .folderSelector input {
+    display: none;
+}

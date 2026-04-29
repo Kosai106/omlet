@@ -1,0 +1,74 @@
+.folderNode {
+    position: relative;
+    padding-left: 16px;
+}
+
+.folderNode .current {
+    display: flex;
+    align-items: center;
+}
+
+.folderNode .current .branchIcon {
+    position: relative;
+    top: -2px;
+}
+
+.folderNode .current .row {
+    display: flex;
+    align-items: center;
+    height: 26px;
+    font-size: 13px;
+    line-height: 18px;
+    padding-right: var(--spacing-xs);
+}
+
+.folderNode .current .row .cell {
+    padding-left: 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.folderNode .current .row .cell .folderInfo {
+    color: var(--label-primary-color);
+}
+
+.folderNode .current .row .cell .separatorDot {
+    display: inline-block;
+    width: 2px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: var(--label-secondary-color);
+}
+
+.folderNode .current .row .cell .componentCount {
+    color: var(--label-secondary-color);
+}
+
+.folderNode:not(.readOnly) .current .row:hover {
+    border-radius: 2px;
+    background-color: var(--background-secondary-color);
+}
+
+.folderNode .current .collapseButton {
+    padding: 4px;
+    line-height: 0;
+    transform-origin: center;
+    transition-property: transform;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+}
+
+.folderNode .current .collapseButton.collapsed {
+    transform: rotate(-90deg);
+}
+
+.folderNode .current .row .cell .tags {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.folderNode .current .row:not(.dropdownOpen, :hover) .cell .tags .addTag {
+    visibility: hidden;
+}

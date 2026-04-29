@@ -1,0 +1,388 @@
+---
+source: crates/core/tests/test_parser.rs
+expression: "&parser::Module::new(&RelativePathBuf::from_path(path.strip_prefix(&project_root).unwrap()).unwrap(),\n&project_root, &module_resolver,).unwrap()"
+input_file: samples/typescript/src/dynamic-import/with-react-lazy.tsx
+---
+source_path: src/dynamic-import/with-react-lazy.tsx
+id:
+  hash: "5124988113683023092"
+  path: src/dynamic-import/with-react-lazy.tsx
+  package_name: UNKNOWN
+  mtype: local
+created_at: ~
+updated_at: ~
+exports:
+  - source:
+      Internal: "WithReactLazy#1"
+    exported_name: WithReactLazy
+declarations:
+  - symbol: "ImportedComponent#1"
+    source:
+      hash: "5124988113683023092"
+      path: src/dynamic-import/with-react-lazy.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      ReturnTypeOf:
+        - TypeOf:
+            symbol:
+              symbol: "lazy#1"
+              source:
+                hash: "5124988113683023092"
+                path: src/dynamic-import/with-react-lazy.tsx
+                package_name: UNKNOWN
+                mtype: local
+            is_local: true
+        - - Function:
+              - TypeOf:
+                  symbol:
+                    symbol: "<wildcard>#0"
+                    source:
+                      hash: "11115586911716464803"
+                      path: src/dynamic-import/imported-component
+                      package_name: UNKNOWN
+                      mtype: local
+                  is_local: false
+    start:
+      line: 3
+      column: 7
+    end:
+      line: 3
+      column: 24
+  - symbol: "WithReactLazy#1"
+    source:
+      hash: "5124988113683023092"
+      path: src/dynamic-import/with-react-lazy.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<declaration>"
+    inferred_type:
+      Function:
+        - JSX
+    start:
+      line: 5
+      column: 8
+    end:
+      line: 12
+      column: 2
+  - symbol: "lazy#1"
+    source:
+      hash: "5124988113683023092"
+      path: src/dynamic-import/with-react-lazy.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('lazy' type=inline), context: #1 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
+    inferred_type:
+      TypeOf:
+        symbol:
+          symbol: "lazy#1"
+          source:
+            hash: "11002248552354871051"
+            path: ""
+            package_name: react
+            mtype: package
+        is_local: false
+    start:
+      line: 1
+      column: 10
+    end:
+      line: 1
+      column: 14
+scopes:
+  - owner: "__global#0"
+    parent: ~
+    children:
+      - "ImportedComponent#1"
+      - "WithReactLazy#1"
+      - "WithReactLazy#1"
+    references:
+      - "ImportedComponent#1"
+      - "WithReactLazy#1"
+      - "div#2"
+      - "lazy#1"
+    jsx_references:
+      - "ImportedComponent#1"
+      - "div#2"
+  - owner: "ImportedComponent#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "lazy#1"
+    jsx_references: []
+  - owner: "WithReactLazy#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "ImportedComponent#1"
+      - "div#2"
+    jsx_references:
+      - "ImportedComponent#1"
+      - "div#2"
+  - owner: "WithReactLazy#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "ImportedComponent#1"
+      - "div#2"
+    jsx_references:
+      - "ImportedComponent#1"
+      - "div#2"
+body:
+  - type: ImportDeclaration
+    span:
+      start: 1
+      end: 30
+      ctxt: 0
+    specifiers:
+      - type: ImportSpecifier
+        span:
+          start: 10
+          end: 14
+          ctxt: 0
+        local:
+          type: Identifier
+          span:
+            start: 10
+            end: 14
+            ctxt: 1
+          value: lazy
+          optional: false
+        imported: ~
+        isTypeOnly: false
+    source:
+      type: StringLiteral
+      span:
+        start: 22
+        end: 29
+        ctxt: 0
+      value: react
+      raw: "\"react\""
+    typeOnly: false
+    asserts: ~
+  - type: VariableDeclaration
+    span:
+      start: 32
+      end: 101
+      ctxt: 0
+    kind: const
+    declare: false
+    declarations:
+      - type: VariableDeclarator
+        span:
+          start: 38
+          end: 100
+          ctxt: 0
+        id:
+          optional: false
+          span:
+            start: 38
+            end: 55
+            ctxt: 1
+          type: Identifier
+          typeAnnotation: ~
+          value: ImportedComponent
+        init:
+          type: CallExpression
+          span:
+            start: 58
+            end: 100
+            ctxt: 0
+          callee:
+            type: Identifier
+            span:
+              start: 58
+              end: 62
+              ctxt: 1
+            value: lazy
+            optional: false
+          arguments:
+            - spread: ~
+              expression:
+                type: ArrowFunctionExpression
+                span:
+                  start: 63
+                  end: 99
+                  ctxt: 0
+                params: []
+                body:
+                  type: CallExpression
+                  span:
+                    start: 69
+                    end: 99
+                    ctxt: 0
+                  callee:
+                    type: Import
+                    span:
+                      start: 69
+                      end: 75
+                      ctxt: 0
+                  arguments:
+                    - spread: ~
+                      expression:
+                        type: StringLiteral
+                        span:
+                          start: 76
+                          end: 98
+                          ctxt: 0
+                        value: "./imported-component"
+                        raw: "\"./imported-component\""
+                  typeArguments: ~
+                async: false
+                generator: false
+                typeParameters: ~
+                returnType: ~
+          typeArguments: ~
+        definite: false
+  - type: ExportDeclaration
+    span:
+      start: 103
+      end: 256
+      ctxt: 0
+    declaration:
+      async: false
+      body:
+        type: BlockStatement
+        span:
+          start: 135
+          end: 256
+          ctxt: 0
+        stmts:
+          - type: ReturnStatement
+            span:
+              start: 141
+              end: 254
+              ctxt: 0
+            argument:
+              type: ParenthesisExpression
+              span:
+                start: 148
+                end: 253
+                ctxt: 0
+              expression:
+                type: JSXFragment
+                span:
+                  start: 158
+                  end: 247
+                  ctxt: 0
+                opening:
+                  type: JSXOpeningFragment
+                  span:
+                    start: 158
+                    end: 160
+                    ctxt: 0
+                children:
+                  - type: JSXText
+                    span:
+                      start: 160
+                      end: 173
+                      ctxt: 0
+                    value: "\n\n            "
+                    raw: "\n\n            "
+                  - type: JSXElement
+                    span:
+                      start: 173
+                      end: 193
+                      ctxt: 0
+                    opening:
+                      type: JSXOpeningElement
+                      name:
+                        type: Identifier
+                        span:
+                          start: 174
+                          end: 191
+                          ctxt: 1
+                        value: ImportedComponent
+                        optional: false
+                      span:
+                        start: 173
+                        end: 193
+                        ctxt: 0
+                      attributes: []
+                      selfClosing: true
+                      typeArguments: ~
+                    children: []
+                    closing: ~
+                  - type: JSXText
+                    span:
+                      start: 193
+                      end: 206
+                      ctxt: 0
+                    value: "\n\n            "
+                    raw: "\n\n            "
+                  - type: JSXElement
+                    span:
+                      start: 206
+                      end: 235
+                      ctxt: 0
+                    opening:
+                      type: JSXOpeningElement
+                      name:
+                        type: Identifier
+                        span:
+                          start: 207
+                          end: 210
+                          ctxt: 2
+                        value: div
+                        optional: false
+                      span:
+                        start: 206
+                        end: 211
+                        ctxt: 0
+                      attributes: []
+                      selfClosing: false
+                      typeArguments: ~
+                    children:
+                      - type: JSXText
+                        span:
+                          start: 211
+                          end: 229
+                          ctxt: 0
+                        value: some sync jsx code
+                        raw: some sync jsx code
+                    closing:
+                      type: JSXClosingElement
+                      span:
+                        start: 229
+                        end: 235
+                        ctxt: 0
+                      name:
+                        type: Identifier
+                        span:
+                          start: 231
+                          end: 234
+                          ctxt: 2
+                        value: div
+                        optional: false
+                  - type: JSXText
+                    span:
+                      start: 235
+                      end: 244
+                      ctxt: 0
+                    value: "\n\n        "
+                    raw: "\n\n        "
+                closing:
+                  type: JSXClosingFragment
+                  span:
+                    start: 244
+                    end: 247
+                    ctxt: 0
+      declare: false
+      decorators: []
+      generator: false
+      identifier:
+        type: Identifier
+        span:
+          start: 119
+          end: 132
+          ctxt: 1
+        value: WithReactLazy
+        optional: false
+      params: []
+      returnType: ~
+      span:
+        start: 110
+        end: 256
+        ctxt: 0
+      type: FunctionDeclaration
+      typeParameters: ~

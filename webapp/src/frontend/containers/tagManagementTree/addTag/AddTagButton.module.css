@@ -1,0 +1,5 @@
+.addTagButton {
+    white-space: nowrap;
+    font-weight: 600;
+    color: var(--accent-green);
+}

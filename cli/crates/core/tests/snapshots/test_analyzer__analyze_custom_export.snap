@@ -1,0 +1,23 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&component_results"
+---
+num_of_components: 1
+components:
+  - definition_id: "custom-export:72722dae4e5ba86e2a2045c6fe0d356698ccbbefc1b9e4073e9a4bd517729df8:TextInput"
+    name: TextInput
+    export_ids:
+      - "custom-export:.:TextInput"
+      - "custom-export:TextInput:default"
+      - "custom-export:build/data-entry/TextInput/TextInput:TextInput"
+      - "custom-export:build/data-entry/TextInput:default"
+      - "custom-export:src/data-entry/TextInput/TextInput:TextInput"
+      - "custom-export:src/data-entry/TextInput:default"
+      - "custom-export:src:TextInput"
+    package_name: custom-export
+    source_path: src/data-entry/TextInput/TextInput.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - input
+

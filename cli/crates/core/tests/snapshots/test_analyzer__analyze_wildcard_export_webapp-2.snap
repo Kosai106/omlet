@@ -1,0 +1,151 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&export_results"
+---
+num_of_exports: 19
+exports:
+  - name: App
+    source_path: src/app.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@wildcard-exports/webapp:f2cd6bd7313b24013cd04d20b4dadb413f898c07f7c1a46ecc971d28d719accd:App"
+  - name: ComponentFromCircularExportModuleA
+    source_path: src/circular-exports/circular-export-module-A.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@wildcard-exports/webapp:d0f3aa9becd6dbdcb8551d94fd6ed28514471df4b94eb5d171f2f1cb67e3f2b6:ComponentFromCircularExportModuleA"
+  - name: ComponentFromCircularExportModuleA
+    source_path: src/circular-exports/circular-export-module-B.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@wildcard-exports/webapp:34c5c26de4a46aaa97e73b783b954b77aebcd621a4b8c26db1eaac588529cc71:ComponentFromCircularExportModuleA"
+      - "@wildcard-exports/webapp:d0f3aa9becd6dbdcb8551d94fd6ed28514471df4b94eb5d171f2f1cb67e3f2b6:ComponentFromCircularExportModuleA"
+  - name: ComponentFromCircularExportModuleA
+    source_path: src/circular-exports/index.ts
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@wildcard-exports/webapp:e898d30fae4aa89d08440fc45759b9e468cfd39939ed255bb44ad3b39e44ee1e:ComponentFromCircularExportModuleA"
+      - "@wildcard-exports/webapp:d0f3aa9becd6dbdcb8551d94fd6ed28514471df4b94eb5d171f2f1cb67e3f2b6:ComponentFromCircularExportModuleA"
+  - name: ComponentFromCircularExportModuleB
+    source_path: src/circular-exports/circular-export-module-A.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@wildcard-exports/webapp:d0f3aa9becd6dbdcb8551d94fd6ed28514471df4b94eb5d171f2f1cb67e3f2b6:ComponentFromCircularExportModuleB"
+      - "@wildcard-exports/webapp:34c5c26de4a46aaa97e73b783b954b77aebcd621a4b8c26db1eaac588529cc71:ComponentFromCircularExportModuleB"
+  - name: ComponentFromCircularExportModuleB
+    source_path: src/circular-exports/circular-export-module-B.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@wildcard-exports/webapp:34c5c26de4a46aaa97e73b783b954b77aebcd621a4b8c26db1eaac588529cc71:ComponentFromCircularExportModuleB"
+  - name: ComponentFromCircularExportModuleB
+    source_path: src/circular-exports/index.ts
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@wildcard-exports/webapp:e898d30fae4aa89d08440fc45759b9e468cfd39939ed255bb44ad3b39e44ee1e:ComponentFromCircularExportModuleB"
+      - "@wildcard-exports/webapp:d0f3aa9becd6dbdcb8551d94fd6ed28514471df4b94eb5d171f2f1cb67e3f2b6:ComponentFromCircularExportModuleB"
+      - "@wildcard-exports/webapp:34c5c26de4a46aaa97e73b783b954b77aebcd621a4b8c26db1eaac588529cc71:ComponentFromCircularExportModuleB"
+  - name: ComponentFromCircularExportModuleC
+    source_path: src/circular-exports/circular-export-module-C.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@wildcard-exports/webapp:33ac7052a3990fb6873572eb0c68a998e19700b3f622198f398458ed61954d14:ComponentFromCircularExportModuleC"
+  - name: ComponentFromCircularExportModuleC
+    source_path: src/circular-exports/index.ts
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@wildcard-exports/webapp:e898d30fae4aa89d08440fc45759b9e468cfd39939ed255bb44ad3b39e44ee1e:ComponentFromCircularExportModuleC"
+      - "@wildcard-exports/webapp:33ac7052a3990fb6873572eb0c68a998e19700b3f622198f398458ed61954d14:ComponentFromCircularExportModuleC"
+  - name: MainForm
+    source_path: src/components/components.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@wildcard-exports/webapp:c4f7056e1fab99cbf275c63a898c9112a13bb945a8f1960f816e8f7fcbbb1993:MainForm"
+  - name: MainForm
+    source_path: src/components/index.ts
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@wildcard-exports/webapp:44145b4646ba00cf3afdd124b880a23f47279f07dad0d139a7b26cd531123cf3:MainForm"
+      - "@wildcard-exports/webapp:c4f7056e1fab99cbf275c63a898c9112a13bb945a8f1960f816e8f7fcbbb1993:MainForm"
+  - name: MainView
+    source_path: src/components/index.ts
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@wildcard-exports/webapp:44145b4646ba00cf3afdd124b880a23f47279f07dad0d139a7b26cd531123cf3:MainView"
+      - "@wildcard-exports/webapp:7b2ad764e05ca56047e6f08969a18b952a3a4ad97b566b14bd19da1affb5fd86:MainView"
+  - name: MainView
+    source_path: src/components/views.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@wildcard-exports/webapp:7b2ad764e05ca56047e6f08969a18b952a3a4ad97b566b14bd19da1affb5fd86:MainView"
+  - name: RightPanel
+    source_path: src/components/components.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@wildcard-exports/webapp:c4f7056e1fab99cbf275c63a898c9112a13bb945a8f1960f816e8f7fcbbb1993:RightPanel"
+  - name: RightPanel
+    source_path: src/components/index.ts
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@wildcard-exports/webapp:44145b4646ba00cf3afdd124b880a23f47279f07dad0d139a7b26cd531123cf3:RightPanel"
+      - "@wildcard-exports/webapp:c4f7056e1fab99cbf275c63a898c9112a13bb945a8f1960f816e8f7fcbbb1993:RightPanel"
+  - name: SearchBar
+    source_path: src/components/components.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@wildcard-exports/webapp:c4f7056e1fab99cbf275c63a898c9112a13bb945a8f1960f816e8f7fcbbb1993:SearchBar"
+  - name: SearchBar
+    source_path: src/components/index.ts
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@wildcard-exports/webapp:44145b4646ba00cf3afdd124b880a23f47279f07dad0d139a7b26cd531123cf3:SearchBar"
+      - "@wildcard-exports/webapp:c4f7056e1fab99cbf275c63a898c9112a13bb945a8f1960f816e8f7fcbbb1993:SearchBar"
+  - name: SideView
+    source_path: src/components/index.ts
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@wildcard-exports/webapp:44145b4646ba00cf3afdd124b880a23f47279f07dad0d139a7b26cd531123cf3:SideView"
+      - "@wildcard-exports/webapp:7b2ad764e05ca56047e6f08969a18b952a3a4ad97b566b14bd19da1affb5fd86:SideView"
+  - name: SideView
+    source_path: src/components/views.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@wildcard-exports/webapp:7b2ad764e05ca56047e6f08969a18b952a3a4ad97b566b14bd19da1affb5fd86:SideView"
+

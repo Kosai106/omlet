@@ -1,0 +1,9 @@
+[package]
+name = "git_utils"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+git2 = { version = "0.20", default-features = false }
+relative-path = "1.7.2"
+logger = { path = "../logger" }

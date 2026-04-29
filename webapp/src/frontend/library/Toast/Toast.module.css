@@ -1,0 +1,21 @@
+.toast {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    display: flex;
+    padding: 0 12px;
+    height: var(--spacing-m);
+    align-items: center;
+    background-color: var(--background-inverse-color);
+    color: var(--label-selected-color);
+    font-family: var(--font-family-secondary);
+    font-size: 13px;
+    line-height: 18px;
+    border-radius: 4px;
+    z-index: 2000;
+}
+
+.toast a {
+    color: var(--accent-green);
+}

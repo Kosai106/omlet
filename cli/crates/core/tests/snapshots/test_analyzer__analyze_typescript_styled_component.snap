@@ -1,0 +1,110 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&component_results"
+---
+num_of_components: 9
+components:
+  - definition_id: "typescript-examples:4fbb70f2201bab4eb9a1cce1873cac6a26dc4156f8c460ee1cc2a92382649003:Sample"
+    name: Sample
+    export_ids:
+      - "typescript-examples:src/styled-component/from-component:Sample"
+    package_name: typescript-examples
+    source_path: src/styled-component/from-component.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - div
+  - definition_id: "typescript-examples:4fbb70f2201bab4eb9a1cce1873cac6a26dc4156f8c460ee1cc2a92382649003:StyledSample"
+    name: StyledSample
+    export_ids:
+      - "typescript-examples:src/styled-component/from-component:StyledSample"
+      - "typescript-examples:src/styled-component/from-component:default"
+    package_name: typescript-examples
+    source_path: src/styled-component/from-component.tsx
+    dependencies:
+      - from: "typescript-examples:4fbb70f2201bab4eb9a1cce1873cac6a26dc4156f8c460ee1cc2a92382649003:StyledSample"
+        to: "typescript-examples:4fbb70f2201bab4eb9a1cce1873cac6a26dc4156f8c460ee1cc2a92382649003:Sample"
+        references:
+          - trace: []
+            usages: []
+    props: []
+    html_elements:
+      - div
+  - definition_id: "typescript-examples:4fbb70f2201bab4eb9a1cce1873cac6a26dc4156f8c460ee1cc2a92382649003:StyledUnknownComponent"
+    name: StyledUnknownComponent
+    export_ids:
+      - "typescript-examples:src/styled-component/from-component:StyledUnknownComponent"
+    package_name: typescript-examples
+    source_path: src/styled-component/from-component.tsx
+    dependencies: []
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:8475580ece8868f50cfc534192c9e9508959a33a1c1e59dc9e5d9b6a7348c086:default"
+    name: StyledSample
+    export_ids:
+      - "typescript-examples:src/styled-component/from-tag:default"
+    package_name: typescript-examples
+    source_path: src/styled-component/from-tag.tsx
+    dependencies: []
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:9767a3ab22ae6a72cb4314a5fe57d2c40cc6190de711b536c0970123d9ca9c8a:SampleMacro"
+    name: SampleMacro
+    export_ids:
+      - "typescript-examples:src/styled-component/macro:SampleMacro"
+    package_name: typescript-examples
+    source_path: src/styled-component/macro.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - div
+  - definition_id: "typescript-examples:9767a3ab22ae6a72cb4314a5fe57d2c40cc6190de711b536c0970123d9ca9c8a:StyledSampleMacro"
+    name: StyledSampleMacro
+    export_ids:
+      - "typescript-examples:src/styled-component/macro:StyledSampleMacro"
+    package_name: typescript-examples
+    source_path: src/styled-component/macro.tsx
+    dependencies:
+      - from: "typescript-examples:9767a3ab22ae6a72cb4314a5fe57d2c40cc6190de711b536c0970123d9ca9c8a:StyledSampleMacro"
+        to: "typescript-examples:9767a3ab22ae6a72cb4314a5fe57d2c40cc6190de711b536c0970123d9ca9c8a:SampleMacro"
+        references:
+          - trace: []
+            usages: []
+    props: []
+    html_elements:
+      - div
+  - definition_id: "typescript-examples:e91e488fb65b41917e66abbbc5e940cec16242e1e6309db6d4e96307d1074a89:NamedImportSample"
+    name: NamedImportSample
+    export_ids:
+      - "typescript-examples:src/styled-component/named-import:NamedImportSample"
+    package_name: typescript-examples
+    source_path: src/styled-component/named-import.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - div
+  - definition_id: "typescript-examples:e91e488fb65b41917e66abbbc5e940cec16242e1e6309db6d4e96307d1074a89:StyledNamedImportUnknownComponent"
+    name: StyledNamedImportUnknownComponent
+    export_ids:
+      - "typescript-examples:src/styled-component/named-import:StyledNamedImportUnknownComponent"
+    package_name: typescript-examples
+    source_path: src/styled-component/named-import.tsx
+    dependencies: []
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:e91e488fb65b41917e66abbbc5e940cec16242e1e6309db6d4e96307d1074a89:default"
+    name: StyledNamedImportSample
+    export_ids:
+      - "typescript-examples:src/styled-component/named-import:default"
+    package_name: typescript-examples
+    source_path: src/styled-component/named-import.tsx
+    dependencies:
+      - from: "typescript-examples:e91e488fb65b41917e66abbbc5e940cec16242e1e6309db6d4e96307d1074a89:default"
+        to: "typescript-examples:e91e488fb65b41917e66abbbc5e940cec16242e1e6309db6d4e96307d1074a89:NamedImportSample"
+        references:
+          - trace: []
+            usages: []
+    props: []
+    html_elements:
+      - div
+

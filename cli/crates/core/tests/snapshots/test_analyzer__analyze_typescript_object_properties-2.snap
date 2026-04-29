@@ -1,0 +1,76 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&export_results"
+---
+num_of_exports: 10
+exports:
+  - name: default
+    source_path: src/object-properties/array-values.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:e079716b7af750c973bcbbfadca5896421e397f514a0704c0798673916b43538:default"
+  - name: default
+    source_path: src/object-properties/getter.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:be93c07e80956fb944fbe0e27ff883d53006333acef479b8da12c851f2da8151:default"
+  - name: default
+    source_path: src/object-properties/key-pair.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:175761a531f081381fafc6c2c63520dec778d995c3e5338c2b194b3eab3f7933:default"
+  - name: default
+    source_path: src/object-properties/method.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:24cfb9a0b1722b88061bf4cba309e47682ee93913bb8d549b8fc9899f13b204d:default"
+  - name: default
+    source_path: src/object-properties/nested-key-pair.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:481842edee96e22214e034549fbb4ee5336d8383f2f89eeec1e5061f08947361:default"
+  - name: default
+    source_path: src/object-properties/nested-object.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:9b5ce038b836e7e840c26e121521133f17d44a4631f1a3c3ceab83ccd9aa1cf1:default"
+  - name: default
+    source_path: src/object-properties/property-access.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:5fa07ef0114566b41b7da7f4995132546f0052a2f1de4786951f08182e909548:default"
+  - name: default
+    source_path: src/object-properties/setter.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:0b89b8cdef99330a22e83b362a68c0f3bd885663c5a2a96d18e39c2300ba1854:default"
+  - name: default
+    source_path: src/object-properties/shorthand.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:9d7be4c3e50411502ac3949e59fa6eabe9124be412ffe3398ae05ddbc539b50b:default"
+  - name: default
+    source_path: src/object-properties/spread.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:47fe9ed286a01c5bb66162d5da6b3afbce794ce8bc239691b0b06fb8c008f0bc:default"

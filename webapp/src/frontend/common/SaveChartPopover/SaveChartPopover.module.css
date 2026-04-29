@@ -1,0 +1,44 @@
+.saveChartPopover {
+    border-radius: 2px;
+}
+
+.saveChartForm {
+    display: flex;
+    flex-direction: column;
+    width: 376px;
+    padding: var(--spacing-s);
+}
+
+.saveChartForm .chartNameHeader {
+    margin-bottom: var(--spacing-xs);
+}
+
+.saveChartForm .chartNameInput {
+    margin-bottom: var(--spacing-s);
+}
+
+.saveChartForm .chartDesciptionHeader {
+    margin-bottom: var(--spacing-xxs);
+}
+
+.saveChartForm .chartDesciptionHeader .optionalInfo {
+    font-weight: normal;
+    color: var(--label-secondary-color);
+}
+
+.saveChartForm .chartDescriptionInfo {
+    margin-bottom: var(--spacing-xs);
+    font-size: 11px;
+    line-height: 15px;
+    color: var(--label-secondary-color);
+}
+
+.saveChartForm .chartDesciptionTextArea {
+    width: 100%;
+    height: 48px;
+    margin-bottom: var(--spacing-s);
+}
+
+.saveChartForm .saveButton {
+    align-self: flex-start;
+}

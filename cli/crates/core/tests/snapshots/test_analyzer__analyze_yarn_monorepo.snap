@@ -1,0 +1,231 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&component_results"
+---
+num_of_components: 10
+components:
+  - definition_id: "comps:1a3da3ca662917d43197ff4fcc106b1acffcefbcdef05c86c06f9aa4a2de8ff6:Button"
+    name: Button
+    export_ids:
+      - "comps:.:Button"
+      - "comps:src/component/button:Button"
+      - "comps:src/component:Button"
+      - "comps:src:Button"
+    package_name: comps
+    source_path: packages/comps/src/component/button.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - button
+  - definition_id: "comps:e199b37114a6a6d042f24d9992340b106f7a357d17466d127dd51ea6e78d871d:SecondTitle"
+    name: SecondTitle
+    export_ids:
+      - "comps:src/title:SecondTitle"
+    package_name: comps
+    source_path: packages/comps/src/title.tsx
+    dependencies:
+      - from: "comps:e199b37114a6a6d042f24d9992340b106f7a357d17466d127dd51ea6e78d871d:SecondTitle"
+        to: "comps:1a3da3ca662917d43197ff4fcc106b1acffcefbcdef05c86c06f9aa4a2de8ff6:Button"
+        references:
+          - trace:
+              - "comps:1a3da3ca662917d43197ff4fcc106b1acffcefbcdef05c86c06f9aa4a2de8ff6:Button"
+            usages:
+              - start:
+                  line: 9
+                  column: 27
+                end:
+                  line: 9
+                  column: 56
+                props: []
+    props: []
+    html_elements:
+      - h1
+  - definition_id: "comps:e199b37114a6a6d042f24d9992340b106f7a357d17466d127dd51ea6e78d871d:default"
+    name: PackBTitle
+    export_ids:
+      - "comps:src/title:default"
+    package_name: comps
+    source_path: packages/comps/src/title.tsx
+    dependencies:
+      - from: "comps:e199b37114a6a6d042f24d9992340b106f7a357d17466d127dd51ea6e78d871d:default"
+        to: "comps:1a3da3ca662917d43197ff4fcc106b1acffcefbcdef05c86c06f9aa4a2de8ff6:Button"
+        references:
+          - trace:
+              - "comps:9b2e87a886ed977976f171fddd4f172938e310feb782653570bcc9db71c2a665:Button"
+              - "comps:cee0f221c8852d6f81e17ddeeed8e4bfc9f925158e5c8e9935191f800d3a9aff:Button"
+              - "comps:1a3da3ca662917d43197ff4fcc106b1acffcefbcdef05c86c06f9aa4a2de8ff6:Button"
+            usages:
+              - start:
+                  line: 5
+                  column: 27
+                end:
+                  line: 5
+                  column: 44
+                props: []
+    props: []
+    html_elements:
+      - h1
+  - definition_id: "main:9cedb271550b9f6303840c1f9261dcf2a324f83d1b666610edcb285799e022d9:Component"
+    name: Component
+    export_ids:
+      - "main:dist/main:Component"
+      - "main:src/main:Component"
+    package_name: main
+    source_path: packages/main/src/main.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - div
+  - definition_id: "main:9cedb271550b9f6303840c1f9261dcf2a324f83d1b666610edcb285799e022d9:default"
+    name: Main
+    export_ids:
+      - "main:dist/main:default"
+      - "main:src/main:default"
+    package_name: main
+    source_path: packages/main/src/main.tsx
+    dependencies:
+      - from: "main:9cedb271550b9f6303840c1f9261dcf2a324f83d1b666610edcb285799e022d9:default"
+        to: "comps:1a3da3ca662917d43197ff4fcc106b1acffcefbcdef05c86c06f9aa4a2de8ff6:Button"
+        references:
+          - trace:
+              - "comps:9b2e87a886ed977976f171fddd4f172938e310feb782653570bcc9db71c2a665:Button"
+              - "comps:cee0f221c8852d6f81e17ddeeed8e4bfc9f925158e5c8e9935191f800d3a9aff:Button"
+              - "comps:1a3da3ca662917d43197ff4fcc106b1acffcefbcdef05c86c06f9aa4a2de8ff6:Button"
+            usages:
+              - start:
+                  line: 21
+                  column: 9
+                end:
+                  line: 21
+                  column: 18
+                props: []
+      - from: "main:9cedb271550b9f6303840c1f9261dcf2a324f83d1b666610edcb285799e022d9:default"
+        to: "comps:e199b37114a6a6d042f24d9992340b106f7a357d17466d127dd51ea6e78d871d:default"
+        references:
+          - trace:
+              - "comps:e199b37114a6a6d042f24d9992340b106f7a357d17466d127dd51ea6e78d871d:default"
+            usages:
+              - start:
+                  line: 20
+                  column: 9
+                end:
+                  line: 20
+                  column: 17
+                props: []
+      - from: "main:9cedb271550b9f6303840c1f9261dcf2a324f83d1b666610edcb285799e022d9:default"
+        to: "multi-part:05f76ed9df109a10b5cf6e8fd796bc1c66c05d893af4ea4c3b6ea3203e9704f3:default"
+        references:
+          - trace:
+              - "multi-part:a42b2429a16682347b578115d3e4c2c462b95f96f44607b452f65a90659e5020:DotGrid"
+              - "multi-part:05f76ed9df109a10b5cf6e8fd796bc1c66c05d893af4ea4c3b6ea3203e9704f3:default"
+            usages:
+              - start:
+                  line: 18
+                  column: 9
+                end:
+                  line: 18
+                  column: 19
+                props: []
+      - from: "main:9cedb271550b9f6303840c1f9261dcf2a324f83d1b666610edcb285799e022d9:default"
+        to: "multi-part:a42b2429a16682347b578115d3e4c2c462b95f96f44607b452f65a90659e5020:default"
+        references:
+          - trace:
+              - "multi-part:a42b2429a16682347b578115d3e4c2c462b95f96f44607b452f65a90659e5020:default"
+            usages:
+              - start:
+                  line: 16
+                  column: 12
+                end:
+                  line: 24
+                  column: 17
+                props:
+                  - name: children
+                    value: JSXElement
+      - from: "main:9cedb271550b9f6303840c1f9261dcf2a324f83d1b666610edcb285799e022d9:default"
+        to: "multi-part:dbdb1a6009753471fa5d97245fff5262c7c8bdd8c66e0c0d9c7d9ec0c16131c1:default"
+        references:
+          - trace:
+              - "multi-part:dbdb1a6009753471fa5d97245fff5262c7c8bdd8c66e0c0d9c7d9ec0c16131c1:default"
+            usages:
+              - start:
+                  line: 19
+                  column: 9
+                end:
+                  line: 19
+                  column: 21
+                props: []
+      - from: "main:9cedb271550b9f6303840c1f9261dcf2a324f83d1b666610edcb285799e022d9:default"
+        to: "single-part:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:SinglePartMain"
+        references:
+          - trace:
+              - "single-part:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:SinglePartMain"
+            usages:
+              - start:
+                  line: 17
+                  column: 9
+                end:
+                  line: 17
+                  column: 60
+                props:
+                  - name: content
+                    value: Expression
+    props: []
+    html_elements: []
+  - definition_id: "multi-part:a42b2429a16682347b578115d3e4c2c462b95f96f44607b452f65a90659e5020:default"
+    name: MultiPartMain
+    export_ids:
+      - "multi-part:.:default"
+      - "multi-part:dist/index:default"
+      - "multi-part:index:default"
+    package_name: multi-part
+    source_path: packages/multi-part/index.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - main
+  - definition_id: "multi-part:dbdb1a6009753471fa5d97245fff5262c7c8bdd8c66e0c0d9c7d9ec0c16131c1:default"
+    name: Player
+    export_ids:
+      - "multi-part:dist/rca-victor:default"
+      - "multi-part:rca-victor:default"
+    package_name: multi-part
+    source_path: packages/multi-part/rca-victor/index.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - video
+  - definition_id: "multi-part:05f76ed9df109a10b5cf6e8fd796bc1c66c05d893af4ea4c3b6ea3203e9704f3:default"
+    name: Notebook
+    export_ids:
+      - "multi-part:.:DotGrid"
+      - "multi-part:dist/index:DotGrid"
+      - "multi-part:dist/rhodia:default"
+      - "multi-part:index:DotGrid"
+      - "multi-part:rhodia:default"
+    package_name: multi-part
+    source_path: packages/multi-part/rhodia/index.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - div
+  - definition_id: "single-part:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:SinglePartMain"
+    name: SinglePartMain
+    export_ids: []
+    package_name: single-part
+    source_path: ""
+    dependencies: []
+    props: []
+    html_elements: []
+  - definition_id: "single-part:68aa331cf8aa56cb7edef2623c37a76d7506b5751b3f3fcb0ccb7927d6737f27:default"
+    name: SinglePartMain
+    export_ids:
+      - "single-part:dist/main:default"
+      - "single-part:src/main:default"
+      - "single-part:src:SinglePartMain"
+    package_name: single-part
+    source_path: packages/single-part/src/main.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - main
+

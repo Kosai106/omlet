@@ -1,0 +1,24 @@
+.singleDataAreaChart {
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    max-height: 375px;
+}
+
+.singleDataAreaChart .legend {
+    padding-right: 48px;
+    padding-left: 112px;
+}
+
+.singleDataAreaChart svg {
+    overflow: visible;
+}
+
+.singleDataAreaChart .tooltipLayer {
+    width: 100%;
+    height: 100%;
+}
+
+.singleDataAreaChart .tooltipLayer .tooltipRectGroup:hover {
+    opacity: 1;
+}

@@ -1,0 +1,13 @@
+{
+    "name": "@ds/form",
+    "version": "1.0.0",
+    "main": "src/index.ts",
+    "devDependencies": {
+      "@types/react": "~18.0.0",
+      "react": "~18.2.0",
+      "react-dom": "~18.2.0"
+    },
+    "dependencies": {
+      "@ds/button": "^1.0.0"
+    }
+  }

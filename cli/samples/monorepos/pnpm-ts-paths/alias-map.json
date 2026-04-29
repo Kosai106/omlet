@@ -1,0 +1,592 @@
+{
+  "root": {
+    "name": "ts-monorepo",
+    "path": "",
+    "version": "0.0.0",
+    "aliases": {
+      "@nighttrax/components/*": [
+        "packages/components/src/*"
+      ],
+      "@nighttrax/components": [
+        "packages/components/src/index.ts"
+      ],
+      "@nighttrax/styled-components": [
+        "packages/components/src/styled/index.ts"
+      ],
+      "@nighttrax/*": [
+        "packages/*/src/index.ts"
+      ],
+      "apps/*": [
+        "apps/*"
+      ],
+      "packages/*": [
+        "packages/*"
+      ]
+    },
+    "importMap": {
+      "ts-monorepo/*": [
+        "*"
+      ],
+      "@nighttrax/bar/*": [
+        "packages/bar/*"
+      ],
+      "@nighttrax/bar": [
+        "packages/bar/src/index.tsx"
+      ],
+      "@nighttrax/components/*": [
+        "packages/components/*"
+      ],
+      "@nighttrax/foo/*": [
+        "packages/foo/*"
+      ],
+      "@nighttrax/foo": [
+        "packages/foo/src/index.tsx"
+      ],
+      "@nighttrax/cra-example/*": [
+        "apps/cra/*"
+      ],
+      "@nighttrax/jest-babel-example/*": [
+        "apps/jest-babel/*"
+      ],
+      "@nighttrax/jest-example/*": [
+        "apps/jest-tsjest/*"
+      ],
+      "nestjs/*": [
+        "apps/nestjs/*"
+      ],
+      "@nighttrax/nextjs-example/*": [
+        "apps/nextjs/*"
+      ],
+      "@nighttrax/rollup-example/*": [
+        "apps/rollup/*"
+      ],
+      "@nighttrax/rollup-example": [
+        "apps/rollup/src/index.tsx"
+      ],
+      "@nighttrax/storybook-example/*": [
+        "apps/storybook/*"
+      ],
+      "@nighttrax/ts-node/*": [
+        "apps/ts-node/*"
+      ],
+      "@nighttrax/vite-example/*": [
+        "apps/vite/*"
+      ],
+      "@nighttrax/webpack-example/*": [
+        "apps/webpack/*"
+      ]
+    },
+    "exportMap": {}
+  },
+  "packages": {
+    "@nighttrax/bar": {
+      "name": "@nighttrax/bar",
+      "path": "packages/bar",
+      "version": "1.0.0",
+      "aliases": {
+        "@nighttrax/components/*": [
+          "packages/components/src/*"
+        ],
+        "@nighttrax/components": [
+          "packages/components/src/index.ts"
+        ],
+        "@nighttrax/styled-components": [
+          "packages/components/src/styled/index.ts"
+        ],
+        "@nighttrax/*": [
+          "packages/*/src/index.ts"
+        ],
+        "apps/*": [
+          "apps/*"
+        ],
+        "packages/*": [
+          "packages/*"
+        ]
+      },
+      "importMap": {
+        "@nighttrax/bar/*": [
+          "packages/bar/*"
+        ],
+        "@nighttrax/bar": [
+          "packages/bar/src/index.tsx"
+        ],
+        "@nighttrax/foo/*": [
+          "packages/foo/*"
+        ],
+        "@nighttrax/foo": [
+          "packages/foo/src/index.tsx"
+        ]
+      },
+      "exportMap": {
+        ".": [
+          "src/index.tsx"
+        ]
+      },
+      "main": "src/index.tsx"
+    },
+    "@nighttrax/components": {
+      "name": "@nighttrax/components",
+      "path": "packages/components",
+      "version": "1.0.0",
+      "aliases": {
+        "@nighttrax/components/*": [
+          "packages/components/src/*"
+        ],
+        "@nighttrax/components": [
+          "packages/components/src/index.ts"
+        ],
+        "@nighttrax/styled-components": [
+          "packages/components/src/styled/index.ts"
+        ],
+        "@nighttrax/*": [
+          "packages/*/src/index.ts"
+        ],
+        "apps/*": [
+          "apps/*"
+        ],
+        "packages/*": [
+          "packages/*"
+        ]
+      },
+      "importMap": {
+        "@nighttrax/components/*": [
+          "packages/components/*"
+        ],
+        "@nighttrax/foo/*": [
+          "packages/foo/*"
+        ],
+        "@nighttrax/foo": [
+          "packages/foo/src/index.tsx"
+        ]
+      },
+      "exportMap": {}
+    },
+    "@nighttrax/foo": {
+      "name": "@nighttrax/foo",
+      "path": "packages/foo",
+      "version": "1.0.0",
+      "aliases": {
+        "@nighttrax/components/*": [
+          "packages/components/src/*"
+        ],
+        "@nighttrax/components": [
+          "packages/components/src/index.ts"
+        ],
+        "@nighttrax/styled-components": [
+          "packages/components/src/styled/index.ts"
+        ],
+        "@nighttrax/*": [
+          "packages/*/src/index.ts"
+        ],
+        "apps/*": [
+          "apps/*"
+        ],
+        "packages/*": [
+          "packages/*"
+        ]
+      },
+      "importMap": {
+        "@nighttrax/foo/*": [
+          "packages/foo/*"
+        ],
+        "@nighttrax/foo": [
+          "packages/foo/src/index.tsx"
+        ]
+      },
+      "exportMap": {
+        ".": [
+          "src/index.tsx"
+        ]
+      },
+      "main": "src/index.tsx"
+    },
+    "@nighttrax/cra-example": {
+      "name": "@nighttrax/cra-example",
+      "path": "apps/cra",
+      "version": "1.0.0",
+      "aliases": {
+        "@nighttrax/components/*": [
+          "packages/components/src/*"
+        ],
+        "@nighttrax/page-components": [
+          "packages/components/src/pageComponents.tsx"
+        ],
+        "@nighttrax/styled-components": [
+          "packages/components/src/styled/index.ts"
+        ],
+        "@nighttrax/components": [
+          "packages/components/src/index.ts"
+        ],
+        "@nighttrax/*": [
+          "packages/*/src/index.ts"
+        ],
+        "@components/*": [
+          "apps/cra/src/components/*"
+        ],
+        "@hooks/*": [
+          "apps/cra/src/hooks/*"
+        ],
+        "craco.config.js": [
+          "apps/cra/craco.config.js"
+        ],
+        "src/*": [
+          "apps/cra/src/*"
+        ]
+      },
+      "importMap": {
+        "@nighttrax/cra-example/*": [
+          "apps/cra/*"
+        ],
+        "@nighttrax/foo/*": [
+          "packages/foo/*"
+        ],
+        "@nighttrax/foo": [
+          "packages/foo/src/index.tsx"
+        ],
+        "@nighttrax/components/*": [
+          "packages/components/*"
+        ]
+      },
+      "exportMap": {}
+    },
+    "@nighttrax/jest-babel-example": {
+      "name": "@nighttrax/jest-babel-example",
+      "path": "apps/jest-babel",
+      "version": "1.0.0",
+      "aliases": {
+        "@nighttrax/components/*": [
+          "packages/components/src/*"
+        ],
+        "@nighttrax/components": [
+          "packages/components/src/index.ts"
+        ],
+        "@nighttrax/styled-components": [
+          "packages/components/src/styled/index.ts"
+        ],
+        "@nighttrax/*": [
+          "packages/*/src/index.ts"
+        ],
+        "apps/*": [
+          "apps/*"
+        ],
+        "packages/*": [
+          "packages/*"
+        ]
+      },
+      "importMap": {
+        "@nighttrax/jest-babel-example/*": [
+          "apps/jest-babel/*"
+        ],
+        "@nighttrax/foo/*": [
+          "packages/foo/*"
+        ],
+        "@nighttrax/foo": [
+          "packages/foo/src/index.tsx"
+        ]
+      },
+      "exportMap": {}
+    },
+    "@nighttrax/jest-example": {
+      "name": "@nighttrax/jest-example",
+      "path": "apps/jest-tsjest",
+      "version": "1.0.0",
+      "aliases": {
+        "@nighttrax/components/*": [
+          "packages/components/src/*"
+        ],
+        "@nighttrax/components": [
+          "packages/components/src/index.ts"
+        ],
+        "@nighttrax/styled-components": [
+          "packages/components/src/styled/index.ts"
+        ],
+        "@nighttrax/*": [
+          "packages/*/src/index.ts"
+        ],
+        "apps/*": [
+          "apps/*"
+        ],
+        "packages/*": [
+          "packages/*"
+        ]
+      },
+      "importMap": {
+        "@nighttrax/jest-example/*": [
+          "apps/jest-tsjest/*"
+        ],
+        "@nighttrax/foo/*": [
+          "packages/foo/*"
+        ],
+        "@nighttrax/foo": [
+          "packages/foo/src/index.tsx"
+        ]
+      },
+      "exportMap": {}
+    },
+    "nestjs": {
+      "name": "nestjs",
+      "path": "apps/nestjs",
+      "version": "0.0.1",
+      "aliases": {
+        "@nighttrax/components/*": [
+          "packages/components/src/*"
+        ],
+        "@nighttrax/components": [
+          "packages/components/src/index.ts"
+        ],
+        "@nighttrax/styled-components": [
+          "packages/components/src/styled/index.ts"
+        ],
+        "@nighttrax/*": [
+          "packages/*/src/index.ts"
+        ],
+        "apps/*": [
+          "apps/*"
+        ],
+        "packages/*": [
+          "packages/*"
+        ]
+      },
+      "importMap": {
+        "nestjs/*": [
+          "apps/nestjs/*"
+        ],
+        "@nighttrax/foo/*": [
+          "packages/foo/*"
+        ],
+        "@nighttrax/foo": [
+          "packages/foo/src/index.tsx"
+        ]
+      },
+      "exportMap": {}
+    },
+    "@nighttrax/nextjs-example": {
+      "name": "@nighttrax/nextjs-example",
+      "path": "apps/nextjs",
+      "version": "1.0.0",
+      "aliases": {
+        "@nighttrax/components/*": [
+          "packages/components/src/*"
+        ],
+        "@nighttrax/components": [
+          "packages/components/src/index.ts"
+        ],
+        "@nighttrax/styled-components": [
+          "packages/components/src/styled/index.ts"
+        ],
+        "@nighttrax/*": [
+          "packages/*/src/index.ts"
+        ],
+        "apps/*": [
+          "apps/*"
+        ],
+        "packages/*": [
+          "packages/*"
+        ]
+      },
+      "importMap": {
+        "@nighttrax/nextjs-example/*": [
+          "apps/nextjs/*"
+        ],
+        "@nighttrax/components/*": [
+          "packages/components/*"
+        ]
+      },
+      "exportMap": {}
+    },
+    "@nighttrax/rollup-example": {
+      "name": "@nighttrax/rollup-example",
+      "path": "apps/rollup",
+      "version": "1.0.0",
+      "aliases": {
+        "@nighttrax/components/*": [
+          "packages/components/src/*"
+        ],
+        "@nighttrax/components": [
+          "packages/components/src/index.ts"
+        ],
+        "@nighttrax/styled-components": [
+          "packages/components/src/styled/index.ts"
+        ],
+        "@nighttrax/*": [
+          "packages/*/src/index.ts"
+        ],
+        "apps/*": [
+          "apps/*"
+        ],
+        "packages/*": [
+          "packages/*"
+        ]
+      },
+      "importMap": {
+        "@nighttrax/rollup-example/*": [
+          "apps/rollup/*"
+        ],
+        "@nighttrax/rollup-example": [
+          "apps/rollup/src/index.tsx"
+        ],
+        "@nighttrax/foo/*": [
+          "packages/foo/*"
+        ],
+        "@nighttrax/foo": [
+          "packages/foo/src/index.tsx"
+        ]
+      },
+      "exportMap": {
+        ".": [
+          "src/index.tsx"
+        ]
+      },
+      "main": "src/index.tsx"
+    },
+    "@nighttrax/storybook-example": {
+      "name": "@nighttrax/storybook-example",
+      "path": "apps/storybook",
+      "version": "1.0.0",
+      "aliases": {
+        "@nighttrax/components/*": [
+          "packages/components/src/*"
+        ],
+        "@nighttrax/components": [
+          "packages/components/src/index.ts"
+        ],
+        "@nighttrax/styled-components": [
+          "packages/components/src/styled/index.ts"
+        ],
+        "@nighttrax/*": [
+          "packages/*/src/index.ts"
+        ],
+        "apps/*": [
+          "apps/*"
+        ],
+        "packages/*": [
+          "packages/*"
+        ]
+      },
+      "importMap": {
+        "@nighttrax/storybook-example/*": [
+          "apps/storybook/*"
+        ],
+        "@nighttrax/components/*": [
+          "packages/components/*"
+        ]
+      },
+      "exportMap": {}
+    },
+    "@nighttrax/ts-node": {
+      "name": "@nighttrax/ts-node",
+      "path": "apps/ts-node",
+      "version": "1.0.0",
+      "aliases": {
+        "@nighttrax/components/*": [
+          "packages/components/src/*"
+        ],
+        "@nighttrax/components": [
+          "packages/components/src/index.ts"
+        ],
+        "@nighttrax/styled-components": [
+          "packages/components/src/styled/index.ts"
+        ],
+        "@nighttrax/*": [
+          "packages/*/src/index.ts"
+        ],
+        "apps/*": [
+          "apps/*"
+        ],
+        "packages/*": [
+          "packages/*"
+        ]
+      },
+      "importMap": {
+        "@nighttrax/ts-node/*": [
+          "apps/ts-node/*"
+        ],
+        "@nighttrax/foo/*": [
+          "packages/foo/*"
+        ],
+        "@nighttrax/foo": [
+          "packages/foo/src/index.tsx"
+        ]
+      },
+      "exportMap": {}
+    },
+    "@nighttrax/vite-example": {
+      "name": "@nighttrax/vite-example",
+      "path": "apps/vite",
+      "version": "1.0.0",
+      "aliases": {
+        "@nighttrax/components/*": [
+          "packages/components/src/*"
+        ],
+        "@nighttrax/components": [
+          "packages/components/src/index.ts"
+        ],
+        "@nighttrax/styled-components": [
+          "packages/components/src/styled/index.ts"
+        ],
+        "@nighttrax/*": [
+          "packages/*/src/index.ts"
+        ],
+        "apps/*": [
+          "apps/*"
+        ],
+        "packages/*": [
+          "packages/*"
+        ]
+      },
+      "importMap": {
+        "@nighttrax/vite-example/*": [
+          "apps/vite/*"
+        ],
+        "@nighttrax/components/*": [
+          "packages/components/*"
+        ],
+        "@nighttrax/foo/*": [
+          "packages/foo/*"
+        ],
+        "@nighttrax/foo": [
+          "packages/foo/src/index.tsx"
+        ]
+      },
+      "exportMap": {}
+    },
+    "@nighttrax/webpack-example": {
+      "name": "@nighttrax/webpack-example",
+      "path": "apps/webpack",
+      "version": "1.0.0",
+      "aliases": {
+        "@nighttrax/components/*": [
+          "packages/components/src/*"
+        ],
+        "@nighttrax/components": [
+          "packages/components/src/index.ts"
+        ],
+        "@nighttrax/styled-components": [
+          "packages/components/src/styled/index.ts"
+        ],
+        "@nighttrax/*": [
+          "packages/*/src/index.ts"
+        ],
+        "apps/*": [
+          "apps/*"
+        ],
+        "packages/*": [
+          "packages/*"
+        ]
+      },
+      "importMap": {
+        "@nighttrax/webpack-example/*": [
+          "apps/webpack/*"
+        ],
+        "@nighttrax/bar/*": [
+          "packages/bar/*"
+        ],
+        "@nighttrax/bar": [
+          "packages/bar/src/index.tsx"
+        ]
+      },
+      "exportMap": {}
+    }
+  },
+  "absolutePath": "/package"
+}

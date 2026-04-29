@@ -1,0 +1,102 @@
+.tagItem {
+    position: relative;
+    display: flex;
+    gap: var(--spacing-xs);
+    align-items: center;
+    padding-left: var(--spacing-xs);
+    border-radius: 4px;
+}
+
+.tagItem.selected {
+    background-color: var(--background-accent-light-color);
+}
+
+.tagItem.renaming {
+    gap: 0;
+}
+
+.tagItem.hasError {
+    margin-bottom: 27px;
+}
+
+.tagItem .form {
+    display: contents;
+}
+
+.tagItem .tagButton {
+    flex: 1;
+    display: flex;
+    height: 28px;
+    align-items: center;
+    gap: var(--spacing-xs);
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--label-primary-color);
+    overflow: hidden;
+}
+
+.tagItem .tagIndicator {
+    flex-shrink: 0;
+    width: 8px;
+    height: 8px;
+    margin: 0 2px;
+    border-radius: 2px;
+}
+
+.tagItem .tagName {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.tagItem.selected .tagName {
+    font-weight: 600;
+}
+
+.tagItem .tagNameInput {
+    flex: 1;
+    height: 28px;
+    padding-bottom: 0.5px;
+}
+
+.tagItem .error {
+    position: absolute;
+    top: calc(100% + var(--spacing-xs));
+    left: 20px;
+    font-size: 11px;
+    line-height: 15px;
+    color: var(--label-secondary-color);
+}
+
+.tagItem .updateIndicator {
+    width: 8px;
+    height: 8px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: var(--label-secondary-color);
+}
+
+.tagItem .menuButton {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 0;
+    height: 24px;
+    border-radius: 4px;
+    background-color: var(--control-background-default-color);
+}
+
+.tagItem:hover .menuButton,
+.tagItem.menuOpen .menuButton {
+    width: 24px;
+}
+
+.tagItem .menuButton:hover {
+    background-color: var(--control-background-hover-color);
+}
+
+.tagItem .menuButton:active,
+.tagItem.menuOpen .menuButton {
+    background-color: var(--control-background-active-color);
+}

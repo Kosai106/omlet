@@ -1,0 +1,57 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&export_results"
+---
+num_of_exports: 7
+exports:
+  - name: App
+    source_path: src/index.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-paths:25a6634263c1b1f6fc4697a04e2b9904ea4b042a89af59dc93ec1f5d44848a26:App"
+  - name: Applet
+    source_path: src/index.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-paths:25a6634263c1b1f6fc4697a04e2b9904ea4b042a89af59dc93ec1f5d44848a26:Applet"
+  - name: Button
+    source_path: pack-b/component/button.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-paths:3a42ac99adc7821f583e8cdec9d448ca76b2ae5e2e01a29f3b3bd44137f6b276:Button"
+  - name: Button
+    source_path: pack-b/component/index.ts
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-paths:5266e8c35397504b09d02d33a48e3bc3729d7ad5ddd894ab6dd8b18e57a551b0:Button"
+      - "typescript-paths:3a42ac99adc7821f583e8cdec9d448ca76b2ae5e2e01a29f3b3bd44137f6b276:Button"
+  - name: default
+    source_path: pack-b/index.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-paths:f48f480d7d76f72ade8670fc4ff78cfc64d83301df503aa7b77eca9c5c94488a:default"
+  - name: default
+    source_path: pack-b/title.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-paths:b13abac09964a1ee70ff0c476cfdeeae8a689b0b450084718cb490eb0ea6ee58:default"
+  - name: default
+    source_path: src/alias-comps/input.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-paths:3e2c389f6ff62ecfbb815cda8e2af58ba3e35ec4a49a974bf699f4d8f59908c0:default"
+

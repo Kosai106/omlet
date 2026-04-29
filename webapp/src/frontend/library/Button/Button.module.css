@@ -1,0 +1,116 @@
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-xxs);
+    height: 24px;
+    padding: 0 12px;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 600;
+    white-space: nowrap;
+    user-select: none;
+    pointer-events: auto;
+}
+
+.button:disabled {
+    cursor: not-allowed;
+}
+
+.button.noAction {
+    cursor: default;
+}
+
+.button.primary {
+    background-color: var(--accent-green);
+    color: var(--label-selected-color);
+}
+
+.button.primary:not(.noAction):not(:disabled):hover,
+.button.primary:not(.noAction):not(:disabled):focus {
+    box-shadow: inset 0 0 0 2px rgba(var(--label-selected-color-rgb), 0.15);
+}
+
+.button.primary:not(.noAction):not(:disabled).active,
+.button.primary:not(.noAction):not(:disabled):active {
+    box-shadow: inset 0 0 0 2px rgba(var(--label-selected-color-rgb), 0.3);
+}
+
+.button.primary:disabled {
+    color: rgba(var(--label-selected-color-rgb), 0.4);
+}
+
+.button.secondary {
+    background-color: var(--background-secondary-color);
+    color: var(--label-secondary-color);
+}
+
+.button.secondary:not(.noAction):not(:disabled):hover,
+.button.secondary:not(.noAction):not(:disabled):focus {
+    box-shadow: inset 0 0 0 2px rgba(var(--border-secondary-color-rgb), 0.15);
+}
+
+.button.secondary:not(.noAction):not(:disabled).active,
+.button.secondary:not(.noAction):not(:disabled):active {
+    box-shadow: inset 0 0 0 2px rgba(var(--border-secondary-color-rgb), 0.3);
+}
+
+.button.secondary:disabled {
+    color: var(--label-secondary-disabled-color);
+}
+
+.button.inverse {
+    background-color: var(--button-inverse-background-color);
+    color: var(--label-inverse-color);
+}
+
+.button.inverse:not(.noAction):not(:disabled):hover,
+.button.inverse:not(.noAction):not(:disabled):focus {
+    box-shadow: inset 0 0 0 2px var(--button-inverse-hover-border-color);
+}
+
+.button.inverse:not(.noAction):not(:disabled).active,
+.button.inverse:not(.noAction):not(:disabled):active {
+    box-shadow: inset 0 0 0 2px var(--button-inverse-hover-active-color);
+}
+
+.button.inverse:disabled {
+    color: var(--button-inverse-disabled-label-color);
+}
+
+.button.ninja {
+    background: none;
+    color: var(--accent-green);
+}
+
+.button.ninja:not(.noAction):not(:disabled):hover,
+.button.ninja:not(.noAction):not(:disabled):focus {
+    background-color: rgba(var(--accent-green-rgb), 0.1);
+}
+
+.button.ninja:not(.noAction):not(:disabled).active,
+.button.ninja:not(.noAction):not(:disabled):active {
+    background-color: rgba(var(--accent-green-rgb), 0.1);
+    box-shadow: inset 0 0 0 2px rgba(var(--accent-green-rgb), 0.45);
+}
+
+.button.ninja:disabled {
+    opacity: 0.4;
+}
+
+.button.withIcon {
+    padding: var(--spacing-xs);
+}
+
+.button.withIcon.end {
+    gap: var(--spacing-xs);
+}
+
+.button.pill {
+    height: 30px;
+    border-radius: 16px;
+}
+
+.button.rectangle {
+    border-radius: 4px;
+}

@@ -1,0 +1,57 @@
+.dashboardTabs {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-l);
+    padding: var(--spacing-xs) 0;
+    background-color: var(--background-tertiary-color);
+}
+
+.dashboardTabs::before,
+.dashboardTabs::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 100%;
+    border-radius: 50%;
+    background-color: var(--background-tertiary-color);
+    z-index: -1;
+}
+
+.dashboardTabs::before {
+    left: -24px;
+}
+
+.dashboardTabs::after {
+    right: -24px;
+}
+
+.dashboardTabs .dashboardTab {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    height: 34px;
+    padding: var(--spacing-xs) 0;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 600;
+    color: var(--label-secondary-color);
+}
+
+.dashboardTabs .dashboardTab .indicator {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: transparent;
+    border-radius: 4px;
+}
+
+.dashboardTabs .dashboardTab.selected {
+    color: var(--label-primary-color)
+}
+
+.dashboardTabs .dashboardTab.selected .indicator {
+    background-color: var(--border-accent-color);
+}

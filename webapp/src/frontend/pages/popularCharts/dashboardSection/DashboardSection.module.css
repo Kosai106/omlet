@@ -1,0 +1,16 @@
+.dashboardSection .charts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+}
+
+.separator {
+    border: none;
+    border-bottom: 1px solid var(--border-primary-color);
+}
+
+@media screen and (max-width: 1424px) {
+    .dashboardSection .charts {
+        column-gap: var(--spacing-xxl-2);
+    }
+}

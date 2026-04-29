@@ -1,0 +1,1 @@
+export { IgnoredComponentInMappedExport } from "./ignored"

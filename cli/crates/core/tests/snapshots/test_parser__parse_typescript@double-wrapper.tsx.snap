@@ -1,0 +1,883 @@
+---
+source: crates/core/tests/test_parser.rs
+expression: "&parser::Module::new(&RelativePathBuf::from_path(path.strip_prefix(&project_root).unwrap()).unwrap(),\n&project_root, &module_resolver,).unwrap()"
+input_file: samples/typescript/src/wrapped-components/double-wrapper.tsx
+---
+source_path: src/wrapped-components/double-wrapper.tsx
+id:
+  hash: "253563904563892470"
+  path: src/wrapped-components/double-wrapper.tsx
+  package_name: UNKNOWN
+  mtype: local
+created_at: ~
+updated_at: ~
+exports:
+  - source:
+      Internal: "DoubleWrapper#1"
+    exported_name: DoubleWrapper
+  - source:
+      Internal: "Wrapper#1"
+    exported_name: Wrapper
+  - source:
+      Internal: "Wrapped#1"
+    exported_name: Wrapped
+  - source:
+      Internal: "WrappedWithComponentArg#1"
+    exported_name: WrappedWithComponentArg
+  - source:
+      Internal: "WrapperWithComponentArg#1"
+    exported_name: WrapperWithComponentArg
+  - source:
+      Internal: "WrappedFromWrapperWithComponentArg#1"
+    exported_name: WrappedFromWrapperWithComponentArg
+  - source:
+      Internal: "WrappedWithComponentArgFromWrapperWithComponentArg#1"
+    exported_name: WrappedWithComponentArgFromWrapperWithComponentArg
+declarations:
+  - symbol: "DoubleWrapper#1"
+    source:
+      hash: "253563904563892470"
+      path: src/wrapped-components/double-wrapper.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      Function:
+        - Function:
+            - Function:
+                - JSX
+    start:
+      line: 1
+      column: 14
+    end:
+      line: 1
+      column: 27
+  - symbol: "Wrapped#1"
+    source:
+      hash: "253563904563892470"
+      path: src/wrapped-components/double-wrapper.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      ReturnTypeOf:
+        - TypeOf:
+            symbol:
+              symbol: "Wrapper#1"
+              source:
+                hash: "253563904563892470"
+                path: src/wrapped-components/double-wrapper.tsx
+                package_name: UNKNOWN
+                mtype: local
+            is_local: true
+        - []
+    start:
+      line: 4
+      column: 14
+    end:
+      line: 4
+      column: 21
+  - symbol: "WrappedFromWrapperWithComponentArg#1"
+    source:
+      hash: "253563904563892470"
+      path: src/wrapped-components/double-wrapper.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      ReturnTypeOf:
+        - TypeOf:
+            symbol:
+              symbol: "WrapperWithComponentArg#1"
+              source:
+                hash: "253563904563892470"
+                path: src/wrapped-components/double-wrapper.tsx
+                package_name: UNKNOWN
+                mtype: local
+            is_local: true
+        - []
+    start:
+      line: 8
+      column: 14
+    end:
+      line: 8
+      column: 48
+  - symbol: "WrappedWithComponentArg#1"
+    source:
+      hash: "253563904563892470"
+      path: src/wrapped-components/double-wrapper.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      ReturnTypeOf:
+        - TypeOf:
+            symbol:
+              symbol: "Wrapper#1"
+              source:
+                hash: "253563904563892470"
+                path: src/wrapped-components/double-wrapper.tsx
+                package_name: UNKNOWN
+                mtype: local
+            is_local: true
+        - - Function:
+              - JSX
+    start:
+      line: 5
+      column: 14
+    end:
+      line: 5
+      column: 37
+  - symbol: "WrappedWithComponentArgFromWrapperWithComponentArg#1"
+    source:
+      hash: "253563904563892470"
+      path: src/wrapped-components/double-wrapper.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      ReturnTypeOf:
+        - TypeOf:
+            symbol:
+              symbol: "WrapperWithComponentArg#1"
+              source:
+                hash: "253563904563892470"
+                path: src/wrapped-components/double-wrapper.tsx
+                package_name: UNKNOWN
+                mtype: local
+            is_local: true
+        - - Function:
+              - JSX
+    start:
+      line: 9
+      column: 14
+    end:
+      line: 9
+      column: 64
+  - symbol: "Wrapper#1"
+    source:
+      hash: "253563904563892470"
+      path: src/wrapped-components/double-wrapper.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      ReturnTypeOf:
+        - TypeOf:
+            symbol:
+              symbol: "DoubleWrapper#1"
+              source:
+                hash: "253563904563892470"
+                path: src/wrapped-components/double-wrapper.tsx
+                package_name: UNKNOWN
+                mtype: local
+            is_local: true
+        - []
+    start:
+      line: 3
+      column: 14
+    end:
+      line: 3
+      column: 21
+  - symbol: "WrapperWithComponentArg#1"
+    source:
+      hash: "253563904563892470"
+      path: src/wrapped-components/double-wrapper.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      ReturnTypeOf:
+        - TypeOf:
+            symbol:
+              symbol: "DoubleWrapper#1"
+              source:
+                hash: "253563904563892470"
+                path: src/wrapped-components/double-wrapper.tsx
+                package_name: UNKNOWN
+                mtype: local
+            is_local: true
+        - - Function:
+              - JSX
+    start:
+      line: 7
+      column: 14
+    end:
+      line: 7
+      column: 37
+scopes:
+  - owner: "__global#0"
+    parent: ~
+    children:
+      - "DoubleWrapper#1"
+      - "DoubleWrapper#1"
+      - "Wrapper#1"
+      - "Wrapper#1"
+      - "Wrapped#1"
+      - "Wrapped#1"
+      - "WrappedWithComponentArg#1"
+      - "WrappedWithComponentArg#1"
+      - "WrapperWithComponentArg#1"
+      - "WrapperWithComponentArg#1"
+      - "WrappedFromWrapperWithComponentArg#1"
+      - "WrappedFromWrapperWithComponentArg#1"
+      - "WrappedWithComponentArgFromWrapperWithComponentArg#1"
+      - "WrappedWithComponentArgFromWrapperWithComponentArg#1"
+    references:
+      - "DoubleWrapper#1"
+      - "Wrapped#1"
+      - "WrappedFromWrapperWithComponentArg#1"
+      - "WrappedWithComponentArg#1"
+      - "WrappedWithComponentArgFromWrapperWithComponentArg#1"
+      - "Wrapper#1"
+      - "WrapperWithComponentArg#1"
+      - "div#2"
+    jsx_references:
+      - "div#2"
+  - owner: "DoubleWrapper#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "div#2"
+    jsx_references:
+      - "div#2"
+  - owner: "DoubleWrapper#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "div#2"
+    jsx_references:
+      - "div#2"
+  - owner: "Wrapper#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "DoubleWrapper#1"
+    jsx_references: []
+  - owner: "Wrapper#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "DoubleWrapper#1"
+    jsx_references: []
+  - owner: "Wrapped#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "Wrapper#1"
+    jsx_references: []
+  - owner: "Wrapped#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "Wrapper#1"
+    jsx_references: []
+  - owner: "WrappedWithComponentArg#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "Wrapper#1"
+      - "div#2"
+    jsx_references:
+      - "div#2"
+  - owner: "WrappedWithComponentArg#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "Wrapper#1"
+      - "div#2"
+    jsx_references:
+      - "div#2"
+  - owner: "WrapperWithComponentArg#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "DoubleWrapper#1"
+      - "div#2"
+    jsx_references:
+      - "div#2"
+  - owner: "WrapperWithComponentArg#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "DoubleWrapper#1"
+      - "div#2"
+    jsx_references:
+      - "div#2"
+  - owner: "WrappedFromWrapperWithComponentArg#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "WrapperWithComponentArg#1"
+    jsx_references: []
+  - owner: "WrappedFromWrapperWithComponentArg#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "WrapperWithComponentArg#1"
+    jsx_references: []
+  - owner: "WrappedWithComponentArgFromWrapperWithComponentArg#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "WrapperWithComponentArg#1"
+      - "div#2"
+    jsx_references:
+      - "div#2"
+  - owner: "WrappedWithComponentArgFromWrapperWithComponentArg#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "WrapperWithComponentArg#1"
+      - "div#2"
+    jsx_references:
+      - "div#2"
+body:
+  - type: ExportDeclaration
+    span:
+      start: 1
+      end: 72
+      ctxt: 0
+    declaration:
+      type: VariableDeclaration
+      span:
+        start: 8
+        end: 72
+        ctxt: 0
+      kind: const
+      declare: false
+      declarations:
+        - type: VariableDeclarator
+          span:
+            start: 14
+            end: 71
+            ctxt: 0
+          id:
+            optional: false
+            span:
+              start: 14
+              end: 27
+              ctxt: 1
+            type: Identifier
+            typeAnnotation: ~
+            value: DoubleWrapper
+          init:
+            type: ArrowFunctionExpression
+            span:
+              start: 31
+              end: 71
+              ctxt: 0
+            params: []
+            body:
+              type: ArrowFunctionExpression
+              span:
+                start: 37
+                end: 71
+                ctxt: 0
+              params: []
+              body:
+                type: ArrowFunctionExpression
+                span:
+                  start: 43
+                  end: 71
+                  ctxt: 0
+                params: []
+                body:
+                  type: JSXElement
+                  span:
+                    start: 49
+                    end: 71
+                    ctxt: 0
+                  opening:
+                    type: JSXOpeningElement
+                    name:
+                      type: Identifier
+                      span:
+                        start: 50
+                        end: 53
+                        ctxt: 2
+                      value: div
+                      optional: false
+                    span:
+                      start: 49
+                      end: 54
+                      ctxt: 0
+                    attributes: []
+                    selfClosing: false
+                    typeArguments: ~
+                  children:
+                    - type: JSXText
+                      span:
+                        start: 54
+                        end: 65
+                        ctxt: 0
+                      value: Hello World
+                      raw: Hello World
+                  closing:
+                    type: JSXClosingElement
+                    span:
+                      start: 65
+                      end: 71
+                      ctxt: 0
+                    name:
+                      type: Identifier
+                      span:
+                        start: 67
+                        end: 70
+                        ctxt: 2
+                      value: div
+                      optional: false
+                async: false
+                generator: false
+                typeParameters: ~
+                returnType: ~
+              async: false
+              generator: false
+              typeParameters: ~
+              returnType: ~
+            async: false
+            generator: false
+            typeParameters: ~
+            returnType: ~
+          definite: false
+  - type: ExportDeclaration
+    span:
+      start: 74
+      end: 113
+      ctxt: 0
+    declaration:
+      type: VariableDeclaration
+      span:
+        start: 81
+        end: 113
+        ctxt: 0
+      kind: const
+      declare: false
+      declarations:
+        - type: VariableDeclarator
+          span:
+            start: 87
+            end: 112
+            ctxt: 0
+          id:
+            optional: false
+            span:
+              start: 87
+              end: 94
+              ctxt: 1
+            type: Identifier
+            typeAnnotation: ~
+            value: Wrapper
+          init:
+            type: CallExpression
+            span:
+              start: 97
+              end: 112
+              ctxt: 0
+            callee:
+              type: Identifier
+              span:
+                start: 97
+                end: 110
+                ctxt: 1
+              value: DoubleWrapper
+              optional: false
+            arguments: []
+            typeArguments: ~
+          definite: false
+  - type: ExportDeclaration
+    span:
+      start: 114
+      end: 147
+      ctxt: 0
+    declaration:
+      type: VariableDeclaration
+      span:
+        start: 121
+        end: 147
+        ctxt: 0
+      kind: const
+      declare: false
+      declarations:
+        - type: VariableDeclarator
+          span:
+            start: 127
+            end: 146
+            ctxt: 0
+          id:
+            optional: false
+            span:
+              start: 127
+              end: 134
+              ctxt: 1
+            type: Identifier
+            typeAnnotation: ~
+            value: Wrapped
+          init:
+            type: CallExpression
+            span:
+              start: 137
+              end: 146
+              ctxt: 0
+            callee:
+              type: Identifier
+              span:
+                start: 137
+                end: 144
+                ctxt: 1
+              value: Wrapper
+              optional: false
+            arguments: []
+            typeArguments: ~
+          definite: false
+  - type: ExportDeclaration
+    span:
+      start: 148
+      end: 221
+      ctxt: 0
+    declaration:
+      type: VariableDeclaration
+      span:
+        start: 155
+        end: 221
+        ctxt: 0
+      kind: const
+      declare: false
+      declarations:
+        - type: VariableDeclarator
+          span:
+            start: 161
+            end: 220
+            ctxt: 0
+          id:
+            optional: false
+            span:
+              start: 161
+              end: 184
+              ctxt: 1
+            type: Identifier
+            typeAnnotation: ~
+            value: WrappedWithComponentArg
+          init:
+            type: CallExpression
+            span:
+              start: 187
+              end: 220
+              ctxt: 0
+            callee:
+              type: Identifier
+              span:
+                start: 187
+                end: 194
+                ctxt: 1
+              value: Wrapper
+              optional: false
+            arguments:
+              - spread: ~
+                expression:
+                  type: ArrowFunctionExpression
+                  span:
+                    start: 195
+                    end: 219
+                    ctxt: 0
+                  params: []
+                  body:
+                    type: JSXElement
+                    span:
+                      start: 201
+                      end: 219
+                      ctxt: 0
+                    opening:
+                      type: JSXOpeningElement
+                      name:
+                        type: Identifier
+                        span:
+                          start: 202
+                          end: 205
+                          ctxt: 2
+                        value: div
+                        optional: false
+                      span:
+                        start: 201
+                        end: 206
+                        ctxt: 0
+                      attributes: []
+                      selfClosing: false
+                      typeArguments: ~
+                    children:
+                      - type: JSXText
+                        span:
+                          start: 206
+                          end: 213
+                          ctxt: 0
+                        value: Foo Bar
+                        raw: Foo Bar
+                    closing:
+                      type: JSXClosingElement
+                      span:
+                        start: 213
+                        end: 219
+                        ctxt: 0
+                      name:
+                        type: Identifier
+                        span:
+                          start: 215
+                          end: 218
+                          ctxt: 2
+                        value: div
+                        optional: false
+                  async: false
+                  generator: false
+                  typeParameters: ~
+                  returnType: ~
+            typeArguments: ~
+          definite: false
+  - type: ExportDeclaration
+    span:
+      start: 223
+      end: 302
+      ctxt: 0
+    declaration:
+      type: VariableDeclaration
+      span:
+        start: 230
+        end: 302
+        ctxt: 0
+      kind: const
+      declare: false
+      declarations:
+        - type: VariableDeclarator
+          span:
+            start: 236
+            end: 301
+            ctxt: 0
+          id:
+            optional: false
+            span:
+              start: 236
+              end: 259
+              ctxt: 1
+            type: Identifier
+            typeAnnotation: ~
+            value: WrapperWithComponentArg
+          init:
+            type: CallExpression
+            span:
+              start: 262
+              end: 301
+              ctxt: 0
+            callee:
+              type: Identifier
+              span:
+                start: 262
+                end: 275
+                ctxt: 1
+              value: DoubleWrapper
+              optional: false
+            arguments:
+              - spread: ~
+                expression:
+                  type: ArrowFunctionExpression
+                  span:
+                    start: 276
+                    end: 300
+                    ctxt: 0
+                  params: []
+                  body:
+                    type: JSXElement
+                    span:
+                      start: 282
+                      end: 300
+                      ctxt: 0
+                    opening:
+                      type: JSXOpeningElement
+                      name:
+                        type: Identifier
+                        span:
+                          start: 283
+                          end: 286
+                          ctxt: 2
+                        value: div
+                        optional: false
+                      span:
+                        start: 282
+                        end: 287
+                        ctxt: 0
+                      attributes: []
+                      selfClosing: false
+                      typeArguments: ~
+                    children:
+                      - type: JSXText
+                        span:
+                          start: 287
+                          end: 294
+                          ctxt: 0
+                        value: Foo Bar
+                        raw: Foo Bar
+                    closing:
+                      type: JSXClosingElement
+                      span:
+                        start: 294
+                        end: 300
+                        ctxt: 0
+                      name:
+                        type: Identifier
+                        span:
+                          start: 296
+                          end: 299
+                          ctxt: 2
+                        value: div
+                        optional: false
+                  async: false
+                  generator: false
+                  typeParameters: ~
+                  returnType: ~
+            typeArguments: ~
+          definite: false
+  - type: ExportDeclaration
+    span:
+      start: 303
+      end: 379
+      ctxt: 0
+    declaration:
+      type: VariableDeclaration
+      span:
+        start: 310
+        end: 379
+        ctxt: 0
+      kind: const
+      declare: false
+      declarations:
+        - type: VariableDeclarator
+          span:
+            start: 316
+            end: 378
+            ctxt: 0
+          id:
+            optional: false
+            span:
+              start: 316
+              end: 350
+              ctxt: 1
+            type: Identifier
+            typeAnnotation: ~
+            value: WrappedFromWrapperWithComponentArg
+          init:
+            type: CallExpression
+            span:
+              start: 353
+              end: 378
+              ctxt: 0
+            callee:
+              type: Identifier
+              span:
+                start: 353
+                end: 376
+                ctxt: 1
+              value: WrapperWithComponentArg
+              optional: false
+            arguments: []
+            typeArguments: ~
+          definite: false
+  - type: ExportDeclaration
+    span:
+      start: 380
+      end: 496
+      ctxt: 0
+    declaration:
+      type: VariableDeclaration
+      span:
+        start: 387
+        end: 496
+        ctxt: 0
+      kind: const
+      declare: false
+      declarations:
+        - type: VariableDeclarator
+          span:
+            start: 393
+            end: 495
+            ctxt: 0
+          id:
+            optional: false
+            span:
+              start: 393
+              end: 443
+              ctxt: 1
+            type: Identifier
+            typeAnnotation: ~
+            value: WrappedWithComponentArgFromWrapperWithComponentArg
+          init:
+            type: CallExpression
+            span:
+              start: 446
+              end: 495
+              ctxt: 0
+            callee:
+              type: Identifier
+              span:
+                start: 446
+                end: 469
+                ctxt: 1
+              value: WrapperWithComponentArg
+              optional: false
+            arguments:
+              - spread: ~
+                expression:
+                  type: ArrowFunctionExpression
+                  span:
+                    start: 470
+                    end: 494
+                    ctxt: 0
+                  params: []
+                  body:
+                    type: JSXElement
+                    span:
+                      start: 476
+                      end: 494
+                      ctxt: 0
+                    opening:
+                      type: JSXOpeningElement
+                      name:
+                        type: Identifier
+                        span:
+                          start: 477
+                          end: 480
+                          ctxt: 2
+                        value: div
+                        optional: false
+                      span:
+                        start: 476
+                        end: 481
+                        ctxt: 0
+                      attributes: []
+                      selfClosing: false
+                      typeArguments: ~
+                    children:
+                      - type: JSXText
+                        span:
+                          start: 481
+                          end: 488
+                          ctxt: 0
+                        value: Foo Bar
+                        raw: Foo Bar
+                    closing:
+                      type: JSXClosingElement
+                      span:
+                        start: 488
+                        end: 494
+                        ctxt: 0
+                      name:
+                        type: Identifier
+                        span:
+                          start: 490
+                          end: 493
+                          ctxt: 2
+                        value: div
+                        optional: false
+                  async: false
+                  generator: false
+                  typeParameters: ~
+                  returnType: ~
+            typeArguments: ~
+          definite: false

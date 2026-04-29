@@ -1,0 +1,142 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&component_results"
+---
+num_of_components: 8
+components:
+  - definition_id: "ds:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:ImportedComponent"
+    name: ImportedComponent
+    export_ids: []
+    package_name: ds
+    source_path: ""
+    dependencies: []
+    props: []
+    html_elements: []
+  - definition_id: "typescript-examples:a2b8a926258aa72520ddadbafcba53852351fdfafb036cfd052400a09e35aab1:AwaitImportAndUseInJsx"
+    name: AwaitImportAndUseInJsx
+    export_ids:
+      - "typescript-examples:src/dynamic-import/await-import-and-use-in-jsx:AwaitImportAndUseInJsx"
+    package_name: typescript-examples
+    source_path: src/dynamic-import/await-import-and-use-in-jsx.tsx
+    dependencies:
+      - from: "typescript-examples:a2b8a926258aa72520ddadbafcba53852351fdfafb036cfd052400a09e35aab1:AwaitImportAndUseInJsx"
+        to: "ds:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:ImportedComponent"
+        references:
+          - trace:
+              - "ds:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:ImportedComponent"
+            usages:
+              - start:
+                  line: 9
+                  column: 21
+                end:
+                  line: 9
+                  column: 41
+                props: []
+    props: []
+    html_elements:
+      - div
+  - definition_id: "typescript-examples:24a38cbdadc4c65a4526aae58f4508424948502b887944693c27370e74c27753:default"
+    name: imported-component
+    export_ids:
+      - "typescript-examples:src/dynamic-import/imported-component:default"
+    package_name: typescript-examples
+    source_path: src/dynamic-import/imported-component.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - button
+  - definition_id: "typescript-examples:5c426245c922e4508763681775c5588323591c2fcb4b0dd98615fa75ec19c815:default"
+    name: loading-component
+    export_ids:
+      - "typescript-examples:src/dynamic-import/loading-component:default"
+    package_name: typescript-examples
+    source_path: src/dynamic-import/loading-component.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - div
+  - definition_id: "typescript-examples:72cad27d724ad68829730f84072df392c3deeb750b2ecaa124e25c77a69ca14a:NamedComponent"
+    name: NamedComponent
+    export_ids:
+      - "typescript-examples:src/dynamic-import/named-component:NamedComponent"
+    package_name: typescript-examples
+    source_path: src/dynamic-import/named-component.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - button
+  - definition_id: "typescript-examples:113e65ae026945827e97267a4bc66ddfbb5a75bc6c0beb65c129d67aaf304cb4:WithCustomWrapper"
+    name: WithCustomWrapper
+    export_ids:
+      - "typescript-examples:src/dynamic-import/with-custom-wrapper:WithCustomWrapper"
+    package_name: typescript-examples
+    source_path: src/dynamic-import/with-custom-wrapper.tsx
+    dependencies:
+      - from: "typescript-examples:113e65ae026945827e97267a4bc66ddfbb5a75bc6c0beb65c129d67aaf304cb4:WithCustomWrapper"
+        to: "typescript-examples:24a38cbdadc4c65a4526aae58f4508424948502b887944693c27370e74c27753:default"
+        references:
+          - trace:
+              - "typescript-examples:24a38cbdadc4c65a4526aae58f4508424948502b887944693c27370e74c27753:default"
+            usages: []
+    props: []
+    html_elements:
+      - div
+  - definition_id: "typescript-examples:b7f0e36a49a17513e9591e05b371c536fca443c9fcc58bda127de7f33e6ae47e:WithNextDynamic"
+    name: WithNextDynamic
+    export_ids:
+      - "typescript-examples:src/dynamic-import/with-next-dynamic:WithNextDynamic"
+    package_name: typescript-examples
+    source_path: src/dynamic-import/with-next-dynamic.tsx
+    dependencies:
+      - from: "typescript-examples:b7f0e36a49a17513e9591e05b371c536fca443c9fcc58bda127de7f33e6ae47e:WithNextDynamic"
+        to: "typescript-examples:24a38cbdadc4c65a4526aae58f4508424948502b887944693c27370e74c27753:default"
+        references:
+          - trace:
+              - "typescript-examples:24a38cbdadc4c65a4526aae58f4508424948502b887944693c27370e74c27753:default"
+            usages: []
+      - from: "typescript-examples:b7f0e36a49a17513e9591e05b371c536fca443c9fcc58bda127de7f33e6ae47e:WithNextDynamic"
+        to: "typescript-examples:5c426245c922e4508763681775c5588323591c2fcb4b0dd98615fa75ec19c815:default"
+        references:
+          - trace:
+              - "typescript-examples:5c426245c922e4508763681775c5588323591c2fcb4b0dd98615fa75ec19c815:default"
+            usages:
+              - start:
+                  line: 8
+                  column: 24
+                end:
+                  line: 8
+                  column: 43
+                props: []
+              - start:
+                  line: 17
+                  column: 24
+                end:
+                  line: 17
+                  column: 43
+                props: []
+      - from: "typescript-examples:b7f0e36a49a17513e9591e05b371c536fca443c9fcc58bda127de7f33e6ae47e:WithNextDynamic"
+        to: "typescript-examples:72cad27d724ad68829730f84072df392c3deeb750b2ecaa124e25c77a69ca14a:NamedComponent"
+        references:
+          - trace:
+              - "typescript-examples:72cad27d724ad68829730f84072df392c3deeb750b2ecaa124e25c77a69ca14a:NamedComponent"
+            usages: []
+    props: []
+    html_elements:
+      - div
+  - definition_id: "typescript-examples:058fa439756e3e0e8a75efa55d3b2711c696481e2a149fa158e7bd003ec5e2a0:WithReactLazy"
+    name: WithReactLazy
+    export_ids:
+      - "typescript-examples:src/dynamic-import/with-react-lazy:WithReactLazy"
+    package_name: typescript-examples
+    source_path: src/dynamic-import/with-react-lazy.tsx
+    dependencies:
+      - from: "typescript-examples:058fa439756e3e0e8a75efa55d3b2711c696481e2a149fa158e7bd003ec5e2a0:WithReactLazy"
+        to: "typescript-examples:24a38cbdadc4c65a4526aae58f4508424948502b887944693c27370e74c27753:default"
+        references:
+          - trace:
+              - "typescript-examples:24a38cbdadc4c65a4526aae58f4508424948502b887944693c27370e74c27753:default"
+            usages: []
+    props: []
+    html_elements:
+      - div
+

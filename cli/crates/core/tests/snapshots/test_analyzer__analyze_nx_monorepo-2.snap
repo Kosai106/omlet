@@ -1,0 +1,131 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&export_results"
+---
+num_of_exports: 17
+exports:
+  - name: App
+    source_path: apps/main-app/src/app/app.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@nx-react-monorepo/main-app:fa7a022046369b1cfaf7b88609ccfdf581473458eaabe5ad80e6cae243f41dac:App"
+  - name: Button
+    source_path: ds/src/index.ts
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@nx-react-monorepo/ds:fbe038a8c624e6ea029938b2e8bb7d90d3584ac9182ea1dbd791bef07c322dad:Button"
+      - "@nx-react-monorepo/ds:351e65386137a51ed773c346cb7b8024264a766a2399ccc5f454c5b006287864:Button"
+  - name: Button
+    source_path: ds/src/lib/button/button.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@nx-react-monorepo/ds:351e65386137a51ed773c346cb7b8024264a766a2399ccc5f454c5b006287864:Button"
+  - name: H1
+    source_path: ds/src/index.ts
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@nx-react-monorepo/ds:fbe038a8c624e6ea029938b2e8bb7d90d3584ac9182ea1dbd791bef07c322dad:H1"
+      - "@nx-react-monorepo/ds:005cb37d61755dec5ebd7a47d51dc3bd677742130aab0feae8634c2cbfd29d75:H1"
+  - name: H1
+    source_path: ds/src/lib/h1/h1.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@nx-react-monorepo/ds:005cb37d61755dec5ebd7a47d51dc3bd677742130aab0feae8634c2cbfd29d75:H1"
+  - name: Home
+    source_path: apps/main-app/src/home/home.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@nx-react-monorepo/main-app:4aa72168f874a04e00d38a21b4585a03f69c192fe1d4c80137b48cb86b560989:Home"
+  - name: PageOne
+    source_path: libs/page-one/src/index.ts
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@nx-react-monorepo/page-one:bffbedc374310ff8268637735551bb015e16221c95efe745fcc2682272c31a0e:PageOne"
+      - "@nx-react-monorepo/page-one:9355d2cc281e42a4ee94c4bead349d588bb5edfc2a33f20a906a0185cf9f3991:PageOne"
+  - name: PageOne
+    source_path: libs/page-one/src/lib/page-one.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@nx-react-monorepo/page-one:9355d2cc281e42a4ee94c4bead349d588bb5edfc2a33f20a906a0185cf9f3991:PageOne"
+  - name: default
+    source_path: apps/main-app/src/app/app.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@nx-react-monorepo/main-app:fa7a022046369b1cfaf7b88609ccfdf581473458eaabe5ad80e6cae243f41dac:default"
+  - name: default
+    source_path: apps/main-app/src/home/home.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@nx-react-monorepo/main-app:4aa72168f874a04e00d38a21b4585a03f69c192fe1d4c80137b48cb86b560989:default"
+  - name: default
+    source_path: apps/main-app/vite.config.ts
+    is_component: false
+    inferred_type: "ReturnTypeOf<TypeOf<@nx-react-monorepo/main-app:450fbfecfdb6ac16db59f5d895f592c2768a0e37aa3c94eef5ce2d5bf788a894:defineConfig>>"
+    resolved_type: ReturnTypeOf<Unknown>
+    trace_to_declaration:
+      - "@nx-react-monorepo/main-app:450fbfecfdb6ac16db59f5d895f592c2768a0e37aa3c94eef5ce2d5bf788a894:default"
+  - name: default
+    source_path: ds/src/index.ts
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@nx-react-monorepo/ds:fbe038a8c624e6ea029938b2e8bb7d90d3584ac9182ea1dbd791bef07c322dad:default"
+      - "@nx-react-monorepo/ds:351e65386137a51ed773c346cb7b8024264a766a2399ccc5f454c5b006287864:default"
+  - name: default
+    source_path: ds/src/lib/button/button.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@nx-react-monorepo/ds:351e65386137a51ed773c346cb7b8024264a766a2399ccc5f454c5b006287864:default"
+  - name: default
+    source_path: ds/src/lib/h1/h1.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@nx-react-monorepo/ds:005cb37d61755dec5ebd7a47d51dc3bd677742130aab0feae8634c2cbfd29d75:default"
+  - name: default
+    source_path: ds/vite.config.ts
+    is_component: false
+    inferred_type: "ReturnTypeOf<TypeOf<@nx-react-monorepo/ds:f06dd355cf75a77a4a4e349c4381ce9c4b6f2ce7dae4c36b566a50339c162bb1:defineConfig>>"
+    resolved_type: ReturnTypeOf<Unknown>
+    trace_to_declaration:
+      - "@nx-react-monorepo/ds:f06dd355cf75a77a4a4e349c4381ce9c4b6f2ce7dae4c36b566a50339c162bb1:default"
+  - name: default
+    source_path: libs/page-one/src/index.ts
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@nx-react-monorepo/page-one:bffbedc374310ff8268637735551bb015e16221c95efe745fcc2682272c31a0e:default"
+      - "@nx-react-monorepo/page-one:9355d2cc281e42a4ee94c4bead349d588bb5edfc2a33f20a906a0185cf9f3991:default"
+  - name: default
+    source_path: libs/page-one/src/lib/page-one.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@nx-react-monorepo/page-one:9355d2cc281e42a4ee94c4bead349d588bb5edfc2a33f20a906a0185cf9f3991:default"
+

@@ -1,0 +1,6 @@
+{
+  "private": true,
+  "name": "single-part",
+  "types": "src/index.ts",
+  "version": "1.0.0"
+}

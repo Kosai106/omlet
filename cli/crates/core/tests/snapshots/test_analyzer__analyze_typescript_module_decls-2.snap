@@ -1,0 +1,347 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&export_results"
+---
+num_of_exports: 46
+exports:
+  - name: ComponentUsingNamedComponentDoubleExport
+    source_path: src/module-decls/default-export/default-export-default-and-named.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:a08265ec926fb58ba1ccc6121ee3e5529ed098f8127768279893311220593640:ComponentUsingNamedComponentDoubleExport"
+  - name: ComponentUsingNamedWrappedComponent
+    source_path: src/module-decls/default-export/default-export-anon-expr-wrapped.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:b424b681f43088ab16f34e79060879e85d45301b07da1fbff944620ab198be9f:ComponentUsingNamedWrappedComponent"
+  - name: DefaultExportMain
+    source_path: src/module-decls/default-export/default-export-main.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:b093036782ab544fc44a3843d4c1a921cb7578cba9080168233beb61dd50a253:DefaultExportMain"
+  - name: Main
+    source_path: src/module-decls/wildcard-export/main.tsx
+    is_component: true
+    inferred_type: "(Function -> ReturnTypeOf<ReturnTypeOf<TypeOf<typescript-examples:edb246d0758f94e190bcfb4dc52534326eef5e4b3d68284fd24fabac8c6fff6f:sample>>>)"
+    resolved_type: (Function -> ReturnTypeOf<ReturnTypeOf<(Function -> (Function -> JSX))>>)
+    trace_to_declaration:
+      - "typescript-examples:edb246d0758f94e190bcfb4dc52534326eef5e4b3d68284fd24fabac8c6fff6f:Main"
+  - name: Main
+    source_path: src/module-decls/wildcard-import/main.tsx
+    is_component: true
+    inferred_type: "(Function -> ReturnTypeOf<ReturnTypeOf<TypeOf<typescript-examples:dedcc8620be92641bbc8e9e0beda99cf1f75a9532b07d869914d1eac5b8371c6:exporter>[sample]>>)"
+    resolved_type: "(Function -> ReturnTypeOf<ReturnTypeOf<TypeOf<typescript-examples:6997e7b3ce84150de8a30f6324a5a39a0fb116b74afe49dd80065b3509927d69:<wildcard>>[sample]>>)"
+    trace_to_declaration:
+      - "typescript-examples:dedcc8620be92641bbc8e9e0beda99cf1f75a9532b07d869914d1eac5b8371c6:Main"
+  - name: NamedComponentDoubleExport
+    source_path: src/module-decls/default-export/default-export-default-and-named.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:a08265ec926fb58ba1ccc6121ee3e5529ed098f8127768279893311220593640:NamedComponentDoubleExport"
+  - name: NamedComponentReExport
+    source_path: src/module-decls/default-export/default-export-reexport/component.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:5702dbae9d5c475fa03398a93cd7c361ef5f91cecd27671402e979e138a89e9e:NamedComponentReExport"
+  - name: NamedComponentWrapped
+    source_path: src/module-decls/default-export/default-export-anon-expr-wrapped.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:b424b681f43088ab16f34e79060879e85d45301b07da1fbff944620ab198be9f:NamedComponentWrapped"
+  - name: atOnce
+    source_path: src/module-decls/module-named.ts
+    is_component: false
+    inferred_type: "{ tekte: Array<>, yekte: Array<> }[tekte]"
+    resolved_type: "{ tekte: Array<>, yekte: Array<> }[tekte]"
+    trace_to_declaration:
+      - "typescript-examples:ca87e0cf1966956e51a955eee0d72c125bf6b6d36660404939585ad681b56f87:atOnce"
+  - name: cPeep
+    source_path: src/module-decls/module-export-from.ts
+    is_component: false
+    inferred_type: Unknown
+    resolved_type: Unknown
+    trace_to_declaration:
+      - "typescript-examples:b63b5b9fbb2868fe9f1ebb054a62b83d0389d77783884af963b3536a1343457c:cPeep"
+      - "molly:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:coronado"
+  - name: cPeep
+    source_path: src/module-decls/module-named.ts
+    is_component: false
+    inferred_type: Unknown
+    resolved_type: Unknown
+    trace_to_declaration:
+      - "typescript-examples:ca87e0cf1966956e51a955eee0d72c125bf6b6d36660404939585ad681b56f87:cPeep"
+      - "jolly:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:coronado"
+  - name: concert
+    source_path: src/module-decls/module-named.ts
+    is_component: false
+    inferred_type: Unknown
+    resolved_type: Unknown
+    trace_to_declaration:
+      - "typescript-examples:ca87e0cf1966956e51a955eee0d72c125bf6b6d36660404939585ad681b56f87:concert"
+      - "dolly:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:arte"
+  - name: coronado
+    source_path: src/module-decls/module-export-from.ts
+    is_component: false
+    inferred_type: Unknown
+    resolved_type: Unknown
+    trace_to_declaration:
+      - "typescript-examples:b63b5b9fbb2868fe9f1ebb054a62b83d0389d77783884af963b3536a1343457c:coronado"
+      - "molly:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:coronado"
+  - name: coronado
+    source_path: src/module-decls/module-named.ts
+    is_component: false
+    inferred_type: Unknown
+    resolved_type: Unknown
+    trace_to_declaration:
+      - "typescript-examples:ca87e0cf1966956e51a955eee0d72c125bf6b6d36660404939585ad681b56f87:coronado"
+      - "bolly:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:coronado"
+  - name: default
+    source_path: src/module-decls/default-export/default-export-anon-expr-wrapped.tsx
+    is_component: true
+    inferred_type: "ReturnTypeOf<TypeOf<typescript-examples:b424b681f43088ab16f34e79060879e85d45301b07da1fbff944620ab198be9f:withRouter>>"
+    resolved_type: ReturnTypeOf<(Function -> Unknown)>
+    trace_to_declaration:
+      - "typescript-examples:b424b681f43088ab16f34e79060879e85d45301b07da1fbff944620ab198be9f:default"
+  - name: default
+    source_path: src/module-decls/default-export/default-export-anon-func-index/index.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:b14bbd35ab736464a554cebf5f011e0088564382d486dded1357c46012fbbc59:default"
+  - name: default
+    source_path: src/module-decls/default-export/default-export-anon-func.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:b24f5fabb2b67f9365e6d186a5baf80e1b25b0fce727661d7daa74e3c1415533:default"
+  - name: default
+    source_path: src/module-decls/default-export/default-export-default-and-named.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:a08265ec926fb58ba1ccc6121ee3e5529ed098f8127768279893311220593640:default"
+  - name: default
+    source_path: src/module-decls/default-export/default-export-named-func-index/index.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:7989ae769d7f946009ebd0af76441e93b05afe5008d10b79bd85cb5287c79b1a:default"
+  - name: default
+    source_path: src/module-decls/default-export/default-export-named-func.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:fb374baffc6e4f7a0662b21a2b1be276996bb9b0268e220b398be3c851443c2d:default"
+  - name: default
+    source_path: src/module-decls/default-export/default-export-named-var-decl.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:3a535450b7390ccd615877f11c0ef38aba2689890eaef68a709219e982f2cfad:default"
+  - name: default
+    source_path: src/module-decls/default-export/default-export-reexport/default-export-reexport.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:f3566e655b66baab0473b9a1d49d3b0832896da42bcf86eb9ad4633c00ed0451:default"
+      - "typescript-examples:5702dbae9d5c475fa03398a93cd7c361ef5f91cecd27671402e979e138a89e9e:NamedComponentReExport"
+  - name: default
+    source_path: src/module-decls/module-default.ts
+    is_component: false
+    inferred_type: (Function -> )
+    resolved_type: (Function -> )
+    trace_to_declaration:
+      - "typescript-examples:347bdac4ac5c40dd8ccfbf2c112e45888a71170f3a85ed09d53a74cbbc6920eb:default"
+  - name: default
+    source_path: src/module-decls/module-dynamic-import.ts
+    is_component: false
+    inferred_type: (Function -> )
+    resolved_type: (Function -> )
+    trace_to_declaration:
+      - "typescript-examples:9c0a1deb56b0d1d0d6b415f1453fb2c7cb4fc35da4dd4b1c0b0331e8679acdfe:default"
+  - name: default
+    source_path: src/module-decls/module-export-from.ts
+    is_component: false
+    inferred_type: Unknown
+    resolved_type: Unknown
+    trace_to_declaration:
+      - "typescript-examples:b63b5b9fbb2868fe9f1ebb054a62b83d0389d77783884af963b3536a1343457c:default"
+      - "molly:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:default"
+  - name: default
+    source_path: src/module-decls/module-mixed.ts
+    is_component: false
+    inferred_type: Unknown
+    resolved_type: Unknown
+    trace_to_declaration:
+      - "typescript-examples:9f4a6d4184f6b8ae2376faad783b2ce15b2a7467836051086726d2fd29ab27e0:default"
+  - name: default
+    source_path: src/module-decls/module-named.ts
+    is_component: false
+    inferred_type: Unknown
+    resolved_type: Unknown
+    trace_to_declaration:
+      - "typescript-examples:ca87e0cf1966956e51a955eee0d72c125bf6b6d36660404939585ad681b56f87:default"
+      - "emolly:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:default"
+  - name: dolly
+    source_path: src/module-decls/module-export-from.ts
+    is_component: false
+    inferred_type: "TypeOf<dolly:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:<wildcard>>"
+    resolved_type: "TypeOf<dolly:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:<wildcard>>"
+    trace_to_declaration:
+      - "typescript-examples:b63b5b9fbb2868fe9f1ebb054a62b83d0389d77783884af963b3536a1343457c:dolly"
+  - name: dolly
+    source_path: src/module-decls/module-named-wildcard.ts
+    is_component: false
+    inferred_type: "TypeOf<dolly:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:<wildcard>>"
+    resolved_type: "TypeOf<dolly:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:<wildcard>>"
+    trace_to_declaration:
+      - "typescript-examples:2d6e89db8bd97a0421cd2e9ee4fa5757dc6799993790bb6ea18dc4f340718afa:dolly"
+  - name: exported
+    source_path: src/module-decls/wildcard-export/exporter.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:89075f92966e0aca390086b10803d145ff9f9612b1c85b21e129886d0d971b0c:exported"
+  - name: exported
+    source_path: src/module-decls/wildcard-import/exporter.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:6997e7b3ce84150de8a30f6324a5a39a0fb116b74afe49dd80065b3509927d69:exported"
+  - name: holly
+    source_path: src/module-decls/module-named.ts
+    is_component: false
+    inferred_type: Unknown
+    resolved_type: Unknown
+    trace_to_declaration:
+      - "typescript-examples:ca87e0cf1966956e51a955eee0d72c125bf6b6d36660404939585ad681b56f87:holly"
+      - "molly:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:molly"
+  - name: hollyMolly
+    source_path: src/module-decls/module-export-from.ts
+    is_component: false
+    inferred_type: Unknown
+    resolved_type: Unknown
+    trace_to_declaration:
+      - "typescript-examples:b63b5b9fbb2868fe9f1ebb054a62b83d0389d77783884af963b3536a1343457c:hollyMolly"
+      - "molly:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:hollyMolly"
+  - name: hollyMolly
+    source_path: src/module-decls/module-named.ts
+    is_component: false
+    inferred_type: Unknown
+    resolved_type: Unknown
+    trace_to_declaration:
+      - "typescript-examples:ca87e0cf1966956e51a955eee0d72c125bf6b6d36660404939585ad681b56f87:hollyMolly"
+      - "emolly:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:hollyMolly"
+  - name: sPeep
+    source_path: src/module-decls/module-export-from.ts
+    is_component: false
+    inferred_type: Unknown
+    resolved_type: Unknown
+    trace_to_declaration:
+      - "typescript-examples:b63b5b9fbb2868fe9f1ebb054a62b83d0389d77783884af963b3536a1343457c:sPeep"
+      - "molly:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:scrimshaw"
+  - name: sPeep
+    source_path: src/module-decls/module-named.ts
+    is_component: false
+    inferred_type: Unknown
+    resolved_type: Unknown
+    trace_to_declaration:
+      - "typescript-examples:ca87e0cf1966956e51a955eee0d72c125bf6b6d36660404939585ad681b56f87:sPeep"
+      - "jolly:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:scrimshaw"
+  - name: sample
+    source_path: src/module-decls/wildcard-export/exporter.tsx
+    is_component: false
+    inferred_type: (Function -> (Function -> JSX))
+    resolved_type: (Function -> (Function -> JSX))
+    trace_to_declaration:
+      - "typescript-examples:89075f92966e0aca390086b10803d145ff9f9612b1c85b21e129886d0d971b0c:sample"
+      - "typescript-examples:b350eaaf36bd897a23a74fec7757061da64600cdd4f07e920a91e31744b9bd2e:sample"
+  - name: sample
+    source_path: src/module-decls/wildcard-export/sample.tsx
+    is_component: false
+    inferred_type: (Function -> (Function -> JSX))
+    resolved_type: (Function -> (Function -> JSX))
+    trace_to_declaration:
+      - "typescript-examples:b350eaaf36bd897a23a74fec7757061da64600cdd4f07e920a91e31744b9bd2e:sample"
+  - name: sample
+    source_path: src/module-decls/wildcard-import/exporter.tsx
+    is_component: false
+    inferred_type: (Function -> (Function -> JSX))
+    resolved_type: (Function -> (Function -> JSX))
+    trace_to_declaration:
+      - "typescript-examples:6997e7b3ce84150de8a30f6324a5a39a0fb116b74afe49dd80065b3509927d69:sample"
+      - "typescript-examples:291ade2af25eaa92282c94b95a059bd3fe3de2ece359bc5edec611f366ffae26:sample"
+  - name: sample
+    source_path: src/module-decls/wildcard-import/sample.tsx
+    is_component: false
+    inferred_type: (Function -> (Function -> JSX))
+    resolved_type: (Function -> (Function -> JSX))
+    trace_to_declaration:
+      - "typescript-examples:291ade2af25eaa92282c94b95a059bd3fe3de2ece359bc5edec611f366ffae26:sample"
+  - name: scrimshaw
+    source_path: src/module-decls/module-export-from.ts
+    is_component: false
+    inferred_type: Unknown
+    resolved_type: Unknown
+    trace_to_declaration:
+      - "typescript-examples:b63b5b9fbb2868fe9f1ebb054a62b83d0389d77783884af963b3536a1343457c:scrimshaw"
+      - "molly:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:scrimshaw"
+  - name: scrimshaw
+    source_path: src/module-decls/module-named.ts
+    is_component: false
+    inferred_type: Unknown
+    resolved_type: Unknown
+    trace_to_declaration:
+      - "typescript-examples:ca87e0cf1966956e51a955eee0d72c125bf6b6d36660404939585ad681b56f87:scrimshaw"
+      - "bolly:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:scrimshaw"
+  - name: shaw
+    source_path: src/module-decls/module-export-from.ts
+    is_component: false
+    inferred_type: Unknown
+    resolved_type: Unknown
+    trace_to_declaration:
+      - "typescript-examples:b63b5b9fbb2868fe9f1ebb054a62b83d0389d77783884af963b3536a1343457c:shaw"
+      - "molly:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:scrimshaw"
+  - name: thirtyone
+    source_path: src/module-decls/module-default.ts
+    is_component: false
+    inferred_type: (Function -> )
+    resolved_type: (Function -> )
+    trace_to_declaration:
+      - "typescript-examples:347bdac4ac5c40dd8ccfbf2c112e45888a71170f3a85ed09d53a74cbbc6920eb:thirtyone"
+  - name: x
+    source_path: src/module-decls/module-mixed.ts
+    is_component: false
+    inferred_type: Array<Unknown | Unknown>
+    resolved_type: Array<Unknown | Unknown>
+    trace_to_declaration:
+      - "typescript-examples:9f4a6d4184f6b8ae2376faad783b2ce15b2a7467836051086726d2fd29ab27e0:x"
+  - name: yekte
+    source_path: src/module-decls/module-named.ts
+    is_component: false
+    inferred_type: "{ tekte: Array<>, yekte: Array<> }[yekte]"
+    resolved_type: "{ tekte: Array<>, yekte: Array<> }[yekte]"
+    trace_to_declaration:
+      - "typescript-examples:ca87e0cf1966956e51a955eee0d72c125bf6b6d36660404939585ad681b56f87:yekte"
+

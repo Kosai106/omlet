@@ -1,0 +1,50 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&component_results"
+---
+num_of_components: 2
+components:
+  - definition_id: "app:8abd0cccac7d9db5a9857472f7c028f41df596f82257ba862e78cf18e370a407:App"
+    name: App
+    export_ids:
+      - "app:src/App:App"
+    package_name: app
+    source_path: app/src/App.tsx
+    dependencies:
+      - from: "app:8abd0cccac7d9db5a9857472f7c028f41df596f82257ba862e78cf18e370a407:App"
+        to: "ds:7763d85bafc13b0173d2bac98b7592b247e3194b06cbb47f4e097abf3d724631:Button"
+        references:
+          - trace:
+              - "ds:fbe038a8c624e6ea029938b2e8bb7d90d3584ac9182ea1dbd791bef07c322dad:Button"
+              - "ds:7763d85bafc13b0173d2bac98b7592b247e3194b06cbb47f4e097abf3d724631:Button"
+            usages:
+              - start:
+                  line: 7
+                  column: 13
+                end:
+                  line: 7
+                  column: 23
+                props: []
+              - start:
+                  line: 8
+                  column: 13
+                end:
+                  line: 8
+                  column: 23
+                props: []
+    props: []
+    html_elements: []
+  - definition_id: "ds:7763d85bafc13b0173d2bac98b7592b247e3194b06cbb47f4e097abf3d724631:Button"
+    name: Button
+    export_ids:
+      - "ds:.:Button"
+      - "ds:dist/Button:Button"
+      - "ds:src/Button:Button"
+      - "ds:src:Button"
+    package_name: ds
+    source_path: ds/src/Button.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - button
+

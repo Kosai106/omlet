@@ -1,0 +1,42 @@
+.tutorialStep {
+    padding: var(--spacing-l) 96px 0;
+    background-color: var(--background-tertiary-color);
+    box-shadow: inset 0 0 1px 0 var(--border-primary-color);
+    border-radius: 4px;
+    line-height: 0;
+}
+
+.tutorialStep .header {
+    display: flex;
+    align-items: flex-start;
+    height: 38px;
+    gap: var(--spacing-xs);
+    margin-bottom: 13px;
+}
+
+.tutorialStep .step {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 18px;
+    height: 18px;
+    background-color: var(--background-inverse-color);
+    border-radius: 50%;
+    font-family: var(--font-family-secondary);
+    font-size: 13px;
+    color: var(--label-inverse-color);
+}
+
+.tutorialStep .info {
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.tutorialStep .info .title {
+    font-weight: 600;
+    color: var(--label-primary-color);
+}
+
+.tutorialStep .info .description {
+    color: var(--label-secondary-color);
+}

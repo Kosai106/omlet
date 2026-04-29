@@ -1,0 +1,67 @@
+.segmentedControl {
+    display: flex;
+    gap: var(--spacing-xs);
+}
+
+.segmentedControl .segmentedControlButton {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    height: 30px;
+    padding: 0 var(--spacing-xs);
+    background-color: var(--background-secondary-color);
+    border-radius: 4px;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 600;
+    color: var(--label-secondary-color);
+    cursor: pointer;
+    user-select: none;
+}
+
+.segmentedControl .segmentedControlButton input {
+    display: none;
+}
+
+.segmentedControl .segmentedControlButton:not(:has(:checked)):not(:has(:disabled)):active {
+    background-color: var(--control-background-active-color);
+}
+
+.segmentedControl .segmentedControlButton:has(:checked) {
+    background-color: rgba(var(--accent-green-rgb), 0.1);
+    color: var(--accent-green);
+}
+
+.segmentedControl .segmentedControlButton:has(:disabled) {
+    color: var(--label-secondary-disabled-color);
+    cursor: not-allowed;
+}
+
+.segmentedControl .segmentedControlButton:has(:checked:disabled) {
+    color: rgba(var(--accent-green-rgb), 0.4);
+}
+
+.segmentedControl.compact .segmentedControlButton {
+    height: 20px;
+    padding: 0 6px;
+    background-color: transparent;
+    border-radius: 4px;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--label-secondary-color);
+}
+
+.segmentedControl.compact .segmentedControlButton:has(:checked) {
+    background-color: var(--accent-green);
+    color: var(--label-selected-color);
+}
+
+.segmentedControl.compact .segmentedControlButton:has(:disabled) {
+    color: var(--label-secondary-disabled-color);
+    cursor: not-allowed;
+}
+
+.segmentedControl.compact .segmentedControlButton:has(:checked:disabled) {
+    background-color: rgba(var(--accent-green-rgb), 0.4);
+    color: rgba(var(--label-selected-color-rgb), 0.4);
+}

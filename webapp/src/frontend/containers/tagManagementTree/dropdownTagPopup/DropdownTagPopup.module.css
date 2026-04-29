@@ -1,0 +1,82 @@
+.dropdownTagPopup {
+    width: 216px;
+    padding-bottom: var(--spacing-xxs);
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdownTagPopup .input {
+    padding: var(--spacing-xs);
+    background-color: var(--background-secondary-color);
+    color: var(--label-primary-color);
+    caret-color: var(--accent-green);
+    border: none;
+    outline: none;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.dropdownTagPopup .input::placeholder {
+    color: var(--label-secondary-color);
+}
+
+.dropdownTagPopup .input::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+.dropdownTagPopup .input::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 0;
+    margin-left: var(--spacing-xxs);
+    background-image: url(/src/frontend/assets/img/icSearchCancel.svg);
+    background-repeat: no-repeat;
+    background-size: 8px 8px;
+    background-position: center;
+}
+
+.dropdownTagPopup .row {
+    margin: var(--spacing-xxs);
+    padding: var(--spacing-xxs);
+    display: flex;
+    gap: var(--spacing-xs);
+    align-items: center;
+    height: 28px;
+}
+
+.dropdownTagPopup .row.focused {
+    border-radius: var(--spacing-xxs);
+    background-color: var(--background-tertiary-color);
+}
+
+.dropdownTagPopup .row .add {
+    padding: var(--spacing-xxs);
+    display: flex;
+    gap: var(--spacing-xs);
+    align-items: center;
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--label-secondary-color);
+    white-space: pre;
+    overflow: hidden;
+}
+
+.dropdownTagPopup .row .add.focused {
+    color: var(--accent-green);
+    background-color: rgba(var(--accent-green-rgb), 0.1);
+}
+
+.dropdownTagPopup .row .add:disabled {
+    color: var(--button-background-disabled-color);
+    cursor: not-allowed;
+}
+
+
+.dropdownTagPopup .row .add .iconBox {
+    padding: 1px;
+    display: flex;
+    border-radius: var(--spacing-xxs);
+    background-color: var(--background-secondary-color);
+}

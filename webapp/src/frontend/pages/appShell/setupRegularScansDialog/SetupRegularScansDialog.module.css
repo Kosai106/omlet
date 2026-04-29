@@ -1,0 +1,7 @@
+.codeSnippet:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+.codeSnippet:last-child {
+    margin-bottom: 0;
+}

@@ -1,0 +1,14 @@
+{
+  "include": [
+    "**/*"
+  ],
+  "exclude": [
+    "**/node_modules"
+  ],
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "target": "es2015",
+    "jsx": "react"
+  }
+}

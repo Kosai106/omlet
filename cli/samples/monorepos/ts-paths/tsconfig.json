@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "moduleResolution": "node",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "importHelpers": true,
+    "composite": true,
+    "esModuleInterop": true,
+    "target": "es5",
+    "jsx": "react",
+    "baseUrl": "./src",
+    "paths": {
+      "local-pack-b": [
+        "../pack-b/index.tsx"
+      ],
+      "local-pack-b/*": [
+        "../pack-b/*",
+      ]
+    }
+  },
+  "include": [
+    "./src/**/*",
+    "./pack-b/**/*"
+  ]
+}

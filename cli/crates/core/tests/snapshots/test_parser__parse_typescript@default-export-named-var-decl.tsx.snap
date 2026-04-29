@@ -1,0 +1,213 @@
+---
+source: crates/core/tests/test_parser.rs
+expression: "&parser::Module::new(&RelativePathBuf::from_path(path.strip_prefix(&project_root).unwrap()).unwrap(),\n&project_root, &module_resolver,).unwrap()"
+input_file: samples/typescript/src/module-decls/default-export/default-export-named-var-decl.tsx
+---
+source_path: src/module-decls/default-export/default-export-named-var-decl.tsx
+id:
+  hash: "6634460355154843873"
+  path: src/module-decls/default-export/default-export-named-var-decl.tsx
+  package_name: UNKNOWN
+  mtype: local
+created_at: ~
+updated_at: ~
+exports:
+  - source:
+      Internal: "default#0"
+    exported_name: default
+declarations:
+  - symbol: "<anonymous-1>#0"
+    source:
+      hash: "6634460355154843873"
+      path: src/module-decls/default-export/default-export-named-var-decl.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      Function:
+        - JSX
+    start:
+      line: 1
+      column: 31
+    end:
+      line: 3
+      column: 2
+  - symbol: "NamedVarDeclComponent#1"
+    source:
+      hash: "6634460355154843873"
+      path: src/module-decls/default-export/default-export-named-var-decl.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      Function:
+        - JSX
+    start:
+      line: 1
+      column: 7
+    end:
+      line: 1
+      column: 28
+  - symbol: "default#0"
+    source:
+      hash: "6634460355154843873"
+      path: src/module-decls/default-export/default-export-named-var-decl.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      TypeOf:
+        symbol:
+          symbol: "NamedVarDeclComponent#1"
+          source:
+            hash: "6634460355154843873"
+            path: src/module-decls/default-export/default-export-named-var-decl.tsx
+            package_name: UNKNOWN
+            mtype: local
+        is_local: true
+    start:
+      line: 5
+      column: 1
+    end:
+      line: 5
+      column: 38
+scopes:
+  - owner: "__global#0"
+    parent: ~
+    children:
+      - "NamedVarDeclComponent#1"
+      - "<anonymous-2>#0"
+      - "default#0"
+    references:
+      - "NamedVarDeclComponent#1"
+      - "div#2"
+    jsx_references:
+      - "div#2"
+  - owner: "NamedVarDeclComponent#1"
+    parent: "__global#0"
+    children:
+      - "<anonymous-1>#0"
+    references:
+      - "div#2"
+    jsx_references:
+      - "div#2"
+  - owner: "<anonymous-1>#0"
+    parent: "NamedVarDeclComponent#1"
+    children: []
+    references:
+      - "div#2"
+    jsx_references:
+      - "div#2"
+  - owner: "<anonymous-2>#0"
+    parent: "__global#0"
+    children: []
+    references:
+      - "div#2"
+    jsx_references:
+      - "div#2"
+  - owner: "default#0"
+    parent: "__global#0"
+    children: []
+    references:
+      - "NamedVarDeclComponent#1"
+    jsx_references: []
+body:
+  - type: VariableDeclaration
+    span:
+      start: 1
+      end: 71
+      ctxt: 0
+    kind: const
+    declare: false
+    declarations:
+      - type: VariableDeclarator
+        span:
+          start: 7
+          end: 70
+          ctxt: 0
+        id:
+          optional: false
+          span:
+            start: 7
+            end: 28
+            ctxt: 1
+          type: Identifier
+          typeAnnotation: ~
+          value: NamedVarDeclComponent
+        init:
+          async: false
+          body:
+            type: BlockStatement
+            span:
+              start: 43
+              end: 70
+              ctxt: 0
+            stmts:
+              - type: ReturnStatement
+                span:
+                  start: 49
+                  end: 68
+                  ctxt: 0
+                argument:
+                  type: JSXElement
+                  span:
+                    start: 56
+                    end: 67
+                    ctxt: 0
+                  opening:
+                    type: JSXOpeningElement
+                    name:
+                      type: Identifier
+                      span:
+                        start: 57
+                        end: 60
+                        ctxt: 2
+                      value: div
+                      optional: false
+                    span:
+                      start: 56
+                      end: 61
+                      ctxt: 0
+                    attributes: []
+                    selfClosing: false
+                    typeArguments: ~
+                  children: []
+                  closing:
+                    type: JSXClosingElement
+                    span:
+                      start: 61
+                      end: 67
+                      ctxt: 0
+                    name:
+                      type: Identifier
+                      span:
+                        start: 63
+                        end: 66
+                        ctxt: 2
+                      value: div
+                      optional: false
+          decorators: []
+          generator: false
+          identifier: ~
+          params: []
+          returnType: ~
+          span:
+            start: 31
+            end: 70
+            ctxt: 0
+          type: FunctionExpression
+          typeParameters: ~
+        definite: false
+  - type: ExportDefaultExpression
+    span:
+      start: 73
+      end: 110
+      ctxt: 0
+    expression:
+      type: Identifier
+      span:
+        start: 88
+        end: 109
+        ctxt: 1
+      value: NamedVarDeclComponent
+      optional: false

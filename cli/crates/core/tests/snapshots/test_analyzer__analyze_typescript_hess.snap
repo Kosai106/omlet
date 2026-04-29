@@ -1,0 +1,68 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&component_results"
+---
+num_of_components: 3
+components:
+  - definition_id: "typescript-examples:af9d3108c004e5be67a33ba94c2bbb197b81aa7b7a88d1cf897d2bbcb421a812:NamedComponent"
+    name: NamedComponent
+    export_ids:
+      - "typescript-examples:src/hess/component:NamedComponent"
+    package_name: typescript-examples
+    source_path: src/hess/component/index.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - span
+  - definition_id: "typescript-examples:3a82afdf34d9b002f3a9394e552ff19d3a2a7db7cb96dbb6a1dcd091bc4d16f3:default"
+    name: ComponentBody
+    export_ids:
+      - "typescript-examples:src/hess/component/componentBody:default"
+      - "typescript-examples:src/hess/component/real:default"
+      - "typescript-examples:src/hess/component:default"
+    package_name: typescript-examples
+    source_path: src/hess/component/real.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - div
+  - definition_id: "typescript-examples:7c3bfb5e7cda9bce1047257d624deced6a00d4679438ee38f921b479aab5ed44:default"
+    name: Hess
+    export_ids:
+      - "typescript-examples:src/hess/main:default"
+    package_name: typescript-examples
+    source_path: src/hess/main.tsx
+    dependencies:
+      - from: "typescript-examples:7c3bfb5e7cda9bce1047257d624deced6a00d4679438ee38f921b479aab5ed44:default"
+        to: "typescript-examples:3a82afdf34d9b002f3a9394e552ff19d3a2a7db7cb96dbb6a1dcd091bc4d16f3:default"
+        references:
+          - trace:
+              - "typescript-examples:af9d3108c004e5be67a33ba94c2bbb197b81aa7b7a88d1cf897d2bbcb421a812:default"
+              - "typescript-examples:73dbdda807d648a93e1bf24c265133e1c52d909e64cb556a8b5b8a807d9a637d:default"
+              - "typescript-examples:3a82afdf34d9b002f3a9394e552ff19d3a2a7db7cb96dbb6a1dcd091bc4d16f3:default"
+            usages:
+              - start:
+                  line: 4
+                  column: 12
+                end:
+                  line: 4
+                  column: 56
+                props:
+                  - name: children
+                    value: JSXElement
+      - from: "typescript-examples:7c3bfb5e7cda9bce1047257d624deced6a00d4679438ee38f921b479aab5ed44:default"
+        to: "typescript-examples:af9d3108c004e5be67a33ba94c2bbb197b81aa7b7a88d1cf897d2bbcb421a812:NamedComponent"
+        references:
+          - trace:
+              - "typescript-examples:af9d3108c004e5be67a33ba94c2bbb197b81aa7b7a88d1cf897d2bbcb421a812:NamedComponent"
+            usages:
+              - start:
+                  line: 4
+                  column: 27
+                end:
+                  line: 4
+                  column: 36
+                props: []
+    props: []
+    html_elements: []
+

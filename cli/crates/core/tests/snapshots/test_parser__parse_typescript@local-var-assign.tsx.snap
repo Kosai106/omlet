@@ -1,0 +1,325 @@
+---
+source: crates/core/tests/test_parser.rs
+expression: "&parser::Module::new(&RelativePathBuf::from_path(path.strip_prefix(&project_root).unwrap()).unwrap(),\n&project_root, &module_resolver,).unwrap()"
+input_file: samples/typescript/src/functional-component/return-var/local-var-assign.tsx
+---
+source_path: src/functional-component/return-var/local-var-assign.tsx
+id:
+  hash: "4114574275917342577"
+  path: src/functional-component/return-var/local-var-assign.tsx
+  package_name: UNKNOWN
+  mtype: local
+created_at: ~
+updated_at: ~
+exports:
+  - source:
+      Internal: "Sample#1"
+    exported_name: default
+declarations:
+  - symbol: "React#1"
+    source:
+      hash: "4114574275917342577"
+      path: src/functional-component/return-var/local-var-assign.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
+    inferred_type:
+      TypeOf:
+        symbol:
+          symbol: "default#0"
+          source:
+            hash: "11002248552354871051"
+            path: ""
+            package_name: react
+            mtype: package
+        is_local: false
+    start:
+      line: 1
+      column: 8
+    end:
+      line: 1
+      column: 13
+  - symbol: "Sample#1"
+    source:
+      hash: "4114574275917342577"
+      path: src/functional-component/return-var/local-var-assign.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      Function:
+        - TypeOf:
+            symbol:
+              symbol: "localComponent#3"
+              source:
+                hash: "4114574275917342577"
+                path: src/functional-component/return-var/local-var-assign.tsx
+                package_name: UNKNOWN
+                mtype: local
+            is_local: true
+    start:
+      line: 5
+      column: 16
+    end:
+      line: 11
+      column: 2
+  - symbol: "component#1"
+    source:
+      hash: "4114574275917342577"
+      path: src/functional-component/return-var/local-var-assign.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type: JSX
+    start:
+      line: 3
+      column: 7
+    end:
+      line: 3
+      column: 16
+  - symbol: "localComponent#3"
+    source:
+      hash: "4114574275917342577"
+      path: src/functional-component/return-var/local-var-assign.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<empty>"
+    inferred_type: Unknown
+    start:
+      line: 6
+      column: 9
+    end:
+      line: 6
+      column: 23
+scopes:
+  - owner: "__global#0"
+    parent: ~
+    children:
+      - "component#1"
+      - "Sample#1"
+      - "Sample#1"
+    references:
+      - "React#1"
+      - "Sample#1"
+      - "component#1"
+      - "div#2"
+      - "localComponent#3"
+    jsx_references:
+      - "div#2"
+  - owner: "component#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "div#2"
+    jsx_references:
+      - "div#2"
+  - owner: "Sample#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "component#1"
+      - "localComponent#3"
+    jsx_references: []
+  - owner: "Sample#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "component#1"
+      - "localComponent#3"
+    jsx_references: []
+body:
+  - type: ImportDeclaration
+    span:
+      start: 1
+      end: 27
+      ctxt: 0
+    specifiers:
+      - type: ImportDefaultSpecifier
+        span:
+          start: 8
+          end: 13
+          ctxt: 0
+        local:
+          type: Identifier
+          span:
+            start: 8
+            end: 13
+            ctxt: 1
+          value: React
+          optional: false
+    source:
+      type: StringLiteral
+      span:
+        start: 19
+        end: 26
+        ctxt: 0
+      value: react
+      raw: "\"react\""
+    typeOnly: false
+    asserts: ~
+  - type: VariableDeclaration
+    span:
+      start: 29
+      end: 65
+      ctxt: 0
+    kind: const
+    declare: false
+    declarations:
+      - type: VariableDeclarator
+        span:
+          start: 35
+          end: 64
+          ctxt: 0
+        id:
+          optional: false
+          span:
+            start: 35
+            end: 44
+            ctxt: 1
+          type: Identifier
+          typeAnnotation: ~
+          value: component
+        init:
+          type: JSXElement
+          span:
+            start: 47
+            end: 64
+            ctxt: 0
+          opening:
+            type: JSXOpeningElement
+            name:
+              type: Identifier
+              span:
+                start: 48
+                end: 51
+                ctxt: 2
+              value: div
+              optional: false
+            span:
+              start: 47
+              end: 52
+              ctxt: 0
+            attributes: []
+            selfClosing: false
+            typeArguments: ~
+          children:
+            - type: JSXText
+              span:
+                start: 52
+                end: 58
+                ctxt: 0
+              value: Sample
+              raw: Sample
+          closing:
+            type: JSXClosingElement
+            span:
+              start: 58
+              end: 64
+              ctxt: 0
+            name:
+              type: Identifier
+              span:
+                start: 60
+                end: 63
+                ctxt: 2
+              value: div
+              optional: false
+        definite: false
+  - type: ExportDefaultDeclaration
+    span:
+      start: 67
+      end: 232
+      ctxt: 0
+    decl:
+      async: false
+      body:
+        type: BlockStatement
+        span:
+          start: 100
+          end: 232
+          ctxt: 0
+        stmts:
+          - type: VariableDeclaration
+            span:
+              start: 106
+              end: 125
+              ctxt: 0
+            kind: let
+            declare: false
+            declarations:
+              - type: VariableDeclarator
+                span:
+                  start: 110
+                  end: 124
+                  ctxt: 0
+                id:
+                  optional: false
+                  span:
+                    start: 110
+                    end: 124
+                    ctxt: 3
+                  type: Identifier
+                  typeAnnotation: ~
+                  value: localComponent
+                init: ~
+                definite: false
+          - type: ExpressionStatement
+            span:
+              start: 175
+              end: 202
+              ctxt: 0
+            expression:
+              type: AssignmentExpression
+              span:
+                start: 175
+                end: 201
+                ctxt: 0
+              operator: "="
+              left:
+                optional: false
+                span:
+                  start: 175
+                  end: 189
+                  ctxt: 3
+                type: Identifier
+                typeAnnotation: ~
+                value: localComponent
+              right:
+                type: Identifier
+                span:
+                  start: 192
+                  end: 201
+                  ctxt: 1
+                value: component
+                optional: false
+          - type: ReturnStatement
+            span:
+              start: 208
+              end: 230
+              ctxt: 0
+            argument:
+              type: Identifier
+              span:
+                start: 215
+                end: 229
+                ctxt: 3
+              value: localComponent
+              optional: false
+      decorators: []
+      generator: false
+      identifier:
+        type: Identifier
+        span:
+          start: 91
+          end: 97
+          ctxt: 1
+        value: Sample
+        optional: false
+      params: []
+      returnType: ~
+      span:
+        start: 82
+        end: 232
+        ctxt: 0
+      type: FunctionExpression
+      typeParameters: ~

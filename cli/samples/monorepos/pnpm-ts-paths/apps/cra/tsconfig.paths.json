@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@nighttrax/components/*": [
+        "../../packages/components/src/*"
+      ],
+      "@nighttrax/page-components": [
+        "../../packages/components/src/pageComponents.tsx"
+      ],
+      "@nighttrax/styled-components": [
+        "../../packages/components/src/styled/index.ts"
+      ],
+      "@nighttrax/components": [
+        "../../packages/components/src/index.ts"
+      ],
+      "@nighttrax/*": [
+        "../../packages/*/src/index.ts"
+      ],
+      "@components/*": [
+        "./src/components/*"
+      ],
+      "@hooks/*": [
+        "./src/hooks/*"
+      ]
+    }
+  }
+}

@@ -1,0 +1,106 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&export_results"
+---
+num_of_exports: 14
+exports:
+  - name: Button
+    source_path: src/functionWithDestruct.jsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "props:c23854b2d4066c5623c91388c0dc70e5be9cd148d0e5dde1380953103363babb:Button"
+  - name: ButtonWithArrowFunction
+    source_path: src/functionWithDestruct.jsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "props:c23854b2d4066c5623c91388c0dc70e5be9cd148d0e5dde1380953103363babb:ButtonWithArrowFunction"
+  - name: ButtonWithFunctionExpression
+    source_path: src/functionWithDestruct.jsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "props:c23854b2d4066c5623c91388c0dc70e5be9cd148d0e5dde1380953103363babb:ButtonWithFunctionExpression"
+  - name: ComponentWithDefaultProps
+    source_path: src/defaultProp.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "props:165d96dfac01c77ed3a146c631b75a21ca343b05e62db5d8dfe32189b76a425c:ComponentWithDefaultProps"
+  - name: ComponentWithRest
+    source_path: src/functionWithParamsInBody.jsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "props:05604564ac2198cd4223d15b600f318a2e1afa116a9041686ae168e89105e8db:ComponentWithRest"
+  - name: DestructInBody
+    source_path: src/functionWithParamsInBody.jsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "props:05604564ac2198cd4223d15b600f318a2e1afa116a9041686ae168e89105e8db:DestructInBody"
+  - name: IndirectParent
+    source_path: src/usage.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "props:ba066cad0a50c562b8d6c5b3e059892da93b459fa83843afc6a5734d530d83fe:IndirectParent"
+  - name: MemberInBody
+    source_path: src/functionWithParamsInBody.jsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "props:05604564ac2198cd4223d15b600f318a2e1afa116a9041686ae168e89105e8db:MemberInBody"
+  - name: MultipleDestruct
+    source_path: src/functionWithParamsInBody.jsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "props:05604564ac2198cd4223d15b600f318a2e1afa116a9041686ae168e89105e8db:MultipleDestruct"
+  - name: ParentComponent
+    source_path: src/subcomponent.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "props:0756023d354d569f2e04e76b39dc7a535c7a3bd071c237ee0fadf3f0ebea3978:ParentComponent"
+  - name: ParentComponent
+    source_path: src/usage.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "props:ba066cad0a50c562b8d6c5b3e059892da93b459fa83843afc6a5734d530d83fe:ParentComponent"
+  - name: ReExportedComponent
+    source_path: src/reExport.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "props:f67332c59a9230ea61f05fc0899e90a7c87aa237c3a898dc9fa17d6132f33298:ReExportedComponent"
+      - "props:165d96dfac01c77ed3a146c631b75a21ca343b05e62db5d8dfe32189b76a425c:ComponentWithDefaultProps"
+  - name: default
+    source_path: src/defaultExport.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "props:4536b08c4f8352629c7efe3f0a72019dee9645f01ce800fbb8fec8580bbba25e:default"
+  - name: default
+    source_path: src/defaultExportArrow.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "props:d4ed3e0b5c1ea420770fc778f6cf89209fc1e196e16dd62d66afa8f2db271551:default"
+

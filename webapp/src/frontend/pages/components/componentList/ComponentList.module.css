@@ -1,0 +1,136 @@
+.componentList .emptyState {
+    margin-top: 16px;
+    padding: 96px 0;
+    background-color: var(--background-tertiary-color);
+    font-size: 13px;
+    text-align: center;
+    color: var(--label-primary-color);
+}
+
+.componentList .emptyState .shrug {
+    margin-bottom: 16px;
+    color: var(--label-secondary-color);
+}
+
+.componentList .emptyState .resetButton {
+    padding: 8px;
+    font-weight: 600;
+    color: var(--accent-green);
+}
+
+.componentList .item {
+    /* Calculation of the height is border bottom, 1 line text, medium spaces from top and bottom: 1 + 18 + 2 * 24 = 67  */
+    height: 67px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-m);
+    border-bottom: var(--border-width) solid var(--background-secondary-color);
+}
+
+.componentList .item .componentDetails {
+    align-self: stretch;
+    display: flex;
+    gap: var(--spacing-xs);
+    justify-content: center;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
+}
+
+.componentList .item .componentDetails {
+    flex: 1;
+    overflow: hidden;
+}
+
+.componentList .item .componentDetails .main {
+    height: 18px;
+    display: flex;
+    align-items: flex-end;
+    gap: var(--spacing-xs);
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.componentList .item .componentDetails .main .skeleton {
+    flex: 1;
+    max-width: 149px;
+}
+
+.componentList .item .componentDetails .name {
+    max-width: 320px;
+    font-weight: 600;
+    color: var(--label-primary-color);
+}
+.componentList .item .componentDetails .project {
+    color: var(--label-secondary-color);
+    white-space: nowrap;
+}
+
+.componentList .item .componentDetails .metadata {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.componentList .item .componentDetails .metadata .skeleton {
+    flex: 1;
+    max-width: 432px;
+}
+
+.componentList .item .componentDetails .tags {
+    display: flex;
+    gap: 8px;
+}
+
+.componentList .item .componentDetails .childCount {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--border-width) var(--spacing-xxs);
+    gap: var(--spacing-xxs);
+    border-radius: 2px;
+    box-shadow: inset 0 0 0 var(--border-width) var(--background-secondary-color);
+    font-size: 11px;
+    line-height: 15px;
+    color: var(--label-secondary-color);
+}
+
+.componentList .item .componentDetails .path {
+    flex: 1;
+    padding-bottom: 1px;
+    font-family: var(--font-family-secondary);
+    font-size: 13px;
+    color: var(--label-secondary-color);
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+@supports (text-overflow: ellipsis clip) {
+    .componentList .item .componentDetails .path {
+        text-overflow: ellipsis clip;
+    }
+}
+
+.componentList .item .date {
+    width: 96px;
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--label-primary-color);
+}
+
+.componentList .item .date .skeleton {
+    width: 72px;
+}
+
+.componentList .item .usageCount {
+    width: 72px;
+    text-align: right;
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--label-primary-color);
+}
+
+.skeleton {
+    height: 18px;
+}

@@ -1,0 +1,151 @@
+.customPropertiesDropdown {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    height: 30px;
+    padding: 0 var(--spacing-xs);
+    background-color: var(--background-secondary-color);
+    border-radius: 4px;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 600;
+    color: var(--label-secondary-color);
+    cursor: pointer;
+}
+
+.customPropertiesDropdown:not(:disabled):active,
+.customPropertiesDropdown.open {
+    background-color: var(--control-background-active-color);
+}
+
+.customPropertiesDropdown.selected {
+    background-color: rgba(var(--accent-green-rgb), 0.1);
+    color: var(--accent-green);
+}
+
+.customPropertiesDropdown:disabled {
+    color: var(--label-secondary-disabled-color);
+    cursor: not-allowed;
+}
+
+.customPropertiesDropdown.selected:disabled {
+    color: rgba(var(--accent-green-rgb), 0.4);
+}
+
+.optionsPopup {
+    display: flex;
+    flex-direction: column;
+    min-width: 96px;
+    max-width: 216px;
+    max-height: 272px;
+    overflow: hidden;
+}
+
+.optionsPopup .searchInput {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xxs);
+    padding: 0 var(--spacing-xs);
+    background-color: var(--background-secondary-color);
+    color: var(--label-secondary-color);
+}
+
+.optionsPopup .searchInput input {
+    flex: 1;
+    font-size: 13px;
+    min-width: 0;
+    height: 34px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: var(--label-primary-color);
+    caret-color: var(--accent-green);
+}
+
+.optionsPopup .searchInput input::placeholder {
+    color: var(--label-secondary-color);
+}
+
+.optionsPopup .searchInput input::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+.optionsPopup .searchInput input::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 0;
+    margin-left: var(--spacing-xxs);
+    background-image: url(/src/frontend/assets/img/icSearchCancel.svg);
+    background-repeat: no-repeat;
+    background-size: 8px 8px;
+    background-position: center;
+}
+
+.optionsPopup .empty {
+    padding: var(--spacing-s);
+    white-space: pre-wrap;
+    text-align: center;
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--label-secondary-color);
+}
+
+.optionsPopup .callout {
+    margin: 4px 12px 12px;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--label-secondary-color);
+}
+
+.optionsPopup .callout:only-child {
+    margin: 12px;
+}
+
+.options {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-xxs);
+    overflow: auto;
+}
+
+.options .option {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    height: 26px;
+    padding: 0 12px 0 var(--spacing-xs);
+    border-radius: var(--spacing-xxs);
+    font-size: 13px;
+    color: var(--label-primary-color);
+    cursor: pointer;
+    user-select: none;
+}
+
+.options .option:not(.disabled).hover {
+    background-color: var(--background-tertiary-color);
+}
+
+.options .option:not(.disabled):active {
+    background-color: var(--button-background-active-color);
+}
+
+.options .option:not(.disabled).selected {
+    background-color: rgba(var(--accent-green-rgb), 0.10);
+    font-weight: 600;
+    color: var(--accent-green);
+}
+
+.options .option.disabled {
+    color: var(--label-secondary-disabled-color);
+    cursor: not-allowed;
+}
+
+.options .option .optionLabel {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

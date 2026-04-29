@@ -1,0 +1,69 @@
+.components {
+    display: flex;
+}
+
+.componentList {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - var(--header-height));
+    padding: 0 var(--spacing-xxl);
+    overflow: auto;
+}
+
+.componentList .header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-s);
+    padding: var(--spacing-l) 0 var(--spacing-s);
+    background-color: var(--background-primary-color);
+    z-index: 1;
+}
+
+.componentList .header.withBorder {
+    border-bottom: 1px solid var(--background-secondary-color);
+}
+
+.componentList .header .callout {
+    align-self: flex-start;
+    margin-bottom: var(--spacing-l);
+}
+
+.componentList .filters {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacing-xs);
+}
+
+.componentList .filters .activeFilters {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+}
+
+.componentList .filters .activeFilters .search {
+    width: 224px;
+}
+
+.componentList .filters .tagActions {
+    display: flex;
+    gap: var(--spacing-xs);
+}
+
+.componentList .availableFilters {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+}
+
+.componentList .availableFilters .filterBy {
+    flex-shrink: 0;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    color: var(--label-secondary-color);
+}

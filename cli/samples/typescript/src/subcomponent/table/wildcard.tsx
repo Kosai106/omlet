@@ -1,0 +1,1 @@
+export * as WTable from "./named";

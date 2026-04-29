@@ -1,0 +1,37 @@
+.askToJoinPopover {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    width: 328px;
+    padding: var(--spacing-s);
+}
+
+.askToJoinPopover .p {
+    margin: var(--spacing-xxs) 0 var(--spacing-xs);
+    font-size: 11px;
+    line-height: 15px;
+    color: var(--label-secondary-color);
+}
+
+.askToJoinPopover .emailForm {
+    display: flex;
+    gap: var(--spacing-xs);
+}
+
+.askToJoinPopover .emailForm .emailInput {
+    flex: 1;
+}
+
+.askToJoinPopover .info,
+.askToJoinPopover .error {
+    font-size: 11px;
+    line-height: 15px;
+}
+
+.askToJoinPopover .info {
+    color: var(--label-primary-color);
+}
+
+.askToJoinPopover .error {
+    color: var(--label-critical-color);
+}

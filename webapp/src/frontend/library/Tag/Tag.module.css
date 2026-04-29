@@ -1,0 +1,62 @@
+.tag {
+    height: 17px;
+    padding: 0 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    font-size: 11px;
+    line-height: 15px;
+    border-radius: 2px;
+    background-color: var(--background-secondary-color);
+    color: var(--label-secondary-color);
+    position: relative;
+}
+
+.tag.button.active,
+.tag.button.activeNotDefined:active {
+    background-color: var(--button-background-active-color);
+}
+
+.tag.large {
+    height: 20px;
+    padding: 0 6px;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.tag .tagIndicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 2px;
+}
+
+.tag .tagName {
+    white-space: nowrap;
+}
+
+.tag.selected {
+    background-color: var(--accent-green);
+    color: var(--label-selected-color);
+}
+
+.tag.selected .tagIndicator {
+    border: 1px solid var(--background-primary-color);
+}
+
+.tag .deleteButton {
+    position: absolute;
+    right: -8px;
+    top: -8px;
+    display: flex;
+    background-color: var(--background-secondary-color);
+    color: var(--label-secondary-color);
+    padding: 2px;
+    border: solid 1px #bec5c9;
+    border-radius: 2px;
+    visibility: hidden;
+}
+
+.tag:hover .deleteButton {
+    visibility: visible;
+}

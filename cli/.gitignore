@@ -1,0 +1,16 @@
+# Ignore
+/target
+/output*
+node_modules
+dhat-*.json
+*.node
+dist
+omlet.json
+omlet.out.json
+*.log
+/local-scripts
+.yarn/
+
+# Allow
+!samples/**/dist
+!samples/**/node_modules

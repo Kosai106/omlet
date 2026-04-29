@@ -1,0 +1,137 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+.inviteDialog {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 328px;
+    max-height: 580px;
+    border-radius: 2px;
+    background-color: var(--background-primary-color);
+    box-shadow: var(--shadow-default);
+    overflow: hidden;
+    z-index: 1;
+}
+
+.inviteDialog .h3 {
+    margin-bottom: var(--spacing-xxs);
+}
+
+.inviteDialog .p {
+    margin-bottom: 16px;
+    font-size: 11px;
+    color: var(--label-secondary-color);
+}
+
+.inviteDialog .inviteForm {
+    padding: var(--spacing-s);
+}
+
+.inviteDialog .form {
+    display: flex;
+    gap: 8px;
+}
+
+.inviteDialog .input {
+    flex: 1;
+    padding: 0 8px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    background-color: var(--background-secondary-color);
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--label-primary-color);
+    caret-color: var(--accent-green);
+}
+
+.inviteDialog .input::placeholder {
+    color: var(--label-secondary-color);
+}
+
+.inviteDialog .input::selection {
+    background-color: rgba(var(--accent-green-rgb), 0.3)
+}
+
+.inviteDialog .input:focus {
+    box-shadow: inset 0 0 0 1px var(--accent-green);
+}
+
+.inviteDialog .button {
+    height: 24px;
+    padding: 0 12px 2px;
+}
+
+.inviteDialog .error {
+    margin-top: 8px;
+    font-size: 11px;
+    color: var(--label-secondary-color);
+}
+
+.inviteDialog .separator {
+    flex: 0 0 1px;
+    height: 1px;
+    margin: 8px 0;
+    border: none;
+    background-color: var(--background-secondary-color);
+}
+
+.inviteDialog .inviteLink {
+    padding: var(--spacing-s);
+}
+
+.inviteDialog .inviteLink .inviteLinkActions {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.inviteDialog .inviteLink .inviteLinkActions .inviteLinkURL {
+    font-size: 13px;
+    line-height: 18px;
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.inviteDialog .members {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.inviteDialog .members .h3 {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    position: sticky;
+    top: 0;
+    margin: 0;
+    padding: 8px 16px 4px;
+    background-color: var(--background-primary-color);
+    color: var(--label-secondary-color);
+}
+
+.inviteDialog .members .h3 .countIndicator {
+    width: 16px;
+    height: 16px;
+    background-color: var(--background-critical-color);
+    border-radius: 4px;
+    font-size: 11px;
+    line-height: 15px;
+    text-align: center;
+    color: var(--label-selected-color);
+}
+
+.inviteDialog .members .joinRequestsList,
+.inviteDialog .members .invitesList,
+.inviteDialog .members .membersList {
+    padding: 0 0 8px;
+}

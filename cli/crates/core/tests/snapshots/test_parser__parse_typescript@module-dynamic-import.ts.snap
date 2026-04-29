@@ -1,0 +1,476 @@
+---
+source: crates/core/tests/test_parser.rs
+expression: "&parser::Module::new(&RelativePathBuf::from_path(path.strip_prefix(&project_root).unwrap()).unwrap(),\n&project_root, &module_resolver,).unwrap()"
+input_file: samples/typescript/src/module-decls/module-dynamic-import.ts
+---
+source_path: src/module-decls/module-dynamic-import.ts
+id:
+  hash: "1289218655610857903"
+  path: src/module-decls/module-dynamic-import.ts
+  package_name: UNKNOWN
+  mtype: local
+created_at: ~
+updated_at: ~
+exports:
+  - source:
+      Internal: "thirteen#1"
+    exported_name: default
+  - source:
+      Internal: "default#0"
+    exported_name: default
+declarations:
+  - symbol: "default#0"
+    source:
+      hash: "1289218655610857903"
+      path: src/module-decls/module-dynamic-import.ts
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type: Unknown
+    start:
+      line: 14
+      column: 1
+    end:
+      line: 14
+      column: 21
+  - symbol: "dollyPromise#1"
+    source:
+      hash: "1289218655610857903"
+      path: src/module-decls/module-dynamic-import.ts
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      TypeOf:
+        symbol:
+          symbol: "<wildcard>#0"
+          source:
+            hash: "18187564039066053863"
+            path: ""
+            package_name: dolly
+            mtype: package
+        is_local: false
+    start:
+      line: 1
+      column: 7
+    end:
+      line: 1
+      column: 19
+  - symbol: "molly#2"
+    source:
+      hash: "1289218655610857903"
+      path: src/module-decls/module-dynamic-import.ts
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      TypeOf:
+        symbol:
+          symbol: "<wildcard>#0"
+          source:
+            hash: "6415462426383639770"
+            path: ""
+            package_name: molly
+            mtype: package
+        is_local: false
+    start:
+      line: 8
+      column: 11
+    end:
+      line: 8
+      column: 16
+  - symbol: "thirteen#1"
+    source:
+      hash: "1289218655610857903"
+      path: src/module-decls/module-dynamic-import.ts
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      Function: []
+    start:
+      line: 13
+      column: 16
+    end:
+      line: 13
+      column: 39
+  - symbol: "whereIsDolly#1"
+    source:
+      hash: "1289218655610857903"
+      path: src/module-decls/module-dynamic-import.ts
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<declaration>"
+    inferred_type:
+      Function:
+        - MemberOf:
+            - TypeOf:
+                symbol:
+                  symbol: "dollyPromise#1"
+                  source:
+                    hash: "1289218655610857903"
+                    path: src/module-decls/module-dynamic-import.ts
+                    package_name: UNKNOWN
+                    mtype: local
+                is_local: true
+            - Object: location
+    start:
+      line: 3
+      column: 1
+    end:
+      line: 5
+      column: 2
+  - symbol: "whereIsMolly#1"
+    source:
+      hash: "1289218655610857903"
+      path: src/module-decls/module-dynamic-import.ts
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<declaration>"
+    inferred_type:
+      Function:
+        - MemberOf:
+            - TypeOf:
+                symbol:
+                  symbol: "molly#2"
+                  source:
+                    hash: "1289218655610857903"
+                    path: src/module-decls/module-dynamic-import.ts
+                    package_name: UNKNOWN
+                    mtype: local
+                is_local: true
+            - Object: location
+    start:
+      line: 7
+      column: 1
+    end:
+      line: 11
+      column: 2
+scopes:
+  - owner: "__global#0"
+    parent: ~
+    children:
+      - "dollyPromise#1"
+      - "whereIsDolly#1"
+      - "whereIsMolly#1"
+      - "molly#2"
+      - "thirteen#1"
+      - "thirteen#1"
+      - "default#0"
+    references:
+      - "dollyPromise#1"
+      - "location#0"
+      - "molly#2"
+      - "thirteen#1"
+      - "whereIsDolly#1"
+      - "whereIsMolly#1"
+    jsx_references: []
+  - owner: "dollyPromise#1"
+    parent: "__global#0"
+    children: []
+    references: []
+    jsx_references: []
+  - owner: "whereIsDolly#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "dollyPromise#1"
+      - "location#0"
+    jsx_references: []
+  - owner: "whereIsMolly#1"
+    parent: "__global#0"
+    children:
+      - "molly#2"
+    references:
+      - "location#0"
+      - "molly#2"
+    jsx_references: []
+  - owner: "molly#2"
+    parent: "whereIsMolly#1"
+    children: []
+    references: []
+    jsx_references: []
+  - owner: "molly#2"
+    parent: "__global#0"
+    children: []
+    references: []
+    jsx_references: []
+  - owner: "thirteen#1"
+    parent: "__global#0"
+    children: []
+    references: []
+    jsx_references: []
+  - owner: "thirteen#1"
+    parent: "__global#0"
+    children: []
+    references: []
+    jsx_references: []
+  - owner: "default#0"
+    parent: "__global#0"
+    children: []
+    references: []
+    jsx_references: []
+body:
+  - type: VariableDeclaration
+    span:
+      start: 1
+      end: 38
+      ctxt: 0
+    kind: const
+    declare: false
+    declarations:
+      - type: VariableDeclarator
+        span:
+          start: 7
+          end: 37
+          ctxt: 0
+        id:
+          optional: false
+          span:
+            start: 7
+            end: 19
+            ctxt: 1
+          type: Identifier
+          typeAnnotation: ~
+          value: dollyPromise
+        init:
+          type: CallExpression
+          span:
+            start: 22
+            end: 37
+            ctxt: 0
+          callee:
+            type: Import
+            span:
+              start: 22
+              end: 28
+              ctxt: 0
+          arguments:
+            - spread: ~
+              expression:
+                type: StringLiteral
+                span:
+                  start: 29
+                  end: 36
+                  ctxt: 0
+                value: dolly
+                raw: "\"dolly\""
+          typeArguments: ~
+        definite: false
+  - async: true
+    body:
+      type: BlockStatement
+      span:
+        start: 70
+        end: 115
+        ctxt: 0
+      stmts:
+        - type: ReturnStatement
+          span:
+            start: 76
+            end: 113
+            ctxt: 0
+          argument:
+            type: MemberExpression
+            span:
+              start: 83
+              end: 112
+              ctxt: 0
+            object:
+              type: ParenthesisExpression
+              span:
+                start: 83
+                end: 103
+                ctxt: 0
+              expression:
+                type: AwaitExpression
+                span:
+                  start: 84
+                  end: 102
+                  ctxt: 0
+                argument:
+                  type: Identifier
+                  span:
+                    start: 90
+                    end: 102
+                    ctxt: 1
+                  value: dollyPromise
+                  optional: false
+            property:
+              type: Identifier
+              span:
+                start: 104
+                end: 112
+                ctxt: 0
+              value: location
+              optional: false
+    declare: false
+    decorators: []
+    generator: false
+    identifier:
+      type: Identifier
+      span:
+        start: 55
+        end: 67
+        ctxt: 1
+      value: whereIsDolly
+      optional: false
+    params: []
+    returnType: ~
+    span:
+      start: 40
+      end: 115
+      ctxt: 0
+    type: FunctionDeclaration
+    typeParameters: ~
+  - async: true
+    body:
+      type: BlockStatement
+      span:
+        start: 147
+        end: 219
+        ctxt: 0
+      stmts:
+        - type: VariableDeclaration
+          span:
+            start: 153
+            end: 189
+            ctxt: 0
+          kind: const
+          declare: false
+          declarations:
+            - type: VariableDeclarator
+              span:
+                start: 159
+                end: 188
+                ctxt: 0
+              id:
+                optional: false
+                span:
+                  start: 159
+                  end: 164
+                  ctxt: 2
+                type: Identifier
+                typeAnnotation: ~
+                value: molly
+              init:
+                type: AwaitExpression
+                span:
+                  start: 167
+                  end: 188
+                  ctxt: 0
+                argument:
+                  type: CallExpression
+                  span:
+                    start: 173
+                    end: 188
+                    ctxt: 0
+                  callee:
+                    type: Import
+                    span:
+                      start: 173
+                      end: 179
+                      ctxt: 0
+                  arguments:
+                    - spread: ~
+                      expression:
+                        type: StringLiteral
+                        span:
+                          start: 180
+                          end: 187
+                          ctxt: 0
+                        value: molly
+                        raw: "\"molly\""
+                  typeArguments: ~
+              definite: false
+        - type: ReturnStatement
+          span:
+            start: 195
+            end: 217
+            ctxt: 0
+          argument:
+            type: MemberExpression
+            span:
+              start: 202
+              end: 216
+              ctxt: 0
+            object:
+              type: Identifier
+              span:
+                start: 202
+                end: 207
+                ctxt: 2
+              value: molly
+              optional: false
+            property:
+              type: Identifier
+              span:
+                start: 208
+                end: 216
+                ctxt: 0
+              value: location
+              optional: false
+    declare: false
+    decorators: []
+    generator: false
+    identifier:
+      type: Identifier
+      span:
+        start: 132
+        end: 144
+        ctxt: 1
+      value: whereIsMolly
+      optional: false
+    params: []
+    returnType: ~
+    span:
+      start: 117
+      end: 219
+      ctxt: 0
+    type: FunctionDeclaration
+    typeParameters: ~
+  - type: ExportDefaultDeclaration
+    span:
+      start: 221
+      end: 259
+      ctxt: 0
+    decl:
+      async: false
+      body:
+        type: BlockStatement
+        span:
+          start: 256
+          end: 259
+          ctxt: 0
+        stmts: []
+      decorators: []
+      generator: false
+      identifier:
+        type: Identifier
+        span:
+          start: 245
+          end: 253
+          ctxt: 1
+        value: thirteen
+        optional: false
+      params: []
+      returnType: ~
+      span:
+        start: 236
+        end: 259
+        ctxt: 0
+      type: FunctionExpression
+      typeParameters: ~
+  - type: ExportDefaultExpression
+    span:
+      start: 260
+      end: 280
+      ctxt: 0
+    expression:
+      type: NumericLiteral
+      span:
+        start: 275
+        end: 279
+        ctxt: 0
+      value: 1331.0
+      raw: "1331"

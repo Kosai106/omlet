@@ -1,0 +1,1562 @@
+---
+source: crates/core/tests/test_parser.rs
+expression: "&parser::Module::new(&RelativePathBuf::from_path(path.strip_prefix(&project_root).unwrap()).unwrap(),\n&project_root, &module_resolver,).unwrap()"
+input_file: samples/typescript/src/dynamic-html-element.tsx
+---
+source_path: src/dynamic-html-element.tsx
+id:
+  hash: "7555405295491196338"
+  path: src/dynamic-html-element.tsx
+  package_name: UNKNOWN
+  mtype: local
+created_at: ~
+updated_at: ~
+exports:
+  - source:
+      Internal: "Card#1"
+    exported_name: Card
+  - source:
+      Internal: "Button#1"
+    exported_name: Button
+declarations:
+  - symbol: "AnotherElement#2"
+    source:
+      hash: "7555405295491196338"
+      path: src/dynamic-html-element.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      Union:
+        - TypeOf:
+            symbol:
+              symbol: "elementType#2"
+              source:
+                hash: "7555405295491196338"
+                path: src/dynamic-html-element.tsx
+                package_name: UNKNOWN
+                mtype: local
+            is_local: true
+        - Str: img
+    start:
+      line: 16
+      column: 11
+    end:
+      line: 16
+      column: 25
+  - symbol: "Button#1"
+    source:
+      hash: "7555405295491196338"
+      path: src/dynamic-html-element.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      Function:
+        - JSX
+    start:
+      line: 37
+      column: 14
+    end:
+      line: 37
+      column: 20
+  - symbol: "Card#1"
+    source:
+      hash: "7555405295491196338"
+      path: src/dynamic-html-element.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      Function:
+        - JSX
+    start:
+      line: 5
+      column: 14
+    end:
+      line: 5
+      column: 18
+  - symbol: "Element#2"
+    source:
+      hash: "7555405295491196338"
+      path: src/dynamic-html-element.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      Union:
+        - TypeOf:
+            symbol:
+              symbol: "as#2"
+              source:
+                hash: "7555405295491196338"
+                path: src/dynamic-html-element.tsx
+                package_name: UNKNOWN
+                mtype: local
+            is_local: true
+        - TypeOf:
+            symbol:
+              symbol: "defaultElement#1"
+              source:
+                hash: "7555405295491196338"
+                path: src/dynamic-html-element.tsx
+                package_name: UNKNOWN
+                mtype: local
+            is_local: true
+    start:
+      line: 15
+      column: 11
+    end:
+      line: 15
+      column: 18
+  - symbol: "EmptyStringContext#1"
+    source:
+      hash: "7555405295491196338"
+      path: src/dynamic-html-element.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      ReturnTypeOf:
+        - TypeOf:
+            symbol:
+              symbol: "createContext#1"
+              source:
+                hash: "7555405295491196338"
+                path: src/dynamic-html-element.tsx
+                package_name: UNKNOWN
+                mtype: local
+            is_local: true
+        - - Str: ""
+    start:
+      line: 34
+      column: 7
+    end:
+      line: 34
+      column: 25
+  - symbol: "NonEmptyStringContext#1"
+    source:
+      hash: "7555405295491196338"
+      path: src/dynamic-html-element.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      ReturnTypeOf:
+        - TypeOf:
+            symbol:
+              symbol: "createContext#1"
+              source:
+                hash: "7555405295491196338"
+                path: src/dynamic-html-element.tsx
+                package_name: UNKNOWN
+                mtype: local
+            is_local: true
+        - - Str: context with string
+    start:
+      line: 35
+      column: 7
+    end:
+      line: 35
+      column: 28
+  - symbol: "as#2"
+    source:
+      hash: "7555405295491196338"
+      path: src/dynamic-html-element.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "Parameter<Symbol { name: Atom('Card' type=inline), context: #1 }>[0][as]"
+    inferred_type:
+      MemberOf:
+        - ParameterOf:
+            function:
+              symbol: "Card#1"
+              source:
+                hash: "7555405295491196338"
+                path: src/dynamic-html-element.tsx
+                package_name: UNKNOWN
+                mtype: local
+            index: 0
+        - Object: as
+    start:
+      line: 11
+      column: 5
+    end:
+      line: 11
+      column: 7
+  - symbol: "background#2"
+    source:
+      hash: "7555405295491196338"
+      path: src/dynamic-html-element.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "Parameter<Symbol { name: Atom('Card' type=inline), context: #1 }>[0][background]"
+    inferred_type:
+      MemberOf:
+        - ParameterOf:
+            function:
+              symbol: "Card#1"
+              source:
+                hash: "7555405295491196338"
+                path: src/dynamic-html-element.tsx
+                package_name: UNKNOWN
+                mtype: local
+            index: 0
+        - Object: background
+    start:
+      line: 9
+      column: 5
+    end:
+      line: 9
+      column: 22
+  - symbol: "bordered#2"
+    source:
+      hash: "7555405295491196338"
+      path: src/dynamic-html-element.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "Parameter<Symbol { name: Atom('Card' type=inline), context: #1 }>[0][bordered]"
+    inferred_type:
+      MemberOf:
+        - ParameterOf:
+            function:
+              symbol: "Card#1"
+              source:
+                hash: "7555405295491196338"
+                path: src/dynamic-html-element.tsx
+                package_name: UNKNOWN
+                mtype: local
+            index: 0
+        - Object: bordered
+    start:
+      line: 7
+      column: 5
+    end:
+      line: 7
+      column: 20
+  - symbol: "className#2"
+    source:
+      hash: "7555405295491196338"
+      path: src/dynamic-html-element.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "Parameter<Symbol { name: Atom('Card' type=inline), context: #1 }>[0][className]"
+    inferred_type:
+      MemberOf:
+        - ParameterOf:
+            function:
+              symbol: "Card#1"
+              source:
+                hash: "7555405295491196338"
+                path: src/dynamic-html-element.tsx
+                package_name: UNKNOWN
+                mtype: local
+            index: 0
+        - Object: className
+    start:
+      line: 6
+      column: 5
+    end:
+      line: 6
+      column: 14
+  - symbol: "createContext#1"
+    source:
+      hash: "7555405295491196338"
+      path: src/dynamic-html-element.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('createContext' type=dynamic), context: #1 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
+    inferred_type:
+      TypeOf:
+        symbol:
+          symbol: "createContext#1"
+          source:
+            hash: "11002248552354871051"
+            path: ""
+            package_name: react
+            mtype: package
+        is_local: false
+    start:
+      line: 1
+      column: 10
+    end:
+      line: 1
+      column: 23
+  - symbol: "defaultElement#1"
+    source:
+      hash: "7555405295491196338"
+      path: src/dynamic-html-element.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      Str: div
+    start:
+      line: 3
+      column: 7
+    end:
+      line: 3
+      column: 21
+  - symbol: "elementType#2"
+    source:
+      hash: "7555405295491196338"
+      path: src/dynamic-html-element.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "Parameter<Symbol { name: Atom('Card' type=inline), context: #1 }>[0][elementType]"
+    inferred_type:
+      MemberOf:
+        - ParameterOf:
+            function:
+              symbol: "Card#1"
+              source:
+                hash: "7555405295491196338"
+                path: src/dynamic-html-element.tsx
+                package_name: UNKNOWN
+                mtype: local
+            index: 0
+        - Object: elementType
+    start:
+      line: 12
+      column: 5
+    end:
+      line: 12
+      column: 16
+  - symbol: "padded#2"
+    source:
+      hash: "7555405295491196338"
+      path: src/dynamic-html-element.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "Parameter<Symbol { name: Atom('Card' type=inline), context: #1 }>[0][padded]"
+    inferred_type:
+      MemberOf:
+        - ParameterOf:
+            function:
+              symbol: "Card#1"
+              source:
+                hash: "7555405295491196338"
+                path: src/dynamic-html-element.tsx
+                package_name: UNKNOWN
+                mtype: local
+            index: 0
+        - Object: padded
+    start:
+      line: 10
+      column: 5
+    end:
+      line: 10
+      column: 18
+  - symbol: "rest#2"
+    source:
+      hash: "7555405295491196338"
+      path: src/dynamic-html-element.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "Parameter<Symbol { name: Atom('Card' type=inline), context: #1 }>[0]"
+    inferred_type:
+      ParameterOf:
+        function:
+          symbol: "Card#1"
+          source:
+            hash: "7555405295491196338"
+            path: src/dynamic-html-element.tsx
+            package_name: UNKNOWN
+            mtype: local
+        index: 0
+    start:
+      line: 13
+      column: 8
+    end:
+      line: 13
+      column: 12
+  - symbol: "rounded#2"
+    source:
+      hash: "7555405295491196338"
+      path: src/dynamic-html-element.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "Parameter<Symbol { name: Atom('Card' type=inline), context: #1 }>[0][rounded]"
+    inferred_type:
+      MemberOf:
+        - ParameterOf:
+            function:
+              symbol: "Card#1"
+              source:
+                hash: "7555405295491196338"
+                path: src/dynamic-html-element.tsx
+                package_name: UNKNOWN
+                mtype: local
+            index: 0
+        - Object: rounded
+    start:
+      line: 8
+      column: 5
+    end:
+      line: 8
+      column: 20
+scopes:
+  - owner: "__global#0"
+    parent: ~
+    children:
+      - "defaultElement#1"
+      - "Card#1"
+      - "Card#1"
+      - "Element#2"
+      - "AnotherElement#2"
+      - "EmptyStringContext#1"
+      - "NonEmptyStringContext#1"
+      - "Button#1"
+      - "Button#1"
+    references:
+      - "AnotherElement#2"
+      - "Button#1"
+      - "Card#1"
+      - "Element#2"
+      - "ElementType#3"
+      - "EmptyStringContext#1"
+      - "NonEmptyStringContext#1"
+      - "Provider#3"
+      - "as#2"
+      - "background#2"
+      - "bordered#2"
+      - "button#3"
+      - "className#0"
+      - "className#2"
+      - "clsx#3"
+      - "createContext#1"
+      - "defaultElement#1"
+      - "elementType#2"
+      - "padded#2"
+      - "rest#2"
+      - "rounded#2"
+      - "value#4"
+    jsx_references:
+      - "AnotherElement#2"
+      - "Element#2"
+      - "EmptyStringContext#1.Provider"
+      - "NonEmptyStringContext#1.Provider"
+      - "button#3"
+  - owner: "defaultElement#1"
+    parent: "__global#0"
+    children: []
+    references: []
+    jsx_references: []
+  - owner: "Card#1"
+    parent: "__global#0"
+    children:
+      - "Element#2"
+      - "AnotherElement#2"
+    references:
+      - "AnotherElement#2"
+      - "Element#2"
+      - "ElementType#3"
+      - "as#2"
+      - "background#2"
+      - "bordered#2"
+      - "className#0"
+      - "className#2"
+      - "clsx#3"
+      - "defaultElement#1"
+      - "elementType#2"
+      - "padded#2"
+      - "rest#2"
+      - "rounded#2"
+    jsx_references:
+      - "AnotherElement#2"
+      - "Element#2"
+  - owner: "Element#2"
+    parent: "Card#1"
+    children: []
+    references:
+      - "as#2"
+      - "defaultElement#1"
+    jsx_references: []
+  - owner: "AnotherElement#2"
+    parent: "Card#1"
+    children: []
+    references:
+      - "elementType#2"
+    jsx_references: []
+  - owner: "Card#1"
+    parent: "__global#0"
+    children:
+      - "Element#2"
+      - "AnotherElement#2"
+    references:
+      - "AnotherElement#2"
+      - "Element#2"
+      - "ElementType#3"
+      - "as#2"
+      - "background#2"
+      - "bordered#2"
+      - "className#0"
+      - "className#2"
+      - "clsx#3"
+      - "defaultElement#1"
+      - "elementType#2"
+      - "padded#2"
+      - "rest#2"
+      - "rounded#2"
+    jsx_references:
+      - "AnotherElement#2"
+      - "Element#2"
+  - owner: "Element#2"
+    parent: "Card#1"
+    children: []
+    references:
+      - "as#2"
+      - "defaultElement#1"
+    jsx_references: []
+  - owner: "AnotherElement#2"
+    parent: "Card#1"
+    children: []
+    references:
+      - "elementType#2"
+    jsx_references: []
+  - owner: "Element#2"
+    parent: "__global#0"
+    children: []
+    references:
+      - "as#2"
+      - "defaultElement#1"
+    jsx_references: []
+  - owner: "AnotherElement#2"
+    parent: "__global#0"
+    children: []
+    references:
+      - "elementType#2"
+    jsx_references: []
+  - owner: "EmptyStringContext#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "createContext#1"
+    jsx_references: []
+  - owner: "NonEmptyStringContext#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "createContext#1"
+    jsx_references: []
+  - owner: "Button#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "EmptyStringContext#1"
+      - "NonEmptyStringContext#1"
+      - "Provider#3"
+      - "button#3"
+      - "value#4"
+    jsx_references:
+      - "EmptyStringContext#1.Provider"
+      - "NonEmptyStringContext#1.Provider"
+      - "button#3"
+  - owner: "Button#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "EmptyStringContext#1"
+      - "NonEmptyStringContext#1"
+      - "Provider#3"
+      - "button#3"
+      - "value#4"
+    jsx_references:
+      - "EmptyStringContext#1.Provider"
+      - "NonEmptyStringContext#1.Provider"
+      - "button#3"
+body:
+  - type: ImportDeclaration
+    span:
+      start: 1
+      end: 39
+      ctxt: 0
+    specifiers:
+      - type: ImportSpecifier
+        span:
+          start: 10
+          end: 23
+          ctxt: 0
+        local:
+          type: Identifier
+          span:
+            start: 10
+            end: 23
+            ctxt: 1
+          value: createContext
+          optional: false
+        imported: ~
+        isTypeOnly: false
+    source:
+      type: StringLiteral
+      span:
+        start: 31
+        end: 38
+        ctxt: 0
+      value: react
+      raw: "\"react\""
+    typeOnly: false
+    asserts: ~
+  - type: VariableDeclaration
+    span:
+      start: 41
+      end: 70
+      ctxt: 0
+    kind: const
+    declare: false
+    declarations:
+      - type: VariableDeclarator
+        span:
+          start: 47
+          end: 69
+          ctxt: 0
+        id:
+          optional: false
+          span:
+            start: 47
+            end: 61
+            ctxt: 1
+          type: Identifier
+          typeAnnotation: ~
+          value: defaultElement
+        init:
+          type: StringLiteral
+          span:
+            start: 64
+            end: 69
+            ctxt: 0
+          value: div
+          raw: "\"div\""
+        definite: false
+  - type: ExportDeclaration
+    span:
+      start: 72
+      end: 729
+      ctxt: 0
+    declaration:
+      type: VariableDeclaration
+      span:
+        start: 79
+        end: 729
+        ctxt: 0
+      kind: const
+      declare: false
+      declarations:
+        - type: VariableDeclarator
+          span:
+            start: 85
+            end: 728
+            ctxt: 0
+          id:
+            optional: false
+            span:
+              start: 85
+              end: 89
+              ctxt: 1
+            type: Identifier
+            typeAnnotation: ~
+            value: Card
+          init:
+            type: ArrowFunctionExpression
+            span:
+              start: 92
+              end: 728
+              ctxt: 0
+            params:
+              - type: ObjectPattern
+                span:
+                  start: 93
+                  end: 232
+                  ctxt: 0
+                properties:
+                  - type: AssignmentPatternProperty
+                    span:
+                      start: 99
+                      end: 108
+                      ctxt: 0
+                    key:
+                      type: Identifier
+                      span:
+                        start: 99
+                        end: 108
+                        ctxt: 2
+                      value: className
+                      optional: false
+                    value: ~
+                  - type: AssignmentPatternProperty
+                    span:
+                      start: 114
+                      end: 129
+                      ctxt: 0
+                    key:
+                      type: Identifier
+                      span:
+                        start: 114
+                        end: 122
+                        ctxt: 2
+                      value: bordered
+                      optional: false
+                    value:
+                      type: BooleanLiteral
+                      span:
+                        start: 125
+                        end: 129
+                        ctxt: 0
+                      value: true
+                  - type: AssignmentPatternProperty
+                    span:
+                      start: 135
+                      end: 150
+                      ctxt: 0
+                    key:
+                      type: Identifier
+                      span:
+                        start: 135
+                        end: 142
+                        ctxt: 2
+                      value: rounded
+                      optional: false
+                    value:
+                      type: BooleanLiteral
+                      span:
+                        start: 145
+                        end: 150
+                        ctxt: 0
+                      value: false
+                  - type: AssignmentPatternProperty
+                    span:
+                      start: 156
+                      end: 173
+                      ctxt: 0
+                    key:
+                      type: Identifier
+                      span:
+                        start: 156
+                        end: 166
+                        ctxt: 2
+                      value: background
+                      optional: false
+                    value:
+                      type: BooleanLiteral
+                      span:
+                        start: 169
+                        end: 173
+                        ctxt: 0
+                      value: true
+                  - type: AssignmentPatternProperty
+                    span:
+                      start: 179
+                      end: 192
+                      ctxt: 0
+                    key:
+                      type: Identifier
+                      span:
+                        start: 179
+                        end: 185
+                        ctxt: 2
+                      value: padded
+                      optional: false
+                    value:
+                      type: BooleanLiteral
+                      span:
+                        start: 188
+                        end: 192
+                        ctxt: 0
+                      value: true
+                  - type: AssignmentPatternProperty
+                    span:
+                      start: 198
+                      end: 200
+                      ctxt: 0
+                    key:
+                      type: Identifier
+                      span:
+                        start: 198
+                        end: 200
+                        ctxt: 2
+                      value: as
+                      optional: false
+                    value: ~
+                  - type: AssignmentPatternProperty
+                    span:
+                      start: 206
+                      end: 217
+                      ctxt: 0
+                    key:
+                      type: Identifier
+                      span:
+                        start: 206
+                        end: 217
+                        ctxt: 2
+                      value: elementType
+                      optional: false
+                    value: ~
+                  - type: RestElement
+                    span:
+                      start: 223
+                      end: 230
+                      ctxt: 0
+                    rest:
+                      start: 223
+                      end: 226
+                      ctxt: 0
+                    argument:
+                      optional: false
+                      span:
+                        start: 226
+                        end: 230
+                        ctxt: 2
+                      type: Identifier
+                      typeAnnotation: ~
+                      value: rest
+                    typeAnnotation: ~
+                optional: false
+                typeAnnotation: ~
+            body:
+              type: BlockStatement
+              span:
+                start: 237
+                end: 728
+                ctxt: 0
+              stmts:
+                - type: VariableDeclaration
+                  span:
+                    start: 243
+                    end: 293
+                    ctxt: 0
+                  kind: const
+                  declare: false
+                  declarations:
+                    - type: VariableDeclarator
+                      span:
+                        start: 249
+                        end: 292
+                        ctxt: 0
+                      id:
+                        optional: false
+                        span:
+                          start: 249
+                          end: 256
+                          ctxt: 2
+                        type: Identifier
+                        typeAnnotation:
+                          type: TsTypeAnnotation
+                          span:
+                            start: 256
+                            end: 269
+                            ctxt: 0
+                          typeAnnotation:
+                            type: TsTypeReference
+                            span:
+                              start: 258
+                              end: 269
+                              ctxt: 0
+                            typeName:
+                              type: Identifier
+                              span:
+                                start: 258
+                                end: 269
+                                ctxt: 3
+                              value: ElementType
+                              optional: false
+                            typeParams: ~
+                        value: Element
+                      init:
+                        type: BinaryExpression
+                        span:
+                          start: 272
+                          end: 292
+                          ctxt: 0
+                        operator: "||"
+                        left:
+                          type: Identifier
+                          span:
+                            start: 272
+                            end: 274
+                            ctxt: 2
+                          value: as
+                          optional: false
+                        right:
+                          type: Identifier
+                          span:
+                            start: 278
+                            end: 292
+                            ctxt: 1
+                          value: defaultElement
+                          optional: false
+                      definite: false
+                - type: VariableDeclaration
+                  span:
+                    start: 298
+                    end: 342
+                    ctxt: 0
+                  kind: const
+                  declare: false
+                  declarations:
+                    - type: VariableDeclarator
+                      span:
+                        start: 304
+                        end: 341
+                        ctxt: 0
+                      id:
+                        optional: false
+                        span:
+                          start: 304
+                          end: 318
+                          ctxt: 2
+                        type: Identifier
+                        typeAnnotation: ~
+                        value: AnotherElement
+                      init:
+                        type: BinaryExpression
+                        span:
+                          start: 321
+                          end: 341
+                          ctxt: 0
+                        operator: "||"
+                        left:
+                          type: Identifier
+                          span:
+                            start: 321
+                            end: 332
+                            ctxt: 2
+                          value: elementType
+                          optional: false
+                        right:
+                          type: StringLiteral
+                          span:
+                            start: 336
+                            end: 341
+                            ctxt: 0
+                          value: img
+                          raw: "\"img\""
+                      definite: false
+                - type: ReturnStatement
+                  span:
+                    start: 347
+                    end: 726
+                    ctxt: 0
+                  argument:
+                    type: ParenthesisExpression
+                    span:
+                      start: 354
+                      end: 725
+                      ctxt: 0
+                    expression:
+                      type: JSXFragment
+                      span:
+                        start: 364
+                        end: 719
+                        ctxt: 0
+                      opening:
+                        type: JSXOpeningFragment
+                        span:
+                          start: 364
+                          end: 366
+                          ctxt: 0
+                      children:
+                        - type: JSXText
+                          span:
+                            start: 366
+                            end: 379
+                            ctxt: 0
+                          value: "\n\n            "
+                          raw: "\n\n            "
+                        - type: JSXElement
+                          span:
+                            start: 379
+                            end: 397
+                            ctxt: 0
+                          opening:
+                            type: JSXOpeningElement
+                            name:
+                              type: Identifier
+                              span:
+                                start: 380
+                                end: 394
+                                ctxt: 2
+                              value: AnotherElement
+                              optional: false
+                            span:
+                              start: 379
+                              end: 397
+                              ctxt: 0
+                            attributes: []
+                            selfClosing: true
+                            typeArguments: ~
+                          children: []
+                          closing: ~
+                        - type: JSXText
+                          span:
+                            start: 397
+                            end: 410
+                            ctxt: 0
+                          value: "\n\n            "
+                          raw: "\n\n            "
+                        - type: JSXElement
+                          span:
+                            start: 410
+                            end: 707
+                            ctxt: 0
+                          opening:
+                            type: JSXOpeningElement
+                            name:
+                              type: Identifier
+                              span:
+                                start: 411
+                                end: 418
+                                ctxt: 2
+                              value: Element
+                              optional: false
+                            span:
+                              start: 410
+                              end: 707
+                              ctxt: 0
+                            attributes:
+                              - type: JSXAttribute
+                                span:
+                                  start: 435
+                                  end: 666
+                                  ctxt: 0
+                                name:
+                                  type: Identifier
+                                  span:
+                                    start: 435
+                                    end: 444
+                                    ctxt: 0
+                                  value: className
+                                  optional: false
+                                value:
+                                  type: JSXExpressionContainer
+                                  span:
+                                    start: 445
+                                    end: 666
+                                    ctxt: 0
+                                  expression:
+                                    type: CallExpression
+                                    span:
+                                      start: 446
+                                      end: 665
+                                      ctxt: 0
+                                    callee:
+                                      type: Identifier
+                                      span:
+                                        start: 446
+                                        end: 450
+                                        ctxt: 3
+                                      value: clsx
+                                      optional: false
+                                    arguments:
+                                      - spread: ~
+                                        expression:
+                                          type: BinaryExpression
+                                          span:
+                                            start: 472
+                                            end: 487
+                                            ctxt: 0
+                                          operator: "&&"
+                                          left:
+                                            type: Identifier
+                                            span:
+                                              start: 472
+                                              end: 478
+                                              ctxt: 2
+                                            value: padded
+                                            optional: false
+                                          right:
+                                            type: StringLiteral
+                                            span:
+                                              start: 482
+                                              end: 487
+                                              ctxt: 0
+                                            value: p-4
+                                            raw: "\"p-4\""
+                                      - spread: ~
+                                        expression:
+                                          type: Identifier
+                                          span:
+                                            start: 509
+                                            end: 518
+                                            ctxt: 2
+                                          value: className
+                                          optional: false
+                                      - spread: ~
+                                        expression:
+                                          type: BinaryExpression
+                                          span:
+                                            start: 540
+                                            end: 560
+                                            ctxt: 0
+                                          operator: "&&"
+                                          left:
+                                            type: Identifier
+                                            span:
+                                              start: 540
+                                              end: 547
+                                              ctxt: 2
+                                            value: rounded
+                                            optional: false
+                                          right:
+                                            type: StringLiteral
+                                            span:
+                                              start: 551
+                                              end: 560
+                                              ctxt: 0
+                                            value: rounded
+                                            raw: "\"rounded\""
+                                      - spread: ~
+                                        expression:
+                                          type: BinaryExpression
+                                          span:
+                                            start: 582
+                                            end: 602
+                                            ctxt: 0
+                                          operator: "&&"
+                                          left:
+                                            type: Identifier
+                                            span:
+                                              start: 582
+                                              end: 590
+                                              ctxt: 2
+                                            value: bordered
+                                            optional: false
+                                          right:
+                                            type: StringLiteral
+                                            span:
+                                              start: 594
+                                              end: 602
+                                              ctxt: 0
+                                            value: border
+                                            raw: "\"border\""
+                                      - spread: ~
+                                        expression:
+                                          type: BinaryExpression
+                                          span:
+                                            start: 624
+                                            end: 647
+                                            ctxt: 0
+                                          operator: "&&"
+                                          left:
+                                            type: Identifier
+                                            span:
+                                              start: 624
+                                              end: 634
+                                              ctxt: 2
+                                            value: background
+                                            optional: false
+                                          right:
+                                            type: StringLiteral
+                                            span:
+                                              start: 638
+                                              end: 647
+                                              ctxt: 0
+                                            value: bg-weak
+                                            raw: "\"bg-weak\""
+                                    typeArguments: ~
+                              - type: SpreadElement
+                                spread:
+                                  start: 684
+                                  end: 687
+                                  ctxt: 0
+                                arguments:
+                                  type: Identifier
+                                  span:
+                                    start: 687
+                                    end: 691
+                                    ctxt: 2
+                                  value: rest
+                                  optional: false
+                            selfClosing: true
+                            typeArguments: ~
+                          children: []
+                          closing: ~
+                        - type: JSXText
+                          span:
+                            start: 707
+                            end: 716
+                            ctxt: 0
+                          value: "\n\n        "
+                          raw: "\n\n        "
+                      closing:
+                        type: JSXClosingFragment
+                        span:
+                          start: 716
+                          end: 719
+                          ctxt: 0
+            async: false
+            generator: false
+            typeParameters: ~
+            returnType: ~
+          definite: false
+  - type: VariableDeclaration
+    span:
+      start: 731
+      end: 776
+      ctxt: 0
+    kind: const
+    declare: false
+    declarations:
+      - type: VariableDeclarator
+        span:
+          start: 737
+          end: 775
+          ctxt: 0
+        id:
+          optional: false
+          span:
+            start: 737
+            end: 755
+            ctxt: 1
+          type: Identifier
+          typeAnnotation: ~
+          value: EmptyStringContext
+        init:
+          type: CallExpression
+          span:
+            start: 758
+            end: 775
+            ctxt: 0
+          callee:
+            type: Identifier
+            span:
+              start: 758
+              end: 771
+              ctxt: 1
+            value: createContext
+            optional: false
+          arguments:
+            - spread: ~
+              expression:
+                type: StringLiteral
+                span:
+                  start: 772
+                  end: 774
+                  ctxt: 0
+                value: ""
+                raw: "\"\""
+          typeArguments: ~
+        definite: false
+  - type: VariableDeclaration
+    span:
+      start: 777
+      end: 844
+      ctxt: 0
+    kind: const
+    declare: false
+    declarations:
+      - type: VariableDeclarator
+        span:
+          start: 783
+          end: 843
+          ctxt: 0
+        id:
+          optional: false
+          span:
+            start: 783
+            end: 804
+            ctxt: 1
+          type: Identifier
+          typeAnnotation: ~
+          value: NonEmptyStringContext
+        init:
+          type: CallExpression
+          span:
+            start: 807
+            end: 843
+            ctxt: 0
+          callee:
+            type: Identifier
+            span:
+              start: 807
+              end: 820
+              ctxt: 1
+            value: createContext
+            optional: false
+          arguments:
+            - spread: ~
+              expression:
+                type: StringLiteral
+                span:
+                  start: 821
+                  end: 842
+                  ctxt: 0
+                value: context with string
+                raw: "\"context with string\""
+          typeArguments: ~
+        definite: false
+  - type: ExportDeclaration
+    span:
+      start: 846
+      end: 1118
+      ctxt: 0
+    declaration:
+      type: VariableDeclaration
+      span:
+        start: 853
+        end: 1118
+        ctxt: 0
+      kind: const
+      declare: false
+      declarations:
+        - type: VariableDeclarator
+          span:
+            start: 859
+            end: 1117
+            ctxt: 0
+          id:
+            optional: false
+            span:
+              start: 859
+              end: 865
+              ctxt: 1
+            type: Identifier
+            typeAnnotation: ~
+            value: Button
+          init:
+            type: ArrowFunctionExpression
+            span:
+              start: 868
+              end: 1117
+              ctxt: 0
+            params: []
+            body:
+              type: BlockStatement
+              span:
+                start: 874
+                end: 1117
+                ctxt: 0
+              stmts:
+                - type: ReturnStatement
+                  span:
+                    start: 880
+                    end: 1115
+                    ctxt: 0
+                  argument:
+                    type: ParenthesisExpression
+                    span:
+                      start: 887
+                      end: 1114
+                      ctxt: 0
+                    expression:
+                      type: JSXElement
+                      span:
+                        start: 897
+                        end: 1108
+                        ctxt: 0
+                      opening:
+                        type: JSXOpeningElement
+                        name:
+                          type: JSXMemberExpression
+                          object:
+                            type: Identifier
+                            span:
+                              start: 898
+                              end: 916
+                              ctxt: 1
+                            value: EmptyStringContext
+                            optional: false
+                          property:
+                            type: Identifier
+                            span:
+                              start: 917
+                              end: 925
+                              ctxt: 3
+                            value: Provider
+                            optional: false
+                        span:
+                          start: 897
+                          end: 926
+                          ctxt: 0
+                        attributes: []
+                        selfClosing: false
+                        typeArguments: ~
+                      children:
+                        - type: JSXText
+                          span:
+                            start: 926
+                            end: 939
+                            ctxt: 0
+                          value: "\n\n            "
+                          raw: "\n\n            "
+                        - type: JSXElement
+                          span:
+                            start: 939
+                            end: 1069
+                            ctxt: 0
+                          opening:
+                            type: JSXOpeningElement
+                            name:
+                              type: JSXMemberExpression
+                              object:
+                                type: Identifier
+                                span:
+                                  start: 940
+                                  end: 961
+                                  ctxt: 1
+                                value: NonEmptyStringContext
+                                optional: false
+                              property:
+                                type: Identifier
+                                span:
+                                  start: 962
+                                  end: 970
+                                  ctxt: 3
+                                value: Provider
+                                optional: false
+                            span:
+                              start: 939
+                              end: 971
+                              ctxt: 0
+                            attributes: []
+                            selfClosing: false
+                            typeArguments: ~
+                          children:
+                            - type: JSXText
+                              span:
+                                start: 971
+                                end: 988
+                                ctxt: 0
+                              value: "\n\n                "
+                              raw: "\n\n                "
+                            - type: JSXExpressionContainer
+                              span:
+                                start: 988
+                                end: 1023
+                                ctxt: 0
+                              expression:
+                                type: ArrowFunctionExpression
+                                span:
+                                  start: 989
+                                  end: 1022
+                                  ctxt: 0
+                                params:
+                                  - optional: false
+                                    span:
+                                      start: 989
+                                      end: 994
+                                      ctxt: 4
+                                    type: Identifier
+                                    typeAnnotation: ~
+                                    value: value
+                                body:
+                                  type: JSXElement
+                                  span:
+                                    start: 998
+                                    end: 1022
+                                    ctxt: 0
+                                  opening:
+                                    type: JSXOpeningElement
+                                    name:
+                                      type: Identifier
+                                      span:
+                                        start: 999
+                                        end: 1005
+                                        ctxt: 3
+                                      value: button
+                                      optional: false
+                                    span:
+                                      start: 998
+                                      end: 1006
+                                      ctxt: 0
+                                    attributes: []
+                                    selfClosing: false
+                                    typeArguments: ~
+                                  children:
+                                    - type: JSXExpressionContainer
+                                      span:
+                                        start: 1006
+                                        end: 1013
+                                        ctxt: 0
+                                      expression:
+                                        type: Identifier
+                                        span:
+                                          start: 1007
+                                          end: 1012
+                                          ctxt: 4
+                                        value: value
+                                        optional: false
+                                  closing:
+                                    type: JSXClosingElement
+                                    span:
+                                      start: 1013
+                                      end: 1022
+                                      ctxt: 0
+                                    name:
+                                      type: Identifier
+                                      span:
+                                        start: 1015
+                                        end: 1021
+                                        ctxt: 3
+                                      value: button
+                                      optional: false
+                                async: false
+                                generator: false
+                                typeParameters: ~
+                                returnType: ~
+                            - type: JSXText
+                              span:
+                                start: 1023
+                                end: 1036
+                                ctxt: 0
+                              value: "\n\n            "
+                              raw: "\n\n            "
+                          closing:
+                            type: JSXClosingElement
+                            span:
+                              start: 1036
+                              end: 1069
+                              ctxt: 0
+                            name:
+                              type: JSXMemberExpression
+                              object:
+                                type: Identifier
+                                span:
+                                  start: 1038
+                                  end: 1059
+                                  ctxt: 1
+                                value: NonEmptyStringContext
+                                optional: false
+                              property:
+                                type: Identifier
+                                span:
+                                  start: 1060
+                                  end: 1068
+                                  ctxt: 3
+                                value: Provider
+                                optional: false
+                        - type: JSXText
+                          span:
+                            start: 1069
+                            end: 1078
+                            ctxt: 0
+                          value: "\n\n        "
+                          raw: "\n\n        "
+                      closing:
+                        type: JSXClosingElement
+                        span:
+                          start: 1078
+                          end: 1108
+                          ctxt: 0
+                        name:
+                          type: JSXMemberExpression
+                          object:
+                            type: Identifier
+                            span:
+                              start: 1080
+                              end: 1098
+                              ctxt: 1
+                            value: EmptyStringContext
+                            optional: false
+                          property:
+                            type: Identifier
+                            span:
+                              start: 1099
+                              end: 1107
+                              ctxt: 3
+                            value: Provider
+                            optional: false
+            async: false
+            generator: false
+            typeParameters: ~
+            returnType: ~
+          definite: false

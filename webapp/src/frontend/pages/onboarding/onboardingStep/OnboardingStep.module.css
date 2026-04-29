@@ -1,0 +1,45 @@
+.onboardingSteps,
+.onboardingStepContents {
+    flex: 0 0 520px;
+}
+
+.onboardingSteps {
+    color: var(--label-primary-color);
+}
+
+.onboardingSteps .headerSubText {
+    color: var(--label-secondary-color);
+}
+
+.onboardingSteps .h2 {
+    margin-bottom: var(--spacing-s);
+    line-height: 18px;
+}
+
+.onboardingSteps p {
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.onboardingSteps ul {
+    padding-left: var(--spacing-s);
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.onboardingSteps .stepCards {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-m);
+    padding-top: var(--spacing-m);
+}
+
+.onboardingSteps .caption {
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--label-secondary-color);
+}
+
+.onboardingStepContents {
+    height: 100%;
+}

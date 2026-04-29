@@ -1,0 +1,37 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&component_results"
+---
+num_of_components: 2
+components:
+  - definition_id: "react-datepicker:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:DatePicker"
+    name: DatePicker
+    export_ids: []
+    package_name: react-datepicker
+    source_path: ""
+    dependencies: []
+    props: []
+    html_elements: []
+  - definition_id: "test:32d49112ca8c65ad226a8128c3e567e8f354468efde24c10ed9dcb7980e2387c:Main"
+    name: Main
+    export_ids:
+      - "test:src/main:Main"
+    package_name: test
+    source_path: src/main.jsx
+    dependencies:
+      - from: "test:32d49112ca8c65ad226a8128c3e567e8f354468efde24c10ed9dcb7980e2387c:Main"
+        to: "react-datepicker:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:DatePicker"
+        references:
+          - trace:
+              - "react-datepicker:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:DatePicker"
+            usages:
+              - start:
+                  line: 4
+                  column: 10
+                end:
+                  line: 4
+                  column: 24
+                props: []
+    props: []
+    html_elements: []
+

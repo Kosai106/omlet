@@ -1,0 +1,19 @@
+.badgeContainer {
+    position: relative;
+}
+
+.badgeContainer .badge {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    width: 16px;
+    height: 16px;
+    background-color: var(--background-critical-color);
+    border-radius: 4px;
+    font-size: 11px;
+    line-height: 15px;
+    text-align: center;
+    color: var(--label-inverse-color);
+    user-select: none;
+    z-index: 1;
+}

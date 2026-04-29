@@ -1,0 +1,73 @@
+{
+  "root": {
+    "name": "root",
+    "path": "",
+    "version": "0.0.0",
+    "aliases": {},
+    "importMap": {
+      "root/*": [
+        "*"
+      ],
+      "ds/*": [
+        "ds/*"
+      ],
+      "ds": [
+        "ds/src/index.ts"
+      ],
+      "ds/dist/*": [
+        "ds/src/*"
+      ],
+      "app/*": [
+        "app/*"
+      ]
+    },
+    "exportMap": {}
+  },
+  "packages": {
+    "ds": {
+      "name": "ds",
+      "path": "ds",
+      "version": "1.0.0",
+      "aliases": {},
+      "importMap": {
+        "ds/*": [
+          "ds/*"
+        ],
+        "ds": [
+          "ds/src/index.ts"
+        ]
+      },
+      "exportMap": {
+        ".": [
+          "src/index.ts"
+        ],
+        "dist/*": [
+          "src/*"
+        ]
+      },
+      "main": "src/index.ts"
+    },
+    "app": {
+      "name": "app",
+      "path": "app",
+      "version": "1.0.0",
+      "aliases": {},
+      "importMap": {
+        "app/*": [
+          "app/*"
+        ],
+        "ds/*": [
+          "ds/*"
+        ],
+        "ds": [
+          "ds/src/index.ts"
+        ],
+        "ds/dist/*": [
+          "ds/src/*"
+        ]
+      },
+      "exportMap": {}
+    }
+  },
+   "absolutePath": "/package"
+}

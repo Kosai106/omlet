@@ -1,0 +1,35 @@
+max_body_size: 100mb
+auth:
+  auth-memory:
+    users:
+      test:
+        name: test
+        password: test
+store:
+  # Use ephemeral verdaccio-memory storage instead of the default of filesystem.
+  memory:
+    # Increase maximum number of packages that can be stored (default 1000).
+    limit: 10000
+uplinks:
+  npmjs:
+    url: https://registry.npmjs.org/
+    # Increase number of failed requests before disabling uplink (default 2).
+    max_fails: 20
+    # Increase the time before cached package metadata is re-fetched (default 2m).
+    maxage: 10m
+    # Disable caching of package tarballs since it duplicates the local yarn cache.
+    cache: false
+    # Increase the max time when a request becomes a failure (default 5m).
+    fail_timeout: 10m
+packages:
+  '@omlet/*':
+    access: $anonymous
+    publish: $anonymous
+  '**':
+    access: $anonymous
+    proxy: npmjs
+logs:
+  - { type: stdout, format: pretty, level: warn }
+server:
+  # Set to 0 to avoid EINTEGRITY issues when installing from npm.
+  keepAliveTimeout: 0

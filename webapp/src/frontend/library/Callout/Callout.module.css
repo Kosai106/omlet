@@ -1,0 +1,75 @@
+.callout {
+    position: relative;
+    padding: var(--spacing-xs);
+    background-color: var(--control-background-default-color);
+    border-radius: 4px;
+    color: var(--label-primary-color);
+    font-size: 13px;
+    line-height: 18px;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.callout.large {
+    padding: var(--spacing-s);
+    gap: var(--spacing-s);
+}
+
+.callout.onboarding {
+    background-color: var(--control-background-primary-color);
+}
+
+.callout.critical {
+    outline: solid 2px var(--border-critical-color);
+}
+
+
+.callout .dismissButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: var(--spacing-xs);
+    border-radius: 50%;
+    line-height: 0;
+    color: var(--label-secondary-color);
+}
+
+.callout .emoji {
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    width: 24px;
+}
+
+.callout .column {
+    --gap-size: 2px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--gap-size);
+}
+
+.callout.large .column {
+    --gap-size: var(--spacing-xxs);
+}
+
+.callout .column .content a,
+.callout .column .content button {
+    font-weight: 600;
+    color: var(--accent-green);
+    white-space: nowrap;
+}
+
+.callout .column .action {
+    margin-top: calc(var(--spacing-xs) - var(--gap-size));
+}
+
+.callout.large .column .action {
+    margin-top: calc(var(--spacing-s) - var(--gap-size));
+}
+
+.callout .column .action * {
+    font-weight: 600;
+    color: var(--accent-green);
+}

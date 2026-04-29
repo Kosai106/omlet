@@ -1,0 +1,14 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&export_results"
+---
+num_of_exports: 1
+exports:
+  - name: default
+    source_path: src/web-component/icon.tsx
+    is_component: true
+    inferred_type: "ReturnTypeOf<TypeOf<typescript-examples:1c26358bf430b2384a75f672ef7690f712b6bcb123850bb2f496c4d3e3d4d580:createComponent>>"
+    resolved_type: ReturnTypeOf<(Function -> (Function -> JSX))>
+    trace_to_declaration:
+      - "typescript-examples:1c26358bf430b2384a75f672ef7690f712b6bcb123850bb2f496c4d3e3d4d580:default"
+

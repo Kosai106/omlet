@@ -1,0 +1,17 @@
+{
+  "name": "main",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "comps": "workspace:packages/comps",
+    "ignored-package": "workspace:*",
+    "multi-part": "workspace:*",
+    "single-part": "workspace:1.0.0"
+  }
+}

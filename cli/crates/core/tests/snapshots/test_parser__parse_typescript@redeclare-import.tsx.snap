@@ -1,0 +1,519 @@
+---
+source: crates/core/tests/test_parser.rs
+expression: "&parser::Module::new(&RelativePathBuf::from_path(path.strip_prefix(&project_root).unwrap()).unwrap(),\n&project_root, &module_resolver,).unwrap()"
+input_file: samples/typescript/src/redeclare-import/redeclare-import.tsx
+---
+source_path: src/redeclare-import/redeclare-import.tsx
+id:
+  hash: "2610967208106961591"
+  path: src/redeclare-import/redeclare-import.tsx
+  package_name: UNKNOWN
+  mtype: local
+created_at: ~
+updated_at: ~
+exports:
+  - source:
+      Internal: "RedeclareImport#1"
+    exported_name: RedeclareImport
+declarations:
+  - symbol: "Button#1"
+    source:
+      hash: "2610967208106961591"
+      path: src/redeclare-import/redeclare-import.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('Button' type=inline), context: #1 }, source: ModuleId { hash: 3516152902168980351, path: \"\", pkg_name: \"ds\", mtype: Package } }>"
+    inferred_type:
+      TypeOf:
+        symbol:
+          symbol: "Button#1"
+          source:
+            hash: "3516152902168980351"
+            path: ""
+            package_name: ds
+            mtype: package
+        is_local: false
+    start:
+      line: 2
+      column: 10
+    end:
+      line: 2
+      column: 16
+  - symbol: "React#1"
+    source:
+      hash: "2610967208106961591"
+      path: src/redeclare-import/redeclare-import.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
+    inferred_type:
+      TypeOf:
+        symbol:
+          symbol: "default#0"
+          source:
+            hash: "11002248552354871051"
+            path: ""
+            package_name: react
+            mtype: package
+        is_local: false
+    start:
+      line: 1
+      column: 8
+    end:
+      line: 1
+      column: 13
+  - symbol: "RedeclareImport#1"
+    source:
+      hash: "2610967208106961591"
+      path: src/redeclare-import/redeclare-import.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<declaration>"
+    inferred_type:
+      Function:
+        - JSX
+    start:
+      line: 7
+      column: 8
+    end:
+      line: 15
+      column: 2
+  - symbol: "RedeclaredButton#1"
+    source:
+      hash: "2610967208106961591"
+      path: src/redeclare-import/redeclare-import.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('RedeclaredButton' type=dynamic), context: #1 }, source: ModuleId { hash: 13339757074741913233, path: \"src/redeclare-import/redeclare-and-export\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    inferred_type:
+      TypeOf:
+        symbol:
+          symbol: "RedeclaredButton#1"
+          source:
+            hash: "13339757074741913233"
+            path: src/redeclare-import/redeclare-and-export
+            package_name: UNKNOWN
+            mtype: local
+        is_local: false
+    start:
+      line: 3
+      column: 10
+    end:
+      line: 3
+      column: 26
+  - symbol: "RedeclaredComponent#1"
+    source:
+      hash: "2610967208106961591"
+      path: src/redeclare-import/redeclare-import.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      TypeOf:
+        symbol:
+          symbol: "Button#1"
+          source:
+            hash: "2610967208106961591"
+            path: src/redeclare-import/redeclare-import.tsx
+            package_name: UNKNOWN
+            mtype: local
+        is_local: true
+    start:
+      line: 5
+      column: 7
+    end:
+      line: 5
+      column: 26
+  - symbol: "RedeclaredExternalComponentFromDifferentFile#1"
+    source:
+      hash: "2610967208106961591"
+      path: src/redeclare-import/redeclare-import.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      TypeOf:
+        symbol:
+          symbol: "RedeclaredButton#1"
+          source:
+            hash: "2610967208106961591"
+            path: src/redeclare-import/redeclare-import.tsx
+            package_name: UNKNOWN
+            mtype: local
+        is_local: true
+    start:
+      line: 6
+      column: 7
+    end:
+      line: 6
+      column: 51
+scopes:
+  - owner: "__global#0"
+    parent: ~
+    children:
+      - "RedeclaredComponent#1"
+      - "RedeclaredExternalComponentFromDifferentFile#1"
+      - "RedeclareImport#1"
+      - "RedeclareImport#1"
+    references:
+      - "Button#1"
+      - "React#1"
+      - "RedeclareImport#1"
+      - "RedeclaredButton#1"
+      - "RedeclaredComponent#1"
+      - "RedeclaredExternalComponentFromDifferentFile#1"
+    jsx_references:
+      - "Button#1"
+      - "RedeclaredComponent#1"
+      - "RedeclaredExternalComponentFromDifferentFile#1"
+  - owner: "RedeclaredComponent#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "Button#1"
+    jsx_references: []
+  - owner: "RedeclaredExternalComponentFromDifferentFile#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "RedeclaredButton#1"
+    jsx_references: []
+  - owner: "RedeclareImport#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "Button#1"
+      - "RedeclaredComponent#1"
+      - "RedeclaredExternalComponentFromDifferentFile#1"
+    jsx_references:
+      - "Button#1"
+      - "RedeclaredComponent#1"
+      - "RedeclaredExternalComponentFromDifferentFile#1"
+  - owner: "RedeclareImport#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "Button#1"
+      - "RedeclaredComponent#1"
+      - "RedeclaredExternalComponentFromDifferentFile#1"
+    jsx_references:
+      - "Button#1"
+      - "RedeclaredComponent#1"
+      - "RedeclaredExternalComponentFromDifferentFile#1"
+body:
+  - type: ImportDeclaration
+    span:
+      start: 1
+      end: 27
+      ctxt: 0
+    specifiers:
+      - type: ImportDefaultSpecifier
+        span:
+          start: 8
+          end: 13
+          ctxt: 0
+        local:
+          type: Identifier
+          span:
+            start: 8
+            end: 13
+            ctxt: 1
+          value: React
+          optional: false
+    source:
+      type: StringLiteral
+      span:
+        start: 19
+        end: 26
+        ctxt: 0
+      value: react
+      raw: "\"react\""
+    typeOnly: false
+    asserts: ~
+  - type: ImportDeclaration
+    span:
+      start: 28
+      end: 56
+      ctxt: 0
+    specifiers:
+      - type: ImportSpecifier
+        span:
+          start: 37
+          end: 43
+          ctxt: 0
+        local:
+          type: Identifier
+          span:
+            start: 37
+            end: 43
+            ctxt: 1
+          value: Button
+          optional: false
+        imported: ~
+        isTypeOnly: false
+    source:
+      type: StringLiteral
+      span:
+        start: 51
+        end: 55
+        ctxt: 0
+      value: ds
+      raw: "\"ds\""
+    typeOnly: false
+    asserts: ~
+  - type: ImportDeclaration
+    span:
+      start: 57
+      end: 115
+      ctxt: 0
+    specifiers:
+      - type: ImportSpecifier
+        span:
+          start: 66
+          end: 82
+          ctxt: 0
+        local:
+          type: Identifier
+          span:
+            start: 66
+            end: 82
+            ctxt: 1
+          value: RedeclaredButton
+          optional: false
+        imported: ~
+        isTypeOnly: false
+    source:
+      type: StringLiteral
+      span:
+        start: 90
+        end: 114
+        ctxt: 0
+      value: "./redeclare-and-export"
+      raw: "\"./redeclare-and-export\""
+    typeOnly: false
+    asserts: ~
+  - type: VariableDeclaration
+    span:
+      start: 117
+      end: 152
+      ctxt: 0
+    kind: const
+    declare: false
+    declarations:
+      - type: VariableDeclarator
+        span:
+          start: 123
+          end: 151
+          ctxt: 0
+        id:
+          optional: false
+          span:
+            start: 123
+            end: 142
+            ctxt: 1
+          type: Identifier
+          typeAnnotation: ~
+          value: RedeclaredComponent
+        init:
+          type: Identifier
+          span:
+            start: 145
+            end: 151
+            ctxt: 1
+          value: Button
+          optional: false
+        definite: false
+  - type: VariableDeclaration
+    span:
+      start: 153
+      end: 223
+      ctxt: 0
+    kind: const
+    declare: false
+    declarations:
+      - type: VariableDeclarator
+        span:
+          start: 159
+          end: 222
+          ctxt: 0
+        id:
+          optional: false
+          span:
+            start: 159
+            end: 203
+            ctxt: 1
+          type: Identifier
+          typeAnnotation: ~
+          value: RedeclaredExternalComponentFromDifferentFile
+        init:
+          type: Identifier
+          span:
+            start: 206
+            end: 222
+            ctxt: 1
+          value: RedeclaredButton
+          optional: false
+        definite: false
+  - type: ExportDeclaration
+    span:
+      start: 224
+      end: 422
+      ctxt: 0
+    declaration:
+      async: false
+      body:
+        type: BlockStatement
+        span:
+          start: 258
+          end: 422
+          ctxt: 0
+        stmts:
+          - type: ReturnStatement
+            span:
+              start: 264
+              end: 420
+              ctxt: 0
+            argument:
+              type: ParenthesisExpression
+              span:
+                start: 271
+                end: 419
+                ctxt: 0
+              expression:
+                type: JSXFragment
+                span:
+                  start: 281
+                  end: 413
+                  ctxt: 0
+                opening:
+                  type: JSXOpeningFragment
+                  span:
+                    start: 281
+                    end: 283
+                    ctxt: 0
+                children:
+                  - type: JSXText
+                    span:
+                      start: 283
+                      end: 296
+                      ctxt: 0
+                    value: "\n\n            "
+                    raw: "\n\n            "
+                  - type: JSXElement
+                    span:
+                      start: 296
+                      end: 318
+                      ctxt: 0
+                    opening:
+                      type: JSXOpeningElement
+                      name:
+                        type: Identifier
+                        span:
+                          start: 297
+                          end: 316
+                          ctxt: 1
+                        value: RedeclaredComponent
+                        optional: false
+                      span:
+                        start: 296
+                        end: 318
+                        ctxt: 0
+                      attributes: []
+                      selfClosing: true
+                      typeArguments: ~
+                    children: []
+                    closing: ~
+                  - type: JSXText
+                    span:
+                      start: 318
+                      end: 331
+                      ctxt: 0
+                    value: "\n\n            "
+                    raw: "\n\n            "
+                  - type: JSXElement
+                    span:
+                      start: 331
+                      end: 341
+                      ctxt: 0
+                    opening:
+                      type: JSXOpeningElement
+                      name:
+                        type: Identifier
+                        span:
+                          start: 332
+                          end: 338
+                          ctxt: 1
+                        value: Button
+                        optional: false
+                      span:
+                        start: 331
+                        end: 341
+                        ctxt: 0
+                      attributes: []
+                      selfClosing: true
+                      typeArguments: ~
+                    children: []
+                    closing: ~
+                  - type: JSXText
+                    span:
+                      start: 341
+                      end: 354
+                      ctxt: 0
+                    value: "\n\n            "
+                    raw: "\n\n            "
+                  - type: JSXElement
+                    span:
+                      start: 354
+                      end: 401
+                      ctxt: 0
+                    opening:
+                      type: JSXOpeningElement
+                      name:
+                        type: Identifier
+                        span:
+                          start: 355
+                          end: 399
+                          ctxt: 1
+                        value: RedeclaredExternalComponentFromDifferentFile
+                        optional: false
+                      span:
+                        start: 354
+                        end: 401
+                        ctxt: 0
+                      attributes: []
+                      selfClosing: true
+                      typeArguments: ~
+                    children: []
+                    closing: ~
+                  - type: JSXText
+                    span:
+                      start: 401
+                      end: 410
+                      ctxt: 0
+                    value: "\n\n        "
+                    raw: "\n\n        "
+                closing:
+                  type: JSXClosingFragment
+                  span:
+                    start: 410
+                    end: 413
+                    ctxt: 0
+      declare: false
+      decorators: []
+      generator: false
+      identifier:
+        type: Identifier
+        span:
+          start: 240
+          end: 255
+          ctxt: 1
+        value: RedeclareImport
+        optional: false
+      params: []
+      returnType: ~
+      span:
+        start: 231
+        end: 422
+        ctxt: 0
+      type: FunctionDeclaration
+      typeParameters: ~

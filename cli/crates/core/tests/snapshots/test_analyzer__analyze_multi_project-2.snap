@@ -1,0 +1,52 @@
+---
+source: crates/core/tests/test_analyzer.rs
+expression: "&export_results_design_system"
+---
+num_of_exports: 6
+exports:
+  - name: Button
+    source_path: src/button.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@acme/design-system:bf8a9e3aaa8690860f36d24bf1b694c9c0efbfe3526ec806cdec65ff72d1f45a:Button"
+  - name: Button
+    source_path: src/index.ts
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@acme/design-system:25a6634263c1b1f6fc4697a04e2b9904ea4b042a89af59dc93ec1f5d44848a26:Button"
+      - "@acme/design-system:bf8a9e3aaa8690860f36d24bf1b694c9c0efbfe3526ec806cdec65ff72d1f45a:Button"
+  - name: DatePicker
+    source_path: src/datepicker.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@acme/design-system:07a4a42cecf56a6bc3c87405c5175b414ce494e41d737c18234abb15b67fe894:DatePicker"
+  - name: DatePicker
+    source_path: src/index.ts
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@acme/design-system:25a6634263c1b1f6fc4697a04e2b9904ea4b042a89af59dc93ec1f5d44848a26:DatePicker"
+      - "@acme/design-system:07a4a42cecf56a6bc3c87405c5175b414ce494e41d737c18234abb15b67fe894:DatePicker"
+  - name: Input
+    source_path: src/index.ts
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@acme/design-system:25a6634263c1b1f6fc4697a04e2b9904ea4b042a89af59dc93ec1f5d44848a26:Input"
+      - "@acme/design-system:8603e95bcebf4c8646bb9a5b23318d975779e95fad8718f90666485661738345:Input"
+  - name: Input
+    source_path: src/input.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "@acme/design-system:8603e95bcebf4c8646bb9a5b23318d975779e95fad8718f90666485661738345:Input"
+

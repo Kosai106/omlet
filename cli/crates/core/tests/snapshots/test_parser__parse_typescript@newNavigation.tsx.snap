@@ -1,0 +1,516 @@
+---
+source: crates/core/tests/test_parser.rs
+expression: "&parser::Module::new(&RelativePathBuf::from_path(path.strip_prefix(&project_root).unwrap()).unwrap(),\n&project_root, &module_resolver,).unwrap()"
+input_file: samples/typescript/src/simple/components/newNavigation.tsx
+---
+source_path: src/simple/components/newNavigation.tsx
+id:
+  hash: "6711003159110202606"
+  path: src/simple/components/newNavigation.tsx
+  package_name: UNKNOWN
+  mtype: local
+created_at: ~
+updated_at: ~
+exports:
+  - source:
+      Internal: "UserMenuNew#1"
+    exported_name: UserMenuNew
+  - source:
+      External:
+        symbol: "Header#0"
+        source:
+          hash: "8219741811766528831"
+          path: src/simple/components/nav
+          package_name: UNKNOWN
+          mtype: local
+    exported_name: HeaderNew
+  - source:
+      Internal: "BackButton#1"
+    exported_name: BackButton
+declarations:
+  - symbol: "BackButton#1"
+    source:
+      hash: "6711003159110202606"
+      path: src/simple/components/newNavigation.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<declaration>"
+    inferred_type:
+      Function:
+        - JSX
+    start:
+      line: 14
+      column: 8
+    end:
+      line: 20
+      column: 2
+  - symbol: "UserAvatar#1"
+    source:
+      hash: "6711003159110202606"
+      path: src/simple/components/newNavigation.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('UserAvatar' type=dynamic), context: #1 }, source: ModuleId { hash: 8219741811766528831, path: \"src/simple/components/nav\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    inferred_type:
+      TypeOf:
+        symbol:
+          symbol: "UserAvatar#1"
+          source:
+            hash: "8219741811766528831"
+            path: src/simple/components/nav
+            package_name: UNKNOWN
+            mtype: local
+        is_local: false
+    start:
+      line: 1
+      column: 20
+    end:
+      line: 1
+      column: 30
+  - symbol: "UserMenu#1"
+    source:
+      hash: "6711003159110202606"
+      path: src/simple/components/newNavigation.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('UserMenu' type=dynamic), context: #1 }, source: ModuleId { hash: 8219741811766528831, path: \"src/simple/components/nav\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    inferred_type:
+      TypeOf:
+        symbol:
+          symbol: "UserMenu#1"
+          source:
+            hash: "8219741811766528831"
+            path: src/simple/components/nav
+            package_name: UNKNOWN
+            mtype: local
+        is_local: false
+    start:
+      line: 1
+      column: 10
+    end:
+      line: 1
+      column: 18
+  - symbol: "UserMenuNew#1"
+    source:
+      hash: "6711003159110202606"
+      path: src/simple/components/newNavigation.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<declaration>"
+    inferred_type:
+      Function:
+        - JSX
+    start:
+      line: 3
+      column: 8
+    end:
+      line: 10
+      column: 2
+scopes:
+  - owner: "__global#0"
+    parent: ~
+    children:
+      - "UserMenuNew#1"
+      - "UserMenuNew#1"
+      - "BackButton#1"
+      - "BackButton#1"
+    references:
+      - "BackButton#1"
+      - "Header#0"
+      - "HeaderNew#0"
+      - "UserAvatar#1"
+      - "UserMenu#1"
+      - "UserMenuNew#1"
+      - "button#2"
+      - "div#2"
+      - "type#0"
+    jsx_references:
+      - "UserAvatar#1"
+      - "UserMenu#1"
+      - "button#2"
+      - "div#2"
+  - owner: "UserMenuNew#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "UserAvatar#1"
+      - "UserMenu#1"
+      - "div#2"
+    jsx_references:
+      - "UserAvatar#1"
+      - "UserMenu#1"
+      - "div#2"
+  - owner: "UserMenuNew#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "UserAvatar#1"
+      - "UserMenu#1"
+      - "div#2"
+    jsx_references:
+      - "UserAvatar#1"
+      - "UserMenu#1"
+      - "div#2"
+  - owner: "BackButton#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "button#2"
+      - "type#0"
+    jsx_references:
+      - "button#2"
+  - owner: "BackButton#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "button#2"
+      - "type#0"
+    jsx_references:
+      - "button#2"
+body:
+  - type: ImportDeclaration
+    span:
+      start: 1
+      end: 46
+      ctxt: 0
+    specifiers:
+      - type: ImportSpecifier
+        span:
+          start: 10
+          end: 18
+          ctxt: 0
+        local:
+          type: Identifier
+          span:
+            start: 10
+            end: 18
+            ctxt: 1
+          value: UserMenu
+          optional: false
+        imported: ~
+        isTypeOnly: false
+      - type: ImportSpecifier
+        span:
+          start: 20
+          end: 30
+          ctxt: 0
+        local:
+          type: Identifier
+          span:
+            start: 20
+            end: 30
+            ctxt: 1
+          value: UserAvatar
+          optional: false
+        imported: ~
+        isTypeOnly: false
+    source:
+      type: StringLiteral
+      span:
+        start: 38
+        end: 45
+        ctxt: 0
+      value: "./nav"
+      raw: "\"./nav\""
+    typeOnly: false
+    asserts: ~
+  - type: ExportDeclaration
+    span:
+      start: 48
+      end: 180
+      ctxt: 0
+    declaration:
+      async: false
+      body:
+        type: BlockStatement
+        span:
+          start: 78
+          end: 180
+          ctxt: 0
+        stmts:
+          - type: ReturnStatement
+            span:
+              start: 84
+              end: 178
+              ctxt: 0
+            argument:
+              type: ParenthesisExpression
+              span:
+                start: 91
+                end: 177
+                ctxt: 0
+              expression:
+                type: JSXElement
+                span:
+                  start: 101
+                  end: 171
+                  ctxt: 0
+                opening:
+                  type: JSXOpeningElement
+                  name:
+                    type: Identifier
+                    span:
+                      start: 102
+                      end: 105
+                      ctxt: 2
+                    value: div
+                    optional: false
+                  span:
+                    start: 101
+                    end: 106
+                    ctxt: 0
+                  attributes: []
+                  selfClosing: false
+                  typeArguments: ~
+                children:
+                  - type: JSXText
+                    span:
+                      start: 106
+                      end: 119
+                      ctxt: 0
+                    value: "\n\n            "
+                    raw: "\n\n            "
+                  - type: JSXElement
+                    span:
+                      start: 119
+                      end: 130
+                      ctxt: 0
+                    opening:
+                      type: JSXOpeningElement
+                      name:
+                        type: Identifier
+                        span:
+                          start: 120
+                          end: 128
+                          ctxt: 1
+                        value: UserMenu
+                        optional: false
+                      span:
+                        start: 119
+                        end: 130
+                        ctxt: 0
+                      attributes: []
+                      selfClosing: true
+                      typeArguments: ~
+                    children: []
+                    closing: ~
+                  - type: JSXText
+                    span:
+                      start: 130
+                      end: 143
+                      ctxt: 0
+                    value: "\n\n            "
+                    raw: "\n\n            "
+                  - type: JSXElement
+                    span:
+                      start: 143
+                      end: 156
+                      ctxt: 0
+                    opening:
+                      type: JSXOpeningElement
+                      name:
+                        type: Identifier
+                        span:
+                          start: 144
+                          end: 154
+                          ctxt: 1
+                        value: UserAvatar
+                        optional: false
+                      span:
+                        start: 143
+                        end: 156
+                        ctxt: 0
+                      attributes: []
+                      selfClosing: true
+                      typeArguments: ~
+                    children: []
+                    closing: ~
+                  - type: JSXText
+                    span:
+                      start: 156
+                      end: 165
+                      ctxt: 0
+                    value: "\n\n        "
+                    raw: "\n\n        "
+                closing:
+                  type: JSXClosingElement
+                  span:
+                    start: 165
+                    end: 171
+                    ctxt: 0
+                  name:
+                    type: Identifier
+                    span:
+                      start: 167
+                      end: 170
+                      ctxt: 2
+                    value: div
+                    optional: false
+      declare: false
+      decorators: []
+      generator: false
+      identifier:
+        type: Identifier
+        span:
+          start: 64
+          end: 75
+          ctxt: 1
+        value: UserMenuNew
+        optional: false
+      params: []
+      returnType: ~
+      span:
+        start: 55
+        end: 180
+        ctxt: 0
+      type: FunctionDeclaration
+      typeParameters: ~
+  - type: ExportNamedDeclaration
+    span:
+      start: 182
+      end: 226
+      ctxt: 0
+    specifiers:
+      - type: ExportSpecifier
+        span:
+          start: 191
+          end: 210
+          ctxt: 0
+        orig:
+          type: Identifier
+          span:
+            start: 191
+            end: 197
+            ctxt: 0
+          value: Header
+          optional: false
+        exported:
+          type: Identifier
+          span:
+            start: 201
+            end: 210
+            ctxt: 0
+          value: HeaderNew
+          optional: false
+        isTypeOnly: false
+    source:
+      type: StringLiteral
+      span:
+        start: 218
+        end: 225
+        ctxt: 0
+      value: "./nav"
+      raw: "\"./nav\""
+    typeOnly: false
+    asserts: ~
+  - type: ExportDeclaration
+    span:
+      start: 228
+      end: 346
+      ctxt: 0
+    declaration:
+      async: false
+      body:
+        type: BlockStatement
+        span:
+          start: 257
+          end: 346
+          ctxt: 0
+        stmts:
+          - type: ReturnStatement
+            span:
+              start: 263
+              end: 344
+              ctxt: 0
+            argument:
+              type: ParenthesisExpression
+              span:
+                start: 270
+                end: 343
+                ctxt: 0
+              expression:
+                type: JSXElement
+                span:
+                  start: 280
+                  end: 337
+                  ctxt: 0
+                opening:
+                  type: JSXOpeningElement
+                  name:
+                    type: Identifier
+                    span:
+                      start: 281
+                      end: 287
+                      ctxt: 2
+                    value: button
+                    optional: false
+                  span:
+                    start: 280
+                    end: 302
+                    ctxt: 0
+                  attributes:
+                    - type: JSXAttribute
+                      span:
+                        start: 288
+                        end: 301
+                        ctxt: 0
+                      name:
+                        type: Identifier
+                        span:
+                          start: 288
+                          end: 292
+                          ctxt: 0
+                        value: type
+                        optional: false
+                      value:
+                        type: StringLiteral
+                        span:
+                          start: 293
+                          end: 301
+                          ctxt: 0
+                        value: button
+                        raw: "\"button\""
+                  selfClosing: false
+                  typeArguments: ~
+                children:
+                  - type: JSXText
+                    span:
+                      start: 302
+                      end: 328
+                      ctxt: 0
+                    value: "\n\n            Back\n\n        "
+                    raw: "\n\n            Back\n\n        "
+                closing:
+                  type: JSXClosingElement
+                  span:
+                    start: 328
+                    end: 337
+                    ctxt: 0
+                  name:
+                    type: Identifier
+                    span:
+                      start: 330
+                      end: 336
+                      ctxt: 2
+                    value: button
+                    optional: false
+      declare: false
+      decorators: []
+      generator: false
+      identifier:
+        type: Identifier
+        span:
+          start: 244
+          end: 254
+          ctxt: 1
+        value: BackButton
+        optional: false
+      params: []
+      returnType: ~
+      span:
+        start: 235
+        end: 346
+        ctxt: 0
+      type: FunctionDeclaration
+      typeParameters: ~
+

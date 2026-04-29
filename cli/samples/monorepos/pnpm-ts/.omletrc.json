@@ -1,0 +1,10 @@
+{
+  "workspaces": {
+    "pack-a": {
+      "exports": "./src/index.tsx"
+    },
+    "pack-b": {
+      "exports": "./index.tsx"
+    }
+  }
+}

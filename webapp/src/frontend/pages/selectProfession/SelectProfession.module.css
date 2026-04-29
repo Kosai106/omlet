@@ -1,0 +1,58 @@
+.header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: var(--header-height);
+    padding: 0 var(--spacing-xxs);
+    background-color: var(--background-inverse-color);
+}
+
+.header button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 26px;
+    padding: 0 12px;
+    text-align: center;
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--label-inverse-color);
+    text-wrap: nowrap;
+}
+
+.main {
+    height: calc(100vh - var(--header-height));
+    width: 720px;
+    padding: 88px 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-m);
+}
+
+.main .pageLogo {
+    flex-shrink: 0;
+}
+
+.main .professions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-s);
+}
+
+.main .professions .h2 {
+    margin-bottom: 0;
+}
+
+.main .professions .description {
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--label-secondary-color);
+}
+
+.main .continueButton {
+    flex-shrink: 0;
+    align-self: flex-start;
+}
