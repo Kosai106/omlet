@@ -1,0 +1,109 @@
+.rawHtml {
+    display: flex;
+    height: calc(100vh - var(--header-height));
+}
+
+.rawHtml .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-s);
+    padding: 40px var(--spacing-xxl) 136px;
+    overflow: auto;
+}
+
+.rawHtml .titleBlock {
+    margin-bottom: var(--spacing-s);
+}
+
+.rawHtml .title {
+    margin-bottom: 4px;
+}
+
+.rawHtml .description {
+    max-width: 640px;
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--label-secondary-color);
+}
+
+.rawHtml .activeFilters {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+}
+
+.rawHtml .search {
+    width: 224px;
+}
+
+.rawHtml .editButton {
+    margin-left: auto;
+}
+
+.rawHtml .empty {
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--label-secondary-color);
+}
+
+.rawHtml .sortHeader {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font: inherit;
+    color: inherit;
+}
+
+.rawHtml .sortHeader:hover {
+    color: var(--label-primary-color);
+}
+
+.rawHtml .element {
+    font-family: var(--font-family-secondary);
+    color: var(--label-primary-color);
+}
+
+.rawHtml .elementColumn {
+    width: 160px;
+}
+
+.rawHtml .componentsColumn {
+    width: 120px;
+    text-align: right;
+    color: var(--label-secondary-color);
+}
+
+.rawHtml .projectsColumn {
+    width: 100px;
+    text-align: right;
+    color: var(--label-secondary-color);
+}
+
+.rawHtml .usesColumn {
+    width: 80px;
+    text-align: right;
+    color: var(--label-secondary-color);
+}
+
+.rawHtml .a11yColumn {
+    width: 90px;
+    text-align: right;
+    color: var(--label-secondary-color);
+}
+
+.rawHtml .replacementColumn {
+    width: 160px;
+    overflow: hidden;
+}
+
+.rawHtml .examplesColumn {
+    flex: 1;
+    overflow: hidden;
+    color: var(--label-secondary-color);
+}

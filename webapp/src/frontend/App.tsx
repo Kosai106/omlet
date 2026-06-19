@@ -39,6 +39,7 @@ import { Props } from "./pages/props/Props";
 import { DesignerQuickStart } from "./pages/quickStart/designerQuickStart/DesignerQuickStart";
 import { DeveloperQuickStart } from "./pages/quickStart/developerQuickStart/DeveloperQuickStart";
 import { QuickStart } from "./pages/quickStart/QuickStart";
+import { RawHtml } from "./pages/rawHtml/RawHtml";
 import { SavedChart } from "./pages/savedChart/SavedChart";
 import { SavedCharts } from "./pages/savedCharts/SavedCharts";
 import { SelectProfession } from "./pages/selectProfession/SelectProfession";
@@ -104,6 +105,7 @@ const router = createBrowserRouter(
                     <Route path=":componentSlug/:activeTab?" element={<ComponentDetail/>}/>
                 </Route>
                 <Route path="props" element={<Props/>}/>
+                <Route path="raw-html" element={<RawHtml/>}/>
                 <Route path="manage-tags" element={
                     <Navigate to="../components"/>
                 }/>

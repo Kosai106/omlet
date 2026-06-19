@@ -13,6 +13,7 @@ components:
     dependencies: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "typescript-examples:10a79ac7f9ba8a938acc612c8fe97dfb1652c573d2943fc64d7c34f2a7897cc3:Tool"
     name: Tool
     export_ids:
@@ -22,6 +23,7 @@ components:
     dependencies: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "typescript-examples:9ea5ff56776ce0c987cc818b44fd575b967797a972baca15e008fcc56f11cc23:MainComponent"
     name: MainComponent
     export_ids:
@@ -58,4 +60,9 @@ components:
     props: []
     html_elements:
       - div
+    html_element_usages:
+      - tag: div
+        count: 1
+        spans:
+          - "4:12-7:11"
 

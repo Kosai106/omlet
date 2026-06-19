@@ -31,6 +31,7 @@ import { type Invite } from "../models/Invite";
 import { type InviteResponse } from "../models/InviteResponse";
 import { type Member } from "../models/Member";
 import { type PaginatedResponse } from "../models/PaginatedResponse";
+import { type RawHtmlUsageResult } from "../models/RawHtmlUsageResult";
 import { type SavedChart } from "../models/SavedChart";
 import { type SharedPage } from "../models/SharedPage";
 import { type UnusedComponentPropResult } from "../models/UnusedComponentPropResult";
@@ -537,6 +538,27 @@ export async function getComponentPropsUsage(workspaceSlug: string, params: { li
     }
     const response = await http.get(url.toString(), { signal });
     return handleResponse<ComponentPropUsageResult[]>(response);
+}
+
+export async function getRawHtmlUsage(workspaceSlug: string, params: { limit?: number; } = {}, signal?: AbortSignal): Promise<RawHtmlUsageResult[]> {
+    const url = new URL(`${base}/workspaces/${workspaceSlug}/raw-html-usage`, config.APP_BASE_URL);
+    if ("limit" in params && params.limit !== undefined) {
+        url.searchParams.set("limit", params.limit.toString());
+    }
+    const response = await http.get(url.toString(), { signal });
+    return handleResponse<RawHtmlUsageResult[]>(response);
+}
+
+export async function getComponentNames(workspaceSlug: string, signal?: AbortSignal): Promise<string[]> {
+    const response = await http.get(`${base}/workspaces/${workspaceSlug}/component-names`, { signal });
+    return handleResponse<string[]>(response);
+}
+
+export async function updateHtmlElementMap(workspaceSlug: string, htmlElementMap: Record<string, string>): Promise<{ workspace: Workspace; accessLevel: AccessLevel; }> {
+    const response = await http.put(`${base}/workspaces/${workspaceSlug}/html-element-map`, { htmlElementMap });
+
+    const { workspace, accessLevel } = await handleResponse<{ workspace: RawWorkspace; accessLevel: AccessLevel; }>(response);
+    return { workspace: transformWorkspace(workspace), accessLevel };
 }
 
 interface AuthRequestParams {

@@ -3,6 +3,7 @@ import { Types as MongooseTypes } from "mongoose";
 import { getColorMap, getNextColor, USER_DEFINED_TAG_COLORS } from "../../../common/colorUtils";
 import { type FilterDataType } from "../../../common/models/FilterDataType";
 import { FilterOperation } from "../../../common/models/FilterOperation";
+import { DEFAULT_HTML_ELEMENT_MAP } from "../../../common/models/htmlElementMap";
 import { generateSlug } from "../../../common/utils";
 import { config } from "../../../config/backend";
 import {
@@ -270,6 +271,7 @@ export class Workspace {
     }[];
     projects: Project[];
     tags: ComponentTag[];
+    htmlElementMap: Record<string, string>;
     createdAt: Date;
     numOfComponents: number;
 
@@ -282,6 +284,7 @@ export class Workspace {
         this.members = props.members.map(member => ({ user: member.user.toHexString(), joinedAt: member.joinedAt }));
         this.projects = props.projects.map(project => Project.fromDoc(project));
         this.tags = props.tags.map(tag => ComponentTag.fromDoc(tag));
+        this.htmlElementMap = props.htmlElementMap ?? {};
         this.createdAt = props.createdAt;
         this.numOfComponents = props.numOfComponents;
     }
@@ -340,6 +343,7 @@ export class Workspace {
             createdBy: this.createdBy,
             projects: this.projects.map(project => project.toResponse()),
             tags: this.tagsToResponse(),
+            htmlElementMap: { ...DEFAULT_HTML_ELEMENT_MAP, ...this.htmlElementMap },
             numOfMembers: this.members.length,
             numOfComponents: this.numOfComponents,
             numOfAnalyses: await getAnalysisCountForWorkspace(this.id),
@@ -1228,6 +1232,23 @@ export async function updateProjectName(workspace: Workspace, projectName: strin
             arrayFilters: [{ "project.name": projectName }],
             new: true,
         }
+    ).exec())!);
+}
+
+export async function updateHtmlElementMap(workspace: Workspace, htmlElementMap: Record<string, string>): Promise<Workspace> {
+    // Drop blank keys; keep blank values (a blank value suppresses a default suggestion).
+    const sanitized: Record<string, string> = {};
+    for (const [element, replacement] of Object.entries(htmlElementMap)) {
+        const key = element.trim();
+        if (key !== "") {
+            sanitized[key] = replacement.trim();
+        }
+    }
+
+    return Workspace.fromDoc((await WorkspaceModel.findByIdAndUpdate(
+        workspace.id,
+        { $set: { htmlElementMap: sanitized } },
+        { new: true }
     ).exec())!);
 }
 

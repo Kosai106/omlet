@@ -33,6 +33,7 @@ import {
     type ComponentPropUsageResult,
     type ComponentUsagesResult,
     type DataAnalysisFilter,
+    type RawHtmlUsageResult,
     type UnusedComponentPropResult,
     ComponentNotFound,
     ComponentSortKey,
@@ -41,8 +42,10 @@ import {
     analyseTimeSeriesDataAsChartData,
     analyseTimeSeriesDataAsCSV,
     findLatestComponentsByDefinitionId,
+    getComponentNames,
     getComponentProps,
     getComponentPropsUsage,
+    getRawHtmlUsage,
     getComponentUsagesWithParentComponent,
     getCustomProperties,
     getDependenciesFor,
@@ -124,6 +127,7 @@ import {
     TagNotFound,
     TreeNode,
     updateCoreTag,
+    updateHtmlElementMap,
     updateProjectName,
     updateTag,
     type UpdateTagParams,
@@ -1248,6 +1252,51 @@ apiRouter.put("/workspaces/:workspaceSlug/projects/:projectName",
             }
             if (error instanceof ProjectAliasAlreadyExists) {
                 throw new ClientError(httpStatus.CONFLICT, ErrorResponseCode.PROJECT_ALIAS_ALREADY_EXISTS);
+            }
+
+            throw error;
+        }
+    }
+);
+
+apiRouter.put("/workspaces/:workspaceSlug/html-element-map",
+    authMiddleware(),
+    requestValidator({
+        params: {
+            schema: joi.object({
+                workspaceSlug: joi.string(),
+            }),
+        },
+        body: {
+            schema: joi.object({
+                htmlElementMap: joi.object().pattern(joi.string(), joi.string().allow("")),
+            }),
+        },
+    }),
+    async (req: Request<{ workspaceSlug: string; }, {}, { htmlElementMap: Record<string, string>; }>, res: Response) => {
+        try {
+            const {
+                auth,
+                params: {
+                    workspaceSlug,
+                },
+                body: {
+                    htmlElementMap,
+                },
+            } = req;
+
+            const workspace = await getWorkspaceIfAuthorized(workspaceSlug, UserPermission.WRITE, { auth });
+            const updatedWorkspace = await updateHtmlElementMap(workspace, htmlElementMap);
+            const accessLevel = workspace.getAccessLevel(auth);
+            await setWorkspaceDataRevisionId(workspace.id, generateWorkspaceDataRevisionId());
+
+            res.status(httpStatus.OK).json({
+                workspace: await updatedWorkspace.toResponse(),
+                accessLevel,
+            });
+        } catch (error) {
+            if (error instanceof WorkspaceNotFound || error instanceof MemberNotFound) {
+                throw new ClientError(httpStatus.NOT_FOUND, ErrorResponseCode.WORKSPACE_NOT_FOUND);
             }
 
             throw error;
@@ -2568,6 +2617,139 @@ apiRouter.get("/workspaces/:workspaceSlug/component-props",
             result.forEach(item => {
                 item.component.packageName = projectMap[item.component.packageName]?.alias ?? item.component.packageName;
             });
+
+            res.status(httpStatus.OK)
+                .set("ETag", computedEtag)
+                .set("Cache-Control", "private")
+                .json(result);
+        } catch (error) {
+            if (error instanceof WorkspaceNotFound || error instanceof MemberNotFound) {
+                throw new ClientError(httpStatus.NOT_FOUND, ErrorResponseCode.WORKSPACE_NOT_FOUND);
+            }
+
+            throw error;
+        }
+    }
+);
+
+apiRouter.get("/workspaces/:workspaceSlug/raw-html-usage",
+    authMiddleware({ credentialsRequired: false }),
+    publicAuthMiddleware(),
+    requestValidator({
+        params: {
+            schema: joi.object({
+                workspaceSlug: joi.string(),
+            }),
+        },
+        query: {
+            schema: joi.object({
+                limit: joi.number().optional(),
+            }),
+        },
+    }),
+    async (
+        req: Request<{ workspaceSlug: string; }, {}, {}, { limit?: string; }>,
+        res: Response<RawHtmlUsageResult[] | ClientError>
+    ) => {
+        try {
+            const {
+                auth,
+                publicAuth,
+                params: {
+                    workspaceSlug,
+                },
+                query: {
+                    limit,
+                },
+            } = req;
+
+            const workspace = await getWorkspaceIfAuthorized(workspaceSlug, UserPermission.READ, { auth, publicAuth });
+
+            const dataRevisionId = await getWorkspaceDataRevisionId(workspace.id);
+            const computedEtag = etag(JSON.stringify({
+                cacheVersion: COMPONENTS_ETAG_CACHE_VERSION,
+                workspaceId: workspace.id,
+                dataRevisionId,
+                url: req.originalUrl,
+            }));
+
+            const clientEtag = req.get("If-None-Match");
+            if (clientEtag === computedEtag) {
+                return res.status(httpStatus.NOT_MODIFIED)
+                    .set("ETag", computedEtag)
+                    .set("Cache-Control", "private")
+                    .set("Content-Type", "application/json")
+                    .send();
+            }
+
+            const result = await getRawHtmlUsage(workspace.id, {
+                limit: limit ? Number.parseInt(limit) : undefined,
+                htmlElementMap: workspace.htmlElementMap,
+            });
+            const projectMap = Object.fromEntries(workspace.projects.map(p => [p.packageName, p]));
+            result.forEach(item => {
+                item.components.forEach(component => {
+                    component.packageName = projectMap[component.packageName]?.alias ?? component.packageName;
+                });
+            });
+
+            res.status(httpStatus.OK)
+                .set("ETag", computedEtag)
+                .set("Cache-Control", "private")
+                .json(result);
+        } catch (error) {
+            if (error instanceof WorkspaceNotFound || error instanceof MemberNotFound) {
+                throw new ClientError(httpStatus.NOT_FOUND, ErrorResponseCode.WORKSPACE_NOT_FOUND);
+            }
+
+            throw error;
+        }
+    }
+);
+
+apiRouter.get("/workspaces/:workspaceSlug/component-names",
+    authMiddleware({ credentialsRequired: false }),
+    publicAuthMiddleware(),
+    requestValidator({
+        params: {
+            schema: joi.object({
+                workspaceSlug: joi.string(),
+            }),
+        },
+    }),
+    async (
+        req: Request<{ workspaceSlug: string; }>,
+        res: Response<string[] | ClientError>
+    ) => {
+        try {
+            const {
+                auth,
+                publicAuth,
+                params: {
+                    workspaceSlug,
+                },
+            } = req;
+
+            const workspace = await getWorkspaceIfAuthorized(workspaceSlug, UserPermission.READ, { auth, publicAuth });
+
+            const dataRevisionId = await getWorkspaceDataRevisionId(workspace.id);
+            const computedEtag = etag(JSON.stringify({
+                cacheVersion: COMPONENTS_ETAG_CACHE_VERSION,
+                workspaceId: workspace.id,
+                dataRevisionId,
+                url: req.originalUrl,
+            }));
+
+            const clientEtag = req.get("If-None-Match");
+            if (clientEtag === computedEtag) {
+                return res.status(httpStatus.NOT_MODIFIED)
+                    .set("ETag", computedEtag)
+                    .set("Cache-Control", "private")
+                    .set("Content-Type", "application/json")
+                    .send();
+            }
+
+            const result = await getComponentNames(workspace.id);
 
             res.status(httpStatus.OK)
                 .set("ETag", computedEtag)

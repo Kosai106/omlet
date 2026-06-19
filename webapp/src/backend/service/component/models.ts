@@ -45,6 +45,16 @@ export interface ComponentPropDoc {
     };
 }
 
+export interface HtmlElementUsageDoc {
+    tag: string;
+    count: number;
+    spans: {
+        start: CharacterPosition;
+        end: CharacterPosition;
+        issues: string[];
+    }[];
+}
+
 export interface ComponentDoc {
     _id: Types.ObjectId;
     definitionId: string;
@@ -56,6 +66,8 @@ export interface ComponentDoc {
     updatedAt?: Date;
     numOfDependencies: number;
     props: ComponentPropDoc[];
+    htmlElements: string[];
+    htmlElementUsages: HtmlElementUsageDoc[];
     span?: {
         start: CharacterPosition;
         end: CharacterPosition;
@@ -228,6 +240,18 @@ const ComponentSchema = new Schema<ComponentDoc>({
             start: CharacterPositionSchema,
             end: CharacterPositionSchema,
         },
+    }],
+    htmlElements: { type: [String], default: [] },
+    htmlElementUsages: [{
+        _id: false,
+        tag: { type: String, required: true },
+        count: { type: Number, required: true },
+        spans: [{
+            _id: false,
+            start: CharacterPositionSchema,
+            end: CharacterPositionSchema,
+            issues: { type: [String], default: [] },
+        }],
     }],
     span: {
         start: CharacterPositionSchema,
@@ -941,6 +965,7 @@ ComponentSchema.static("createWorkspaceIndex", async function ({
                         numOfDependencies: 1,
                         createdAt: 1,
                         updatedAt: 1,
+                        htmlElements: 1,
                         metadata: 1,
                     },
                 }],
@@ -1169,7 +1194,7 @@ export const ComponentExportIdsModel = model<ComponentExportIdsDoc, ComponentExp
 type HistoricComponentIndexEntry = {
     definitionId: string;
     originalDefinitionIds: string[];
-    component: Pick<ComponentDoc, "definitionId" | "name" | "path" | "packageName" | "isInternal" | "numOfDependencies" | "createdAt" | "updatedAt" | "metadata"> & {
+    component: Pick<ComponentDoc, "definitionId" | "name" | "path" | "packageName" | "isInternal" | "numOfDependencies" | "createdAt" | "updatedAt" | "htmlElements" | "metadata"> & {
         _id: Types.ObjectId;
         tags: string[];
     };
@@ -1212,6 +1237,7 @@ const HistoricComponentIndexSchema = new Schema<HistoricComponentIndexDoc>({
                 numOfDependencies: { type: Number, required: true },
                 createdAt: { type: Date, required: false },
                 updatedAt: { type: Date, required: false },
+                htmlElements: { type: [String], default: [] },
                 metadata: Schema.Types.Mixed,
             },
             tags: [String],

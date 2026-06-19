@@ -13,6 +13,7 @@ components:
     dependencies: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "color:b8ec40cbfba161d2088254bebb62061d06108948206a10fd6eaddaa2b827bb6c:SubDivider"
     name: SubDivider
     export_ids:
@@ -39,6 +40,19 @@ components:
       - div
       - h1
       - p
+    html_element_usages:
+      - tag: div
+        count: 1
+        spans:
+          - "5:9-9:15"
+      - tag: h1
+        count: 1
+        spans:
+          - "6:13-6:35"
+      - tag: p
+        count: 1
+        spans:
+          - "8:13-8:46"
   - definition_id: "color:036d3f1c984043aaf44fd9519371d17afcc29dfa5e457044e017a312d9c92ff1:SimpleDividerComponent"
     name: SimpleDividerComponent
     export_ids:
@@ -80,3 +94,17 @@ components:
       - div
       - h1
       - p
+    html_element_usages:
+      - tag: div
+        count: 1
+        spans:
+          - "5:9-10:11"
+      - tag: h1
+        count: 1
+        spans:
+          - "6:13-6:27"
+      - tag: p
+        count: 1
+        spans:
+          - "9:9-9:47"
+

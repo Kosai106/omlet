@@ -16,6 +16,11 @@ components:
         default_value: NONE
     html_elements:
       - span
+    html_element_usages:
+      - tag: span
+        count: 1
+        spans:
+          - "6:12-6:30"
   - definition_id: "props:d4ed3e0b5c1ea420770fc778f6cf89209fc1e196e16dd62d66afa8f2db271551:default"
     name: defaultExportArrow
     export_ids:
@@ -28,6 +33,11 @@ components:
         default_value: NONE
     html_elements:
       - span
+    html_element_usages:
+      - tag: span
+        count: 1
+        spans:
+          - "1:30-1:48"
   - definition_id: "props:165d96dfac01c77ed3a146c631b75a21ca343b05e62db5d8dfe32189b76a425c:ComponentWithDefaultProps"
     name: ComponentWithDefaultProps
     export_ids:
@@ -84,6 +94,16 @@ components:
     html_elements:
       - button
       - span
+    html_element_usages:
+      - tag: button
+        count: 1
+        spans:
+          - "53:9-55:18"
+      - tag: span
+        count: 2
+        spans:
+          - "16:17-16:34"
+          - "40:28-40:44"
   - definition_id: "props:c23854b2d4066c5623c91388c0dc70e5be9cd148d0e5dde1380953103363babb:Button"
     name: Button
     export_ids:
@@ -102,6 +122,11 @@ components:
         default_value: "String { value: \"primary\" }"
     html_elements:
       - button
+    html_element_usages:
+      - tag: button
+        count: 1
+        spans:
+          - "11:9-15:18"
   - definition_id: "props:c23854b2d4066c5623c91388c0dc70e5be9cd148d0e5dde1380953103363babb:ButtonWithArrowFunction"
     name: ButtonWithArrowFunction
     export_ids:
@@ -120,6 +145,11 @@ components:
         default_value: "String { value: \"primary\" }"
     html_elements:
       - button
+    html_element_usages:
+      - tag: button
+        count: 1
+        spans:
+          - "28:5-32:14"
   - definition_id: "props:c23854b2d4066c5623c91388c0dc70e5be9cd148d0e5dde1380953103363babb:ButtonWithFunctionExpression"
     name: ButtonWithFunctionExpression
     export_ids:
@@ -138,6 +168,11 @@ components:
         default_value: "String { value: \"primary\" }"
     html_elements:
       - button
+    html_element_usages:
+      - tag: button
+        count: 1
+        spans:
+          - "45:9-49:18"
   - definition_id: "props:05604564ac2198cd4223d15b600f318a2e1afa116a9041686ae168e89105e8db:ComponentWithRest"
     name: ComponentWithRest
     export_ids:
@@ -156,6 +191,11 @@ components:
         default_value: NONE
     html_elements:
       - button
+    html_element_usages:
+      - tag: button
+        count: 1
+        spans:
+          - "37:9-41:18"
   - definition_id: "props:05604564ac2198cd4223d15b600f318a2e1afa116a9041686ae168e89105e8db:DestructInBody"
     name: DestructInBody
     export_ids:
@@ -174,6 +214,11 @@ components:
         default_value: "String { value: \"primary\" }"
     html_elements:
       - button
+    html_element_usages:
+      - tag: button
+        count: 1
+        spans:
+          - "12:9-16:18"
   - definition_id: "props:05604564ac2198cd4223d15b600f318a2e1afa116a9041686ae168e89105e8db:MemberInBody"
     name: MemberInBody
     export_ids:
@@ -190,6 +235,11 @@ components:
         default_value: NONE
     html_elements:
       - button
+    html_element_usages:
+      - tag: button
+        count: 1
+        spans:
+          - "22:9-26:18"
   - definition_id: "props:05604564ac2198cd4223d15b600f318a2e1afa116a9041686ae168e89105e8db:MultipleDestruct"
     name: MultipleDestruct
     export_ids:
@@ -206,6 +256,11 @@ components:
         default_value: "String { value: \"primary\" }"
     html_elements:
       - button
+    html_element_usages:
+      - tag: button
+        count: 1
+        spans:
+          - "48:9-52:18"
   - definition_id: "props:0756023d354d569f2e04e76b39dc7a535c7a3bd071c237ee0fadf3f0ebea3978:ParentComponent"
     name: ParentComponent
     export_ids:
@@ -230,6 +285,7 @@ components:
                     value: "String { value: \"indirect-usage\" }"
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "props:ba066cad0a50c562b8d6c5b3e059892da93b459fa83843afc6a5734d530d83fe:IndirectParent"
     name: IndirectParent
     export_ids:
@@ -263,6 +319,7 @@ components:
                     value: "String { value: \"direct-usage\" }"
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "props:ba066cad0a50c562b8d6c5b3e059892da93b459fa83843afc6a5734d530d83fe:ParentComponent"
     name: ParentComponent
     export_ids:
@@ -402,3 +459,9 @@ components:
     props: []
     html_elements:
       - span
+    html_element_usages:
+      - tag: span
+        count: 1
+        spans:
+          - "25:28-25:44"
+

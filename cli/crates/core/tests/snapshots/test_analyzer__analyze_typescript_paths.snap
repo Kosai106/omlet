@@ -15,6 +15,11 @@ components:
     props: []
     html_elements:
       - button
+    html_element_usages:
+      - tag: button
+        count: 1
+        spans:
+          - "2:12-2:37"
   - definition_id: "typescript-paths:f48f480d7d76f72ade8670fc4ff78cfc64d83301df503aa7b77eca9c5c94488a:default"
     name: PackBMain
     export_ids:
@@ -25,6 +30,11 @@ components:
     props: []
     html_elements:
       - img
+    html_element_usages:
+      - tag: img
+        count: 1
+        spans:
+          - "2:12-2:18 [img-missing-alt]"
   - definition_id: "typescript-paths:b13abac09964a1ee70ff0c476cfdeeae8a689b0b450084718cb490eb0ea6ee58:default"
     name: PackBTitle
     export_ids:
@@ -35,6 +45,11 @@ components:
     props: []
     html_elements:
       - h1
+    html_element_usages:
+      - tag: h1
+        count: 1
+        spans:
+          - "2:12-2:32"
   - definition_id: "typescript-paths:3e2c389f6ff62ecfbb815cda8e2af58ba3e35ec4a49a974bf699f4d8f59908c0:default"
     name: Input
     export_ids:
@@ -45,6 +60,11 @@ components:
     props: []
     html_elements:
       - input
+    html_element_usages:
+      - tag: input
+        count: 1
+        spans:
+          - "2:12-2:27"
   - definition_id: "typescript-paths:25a6634263c1b1f6fc4697a04e2b9904ea4b042a89af59dc93ec1f5d44848a26:App"
     name: App
     export_ids:
@@ -108,6 +128,7 @@ components:
                 props: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "typescript-paths:25a6634263c1b1f6fc4697a04e2b9904ea4b042a89af59dc93ec1f5d44848a26:Applet"
     name: Applet
     export_ids:
@@ -131,4 +152,5 @@ components:
                 props: []
     props: []
     html_elements: []
+    html_element_usages: []
 

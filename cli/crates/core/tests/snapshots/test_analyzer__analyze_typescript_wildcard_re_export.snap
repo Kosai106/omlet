@@ -12,6 +12,7 @@ components:
     dependencies: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "typescript-examples:a27c8fd3b817b5f767fe871eb326a8b4cab33cf4a6f8a8e868fbe77e7ebd9428:App"
     name: App
     export_ids:
@@ -52,6 +53,11 @@ components:
     props: []
     html_elements:
       - div
+    html_element_usages:
+      - tag: div
+        count: 1
+        spans:
+          - "5:9-8:15"
   - definition_id: "typescript-examples:389da781ceac91e86a3571b7c7d2698ee0b3581947f45eaa0b8dc6847e8c98e2:Accordion"
     name: Accordion
     export_ids:
@@ -64,4 +70,9 @@ components:
     props: []
     html_elements:
       - div
+    html_element_usages:
+      - tag: div
+        count: 1
+        spans:
+          - "3:12-3:32"
 

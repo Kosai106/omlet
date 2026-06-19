@@ -28,5 +28,15 @@ export type Component = {
         start: CharacterPosition;
         end: CharacterPosition;
     };
+    html_elements?: string[];
+    html_element_usages?: {
+        tag: string;
+        count: number;
+        spans: {
+            start: CharacterPosition;
+            end: CharacterPosition;
+            issues: string[];
+        }[];
+    }[];
     metadata?: Record<string, string | boolean | number | Date>;
 };

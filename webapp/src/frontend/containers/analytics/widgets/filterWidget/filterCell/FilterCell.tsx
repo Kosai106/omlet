@@ -55,6 +55,7 @@ function getDefaultOperation(filterType: FilterType): FilterOperation {
         case FilterType.ProjectDefined:
         case FilterType.ProjectUsedIn:
         case FilterType.Tag:
+        case FilterType.UsesRawElement:
         case FilterType.Name:
             return FilterOperation.Equals;
         case FilterType.FilePath:
@@ -122,7 +123,10 @@ export function FilterCell({
     const projectOptions = [...projects.map(getProjectOption)];
     const internalProjectOptions = [...projects.filter(({ isInternal }) => isInternal).map(getProjectOption)];
     const tagOptions = [...tags.map(getTagOption)];
-    const typeOptions = Object.values(FilterType).filter(type => type !== FilterType.CustomProperty).map(getFilterTypeOption);
+    // UsesRawElement is a Components-page filter only; its value options aren't wired here.
+    const typeOptions = Object.values(FilterType)
+        .filter(type => type !== FilterType.CustomProperty && type !== FilterType.UsesRawElement)
+        .map(getFilterTypeOption);
 
     function getDefaultOptions() {
         if (type === FilterType.ProjectDefined) {

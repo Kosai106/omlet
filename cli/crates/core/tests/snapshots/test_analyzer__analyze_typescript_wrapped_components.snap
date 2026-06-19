@@ -13,6 +13,7 @@ components:
     dependencies: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "react-intl:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:IntlLabel"
     name: IntlLabel
     export_ids: []
@@ -21,6 +22,7 @@ components:
     dependencies: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "typescript-examples:baa31a9b47e720c8fd4c2c02751ba309ee07334eacc3e0e0fb899f0d28c3b2e3:PlainComponent"
     name: PlainComponent
     export_ids:
@@ -44,6 +46,11 @@ components:
     props: []
     html_elements:
       - div
+    html_element_usages:
+      - tag: div
+        count: 1
+        spans:
+          - "8:12-10:11"
   - definition_id: "typescript-examples:baa31a9b47e720c8fd4c2c02751ba309ee07334eacc3e0e0fb899f0d28c3b2e3:WrappedComponent"
     name: WrappedComponent
     export_ids:
@@ -54,6 +61,11 @@ components:
     props: []
     html_elements:
       - div
+    html_element_usages:
+      - tag: div
+        count: 1
+        spans:
+          - "4:12-4:23"
   - definition_id: "typescript-examples:fd775f3e8cc1846eec57ce3c17a0cfd9e91132918e2616cbe37f5c154188c157:Wrapped"
     name: Wrapped
     export_ids:
@@ -64,6 +76,11 @@ components:
     props: []
     html_elements:
       - div
+    html_element_usages:
+      - tag: div
+        count: 1
+        spans:
+          - "1:49-1:71"
   - definition_id: "typescript-examples:fd775f3e8cc1846eec57ce3c17a0cfd9e91132918e2616cbe37f5c154188c157:WrappedFromWrapperWithComponentArg"
     name: WrappedFromWrapperWithComponentArg
     export_ids:
@@ -74,6 +91,12 @@ components:
     props: []
     html_elements:
       - div
+    html_element_usages:
+      - tag: div
+        count: 2
+        spans:
+          - "1:49-1:71"
+          - "7:60-7:78"
   - definition_id: "typescript-examples:fd775f3e8cc1846eec57ce3c17a0cfd9e91132918e2616cbe37f5c154188c157:WrappedWithComponentArg"
     name: WrappedWithComponentArg
     export_ids:
@@ -84,6 +107,12 @@ components:
     props: []
     html_elements:
       - div
+    html_element_usages:
+      - tag: div
+        count: 2
+        spans:
+          - "1:49-1:71"
+          - "5:54-5:72"
   - definition_id: "typescript-examples:fd775f3e8cc1846eec57ce3c17a0cfd9e91132918e2616cbe37f5c154188c157:WrappedWithComponentArgFromWrapperWithComponentArg"
     name: WrappedWithComponentArgFromWrapperWithComponentArg
     export_ids:
@@ -94,6 +123,13 @@ components:
     props: []
     html_elements:
       - div
+    html_element_usages:
+      - tag: div
+        count: 3
+        spans:
+          - "1:49-1:71"
+          - "7:60-7:78"
+          - "9:97-9:115"
   - definition_id: "typescript-examples:eb4db0f8d55b445b4e092e919cbe2696218184a09739885388ec8760d37d4a8d:Button"
     name: Button
     export_ids:
@@ -103,6 +139,7 @@ components:
     dependencies: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "typescript-examples:eb4db0f8d55b445b4e092e919cbe2696218184a09739885388ec8760d37d4a8d:ComponentWrappedByObjectAssign"
     name: ComponentWrappedByObjectAssign
     export_ids:
@@ -135,6 +172,15 @@ components:
     html_elements:
       - div
       - ul
+    html_element_usages:
+      - tag: div
+        count: 1
+        spans:
+          - "27:12-27:57"
+      - tag: ul
+        count: 1
+        spans:
+          - "41:9-45:14"
   - definition_id: "typescript-examples:eb4db0f8d55b445b4e092e919cbe2696218184a09739885388ec8760d37d4a8d:CopperSimpleComponent"
     name: CopperSimpleComponent
     export_ids:
@@ -160,6 +206,11 @@ components:
     props: []
     html_elements:
       - div
+    html_element_usages:
+      - tag: div
+        count: 1
+        spans:
+          - "23:12-23:57"
   - definition_id: "typescript-examples:eb4db0f8d55b445b4e092e919cbe2696218184a09739885388ec8760d37d4a8d:HoveringComponent"
     name: HoveringComponent
     export_ids:
@@ -170,6 +221,11 @@ components:
     props: []
     html_elements:
       - img
+    html_element_usages:
+      - tag: img
+        count: 1
+        spans:
+          - "6:12-6:18 [img-missing-alt]"
   - definition_id: "typescript-examples:eb4db0f8d55b445b4e092e919cbe2696218184a09739885388ec8760d37d4a8d:IntlComponent"
     name: IntlComponent
     export_ids:
@@ -180,6 +236,11 @@ components:
     props: []
     html_elements:
       - img
+    html_element_usages:
+      - tag: img
+        count: 1
+        spans:
+          - "6:12-6:18 [img-missing-alt]"
   - definition_id: "typescript-examples:eb4db0f8d55b445b4e092e919cbe2696218184a09739885388ec8760d37d4a8d:SampleComponent"
     name: SampleComponent
     export_ids:
@@ -214,6 +275,11 @@ components:
         default_value: NONE
     html_elements:
       - ul
+    html_element_usages:
+      - tag: ul
+        count: 1
+        spans:
+          - "41:9-45:14"
   - definition_id: "typescript-examples:eb4db0f8d55b445b4e092e919cbe2696218184a09739885388ec8760d37d4a8d:StyledWrappedComponent"
     name: StyledWrappedComponent
     export_ids:
@@ -229,6 +295,11 @@ components:
     props: []
     html_elements:
       - ul
+    html_element_usages:
+      - tag: ul
+        count: 1
+        spans:
+          - "41:9-45:14"
   - definition_id: "typescript-examples:eb4db0f8d55b445b4e092e919cbe2696218184a09739885388ec8760d37d4a8d:WrappedCopperClassComponent"
     name: WrappedCopperClassComponent
     export_ids:
@@ -254,6 +325,11 @@ components:
     props: []
     html_elements:
       - div
+    html_element_usages:
+      - tag: div
+        count: 1
+        spans:
+          - "32:16-32:61"
   - definition_id: "typescript-examples:eb4db0f8d55b445b4e092e919cbe2696218184a09739885388ec8760d37d4a8d:WrappedCopperComponent"
     name: WrappedCopperComponent
     export_ids:
@@ -280,6 +356,11 @@ components:
     props: []
     html_elements:
       - div
+    html_element_usages:
+      - tag: div
+        count: 1
+        spans:
+          - "27:12-27:57"
   - definition_id: "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:AnonymousWrappedComponent"
     name: AnonymousWrappedComponent
     export_ids:
@@ -318,6 +399,11 @@ components:
     props: []
     html_elements:
       - div
+    html_element_usages:
+      - tag: div
+        count: 1
+        spans:
+          - "38:12-38:64"
   - definition_id: "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:ComponentWithClassWrapperJsx"
     name: ComponentWithClassWrapperJsx
     export_ids:
@@ -333,6 +419,7 @@ components:
             usages: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:ComponentWithClassWrapperNoJsx"
     name: ComponentWithClassWrapperNoJsx
     export_ids:
@@ -348,6 +435,7 @@ components:
             usages: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:ComponentWithExternalWrapper"
     name: ComponentWithExternalWrapper
     export_ids:
@@ -363,6 +451,7 @@ components:
             usages: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:ComponentWithIntl"
     name: ComponentWithIntl
     export_ids:
@@ -401,6 +490,11 @@ components:
     props: []
     html_elements:
       - div
+    html_element_usages:
+      - tag: div
+        count: 1
+        spans:
+          - "16:12-16:66"
   - definition_id: "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:ComponentWithWrapperJsx"
     name: ComponentWithWrapperJsx
     export_ids:
@@ -416,6 +510,7 @@ components:
             usages: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:ComponentWithWrapperNoJsx"
     name: ComponentWithWrapperNoJsx
     export_ids:
@@ -431,6 +526,7 @@ components:
             usages: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:ExternalComponentWithWrapperJsx"
     name: ExternalComponentWithWrapperJsx
     export_ids:
@@ -446,6 +542,7 @@ components:
             usages: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:LocalComponentWithClassWrapperJsx"
     name: LocalComponentWithClassWrapperJsx
     export_ids:
@@ -461,6 +558,11 @@ components:
     props: []
     html_elements:
       - div
+    html_element_usages:
+      - tag: div
+        count: 1
+        spans:
+          - "16:12-16:66"
   - definition_id: "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:LocalComponentWithClassWrapperNoJsx"
     name: LocalComponentWithClassWrapperNoJsx
     export_ids:
@@ -476,6 +578,11 @@ components:
     props: []
     html_elements:
       - div
+    html_element_usages:
+      - tag: div
+        count: 1
+        spans:
+          - "16:12-16:66"
   - definition_id: "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:LocalComponentWithExternalWrapper"
     name: LocalComponentWithExternalWrapper
     export_ids:
@@ -491,6 +598,11 @@ components:
     props: []
     html_elements:
       - div
+    html_element_usages:
+      - tag: div
+        count: 1
+        spans:
+          - "16:12-16:66"
   - definition_id: "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:LocalComponentWithWrapperJsx"
     name: LocalComponentWithWrapperJsx
     export_ids:
@@ -506,6 +618,11 @@ components:
     props: []
     html_elements:
       - div
+    html_element_usages:
+      - tag: div
+        count: 1
+        spans:
+          - "16:12-16:66"
   - definition_id: "typescript-examples:a9e1043e1cd6b4412c5b716fbcd6f43754a478a1df8a36e1b93fc37e664c60fd:LocalComponentWithWrapperNoJsx"
     name: LocalComponentWithWrapperNoJsx
     export_ids:
@@ -521,3 +638,9 @@ components:
     props: []
     html_elements:
       - div
+    html_element_usages:
+      - tag: div
+        count: 1
+        spans:
+          - "16:12-16:66"
+

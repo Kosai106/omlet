@@ -220,6 +220,16 @@ export function intoDataAnalysisFilter(filters: Partial<Filter>[] = []): DataAna
             }
         }
 
+        if (filter.type === FilterType.UsesRawElement) {
+            if (validOperations.includes(filter.operation)) {
+                result.usesRawElement ??= [];
+                result.usesRawElement.push({
+                    operation: filter.operation,
+                    values: filter.value,
+                } as APIEqualityFilter);
+            }
+        }
+
         if (filter.type === FilterType.NumberOfUsages) {
             if (validOperations.includes(filter.operation)) {
                 result.numOfUsages ??= [];
@@ -339,6 +349,8 @@ export function intoTagFilterField(filter: Filter): string {
             return "usingComponents.length";
         case FilterType.NumberOfDependencies:
             return "component.numOfDependencies";
+        case FilterType.UsesRawElement:
+            return "component.htmlElements";
         case FilterType.CustomProperty:
             return `component.${filter.field}`;
     }
@@ -349,6 +361,7 @@ export function getFilterDataType(filter: Filter): FilterDataType {
         case FilterType.ProjectDefined:
         case FilterType.ProjectUsedIn:
         case FilterType.Tag:
+        case FilterType.UsesRawElement:
         case FilterType.Name:
         case FilterType.FilePath:
             return FilterDataType.String;
@@ -405,6 +418,7 @@ export function getValidFilterTypeOperations(type: FilterType): ReadonlyArray<Fi
         case FilterType.ProjectDefined:
         case FilterType.ProjectUsedIn:
         case FilterType.Tag:
+        case FilterType.UsesRawElement:
             return equalityFilterOperations;
         case FilterType.FilePath:
             return stringFilterOperations;

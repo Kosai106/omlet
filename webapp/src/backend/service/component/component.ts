@@ -11,6 +11,7 @@ import { type ChartDatum } from "../../../common/models/ChartDatum";
 import { type DataFrequencyOption } from "../../../common/models/DataFrequencyOption";
 import { FilterDataType } from "../../../common/models/FilterDataType";
 import { isEqualityFilterOperation } from "../../../common/models/FilterOperation";
+import { DEFAULT_HTML_ELEMENT_MAP } from "../../../common/models/htmlElementMap";
 import { RESERVED_TAGS, type Tag } from "../../../common/models/Tag";
 import { config } from "../../../config/backend";
 import { toISOWeekString } from "../date/date";
@@ -158,6 +159,8 @@ async function createComponents(
                     },
                 } : {}),
             })),
+            htmlElements: cdata.html_elements ?? [],
+            htmlElementUsages: cdata.html_element_usages ?? [],
             metadata: convertMetadata(cdata.metadata),
         };
 
@@ -596,6 +599,12 @@ export async function getLatestComponentsIn(workspaceId: string, {
     if (filters.sourceProject) {
         matchQueries.push({
             packageName: equalityFilterIntoQuery(filters.sourceProject[0]),
+        });
+    }
+
+    if (filters.usesRawElement) {
+        matchQueries.push({
+            htmlElements: equalityFilterIntoQuery(filters.usesRawElement[0]),
         });
     }
 
@@ -1671,6 +1680,185 @@ export async function getComponentPropsUsage(workspaceId: string, { limit }: { l
         },
         ...(limit === undefined ? [] : [{ $limit: limit }]),
     ]).exec();
+}
+
+export interface RawHtmlUsageResult {
+    element: string;
+    numComponents: number;
+    numProjects: number;
+    numUsages: number;
+    numA11yIssues: number;
+    suggestedReplacement?: string;
+    components: Pick<Component, "id" | "name" | "definitionId" | "packageName">[];
+}
+
+// Number of `components` returned per raw-HTML element. The aggregate counts
+// (numComponents/numProjects) reflect every component; the inline list is capped
+// to keep the payload bounded for elements used very widely.
+const RAW_HTML_COMPONENT_SAMPLE_LIMIT = 100;
+
+// Rolls up, for the latest analysis, every raw HTML element rendered by a
+// component (e.g. <button>, <input>, <a>) to the set of components and projects
+// that render it. `htmlElements` is looked up from the components collection the
+// same way the props pipeline looks up `props` - it is not denormalized into the
+// historic index.
+export async function getRawHtmlUsage(workspaceId: string, { limit, htmlElementMap }: { limit?: number; htmlElementMap?: Record<string, string>; } = {}): Promise<RawHtmlUsageResult[]> {
+    // Workspace overrides layered on top of the seeded defaults. An empty-string
+    // override suppresses a default (admin explicitly cleared the suggestion).
+    const effectiveMap = { ...DEFAULT_HTML_ELEMENT_MAP, ...htmlElementMap };
+    const latestAnalysisId = await getLatestIndexAnalysisId(workspaceId);
+    if (!latestAnalysisId) {
+        return [];
+    }
+    const results = await HistoricComponentIndexModel.aggregate<RawHtmlUsageResult>([
+        {
+            $match: {
+                workspace: new MongooseTypes.ObjectId(workspaceId),
+                lastAnalysis: new MongooseTypes.ObjectId(latestAnalysisId),
+            },
+        },
+        { $unwind: { path: "$entries" } },
+        {
+            $project: {
+                component: {
+                    _id: "$entries.component._id",
+                    name: "$entries.component.name",
+                    definitionId: "$entries.component.definitionId",
+                    packageName: "$entries.component.packageName",
+                },
+            },
+        },
+        {
+            $lookup: {
+                from: COMPONENT_COLLECTION_NAME,
+                localField: "component._id",
+                foreignField: "_id",
+                pipeline: [{ $project: { _id: 0, htmlElements: 1, htmlElementUsages: 1 } }],
+                as: "components",
+            },
+        },
+        // Drop components that render no raw HTML.
+        { $match: { "components.0.htmlElements.0": { $exists: true } } },
+        {
+            $addFields: {
+                element: {
+                    $getField: {
+                        input: { $first: "$components" },
+                        field: "htmlElements",
+                    },
+                },
+                htmlElementUsages: {
+                    $ifNull: [
+                        { $getField: { input: { $first: "$components" }, field: "htmlElementUsages" } },
+                        [],
+                    ],
+                },
+            },
+        },
+        { $unwind: { path: "$element" } },
+        {
+            // Per (component, element) occurrence count, from the per-occurrence
+            // usage data. 0 when only the deduped set carried the element.
+            $addFields: {
+                usageCount: {
+                    $sum: {
+                        $map: {
+                            input: {
+                                $filter: {
+                                    input: "$htmlElementUsages",
+                                    as: "usage",
+                                    cond: { $eq: ["$$usage.tag", "$element"] },
+                                },
+                            },
+                            as: "usage",
+                            in: { $ifNull: ["$$usage.count", 0] },
+                        },
+                    },
+                },
+                // Occurrences of this element (in this component) that have at
+                // least one accessibility issue flagged by the analyzer.
+                a11yCount: {
+                    $sum: {
+                        $map: {
+                            input: {
+                                $filter: {
+                                    input: "$htmlElementUsages",
+                                    as: "usage",
+                                    cond: { $eq: ["$$usage.tag", "$element"] },
+                                },
+                            },
+                            as: "usage",
+                            in: {
+                                $size: {
+                                    $filter: {
+                                        input: { $ifNull: ["$$usage.spans", []] },
+                                        as: "span",
+                                        cond: { $gt: [{ $size: { $ifNull: ["$$span.issues", []] } }, 0] },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        },
+        {
+            $group: {
+                _id: "$element",
+                numUsages: { $sum: "$usageCount" },
+                numA11yIssues: { $sum: "$a11yCount" },
+                projects: { $addToSet: "$component.packageName" },
+                components: {
+                    $push: {
+                        id: { $toString: "$component._id" },
+                        name: "$component.name",
+                        definitionId: "$component.definitionId",
+                        packageName: "$component.packageName",
+                    },
+                },
+            },
+        },
+        {
+            $project: {
+                _id: 0,
+                element: "$_id",
+                numComponents: { $size: "$components" },
+                numProjects: { $size: "$projects" },
+                numUsages: 1,
+                numA11yIssues: 1,
+                components: { $slice: ["$components", RAW_HTML_COMPONENT_SAMPLE_LIMIT] },
+            },
+        },
+        { $sort: { numComponents: -1, element: 1 } },
+        ...(limit === undefined ? [] : [{ $limit: limit }]),
+    ]).exec();
+
+    return results.map(result => ({
+        ...result,
+        suggestedReplacement: effectiveMap[result.element] || undefined,
+    }));
+}
+
+// Distinct component names in the latest analysis, sorted. Used to offer real
+// components as replacement suggestions in the raw-HTML mapping editor.
+export async function getComponentNames(workspaceId: string): Promise<string[]> {
+    const latestAnalysisId = await getLatestIndexAnalysisId(workspaceId);
+    if (!latestAnalysisId) {
+        return [];
+    }
+    const [result] = await HistoricComponentIndexModel.aggregate<{ names: string[]; }>([
+        {
+            $match: {
+                workspace: new MongooseTypes.ObjectId(workspaceId),
+                lastAnalysis: new MongooseTypes.ObjectId(latestAnalysisId),
+            },
+        },
+        { $unwind: { path: "$entries" } },
+        { $group: { _id: null, names: { $addToSet: "$entries.component.name" } } },
+        { $project: { _id: 0, names: 1 } },
+    ]).exec();
+
+    return (result?.names ?? []).sort((a, b) => a.localeCompare(b));
 }
 
 export type { DataAnalysisFilter };

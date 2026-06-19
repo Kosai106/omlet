@@ -13,6 +13,7 @@ components:
     dependencies: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "typescript-examples:6e4afad5feeb876c530f1a47031ef477b7a5508d077b99efeacb4a7bd99daf2b:MyProvider"
     name: MyProvider
     export_ids:
@@ -22,6 +23,7 @@ components:
     dependencies: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "typescript-examples:6e4afad5feeb876c530f1a47031ef477b7a5508d077b99efeacb4a7bd99daf2b:Parent"
     name: Parent
     export_ids:
@@ -45,6 +47,7 @@ components:
                     value: JSXElement
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "typescript-examples:b3791f9ff0fc82752d68a498f0f2ff264032694597ddddb78b13ed6bfab2ddb0:RedeclareImport"
     name: RedeclareImport
     export_ids:
@@ -85,4 +88,5 @@ components:
                 props: []
     props: []
     html_elements: []
+    html_element_usages: []
 

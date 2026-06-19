@@ -20,4 +20,9 @@ components:
     props: []
     html_elements:
       - input
+    html_element_usages:
+      - tag: input
+        count: 1
+        spans:
+          - "3:12-3:42"
 

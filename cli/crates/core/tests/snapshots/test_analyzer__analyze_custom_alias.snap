@@ -27,6 +27,7 @@ components:
                 props: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "custom-alias:434eeb01d71a4fec29d8982d83064deb2b42aac4ac37a91efc81d74c816a11d4:Button"
     name: Button
     export_ids:
@@ -38,4 +39,9 @@ components:
     props: []
     html_elements:
       - button
+    html_element_usages:
+      - tag: button
+        count: 1
+        spans:
+          - "3:12-3:34"
 

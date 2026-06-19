@@ -8,6 +8,7 @@ export interface Workspace {
     createdBy: string;
     projects: Project[];
     tags: Tag[];
+    htmlElementMap: Record<string, string>;
     numOfMembers: number;
     numOfComponents: number;
     numOfAnalyses: number;

@@ -14,6 +14,11 @@ components:
     props: []
     html_elements:
       - div
+    html_element_usages:
+      - tag: div
+        count: 1
+        spans:
+          - "4:12-4:44"
   - definition_id: "typescript-examples:7ad34a0ab7af219a1ab4fceb3b3942cd96c6f50f1fdf701506b855bc8072f384:default"
     name: react-memo
     export_ids:
@@ -24,4 +29,9 @@ components:
     props: []
     html_elements:
       - div
+    html_element_usages:
+      - tag: div
+        count: 1
+        spans:
+          - "4:12-4:44"
 

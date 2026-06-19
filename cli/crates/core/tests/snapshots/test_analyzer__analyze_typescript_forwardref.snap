@@ -14,6 +14,11 @@ components:
     props: []
     html_elements:
       - div
+    html_element_usages:
+      - tag: div
+        count: 1
+        spans:
+          - "4:12-4:35"
   - definition_id: "typescript-examples:cc86ec4e7471605f124bee66deda8a0b16cff8f022b4267199aeba1275069bee:default"
     name: react-forwardRef
     export_ids:
@@ -24,4 +29,9 @@ components:
     props: []
     html_elements:
       - div
+    html_element_usages:
+      - tag: div
+        count: 1
+        spans:
+          - "4:12-4:35"
 

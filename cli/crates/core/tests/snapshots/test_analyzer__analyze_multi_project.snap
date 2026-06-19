@@ -16,6 +16,11 @@ components:
     props: []
     html_elements:
       - button
+    html_element_usages:
+      - tag: button
+        count: 1
+        spans:
+          - "4:12-4:35"
   - definition_id: "@acme/design-system:07a4a42cecf56a6bc3c87405c5175b414ce494e41d737c18234abb15b67fe894:DatePicker"
     name: DatePicker
     export_ids:
@@ -43,6 +48,12 @@ components:
     props: []
     html_elements:
       - div
+    html_element_usages:
+      - tag: div
+        count: 2
+        spans:
+          - "6:12-6:61"
+          - "6:17-6:32"
   - definition_id: "@acme/design-system:8603e95bcebf4c8646bb9a5b23318d975779e95fad8718f90666485661738345:Input"
     name: Input
     export_ids:
@@ -55,4 +66,9 @@ components:
     props: []
     html_elements:
       - input
+    html_element_usages:
+      - tag: input
+        count: 1
+        spans:
+          - "4:12-4:30"
 

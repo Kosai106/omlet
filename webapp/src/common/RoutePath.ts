@@ -20,6 +20,7 @@ export enum RoutePath {
     Components = "/:workspaceSlug/components",
     ComponentDetail = "/:workspaceSlug/components/:componentSlug",
     Props = "/:workspaceSlug/props",
+    RawHtml = "/:workspaceSlug/raw-html",
     CoreSelection = "/:workspaceSlug/manage-tags/core",
     Onboarding = "/:workspaceSlug/onboarding",
     QuickStart = "/:workspaceSlug/quick-start",

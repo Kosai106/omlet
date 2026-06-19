@@ -134,8 +134,57 @@ pub struct Component {
     pub dependencies: Vec<Dependency>,
     pub props: AHashMap<String, PropDefinition>,
     pub html_elements: AHashSet<String>,
+    pub html_element_usages: Vec<HtmlElementUsage>,
     pub start: Option<CharacterPosition>,
     pub end: Option<CharacterPosition>,
+}
+
+#[derive(Serialize, Debug)]
+pub struct HtmlElementSpan {
+    pub start: CharacterPosition,
+    pub end: CharacterPosition,
+    pub issues: Vec<String>,
+}
+
+// Simple, conservative accessibility heuristics for a single raw HTML element
+// occurrence, derived from the JSX attributes captured in its Usage. A spread
+// ({...props}) hides attributes, so "missing X" rules are suppressed when one is
+// present to avoid false positives.
+fn compute_a11y_issues(tag: &str, usage: &Usage) -> Vec<String> {
+    let prop_names: AHashSet<&str> = usage.props.iter().map(|p| p.name.as_str()).collect();
+    let has_spread = prop_names.contains("");
+
+    let mut issues = vec![];
+    match tag {
+        "img" => {
+            if !has_spread && !prop_names.contains("alt") {
+                issues.push("img-missing-alt".to_string());
+            }
+        }
+        "div" | "span" => {
+            if prop_names.contains("onClick") {
+                issues.push("clickable-non-interactive".to_string());
+            }
+        }
+        "button" => {
+            let has_label = prop_names.contains("children")
+                || prop_names.contains("aria-label")
+                || prop_names.contains("aria-labelledby")
+                || prop_names.contains("title");
+            if !has_spread && !has_label {
+                issues.push("button-missing-label".to_string());
+            }
+        }
+        _ => {}
+    }
+    issues
+}
+
+#[derive(Serialize, Debug)]
+pub struct HtmlElementUsage {
+    pub tag: String,
+    pub count: usize,
+    pub spans: Vec<HtmlElementSpan>,
 }
 
 impl Component {
@@ -203,6 +252,7 @@ impl Component {
             dependencies: vec![],
             props,
             html_elements: AHashSet::new(),
+            html_element_usages: vec![],
             start,
             end,
         }
@@ -245,6 +295,7 @@ impl Component {
             dependencies: vec![],
             props: AHashMap::new(),
             html_elements: AHashSet::new(),
+            html_element_usages: vec![],
             start: None,
             end: None,
         }
@@ -1705,6 +1756,37 @@ impl Analyzer {
                         _ => {}
                     }
                 });
+
+            // Per-occurrence data (counts + spans) for raw HTML elements,
+            // aggregated by tag. Sorted for deterministic output.
+            let mut spans_by_tag: AHashMap<String, Vec<HtmlElementSpan>> = AHashMap::new();
+            for (name, usage) in m
+                .borrow()
+                .get_html_element_usages_in(resolved_ref.reference.get_symbol())
+            {
+                if is_html_element(&name) {
+                    let issues = compute_a11y_issues(&name, &usage);
+                    spans_by_tag.entry(name).or_default().push(HtmlElementSpan {
+                        start: usage.start,
+                        end: usage.end,
+                        issues,
+                    });
+                }
+            }
+
+            let mut html_element_usages: Vec<HtmlElementUsage> = spans_by_tag
+                .into_iter()
+                .map(|(tag, mut spans)| {
+                    spans.sort_by(|a, b| (a.start.line, a.start.column).cmp(&(b.start.line, b.start.column)));
+                    HtmlElementUsage {
+                        tag,
+                        count: spans.len(),
+                        spans,
+                    }
+                })
+                .collect();
+            html_element_usages.sort_by(|a, b| a.tag.cmp(&b.tag));
+            component.html_element_usages = html_element_usages;
         };
     }
 

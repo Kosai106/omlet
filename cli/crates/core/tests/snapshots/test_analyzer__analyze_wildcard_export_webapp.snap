@@ -12,6 +12,7 @@ components:
     dependencies: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "@wildcard-exports/design-system-react:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Button"
     name: Button
     export_ids: []
@@ -20,6 +21,7 @@ components:
     dependencies: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "@wildcard-exports/design-system-react:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:DatePicker"
     name: DatePicker
     export_ids: []
@@ -28,6 +30,7 @@ components:
     dependencies: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "@wildcard-exports/design-system-react:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Form"
     name: Form
     export_ids: []
@@ -36,6 +39,7 @@ components:
     dependencies: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "@wildcard-exports/design-system-react:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Input"
     name: Input
     export_ids: []
@@ -44,6 +48,7 @@ components:
     dependencies: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "@wildcard-exports/webapp:f2cd6bd7313b24013cd04d20b4dadb413f898c07f7c1a46ecc971d28d719accd:App"
     name: App
     export_ids:
@@ -154,6 +159,15 @@ components:
     html_elements:
       - div
       - h1
+    html_element_usages:
+      - tag: div
+        count: 1
+        spans:
+          - "7:12-16:11"
+      - tag: h1
+        count: 1
+        spans:
+          - "8:9-8:21"
   - definition_id: "@wildcard-exports/webapp:d0f3aa9becd6dbdcb8551d94fd6ed28514471df4b94eb5d171f2f1cb67e3f2b6:ComponentFromCircularExportModuleA"
     name: ComponentFromCircularExportModuleA
     export_ids:
@@ -166,6 +180,11 @@ components:
     props: []
     html_elements:
       - img
+    html_element_usages:
+      - tag: img
+        count: 1
+        spans:
+          - "6:12-6:18 [img-missing-alt]"
   - definition_id: "@wildcard-exports/webapp:34c5c26de4a46aaa97e73b783b954b77aebcd621a4b8c26db1eaac588529cc71:ComponentFromCircularExportModuleB"
     name: ComponentFromCircularExportModuleB
     export_ids:
@@ -178,6 +197,11 @@ components:
     props: []
     html_elements:
       - img
+    html_element_usages:
+      - tag: img
+        count: 1
+        spans:
+          - "6:12-6:18 [img-missing-alt]"
   - definition_id: "@wildcard-exports/webapp:33ac7052a3990fb6873572eb0c68a998e19700b3f622198f398458ed61954d14:ComponentFromCircularExportModuleC"
     name: ComponentFromCircularExportModuleC
     export_ids:
@@ -189,6 +213,11 @@ components:
     props: []
     html_elements:
       - img
+    html_element_usages:
+      - tag: img
+        count: 1
+        spans:
+          - "4:12-4:18 [img-missing-alt]"
   - definition_id: "@wildcard-exports/webapp:c4f7056e1fab99cbf275c63a898c9112a13bb945a8f1960f816e8f7fcbbb1993:MainForm"
     name: MainForm
     export_ids:
@@ -212,6 +241,7 @@ components:
                 props: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "@wildcard-exports/webapp:c4f7056e1fab99cbf275c63a898c9112a13bb945a8f1960f816e8f7fcbbb1993:RightPanel"
     name: RightPanel
     export_ids:
@@ -250,6 +280,15 @@ components:
     html_elements:
       - div
       - h1
+    html_element_usages:
+      - tag: div
+        count: 1
+        spans:
+          - "8:12-8:64"
+      - tag: h1
+        count: 1
+        spans:
+          - "8:17-8:37"
   - definition_id: "@wildcard-exports/webapp:c4f7056e1fab99cbf275c63a898c9112a13bb945a8f1960f816e8f7fcbbb1993:SearchBar"
     name: SearchBar
     export_ids:
@@ -288,6 +327,15 @@ components:
     html_elements:
       - div
       - h1
+    html_element_usages:
+      - tag: div
+        count: 1
+        spans:
+          - "12:12-12:59"
+      - tag: h1
+        count: 1
+        spans:
+          - "12:17-12:36"
   - definition_id: "@wildcard-exports/webapp:7b2ad764e05ca56047e6f08969a18b952a3a4ad97b566b14bd19da1affb5fd86:MainView"
     name: MainView
     export_ids:
@@ -299,6 +347,11 @@ components:
     props: []
     html_elements:
       - div
+    html_element_usages:
+      - tag: div
+        count: 1
+        spans:
+          - "2:12-2:18"
   - definition_id: "@wildcard-exports/webapp:7b2ad764e05ca56047e6f08969a18b952a3a4ad97b566b14bd19da1affb5fd86:SideView"
     name: SideView
     export_ids:
@@ -310,4 +363,9 @@ components:
     props: []
     html_elements:
       - div
+    html_element_usages:
+      - tag: div
+        count: 1
+        spans:
+          - "6:12-6:18"
 

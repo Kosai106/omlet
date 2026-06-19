@@ -26,6 +26,7 @@ export function Tabs() {
             <Tab to={getAnalyticsURL()}>Analytics</Tab>
             <Tab to={getComponentsURL()}>Components</Tab>
             <Tab to={generatePath(RoutePath.Props, { workspaceSlug: workspaceSlug! })}>Props</Tab>
+            <Tab to={generatePath(RoutePath.RawHtml, { workspaceSlug: workspaceSlug! })}>Raw HTML</Tab>
         </nav>
     );
 }

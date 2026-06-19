@@ -27,6 +27,7 @@ components:
                 props: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "@nighttrax/components:c49a3a21d6e61f2fedb9483da713ac10b98483eb464aa17c71f49a02434cc32b:Button"
     name: Button
     export_ids:
@@ -38,6 +39,11 @@ components:
     props: []
     html_elements:
       - button
+    html_element_usages:
+      - tag: button
+        count: 1
+        spans:
+          - "6:3-11:12"
   - definition_id: "@nighttrax/components:73cce86c0d6f02defeea49c3705c8de053e65d7266d9a7e1a5cad47310994967:PageComponent"
     name: PageComponent
     export_ids:
@@ -48,6 +54,11 @@ components:
     props: []
     html_elements:
       - div
+    html_element_usages:
+      - tag: div
+        count: 1
+        spans:
+          - "2:12-2:23"
   - definition_id: "@nighttrax/components:f7ef7a1afc05348d935226419b12d95a42d72ed62bd722f0baf83e640c9d79ad:StyledButton"
     name: StyledButton
     export_ids:
@@ -59,6 +70,11 @@ components:
     props: []
     html_elements:
       - button
+    html_element_usages:
+      - tag: button
+        count: 1
+        spans:
+          - "6:3-11:12"
   - definition_id: "@nighttrax/cra-example:6717bd9550d43276373c270c4868aeccfbf95c8fe82ddc7808500e87c18d73b2:App"
     name: App
     export_ids:
@@ -123,6 +139,7 @@ components:
                     value: JSXElement
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "@nighttrax/foo:0b5b9c04ef1f34674fdec0d6fcee29366d7c8354da6ae8f6145de8a5e0957589:FooComponent"
     name: FooComponent
     export_ids:
@@ -134,6 +151,11 @@ components:
     props: []
     html_elements:
       - div
+    html_element_usages:
+      - tag: div
+        count: 1
+        spans:
+          - "4:12-4:23"
   - definition_id: "@nighttrax/nextjs-example:7a64238d93b629cf6638e9b2d79cd9a277ca970bef0edf573bfda84e2f7626bc:default"
     name: pages
     export_ids:
@@ -156,6 +178,7 @@ components:
                 props: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "@nighttrax/storybook-example:35a67b1436992807329526bd8e76951bdddb24009645ff6ca89abe5add536364:Foo"
     name: Foo
     export_ids:
@@ -166,6 +189,11 @@ components:
     props: []
     html_elements:
       - span
+    html_element_usages:
+      - tag: span
+        count: 1
+        spans:
+          - "3:26-3:42"
   - definition_id: "@nighttrax/storybook-example:8a4b1bc0a041172194afac24dd9689b61200102f37d055a6de89084611d1fd97:Local"
     name: Local
     export_ids:
@@ -188,6 +216,7 @@ components:
                 props: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "@nighttrax/storybook-example:8a4b1bc0a041172194afac24dd9689b61200102f37d055a6de89084611d1fd97:Monorepo"
     name: Monorepo
     export_ids:
@@ -210,6 +239,7 @@ components:
                 props: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "@nighttrax/vite-example:c0c33d2e84ab7127e89c5f8e6efa4dc6314e421c30d84dd4c6bd7c9d7db2ba6d:default"
     name: App
     export_ids:
@@ -265,4 +295,38 @@ components:
       - h1
       - img
       - p
+    html_element_usages:
+      - tag: a
+        count: 2
+        spans:
+          - "14:9-16:13"
+          - "17:9-19:13"
+      - tag: button
+        count: 1
+        spans:
+          - "26:9-28:18"
+      - tag: code
+        count: 1
+        spans:
+          - "30:16-30:40"
+      - tag: div
+        count: 3
+        spans:
+          - "12:5-36:11"
+          - "13:7-22:13"
+          - "24:7-32:13"
+      - tag: h1
+        count: 1
+        spans:
+          - "23:7-23:28"
+      - tag: img
+        count: 2
+        spans:
+          - "15:11-15:67"
+          - "18:11-18:74"
+      - tag: p
+        count: 2
+        spans:
+          - "29:9-31:13"
+          - "33:7-35:11"
 

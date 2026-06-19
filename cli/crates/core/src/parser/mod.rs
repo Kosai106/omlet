@@ -343,6 +343,60 @@ impl Module {
         return elements;
     }
 
+    fn get_html_element_usages_recursive(
+        &self,
+        symbol: &Symbol,
+        usages: &mut Vec<(String, Usage)>,
+        visited_symbols: &mut AHashSet<Symbol>,
+    ) {
+        if visited_symbols.contains(symbol) {
+            return;
+        }
+
+        visited_symbols.insert(symbol.clone());
+
+        let result = self.get_scope(symbol);
+        if result.is_none() {
+            return;
+        }
+
+        let scope = result.unwrap().borrow();
+
+        if let Some(decl) = self.get_declaration(symbol) {
+            if let InferredType::ReturnTypeOf(_, _) = &decl.inferred_type.as_ref() {
+                for reference in scope.get_references() {
+                    self.get_html_element_usages_recursive(
+                        reference.get_symbol(),
+                        usages,
+                        visited_symbols,
+                    );
+                }
+            }
+        }
+
+        let usage_map = scope.get_usage_map();
+        for jsx_ref in scope.get_references_jsx() {
+            // Raw HTML elements (e.g. <button>) have no declaration; their JSX
+            // reference name is the tag itself. Each Usage carries its span and
+            // attributes, so this yields one entry per occurrence.
+            if self.get_declaration(jsx_ref.get_symbol()).is_none() {
+                if let Some(usage_set) = usage_map.get(jsx_ref) {
+                    let name = jsx_ref.get_name();
+                    for usage in usage_set {
+                        usages.push((name.clone(), usage.clone()));
+                    }
+                }
+            }
+        }
+    }
+
+    pub fn get_html_element_usages_in(&self, symbol: &Symbol) -> Vec<(String, Usage)> {
+        let mut usages = vec![];
+        self.get_html_element_usages_recursive(symbol, &mut usages, &mut AHashSet::new());
+
+        return usages;
+    }
+
     pub fn get_all_references_in(&self, symbol: &Symbol) -> AHashSet<Reference> {
         let result = self.get_scope(symbol);
 

@@ -19,6 +19,11 @@ components:
         default_value: NONE
     html_elements:
       - button
+    html_element_usages:
+      - tag: button
+        count: 1
+        spans:
+          - "8:5-8:38"
   - definition_id: "@nx-react-monorepo/ds:005cb37d61755dec5ebd7a47d51dc3bd677742130aab0feae8634c2cbfd29d75:H1"
     name: H1
     export_ids:
@@ -33,6 +38,11 @@ components:
         default_value: NONE
     html_elements:
       - h1
+    html_element_usages:
+      - tag: h1
+        count: 1
+        spans:
+          - "8:5-8:30"
   - definition_id: "@nx-react-monorepo/main-app:fa7a022046369b1cfaf7b88609ccfdf581473458eaabe5ad80e6cae243f41dac:App"
     name: App
     export_ids:
@@ -113,6 +123,7 @@ components:
                     value: JSXElement
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "@nx-react-monorepo/main-app:4aa72168f874a04e00d38a21b4585a03f69c192fe1d4c80137b48cb86b560989:Home"
     name: Home
     export_ids:
@@ -157,6 +168,11 @@ components:
     props: []
     html_elements:
       - div
+    html_element_usages:
+      - tag: div
+        count: 1
+        spans:
+          - "11:5-14:11"
   - definition_id: "@nx-react-monorepo/page-one:9355d2cc281e42a4ee94c4bead349d588bb5edfc2a33f20a906a0185cf9f3991:PageOne"
     name: PageOne
     export_ids:
@@ -202,6 +218,11 @@ components:
     props: []
     html_elements:
       - div
+    html_element_usages:
+      - tag: div
+        count: 1
+        spans:
+          - "11:5-14:11"
   - definition_id: "react-router-dom:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Link"
     name: Link
     export_ids: []
@@ -210,6 +231,7 @@ components:
     dependencies: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "react-router-dom:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Route"
     name: Route
     export_ids: []
@@ -218,6 +240,7 @@ components:
     dependencies: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "react-router-dom:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:Routes"
     name: Routes
     export_ids: []
@@ -226,4 +249,5 @@ components:
     dependencies: []
     props: []
     html_elements: []
+    html_element_usages: []
 

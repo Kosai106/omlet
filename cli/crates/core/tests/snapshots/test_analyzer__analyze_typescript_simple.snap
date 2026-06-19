@@ -12,6 +12,7 @@ components:
     dependencies: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "typescript-examples:419d3b7509217377a748728fc2fec251080f278c8c876895759dc341f3541a5c:default"
     name: AboutPage
     export_ids:
@@ -64,6 +65,11 @@ components:
     props: []
     html_elements:
       - h1
+    html_element_usages:
+      - tag: h1
+        count: 1
+        spans:
+          - "11:13-11:27"
   - definition_id: "typescript-examples:dc860cf810add85d2cc89bfd12aa9c3e4a51aab28d43d163a5354fa2bbcfce10:CoreHeader"
     name: CoreHeader
     export_ids:
@@ -79,6 +85,15 @@ components:
     html_elements:
       - div
       - header
+    html_element_usages:
+      - tag: div
+        count: 1
+        spans:
+          - "5:13-5:34"
+      - tag: header
+        count: 1
+        spans:
+          - "3:9-6:18"
   - definition_id: "typescript-examples:dc860cf810add85d2cc89bfd12aa9c3e4a51aab28d43d163a5354fa2bbcfce10:MenuLayout"
     name: MenuLayout
     export_ids:
@@ -91,6 +106,11 @@ components:
         default_value: NONE
     html_elements:
       - div
+    html_element_usages:
+      - tag: div
+        count: 1
+        spans:
+          - "12:9-14:15"
   - definition_id: "typescript-examples:4d8c4ec7b11c9f23a1bd5ae28e62d192d65bea52b2dd4daec56b0f8ae9ec8dd7:UserAvatar"
     name: UserAvatar
     export_ids:
@@ -116,6 +136,11 @@ components:
     props: []
     html_elements:
       - img
+    html_element_usages:
+      - tag: img
+        count: 1
+        spans:
+          - "14:13-14:19 [img-missing-alt]"
   - definition_id: "typescript-examples:4d8c4ec7b11c9f23a1bd5ae28e62d192d65bea52b2dd4daec56b0f8ae9ec8dd7:UserMenu"
     name: UserMenu
     export_ids:
@@ -141,6 +166,11 @@ components:
     props: []
     html_elements:
       - div
+    html_element_usages:
+      - tag: div
+        count: 1
+        spans:
+          - "6:13-6:19"
   - definition_id: "typescript-examples:26bbf37435b0128ea57412df34a008b8d678321f2932b51ac77d1b5834a63b10:BackButton"
     name: BackButton
     export_ids:
@@ -151,6 +181,11 @@ components:
     props: []
     html_elements:
       - button
+    html_element_usages:
+      - tag: button
+        count: 1
+        spans:
+          - "16:9-18:18"
   - definition_id: "typescript-examples:26bbf37435b0128ea57412df34a008b8d678321f2932b51ac77d1b5834a63b10:UserMenuNew"
     name: UserMenuNew
     export_ids:
@@ -187,6 +222,11 @@ components:
     props: []
     html_elements:
       - div
+    html_element_usages:
+      - tag: div
+        count: 1
+        spans:
+          - "5:9-8:15"
   - definition_id: "typescript-examples:29a91d9df833a8e872c4bbd5818db9f87a167699641a7662ba86ecb989a4d227:default"
     name: MainPage
     export_ids:
@@ -239,4 +279,5 @@ components:
                     value: JSXElement
     props: []
     html_elements: []
+    html_element_usages: []
 

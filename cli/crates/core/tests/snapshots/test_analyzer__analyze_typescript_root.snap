@@ -27,6 +27,7 @@ components:
       - name: initialValue
         default_value: NONE
     html_elements: []
+    html_element_usages: []
   - definition_id: "typescript-examples:1281790c5857aac7f058321f4806efc5f7ad28d10c7d773fb72a8d4b1c0bd11b:LapTimer"
     name: LapTimer
     export_ids:
@@ -50,6 +51,7 @@ components:
       - name: initialValue
         default_value: NONE
     html_elements: []
+    html_element_usages: []
   - definition_id: "typescript-examples:1281790c5857aac7f058321f4806efc5f7ad28d10c7d773fb72a8d4b1c0bd11b:MahmutCan"
     name: MahmutCan
     export_ids:
@@ -59,6 +61,7 @@ components:
     dependencies: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "typescript-examples:a61f7961b3f552c622675bbc828aa191517a345365478f3a1bdcc093ab77adbd:Button"
     name: Button
     export_ids:
@@ -69,6 +72,11 @@ components:
     props: []
     html_elements:
       - button
+    html_element_usages:
+      - tag: button
+        count: 1
+        spans:
+          - "41:27-41:51"
   - definition_id: "typescript-examples:a61f7961b3f552c622675bbc828aa191517a345365478f3a1bdcc093ab77adbd:Card"
     name: Card
     export_ids:
@@ -94,6 +102,7 @@ components:
     html_elements:
       - div
       - img
+    html_element_usages: []
   - definition_id: "typescript-examples:039457fd1a392cc7194f548746284c915a5d897f5ecd0cbb8bc9b8d8734066f4:ExpandableFlyoutProvider"
     name: ExpandableFlyoutProvider
     export_ids:
@@ -103,6 +112,7 @@ components:
     dependencies: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "typescript-examples:054af81d29a6e68e7a9b2b083192b21b30f5dc7595d8e3098a3e964276213ef1:default"
     name: Sample
     export_ids:
@@ -113,6 +123,11 @@ components:
     props: []
     html_elements:
       - div
+    html_element_usages:
+      - tag: div
+        count: 1
+        spans:
+          - "4:12-4:47"
   - definition_id: "typescript-examples:35fde9f96980d94b848b51c803fa533b80f3b2dacff94ff418bbfec25cb749f7:Student"
     name: Student
     export_ids:
@@ -127,4 +142,9 @@ components:
         default_value: NONE
     html_elements:
       - div
+    html_element_usages:
+      - tag: div
+        count: 1
+        spans:
+          - "2:12-2:36"
 
