@@ -12,6 +12,7 @@ components:
     dependencies: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "test:32d49112ca8c65ad226a8128c3e567e8f354468efde24c10ed9dcb7980e2387c:Main"
     name: Main
     export_ids:
@@ -34,4 +35,5 @@ components:
                 props: []
     props: []
     html_elements: []
+    html_element_usages: []
 

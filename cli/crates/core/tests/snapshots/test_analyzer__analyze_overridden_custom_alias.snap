@@ -15,6 +15,11 @@ components:
     props: []
     html_elements:
       - button
+    html_element_usages:
+      - tag: button
+        count: 1
+        spans:
+          - "5:9-7:18"
   - definition_id: "@ds/form:9c7ac2aa589944ff0ccaeb43c7ee1c335b6017691fc1ad455ac7eaf81d7028bf:Form"
     name: Form
     export_ids:
@@ -41,4 +46,9 @@ components:
     props: []
     html_elements:
       - form
+    html_element_usages:
+      - tag: form
+        count: 1
+        spans:
+          - "7:9-9:16"
 

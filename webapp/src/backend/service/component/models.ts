@@ -45,6 +45,15 @@ export interface ComponentPropDoc {
     };
 }
 
+export interface HtmlElementUsageDoc {
+    tag: string;
+    count: number;
+    spans: {
+        start: CharacterPosition;
+        end: CharacterPosition;
+    }[];
+}
+
 export interface ComponentDoc {
     _id: Types.ObjectId;
     definitionId: string;
@@ -57,6 +66,7 @@ export interface ComponentDoc {
     numOfDependencies: number;
     props: ComponentPropDoc[];
     htmlElements: string[];
+    htmlElementUsages: HtmlElementUsageDoc[];
     span?: {
         start: CharacterPosition;
         end: CharacterPosition;
@@ -231,6 +241,16 @@ const ComponentSchema = new Schema<ComponentDoc>({
         },
     }],
     htmlElements: { type: [String], default: [] },
+    htmlElementUsages: [{
+        _id: false,
+        tag: { type: String, required: true },
+        count: { type: Number, required: true },
+        spans: [{
+            _id: false,
+            start: CharacterPositionSchema,
+            end: CharacterPositionSchema,
+        }],
+    }],
     span: {
         start: CharacterPositionSchema,
         end: CharacterPositionSchema,

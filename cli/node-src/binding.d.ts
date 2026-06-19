@@ -13,6 +13,15 @@ export interface ComponentPropNapiValue {
   start: CharacterPositionNapiValue
   end: CharacterPositionNapiValue
 }
+export interface HtmlElementSpanNapiValue {
+  start: CharacterPositionNapiValue
+  end: CharacterPositionNapiValue
+}
+export interface HtmlElementUsageNapiValue {
+  tag: string
+  count: number
+  spans: Array<HtmlElementSpanNapiValue>
+}
 export interface ComponentNapiValue {
   id: string
   exportIds: Array<string>
@@ -23,6 +32,7 @@ export interface ComponentNapiValue {
   dependencies: Array<string>
   props: Array<ComponentPropNapiValue>
   htmlElements: Array<string>
+  htmlElementUsages: Array<HtmlElementUsageNapiValue>
   start?: CharacterPositionNapiValue
   end?: CharacterPositionNapiValue
 }

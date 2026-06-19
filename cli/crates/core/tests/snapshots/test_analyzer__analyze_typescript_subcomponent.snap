@@ -16,6 +16,11 @@ components:
         default_value: NONE
     html_elements:
       - table
+    html_element_usages:
+      - tag: table
+        count: 1
+        spans:
+          - "8:9-10:17"
   - definition_id: "typescript-examples:29c139d83979f9d7406774f0914d281a97baaa97a0b893149e856880316705b3:THeader"
     name: THeader
     export_ids:
@@ -28,6 +33,11 @@ components:
         default_value: NONE
     html_elements:
       - thead
+    html_element_usages:
+      - tag: thead
+        count: 1
+        spans:
+          - "16:9-18:17"
   - definition_id: "typescript-examples:1ff278b5f25a43cd52121c4649989e1a47f3a990c00936a32824056e2171ab34:TTable"
     name: TTable
     export_ids:
@@ -40,6 +50,11 @@ components:
         default_value: NONE
     html_elements:
       - table
+    html_element_usages:
+      - tag: table
+        count: 1
+        spans:
+          - "8:9-10:17"
   - definition_id: "typescript-examples:1ff278b5f25a43cd52121c4649989e1a47f3a990c00936a32824056e2171ab34:TTable.Header"
     name: TTable.Header
     export_ids:
@@ -52,6 +67,11 @@ components:
         default_value: NONE
     html_elements:
       - thead
+    html_element_usages:
+      - tag: thead
+        count: 1
+        spans:
+          - "16:9-18:17"
   - definition_id: "typescript-examples:dac4d870fb704ccce541b65856869f656c1c84d793823bb641338c4412dc45cd:default"
     name: TTableObject
     export_ids:
@@ -64,6 +84,11 @@ components:
         default_value: NONE
     html_elements:
       - table
+    html_element_usages:
+      - tag: table
+        count: 1
+        spans:
+          - "8:9-10:17"
   - definition_id: "typescript-examples:dac4d870fb704ccce541b65856869f656c1c84d793823bb641338c4412dc45cd:THeader"
     name: THeader
     export_ids:
@@ -76,6 +101,11 @@ components:
         default_value: NONE
     html_elements:
       - thead
+    html_element_usages:
+      - tag: thead
+        count: 1
+        spans:
+          - "16:9-18:17"
   - definition_id: "typescript-examples:1c59d241cf0b23b8efe9d74232266742e7fea6c843212b7362eb08e13c6e21be:default"
     name: TCell
     export_ids:
@@ -91,6 +121,11 @@ components:
         default_value: NONE
     html_elements:
       - td
+    html_element_usages:
+      - tag: td
+        count: 1
+        spans:
+          - "6:9-8:14"
   - definition_id: "typescript-examples:2e199d92290034bd35ea81584872817a274d9bf089005f537d56b6b48d323de2:default"
     name: THeadCell
     export_ids:
@@ -108,6 +143,11 @@ components:
         default_value: NONE
     html_elements:
       - th
+    html_element_usages:
+      - tag: th
+        count: 1
+        spans:
+          - "6:9-8:14"
   - definition_id: "typescript-examples:c29eec744e5034bddddf42307a8e0f6dc9101c8ee19829e504d3acce99808557:default"
     name: TableUser
     export_ids:
@@ -181,6 +221,7 @@ components:
                     value: "String { value: \"asd\" }"
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "typescript-examples:679612ddabe638df6094ff1e6a3d18886ad11ef7c842cf41b3e255c797019a5f:default"
     name: TableUser2
     export_ids:
@@ -256,6 +297,7 @@ components:
                     value: JSXElement
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "typescript-examples:91a3446af7697b6c06328595b653e47ce31c02bc16c821551662a54b38c06d5b:default"
     name: TableUser3
     export_ids:
@@ -327,6 +369,7 @@ components:
                     value: JSXElement
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "typescript-examples:18d068c66d0699c385f02820b9c855ce556ba0047138af3a87873effa06c32ad:default"
     name: TableUser4
     export_ids:
@@ -382,3 +425,5 @@ components:
                     value: JSXElement
     props: []
     html_elements: []
+    html_element_usages: []
+

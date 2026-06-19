@@ -215,6 +215,21 @@ pub struct ComponentPropNapiValue {
 
 #[napi(object)]
 #[derive(Serialize, Debug)]
+pub struct HtmlElementSpanNapiValue {
+    pub start: CharacterPositionNapiValue,
+    pub end: CharacterPositionNapiValue,
+}
+
+#[napi(object)]
+#[derive(Serialize, Debug)]
+pub struct HtmlElementUsageNapiValue {
+    pub tag: String,
+    pub count: u32,
+    pub spans: Vec<HtmlElementSpanNapiValue>,
+}
+
+#[napi(object)]
+#[derive(Serialize, Debug)]
 pub struct ComponentNapiValue {
     pub id: String,
     pub export_ids: Vec<String>,
@@ -225,6 +240,7 @@ pub struct ComponentNapiValue {
     pub dependencies: Vec<String>,
     pub props: Vec<ComponentPropNapiValue>,
     pub html_elements: Vec<String>,
+    pub html_element_usages: Vec<HtmlElementUsageNapiValue>,
     pub start: Option<CharacterPositionNapiValue>,
     pub end: Option<CharacterPositionNapiValue>,
 }
@@ -414,6 +430,22 @@ fn convert_analyzer_result_to_napi_value(
                 updated_at: c.updated_at,
                 dependencies,
                 html_elements: c.html_elements.iter().map(|s| s.clone()).collect(),
+                html_element_usages: c
+                    .html_element_usages
+                    .iter()
+                    .map(|u| HtmlElementUsageNapiValue {
+                        tag: u.tag.clone(),
+                        count: u.count as u32,
+                        spans: u
+                            .spans
+                            .iter()
+                            .map(|s| HtmlElementSpanNapiValue {
+                                start: s.start.clone().into(),
+                                end: s.end.clone().into(),
+                            })
+                            .collect(),
+                    })
+                    .collect(),
                 props: c
                     .props
                     .iter()

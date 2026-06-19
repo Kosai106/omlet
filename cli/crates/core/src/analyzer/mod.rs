@@ -134,8 +134,22 @@ pub struct Component {
     pub dependencies: Vec<Dependency>,
     pub props: AHashMap<String, PropDefinition>,
     pub html_elements: AHashSet<String>,
+    pub html_element_usages: Vec<HtmlElementUsage>,
     pub start: Option<CharacterPosition>,
     pub end: Option<CharacterPosition>,
+}
+
+#[derive(Serialize, Debug)]
+pub struct HtmlElementSpan {
+    pub start: CharacterPosition,
+    pub end: CharacterPosition,
+}
+
+#[derive(Serialize, Debug)]
+pub struct HtmlElementUsage {
+    pub tag: String,
+    pub count: usize,
+    pub spans: Vec<HtmlElementSpan>,
 }
 
 impl Component {
@@ -203,6 +217,7 @@ impl Component {
             dependencies: vec![],
             props,
             html_elements: AHashSet::new(),
+            html_element_usages: vec![],
             start,
             end,
         }
@@ -245,6 +260,7 @@ impl Component {
             dependencies: vec![],
             props: AHashMap::new(),
             html_elements: AHashSet::new(),
+            html_element_usages: vec![],
             start: None,
             end: None,
         }
@@ -1705,6 +1721,35 @@ impl Analyzer {
                         _ => {}
                     }
                 });
+
+            // Per-occurrence data (counts + spans) for raw HTML elements,
+            // aggregated by tag. Sorted for deterministic output.
+            let mut spans_by_tag: AHashMap<String, Vec<HtmlElementSpan>> = AHashMap::new();
+            for (name, usage) in m
+                .borrow()
+                .get_html_element_usages_in(resolved_ref.reference.get_symbol())
+            {
+                if is_html_element(&name) {
+                    spans_by_tag.entry(name).or_default().push(HtmlElementSpan {
+                        start: usage.start,
+                        end: usage.end,
+                    });
+                }
+            }
+
+            let mut html_element_usages: Vec<HtmlElementUsage> = spans_by_tag
+                .into_iter()
+                .map(|(tag, mut spans)| {
+                    spans.sort_by(|a, b| (a.start.line, a.start.column).cmp(&(b.start.line, b.start.column)));
+                    HtmlElementUsage {
+                        tag,
+                        count: spans.len(),
+                        spans,
+                    }
+                })
+                .collect();
+            html_element_usages.sort_by(|a, b| a.tag.cmp(&b.tag));
+            component.html_element_usages = html_element_usages;
         };
     }
 

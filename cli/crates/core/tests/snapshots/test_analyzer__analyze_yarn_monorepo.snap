@@ -17,6 +17,11 @@ components:
     props: []
     html_elements:
       - button
+    html_element_usages:
+      - tag: button
+        count: 1
+        spans:
+          - "2:12-2:37"
   - definition_id: "comps:e199b37114a6a6d042f24d9992340b106f7a357d17466d127dd51ea6e78d871d:SecondTitle"
     name: SecondTitle
     export_ids:
@@ -40,6 +45,11 @@ components:
     props: []
     html_elements:
       - h1
+    html_element_usages:
+      - tag: h1
+        count: 1
+        spans:
+          - "9:12-9:61"
   - definition_id: "comps:e199b37114a6a6d042f24d9992340b106f7a357d17466d127dd51ea6e78d871d:default"
     name: PackBTitle
     export_ids:
@@ -65,6 +75,11 @@ components:
     props: []
     html_elements:
       - h1
+    html_element_usages:
+      - tag: h1
+        count: 1
+        spans:
+          - "5:12-5:49"
   - definition_id: "main:9cedb271550b9f6303840c1f9261dcf2a324f83d1b666610edcb285799e022d9:Component"
     name: Component
     export_ids:
@@ -76,6 +91,11 @@ components:
     props: []
     html_elements:
       - div
+    html_element_usages:
+      - tag: div
+        count: 1
+        spans:
+          - "28:12-28:23"
   - definition_id: "main:9cedb271550b9f6303840c1f9261dcf2a324f83d1b666610edcb285799e022d9:default"
     name: Main
     export_ids:
@@ -171,6 +191,7 @@ components:
                     value: Expression
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "multi-part:a42b2429a16682347b578115d3e4c2c462b95f96f44607b452f65a90659e5020:default"
     name: MultiPartMain
     export_ids:
@@ -183,6 +204,11 @@ components:
     props: []
     html_elements:
       - main
+    html_element_usages:
+      - tag: main
+        count: 1
+        spans:
+          - "10:7-10:45"
   - definition_id: "multi-part:dbdb1a6009753471fa5d97245fff5262c7c8bdd8c66e0c0d9c7d9ec0c16131c1:default"
     name: Player
     export_ids:
@@ -194,6 +220,11 @@ components:
     props: []
     html_elements:
       - video
+    html_element_usages:
+      - tag: video
+        count: 1
+        spans:
+          - "4:10-4:60"
   - definition_id: "multi-part:05f76ed9df109a10b5cf6e8fd796bc1c66c05d893af4ea4c3b6ea3203e9704f3:default"
     name: Notebook
     export_ids:
@@ -208,6 +239,11 @@ components:
     props: []
     html_elements:
       - div
+    html_element_usages:
+      - tag: div
+        count: 1
+        spans:
+          - "4:10-4:53"
   - definition_id: "single-part:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:SinglePartMain"
     name: SinglePartMain
     export_ids: []
@@ -216,6 +252,7 @@ components:
     dependencies: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "single-part:68aa331cf8aa56cb7edef2623c37a76d7506b5751b3f3fcb0ccb7927d6737f27:default"
     name: SinglePartMain
     export_ids:
@@ -228,4 +265,9 @@ components:
     props: []
     html_elements:
       - main
+    html_element_usages:
+      - tag: main
+        count: 1
+        spans:
+          - "4:10-4:48"
 

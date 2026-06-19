@@ -169,6 +169,11 @@ interface NativeComponent {
     dependencies: NativeComponentDependency[];
     props: NativeComponentProp[];
     html_elements: string[];
+    html_element_usages?: {
+        tag: string;
+        count: number;
+        spans: { start: NativeCharacterPosition; end: NativeCharacterPosition; }[];
+    }[];
     span?: {
         start: NativeCharacterPosition;
         end: NativeCharacterPosition;
@@ -358,6 +363,11 @@ export interface Component {
     dependencies: ComponentDependency[];
     props: Prop[];
     html_elements: string[];
+    html_element_usages?: {
+        tag: string;
+        count: number;
+        spans: { start: CharacterPosition; end: CharacterPosition; }[];
+    }[];
     metadata?: Record<string, string | number | boolean | Date>;
     span?: {
         start: CharacterPosition;
@@ -738,6 +748,7 @@ async function runAnalysis(repoRoot: string, repository: RepositoryInfo, project
                 },
             })),
             html_elements: c.htmlElements,
+            html_element_usages: c.htmlElementUsages,
             ...(c.start && c.end ? {
                 span: { start: c.start as CharacterPosition, end: c.end as CharacterPosition },
             } : {}),
@@ -1584,6 +1595,7 @@ export async function analyzePartialToJson(options: AnalyzePartialOptions): Prom
             },
         })),
         html_elements: c.htmlElements,
+        html_element_usages: c.htmlElementUsages,
         ...(c.start && c.end ? {
             span: { start: c.start as CharacterPosition, end: c.end as CharacterPosition },
         } : {}),

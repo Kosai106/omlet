@@ -14,6 +14,11 @@ components:
     props: []
     html_elements:
       - div
+    html_element_usages:
+      - tag: div
+        count: 1
+        spans:
+          - "2:12-2:28"
   - definition_id: "typescript-examples:b9353fd7eb110abc2a7d67da67e5e32e2fdbd6f4e391722b07e76b10f8eef506:AbsoluteImportParent"
     name: AbsoluteImportParent
     export_ids:
@@ -37,4 +42,10 @@ components:
     props: []
     html_elements:
       - div
+    html_element_usages:
+      - tag: div
+        count: 2
+        spans:
+          - "7:12-10:11"
+          - "8:9-8:26"
 

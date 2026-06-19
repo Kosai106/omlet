@@ -14,6 +14,7 @@ components:
     dependencies: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "typescript-examples:d49565e3f22bb41c2c03e96a149a0eca8e16e499bbe983835420b63653c0a3c7:Parent"
     name: Parent
     export_ids:
@@ -46,4 +47,5 @@ components:
                 props: []
     props: []
     html_elements: []
+    html_element_usages: []
 

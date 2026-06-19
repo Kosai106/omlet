@@ -54,6 +54,7 @@ components:
                 props: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "pack-b:998aa9341240592707b4db94abd297a47b37ec5ef27163cbf5bd1201e36c8193:Button"
     name: Button
     export_ids:
@@ -65,6 +66,11 @@ components:
     props: []
     html_elements:
       - button
+    html_element_usages:
+      - tag: button
+        count: 1
+        spans:
+          - "2:12-2:37"
   - definition_id: "pack-b:988753235fbd69e17a15763d413258279d2b84ef0c3ca13456a788d11e6fedc9:default"
     name: PackBMain
     export_ids:
@@ -76,6 +82,11 @@ components:
     props: []
     html_elements:
       - img
+    html_element_usages:
+      - tag: img
+        count: 1
+        spans:
+          - "2:12-2:18"
   - definition_id: "pack-b:63f964235127a9bb6c2edc19a23d8c1abf91b45c3ff01000114af0a2fc5ce8a8:default"
     name: PackBTitle
     export_ids:
@@ -86,4 +97,9 @@ components:
     props: []
     html_elements:
       - h1
+    html_element_usages:
+      - tag: h1
+        count: 1
+        spans:
+          - "2:12-2:32"
 

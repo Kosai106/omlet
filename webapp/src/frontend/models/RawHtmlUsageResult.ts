@@ -4,6 +4,7 @@ export interface RawHtmlUsageResult {
     element: string;
     numComponents: number;
     numProjects: number;
+    numUsages: number;
     suggestedReplacement?: string;
     components: Pick<Component, "id" | "name" | "definitionId" | "packageName">[];
 }

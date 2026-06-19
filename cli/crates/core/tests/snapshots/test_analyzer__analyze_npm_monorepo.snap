@@ -34,6 +34,7 @@ components:
                 props: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "ds:7763d85bafc13b0173d2bac98b7592b247e3194b06cbb47f4e097abf3d724631:Button"
     name: Button
     export_ids:
@@ -47,4 +48,9 @@ components:
     props: []
     html_elements:
       - button
+    html_element_usages:
+      - tag: button
+        count: 1
+        spans:
+          - "2:12-2:34"
 

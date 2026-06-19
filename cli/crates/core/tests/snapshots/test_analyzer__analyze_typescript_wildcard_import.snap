@@ -12,6 +12,7 @@ components:
     dependencies: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "typescript-examples:ad7915ba82a054badb6224501ba8d788fecc3f7dbec85f3a857ff68945a4a6ff:LinkOrButton"
     name: LinkOrButton
     export_ids:
@@ -35,6 +36,7 @@ components:
       - name: link
         default_value: NONE
     html_elements: []
+    html_element_usages: []
   - definition_id: "typescript-examples:ad7915ba82a054badb6224501ba8d788fecc3f7dbec85f3a857ff68945a4a6ff:Parent"
     name: Parent
     export_ids:
@@ -56,6 +58,7 @@ components:
                 props: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "typescript-examples:bf0d0c920397c9d1106c0d212e0e68b49b760875c939edf8086e9b6fb9c68f42:Button"
     name: Button
     export_ids:
@@ -66,6 +69,11 @@ components:
     props: []
     html_elements:
       - button
+    html_element_usages:
+      - tag: button
+        count: 1
+        spans:
+          - "2:12-2:35"
   - definition_id: "typescript-examples:bf0d0c920397c9d1106c0d212e0e68b49b760875c939edf8086e9b6fb9c68f42:Link"
     name: Link
     export_ids:
@@ -76,6 +84,11 @@ components:
     props: []
     html_elements:
       - a
+    html_element_usages:
+      - tag: a
+        count: 1
+        spans:
+          - "6:12-6:23"
   - definition_id: "typescript-examples:b526f3b6d19e2f2bc2f4e51f83aa8101933039cdf5d02a1e98b5526267863436:default"
     name: export-default
     export_ids:
@@ -86,6 +99,11 @@ components:
     props: []
     html_elements:
       - div
+    html_element_usages:
+      - tag: div
+        count: 1
+        spans:
+          - "2:12-2:28"
   - definition_id: "typescript-examples:400656bf80a91afee30c6957d918fd1da1ca2b65b2cc56676f3e4e4a57011e7f:RedeclareExternalImport"
     name: RedeclareExternalImport
     export_ids:
@@ -115,6 +133,7 @@ components:
                 props: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "typescript-examples:36c63c09e1590105403d5e564633e9b2ebcb46a997f58415c63c9b8de0e8a2fe:RedeclareImport"
     name: RedeclareImport
     export_ids:
@@ -144,6 +163,7 @@ components:
                 props: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "typescript-examples:a310cdd6015b963f42b22f07f3dc64c3978e0b6efb4bd58bb97a52e7bec43eb5:NewButton"
     name: NewButton
     export_ids:
@@ -165,6 +185,7 @@ components:
             usages: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "typescript-examples:a310cdd6015b963f42b22f07f3dc64c3978e0b6efb4bd58bb97a52e7bec43eb5:NewButtonByUsingUtil"
     name: NewButtonByUsingUtil
     export_ids:
@@ -186,6 +207,7 @@ components:
             usages: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "typescript-examples:a310cdd6015b963f42b22f07f3dc64c3978e0b6efb4bd58bb97a52e7bec43eb5:OldButton"
     name: OldButton
     export_ids:
@@ -207,6 +229,7 @@ components:
             usages: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "typescript-examples:a310cdd6015b963f42b22f07f3dc64c3978e0b6efb4bd58bb97a52e7bec43eb5:Parent"
     name: Parent
     export_ids:
@@ -252,6 +275,7 @@ components:
                 props: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "typescript-examples:a2211841d562f032415304efe9312a75094214b56a3053659e05b5be853607aa:WildcardImport"
     name: WildcardImport
     export_ids:
@@ -312,4 +336,5 @@ components:
                 props: []
     props: []
     html_elements: []
+    html_element_usages: []
 

@@ -160,6 +160,7 @@ async function createComponents(
                 } : {}),
             })),
             htmlElements: cdata.html_elements ?? [],
+            htmlElementUsages: cdata.html_element_usages ?? [],
             metadata: convertMetadata(cdata.metadata),
         };
 
@@ -1685,6 +1686,7 @@ export interface RawHtmlUsageResult {
     element: string;
     numComponents: number;
     numProjects: number;
+    numUsages: number;
     suggestedReplacement?: string;
     components: Pick<Component, "id" | "name" | "definitionId" | "packageName">[];
 }
@@ -1730,7 +1732,7 @@ export async function getRawHtmlUsage(workspaceId: string, { limit, htmlElementM
                 from: COMPONENT_COLLECTION_NAME,
                 localField: "component._id",
                 foreignField: "_id",
-                pipeline: [{ $project: { _id: 0, htmlElements: 1 } }],
+                pipeline: [{ $project: { _id: 0, htmlElements: 1, htmlElementUsages: 1 } }],
                 as: "components",
             },
         },
@@ -1744,12 +1746,40 @@ export async function getRawHtmlUsage(workspaceId: string, { limit, htmlElementM
                         field: "htmlElements",
                     },
                 },
+                htmlElementUsages: {
+                    $ifNull: [
+                        { $getField: { input: { $first: "$components" }, field: "htmlElementUsages" } },
+                        [],
+                    ],
+                },
             },
         },
         { $unwind: { path: "$element" } },
         {
+            // Per (component, element) occurrence count, from the per-occurrence
+            // usage data. 0 when only the deduped set carried the element.
+            $addFields: {
+                usageCount: {
+                    $sum: {
+                        $map: {
+                            input: {
+                                $filter: {
+                                    input: "$htmlElementUsages",
+                                    as: "usage",
+                                    cond: { $eq: ["$$usage.tag", "$element"] },
+                                },
+                            },
+                            as: "usage",
+                            in: "$$usage.count",
+                        },
+                    },
+                },
+            },
+        },
+        {
             $group: {
                 _id: "$element",
+                numUsages: { $sum: "$usageCount" },
                 projects: { $addToSet: "$component.packageName" },
                 components: {
                     $push: {
@@ -1767,6 +1797,7 @@ export async function getRawHtmlUsage(workspaceId: string, { limit, htmlElementM
                 element: "$_id",
                 numComponents: { $size: "$components" },
                 numProjects: { $size: "$projects" },
+                numUsages: 1,
                 components: { $slice: ["$components", RAW_HTML_COMPONENT_SAMPLE_LIMIT] },
             },
         },

@@ -14,6 +14,11 @@ components:
     props: []
     html_elements:
       - div
+    html_element_usages:
+      - tag: div
+        count: 1
+        spans:
+          - "4:12-4:29"
   - definition_id: "typescript-examples:4fbb70f2201bab4eb9a1cce1873cac6a26dc4156f8c460ee1cc2a92382649003:StyledSample"
     name: StyledSample
     export_ids:
@@ -30,6 +35,11 @@ components:
     props: []
     html_elements:
       - div
+    html_element_usages:
+      - tag: div
+        count: 1
+        spans:
+          - "4:12-4:29"
   - definition_id: "typescript-examples:4fbb70f2201bab4eb9a1cce1873cac6a26dc4156f8c460ee1cc2a92382649003:StyledUnknownComponent"
     name: StyledUnknownComponent
     export_ids:
@@ -39,6 +49,7 @@ components:
     dependencies: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "typescript-examples:8475580ece8868f50cfc534192c9e9508959a33a1c1e59dc9e5d9b6a7348c086:default"
     name: StyledSample
     export_ids:
@@ -48,6 +59,7 @@ components:
     dependencies: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "typescript-examples:9767a3ab22ae6a72cb4314a5fe57d2c40cc6190de711b536c0970123d9ca9c8a:SampleMacro"
     name: SampleMacro
     export_ids:
@@ -58,6 +70,11 @@ components:
     props: []
     html_elements:
       - div
+    html_element_usages:
+      - tag: div
+        count: 1
+        spans:
+          - "4:12-4:29"
   - definition_id: "typescript-examples:9767a3ab22ae6a72cb4314a5fe57d2c40cc6190de711b536c0970123d9ca9c8a:StyledSampleMacro"
     name: StyledSampleMacro
     export_ids:
@@ -73,6 +90,11 @@ components:
     props: []
     html_elements:
       - div
+    html_element_usages:
+      - tag: div
+        count: 1
+        spans:
+          - "4:12-4:29"
   - definition_id: "typescript-examples:e91e488fb65b41917e66abbbc5e940cec16242e1e6309db6d4e96307d1074a89:NamedImportSample"
     name: NamedImportSample
     export_ids:
@@ -83,6 +105,11 @@ components:
     props: []
     html_elements:
       - div
+    html_element_usages:
+      - tag: div
+        count: 1
+        spans:
+          - "4:12-4:29"
   - definition_id: "typescript-examples:e91e488fb65b41917e66abbbc5e940cec16242e1e6309db6d4e96307d1074a89:StyledNamedImportUnknownComponent"
     name: StyledNamedImportUnknownComponent
     export_ids:
@@ -92,6 +119,7 @@ components:
     dependencies: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "typescript-examples:e91e488fb65b41917e66abbbc5e940cec16242e1e6309db6d4e96307d1074a89:default"
     name: StyledNamedImportSample
     export_ids:
@@ -107,4 +135,9 @@ components:
     props: []
     html_elements:
       - div
+    html_element_usages:
+      - tag: div
+        count: 1
+        spans:
+          - "4:12-4:29"
 

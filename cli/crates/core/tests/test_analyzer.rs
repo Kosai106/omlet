@@ -196,6 +196,15 @@ struct RedactedComponent {
     props: Vec<RedactedProp>,
     #[derivative(PartialEq = "ignore", PartialOrd = "ignore", Ord = "ignore")]
     html_elements: Vec<String>,
+    #[derivative(PartialEq = "ignore", PartialOrd = "ignore", Ord = "ignore")]
+    html_element_usages: Vec<RedactedHtmlElementUsage>,
+}
+
+#[derive(Serialize)]
+struct RedactedHtmlElementUsage {
+    tag: String,
+    count: usize,
+    spans: Vec<String>,
 }
 
 impl From<&Component> for RedactedComponent {
@@ -229,6 +238,25 @@ impl From<&Component> for RedactedComponent {
             component.html_elements.iter().map(|s| s.clone()).collect();
         html_elements.sort();
 
+        let html_element_usages: Vec<RedactedHtmlElementUsage> = component
+            .html_element_usages
+            .iter()
+            .map(|u| RedactedHtmlElementUsage {
+                tag: u.tag.clone(),
+                count: u.count,
+                spans: u
+                    .spans
+                    .iter()
+                    .map(|s| {
+                        format!(
+                            "{}:{}-{}:{}",
+                            s.start.line, s.start.column, s.end.line, s.end.column
+                        )
+                    })
+                    .collect(),
+            })
+            .collect();
+
         Self {
             definition_id: component.id.clone(),
             name: component.name.clone(),
@@ -238,6 +266,7 @@ impl From<&Component> for RedactedComponent {
             dependencies,
             props,
             html_elements,
+            html_element_usages,
         }
     }
 }

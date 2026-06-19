@@ -25,14 +25,16 @@ enum SortColumn {
     Element = "element",
     Components = "components",
     Projects = "projects",
+    Usages = "usages",
 }
 
-const sortColumns = [SortColumn.Element, SortColumn.Components, SortColumn.Projects];
+const sortColumns = [SortColumn.Element, SortColumn.Components, SortColumn.Projects, SortColumn.Usages];
 
 const columnLabels: Record<SortColumn, string> = {
     [SortColumn.Element]: "Element",
     [SortColumn.Components]: "Components",
     [SortColumn.Projects]: "Projects",
+    [SortColumn.Usages]: "Uses",
 };
 
 function compareRows(a: RawHtmlUsageResult, b: RawHtmlUsageResult, column: SortColumn): number {
@@ -43,6 +45,8 @@ function compareRows(a: RawHtmlUsageResult, b: RawHtmlUsageResult, column: SortC
             return a.numComponents - b.numComponents;
         case SortColumn.Projects:
             return a.numProjects - b.numProjects;
+        case SortColumn.Usages:
+            return a.numUsages - b.numUsages;
     }
 }
 
@@ -75,6 +79,7 @@ function transformRows(rows: RawHtmlUsageResult[]): RowData[] {
             <code key="element" className={classes.element}>{`<${row.element}>`}</code>,
             row.numComponents,
             row.numProjects,
+            row.numUsages,
             row.suggestedReplacement ?? "",
             formatExamples(row),
         ],
@@ -188,7 +193,7 @@ export function RawHtml() {
                     <PaginatedTable
                         key={filterKey}
                         rowClassName={classes.row}
-                        columnClassNames={[classes.elementColumn, classes.componentsColumn, classes.projectsColumn, classes.replacementColumn, classes.examplesColumn]}
+                        columnClassNames={[classes.elementColumn, classes.componentsColumn, classes.projectsColumn, classes.usesColumn, classes.replacementColumn, classes.examplesColumn]}
                         headers={sortableHeaders}
                         rows={rows}
                         pageSize={PAGE_SIZE}

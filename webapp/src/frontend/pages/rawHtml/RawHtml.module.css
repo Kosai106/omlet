@@ -85,6 +85,12 @@
     color: var(--label-secondary-color);
 }
 
+.rawHtml .usesColumn {
+    width: 80px;
+    text-align: right;
+    color: var(--label-secondary-color);
+}
+
 .rawHtml .replacementColumn {
     width: 160px;
     overflow: hidden;

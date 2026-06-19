@@ -12,6 +12,7 @@ components:
     dependencies: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "rsg-components:7f816072c1c6a23b88dfde54c5aa48559a81803890d297d21f17943c4f2b643d:default"
     name: Arguments
     export_ids: []
@@ -20,6 +21,7 @@ components:
     dependencies: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "rsg-components:9b79a0b1c67fb5e7f628bd057399de28a517b0be1c1a108fd04618c86a89f9b3:default"
     name: JsDoc
     export_ids: []
@@ -28,6 +30,7 @@ components:
     dependencies: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "rsg-components:0e52f6b9d02515c59bb4fdeec2762fdbe701080c82986fc4dfbefcb1e2389817:default"
     name: Markdown
     export_ids: []
@@ -36,6 +39,7 @@ components:
     dependencies: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "rsg-components:dcd1d5223f73b3a965c07e3ff5dbee3eedcfedb806686a05b9b3868a2c3d6d50:default"
     name: Name
     export_ids: []
@@ -44,6 +48,7 @@ components:
     dependencies: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "rsg-components:16d1c9050a0b32e83764a81d801a880773abedfd7f8b0b08a1cd87ca0e404f12:default"
     name: Table
     export_ids: []
@@ -52,6 +57,7 @@ components:
     dependencies: []
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "typescript-examples:b0f5a7057b624387246abad4a8b5fe01f895e212441dfb6832b86b7fbb1ffa33:AnotherDialog"
     name: AnotherDialog
     export_ids:
@@ -81,6 +87,15 @@ components:
     html_elements:
       - div
       - h1
+    html_element_usages:
+      - tag: div
+        count: 1
+        spans:
+          - "33:12-37:11"
+      - tag: h1
+        count: 1
+        spans:
+          - "34:9-34:23"
   - definition_id: "typescript-examples:b0f5a7057b624387246abad4a8b5fe01f895e212441dfb6832b86b7fbb1ffa33:Dialog"
     name: Dialog
     export_ids:
@@ -123,6 +138,15 @@ components:
     html_elements:
       - div
       - h1
+    html_element_usages:
+      - tag: div
+        count: 1
+        spans:
+          - "22:12-27:11"
+      - tag: h1
+        count: 1
+        spans:
+          - "23:9-23:23"
   - definition_id: "typescript-examples:b0f5a7057b624387246abad4a8b5fe01f895e212441dfb6832b86b7fbb1ffa33:ExportedFooter"
     name: ExportedFooter
     export_ids:
@@ -146,6 +170,11 @@ components:
     props: []
     html_elements:
       - div
+    html_element_usages:
+      - tag: div
+        count: 1
+        spans:
+          - "4:12-6:11"
   - definition_id: "typescript-examples:e18f8ed7dac11a940551a95199e7db5c6b7bed444914d39555708435e498dd37:MethodsRenderer"
     name: MethodsRenderer
     export_ids:
@@ -251,6 +280,7 @@ components:
                     value: Expression
     props: []
     html_elements: []
+    html_element_usages: []
   - definition_id: "typescript-examples:750a7d68d8ef1fb58d722c3a74cc514249cb00a1109f7fc7063bd5d87d454030:Button"
     name: Button
     export_ids:
@@ -261,6 +291,11 @@ components:
     props: []
     html_elements:
       - button
+    html_element_usages:
+      - tag: button
+        count: 1
+        spans:
+          - "2:12-2:40"
   - definition_id: "typescript-examples:750a7d68d8ef1fb58d722c3a74cc514249cb00a1109f7fc7063bd5d87d454030:Input"
     name: Input
     export_ids:
@@ -271,4 +306,9 @@ components:
     props: []
     html_elements:
       - input
+    html_element_usages:
+      - tag: input
+        count: 1
+        spans:
+          - "6:12-6:32"
 
