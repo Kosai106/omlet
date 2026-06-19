@@ -158,6 +158,7 @@ async function createComponents(
                     },
                 } : {}),
             })),
+            htmlElements: cdata.html_elements ?? [],
             metadata: convertMetadata(cdata.metadata),
         };
 
@@ -1669,6 +1670,96 @@ export async function getComponentPropsUsage(workspaceId: string, { limit }: { l
                 sumOfUsages: -1,
             },
         },
+        ...(limit === undefined ? [] : [{ $limit: limit }]),
+    ]).exec();
+}
+
+export interface RawHtmlUsageResult {
+    element: string;
+    numComponents: number;
+    numProjects: number;
+    components: Pick<Component, "id" | "name" | "definitionId" | "packageName">[];
+}
+
+// Number of `components` returned per raw-HTML element. The aggregate counts
+// (numComponents/numProjects) reflect every component; the inline list is capped
+// to keep the payload bounded for elements used very widely.
+const RAW_HTML_COMPONENT_SAMPLE_LIMIT = 100;
+
+// Rolls up, for the latest analysis, every raw HTML element rendered by a
+// component (e.g. <button>, <input>, <a>) to the set of components and projects
+// that render it. `htmlElements` is looked up from the components collection the
+// same way the props pipeline looks up `props` — it is not denormalized into the
+// historic index.
+export async function getRawHtmlUsage(workspaceId: string, { limit }: { limit?: number; } = {}): Promise<RawHtmlUsageResult[]> {
+    const latestAnalysisId = await getLatestIndexAnalysisId(workspaceId);
+    if (!latestAnalysisId) {
+        return [];
+    }
+    return HistoricComponentIndexModel.aggregate<RawHtmlUsageResult>([
+        {
+            $match: {
+                workspace: new MongooseTypes.ObjectId(workspaceId),
+                lastAnalysis: new MongooseTypes.ObjectId(latestAnalysisId),
+            },
+        },
+        { $unwind: { path: "$entries" } },
+        {
+            $project: {
+                component: {
+                    _id: "$entries.component._id",
+                    name: "$entries.component.name",
+                    definitionId: "$entries.component.definitionId",
+                    packageName: "$entries.component.packageName",
+                },
+            },
+        },
+        {
+            $lookup: {
+                from: COMPONENT_COLLECTION_NAME,
+                localField: "component._id",
+                foreignField: "_id",
+                pipeline: [{ $project: { _id: 0, htmlElements: 1 } }],
+                as: "components",
+            },
+        },
+        // Drop components that render no raw HTML.
+        { $match: { "components.0.htmlElements.0": { $exists: true } } },
+        {
+            $addFields: {
+                element: {
+                    $getField: {
+                        input: { $first: "$components" },
+                        field: "htmlElements",
+                    },
+                },
+            },
+        },
+        { $unwind: { path: "$element" } },
+        {
+            $group: {
+                _id: "$element",
+                projects: { $addToSet: "$component.packageName" },
+                components: {
+                    $push: {
+                        id: { $toString: "$component._id" },
+                        name: "$component.name",
+                        definitionId: "$component.definitionId",
+                        packageName: "$component.packageName",
+                    },
+                },
+            },
+        },
+        {
+            $project: {
+                _id: 0,
+                element: "$_id",
+                numComponents: { $size: "$components" },
+                numProjects: { $size: "$projects" },
+                components: { $slice: ["$components", RAW_HTML_COMPONENT_SAMPLE_LIMIT] },
+            },
+        },
+        { $sort: { numComponents: -1, element: 1 } },
         ...(limit === undefined ? [] : [{ $limit: limit }]),
     ]).exec();
 }

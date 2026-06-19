@@ -56,6 +56,7 @@ export interface ComponentDoc {
     updatedAt?: Date;
     numOfDependencies: number;
     props: ComponentPropDoc[];
+    htmlElements: string[];
     span?: {
         start: CharacterPosition;
         end: CharacterPosition;
@@ -229,6 +230,7 @@ const ComponentSchema = new Schema<ComponentDoc>({
             end: CharacterPositionSchema,
         },
     }],
+    htmlElements: { type: [String], default: [] },
     span: {
         start: CharacterPositionSchema,
         end: CharacterPositionSchema,
