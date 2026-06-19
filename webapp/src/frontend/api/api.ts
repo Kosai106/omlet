@@ -18,6 +18,7 @@ import { type APIResponse } from "../models/APIResponse";
 import { type AuthProviders } from "../models/AuthProviders";
 import { type Component } from "../models/Component";
 import { type ComponentProps } from "../models/ComponentProps";
+import { type ComponentPropUsageResult } from "../models/ComponentPropUsageResult";
 import { type ComponentsResponse } from "../models/ComponentsResponse";
 import { type ComponentUsage } from "../models/ComponentUsage";
 import { type DataIssue } from "../models/DataIssue";
@@ -527,6 +528,15 @@ export async function getUnusedComponentProps(workspaceSlug: string, params: { l
     }
     const response = await http.get(url.toString(), { signal });
     return handleResponse<UnusedComponentPropResult[]>(response);
+}
+
+export async function getComponentPropsUsage(workspaceSlug: string, params: { limit?: number; } = {}, signal?: AbortSignal): Promise<ComponentPropUsageResult[]> {
+    const url = new URL(`${base}/workspaces/${workspaceSlug}/component-props`, config.APP_BASE_URL);
+    if ("limit" in params && params.limit !== undefined) {
+        url.searchParams.set("limit", params.limit.toString());
+    }
+    const response = await http.get(url.toString(), { signal });
+    return handleResponse<ComponentPropUsageResult[]>(response);
 }
 
 interface AuthRequestParams {

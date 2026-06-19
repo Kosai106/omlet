@@ -1415,12 +1415,19 @@ export interface UnusedComponentPropResult {
     component: Pick<Component, "id" | "name" | "definitionId" | "packageName">;
 }
 
-export async function getUnusedComponentProps(workspaceId: string, { limit }: { limit?: number; } = {}): Promise<UnusedComponentPropResult[]> {
-    const latestAnalysisId = await getLatestIndexAnalysisId(workspaceId);
-    if (!latestAnalysisId) {
-        return [];
-    }
-    return HistoricComponentIndexModel.aggregate<UnusedComponentPropResult>([
+export interface ComponentPropUsageResult {
+    propName: string;
+    sumOfUsages: number;
+    numberOfUsages: number;
+    component: Pick<Component, "id" | "name" | "definitionId" | "packageName">;
+}
+
+// Shared aggregation stages that, for every (component, prop) pair in the latest
+// analysis, compute `usedProps` (the prop names actually passed by consumers, with
+// one entry per usage that passes it) and `sumOfUsages` (the component's total
+// number of usages). Callers append their own match/project/sort stages.
+function componentPropsUsagePipeline(workspaceId: string, latestAnalysisId: string): PipelineStage[] {
+    return [
         {
             $match: {
                 workspace: new MongooseTypes.ObjectId(workspaceId),
@@ -1569,6 +1576,25 @@ export async function getUnusedComponentProps(workspaceId: string, { limit }: { 
                 },
             },
         },
+    ];
+}
+
+const componentPropProjection = {
+    id: {
+        $toString: "$component._id",
+    },
+    name: "$component.name",
+    definitionId: "$component.definitionId",
+    packageName: "$component.packageName",
+};
+
+export async function getUnusedComponentProps(workspaceId: string, { limit }: { limit?: number; } = {}): Promise<UnusedComponentPropResult[]> {
+    const latestAnalysisId = await getLatestIndexAnalysisId(workspaceId);
+    if (!latestAnalysisId) {
+        return [];
+    }
+    return HistoricComponentIndexModel.aggregate<UnusedComponentPropResult>([
+        ...componentPropsUsagePipeline(workspaceId, latestAnalysisId),
         {
             $match: {
                 sumOfUsages: {
@@ -1588,14 +1614,54 @@ export async function getUnusedComponentProps(workspaceId: string, { limit }: { 
             $project: {
                 propName: 1,
                 sumOfUsages: 1,
-                component: {
-                    id: {
-                        $toString: "$component._id",
+                component: componentPropProjection,
+            },
+        },
+        {
+            $sort: {
+                sumOfUsages: -1,
+            },
+        },
+        ...(limit === undefined ? [] : [{ $limit: limit }]),
+    ]).exec();
+}
+
+export async function getComponentPropsUsage(workspaceId: string, { limit }: { limit?: number; } = {}): Promise<ComponentPropUsageResult[]> {
+    const latestAnalysisId = await getLatestIndexAnalysisId(workspaceId);
+    if (!latestAnalysisId) {
+        return [];
+    }
+    return HistoricComponentIndexModel.aggregate<ComponentPropUsageResult>([
+        ...componentPropsUsagePipeline(workspaceId, latestAnalysisId),
+        {
+            $addFields: {
+                // How many of the component's usages actually pass this prop.
+                numberOfUsages: {
+                    $size: {
+                        $filter: {
+                            input: "$usedProps",
+                            "as": "usedProp",
+                            cond: {
+                                $eq: ["$$usedProp", "$propName"],
+                            },
+                        },
                     },
-                    name: "$component.name",
-                    definitionId: "$component.definitionId",
-                    packageName: "$component.packageName",
                 },
+            },
+        },
+        {
+            $match: {
+                sumOfUsages: {
+                    $gt: 0,
+                },
+            },
+        },
+        {
+            $project: {
+                propName: 1,
+                sumOfUsages: 1,
+                numberOfUsages: 1,
+                component: componentPropProjection,
             },
         },
         {

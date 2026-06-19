@@ -74,6 +74,7 @@
     display: flex;
     align-items: center;
     height: 56px;
+    text-align: start;
     gap: var(--spacing-m);
     font-size: 13px;
     color: var(--label-primary-color);

@@ -1,15 +1,21 @@
 import { type ReactNode, useMemo } from "react";
 
 import { type Emoji } from "emoji-type";
+import { Link, generatePath, useParams } from "react-router-dom";
 
+import { RoutePath } from "../../../../common/RoutePath";
 import { Callout, CalloutKind } from "../../../library/Callout/Callout";
 import { PredefinedTableType } from "../constants";
 import { type RowData } from "../paginatedTable/PaginatedTable";
 
-function CompleteListInsightContent() {
+function CompleteListInsightContent({ workspaceSlug }: { workspaceSlug: string; }) {
     return (
         <>
-            Looking for a complete list of unused props? We’d love to hear from you.
+            Looking for the complete list of unused props?{" "}
+            <Link to={{ pathname: generatePath(RoutePath.Props, { workspaceSlug }), search: "?usage=unused" }}>
+                View all unused props
+            </Link>
+            .
         </>
     );
 }
@@ -32,12 +38,14 @@ export function TableInsight({
     data,
     showCompleteListInsight,
 }: Props) {
+    const { workspaceSlug } = useParams();
+
     function getUnusedComponentPropsInsight(): InsightContent {
         if (showCompleteListInsight) {
             return {
                 kind: CalloutKind.Onboarding,
                 emoji: "🧐",
-                insight: <CompleteListInsightContent/>,
+                insight: <CompleteListInsightContent workspaceSlug={workspaceSlug!}/>,
             };
         }
 
@@ -69,7 +77,7 @@ export function TableInsight({
         }
     }
 
-    const { kind, emoji, insight } = useMemo(() => getPredefinedTableInsight() ?? { insight: null }, [tableType, data, showCompleteListInsight]);
+    const { kind, emoji, insight } = useMemo(() => getPredefinedTableInsight() ?? { insight: null }, [tableType, data, showCompleteListInsight, workspaceSlug]);
 
     if (!insight) {
         return null;

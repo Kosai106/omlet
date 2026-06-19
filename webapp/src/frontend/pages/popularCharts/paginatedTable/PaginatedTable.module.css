@@ -1,5 +1,6 @@
 .paginatedTable {
     --row-height: 50px;
+    --page-size: 5;
 }
 
 .paginatedTable .header,
@@ -18,7 +19,7 @@
 }
 
 .paginatedTable .body {
-    height: calc(var(--row-height) * 5);
+    height: calc(var(--row-height) * var(--page-size));
 }
 
 .paginatedTable .row {
