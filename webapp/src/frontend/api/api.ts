@@ -549,6 +549,13 @@ export async function getRawHtmlUsage(workspaceSlug: string, params: { limit?: n
     return handleResponse<RawHtmlUsageResult[]>(response);
 }
 
+export async function updateHtmlElementMap(workspaceSlug: string, htmlElementMap: Record<string, string>): Promise<{ workspace: Workspace; accessLevel: AccessLevel; }> {
+    const response = await http.put(`${base}/workspaces/${workspaceSlug}/html-element-map`, { htmlElementMap });
+
+    const { workspace, accessLevel } = await handleResponse<{ workspace: RawWorkspace; accessLevel: AccessLevel; }>(response);
+    return { workspace: transformWorkspace(workspace), accessLevel };
+}
+
 interface AuthRequestParams {
     cliCallbackUri?: string;
     redirect?: string;

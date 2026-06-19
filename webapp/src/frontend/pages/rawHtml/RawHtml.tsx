@@ -1,15 +1,19 @@
 import { useEffect, useMemo, useState } from "react";
 
 import { getRawHtmlUsage } from "../../api/api";
+import { Button, ButtonKind } from "../../library/Button/Button";
 import { H1 } from "../../library/Heading/Heading";
 import { IconChevronDown } from "../../library/icons/IconChevronDown";
 import { IconChevronUp } from "../../library/icons/IconChevronUp";
 import { SearchInput } from "../../library/SearchInput/SearchInput";
 import { logError } from "../../logger";
+import { AccessLevel } from "../../models/AccessLevel";
 import { type RawHtmlUsageResult } from "../../models/RawHtmlUsageResult";
 import { SortOrder } from "../../models/SortOrder";
 import { useStore } from "../../providers/StoreProvider/StoreProvider";
 import { type RowData, PaginatedTable } from "../popularCharts/paginatedTable/PaginatedTable";
+
+import { EditMappingsDialog } from "./editMappingsDialog/EditMappingsDialog";
 
 import classes from "./RawHtml.module.css";
 
@@ -78,13 +82,16 @@ function transformRows(rows: RawHtmlUsageResult[]): RowData[] {
 }
 
 export function RawHtml() {
-    const { selectors: { getWorkspace } } = useStore();
+    const { selectors: { getWorkspace, getAccessLevel } } = useStore();
     const workspace = getWorkspace();
+    const canEdit = getAccessLevel() === AccessLevel.Full;
 
     const [usage, setUsage] = useState<RawHtmlUsageResult[] | null>(null);
     const [searchTerm, setSearchTerm] = useState("");
     const [sortColumn, setSortColumn] = useState(SortColumn.Components);
     const [sortOrder, setSortOrder] = useState(SortOrder.Descending);
+    const [reloadKey, setReloadKey] = useState(0);
+    const [isDialogOpen, setIsDialogOpen] = useState(false);
 
     function handleSort(column: SortColumn) {
         if (column === sortColumn) {
@@ -118,7 +125,7 @@ export function RawHtml() {
         fetchData();
 
         return () => abortController.abort();
-    }, [workspace]);
+    }, [workspace, reloadKey]);
 
     const rows = useMemo(() => {
         if (usage === null) {
@@ -158,7 +165,7 @@ export function RawHtml() {
                     <H1 className={classes.title}>Raw HTML{rows !== null && ` (${rows.length})`}</H1>
                     <p className={classes.description}>
                         Raw HTML elements rendered directly in component code instead of a design-system
-                        component &mdash; an adoption-gap backlog. Each row shows how many components and
+                        component - an adoption-gap backlog. Each row shows how many components and
                         projects render that element.
                     </p>
                 </header>
@@ -168,6 +175,11 @@ export function RawHtml() {
                         placeholder="Search elements"
                         value={searchTerm}
                         onSearch={setSearchTerm}/>
+                    {canEdit && usage !== null && usage.length > 0 && (
+                        <Button className={classes.editButton} kind={ButtonKind.Secondary} onClick={() => setIsDialogOpen(true)}>
+                            Edit replacements
+                        </Button>
+                    )}
                 </div>
                 {rows !== null && rows.length === 0 && (
                     <p className={classes.empty}>No raw HTML elements found in the latest scan.</p>
@@ -183,6 +195,12 @@ export function RawHtml() {
                         linksDisabled/>
                 )}
             </div>
+            {isDialogOpen && usage !== null && (
+                <EditMappingsDialog
+                    elements={usage.map(({ element }) => element)}
+                    onClose={() => setIsDialogOpen(false)}
+                    onSaved={() => setReloadKey(key => key + 1)}/>
+            )}
         </main>
     );
 }

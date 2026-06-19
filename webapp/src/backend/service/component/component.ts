@@ -11,6 +11,7 @@ import { type ChartDatum } from "../../../common/models/ChartDatum";
 import { type DataFrequencyOption } from "../../../common/models/DataFrequencyOption";
 import { FilterDataType } from "../../../common/models/FilterDataType";
 import { isEqualityFilterOperation } from "../../../common/models/FilterOperation";
+import { DEFAULT_HTML_ELEMENT_MAP } from "../../../common/models/htmlElementMap";
 import { RESERVED_TAGS, type Tag } from "../../../common/models/Tag";
 import { config } from "../../../config/backend";
 import { toISOWeekString } from "../date/date";
@@ -1688,36 +1689,6 @@ export interface RawHtmlUsageResult {
     components: Pick<Component, "id" | "name" | "definitionId" | "packageName">[];
 }
 
-// TODO: Implement this
-// Seeded default mapping from raw HTML element to the design-system component
-// that usually replaces it. Used to frame the raw-HTML report as an actionable
-// "swap this for that" backlog. Not workspace-editable yet — defaults only.
-const DEFAULT_HTML_ELEMENT_MAP: Record<string, string> = {
-    a: "Link",
-    button: "Button",
-    input: "TextInput",
-    textarea: "Textarea",
-    select: "Select",
-    option: "Option",
-    img: "Image",
-    table: "Table",
-    form: "Form",
-    label: "Label",
-    dialog: "Modal",
-    nav: "Nav",
-    ul: "List",
-    ol: "List",
-    li: "ListItem",
-    h1: "Heading",
-    h2: "Heading",
-    h3: "Heading",
-    h4: "Heading",
-    h5: "Heading",
-    h6: "Heading",
-    p: "Text",
-    progress: "ProgressBar",
-};
-
 // Number of `components` returned per raw-HTML element. The aggregate counts
 // (numComponents/numProjects) reflect every component; the inline list is capped
 // to keep the payload bounded for elements used very widely.
@@ -1726,9 +1697,12 @@ const RAW_HTML_COMPONENT_SAMPLE_LIMIT = 100;
 // Rolls up, for the latest analysis, every raw HTML element rendered by a
 // component (e.g. <button>, <input>, <a>) to the set of components and projects
 // that render it. `htmlElements` is looked up from the components collection the
-// same way the props pipeline looks up `props` — it is not denormalized into the
+// same way the props pipeline looks up `props` - it is not denormalized into the
 // historic index.
-export async function getRawHtmlUsage(workspaceId: string, { limit }: { limit?: number; } = {}): Promise<RawHtmlUsageResult[]> {
+export async function getRawHtmlUsage(workspaceId: string, { limit, htmlElementMap }: { limit?: number; htmlElementMap?: Record<string, string>; } = {}): Promise<RawHtmlUsageResult[]> {
+    // Workspace overrides layered on top of the seeded defaults. An empty-string
+    // override suppresses a default (admin explicitly cleared the suggestion).
+    const effectiveMap = { ...DEFAULT_HTML_ELEMENT_MAP, ...htmlElementMap };
     const latestAnalysisId = await getLatestIndexAnalysisId(workspaceId);
     if (!latestAnalysisId) {
         return [];
@@ -1802,7 +1776,7 @@ export async function getRawHtmlUsage(workspaceId: string, { limit }: { limit?: 
 
     return results.map(result => ({
         ...result,
-        suggestedReplacement: DEFAULT_HTML_ELEMENT_MAP[result.element],
+        suggestedReplacement: effectiveMap[result.element] || undefined,
     }));
 }
 

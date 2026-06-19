@@ -242,6 +242,7 @@ export interface WorkspaceDoc {
         joinedAt: Date;
     }[];
     tags: ComponentTagDoc[];
+    htmlElementMap?: Record<string, string>;
     createdAt: Date;
     createdBy: Types.ObjectId;
 }
@@ -289,6 +290,10 @@ const WorkspaceSchema = new Schema<WorkspaceDoc>({
         },
     }],
     tags: [ComponentTagSchema],
+    htmlElementMap: {
+        type: Schema.Types.Mixed,
+        default: {},
+    },
     createdBy: {
         type: Schema.Types.ObjectId,
         ref: "User",

@@ -126,6 +126,7 @@ import {
     TagNotFound,
     TreeNode,
     updateCoreTag,
+    updateHtmlElementMap,
     updateProjectName,
     updateTag,
     type UpdateTagParams,
@@ -1250,6 +1251,51 @@ apiRouter.put("/workspaces/:workspaceSlug/projects/:projectName",
             }
             if (error instanceof ProjectAliasAlreadyExists) {
                 throw new ClientError(httpStatus.CONFLICT, ErrorResponseCode.PROJECT_ALIAS_ALREADY_EXISTS);
+            }
+
+            throw error;
+        }
+    }
+);
+
+apiRouter.put("/workspaces/:workspaceSlug/html-element-map",
+    authMiddleware(),
+    requestValidator({
+        params: {
+            schema: joi.object({
+                workspaceSlug: joi.string(),
+            }),
+        },
+        body: {
+            schema: joi.object({
+                htmlElementMap: joi.object().pattern(joi.string(), joi.string().allow("")),
+            }),
+        },
+    }),
+    async (req: Request<{ workspaceSlug: string; }, {}, { htmlElementMap: Record<string, string>; }>, res: Response) => {
+        try {
+            const {
+                auth,
+                params: {
+                    workspaceSlug,
+                },
+                body: {
+                    htmlElementMap,
+                },
+            } = req;
+
+            const workspace = await getWorkspaceIfAuthorized(workspaceSlug, UserPermission.WRITE, { auth });
+            const updatedWorkspace = await updateHtmlElementMap(workspace, htmlElementMap);
+            const accessLevel = workspace.getAccessLevel(auth);
+            await setWorkspaceDataRevisionId(workspace.id, generateWorkspaceDataRevisionId());
+
+            res.status(httpStatus.OK).json({
+                workspace: await updatedWorkspace.toResponse(),
+                accessLevel,
+            });
+        } catch (error) {
+            if (error instanceof WorkspaceNotFound || error instanceof MemberNotFound) {
+                throw new ClientError(httpStatus.NOT_FOUND, ErrorResponseCode.WORKSPACE_NOT_FOUND);
             }
 
             throw error;
@@ -2635,7 +2681,10 @@ apiRouter.get("/workspaces/:workspaceSlug/raw-html-usage",
                     .send();
             }
 
-            const result = await getRawHtmlUsage(workspace.id, { limit: limit ? Number.parseInt(limit) : undefined });
+            const result = await getRawHtmlUsage(workspace.id, {
+                limit: limit ? Number.parseInt(limit) : undefined,
+                htmlElementMap: workspace.htmlElementMap,
+            });
             const projectMap = Object.fromEntries(workspace.projects.map(p => [p.packageName, p]));
             result.forEach(item => {
                 item.components.forEach(component => {

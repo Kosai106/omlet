@@ -38,6 +38,10 @@
     width: 224px;
 }
 
+.rawHtml .editButton {
+    margin-left: auto;
+}
+
 .rawHtml .empty {
     font-size: 13px;
     line-height: 18px;
