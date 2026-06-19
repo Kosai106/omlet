@@ -19,6 +19,7 @@ export enum RoutePath {
     SavedChart = "/:workspaceSlug/analytics/saved-charts/:savedChartSlug",
     Components = "/:workspaceSlug/components",
     ComponentDetail = "/:workspaceSlug/components/:componentSlug",
+    Props = "/:workspaceSlug/props",
     CoreSelection = "/:workspaceSlug/manage-tags/core",
     Onboarding = "/:workspaceSlug/onboarding",
     QuickStart = "/:workspaceSlug/quick-start",

@@ -35,6 +35,7 @@ import { InvalidInvite } from "./pages/invalidInvite/InvalidInvite";
 import { NewAnalytics } from "./pages/newAnalytics/NewAnalytics";
 import { Onboarding } from "./pages/onboarding/Onboarding";
 import { PopularCharts } from "./pages/popularCharts/PopularCharts";
+import { Props } from "./pages/props/Props";
 import { DesignerQuickStart } from "./pages/quickStart/designerQuickStart/DesignerQuickStart";
 import { DeveloperQuickStart } from "./pages/quickStart/developerQuickStart/DeveloperQuickStart";
 import { QuickStart } from "./pages/quickStart/QuickStart";
@@ -102,6 +103,7 @@ const router = createBrowserRouter(
                     <Route index element={<Components/>}/>
                     <Route path=":componentSlug/:activeTab?" element={<ComponentDetail/>}/>
                 </Route>
+                <Route path="props" element={<Props/>}/>
                 <Route path="manage-tags" element={
                     <Navigate to="../components"/>
                 }/>

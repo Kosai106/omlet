@@ -1,6 +1,7 @@
 import classNames from "classnames";
-import { type LinkProps, NavLink } from "react-router-dom";
+import { type LinkProps, NavLink, generatePath, useParams } from "react-router-dom";
 
+import { RoutePath } from "../../../../common/RoutePath";
 import { useStore } from "../../../providers/StoreProvider/StoreProvider";
 
 import classes from "./Tabs.module.css";
@@ -17,12 +18,14 @@ function Tab({ children, to, ...props }: LinkProps) {
 }
 
 export function Tabs() {
+    const { workspaceSlug } = useParams();
     const { selectors: { getAnalyticsURL, getComponentsURL } } = useStore();
 
     return (
         <nav className={classes.tabs}>
             <Tab to={getAnalyticsURL()}>Analytics</Tab>
             <Tab to={getComponentsURL()}>Components</Tab>
+            <Tab to={generatePath(RoutePath.Props, { workspaceSlug: workspaceSlug! })}>Props</Tab>
         </nav>
     );
 }

@@ -30,6 +30,7 @@ import { createAuthRequest } from "../service/auth/auth";
 import { cacheValue, extendTTL, getCachedValue, LockError, withWorkspaceSlugWriteLock } from "../service/cache/cache";
 import { type TimeSeriesFilter } from "../service/component/aggregations";
 import {
+    type ComponentPropUsageResult,
     type ComponentUsagesResult,
     type DataAnalysisFilter,
     type UnusedComponentPropResult,
@@ -41,6 +42,7 @@ import {
     analyseTimeSeriesDataAsCSV,
     findLatestComponentsByDefinitionId,
     getComponentProps,
+    getComponentPropsUsage,
     getComponentUsagesWithParentComponent,
     getCustomProperties,
     getDependenciesFor,
@@ -2492,6 +2494,76 @@ apiRouter.get("/workspaces/:workspaceSlug/unused-component-props",
             }
 
             const result = await getUnusedComponentProps(workspace.id, { limit: limit ? Number.parseInt(limit) : undefined });
+            const projectMap = Object.fromEntries(workspace.projects.map(p => [p.packageName, p]));
+            result.forEach(item => {
+                item.component.packageName = projectMap[item.component.packageName]?.alias ?? item.component.packageName;
+            });
+
+            res.status(httpStatus.OK)
+                .set("ETag", computedEtag)
+                .set("Cache-Control", "private")
+                .json(result);
+        } catch (error) {
+            if (error instanceof WorkspaceNotFound || error instanceof MemberNotFound) {
+                throw new ClientError(httpStatus.NOT_FOUND, ErrorResponseCode.WORKSPACE_NOT_FOUND);
+            }
+
+            throw error;
+        }
+    }
+);
+
+apiRouter.get("/workspaces/:workspaceSlug/component-props",
+    authMiddleware({ credentialsRequired: false }),
+    publicAuthMiddleware(),
+    requestValidator({
+        params: {
+            schema: joi.object({
+                workspaceSlug: joi.string(),
+            }),
+        },
+        query: {
+            schema: joi.object({
+                limit: joi.number().optional(),
+            }),
+        },
+    }),
+    async (
+        req: Request<{ workspaceSlug: string; }, {}, {}, { limit?: string; }>,
+        res: Response<ComponentPropUsageResult[] | ClientError>
+    ) => {
+        try {
+            const {
+                auth,
+                publicAuth,
+                params: {
+                    workspaceSlug,
+                },
+                query: {
+                    limit,
+                },
+            } = req;
+
+            const workspace = await getWorkspaceIfAuthorized(workspaceSlug, UserPermission.READ, { auth, publicAuth });
+
+            const dataRevisionId = await getWorkspaceDataRevisionId(workspace.id);
+            const computedEtag = etag(JSON.stringify({
+                cacheVersion: COMPONENTS_ETAG_CACHE_VERSION,
+                workspaceId: workspace.id,
+                dataRevisionId,
+                url: req.originalUrl,
+            }));
+
+            const clientEtag = req.get("If-None-Match");
+            if (clientEtag === computedEtag) {
+                return res.status(httpStatus.NOT_MODIFIED)
+                    .set("ETag", computedEtag)
+                    .set("Cache-Control", "private")
+                    .set("Content-Type", "application/json")
+                    .send();
+            }
+
+            const result = await getComponentPropsUsage(workspace.id, { limit: limit ? Number.parseInt(limit) : undefined });
             const projectMap = Object.fromEntries(workspace.projects.map(p => [p.packageName, p]));
             result.forEach(item => {
                 item.component.packageName = projectMap[item.component.packageName]?.alias ?? item.component.packageName;

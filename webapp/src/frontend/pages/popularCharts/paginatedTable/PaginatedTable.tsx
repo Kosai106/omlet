@@ -1,4 +1,4 @@
-import { useState, type ReactNode, useMemo } from "react";
+import { useState, type CSSProperties, type ReactNode, useMemo } from "react";
 
 import classNames from "classnames";
 import { Link } from "react-router-dom";
@@ -57,13 +57,14 @@ function TableRow({
 interface Props {
     rowClassName?: string;
     columnClassNames: string[];
-    headers: string[];
+    headers: ReactNode[];
     rows: RowData[];
     linksDisabled: boolean;
+    pageSize?: number;
     onPageChange?(page: number, pageSize: number): void;
 }
 
-const CHUNK_SIZE = 5;
+const DEFAULT_PAGE_SIZE = 5;
 
 export function PaginatedTable({
     rowClassName,
@@ -71,11 +72,12 @@ export function PaginatedTable({
     headers,
     rows,
     linksDisabled,
+    pageSize = DEFAULT_PAGE_SIZE,
     onPageChange,
 }: Props) {
     const [currentPage, setCurrentPage] = useState(0);
 
-    const pages = useMemo(() => [...arrayChunk(rows, CHUNK_SIZE)], [rows]);
+    const pages = useMemo(() => [...arrayChunk(rows, pageSize)], [rows, pageSize]);
 
     function handleBackClick() {
         onPageChange?.(currentPage, pages.length);
@@ -88,7 +90,7 @@ export function PaginatedTable({
     }
 
     return (
-        <div className={classes.paginatedTable}>
+        <div className={classes.paginatedTable} style={{ "--page-size": pageSize } as CSSProperties}>
             <div className={classes.header}>
                 {headers.map((header, index) =>
                     <div key={index} className={columnClassNames[index]}>{header}</div>
@@ -97,7 +99,7 @@ export function PaginatedTable({
             <div className={classes.body}>
                 {pages[currentPage].map((row, index) =>
                     <TableRow
-                        key={currentPage * CHUNK_SIZE + index}
+                        key={currentPage * pageSize + index}
                         rowClassName={rowClassName}
                         columnClassNames={columnClassNames}
                         linksDisabled={linksDisabled}
