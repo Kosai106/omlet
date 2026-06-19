@@ -184,7 +184,7 @@ components:
       - tag: img
         count: 1
         spans:
-          - "6:12-6:18"
+          - "6:12-6:18 [img-missing-alt]"
   - definition_id: "@wildcard-exports/webapp:34c5c26de4a46aaa97e73b783b954b77aebcd621a4b8c26db1eaac588529cc71:ComponentFromCircularExportModuleB"
     name: ComponentFromCircularExportModuleB
     export_ids:
@@ -201,7 +201,7 @@ components:
       - tag: img
         count: 1
         spans:
-          - "6:12-6:18"
+          - "6:12-6:18 [img-missing-alt]"
   - definition_id: "@wildcard-exports/webapp:33ac7052a3990fb6873572eb0c68a998e19700b3f622198f398458ed61954d14:ComponentFromCircularExportModuleC"
     name: ComponentFromCircularExportModuleC
     export_ids:
@@ -217,7 +217,7 @@ components:
       - tag: img
         count: 1
         spans:
-          - "4:12-4:18"
+          - "4:12-4:18 [img-missing-alt]"
   - definition_id: "@wildcard-exports/webapp:c4f7056e1fab99cbf275c63a898c9112a13bb945a8f1960f816e8f7fcbbb1993:MainForm"
     name: MainForm
     export_ids:

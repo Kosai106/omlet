@@ -140,7 +140,7 @@ components:
       - tag: img
         count: 1
         spans:
-          - "14:13-14:19"
+          - "14:13-14:19 [img-missing-alt]"
   - definition_id: "typescript-examples:4d8c4ec7b11c9f23a1bd5ae28e62d192d65bea52b2dd4daec56b0f8ae9ec8dd7:UserMenu"
     name: UserMenu
     export_ids:

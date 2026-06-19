@@ -16,6 +16,7 @@ export interface ComponentPropNapiValue {
 export interface HtmlElementSpanNapiValue {
   start: CharacterPositionNapiValue
   end: CharacterPositionNapiValue
+  issues: Array<string>
 }
 export interface HtmlElementUsageNapiValue {
   tag: string

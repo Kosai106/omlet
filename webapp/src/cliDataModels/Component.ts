@@ -35,6 +35,7 @@ export type Component = {
         spans: {
             start: CharacterPosition;
             end: CharacterPosition;
+            issues: string[];
         }[];
     }[];
     metadata?: Record<string, string | boolean | number | Date>;

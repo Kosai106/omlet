@@ -51,6 +51,7 @@ export interface HtmlElementUsageDoc {
     spans: {
         start: CharacterPosition;
         end: CharacterPosition;
+        issues: string[];
     }[];
 }
 
@@ -249,6 +250,7 @@ const ComponentSchema = new Schema<ComponentDoc>({
             _id: false,
             start: CharacterPositionSchema,
             end: CharacterPositionSchema,
+            issues: { type: [String], default: [] },
         }],
     }],
     span: {

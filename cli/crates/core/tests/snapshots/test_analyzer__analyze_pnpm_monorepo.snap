@@ -86,7 +86,7 @@ components:
       - tag: img
         count: 1
         spans:
-          - "2:12-2:18"
+          - "2:12-2:18 [img-missing-alt]"
   - definition_id: "pack-b:63f964235127a9bb6c2edc19a23d8c1abf91b45c3ff01000114af0a2fc5ce8a8:default"
     name: PackBTitle
     export_ids:

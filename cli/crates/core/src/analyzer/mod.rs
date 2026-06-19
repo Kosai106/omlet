@@ -143,6 +143,41 @@ pub struct Component {
 pub struct HtmlElementSpan {
     pub start: CharacterPosition,
     pub end: CharacterPosition,
+    pub issues: Vec<String>,
+}
+
+// Simple, conservative accessibility heuristics for a single raw HTML element
+// occurrence, derived from the JSX attributes captured in its Usage. A spread
+// ({...props}) hides attributes, so "missing X" rules are suppressed when one is
+// present to avoid false positives.
+fn compute_a11y_issues(tag: &str, usage: &Usage) -> Vec<String> {
+    let prop_names: AHashSet<&str> = usage.props.iter().map(|p| p.name.as_str()).collect();
+    let has_spread = prop_names.contains("");
+
+    let mut issues = vec![];
+    match tag {
+        "img" => {
+            if !has_spread && !prop_names.contains("alt") {
+                issues.push("img-missing-alt".to_string());
+            }
+        }
+        "div" | "span" => {
+            if prop_names.contains("onClick") {
+                issues.push("clickable-non-interactive".to_string());
+            }
+        }
+        "button" => {
+            let has_label = prop_names.contains("children")
+                || prop_names.contains("aria-label")
+                || prop_names.contains("aria-labelledby")
+                || prop_names.contains("title");
+            if !has_spread && !has_label {
+                issues.push("button-missing-label".to_string());
+            }
+        }
+        _ => {}
+    }
+    issues
 }
 
 #[derive(Serialize, Debug)]
@@ -1730,9 +1765,11 @@ impl Analyzer {
                 .get_html_element_usages_in(resolved_ref.reference.get_symbol())
             {
                 if is_html_element(&name) {
+                    let issues = compute_a11y_issues(&name, &usage);
                     spans_by_tag.entry(name).or_default().push(HtmlElementSpan {
                         start: usage.start,
                         end: usage.end,
+                        issues,
                     });
                 }
             }

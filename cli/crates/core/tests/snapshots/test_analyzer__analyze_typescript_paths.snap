@@ -34,7 +34,7 @@ components:
       - tag: img
         count: 1
         spans:
-          - "2:12-2:18"
+          - "2:12-2:18 [img-missing-alt]"
   - definition_id: "typescript-paths:b13abac09964a1ee70ff0c476cfdeeae8a689b0b450084718cb490eb0ea6ee58:default"
     name: PackBTitle
     export_ids:

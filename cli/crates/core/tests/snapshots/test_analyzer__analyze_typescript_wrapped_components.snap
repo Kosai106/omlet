@@ -225,7 +225,7 @@ components:
       - tag: img
         count: 1
         spans:
-          - "6:12-6:18"
+          - "6:12-6:18 [img-missing-alt]"
   - definition_id: "typescript-examples:eb4db0f8d55b445b4e092e919cbe2696218184a09739885388ec8760d37d4a8d:IntlComponent"
     name: IntlComponent
     export_ids:
@@ -240,7 +240,7 @@ components:
       - tag: img
         count: 1
         spans:
-          - "6:12-6:18"
+          - "6:12-6:18 [img-missing-alt]"
   - definition_id: "typescript-examples:eb4db0f8d55b445b4e092e919cbe2696218184a09739885388ec8760d37d4a8d:SampleComponent"
     name: SampleComponent
     export_ids:

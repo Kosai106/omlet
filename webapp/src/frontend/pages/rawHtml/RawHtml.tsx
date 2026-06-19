@@ -26,15 +26,17 @@ enum SortColumn {
     Components = "components",
     Projects = "projects",
     Usages = "usages",
+    A11y = "a11y",
 }
 
-const sortColumns = [SortColumn.Element, SortColumn.Components, SortColumn.Projects, SortColumn.Usages];
+const sortColumns = [SortColumn.Element, SortColumn.Components, SortColumn.Projects, SortColumn.Usages, SortColumn.A11y];
 
 const columnLabels: Record<SortColumn, string> = {
     [SortColumn.Element]: "Element",
     [SortColumn.Components]: "Components",
     [SortColumn.Projects]: "Projects",
     [SortColumn.Usages]: "Uses",
+    [SortColumn.A11y]: "A11y issues",
 };
 
 function compareRows(a: RawHtmlUsageResult, b: RawHtmlUsageResult, column: SortColumn): number {
@@ -47,6 +49,8 @@ function compareRows(a: RawHtmlUsageResult, b: RawHtmlUsageResult, column: SortC
             return a.numProjects - b.numProjects;
         case SortColumn.Usages:
             return a.numUsages - b.numUsages;
+        case SortColumn.A11y:
+            return a.numA11yIssues - b.numA11yIssues;
     }
 }
 
@@ -80,6 +84,7 @@ function transformRows(rows: RawHtmlUsageResult[]): RowData[] {
             row.numComponents,
             row.numProjects,
             row.numUsages,
+            row.numA11yIssues || "",
             row.suggestedReplacement ?? "",
             formatExamples(row),
         ],
@@ -193,7 +198,7 @@ export function RawHtml() {
                     <PaginatedTable
                         key={filterKey}
                         rowClassName={classes.row}
-                        columnClassNames={[classes.elementColumn, classes.componentsColumn, classes.projectsColumn, classes.usesColumn, classes.replacementColumn, classes.examplesColumn]}
+                        columnClassNames={[classes.elementColumn, classes.componentsColumn, classes.projectsColumn, classes.usesColumn, classes.a11yColumn, classes.replacementColumn, classes.examplesColumn]}
                         headers={sortableHeaders}
                         rows={rows}
                         pageSize={PAGE_SIZE}

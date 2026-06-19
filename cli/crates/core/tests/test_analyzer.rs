@@ -248,10 +248,15 @@ impl From<&Component> for RedactedComponent {
                     .spans
                     .iter()
                     .map(|s| {
-                        format!(
+                        let location = format!(
                             "{}:{}-{}:{}",
                             s.start.line, s.start.column, s.end.line, s.end.column
-                        )
+                        );
+                        if s.issues.is_empty() {
+                            location
+                        } else {
+                            format!("{} [{}]", location, s.issues.join(","))
+                        }
                     })
                     .collect(),
             })

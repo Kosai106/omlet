@@ -218,6 +218,7 @@ pub struct ComponentPropNapiValue {
 pub struct HtmlElementSpanNapiValue {
     pub start: CharacterPositionNapiValue,
     pub end: CharacterPositionNapiValue,
+    pub issues: Vec<String>,
 }
 
 #[napi(object)]
@@ -442,6 +443,7 @@ fn convert_analyzer_result_to_napi_value(
                             .map(|s| HtmlElementSpanNapiValue {
                                 start: s.start.clone().into(),
                                 end: s.end.clone().into(),
+                                issues: s.issues.clone(),
                             })
                             .collect(),
                     })

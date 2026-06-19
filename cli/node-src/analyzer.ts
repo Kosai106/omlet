@@ -172,7 +172,7 @@ interface NativeComponent {
     html_element_usages?: {
         tag: string;
         count: number;
-        spans: { start: NativeCharacterPosition; end: NativeCharacterPosition; }[];
+        spans: { start: NativeCharacterPosition; end: NativeCharacterPosition; issues: string[]; }[];
     }[];
     span?: {
         start: NativeCharacterPosition;
@@ -366,7 +366,7 @@ export interface Component {
     html_element_usages?: {
         tag: string;
         count: number;
-        spans: { start: CharacterPosition; end: CharacterPosition; }[];
+        spans: { start: CharacterPosition; end: CharacterPosition; issues: string[]; }[];
     }[];
     metadata?: Record<string, string | number | boolean | Date>;
     span?: {

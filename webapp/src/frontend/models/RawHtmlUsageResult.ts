@@ -5,6 +5,7 @@ export interface RawHtmlUsageResult {
     numComponents: number;
     numProjects: number;
     numUsages: number;
+    numA11yIssues: number;
     suggestedReplacement?: string;
     components: Pick<Component, "id" | "name" | "definitionId" | "packageName">[];
 }

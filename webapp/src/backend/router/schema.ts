@@ -155,6 +155,7 @@ export const cliAnalysisDataSchema = joi.object<AnalysisResult>({
                 spans: joi.array().items(joi.object({
                     start: characterPositionSchema,
                     end: characterPositionSchema,
+                    issues: joi.array().items(joi.string()),
                 })),
             })).optional(),
             metadata: joi.object().pattern(

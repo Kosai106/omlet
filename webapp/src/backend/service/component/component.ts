@@ -1687,6 +1687,7 @@ export interface RawHtmlUsageResult {
     numComponents: number;
     numProjects: number;
     numUsages: number;
+    numA11yIssues: number;
     suggestedReplacement?: string;
     components: Pick<Component, "id" | "name" | "definitionId" | "packageName">[];
 }
@@ -1774,12 +1775,38 @@ export async function getRawHtmlUsage(workspaceId: string, { limit, htmlElementM
                         },
                     },
                 },
+                // Occurrences of this element (in this component) that have at
+                // least one accessibility issue flagged by the analyzer.
+                a11yCount: {
+                    $sum: {
+                        $map: {
+                            input: {
+                                $filter: {
+                                    input: "$htmlElementUsages",
+                                    as: "usage",
+                                    cond: { $eq: ["$$usage.tag", "$element"] },
+                                },
+                            },
+                            as: "usage",
+                            in: {
+                                $size: {
+                                    $filter: {
+                                        input: "$$usage.spans",
+                                        as: "span",
+                                        cond: { $gt: [{ $size: "$$span.issues" }, 0] },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
             },
         },
         {
             $group: {
                 _id: "$element",
                 numUsages: { $sum: "$usageCount" },
+                numA11yIssues: { $sum: "$a11yCount" },
                 projects: { $addToSet: "$component.packageName" },
                 components: {
                     $push: {
@@ -1798,6 +1825,7 @@ export async function getRawHtmlUsage(workspaceId: string, { limit, htmlElementM
                 numComponents: { $size: "$components" },
                 numProjects: { $size: "$projects" },
                 numUsages: 1,
+                numA11yIssues: 1,
                 components: { $slice: ["$components", RAW_HTML_COMPONENT_SAMPLE_LIMIT] },
             },
         },
