@@ -1771,7 +1771,7 @@ export async function getRawHtmlUsage(workspaceId: string, { limit, htmlElementM
                                 },
                             },
                             as: "usage",
-                            in: "$$usage.count",
+                            in: { $ifNull: ["$$usage.count", 0] },
                         },
                     },
                 },
@@ -1791,9 +1791,9 @@ export async function getRawHtmlUsage(workspaceId: string, { limit, htmlElementM
                             in: {
                                 $size: {
                                     $filter: {
-                                        input: "$$usage.spans",
+                                        input: { $ifNull: ["$$usage.spans", []] },
                                         as: "span",
-                                        cond: { $gt: [{ $size: "$$span.issues" }, 0] },
+                                        cond: { $gt: [{ $size: { $ifNull: ["$$span.issues", []] } }, 0] },
                                     },
                                 },
                             },
