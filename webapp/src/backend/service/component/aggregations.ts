@@ -19,6 +19,7 @@ export interface DataAnalysisFilter {
     tag?: EqualityFilter[];
     sourceProject?: EqualityFilter[];
     clientProject?: EqualityFilter[];
+    usesRawElement?: EqualityFilter[];
     numOfUsages?: NumberFilter[];
     numOfDependencies?: NumberFilter[];
     createdAt?: DateFilter[];

@@ -81,6 +81,11 @@
     color: var(--label-secondary-color);
 }
 
+.rawHtml .replacementColumn {
+    width: 160px;
+    overflow: hidden;
+}
+
 .rawHtml .examplesColumn {
     flex: 1;
     overflow: hidden;

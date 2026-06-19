@@ -71,6 +71,7 @@ function transformRows(rows: RawHtmlUsageResult[]): RowData[] {
             <code key="element" className={classes.element}>{`<${row.element}>`}</code>,
             row.numComponents,
             row.numProjects,
+            row.suggestedReplacement ?? "",
             formatExamples(row),
         ],
     }));
@@ -145,7 +146,10 @@ export function RawHtml() {
             active={sortColumn === column}
             order={sortOrder}
             onClick={() => handleSort(column)}/>
-    )).concat(<span key="examples">Example components</span>);
+    )).concat(
+        <span key="replacement">Suggested replacement</span>,
+        <span key="examples">Example components</span>,
+    );
 
     return (
         <main className={classes.rawHtml}>
@@ -172,7 +176,7 @@ export function RawHtml() {
                     <PaginatedTable
                         key={filterKey}
                         rowClassName={classes.row}
-                        columnClassNames={[classes.elementColumn, classes.componentsColumn, classes.projectsColumn, classes.examplesColumn]}
+                        columnClassNames={[classes.elementColumn, classes.componentsColumn, classes.projectsColumn, classes.replacementColumn, classes.examplesColumn]}
                         headers={sortableHeaders}
                         rows={rows}
                         pageSize={PAGE_SIZE}

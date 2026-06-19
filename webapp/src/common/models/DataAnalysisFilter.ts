@@ -10,6 +10,7 @@ export interface DataAnalysisFilter {
     tag?: APIEqualityFilter[];
     sourceProject?: APIEqualityFilter[];
     clientProject?: APIEqualityFilter[];
+    usesRawElement?: APIEqualityFilter[];
     numOfUsages?: APINumberFilter[];
     numOfDependencies?: APINumberFilter[];
     createdAt?: APIDateFilter[];

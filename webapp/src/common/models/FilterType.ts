@@ -9,11 +9,12 @@ export enum FilterType {
     LastUsageChangedDate = "lastUsageChangedDate",
     NumberOfUsages = "numberOfUsages",
     NumberOfDependencies = "numberOfDependencies",
+    UsesRawElement = "usesRawElement",
     CustomProperty = "customProperty",
 }
 
 export type RegularFilterType = Exclude<FilterType, FilterType.CustomProperty>;
-export type ArrayFilterType = FilterType.ProjectDefined | FilterType.ProjectUsedIn | FilterType.Tag;
+export type ArrayFilterType = FilterType.ProjectDefined | FilterType.ProjectUsedIn | FilterType.Tag | FilterType.UsesRawElement;
 export type StringFilterType = FilterType.Name | FilterType.FilePath;
 export type DateFilterType = FilterType.CreatedDate | FilterType.LastUpdatedDate | FilterType.LastUsageChangedDate;
 export type NumberFilterType = FilterType.NumberOfUsages | FilterType.NumberOfDependencies;
@@ -40,6 +41,8 @@ export function getFilterTypeLabel(filterType: FilterType): string {
             return "Number of usages";
         case FilterType.NumberOfDependencies:
             return "Number of dependencies";
+        case FilterType.UsesRawElement:
+            return "Uses raw element";
         case FilterType.CustomProperty:
             return "Custom property";
     }
@@ -67,6 +70,8 @@ export function fieldIntoFilterType(field: string): FilterType {
             return FilterType.NumberOfUsages;
         case "component.numOfDependencies":
             return FilterType.NumberOfDependencies;
+        case "component.htmlElements":
+            return FilterType.UsesRawElement;
         default: {
             if (field.includes("metadata")) {
                 return FilterType.CustomProperty;

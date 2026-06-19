@@ -600,6 +600,12 @@ export async function getLatestComponentsIn(workspaceId: string, {
         });
     }
 
+    if (filters.usesRawElement) {
+        matchQueries.push({
+            htmlElements: equalityFilterIntoQuery(filters.usesRawElement[0]),
+        });
+    }
+
     if (filters.numOfUsages) {
         matchQueries.push({
             numOfUsages: numberFilterIntoQuery(filters.numOfUsages[0]),
@@ -1678,8 +1684,39 @@ export interface RawHtmlUsageResult {
     element: string;
     numComponents: number;
     numProjects: number;
+    suggestedReplacement?: string;
     components: Pick<Component, "id" | "name" | "definitionId" | "packageName">[];
 }
+
+// TODO: Implement this
+// Seeded default mapping from raw HTML element to the design-system component
+// that usually replaces it. Used to frame the raw-HTML report as an actionable
+// "swap this for that" backlog. Not workspace-editable yet — defaults only.
+const DEFAULT_HTML_ELEMENT_MAP: Record<string, string> = {
+    a: "Link",
+    button: "Button",
+    input: "TextInput",
+    textarea: "Textarea",
+    select: "Select",
+    option: "Option",
+    img: "Image",
+    table: "Table",
+    form: "Form",
+    label: "Label",
+    dialog: "Modal",
+    nav: "Nav",
+    ul: "List",
+    ol: "List",
+    li: "ListItem",
+    h1: "Heading",
+    h2: "Heading",
+    h3: "Heading",
+    h4: "Heading",
+    h5: "Heading",
+    h6: "Heading",
+    p: "Text",
+    progress: "ProgressBar",
+};
 
 // Number of `components` returned per raw-HTML element. The aggregate counts
 // (numComponents/numProjects) reflect every component; the inline list is capped
@@ -1696,7 +1733,7 @@ export async function getRawHtmlUsage(workspaceId: string, { limit }: { limit?: 
     if (!latestAnalysisId) {
         return [];
     }
-    return HistoricComponentIndexModel.aggregate<RawHtmlUsageResult>([
+    const results = await HistoricComponentIndexModel.aggregate<RawHtmlUsageResult>([
         {
             $match: {
                 workspace: new MongooseTypes.ObjectId(workspaceId),
@@ -1762,6 +1799,11 @@ export async function getRawHtmlUsage(workspaceId: string, { limit }: { limit?: 
         { $sort: { numComponents: -1, element: 1 } },
         ...(limit === undefined ? [] : [{ $limit: limit }]),
     ]).exec();
+
+    return results.map(result => ({
+        ...result,
+        suggestedReplacement: DEFAULT_HTML_ELEMENT_MAP[result.element],
+    }));
 }
 
 export type { DataAnalysisFilter };

@@ -943,6 +943,7 @@ ComponentSchema.static("createWorkspaceIndex", async function ({
                         numOfDependencies: 1,
                         createdAt: 1,
                         updatedAt: 1,
+                        htmlElements: 1,
                         metadata: 1,
                     },
                 }],
@@ -1171,7 +1172,7 @@ export const ComponentExportIdsModel = model<ComponentExportIdsDoc, ComponentExp
 type HistoricComponentIndexEntry = {
     definitionId: string;
     originalDefinitionIds: string[];
-    component: Pick<ComponentDoc, "definitionId" | "name" | "path" | "packageName" | "isInternal" | "numOfDependencies" | "createdAt" | "updatedAt" | "metadata"> & {
+    component: Pick<ComponentDoc, "definitionId" | "name" | "path" | "packageName" | "isInternal" | "numOfDependencies" | "createdAt" | "updatedAt" | "htmlElements" | "metadata"> & {
         _id: Types.ObjectId;
         tags: string[];
     };
@@ -1214,6 +1215,7 @@ const HistoricComponentIndexSchema = new Schema<HistoricComponentIndexDoc>({
                 numOfDependencies: { type: Number, required: true },
                 createdAt: { type: Date, required: false },
                 updatedAt: { type: Date, required: false },
+                htmlElements: { type: [String], default: [] },
                 metadata: Schema.Types.Mixed,
             },
             tags: [String],

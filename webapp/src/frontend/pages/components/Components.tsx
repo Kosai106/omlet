@@ -39,6 +39,7 @@ import {
     getCustomProperties,
     getLatestAnalysisComponents,
     getLatestAnalysisFolders,
+    getRawHtmlUsage,
     getWorkspace as getWorkspaceBySlug,
     updateWorkspaceTag,
 } from "../../api/api";
@@ -301,6 +302,15 @@ export function Components() {
                 ...pckg,
                 children: pckg.children.map(folder => combineFolders(folder, pckg.name, tags)),
             })) as Package[];
+        },
+        enabled: workspace !== null,
+    });
+
+    const { data: rawHtmlElements } = useQuery({
+        queryKey: ["rawHtmlUsage", workspace!.slug],
+        async queryFn() {
+            const usage = await getRawHtmlUsage(workspace!.slug);
+            return usage.map(({ element }) => element);
         },
         enabled: workspace !== null,
     });
@@ -866,6 +876,18 @@ export function Components() {
                         onChange={values => handleArrayFilter(FilterType.ProjectUsedIn, values)}
                         onClose={handleDropdownClose}/>
                 )}
+                {shouldRenderActiveFilter(FilterType.UsesRawElement) && (
+                    <DropdownMulti
+                        options={(rawHtmlElements ?? []).map(element => ({
+                            value: element,
+                            label: `<${element}>`,
+                        }))}
+                        label={getFilterTypeLabel(FilterType.UsesRawElement)}
+                        values={filterMap[FilterType.UsesRawElement]?.value ?? []}
+                        open={addedFilter === FilterType.UsesRawElement}
+                        onChange={values => handleArrayFilter(FilterType.UsesRawElement, values)}
+                        onClose={handleDropdownClose}/>
+                )}
                 {shouldRenderActiveFilter(FilterType.NumberOfUsages) && (
                     <DropdownNumber
                         label="# used"
@@ -950,6 +972,11 @@ export function Components() {
                 {!shouldRenderActiveFilter(FilterType.NumberOfDependencies) && (
                     <FilterPill onClick={() => handleAddFilter(FilterType.NumberOfDependencies)}>
                         # of children
+                    </FilterPill>
+                )}
+                {!shouldRenderActiveFilter(FilterType.UsesRawElement) && (
+                    <FilterPill onClick={() => handleAddFilter(FilterType.UsesRawElement)}>
+                        {getFilterTypeLabel(FilterType.UsesRawElement)}
                     </FilterPill>
                 )}
                 {!shouldRenderActiveFilter(FilterType.CreatedDate) && (
