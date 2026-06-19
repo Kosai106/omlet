@@ -4,6 +4,7 @@ export enum BreakdownType {
     ProjectDefined = "projectDefined",
     ProjectUsedIn = "projectUsedIn",
     Tag = "tag",
+    CustomProperty = "customProperty",
 }
 
 export function getValidBreakdownTypes(analysisSubject?: AnalysisSubject): BreakdownType[] {
@@ -11,7 +12,7 @@ export function getValidBreakdownTypes(analysisSubject?: AnalysisSubject): Break
         case AnalysisSubject.Components:
             return [BreakdownType.ProjectUsedIn];
         case AnalysisSubject.Projects:
-            return [BreakdownType.ProjectDefined, BreakdownType.Tag];
+            return [BreakdownType.ProjectDefined, BreakdownType.Tag, BreakdownType.CustomProperty];
         case AnalysisSubject.Tags:
             return [BreakdownType.ProjectDefined, BreakdownType.ProjectUsedIn];
         case AnalysisSubject.CustomProperties:
@@ -42,5 +43,7 @@ export function getBreakdownTypeLabel(breakdownType: BreakdownType): string {
             return "Project it's used in";
         case BreakdownType.Tag:
             return "Tag";
+        case BreakdownType.CustomProperty:
+            return "Custom property";
     }
 }

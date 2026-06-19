@@ -5,7 +5,7 @@ import { Link, generatePath, useNavigate, useParams, useSearchParams } from "rea
 
 import { AnalysisSubject } from "../../../common/models/AnalysisSubject";
 import { AnalysisType } from "../../../common/models/AnalysisType";
-import { type BreakdownType } from "../../../common/models/BreakdownType";
+import { BreakdownType } from "../../../common/models/BreakdownType";
 import { type Filter, hasSameFilters } from "../../../common/models/Filter";
 import {
     type TimeSeriesFilter,
@@ -88,7 +88,8 @@ export function SavedChart() {
     }
 
     function getCustomProperty() {
-        if (getAnalysisSubject() !== AnalysisSubject.CustomProperties) {
+        // The property is used either as the analysis subject or as the breakdown dimension.
+        if (getAnalysisSubject() !== AnalysisSubject.CustomProperties && getBreakdownType() !== BreakdownType.CustomProperty) {
             return undefined;
         }
 
@@ -189,7 +190,7 @@ export function SavedChart() {
         setSearchParams(newSearchParams, { replace: true });
     }
 
-    function handleBreakdownTypeChange(breakdownType: BreakdownType | undefined) {
+    function handleBreakdownTypeChange(breakdownType: BreakdownType | undefined, breakdownCustomProperty?: string) {
         let newOverriddenBreakdownType: BreakdownType | undefined | null = undefined;
         if (breakdownType === savedChart!.breakdownType) {
             newOverriddenBreakdownType = undefined;
@@ -207,6 +208,16 @@ export function SavedChart() {
             newSearchParams.set("breakdown", newOverriddenBreakdownType);
         } else {
             newSearchParams.delete("breakdown");
+        }
+
+        // Breaking down by a custom property reuses the `customProperty` param, which
+        // otherwise belongs to the custom-property analysis subject.
+        if (getAnalysisSubject() !== AnalysisSubject.CustomProperties) {
+            if (breakdownType === BreakdownType.CustomProperty && breakdownCustomProperty) {
+                newSearchParams.set("customProperty", breakdownCustomProperty);
+            } else {
+                newSearchParams.delete("customProperty");
+            }
         }
 
         setSearchParams(newSearchParams, { replace: true });
@@ -296,13 +307,16 @@ export function SavedChart() {
 
     async function handleUpdateConfig() {
         try {
+            const savedTimeSeriesFilter = getAnalysisType() === AnalysisType.DataOverTime ? getTimeSeriesFilter() : undefined;
+
             await updateSavedChart(workspaceSlug!, savedChartSlug, {
-                analysisType: overriddenAnalysisType,
-                analysisSubject: overriddenAnalysisSubject,
+                analysisType: getAnalysisType(),
+                analysisSubject: getAnalysisSubject(),
                 customProperty: getCustomProperty(),
-                filters: overriddenFilters,
-                breakdownType: overriddenBreakdownType,
-                timeSeriesFilter: overriddenTimeSeriesFilter,
+                filters: getFilters(),
+                // Send `null` (not `undefined`) so the backend unsets a previously saved breakdown
+                breakdownType: getBreakdownType() ?? null,
+                timeSeriesFilter: savedTimeSeriesFilter,
             });
 
             const update = {
@@ -442,7 +456,6 @@ export function SavedChart() {
             newOverriddenCustomProperty = customProperty === savedChart.customProperty ? undefined : customProperty;
         }
         setOverriddenAnalysisSubject(newOverriddenAnalysisSubject);
-        setOverriddenCustomProperty(newOverriddenCustomProperty);
 
         const timeSeriesFilter = toTimeSeriesFilter(searchParams.get("timeSeriesFilter"));
         const isSameTimeSeriesFilter = hasSameTimeSeriesFilters(timeSeriesFilter, savedChart?.timeSeriesFilter);
@@ -477,6 +490,17 @@ export function SavedChart() {
             newOverriddenBreakdownType = breakdown as BreakdownType;
         }
         setOverriddenBreakdownType(newOverriddenBreakdownType);
+
+        // When breaking down by a custom property (and not analyzing one), the
+        // `customProperty` param holds the breakdown's property name.
+        const effectiveAnalysisSubject = newOverriddenAnalysisSubject ?? savedChart.analysisSubject;
+        const effectiveBreakdownType = newOverriddenBreakdownType === null
+            ? undefined
+            : newOverriddenBreakdownType ?? savedChart.breakdownType;
+        if (effectiveAnalysisSubject !== AnalysisSubject.CustomProperties && effectiveBreakdownType === BreakdownType.CustomProperty) {
+            newOverriddenCustomProperty = customProperty === savedChart.customProperty ? undefined : customProperty;
+        }
+        setOverriddenCustomProperty(newOverriddenCustomProperty);
 
         const humanReadableSlug = getHumanReadableSlug(savedChart.name, savedChartSlug);
         const pathname = generatePath(RoutePath.SavedChart, { workspaceSlug: workspaceSlug!, savedChartSlug: humanReadableSlug });
@@ -514,6 +538,7 @@ export function SavedChart() {
             (
                 overriddenAnalysisType !== undefined ||
                 overriddenAnalysisSubject !== undefined ||
+                overriddenCustomProperty !== undefined ||
                 overriddenFilters !== undefined ||
                 overriddenBreakdownType !== undefined ||
                 overriddenTimeSeriesFilter !== undefined

@@ -123,7 +123,7 @@ function getChartDatumLink({
     }
 }
 
-function getChartValueLink(analysisSubject: AnalysisSubject, breakdownType: BreakdownType, datumLink: string, barId: string) {
+function getChartValueLink(analysisSubject: AnalysisSubject, breakdownType: BreakdownType, datumLink: string, barId: string, customProperty?: string) {
     if (analysisSubject === AnalysisSubject.Components) {
         switch (breakdownType) {
             case BreakdownType.ProjectUsedIn:
@@ -159,6 +159,17 @@ function getChartValueLink(analysisSubject: AnalysisSubject, breakdownType: Brea
                     value: [barId],
                 });
             }
+        case BreakdownType.CustomProperty:
+            if (!customProperty || barId === ReservedCustomPropertyValue.NotSet) {
+                return datumLink;
+            }
+            return appendFilter(datumLink, {
+                type: FilterType.CustomProperty,
+                field: `metadata.${customProperty}`,
+                operation: FilterOperation.Equals,
+                dataType: FilterDataType.String,
+                value: [barId],
+            });
         case undefined:
         default:
             return datumLink;
@@ -186,6 +197,8 @@ function getBreakdownTypeGroupKey(breakdownType: BreakdownType): keyof DataAnaly
             return "parentPackageName";
         case BreakdownType.Tag:
             return "childTag";
+        case BreakdownType.CustomProperty:
+            return "parentCustomProperty";
     }
 }
 
@@ -279,6 +292,8 @@ function groupByBreakdownType(analyses: DataAnalysis[], breakdownType: Breakdown
                 return ReservedProjectName.None;
             } else if (breakdownType === BreakdownType.Tag) {
                 return RESERVED_TAGS.UNTAGGED.slug;
+            } else if (breakdownType === BreakdownType.CustomProperty) {
+                return ReservedCustomPropertyValue.NotSet;
             }
         }
 
@@ -381,6 +396,7 @@ function transformBrokenDownLatestDataAnalysis(
     analysisSubject: AnalysisSubject,
     breakdownType: BreakdownType,
     datumLink?: string,
+    customProperty?: string,
 ): ChartValue[] {
     let values: ChartValue[];
 
@@ -429,6 +445,28 @@ function transformBrokenDownLatestDataAnalysis(
 
             values.sort((a, b) => compareTag(tagMap[a.id], tagMap[b.id]));
             break;
+        case BreakdownType.CustomProperty:
+            values = Object.entries(brokenDownDataAnalyses)
+                .map(([propertyValue, analyses]) => ({
+                    id: propertyValue,
+                    name: propertyValue === ReservedCustomPropertyValue.NotSet ? "(not set)" : propertyValue,
+                    link: datumLink && getChartValueLink(analysisSubject, breakdownType, datumLink, propertyValue, customProperty),
+                    value: findSumOfUsageCount(analyses),
+                }));
+
+            values.sort((a, b) => {
+                if (a.id === ReservedCustomPropertyValue.NotSet) {
+                    return 1;
+                }
+                if (b.id === ReservedCustomPropertyValue.NotSet) {
+                    return -1;
+                }
+                if (a.value === b.value) {
+                    return compareString(a.name, b.name);
+                }
+                return b.value - a.value;
+            });
+            break;
     }
 
     return values;
@@ -463,7 +501,7 @@ function transformLatestDataWithBreakdown({
     return Object.entries(latestDataAnalysisWithBreakdown).map(([key, brokenDownDataAnalyses]): ChartDatum => {
         const { id: datumId, name: label } = getChartValueData(key, componentMap, projectMap, tagMap, analysisSubject);
         const link = getChartDatumLink({ analysisSubject, customProperty, workspaceSlug, label, id: key });
-        const values = transformBrokenDownLatestDataAnalysis(brokenDownDataAnalyses, projectMap, tagMap, analysisSubject, breakdownType, link);
+        const values = transformBrokenDownLatestDataAnalysis(brokenDownDataAnalyses, projectMap, tagMap, analysisSubject, breakdownType, link, customProperty);
 
         return {
             id: datumId,

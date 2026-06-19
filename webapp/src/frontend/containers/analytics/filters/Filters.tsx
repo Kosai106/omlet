@@ -23,7 +23,7 @@ interface Props {
     onAnalysisTypeChange(analysisType: AnalysisType): void;
     onAnalysisSubjectChange(analysisSubject: AnalysisSubject, customProperty?: string): void;
     onFiltersChange(filters: Filter[]): void;
-    onBreakdownTypeChange(breakdownType: BreakdownType | undefined): void;
+    onBreakdownTypeChange(breakdownType: BreakdownType | undefined, customProperty?: string): void;
 }
 
 export function Filters({
@@ -68,6 +68,8 @@ export function Filters({
                     <BreakdownWidget
                         analysisSubject={analysisSubject}
                         breakdownType={breakdownType}
+                        customProperty={customProperty}
+                        customProperties={customProperties}
                         onBreakdownChange={onBreakdownTypeChange}
                         disabled={disabled}/>
                 )}

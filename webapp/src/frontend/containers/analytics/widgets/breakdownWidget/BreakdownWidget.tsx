@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import { type AnalysisSubject } from "../../../../../common/models/AnalysisSubject";
-import { type BreakdownType, getBreakdownTypeLabel, getValidBreakdownTypes } from "../../../../../common/models/BreakdownType";
+import { BreakdownType, getBreakdownTypeLabel, getValidBreakdownTypes } from "../../../../../common/models/BreakdownType";
 import { type DropdownOption } from "../../../../library/Dropdown/DropdownOption";
 import { H3 } from "../../../../library/Heading/Heading";
 import { IconRemove } from "../../../../library/icons/IconRemove";
@@ -11,23 +11,41 @@ import { WidgetDropdown } from "../widgetDropdown/WidgetDropdown";
 
 import classes from "./BreakdownWidget.module.css";
 
+// A "break down by custom property" choice needs to carry which property to use,
+// so we encode the property name into the option value (the base breakdown types
+// are used verbatim).
+const CUSTOM_PROPERTY_OPTION_PREFIX = "customProperty:";
+
 interface Props {
     analysisSubject?: AnalysisSubject;
     breakdownType?: BreakdownType;
+    customProperty?: string;
+    customProperties?: Record<string, (string | number | boolean | Date)[]>;
     disabled?: boolean;
-    onBreakdownChange(type: BreakdownType | undefined): void;
+    onBreakdownChange(type: BreakdownType | undefined, customProperty?: string): void;
 }
 
-function getBreakdownOption(breakdownType: BreakdownType): DropdownOption<BreakdownType> {
-    return {
-        value: breakdownType,
-        label: getBreakdownTypeLabel(breakdownType),
-    };
+function getBreakdownOptions(
+    analysisSubject: AnalysisSubject | undefined,
+    customProperties: Record<string, unknown> | undefined,
+): DropdownOption<string>[] {
+    return getValidBreakdownTypes(analysisSubject).flatMap(breakdownType => {
+        if (breakdownType === BreakdownType.CustomProperty) {
+            return Object.keys(customProperties ?? {}).map(name => ({
+                value: `${CUSTOM_PROPERTY_OPTION_PREFIX}${name}`,
+                label: `Property: ${name}`,
+            }));
+        }
+
+        return [{ value: breakdownType, label: getBreakdownTypeLabel(breakdownType) }];
+    });
 }
 
 export function BreakdownWidget({
     analysisSubject,
     breakdownType,
+    customProperty,
+    customProperties,
     disabled = false,
     onBreakdownChange,
 }: Props) {
@@ -41,9 +59,14 @@ export function BreakdownWidget({
         setShouldSelectBreakdown(false);
     }
 
-    function handleBreakdownChange(newBreakdownType: BreakdownType) {
+    function handleBreakdownChange(optionValue: string) {
         setShouldSelectBreakdown(false);
-        onBreakdownChange(newBreakdownType);
+
+        if (optionValue.startsWith(CUSTOM_PROPERTY_OPTION_PREFIX)) {
+            onBreakdownChange(BreakdownType.CustomProperty, optionValue.slice(CUSTOM_PROPERTY_OPTION_PREFIX.length));
+        } else {
+            onBreakdownChange(optionValue as BreakdownType);
+        }
     }
 
     function handleRemoveClick() {
@@ -52,15 +75,17 @@ export function BreakdownWidget({
     }
 
     function renderBreakdownValue() {
-        const breakdownOptions = getValidBreakdownTypes(analysisSubject);
-        const options = breakdownOptions.map(getBreakdownOption);
+        const options = getBreakdownOptions(analysisSubject, customProperties);
+        const value = breakdownType === BreakdownType.CustomProperty && customProperty
+            ? `${CUSTOM_PROPERTY_OPTION_PREFIX}${customProperty}`
+            : breakdownType;
 
         if (breakdownType) {
             return (
                 <WidgetDropdown
                     className={classes.breakdownDropdown}
                     options={options}
-                    value={breakdownType}
+                    value={value}
                     disabled={disabled}
                     onChange={handleBreakdownChange}/>
             );
