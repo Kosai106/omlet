@@ -42,6 +42,7 @@ import {
     analyseTimeSeriesDataAsChartData,
     analyseTimeSeriesDataAsCSV,
     findLatestComponentsByDefinitionId,
+    getComponentNames,
     getComponentProps,
     getComponentPropsUsage,
     getRawHtmlUsage,
@@ -2691,6 +2692,64 @@ apiRouter.get("/workspaces/:workspaceSlug/raw-html-usage",
                     component.packageName = projectMap[component.packageName]?.alias ?? component.packageName;
                 });
             });
+
+            res.status(httpStatus.OK)
+                .set("ETag", computedEtag)
+                .set("Cache-Control", "private")
+                .json(result);
+        } catch (error) {
+            if (error instanceof WorkspaceNotFound || error instanceof MemberNotFound) {
+                throw new ClientError(httpStatus.NOT_FOUND, ErrorResponseCode.WORKSPACE_NOT_FOUND);
+            }
+
+            throw error;
+        }
+    }
+);
+
+apiRouter.get("/workspaces/:workspaceSlug/component-names",
+    authMiddleware({ credentialsRequired: false }),
+    publicAuthMiddleware(),
+    requestValidator({
+        params: {
+            schema: joi.object({
+                workspaceSlug: joi.string(),
+            }),
+        },
+    }),
+    async (
+        req: Request<{ workspaceSlug: string; }>,
+        res: Response<string[] | ClientError>
+    ) => {
+        try {
+            const {
+                auth,
+                publicAuth,
+                params: {
+                    workspaceSlug,
+                },
+            } = req;
+
+            const workspace = await getWorkspaceIfAuthorized(workspaceSlug, UserPermission.READ, { auth, publicAuth });
+
+            const dataRevisionId = await getWorkspaceDataRevisionId(workspace.id);
+            const computedEtag = etag(JSON.stringify({
+                cacheVersion: COMPONENTS_ETAG_CACHE_VERSION,
+                workspaceId: workspace.id,
+                dataRevisionId,
+                url: req.originalUrl,
+            }));
+
+            const clientEtag = req.get("If-None-Match");
+            if (clientEtag === computedEtag) {
+                return res.status(httpStatus.NOT_MODIFIED)
+                    .set("ETag", computedEtag)
+                    .set("Cache-Control", "private")
+                    .set("Content-Type", "application/json")
+                    .send();
+            }
+
+            const result = await getComponentNames(workspace.id);
 
             res.status(httpStatus.OK)
                 .set("ETag", computedEtag)

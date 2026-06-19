@@ -1,15 +1,18 @@
 import { useState } from "react";
 
-import { updateHtmlElementMap } from "../../../api/api";
+import { useQuery } from "@tanstack/react-query";
+
+import { getComponentNames, updateHtmlElementMap } from "../../../api/api";
 import { Button, ButtonKind } from "../../../library/Button/Button";
 import { Dialog } from "../../../library/Dialog/Dialog";
 import { H2 } from "../../../library/Heading/Heading";
-import { NinjaInput } from "../../../library/NinjaInput/NinjaInput";
 import { useToast } from "../../../library/Toast/Toast";
 import { logError } from "../../../logger";
 import { useStore } from "../../../providers/StoreProvider/StoreProvider";
 
 import classes from "./EditMappingsDialog.module.css";
+
+const COMPONENT_NAMES_LIST_ID = "raw-html-replacement-options";
 
 interface Props {
     elements: string[];
@@ -31,6 +34,11 @@ export function EditMappingsDialog({ elements, onClose, onSaved }: Props) {
     // are preserved on save.
     const [mappings, setMappings] = useState<Record<string, string>>({ ...workspace.htmlElementMap });
     const [isSaving, setIsSaving] = useState(false);
+
+    const { data: componentNames } = useQuery({
+        queryKey: ["componentNames", workspace.slug],
+        queryFn: () => getComponentNames(workspace.slug),
+    });
 
     function handleChange(element: string, replacement: string) {
         setMappings(current => ({ ...current, [element]: replacement }));
@@ -66,15 +74,21 @@ export function EditMappingsDialog({ elements, onClose, onSaved }: Props) {
                     {elements.map(element => (
                         <div key={element} className={classes.row}>
                             <code className={classes.element}>{`<${element}>`}</code>
-                            <NinjaInput
+                            <input
                                 className={classes.input}
+                                list={COMPONENT_NAMES_LIST_ID}
                                 placeholder="No replacement"
                                 value={mappings[element] ?? ""}
-                                onInput={value => handleChange(element, value)}
+                                onChange={event => handleChange(element, event.target.value)}
                                 maxLength={50}/>
                         </div>
                     ))}
                 </div>
+                <datalist id={COMPONENT_NAMES_LIST_ID}>
+                    {(componentNames ?? []).map(name => (
+                        <option key={name} value={name}/>
+                    ))}
+                </datalist>
                 <div className={classes.actions}>
                     <Button kind={ButtonKind.Secondary} onClick={onClose}>Cancel</Button>
                     <Button onClick={handleSave} disabled={isSaving}>Save</Button>

@@ -1780,6 +1780,28 @@ export async function getRawHtmlUsage(workspaceId: string, { limit, htmlElementM
     }));
 }
 
+// Distinct component names in the latest analysis, sorted. Used to offer real
+// components as replacement suggestions in the raw-HTML mapping editor.
+export async function getComponentNames(workspaceId: string): Promise<string[]> {
+    const latestAnalysisId = await getLatestIndexAnalysisId(workspaceId);
+    if (!latestAnalysisId) {
+        return [];
+    }
+    const [result] = await HistoricComponentIndexModel.aggregate<{ names: string[]; }>([
+        {
+            $match: {
+                workspace: new MongooseTypes.ObjectId(workspaceId),
+                lastAnalysis: new MongooseTypes.ObjectId(latestAnalysisId),
+            },
+        },
+        { $unwind: { path: "$entries" } },
+        { $group: { _id: null, names: { $addToSet: "$entries.component.name" } } },
+        { $project: { _id: 0, names: 1 } },
+    ]).exec();
+
+    return (result?.names ?? []).sort((a, b) => a.localeCompare(b));
+}
+
 export type { DataAnalysisFilter };
 
 export async function purgeAllComponentDataForAnalysis(workspaceId: string, analysisId: string) {

@@ -549,6 +549,11 @@ export async function getRawHtmlUsage(workspaceSlug: string, params: { limit?: n
     return handleResponse<RawHtmlUsageResult[]>(response);
 }
 
+export async function getComponentNames(workspaceSlug: string, signal?: AbortSignal): Promise<string[]> {
+    const response = await http.get(`${base}/workspaces/${workspaceSlug}/component-names`, { signal });
+    return handleResponse<string[]>(response);
+}
+
 export async function updateHtmlElementMap(workspaceSlug: string, htmlElementMap: Record<string, string>): Promise<{ workspace: Workspace; accessLevel: AccessLevel; }> {
     const response = await http.put(`${base}/workspaces/${workspaceSlug}/html-element-map`, { htmlElementMap });
 
