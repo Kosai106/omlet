@@ -51,7 +51,7 @@ interface Props {
     onAnalysisTypeChange(analysisType: AnalysisType): void;
     onAnalysisSubjectChange(analysisSubject: AnalysisSubject, customProperty?: string): void;
     onFiltersChange(filters: Filter[]): void;
-    onBreakdownTypeChange(breakdownType: BreakdownType | undefined): void;
+    onBreakdownTypeChange(breakdownType: BreakdownType | undefined, customProperty?: string): void;
     onTimeSeriesFilterChange(timeSeriesFilter: TimeSeriesFilter): void;
 }
 

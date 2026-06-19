@@ -2,7 +2,7 @@ import { type UpdateQuery } from "mongoose";
 
 import { AnalysisSubject } from "../../../common/models/AnalysisSubject";
 import { AnalysisType } from "../../../common/models/AnalysisType";
-import { type BreakdownType } from "../../../common/models/BreakdownType";
+import { BreakdownType } from "../../../common/models/BreakdownType";
 import { type Filter } from "../../../common/models/Filter";
 import { type TimeSeriesFilter } from "../../../common/models/TimeSeriesFilter";
 import { ServiceError } from "../error";
@@ -208,16 +208,19 @@ export async function updateSavedChart(workspace: Workspace, savedChartSlug: str
     }
 
     if (analysisSubject !== undefined) {
-        if (analysisSubject === AnalysisSubject.CustomProperties) {
-            updates.$set ??= {};
-            updates.$set.customProperty = customProperty;
+        updates.$set ??= {};
+        updates.$set.analysisSubject = analysisSubject;
+
+        // The custom property is needed both when analyzing a custom property and
+        // when breaking down by one — only clear it when neither applies.
+        if (analysisSubject === AnalysisSubject.CustomProperties || breakdownType === BreakdownType.CustomProperty) {
+            if (customProperty !== undefined) {
+                updates.$set.customProperty = customProperty;
+            }
         } else {
             updates.$unset ??= {};
             updates.$unset.customProperty = 1;
         }
-
-        updates.$set ??= {};
-        updates.$set.analysisSubject = analysisSubject;
     }
 
     if (filters !== undefined) {

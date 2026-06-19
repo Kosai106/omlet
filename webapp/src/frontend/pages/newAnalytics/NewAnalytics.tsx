@@ -5,7 +5,7 @@ import { generatePath, Link, useNavigate, useParams, useSearchParams } from "rea
 
 import { AnalysisSubject, toAnalysisSubject } from "../../../common/models/AnalysisSubject";
 import { AnalysisType, toAnalysisType } from "../../../common/models/AnalysisType";
-import { toBreakdownType, type BreakdownType } from "../../../common/models/BreakdownType";
+import { toBreakdownType, BreakdownType } from "../../../common/models/BreakdownType";
 import { type Filter } from "../../../common/models/Filter";
 import { type TimeSeriesFilter, DEFAULT_TIME_SERIES_FILTER, toTimeSeriesFilter } from "../../../common/models/TimeSeriesFilter";
 import { RoutePath } from "../../../common/RoutePath";
@@ -100,13 +100,23 @@ export function NewAnalytics() {
         setSearchParams(newSearchParams, { replace: true });
     }
 
-    function handleBreakdownTypeChange(newBreakdownType: BreakdownType | undefined) {
+    function handleBreakdownTypeChange(newBreakdownType: BreakdownType | undefined, breakdownCustomProperty?: string) {
         const newSearchParams = new URLSearchParams(searchParams);
 
         if (newBreakdownType) {
             newSearchParams.set("breakdown", newBreakdownType);
         } else {
             newSearchParams.delete("breakdown");
+        }
+
+        // Breaking down by a custom property reuses the `customProperty` param
+        // (only the custom-property analysis subject uses it otherwise).
+        if (analysisSubject !== AnalysisSubject.CustomProperties) {
+            if (newBreakdownType === BreakdownType.CustomProperty && breakdownCustomProperty) {
+                newSearchParams.set("customProperty", breakdownCustomProperty);
+            } else {
+                newSearchParams.delete("customProperty");
+            }
         }
 
         setSearchParams(newSearchParams, { replace: true });
@@ -171,10 +181,15 @@ export function NewAnalytics() {
         const newAnalysisSubject = toAnalysisSubject(searchParams.get("subject"));
         setAnalysisSubject(newAnalysisSubject);
 
-        const newCustomProperty = searchParams.get("customProperty");
-        setCustomProperty(newCustomProperty === null ? undefined : newCustomProperty);
+        const newCustomProperty = searchParams.get("customProperty") ?? undefined;
+        setCustomProperty(newCustomProperty);
 
-        setBreakdownType(toBreakdownType(searchParams.get("breakdown"), newAnalysisSubject));
+        // A custom-property breakdown is meaningless without a property to group by.
+        let newBreakdownType = toBreakdownType(searchParams.get("breakdown"), newAnalysisSubject);
+        if (newBreakdownType === BreakdownType.CustomProperty && !newCustomProperty) {
+            newBreakdownType = undefined;
+        }
+        setBreakdownType(newBreakdownType);
         setTimeSeriesFilter(toTimeSeriesFilter(searchParams.get("timeSeriesFilter")));
 
         const filtersParam = searchParams.get("filters");

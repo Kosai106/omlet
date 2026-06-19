@@ -235,7 +235,13 @@ const baseDataAnalysisSchema = joi.object({
 const conditionalCustomPropertySchema = joi.string().when("analysisSubject", {
     is: AnalysisSubject.CustomProperties,
     then: joi.required(),
-    otherwise: joi.forbidden(),
+    // When not analyzing a custom property, the field is only allowed if we're
+    // breaking down by one (e.g. analyze Projects, break down by "DS Version").
+    otherwise: joi.when("breakdownType", {
+        is: BreakdownType.CustomProperty,
+        then: joi.optional(),
+        otherwise: joi.forbidden(),
+    }),
 });
 
 export const latestDataAnalysisSchema = baseDataAnalysisSchema.keys({
